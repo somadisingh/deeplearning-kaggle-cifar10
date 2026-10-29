@@ -1,0 +1,315 @@
+[
+  {
+    "title": "CIFAR-10-Warehouse: Broad and More Realistic Testbeds in Model Generalization Analysis",
+    "authors": [
+      "Xiaoxiao Sun",
+      "Xingjian Leng",
+      "Zijian Wang",
+      "Yang Yang",
+      "Zi Huang",
+      "Liang Zheng"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Analyzing model performance in various unseen environments is a critical research problem in the machine learning community. To study this problem, it is important to construct a testbed with out-of-distribution test sets that have broad coverage of environmental discrepancies. However, existing testbeds typically either have a small number of domains or are synthesized by image corruptions, hindering algorithm design that demonstrates real-world effectiveness. In this paper, we introduce CIFAR-10-Warehouse, consisting of 180 datasets collected by prompting image search engines and diffusion models in various ways. Generally sized between 300 and 8,000 images, the datasets contain natural images, cartoons, certain colors, or objects that do not naturally appear. With CIFAR-10-W, we aim to enhance the evaluation and deepen the understanding of two generalization tasks: domain generalization and model accuracy prediction in various out-of-distribution environments. We conduct extensive benchmarking and comparison experiments and show that CIFAR-10-W offers new and interesting insights inherent to these tasks. We also discuss other fields that would benefit from CIFAR-10-W.",
+    "url": "http://arxiv.org/abs/2310.04414v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Sharpness-Aware Minimization for Efficiently Improving Generalization",
+    "authors": [
+      "Pierre Foret",
+      "Ariel Kleiner",
+      "Hossein Mobahi",
+      "Behnam Neyshabur"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "In today's heavily overparameterized models, the value of the training loss provides few guarantees on model generalization ability. Indeed, optimizing only the training loss value, as is commonly done, can easily lead to suboptimal model quality. Motivated by prior work connecting the geometry of the loss landscape and generalization, we introduce a novel, effective procedure for instead simultaneously minimizing loss value and loss sharpness. In particular, our procedure, Sharpness-Aware Minimization (SAM), seeks parameters that lie in neighborhoods having uniformly low loss; this formulation results in a min-max optimization problem on which gradient descent can be performed efficiently. We present empirical results showing that SAM improves model generalization across a variety of benchmark datasets (e.g., CIFAR-10, CIFAR-100, ImageNet, finetuning tasks) and models, yielding novel state-of-the-art performance for several. Additionally, we find that SAM natively provides robustness to label noise on par with that provided by state-of-the-art procedures that specifically target learning with noisy labels. We open source our code at \\url{https://github.com/google-research/sam}.",
+    "url": "http://arxiv.org/abs/2010.01412v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Sharpness-Aware Minimization with Z-Score Gradient Filtering",
+    "authors": [
+      "Vincent-Daniel Yun"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Deep neural networks achieve high performance across many domains but can still face challenges in generalization when optimization is influenced by small or noisy gradient components. Sharpness-Aware Minimization improves generalization by perturbing parameters toward directions of high curvature, but it uses the entire gradient vector, which means that small or noisy components may affect the ascent step and cause the optimizer to miss optimal solutions. We propose Z-Score Filtered Sharpness-Aware Minimization, which applies Z-score based filtering to gradients in each layer. Instead of using all gradient components, a mask is constructed to retain only the top percentile with the largest absolute Z-scores. The percentile threshold $Q_p$ determines how many components are kept, so that the ascent step focuses on directions that stand out most compared to the average of the layer. This selective perturbation refines the search toward flatter minima while reducing the influence of less significant gradients. Experiments on CIFAR-10, CIFAR-100, and Tiny-ImageNet with architectures including ResNet, VGG, and Vision Transformers show that the proposed method consistently improves test accuracy compared to Sharpness-Aware Minimization and its variants. The code repository is available at: https://github.com/YUNBLAK/Sharpness-Aware-Minimization-with-Z-Score-Gradient-Filtering",
+    "url": "http://arxiv.org/abs/2505.02369v6",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Sharpness-Aware Minimization with Adaptive Regularization for Training Deep Neural Networks",
+    "authors": [
+      "Jinping Zou",
+      "Xiaoge Deng",
+      "Tao Sun"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Sharpness-Aware Minimization (SAM) has proven highly effective in improving model generalization in machine learning tasks. However, SAM employs a fixed hyperparameter associated with the regularization to characterize the sharpness of the model. Despite its success, research on adaptive regularization methods based on SAM remains scarce. In this paper, we propose the SAM with Adaptive Regularization (SAMAR), which introduces a flexible sharpness ratio rule to update the regularization parameter dynamically. We provide theoretical proof of the convergence of SAMAR for functions satisfying the Lipschitz continuity. Additionally, experiments on image recognition tasks using CIFAR-10 and CIFAR-100 demonstrate that SAMAR enhances accuracy and model generalization.",
+    "url": "http://arxiv.org/abs/2412.16854v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "DGSAM: Domain Generalization via Individual Sharpness-Aware Minimization",
+    "authors": [
+      "Youngjun Song",
+      "Youngsik Hwang",
+      "Jonghun Lee",
+      "Heechang Lee",
+      "Dong-Young Lim"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Domain generalization (DG) aims to learn models that perform well on unseen target domains by training on multiple source domains. Sharpness-Aware Minimization (SAM), known for finding flat minima that improve generalization, has therefore been widely adopted in DG. However, our analysis reveals that SAM in DG may converge to \\textit{fake flat minima}, where the total loss surface appears flat in terms of global sharpness but remains sharp with respect to individual source domains. To understand this phenomenon more precisely, we formalize the average worst-case domain risk as the maximum loss under domain distribution shifts within a bounded divergence, and derive a generalization bound that reveals the limitations of global sharpness-aware minimization. In contrast, we show that individual sharpness provides a valid upper bound on this risk, making it a more suitable proxy for robust domain generalization. Motivated by these insights, we shift the DG paradigm toward minimizing individual sharpness across source domains. We propose \\textit{Decreased-overhead Gradual SAM (DGSAM)}, which applies gradual domain-wise perturbations in a computationally efficient manner to consistently reduce individual sharpness. Extensive experiments demonstrate that DGSAM not only improves average accuracy but also reduces performance variance across domains, while incurring less computational overhead than SAM.",
+    "url": "http://arxiv.org/abs/2503.23430v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "SAMSON: Sharpness-Aware Minimization Scaled by Outlier Normalization for Improving DNN Generalization and Robustness",
+    "authors": [
+      "Gonçalo Mordido",
+      "Sébastien Henwood",
+      "Sarath Chandar",
+      "François Leduc-Primeau"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Energy-efficient deep neural network (DNN) accelerators are prone to non-idealities that degrade DNN performance at inference time. To mitigate such degradation, existing methods typically add perturbations to the DNN weights during training to simulate inference on noisy hardware. However, this often requires knowledge about the target hardware and leads to a trade-off between DNN performance and robustness, decreasing the former to increase the latter. In this work, we show that applying sharpness-aware training, by optimizing for both the loss value and loss sharpness, significantly improves robustness to noisy hardware at inference time without relying on any assumptions about the target hardware. In particular, we propose a new adaptive sharpness-aware method that conditions the worst-case perturbation of a given weight not only on its magnitude but also on the range of the weight distribution. This is achieved by performing sharpness-aware minimization scaled by outlier minimization (SAMSON). Our approach outperforms existing sharpness-aware training methods both in terms of model generalization performance in noiseless regimes and robustness in noisy settings, as measured on several architectures and datasets.",
+    "url": "http://arxiv.org/abs/2211.11561v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Zero-Order Sharpness-Aware Minimization",
+    "authors": [
+      "Yao Fu",
+      "Yihang Jin",
+      "Chunxia Zhang",
+      "Junmin Liu",
+      "Guang Dai",
+      "Haishan Ye"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Prompt learning has become a key method for adapting large language models to specific tasks with limited data. However, traditional gradient-based optimization methods for tuning prompts are computationally intensive, posing challenges for efficiency. We introduce ZOSA (Zero-Order Sharpness-Aware Minimization), a novel optimization framework that integrates zero-order optimization with sharpness-aware minimization to enhance prompt tuning. ZOSA employs Rademacher perturbation vectors to estimate gradients without requiring backpropagation. By incorporating sharpness-aware principles, it targets flat minima in the loss landscape, improving generalization. An adaptive learning rate, guided by loss variability, further ensures stable convergence. Experiments on few-shot learning tasks, such as text classification and natural language inference, show that ZOSA significantly outperforms existing methods. With its theoretical foundation and computational efficiency, ZOSA offers a practical solution for prompt-based learning in resource-limited settings.",
+    "url": "http://arxiv.org/abs/2511.09156v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GA-SAM: Gradient-Strength based Adaptive Sharpness-Aware Minimization for Improved Generalization",
+    "authors": [
+      "Zhiyuan Zhang",
+      "Ruixuan Luo",
+      "Qi Su",
+      "Xu Sun"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Recently, Sharpness-Aware Minimization (SAM) algorithm has shown state-of-the-art generalization abilities in vision tasks. It demonstrates that flat minima tend to imply better generalization abilities. However, it has some difficulty implying SAM to some natural language tasks, especially to models with drastic gradient changes, such as RNNs. In this work, we analyze the relation between the flatness of the local minimum and its generalization ability from a novel and straightforward theoretical perspective. We propose that the shift of the training and test distributions can be equivalently seen as a virtual parameter corruption or perturbation, which can explain why flat minima that are robust against parameter corruptions or perturbations have better generalization performances. On its basis, we propose a Gradient-Strength based Adaptive Sharpness-Aware Minimization (GA-SAM) algorithm to help to learn algorithms find flat minima that generalize better. Results in various language benchmarks validate the effectiveness of the proposed GA-SAM algorithm on natural language tasks.",
+    "url": "http://arxiv.org/abs/2210.06895v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Sparsity-Adaptive Sharpness-Aware Minimization",
+    "authors": [
+      "Shiryu Ueno",
+      "Yoshikazu Hayashi",
+      "Kunihito Kato"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Deploying deep neural networks in real-world settings requires models that are both compact and robust to common corruptions. However, at deployment-relevant high sparsity, standard pruning pipelines often degrade corruption robustness, and existing sharpness-aware training/pruning approaches provide limited robustness gains. We address this issue by introducing Sparsity-Adaptive Sharpness-Aware Minimization (SA-SAM), which derives a sparsity-dependent SAM/ASAM perturbation radius by keeping the mean absolute perturbation (an $\\ell_1$-based proxy) approximately invariant as sparsity increases. As a simple complementary option, we evaluate Magnitude-Weighted Hessian (MWH), derived from a second-order removal-path analysis, yielding an importance proportional to $\\mathrm{Diag}(F)_i\\,|w_i|$, where $\\mathrm{Diag}(F)$ is the diagonal empirical Fisher used as a curvature proxy in our implementation. Across CIFAR-10-C, CIFAR-100-C, and ImageNet-100-C, our approach achieved stronger corruption robustness than the considered pruning baselines at 80--90\\% sparsity, while preserving clean accuracy. We additionally quantify the robustness--throughput trade-off by reporting measured inference throughput under sparse execution at deployment-relevant sparsity levels.",
+    "url": "http://arxiv.org/abs/2609.14274v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Rethinking Graph Generalization through the Lens of Sharpness-Aware Minimization",
+    "authors": [
+      "Yang Qiu",
+      "Yixiong Zou",
+      "Jun Wang"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Graph Neural Networks (GNNs) have achieved remarkable success across various graph-based tasks but remain highly sensitive to distribution shifts. In this work, we focus on a prevalent yet under-explored phenomenon in graph generalization, Minimal Shift Flip (MSF),where test samples that slightly deviate from the training distribution are abruptly misclassified. To interpret this phenomenon, we revisit MSF through the lens of Sharpness-Aware Minimization (SAM), which characterizes the local stability and sharpness of the loss landscape while providing a theoretical foundation for modeling generalization error. To quantify loss sharpness, we introduce the concept of Local Robust Radius, measuring the smallest perturbation required to flip a prediction and establishing a theoretical link between local stability and generalization. Building on this perspective, we further observe a continual decrease in the robust radius during training, indicating weakened local stability and an increasingly sharp loss landscape that gives rise to MSF. To jointly solve the MSF phenomenon and the intractability of radius, we develop an energy-based formulation that is theoretically proven to be monotonically correlated with the robust radius, offering a tractable and principled objective for modeling flatness and stability. Building on these insights, we propose an energy-driven generative augmentation framework (E2A) that leverages energy-guided latent perturbations to generate pseudo-OOD samples and enhance model generalization. Extensive experiments across multiple benchmarks demonstrate that E2A consistently improves graph OOD generalization, outperforming state-of-the-art baselines.",
+    "url": "http://arxiv.org/abs/2602.08855v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "LSAM: Asynchronous Distributed Training with Landscape-Smoothed Sharpness-Aware Minimization",
+    "authors": [
+      "Yunfei Teng",
+      "Sixin Zhang"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "While Sharpness-Aware Minimization (SAM) improves generalization in deep neural networks by minimizing both loss and sharpness, it suffers from inefficiency in distributed large-batch training. We present Landscape-Smoothed SAM (LSAM), a novel optimizer that preserves SAM's generalization advantages while offering superior efficiency. LSAM integrates SAM's adversarial steps with an asynchronous distributed sampling strategy, generating an asynchronous distributed sampling scheme, producing a smoothed sharpness-aware loss landscape for optimization. This design eliminates synchronization bottlenecks, accelerates large-batch convergence, and delivers higher final accuracy compared to data-parallel SAM.",
+    "url": "http://arxiv.org/abs/2509.03110v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Model Generalization: A Sharpness Aware Optimization Perspective",
+    "authors": [
+      "Jozef Marus Coldenhoff",
+      "Chengkun Li",
+      "Yurui Zhu"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Sharpness-Aware Minimization (SAM) and adaptive sharpness-aware minimization (ASAM) aim to improve the model generalization. And in this project, we proposed three experiments to valid their generalization from the sharpness aware perspective. And our experiments show that sharpness aware-based optimization techniques could help to provide models with strong generalization ability. Our experiments also show that ASAM could improve the generalization performance on un-normalized data, but further research is needed to confirm this.",
+    "url": "http://arxiv.org/abs/2208.06915v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Sharpness-Aware Minimization Improves Language Model Generalization",
+    "authors": [
+      "Dara Bahri",
+      "Hossein Mobahi",
+      "Yi Tay"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "The allure of superhuman-level capabilities has led to considerable interest in language models like GPT-3 and T5, wherein the research has, by and large, revolved around new model architectures, training tasks, and loss objectives, along with substantial engineering efforts to scale up model capacity and dataset size. Comparatively little work has been done to improve the generalization of these models through better optimization. In this work, we show that Sharpness-Aware Minimization (SAM), a recently proposed optimization procedure that encourages convergence to flatter minima, can substantially improve the generalization of language models without much computational overhead. We show that SAM is able to boost performance on SuperGLUE, GLUE, Web Questions, Natural Questions, Trivia QA, and TyDiQA, with particularly large gains when training data for these tasks is limited.",
+    "url": "http://arxiv.org/abs/2110.08529v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GCSAM: Gradient Centralized Sharpness Aware Minimization",
+    "authors": [
+      "Mohamed Hassan",
+      "Aleksandar Vakanski",
+      "Boyu Zhang",
+      "Min Xian"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "The generalization performance of deep neural networks (DNNs) is a critical factor in achieving robust model behavior on unseen data. Recent studies have highlighted the importance of sharpness-based measures in promoting generalization by encouraging convergence to flatter minima. Among these approaches, Sharpness-Aware Minimization (SAM) has emerged as an effective optimization technique for reducing the sharpness of the loss landscape, thereby improving generalization. However, SAM's computational overhead and sensitivity to noisy gradients limit its scalability and efficiency. To address these challenges, we propose Gradient-Centralized Sharpness-Aware Minimization (GCSAM), which incorporates Gradient Centralization (GC) to stabilize gradients and accelerate convergence. GCSAM normalizes gradients before the ascent step, reducing noise and variance, and improving stability during training. Our evaluations indicate that GCSAM consistently outperforms SAM and the Adam optimizer in terms of generalization and computational efficiency. These findings demonstrate GCSAM's effectiveness across diverse domains, including general and medical imaging tasks.",
+    "url": "http://arxiv.org/abs/2501.11584v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Sharpness-Aware Minimization with Dynamic Reweighting",
+    "authors": [
+      "Wenxuan Zhou",
+      "Fangyu Liu",
+      "Huan Zhang",
+      "Muhao Chen"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Deep neural networks are often overparameterized and may not easily achieve model generalization. Adversarial training has shown effectiveness in improving generalization by regularizing the change of loss on top of adversarially chosen perturbations. The recently proposed sharpness-aware minimization (SAM) algorithm conducts adversarial weight perturbation, encouraging the model to converge to a flat minima. SAM finds a common adversarial weight perturbation per-batch. Although per-instance adversarial weight perturbations are stronger adversaries and can potentially lead to better generalization performance, their computational cost is very high and thus it is impossible to use per-instance perturbations efficiently in SAM. In this paper, we tackle this efficiency bottleneck and propose sharpness-aware minimization with dynamic reweighting (delta-SAM). Our theoretical analysis motivates that it is possible to approach the stronger, per-instance adversarial weight perturbations using reweighted per-batch weight perturbations. delta-SAM dynamically reweights perturbation within each batch according to the theoretically principled weighting factors, serving as a good approximation to per-instance perturbation. Experiments on various natural language understanding tasks demonstrate the effectiveness of delta-SAM.",
+    "url": "http://arxiv.org/abs/2112.08772v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Enhancing Sharpness-Aware Minimization by Learning Perturbation Radius",
+    "authors": [
+      "Xuehao Wang",
+      "Weisen Jiang",
+      "Shuai Fu",
+      "Yu Zhang"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Sharpness-aware minimization (SAM) is to improve model generalization by searching for flat minima in the loss landscape. The SAM update consists of one step for computing the perturbation and the other for computing the update gradient. Within the two steps, the choice of the perturbation radius is crucial to the performance of SAM, but finding an appropriate perturbation radius is challenging. In this paper, we propose a bilevel optimization framework called LEarning the perTurbation radiuS (LETS) to learn the perturbation radius for sharpness-aware minimization algorithms. Specifically, in the proposed LETS method, the upper-level problem aims at seeking a good perturbation radius by minimizing the squared generalization gap between the training and validation losses, while the lower-level problem is the SAM optimization problem. Moreover, the LETS method can be combined with any variant of SAM. Experimental results on various architectures and benchmark datasets in computer vision and natural language processing demonstrate the effectiveness of the proposed LETS method in improving the performance of SAM.",
+    "url": "http://arxiv.org/abs/2408.08222v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Universal Class of Sharpness-Aware Minimization Algorithms",
+    "authors": [
+      "Behrooz Tahmasebi",
+      "Ashkan Soleymani",
+      "Dara Bahri",
+      "Stefanie Jegelka",
+      "Patrick Jaillet"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Recently, there has been a surge in interest in developing optimization algorithms for overparameterized models as achieving generalization is believed to require algorithms with suitable biases. This interest centers on minimizing sharpness of the original loss function; the Sharpness-Aware Minimization (SAM) algorithm has proven effective. However, most literature only considers a few sharpness measures, such as the maximum eigenvalue or trace of the training loss Hessian, which may not yield meaningful insights for non-convex optimization scenarios like neural networks. Additionally, many sharpness measures are sensitive to parameter invariances in neural networks, magnifying significantly under rescaling parameters. Motivated by these challenges, we introduce a new class of sharpness measures in this paper, leading to new sharpness-aware objective functions. We prove that these measures are \\textit{universally expressive}, allowing any function of the training loss Hessian matrix to be represented by appropriate hyperparameters. Furthermore, we show that the proposed objective functions explicitly bias towards minimizing their corresponding sharpness measures, and how they allow meaningful applications to models with parameter invariances (such as scale-invariances). Finally, as instances of our proposed general framework, we present \\textit{Frob-SAM} and \\textit{Det-SAM}, which are specifically designed to minimize the Frobenius norm and the determinant of the Hessian of the training loss, respectively. We also demonstrate the advantages of our general framework through extensive experiments.",
+    "url": "http://arxiv.org/abs/2406.03682v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "How Does Sharpness-Aware Minimization Minimize Sharpness?",
+    "authors": [
+      "Kaiyue Wen",
+      "Tengyu Ma",
+      "Zhiyuan Li"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Sharpness-Aware Minimization (SAM) is a highly effective regularization technique for improving the generalization of deep neural networks for various settings. However, the underlying working of SAM remains elusive because of various intriguing approximations in the theoretical characterizations. SAM intends to penalize a notion of sharpness of the model but implements a computationally efficient variant; moreover, a third notion of sharpness was used for proving generalization guarantees. The subtle differences in these notions of sharpness can indeed lead to significantly different empirical results. This paper rigorously nails down the exact sharpness notion that SAM regularizes and clarifies the underlying mechanism. We also show that the two steps of approximations in the original motivation of SAM individually lead to inaccurate local conclusions, but their combination accidentally reveals the correct effect, when full-batch gradients are applied. Furthermore, we also prove that the stochastic version of SAM in fact regularizes the third notion of sharpness mentioned above, which is most likely to be the preferred notion for practical performance. The key mechanism behind this intriguing phenomenon is the alignment between the gradient and the top eigenvector of Hessian when SAM is applied.",
+    "url": "http://arxiv.org/abs/2211.05729v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "1st-Order Magic: Analysis of Sharpness-Aware Minimization",
+    "authors": [
+      "Nalin Tiwary",
+      "Siddarth Aananth"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Sharpness-Aware Minimization (SAM) is an optimization technique designed to improve generalization by favoring flatter loss minima. To achieve this, SAM optimizes a modified objective that penalizes sharpness, using computationally efficient approximations. Interestingly, we find that more precise approximations of the proposed SAM objective degrade generalization performance, suggesting that the generalization benefits of SAM are rooted in these approximations rather than in the original intended mechanism. This highlights a gap in our understanding of SAM's effectiveness and calls for further investigation into the role of approximations in optimization.",
+    "url": "http://arxiv.org/abs/2411.01714v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Balanced Sharpness-Aware Minimization for Imbalanced Regression",
+    "authors": [
+      "Yahao Liu",
+      "Qin Wang",
+      "Lixin Duan",
+      "Wen Li"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Regression is fundamental in computer vision and is widely used in various tasks including age estimation, depth estimation, target localization, \\etc However, real-world data often exhibits imbalanced distribution, making regression models perform poorly especially for target values with rare observations~(known as the imbalanced regression problem). In this paper, we reframe imbalanced regression as an imbalanced generalization problem. To tackle that, we look into the loss sharpness property for measuring the generalization ability of regression models in the observation space. Namely, given a certain perturbation on the model parameters, we check how model performance changes according to the loss values of different target observations. We propose a simple yet effective approach called Balanced Sharpness-Aware Minimization~(BSAM) to enforce the uniform generalization ability of regression models for the entire observation space. In particular, we start from the traditional sharpness-aware minimization and then introduce a novel targeted reweighting strategy to homogenize the generalization ability across the observation space, which guarantees a theoretical generalization bound. Extensive experiments on multiple vision regression tasks, including age and depth estimation, demonstrate that our BSAM method consistently outperforms existing approaches. The code is available \\href{https://github.com/manmanjun/BSAM_for_Imbalanced_Regression}{here}.",
+    "url": "http://arxiv.org/abs/2508.16973v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

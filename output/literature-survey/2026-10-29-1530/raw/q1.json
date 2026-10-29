@@ -1,0 +1,312 @@
+[
+  {
+    "title": "Time Series Prediction under Distribution Shift using Differentiable Forgetting",
+    "authors": [
+      "Stefanos Bennett",
+      "Jase Clarkson"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Time series prediction is often complicated by distribution shift which demands adaptive models to accommodate time-varying distributions. We frame time series prediction under distribution shift as a weighted empirical risk minimisation problem. The weighting of previous observations in the empirical risk is determined by a forgetting mechanism which controls the trade-off between the relevancy and effective sample size that is used for the estimation of the predictive model. In contrast to previous work, we propose a gradient-based learning method for the parameters of the forgetting mechanism. This speeds up optimisation and therefore allows more expressive forgetting mechanisms.",
+    "url": "http://arxiv.org/abs/2207.11486v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Estimating Test Performance for AI Medical Devices under Distribution Shift with Conformal Prediction",
+    "authors": [
+      "Charles Lu",
+      "Syed Rakin Ahmed",
+      "Praveer Singh",
+      "Jayashree Kalpathy-Cramer"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Estimating the test performance of software AI-based medical devices under distribution shifts is crucial for evaluating the safety, efficiency, and usability prior to clinical deployment. Due to the nature of regulated medical device software and the difficulty in acquiring large amounts of labeled medical datasets, we consider the task of predicting the test accuracy of an arbitrary black-box model on an unlabeled target domain without modification to the original training process or any distributional assumptions of the original source data (i.e. we treat the model as a \"black-box\" and only use the predicted output responses). We propose a \"black-box\" test estimation technique based on conformal prediction and evaluate it against other methods on three medical imaging datasets (mammography, dermatology, and histopathology) under several clinically relevant types of distribution shift (institution, hardware scanner, atlas, hospital). We hope that by promoting practical and effective estimation techniques for black-box models, manufacturers of medical devices will develop more standardized and realistic evaluation procedures to improve the robustness and trustworthiness of clinical AI tools.",
+    "url": "http://arxiv.org/abs/2207.05796v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Toward Certified Robustness Against Real-World Distribution Shifts",
+    "authors": [
+      "Haoze Wu",
+      "Teruhiro Tagomori",
+      "Alexander Robey",
+      "Fengjun Yang",
+      "Nikolai Matni",
+      "George Pappas",
+      "Hamed Hassani",
+      "Corina Pasareanu",
+      "Clark Barrett"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "We consider the problem of certifying the robustness of deep neural networks against real-world distribution shifts. To do so, we bridge the gap between hand-crafted specifications and realistic deployment settings by proposing a novel neural-symbolic verification framework, in which we train a generative model to learn perturbations from data and define specifications with respect to the output of the learned model. A unique challenge arising from this setting is that existing verifiers cannot tightly approximate sigmoid activations, which are fundamental to many state-of-the-art generative models. To address this challenge, we propose a general meta-algorithm for handling sigmoid activations which leverages classical notions of counter-example-guided abstraction refinement. The key idea is to \"lazily\" refine the abstraction of sigmoid functions to exclude spurious counter-examples found in the previous abstraction, thus guaranteeing progress in the verification process while keeping the state-space small. Experiments on the MNIST and CIFAR-10 datasets show that our framework significantly outperforms existing methods on a range of challenging distribution shifts.",
+    "url": "http://arxiv.org/abs/2206.03669v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards Practicable Sequential Shift Detectors",
+    "authors": [
+      "Oliver Cobb",
+      "Arnaud Van Looveren"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "There is a growing awareness of the harmful effects of distribution shift on the performance of deployed machine learning models. Consequently, there is a growing interest in detecting these shifts before associated costs have time to accumulate. However, desiderata of crucial importance to the practicable deployment of sequential shift detectors are typically overlooked by existing works, precluding their widespread adoption. We identify three such desiderata, highlight existing works relevant to their satisfaction, and recommend impactful directions for future research.",
+    "url": "http://arxiv.org/abs/2307.14758v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Informative regularization for a multi-layer perceptron RR Lyrae classifier under data shift",
+    "authors": [
+      "Francisco Pérez-Galarce",
+      "Karim Pichara",
+      "Pablo Huijse",
+      "Márcio Catelan",
+      "Domingo Mery"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In recent decades, machine learning has provided valuable models and algorithms for processing and extracting knowledge from time-series surveys. Different classifiers have been proposed and performed to an excellent standard. Nevertheless, few papers have tackled the data shift problem in labeled training sets, which occurs when there is a mismatch between the data distribution in the training set and the testing set. This drawback can damage the prediction performance in unseen data. Consequently, we propose a scalable and easily adaptable approach based on an informative regularization and an ad-hoc training procedure to mitigate the shift problem during the training of a multi-layer perceptron for RR Lyrae classification. We collect ranges for characteristic features to construct a symbolic representation of prior knowledge, which was used to model the informative regularizer component. Simultaneously, we design a two-step back-propagation algorithm to integrate this knowledge into the neural network, whereby one step is applied in each epoch to minimize classification error, while another is applied to ensure regularization. Our algorithm defines a subset of parameters (a mask) for each loss function. This approach handles the forgetting effect, which stems from a trade-off between these loss functions (learning from data versus learning expert knowledge) during training. Experiments were conducted using recently proposed shifted benchmark sets for RR Lyrae stars, outperforming baseline models by up to 3\\% through a more reliable classifier. Our method provides a new path to incorporate knowledge from characteristic features into artificial neural networks to manage the underlying data shift problem.",
+    "url": "http://arxiv.org/abs/2303.06544v1",
+    "doi": "10.1016/j.ascom.2023.100694",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GraphMETRO: Mitigating Complex Graph Distribution Shifts via Mixture of Aligned Experts",
+    "authors": [
+      "Shirley Wu",
+      "Kaidi Cao",
+      "Bruno Ribeiro",
+      "James Zou",
+      "Jure Leskovec"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Graph data are inherently complex and heterogeneous, leading to a high natural diversity of distributional shifts. However, it remains unclear how to build machine learning architectures that generalize to the complex distributional shifts naturally occurring in the real world. Here, we develop GraphMETRO, a Graph Neural Network architecture that models natural diversity and captures complex distributional shifts. GraphMETRO employs a Mixture-of-Experts (MoE) architecture with a gating model and multiple expert models, where each expert model targets a specific distributional shift to produce a referential representation w.r.t. a reference model, and the gating model identifies shift components. Additionally, we design a novel objective that aligns the representations from different expert models to ensure reliable optimization. GraphMETRO achieves state-of-the-art results on four datasets from the GOOD benchmark, which is comprised of complex and natural real-world distribution shifts, improving by 67% and 4.2% on the WebKB and Twitch datasets. Code and data are available at https://github.com/Wuyxin/GraphMETRO.",
+    "url": "http://arxiv.org/abs/2312.04693v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Thinking Beyond Distributions in Testing Machine Learned Models",
+    "authors": [
+      "Negar Rostamzadeh",
+      "Ben Hutchinson",
+      "Christina Greer",
+      "Vinodkumar Prabhakaran"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Testing practices within the machine learning (ML) community have centered around assessing a learned model's predictive performance measured against a test dataset, often drawn from the same distribution as the training dataset. While recent work on robustness and fairness testing within the ML community has pointed to the importance of testing against distributional shifts, these efforts also focus on estimating the likelihood of the model making an error against a reference dataset/distribution. We argue that this view of testing actively discourages researchers and developers from looking into other sources of robustness failures, for instance corner cases which may have severe undesirable impacts. We draw parallels with decades of work within software engineering testing focused on assessing a software system against various stress conditions, including corner cases, as opposed to solely focusing on average-case behaviour. Finally, we put forth a set of recommendations to broaden the view of machine learning testing to a rigorous practice.",
+    "url": "http://arxiv.org/abs/2112.03057v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Systems of functional equations, the generalized shift, and modelling pathological functions",
+    "authors": [
+      "Symon Serbenyuk"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "The present article is devoted to one class of generalizations of the Salem functions. To construct such functions by systems of functional equations, the generalized shift operator is used.",
+    "url": "http://arxiv.org/abs/2311.05625v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Text-to-3D with Classifier Score Distillation",
+    "authors": [
+      "Xin Yu",
+      "Yuan-Chen Guo",
+      "Yangguang Li",
+      "Ding Liang",
+      "Song-Hai Zhang",
+      "Xiaojuan Qi"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Text-to-3D generation has made remarkable progress recently, particularly with methods based on Score Distillation Sampling (SDS) that leverages pre-trained 2D diffusion models. While the usage of classifier-free guidance is well acknowledged to be crucial for successful optimization, it is considered an auxiliary trick rather than the most essential component. In this paper, we re-evaluate the role of classifier-free guidance in score distillation and discover a surprising finding: the guidance alone is enough for effective text-to-3D generation tasks. We name this method Classifier Score Distillation (CSD), which can be interpreted as using an implicit classification model for generation. This new perspective reveals new insights for understanding existing techniques. We validate the effectiveness of CSD across a variety of text-to-3D tasks including shape generation, texture synthesis, and shape editing, achieving results superior to those of state-of-the-art methods. Our project page is https://xinyu-andy.github.io/Classifier-Score-Distillation",
+    "url": "http://arxiv.org/abs/2310.19415v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Class incremental learning with probability dampening and cascaded gated classifier",
+    "authors": [
+      "Jary Pomponi",
+      "Alessio Devoto",
+      "Simone Scardapane"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Humans are capable of acquiring new knowledge and transferring learned knowledge into different domains, incurring a small forgetting. The same ability, called Continual Learning, is challenging to achieve when operating with neural networks due to the forgetting affecting past learned tasks when learning new ones. This forgetting can be mitigated by replaying stored samples from past tasks, but a large memory size may be needed for long sequences of tasks; moreover, this could lead to overfitting on saved samples. In this paper, we propose a novel regularisation approach and a novel incremental classifier called, respectively, Margin Dampening and Cascaded Scaling Classifier. The first combines a soft constraint and a knowledge distillation approach to preserve past learned knowledge while allowing the model to learn new patterns effectively. The latter is a gated incremental classifier, helping the model modify past predictions without directly interfering with them. This is achieved by modifying the output of the model with auxiliary scaling functions. We empirically show that our approach performs well on multiple benchmarks against well-established baselines, and we also study each component of our proposal and how the combinations of such components affect the final results.",
+    "url": "http://arxiv.org/abs/2402.01262v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "An Improved Oscillating-Error Classifier with Branching",
+    "authors": [
+      "Kieran Greer"
+    ],
+    "year": 2017,
+    "venue": "arXiv",
+    "abstract": "This paper extends the earlier work on an oscillating error correction technique. Specifically, it extends the design to include further corrections, by adding new layers to the classifier through a branching method. This technique is still consistent with earlier work and also neural networks in general. With this extended design, the classifier can now achieve the high levels of accuracy reported previously.",
+    "url": "http://arxiv.org/abs/1711.07042v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Enhancing Robustness of Foundation Model Representations under Provenance-related Distribution Shifts",
+    "authors": [
+      "Xiruo Ding",
+      "Zhecheng Sheng",
+      "Brian Hur",
+      "Feng Chen",
+      "Serguei V. S. Pakhomov",
+      "Trevor Cohen"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Foundation models are a current focus of attention in both industry and academia. While they have shown their capabilities in a variety of tasks, in-depth research is required to determine their robustness to distribution shift when used as a basis for supervised machine learning. This is especially important in the context of clinical data, with particular limitations related to data accessibility, lack of pretraining materials, and limited availability of high-quality annotations. In this work, we examine the stability of models based on representations from foundation models under distribution shift. We focus on confounding by provenance, a form of distribution shift that emerges in the context of multi-institutional datasets when there are differences in source-specific language use and class distributions. Using a sampling strategy that synthetically induces varying degrees of distribution shift, we evaluate the extent to which representations from foundation models result in predictions that are inherently robust to confounding by provenance. Additionally, we examine the effectiveness of a straightforward confounding adjustment method inspired by Pearl's conception of backdoor adjustment. Results indicate that while foundation models do show some out-of-the-box robustness to confounding-by-provenance related distribution shifts, this can be considerably improved through adjustment. These findings suggest a need for deliberate adjustment of predictive models using representations from foundation models in the context of source-specific distributional differences.",
+    "url": "http://arxiv.org/abs/2312.05435v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Convergence Analysis of Blurring Mean Shift",
+    "authors": [
+      "Ryoya Yamasaki",
+      "Toshiyuki Tanaka"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Blurring mean shift (BMS) algorithm, a variant of the mean shift algorithm, is a kernel-based iterative method for data clustering, where data points are clustered according to their convergent points via iterative blurring. In this paper, we analyze convergence properties of the BMS algorithm by leveraging its interpretation as an optimization procedure, which is known but has been underutilized in existing convergence studies. Whereas existing results on convergence properties applicable to multi-dimensional data only cover the case where all the blurred data point sequences converge to a single point, this study provides a convergence guarantee even when those sequences can converge to multiple points, yielding multiple clusters. This study also shows that the convergence of the BMS algorithm is fast by further leveraging geometrical characterization of the convergent points.",
+    "url": "http://arxiv.org/abs/2402.15146v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Explanation Shift: Detecting distribution shifts on tabular data via the explanation space",
+    "authors": [
+      "Carlos Mougan",
+      "Klaus Broelemann",
+      "Gjergji Kasneci",
+      "Thanassis Tiropanis",
+      "Steffen Staab"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "As input data distributions evolve, the predictive performance of machine learning models tends to deteriorate. In the past, predictive performance was considered the key indicator to monitor. However, explanation aspects have come to attention within the last years. In this work, we investigate how model predictive performance and model explanation characteristics are affected under distribution shifts and how these key indicators are related to each other for tabular data. We find that the modeling of explanation shifts can be a better indicator for the detection of predictive performance changes than state-of-the-art techniques based on representations of distribution shifts. We provide a mathematical analysis of different types of distribution shifts as well as synthetic experimental examples.",
+    "url": "http://arxiv.org/abs/2210.12369v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Prediction Accuracy & Reliability: Classification and Object Localization under Distribution Shift",
+    "authors": [
+      "Fabian Diet",
+      "Moussa Kassem Sbeyti",
+      "Michelle Karg"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Natural distribution shift causes a deterioration in the perception performance of convolutional neural networks (CNNs). This comprehensive analysis for real-world traffic data addresses: 1) investigating the effect of natural distribution shift and weather augmentations on both detection quality and confidence estimation, 2) evaluating model performance for both classification and object localization, and 3) benchmarking two common uncertainty quantification methods - Ensembles and different variants of Monte-Carlo (MC) Dropout - under natural and close-to-natural distribution shift. For this purpose, a novel dataset has been curated from publicly available autonomous driving datasets. The in-distribution (ID) data is based on cutouts of a single object, for which both class and bounding box annotations are available. The six distribution-shift datasets cover adverse weather scenarios, simulated rain and fog, corner cases, and out-of-distribution data. A granular analysis of CNNs under distribution shift allows to quantize the impact of different types of shifts on both, task performance and confidence estimation: ConvNeXt-Tiny is more robust than EfficientNet-B0; heavy rain degrades classification stronger than localization, contrary to heavy fog; integrating MC-Dropout into selected layers only has the potential to enhance task performance and confidence estimation, whereby the identification of these layers depends on the type of distribution shift and the considered task.",
+    "url": "http://arxiv.org/abs/2409.03543v1",
+    "doi": "10.1007/978-3-031-66842-5_9",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Continuous shift commuting maps between ultragraph shift spaces",
+    "authors": [
+      "Daniel Gonçalves",
+      "Marcelo Sobottka"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Recently a generalization of shifts of finite type to the infinite alphabet case was proposed, in connection with the theory of ultragraph C*-algebras. In this work we characterize the class of continuous shift commuting maps between these spaces. In particular, we prove a Curtis-Hedlund-Lyndon type theorem and use it to completely characterize continuous, shift commuting, length preserving maps in terms of generalized sliding block codes.",
+    "url": "http://arxiv.org/abs/1802.04793v2",
+    "doi": "10.3934/dcds.2019043",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Online local pool generation for dynamic classifier selection: an extended version",
+    "authors": [
+      "Mariana A. Souza",
+      "George D. C. Cavalcanti",
+      "Rafael M. O. Cruz",
+      "Robert Sabourin"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Dynamic Classifier Selection (DCS) techniques have difficulty in selecting the most competent classifier in a pool, even when its presence is assured. Since the DCS techniques rely only on local data to estimate a classifier's competence, the manner in which the pool is generated could affect the choice of the best classifier for a given sample. That is, the global perspective in which pools are generated may not help the DCS techniques in selecting a competent classifier for samples that are likely to be mislabelled. Thus, we propose in this work an online pool generation method that produces a locally accurate pool for test samples in difficult regions of the feature space. The difficulty of a given area is determined by the classification difficulty of the samples in it. That way, by using classifiers that were generated in a local scope, it could be easier for the DCS techniques to select the best one for the difficult samples. For the query samples in easy regions, a simple nearest neighbors rule is used. In the extended version of this work, a deep analysis on the correlation between instance hardness and the performance of DCS techniques is presented. An instance hardness measure that conveys the degree of local class overlap is then used to decide when the local pool is used in the proposed scheme. The proposed method yielded significantly greater recognition rates in comparison to a Bagging-generated pool and two other global pool generation schemes for all DCS techniques evaluated. The proposed scheme's performance was also significantly superior to three state-of-the-art classification models and statistically equivalent to five of them. Moreover, an extended analysis on the computational complexity of the proposed method and of several DS techniques is presented in this version. We also provide the implementation of the proposed technique using the DESLib library on GitHub.",
+    "url": "http://arxiv.org/abs/1809.01628v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Estimating required flexibility for secure distribution grid operation considering the uncertainties of EV and PV",
+    "authors": [
+      "Manijeh Alipour",
+      "Omid Alizadeh-Mousavi"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Renewable energy productions and electrification of mobility are promising solutions to reduce greenhouse gas emissions. Their effective integration in a power grid encounters several challenges. The uncertain nature of renewable energy productions as well as stochastic consumptions of electric vehicles introduce remarkable intermittency to a distribution grid and results in bi-uncertain characteristics of both supply and demand sides. One way to verify the secure grid operation within acceptable voltage and loading levels is to assess its required flexibility considering possible boundaries of uncertain variables. In this paper, first a comprehensive linear model of distribution grid considering all pertaining constraints is presented. Then, a flexibility estimation technique is proposed based on the feasibility study of the uncertain space of photovoltaic power productions and load containing electric vehicles. The proposed methodology uses grid monitoring data to determine grid state and to model uncertain parameters. The model is applied on a real low voltage (LV) system equipped with grid monitoring devices.",
+    "url": "http://arxiv.org/abs/2301.03779v1",
+    "doi": "10.1049/icp.2022.0815",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CCMI : Classifier based Conditional Mutual Information Estimation",
+    "authors": [
+      "Sudipto Mukherjee",
+      "Himanshu Asnani",
+      "Sreeram Kannan"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Conditional Mutual Information (CMI) is a measure of conditional dependence between random variables X and Y, given another random variable Z. It can be used to quantify conditional dependence among variables in many data-driven inference problems such as graphical models, causal learning, feature selection and time-series analysis. While k-nearest neighbor (kNN) based estimators as well as kernel-based methods have been widely used for CMI estimation, they suffer severely from the curse of dimensionality. In this paper, we leverage advances in classifiers and generative models to design methods for CMI estimation. Specifically, we introduce an estimator for KL-Divergence based on the likelihood ratio by training a classifier to distinguish the observed joint distribution from the product distribution. We then show how to construct several CMI estimators using this basic divergence estimator by drawing ideas from conditional generative models. We demonstrate that the estimates from our proposed approaches do not degrade in performance with increasing dimension and obtain significant improvement over the widely used KSG estimator. Finally, as an application of accurate CMI estimation, we use our best estimator for conditional independence testing and achieve superior performance than the state-of-the-art tester on both simulated and real data-sets.",
+    "url": "http://arxiv.org/abs/1906.01824v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Bilateral weighted shift operators similar to normal operators",
+    "authors": [
+      "György Pál Gehér"
+    ],
+    "year": 2015,
+    "venue": "arXiv",
+    "abstract": "We prove that an injective, not necessarily bounded weighted bilateral shift operator on $\\ell^2(\\mathbb{Z})$ is similar to a normal operator if and only if it is similar to a scalar multiple of the simple (i.e. unweighted) bilateral shift operator $S$.",
+    "url": "http://arxiv.org/abs/1506.01806v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

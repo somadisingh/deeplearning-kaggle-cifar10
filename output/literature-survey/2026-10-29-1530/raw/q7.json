@@ -1,0 +1,397 @@
+[
+  {
+    "title": "Fast ungated five-dimensional cardiac MRI on a 1.5 T MR-linac for MRI-guided radiotherapy",
+    "authors": [
+      "M. L. Terpstra",
+      "T. E. Olausson",
+      "M. M. N. Aubert",
+      "C. Beijst",
+      "A. Sbrizzi",
+      "C. A. T. van den Berg",
+      "M. F. Fast"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Background: Stereotactic arrhythmia radio-ablation (STAR) for patients with ventricular tachycardia is currently limited by complex cardiorespiratory motion. Current 5D-MRI motion models require long acquisition and reconstruction times, limiting clinical viability. Objective: To develop a fast, ungated 5D-MRI reconstruction method for personalized motion characterization to support MRI-guided STAR treatments. Methods: We propose a fast, ungated 5D-MRI reconstruction method based on the CMR-MOTUS framework. The method uses a 3D Cartesian acquisition with a joint optimization framework to reconstruct a motion-corrected reference image and low-rank deformation vector fields (DVFs). By exploiting the low rank structure, we explicitly disentangle respiratory and cardiac motion during optimization. Then, the DVFs are used for 5D-MRI reconstruction with a retrospectively adjustable number of motion states. Validation was performed using digital and physical cardiorespiratory phantoms. Furthermore, the approach was evaluated using 10 healthy volunteers, comparing motion consistency with 2D cine MRI. Results: Validation of 5D CMR-MOTUS using digital and physical phantoms demonstrated accurate 5D-MRI reconstruction. In the physical phantom, 5D CMR-MOTUS achieved a left-ventricle DICE of 0.96 +/- 0.01. In the volunteer cohort, the 5D-MRI scans showed strong motion to 2D cine MRI, with a cardiac motion error of 0.1 +/- 0.9 mm and a respiratory motion error of 0.2 +/- 2.9 mm. Crucially, 5D-MRI data were acquired in 1 minute and reconstructed in 6 minutes. Conclusions: The proposed 5D-MRI method enables rapid, high-quality, and personalized motion characterization, demonstrating potential for integration into MRI-guided STAR treatments. Data Availability: The 3D k-space data and 5D reconstructions for the ten volunteers are publicly available at https://doi.org/10.5281/zenodo.21278894",
+    "url": "http://arxiv.org/abs/2607.16033v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CIFAR-10-Warehouse: Broad and More Realistic Testbeds in Model Generalization Analysis",
+    "authors": [
+      "Xiaoxiao Sun",
+      "Xingjian Leng",
+      "Zijian Wang",
+      "Yang Yang",
+      "Zi Huang",
+      "Liang Zheng"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Analyzing model performance in various unseen environments is a critical research problem in the machine learning community. To study this problem, it is important to construct a testbed with out-of-distribution test sets that have broad coverage of environmental discrepancies. However, existing testbeds typically either have a small number of domains or are synthesized by image corruptions, hindering algorithm design that demonstrates real-world effectiveness. In this paper, we introduce CIFAR-10-Warehouse, consisting of 180 datasets collected by prompting image search engines and diffusion models in various ways. Generally sized between 300 and 8,000 images, the datasets contain natural images, cartoons, certain colors, or objects that do not naturally appear. With CIFAR-10-W, we aim to enhance the evaluation and deepen the understanding of two generalization tasks: domain generalization and model accuracy prediction in various out-of-distribution environments. We conduct extensive benchmarking and comparison experiments and show that CIFAR-10-W offers new and interesting insights inherent to these tasks. We also discuss other fields that would benefit from CIFAR-10-W.",
+    "url": "http://arxiv.org/abs/2310.04414v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Quotient Network -- A Network Similar to ResNet but Learning Quotients",
+    "authors": [
+      "Peng Hui",
+      "Jiamuyang Zhao",
+      "Changxin Li",
+      "Qingzhen Zhu"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "The emergence of ResNet provides a powerful tool for training extremely deep networks. The core idea behind it is to change the learning goals of the network. It no longer learns new features from scratch but learns the difference between the target and existing features. However, the difference between the two kinds of features does not have an independent and clear meaning, and the amount of learning is based on the absolute rather than the relative difference, which is sensitive to the size of existing features. We propose a new network that perfectly solves these two problems while still having the advantages of ResNet. Specifically, it chooses to learn the quotient of the target features with the existing features, so we call it the quotient network. In order to enable this network to learn successfully and achieve higher performance, we propose some design rules for this network so that it can be trained efficiently and achieve better performance than ResNet. Experiments on the CIFAR10, CIFAR100, and SVHN datasets prove that this network can stably achieve considerable improvements over ResNet by simply making tiny corresponding changes to the original ResNet network without adding new parameters.",
+    "url": "http://arxiv.org/abs/2506.00992v1",
+    "doi": "10.3390/a17110521",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates",
+    "authors": [
+      "Leslie N. Smith",
+      "Nicholay Topin"
+    ],
+    "year": 2017,
+    "venue": "arXiv",
+    "abstract": "In this paper, we describe a phenomenon, which we named \"super-convergence\", where neural networks can be trained an order of magnitude faster than with standard training methods. The existence of super-convergence is relevant to understanding why deep networks generalize well. One of the key elements of super-convergence is training with one learning rate cycle and a large maximum learning rate. A primary insight that allows super-convergence training is that large learning rates regularize the training, hence requiring a reduction of all other forms of regularization in order to preserve an optimal regularization balance. We also derive a simplification of the Hessian Free optimization method to compute an estimate of the optimal learning rate. Experiments demonstrate super-convergence for Cifar-10/100, MNIST and Imagenet datasets, and resnet, wide-resnet, densenet, and inception architectures. In addition, we show that super-convergence provides a greater boost in performance relative to standard training when the amount of labeled training data is limited. The architectures and code to replicate the figures in this paper are available at github.com/lnsmith54/super-convergence. See http://www.fast.ai/2018/04/30/dawnbench-fastai/ for an application of super-convergence to win the DAWNBench challenge (see https://dawn.cs.stanford.edu/benchmark/).",
+    "url": "http://arxiv.org/abs/1708.07120v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "94% on CIFAR-10 in 3.29 Seconds on a Single GPU",
+    "authors": [
+      "Keller Jordan"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "CIFAR-10 is among the most widely used datasets in machine learning, facilitating thousands of research projects per year. To accelerate research and reduce the cost of experiments, we introduce training methods for CIFAR-10 which reach 94% accuracy in 3.29 seconds, 95% in 10.4 seconds, and 96% in 46.3 seconds, when run on a single NVIDIA A100 GPU. As one factor contributing to these training speeds, we propose a derandomized variant of horizontal flipping augmentation, which we show improves over the standard method in every case where flipping is beneficial over no flipping at all. Our code is released at https://github.com/KellerJordan/cifar10-airbench.",
+    "url": "http://arxiv.org/abs/2404.00498v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Pilot Study of Interplanetary Scintillation with FAST",
+    "authors": [
+      "Li-Jia Liu",
+      "Bo Peng",
+      "Lei Yu",
+      "Ye-Zhao Yu",
+      "Ji-Guang Lu",
+      "Bin Liu",
+      "O. Chang",
+      "M. M. Bisi",
+      "FAST Collaboration"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Observations of Interplanetary Scintillation (IPS) are an efficient remote-sensing method to study the solar wind and inner heliosphere. From 2016 to 2018, some distinctive observations of IPS sources like 3C 286 and 3C 279 were accomplished with the Five-hundred-meter Aperture Spherical radio Telescope (FAST), the largest single-dish telescope in the world. Due to the 270-1620 MHz wide frequency coverage of the Ultra-Wideband (UWB) receiver, one can use both single-frequency and dual-frequency analyses to determine the projected velocity of the solar wind. Moreover, based on the extraordinary sensitivity owing to the large collecting surface area of FAST, we can observe weak IPS signals. With the advantages of both the wider frequency coverage and high sensitivity, also with our radio frequency interference (RFI) mitigation strategy and an optimized model-fitting method developed, in this paper, we analyze the fitting confidence intervals of the solar wind velocity, and present some preliminary results achieved using FAST, which points to the current FAST system being highly capable of carrying out observations of IPS",
+    "url": "http://arxiv.org/abs/2105.02783v1",
+    "doi": "10.1093/mnras/stab1139",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Study of Three Rotating Radio Transients with FAST",
+    "authors": [
+      "Jiguang Lu",
+      "Bo Peng",
+      "Kuo Liu",
+      "Peng Jiang",
+      "Youling Yue",
+      "Meng Yu",
+      "Ye-Zhao Yu",
+      "Feifei Kou",
+      "Lin Wang",
+      "FAST Collaboration"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Rotating radio transients (RRATs) are peculiar astronomical objects whose emission mechanism remains under investigation. In this paper, we present observations of three RRATs, J1538+2345, J1854+0306 and J1913+1330, observed with the Five-hundred-meter Aperture Spherical radio Telescope (FAST). Specifically, we analyze the mean pulse profiles and temporal flux density evolutions of the RRATs. Owing to the high sensitivity of FAST, the derived burst rates of the three RRATs are higher than those in previous reports. RRAT J1854+0306 exhibited a time-dynamic mean pulse profile, whereas RRAT J1913+1330 showed distinct radiation and nulling segments on its pulse intensity trains. The mean pulse profile variation with frequency is also studied for RRAT J1538+2345 and RRAT J1913+1330, and the profiles at different frequencies could be well fitted with a cone-core model and a conal-beam model, respectively.",
+    "url": "http://arxiv.org/abs/1903.06364v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Performance of FAST with an Ultra-Wide Bandwidth Receiver at 500-3300 MHz",
+    "authors": [
+      "Chuan-Peng Zhang",
+      "Peng Jiang",
+      "Ming Zhu",
+      "Jun Pan",
+      "Cheng Cheng",
+      "Hong-Fei Liu",
+      "Yan Zhu",
+      "Chun Sun",
+      "FAST Collaboration"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "The Five-hundred-meter Aperture Spherical radio Telescope (FAST) has been running for several years. A new Ultra-Wide Bandwidth (UWB) receiver, simultaneously covering 500-3300 MHz, has been mounted in the FAST feed cabin and passed a series of observational tests. The whole UWB band is separated into four independent bands. Each band has 1048576 channels in total, resulted in a spectral resolution of 1 kHz. At 500-3300 MHz, the antenna gain is around 14.3-7.7 K/Jy, the aperture efficiency is around 0.56-0.30, the system temperature is around 88-130 K, and the HPBW is around 7.6-1.6 arcmin. The measured standard deviation of pointing accuracy is better than ~7.9 arcsec, when zenith angle (ZA) is within 26.4deg. The sensitivity and stability of the UWB receiver are confirmed to satisfy expectation by spectral observations, e.g., HI and OH. The FAST UWB receiver already has a good performance for taking sensitive observations in various scientific goals.",
+    "url": "http://arxiv.org/abs/2304.11895v2",
+    "doi": "10.1088/1674-4527/acd58e",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Predictions for the FAST telescope's CRAFTS Extra-Galactic HI Survey",
+    "authors": [
+      "Kai Zhang",
+      "Jingwen Wu",
+      "Di Li",
+      "Chao-Wei Tsai",
+      "Lister Staveley-Smith",
+      "Jing Wang",
+      "Jian Fu",
+      "Travis McIntyre",
+      "Mao Yuan",
+      "FAST collaboration"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "The Five-hundred-meter Aperture Spherical radio Telescope (FAST) has started the Commensal Radio Astronomy FasT Survey (CRAFTS). In this paper, we use the technical parameters of FAST derived from commissioning observations to simulate the completeness function for extragalactic HI survey of CRAFTS, HI galaxies from two kinds of mock catalogues are selected. One is generated by Monte-Carlo simulation based on the interpolated mass-velocity width function of the ALFALFA $100\\%$ (a.k.a. $α$ .100) catalogue. The other is constructed by semi-analytical N-body simulation based on the $Λ$CDM model. Our results suggest that a two-pass extragalactic HI survey will be able to detect nearly $4.8\\times10^{5}$ galaxies, from which the 'faint end' slope of the HI Mass Function (HIMF) can be recovered to $\\mathrm{10^{7}\\, M_{\\odot}}$ and the 'knee mass' of the HIMF can be measured to a redshift of 0.1. Considering the radio frequency interference status and sensitivity limitation, CRAFTS will be efficient in detecting HI galaxies at redshifts below 0.1, which implies a tremendous potential in exploring the galaxy interactions in different environments and the spatial distribution of HI galaxies in the local universe.",
+    "url": "http://arxiv.org/abs/2012.01683v1",
+    "doi": "10.1093/mnras/staa3275",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Fast Spatial Memory with Elastic Test-Time Training",
+    "authors": [
+      "Ziqiao Ma",
+      "Xueyang Yu",
+      "Haoyu Zhen",
+      "Yuncong Yang",
+      "Joyce Chai",
+      "Chuang Gan"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Large Chunk Test-Time Training (LaCT) has shown strong performance on long-context 3D reconstruction, but its fully plastic inference-time updates remain vulnerable to catastrophic forgetting and overfitting. As a result, LaCT is typically instantiated with a single large chunk spanning the full input sequence, falling short of the broader goal of handling arbitrarily long sequences in a single pass. We propose Elastic Test-Time Training inspired by elastic weight consolidation, that stabilizes LaCT fast-weight updates with a Fisher-weighted elastic prior around a maintained anchor state. The anchor evolves as an exponential moving average of past fast weights to balance stability and plasticity. Based on this updated architecture, we introduce Fast Spatial Memory (FSM), an efficient and scalable model for 4D reconstruction that learns spatiotemporal representations from long observation sequences and renders novel view-time combinations. We pre-trained FSM on large-scale curated 3D/4D data to capture the dynamics and semantics of complex spatial environments. Extensive experiments show that FSM supports fast adaptation over long sequences and delivers high-quality 3D/4D reconstruction with smaller chunks and mitigating the camera-interpolation shortcut. Overall, we hope to advance LaCT beyond the bounded single-chunk setting toward robust multi-chunk adaptation, a necessary step for generalization to genuinely longer sequences, while substantially alleviating the activation-memory bottleneck.",
+    "url": "http://arxiv.org/abs/2604.07350v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CINIC-10 is not ImageNet or CIFAR-10",
+    "authors": [
+      "Luke N. Darlow",
+      "Elliot J. Crowley",
+      "Antreas Antoniou",
+      "Amos J. Storkey"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "In this brief technical report we introduce the CINIC-10 dataset as a plug-in extended alternative for CIFAR-10. It was compiled by combining CIFAR-10 with images selected and downsampled from the ImageNet database. We present the approach to compiling the dataset, illustrate the example images for different classes, give pixel distributions for each part of the repository, and give some standard benchmarks for well known models. Details for download, usage, and compilation can be found in the associated github repository.",
+    "url": "http://arxiv.org/abs/1810.03505v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CIFAR-10 Image Classification Using Feature Ensembles",
+    "authors": [
+      "Felipe O. Giuste",
+      "Juan C. Vizcarra"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Image classification requires the generation of features capable of detecting image patterns informative of group identity. The objective of this study was to classify images from the public CIFAR-10 image dataset by leveraging combinations of disparate image feature sources from both manual and deep learning approaches. Histogram of oriented gradients (HOG) and pixel intensities successfully inform classification (53% and 59% classification accuracy, respectively), yet there is much room for improvement. VGG16 with ImageNet trained weights and a CIFAR-10 optimized model (CIFAR-VGG) further improve upon image classification (60% and 93.43% accuracy, respectively). We further improved classification by utilizing transfer learning to re-establish optimal network weights for VGG16 (TL-VGG) and Inception ResNet v2 (TL-Inception) resulting in significant performance increases (85% and 90.74%, respectively), yet fail to surpass CIFAR-VGG. We hypothesized that if each generated feature set obtained some unique insight into the classification problem, then combining these features would result in greater classification accuracy, surpassing that of CIFAR-VGG. Upon selection of the top 1000 principal components from TL-VGG, TL-Inception, HOG, pixel intensities, and CIFAR-VGG, we achieved testing accuracy of 94.6%, lending support to our hypothesis.",
+    "url": "http://arxiv.org/abs/2002.03846v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "The Fundamental Performance of FAST with 19-beam Receiver at L Band",
+    "authors": [
+      "Peng Jiang",
+      "Ning-Yu Tang",
+      "Li-Gang Hou",
+      "Meng-Ting Liu",
+      "Marko Krco",
+      "Lei Qian",
+      "Jing-Hai Sun",
+      "Tao-Chung Ching",
+      "Bin Liu",
+      "Yan Duan",
+      "You-Ling Yue",
+      "Heng-Qian Gan",
+      "Rui Yao",
+      "Hui Li",
+      "Gao-Feng Pan",
+      "Dong-Jun Yu",
+      "Hong-Fei Liu",
+      "Di Li",
+      "Bo Peng",
+      "Jun Yan",
+      "FAST Collaboration"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "The Five-hundred-meter Aperture Spherical radio Telescope (FAST) passed national acceptance and is taking pilot cycle of 'Shared-Risk' observations. The 19-beam receiver covering 1.05-1.45 GHz was used for most of these observations. The electronics gain fluctuation of the system is better than 1\\% over 3.5 hours, enabling enough stability for observations. Pointing accuracy, aperture efficiency and system temperature are three key parameters of FAST. The measured standard deviation of pointing accuracy is 7.9$''$, which satisfies the initial design of FAST. When zenith angle is less than 26.4$^\\circ$, the aperture efficiency and system temperature around 1.4 GHz are $\\sim$ 0.63 and less than 24 K for central beam, respectively. The measured value of these two parameters are better than designed value of 0.6 and 25 K, respectively. The sensitivity and stability of the 19-beam backend are confirmed to satisfy expectation by spectral HI observations toward N672 and polarization observations toward 3C286. The performance allows FAST to take sensitive observations in various scientific goals, from studies of pulsar to galaxy evolution.",
+    "url": "http://arxiv.org/abs/2002.01786v1",
+    "doi": "10.1088/1674-4527/20/5/64",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "The First Pulsar Discovered by FAST",
+    "authors": [
+      "Lei Qian",
+      "Zhichen Pan",
+      "Di Li",
+      "George Hobbs",
+      "Weiwei Zhu",
+      "Pei Wang",
+      "Zhijie Liu",
+      "Youling Yue",
+      "Yan Zhu",
+      "Hongfei Liu",
+      "Dongjun Yu",
+      "Jinghai Sun",
+      "Peng Jiang",
+      "Gaofeng Pan",
+      "Hui Li",
+      "Hengqian Gan",
+      "Rui Yao",
+      "Xiaoyao Xie",
+      "Fernando Camilo",
+      "Andrew Cameron",
+      "Lei Zhang",
+      "Shen Wang",
+      "FAST Project"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "To assist with the commissioning (Jiang et al. 2019) of the Five-hundred-meter Aperture Spherical radio Telescope (FAST), we performed a pulsar search, with the primary goal of developing and testing the pulsar data acquisition and processing pipelines. We tested and used three pipelines, two (P1 and P2 hereafter) searched for the periodic signature of pulsars whereas the other one was used to search for bright single pulses (P3 hereafter). A pulsar candidate was discovered in the observation on the 22nd August, 2017, and later confirmed by the Parkes radio telescope on the 10th September, 2017. This pulsar, named PSR J1900-0134, was the first pulsar discovered by FAST. The pulsar has a pulse period of 1.8 s and a dispersion measure (DM) of 188\\,pc\\,cm$^{-3}$.",
+    "url": "http://arxiv.org/abs/1903.06318v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Tracking mm-Wave Channel Dynamics: Fast Beam Training Strategies under Mobility",
+    "authors": [
+      "Joan Palacios",
+      "Danilo De Donno",
+      "Joerg Widmer"
+    ],
+    "year": 2016,
+    "venue": "arXiv",
+    "abstract": "In order to cope with the severe path loss, millimeter-wave (mm-wave) systems exploit highly directional communication. As a consequence, even a slight beam misalignment between two communicating devices (for example, due to mobility) can generate a significant signal drop. This leads to frequent invocations of time-consuming mechanisms for beam re-alignment, which deteriorate system performance. In this paper, we propose smart beam training and tracking strategies for fast mm-wave link establishment and maintenance under node mobility. We leverage the ability of hybrid analog-digital transceivers to collect channel information from multiple spatial directions simultaneously and formulate a probabilistic optimization problem to model the temporal evolution of the mm-wave channel under mobility. In addition, we present for the first time a beam tracking algorithm that extracts information needed to update the steering directions directly from data packets, without the need for spatial scanning during the ongoing data transmission. Simulation results, obtained by a custom simulator based on ray tracing, demonstrate the ability of our beam training/tracking strategies to keep the communication rate only 10% below the optimal bound. Compared to the state of the art, our approach provides a 40% to 150% rate increase, yet requires lower complexity hardware.",
+    "url": "http://arxiv.org/abs/1612.07957v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "The FAST All Sky HI Survey DR2: the FASHI Catalog and the HI Mass Function",
+    "authors": [
+      "Chuan-Peng Zhang",
+      "Ming Zhu",
+      "Peng Jiang",
+      "Hong Guo",
+      "Jin-Long Xu",
+      "Xiao-Lan Liu",
+      "Nai-Ping Yu",
+      "Cheng Cheng",
+      "Jing Wang",
+      "Jie Wang",
+      "FAST Collaboration"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "The FAST All Sky HI Survey (FASHI) conducted with the Five-hundred-meter Aperture Spherical radio Telescope (FAST) has mapped $\\sim 19500\\,\\mathrm{deg}^2$ of the sky north of DEC $= -14^{\\circ}$, detecting $156411$ extragalactic HI sources at $z< 0.09$ with a median sensitivity of $0.57\\,\\mathrm{mJy}\\,\\mathrm{beam}^{-1}$ at a velocity resolution of $6.4\\,\\mathrm{km}\\,\\mathrm{s}^{-1}$. The survey achieves unprecedented depth and area coverage, significantly improving upon previous single-dish surveys. Through a detailed completeness analysis that accounts for the survey's non-uniform sensitivity and line-width dependence, we construct a robust HI mass function (HIMF) using a completeness-corrected sample of over $109000$ sources. The HIMF is robustly constrained down to $M_{\\mathrm{HI}}\\sim 10^{6.2}\\,M_{\\odot}$. When systematic uncertainties are included, the HIMF is well described by a single-Schechter function with a characteristic mass $\\log (M_{*} / h_{70}^{-2}M_{\\odot}) = 9.89\\pm 0.02$, low-mass end slope $α= -1.31\\pm 0.02$, and amplitude $φ_{*} = (6.38\\pm 0.49)\\times 10^{-3}\\,h_{70}^{3}\\,\\mathrm{Mpc}^{-3}\\,\\mathrm{dex}^{-1}$. The derived cosmic HI density is $Ω_{\\mathrm{HI}} = (4.71\\pm 0.03_{\\mathrm{stat}}\\pm 0.40_{\\mathrm{sys}})\\times 10^{-4}\\,h_{70}^{-1}$. FASHI provides the most extensive and sensitive HI catalog to date, establishing an important benchmark for studies of gas accretion, galaxy evolution, and large-scale structure in the local universe.",
+    "url": "http://arxiv.org/abs/2606.31539v3",
+    "doi": "10.1007/s11433-026-3072-1",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Training, learning and inference: unified dynamics of neural systems",
+    "authors": [
+      "Mian Wang"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "We define an atomic generation fact f=(u,tau,omega,z;rho), recording the origin, realized transformation, concrete occurrence, generated result and relation role. Compiled into a Generation-Fact Graph (GFG), these facts provide an AI-native, compilable scientific fact substrate preserving generation histories. We establish a GFG-based recursive scientific process in which analysis, intervention, replay and validation form facts for later cycles. Using nanoGPT, we establish unified training-learning dynamics. Training is the evolution of a parameter-optimizer system with state and memory: each actual training action enters the receiving state and produces a finite-amplitude nonlinear functional response conditioned by that state and target-specific update geometry. Learning is the persistent reorganization of distributed functional support by these responses; capability formation, maintenance, decline or recovery becomes observable when target-specific states are evaluated against their readout boundaries. Three primary coordinates - target-boundary state, target-specific update geometry and parameter-Adam receiving state - yield a second-order predictor operating before post-update outputs are read. On held-out runs, it achieved 91.43% accuracy and 91.49% macro-averaged recall across four transitions. We further establish inference as a frozen projection of training-learning dynamics. Component gating and rollback show causal recruitment and non-additive combination of query-conditioned support formed during training, deriving organizational conditions realized by Attention. Controlled feedback indicates possible double-edged reinforcement effects. ResNet/CIFAR-100 and diffusion/CIFAR-10 experiments confirm receiving-state-conditioned responses, persistent support reorganization and frozen inference projection beyond nanoGPT.",
+    "url": "http://arxiv.org/abs/2608.20965v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Student Capacity Moderates Knowledge Distillation Effectiveness: A Systematic Study Across ResNet Teacher-Student Pairs on CIFAR-10",
+    "authors": [
+      "Umut Onur Yasar"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "We investigate how teacher-student capacity relationships modulate knowledge distillation (KD) effectiveness in ResNet-based image classification on CIFAR-10. Across four teacher-student pairs (R50->R18, R34->R18, R50->R34, and R101->R34) we compare Logit-KD and Feature-KD under a strict evaluation protocol: hyperparameters and checkpoints are selected on a held-out validation split, selected configurations are re-run with five seeds, and the test set is used exclusively for final reporting. Beyond accuracy, we measure distillation fidelity directly via teacher-student agreement and KL divergence. We report four findings. First, the student-capacity pattern survives the corrected protocol at reduced magnitude: the only statistically significant gains occur for R34 students under Feature-KD (+0.19 and +0.21 pp, p<0.05), in two pairs whose teachers differ two-fold in parameters but not in accuracy, localizing the moderating variable on the student side, while no KD gain for R18 students is distinguishable from zero. Second, Feature-KD matches or outperforms Logit-KD in all four pairs, and its students land closer to the teacher's output distribution (KL at T=1) than Logit-KD students despite never observing teacher logits. Third, top-1 teacher-student agreement is flat across all pairs, decoupling fidelity from accuracy gains. Fourth, architecture dominates KD: correcting the ResNet stem for 32x32 inputs is worth +5.5 to +7.2 pp, more than 25x the largest KD gain. We also retract an attribution made in v1: a controlled re-run shows the reported gradient-clipping bug had no measurable effect, and v1's larger gains are explained by test-set selection. Code and results: github.com/umutonuryasar/kd-capacity-gap (tag v2.0).",
+    "url": "http://arxiv.org/abs/2605.31191v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "The FAST all sky HI survey (FASHI): The first release of catalog",
+    "authors": [
+      "Chuan-Peng Zhang",
+      "M. Zhu",
+      "P. Jiang",
+      "C. Cheng",
+      "J. Wang",
+      "J. Wang",
+      "J. -L. Xu",
+      "X. -L. Liu",
+      "N. -P. Yu",
+      "L. Qian",
+      "H. Yu",
+      "M. Ai",
+      "Y. Jing",
+      "C. Xu",
+      "Z. Liu",
+      "X. Guan",
+      "C. Sun",
+      "Q. Yang",
+      "M. Huang",
+      "Q. Hao",
+      "FAST Collaboration"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "The FAST All Sky HI survey (FASHI) was designed to cover the entire sky observable by the Five-hundred-meter Aperture Spherical radio Telescope (FAST), spanning approximately 22000 square degrees of declination between -14 deg and +66 deg, and in the frequency range of 1050-1450 MHz, with the expectation of eventually detecting more than 100000 HI sources. Between August 2020 and June 2023, FASHI had covered more than 7600 square degrees, which is approximately 35% of the total sky observable by FAST. It has a median detection sensitivity of around 0.76 mJy/beam and a spectral line velocity resolution of ~6.4 km/s at a frequency of ~1.4 GHz. As of now, a total of 41741 extragalactic HI sources have been detected in the frequency range 1305.5-1419.5 MHz, corresponding to a redshift limit of z<0.09. By cross-matching FASHI sources with the Siena Galaxy Atlas (SGA) and the Sloan Digital Sky Survey (SDSS) catalogs, we found that 16972 (40.7%) sources have spectroscopic redshifts and 10975 (26.3%) sources have only photometric redshifts. Most of the remaining 13794 (33.0%) HI sources are located in the direction of the Galactic plane, making their optical counterparts difficult to identify due to high extinction or high contamination of Galactic stellar sources. Based on current survey results, the FASHI survey is an unprecedented blind extragalactic HI survey. It has higher spectral and spatial resolution and broader coverage than the Arecibo Legacy Fast ALFA Survey (ALFALFA). When completed, FASHI will provide the largest extragalactic HI catalog and an objective view of HI content and large-scale structure in the local universe.",
+    "url": "http://arxiv.org/abs/2312.06097v1",
+    "doi": "10.1007/s11433-023-2219-7",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Do CIFAR-10 Classifiers Generalize to CIFAR-10?",
+    "authors": [
+      "Benjamin Recht",
+      "Rebecca Roelofs",
+      "Ludwig Schmidt",
+      "Vaishaal Shankar"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Machine learning is currently dominated by largely experimental work focused on improvements in a few key tasks. However, the impressive accuracy numbers of the best performing models are questionable because the same test sets have been used to select these models for multiple years now. To understand the danger of overfitting, we measure the accuracy of CIFAR-10 classifiers by creating a new test set of truly unseen images. Although we ensure that the new test set is as close to the original data distribution as possible, we find a large drop in accuracy (4% to 10%) for a broad range of deep learning models. Yet more recent models with higher original accuracy show a smaller drop and better overall performance, indicating that this drop is likely not due to overfitting based on adaptivity. Instead, we view our results as evidence that current accuracy numbers are brittle and susceptible to even minute natural variations in the data distribution.",
+    "url": "http://arxiv.org/abs/1806.00451v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

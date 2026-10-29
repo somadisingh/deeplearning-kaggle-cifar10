@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-29",
+ "tool": "academic-research-plugin literature-survey paper_search.py",
+ "sources_requested": [
+  "arxiv",
+  "s2",
+  "dblp"
+ ],
+ "sources_effective": "arxiv only (Semantic Scholar rate-limited HTTP 429, DBLP returned non-JSON)",
+ "date_start": "2017-01",
+ "topic_queries": [
+  {
+   "query": "CIFAR-10.1 distribution shift classifier generalization",
+   "results": 20
+  },
+  {
+   "query": "accuracy on the line out-of-distribution in-distribution correlation",
+   "results": 20
+  },
+  {
+   "query": "data augmentation robustness CIFAR-10 AugMix TrivialAugment",
+   "results": 20
+  },
+  {
+   "query": "sharpness-aware minimization generalization CIFAR-10",
+   "results": 20
+  },
+  {
+   "query": "knowledge distillation ensemble self-distillation CIFAR-10 ResNet",
+   "results": 20
+  },
+  {
+   "query": "efficient residual network CIFAR-10 parameter budget",
+   "results": 20
+  },
+  {
+   "query": "fast training CIFAR-10 ResNet airbench",
+   "results": 20
+  },
+  {
+   "query": "stochastic weight averaging EMA generalization",
+   "results": 18
+  }
+ ],
+ "seminal_queries": "22 arXiv title lookups (ti:\"...\"); 12 succeeded, 10 hit arXiv HTTP 429 and were verified via Recht et al. Table 1 or dropped",
+ "full_text_read": [
+  "1806.00451",
+  "2103.10158",
+  "2010.01412",
+  "2106.05237",
+  "2107.04649",
+  "2306.12100 (HTML)"
+ ],
+ "unique_records": 168
+}

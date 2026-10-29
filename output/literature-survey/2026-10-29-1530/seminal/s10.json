@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Distilling the Knowledge in a Neural Network",
+    "authors": [
+      "Geoffrey Hinton",
+      "Oriol Vinyals",
+      "Jeff Dean"
+    ],
+    "year": 2015,
+    "venue": "arXiv",
+    "abstract": "A very simple way to improve the performance of almost any machine learning algorithm is to train many different models on the same data and then to average their predictions. Unfortunately, making predictions using a whole ensemble of models is cumbersome and may be too computationally expensive to allow deployment to a large number of users, especially if the individual models are large neural nets. Caruana and his collaborators have shown that it is possible to compress the knowledge in an ensemble into a single model which is much easier to deploy and we develop this approach further using a different compression technique. We achieve some surprising results on MNIST and we show that we can significantly improve the acoustic model of a heavily used commercial system by distilling the knowledge in an ensemble of models into a single model. We also introduce a new type of ensemble composed of one or more full models and many specialist models which learn to distinguish fine-grained classes that the full models confuse. Unlike a mixture of experts, these specialist models can be trained rapidly and in parallel.",
+    "url": "http://arxiv.org/abs/1503.02531v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Distilling Holistic Knowledge with Graph Neural Networks",
+    "authors": [
+      "Sheng Zhou",
+      "Yucheng Wang",
+      "Defang Chen",
+      "Jiawei Chen",
+      "Xin Wang",
+      "Can Wang",
+      "Jiajun Bu"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Knowledge Distillation (KD) aims at transferring knowledge from a larger well-optimized teacher network to a smaller learnable student network.Existing KD methods have mainly considered two types of knowledge, namely the individual knowledge and the relational knowledge. However, these two types of knowledge are usually modeled independently while the inherent correlations between them are largely ignored. It is critical for sufficient student network learning to integrate both individual knowledge and relational knowledge while reserving their inherent correlation. In this paper, we propose to distill the novel holistic knowledge based on an attributed graph constructed among instances. The holistic knowledge is represented as a unified graph-based embedding by aggregating individual knowledge from relational neighborhood samples with graph neural networks, the student network is learned by distilling the holistic knowledge in a contrastive manner. Extensive experiments and ablation studies are conducted on benchmark datasets, the results demonstrate the effectiveness of the proposed method. The code has been published in https://github.com/wyc-ruiker/HKD",
+    "url": "http://arxiv.org/abs/2108.05507v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

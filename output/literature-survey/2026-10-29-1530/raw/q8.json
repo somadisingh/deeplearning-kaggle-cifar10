@@ -1,0 +1,255 @@
+[
+  {
+    "title": "Averages of b-hadron properties at the end of 2006",
+    "authors": [
+      " Heavy Flavor Averaging Group"
+    ],
+    "year": 2007,
+    "venue": "arXiv",
+    "abstract": "  This article reports the world averages for measurements on b-hadron properties obtained by the Heavy Flavor Averaging Group (HFAG) using the available results at the end of 2006. In the averaging, the input parameters used in the various analyses are adjusted (rescaled) to common values, and all known correlations are taken into account. The averages include lifetimes, neutral meson mixing parameters, parameters of semileptonic decays, branching fractions of B decays to final states with open charm, charmonium and no charm, and measurements related to CP asymmetries.",
+    "url": "http://arxiv.org/abs/0704.3575v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Averages of b-hadron Properties as of Winter 2005",
+    "authors": [
+      " Heavy Flavor Averaging Group"
+    ],
+    "year": 2005,
+    "venue": "arXiv",
+    "abstract": "  This article reports world averages for measurements on b-hadron properties obtained by the Heavy Flavor Averaging Group (HFAG) using the available results as of winter 2005 conferences. In the averaging, the input parameters used in the various analyses are adjusted (rescaled) to common values, and all known correlations are taken into account. The averages include lifetimes, neutral meson mixing parameters, semileptonic decay parameters, rare decay branching fractions, and CP violation measurements.",
+    "url": "http://arxiv.org/abs/hep-ex/0505100v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "The Averaging Principle for Non-autonomous Slow-fast Stochastic Differential Equations and an Application to a Local Stochastic Volatility Model",
+    "authors": [
+      "Filippo de Feo"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "In this work we study the averaging principle for non-autonomous slow-fast systems of stochastic differential equations. In particular in the first part we prove the averaging principle assuming the sublinearity, the Lipschitzianity and the Holder's continuity in time of the coefficients, an ergodic hypothesis and an $\\mathcal{L}^2$-bound of the fast component. In this setting we prove the weak convergence of the slow component to the solution of the averaged equation. Moreover we provide a suitable dissipativity condition under which the ergodic hypothesis and the $\\mathcal{L}^2$-bound of the fast component, which are implicit conditions, are satisfied.\n  In the second part we propose a financial application of this result: we apply the theory developed to a slow-fast local stochastic volatility model. First we prove the weak convergence of the model to a local volatility one. Then under a risk neutral measure we show that the prices of the derivatives, possibly path-dependent, converge to the ones calculated using the limit model.",
+    "url": "http://arxiv.org/abs/2012.09082v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "EMA Without the Lag: Bias-Corrected Iterate Averaging Schemes",
+    "authors": [
+      "Adam Block",
+      "Cyril Zhang"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Stochasticity in language model fine-tuning, often caused by the small batch sizes typically used in this regime, can destabilize training by introducing large oscillations in generation quality. A popular approach to mitigating this instability is to take an Exponential moving average (EMA) of weights throughout training. While EMA reduces stochasticity, thereby smoothing training, the introduction of bias from old iterates often creates a lag in optimization relative to vanilla training. In this work, we propose the Bias-Corrected Exponential Moving Average (BEMA), a simple and practical augmentation of EMA that retains variance-reduction benefits while eliminating bias. BEMA is motivated by a simple theoretical model wherein we demonstrate provable acceleration of BEMA over both a standard EMA and vanilla training. Through an extensive suite of experiments on Language Models, we show that BEMA leads to significantly improved convergence rates and final performance over both EMA and vanilla training in a variety of standard LM benchmarks, making BEMA a practical and theoretically motivated intervention for more stable and efficient fine-tuning.",
+    "url": "http://arxiv.org/abs/2508.00180v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A stochastic diffusion process for the Dirichlet distribution",
+    "authors": [
+      "J. Bakosi",
+      "J. R. Ristorcelli"
+    ],
+    "year": 2013,
+    "venue": "arXiv",
+    "abstract": "The method of potential solutions of Fokker-Planck equations is used to develop a transport equation for the joint probability of N coupled stochastic variables with the Dirichlet distribution as its asymptotic solution. To ensure a bounded sample space, a coupled nonlinear diffusion process is required: the Wiener-processes in the equivalent system of stochastic differential equations are multiplicative with coefficients dependent on all the stochastic variables. Individual samples of a discrete ensemble, obtained from the stochastic process, satisfy a unit-sum constraint at all times. The process may be used to represent realizations of a fluctuating ensemble of N variables subject to a conservation principle. Similar to the multivariate Wright-Fisher process, whose invariant is also Dirichlet, the univariate case yields a process whose invariant is the beta distribution. As a test of the results, Monte-Carlo simulations are used to evolve numerical ensembles toward the invariant Dirichlet distribution.",
+    "url": "http://arxiv.org/abs/1303.0217v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "EMA-Based Subspace Tracking for Adaptive Artifact Subspace Reconstruction",
+    "authors": [
+      "Vishnu KN",
+      "Cota Navin Gupta"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Electroencephalogram (EEG) artifact removal remains a critical challenge for real-world brain-computer interface deployment due to non-stationary signal statistics and limited calibration availability. Artifact Subspace Reconstruction (ASR) provides an automated framework for variance-based artifact suppression but relies on a static calibration-derived covariance model, limiting stability under intra-subject drift and increasing sensitivity to parameter mis-specification. This work proposes an adaptive ASR framework based on exponential moving average (EMA) subspace tracking. By integrating short-horizon covariance estimation with slow recursive assimilation, the method establishes dual adaptation timescales that enable responsiveness to evolving EEG structure while preserving stability against transient artifacts. This formulation further promotes smoother operating characteristics across rejection thresholds, reducing sensitivity to hyperparameter selection in continuous deployment settings. Evaluated on 24-channel EEG recordings from 10 subjects with prominent blink artifacts across cognitive states, EMA-ASR achieved substantially stronger artifact attenuation than Original and memory-limited ASR variants (53.1% vs. 24.0% and 26.7% blink reduction), at the cost of increased reconstruction and spectral deviation, whereas the memory-limited variant performed comparably to Original ASR. These findings position EMA-based adaptive tracking as a lightweight, deployment-oriented approach to continuous EEG artifact removal under non-stationary conditions, with an explicit trade-off between suppression strength and signal preservation.",
+    "url": "http://arxiv.org/abs/2609.35223v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Stochastic inequalities for single-server loss queueing systems",
+    "authors": [
+      "Vyacheslav M. Abramov"
+    ],
+    "year": 2005,
+    "venue": "arXiv",
+    "abstract": "  The present paper provides some new stochastic inequalities for the characteristics of the $M/GI/1/n$ and $GI/M/1/n$ loss queueing systems. These stochastic inequalities are based on substantially deepen up- and down-crossings analysis, and they are stronger than the known stochastic inequalities obtained earlier. Specifically, for a class of $GI/M/1/n$ queueing system, two-side stochastic inequalities are obtained.",
+    "url": "http://arxiv.org/abs/math/0505068v5",
+    "doi": "10.1080/07362990600958994",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Stochastic temporal data upscaling using the generalized k-nearest neighbor algorithm",
+    "authors": [
+      "John Mashford"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Three methods of temporal data upscaling, which may collectively be called the generalized k-nearest neighbor (GkNN) method, are considered. The accuracy of the GkNN simulation of month by month yield is considered (where the term yield denotes the dependent variable). The notion of an eventually well distributed time series is introduced and on the basis of this assumption some properties of the average annual yield and its variance for a GkNN simulation are computed. The total yield over a planning period is determined and a general framework for considering the GkNN algorithm based on the notion of stochastically dependent time series is described and it is shown that for a sufficiently large training set the GkNN simulation has the same statistical properties as the training data. An example of the application of the methodology is given in the problem of simulating yield of a rainwater tank given monthly climatic data.",
+    "url": "http://arxiv.org/abs/1810.10520v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Stochastic PDEs with heavy-tailed noise",
+    "authors": [
+      "Carsten Chong"
+    ],
+    "year": 2016,
+    "venue": "arXiv",
+    "abstract": "We analyze the nonlinear stochastic heat equation driven by heavy-tailed noise in free space and arbitrary dimension. The existence of a solution is proved even if the noise only has moments up to an order strictly smaller than its Blumenthal-Getoor index. In particular, this includes all stable noises with index $α<1+2/d$. Although we cannot show uniqueness, the constructed solution is natural in the sense that it is the limit of the solutions to approximative equations obtained by truncating the big jumps of the noise or by restricting its support to a compact set in space. Under growth conditions on the nonlinear term we can further derive moment estimates of the solution, uniformly in space. Finally, the techniques are shown to apply to Volterra equations with kernels bounded by generalized Gaussian densities. This includes, for instance, a large class of uniformly parabolic stochastic PDEs.",
+    "url": "http://arxiv.org/abs/1602.00257v2",
+    "doi": "10.1016/j.spa.2016.10.011",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Exact variations for stochastic heat equations driven by space--time white noise",
+    "authors": [
+      "Jan Pospisil",
+      "Roger Tribe"
+    ],
+    "year": 2004,
+    "venue": "arXiv",
+    "abstract": "  This paper calculates the exact quadratic variation in space and quartic variation in time for the solutions to a one dimensional stochastic heat equation driven by a multiplicative space-time white noise.",
+    "url": "http://arxiv.org/abs/math/0411552v1",
+    "doi": "10.1080/07362990701282849",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Stochastic Weight Averaging in Parallel: Large-Batch Training that Generalizes Well",
+    "authors": [
+      "Vipul Gupta",
+      "Santiago Akle Serrano",
+      "Dennis DeCoste"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "We propose Stochastic Weight Averaging in Parallel (SWAP), an algorithm to accelerate DNN training. Our algorithm uses large mini-batches to compute an approximate solution quickly and then refines it by averaging the weights of multiple models computed independently and in parallel. The resulting models generalize equally well as those trained with small mini-batches but are produced in a substantially shorter time. We demonstrate the reduction in training time and the good generalization performance of the resulting models on the computer vision datasets CIFAR10, CIFAR100, and ImageNet.",
+    "url": "http://arxiv.org/abs/2001.02312v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Stochastic Weight Averaging Revisited",
+    "authors": [
+      "Hao Guo",
+      "Jiyong Jin",
+      "Bin Liu"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Averaging neural network weights sampled by a backbone stochastic gradient descent (SGD) is a simple yet effective approach to assist the backbone SGD in finding better optima, in terms of generalization. From a statistical perspective, weight averaging (WA) contributes to variance reduction. Recently, a well-established stochastic weight averaging (SWA) method is proposed, which is featured by the application of a cyclical or high constant (CHC) learning rate schedule (LRS) in generating weight samples for WA. Then a new insight on WA appears, which states that WA helps to discover wider optima and then leads to better generalization. We conduct extensive experimental studies for SWA, involving a dozen modern DNN model structures and a dozen benchmark open-source image, graph, and text datasets. We disentangle contributions of the WA operation and the CHC LRS for SWA, showing that the WA operation in SWA still contributes to variance reduction but does not always lead to wide optima. The experimental results indicate that there are global scale geometric structures in the DNN loss landscape. We then present an algorithm termed periodic SWA (PSWA) which makes use of a series of WA operations to discover the global geometric structures. PSWA outperforms its backbone SGD remarkably, providing experimental evidences for the existence of global geometric structures. Codes for reproducing the experimental results are available at https://github.com/ZJLAB-AMMI/PSWA.",
+    "url": "http://arxiv.org/abs/2201.00519v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Adaptive Stochastic Weight Averaging",
+    "authors": [
+      "Caglar Demir",
+      "Arnab Sharma",
+      "Axel-Cyrille Ngonga Ngomo"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Ensemble models often improve generalization performances in challenging tasks. Yet, traditional techniques based on prediction averaging incur three well-known disadvantages: the computational overhead of training multiple models, increased latency, and memory requirements at test time. To address these issues, the Stochastic Weight Averaging (SWA) technique maintains a running average of model parameters from a specific epoch onward. Despite its potential benefits, maintaining a running average of parameters can hinder generalization, as an underlying running model begins to overfit. Conversely, an inadequately chosen starting point can render SWA more susceptible to underfitting compared to an underlying running model. In this work, we propose Adaptive Stochastic Weight Averaging (ASWA) technique that updates a running average of model parameters, only when generalization performance is improved on the validation dataset. Hence, ASWA can be seen as a combination of SWA with the early stopping technique, where the former accepts all updates on a parameter ensemble model and the latter rejects any update on an underlying running model. We conducted extensive experiments ranging from image classification to multi-hop reasoning over knowledge graphs. Our experiments over 11 benchmark datasets with 7 baseline models suggest that ASWA leads to a statistically better generalization across models and datasets",
+    "url": "http://arxiv.org/abs/2406.19092v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Deviation inequalities for stochastic approximation by averaging",
+    "authors": [
+      "Xiequan Fan",
+      "Pierre Alquier",
+      "Paul Doukhan"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "We introduce a class of Markov chains, that contains the model of stochastic approximation by averaging and non-averaging. Using martingale approximation method, we establish various deviation inequalities for separately Lipschitz functions of such a chain, with different moment conditions on some dominating random variables of martingale differences.Finally, we apply these inequalities to the stochastic approximation by averaging and empirical risk minimisation.",
+    "url": "http://arxiv.org/abs/2102.08685v3",
+    "doi": "10.1016/j.spa.2022.07.002",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Exponential weight averaging as damped harmonic motion",
+    "authors": [
+      "Jonathan Patsenker",
+      "Henry Li",
+      "Yuval Kluger"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "The exponential moving average (EMA) is a commonly used statistic for providing stable estimates of stochastic quantities in deep learning optimization. Recently, EMA has seen considerable use in generative models, where it is computed with respect to the model weights, and significantly improves the stability of the inference model during and after training. While the practice of weight averaging at the end of training is well-studied and known to improve estimates of local optima, the benefits of EMA over the course of training is less understood. In this paper, we derive an explicit connection between EMA and a damped harmonic system between two particles, where one particle (the EMA weights) is drawn to the other (the model weights) via an idealized zero-length spring. We then leverage this physical analogy to analyze the effectiveness of EMA, and propose an improved training algorithm, which we call BELAY. Finally, we demonstrate theoretically and empirically several advantages enjoyed by BELAY over standard EMA.",
+    "url": "http://arxiv.org/abs/2310.13854v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Exponential Moving Average of Weights in Deep Learning: Dynamics and Benefits",
+    "authors": [
+      "Daniel Morales-Brotons",
+      "Thijs Vogels",
+      "Hadrien Hendrikx"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Weight averaging of Stochastic Gradient Descent (SGD) iterates is a popular method for training deep learning models. While it is often used as part of complex training pipelines to improve generalization or serve as a `teacher' model, weight averaging lacks proper evaluation on its own. In this work, we present a systematic study of the Exponential Moving Average (EMA) of weights. We first explore the training dynamics of EMA, give guidelines for hyperparameter tuning, and highlight its good early performance, partly explaining its success as a teacher. We also observe that EMA requires less learning rate decay compared to SGD since averaging naturally reduces noise, introducing a form of implicit regularization. Through extensive experiments, we show that EMA solutions differ from last-iterate solutions. EMA models not only generalize better but also exhibit improved i) robustness to noisy labels, ii) prediction consistency, iii) calibration and iv) transfer learning. Therefore, we suggest that an EMA of weights is a simple yet effective plug-in to improve the performance of deep learning models.",
+    "url": "http://arxiv.org/abs/2411.18704v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "SQWA: Stochastic Quantized Weight Averaging for Improving the Generalization Capability of Low-Precision Deep Neural Networks",
+    "authors": [
+      "Sungho Shin",
+      "Yoonho Boo",
+      "Wonyong Sung"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Designing a deep neural network (DNN) with good generalization capability is a complex process especially when the weights are severely quantized. Model averaging is a promising approach for achieving the good generalization capability of DNNs, especially when the loss surface for training contains many sharp minima. We present a new quantized neural network optimization approach, stochastic quantized weight averaging (SQWA), to design low-precision DNNs with good generalization capability using model averaging. The proposed approach includes (1) floating-point model training, (2) direct quantization of weights, (3) capturing multiple low-precision models during retraining with cyclical learning rates, (4) averaging the captured models, and (5) re-quantizing the averaged model and fine-tuning it with low-learning rates. Additionally, we present a loss-visualization technique on the quantized weight domain to clearly elucidate the behavior of the proposed method. Visualization results indicate that a quantized DNN (QDNN) optimized with the proposed approach is located near the center of the flat minimum in the loss surface. With SQWA training, we achieved state-of-the-art results for 2-bit QDNNs on CIFAR-100 and ImageNet datasets. Although we only employed a uniform quantization scheme for the sake of implementation in VLSI or low-precision neural processing units, the performance achieved exceeded those of previous studies employing non-uniform quantization.",
+    "url": "http://arxiv.org/abs/2002.00343v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "On a stochastic differential equation arising in a price impact model",
+    "authors": [
+      "Peter Bank",
+      "Dmitry Kramkov"
+    ],
+    "year": 2011,
+    "venue": "arXiv",
+    "abstract": "We provide sufficient conditions for the existence and uniqueness of solutions to a stochastic differential equation which arises in a price impact model. These conditions are stated as smoothness and boundedness requirements on utility functions or Malliavin differentiability of payoffs and endowments.",
+    "url": "http://arxiv.org/abs/1110.3250v5",
+    "doi": "10.1016/j.spa.2012.10.011",
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

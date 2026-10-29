@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Wide Residual Networks",
+    "authors": [
+      "Sergey Zagoruyko",
+      "Nikos Komodakis"
+    ],
+    "year": 2016,
+    "venue": "arXiv",
+    "abstract": "Deep residual networks were shown to be able to scale up to thousands of layers and still have improving performance. However, each fraction of a percent of improved accuracy costs nearly doubling the number of layers, and so training very deep residual networks has a problem of diminishing feature reuse, which makes these networks very slow to train. To tackle these problems, in this paper we conduct a detailed experimental study on the architecture of ResNet blocks, based on which we propose a novel architecture where we decrease depth and increase width of residual networks. We call the resulting network structures wide residual networks (WRNs) and show that these are far superior over their commonly used thin and very deep counterparts. For example, we demonstrate that even a simple 16-layer-deep wide residual network outperforms in accuracy and efficiency all previous deep residual networks, including thousand-layer-deep networks, achieving new state-of-the-art results on CIFAR, SVHN, COCO, and significant improvements on ImageNet. Our code and models are available at https://github.com/szagoruyko/wide-residual-networks",
+    "url": "http://arxiv.org/abs/1605.07146v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Generalization Ability of Wide Residual Networks",
+    "authors": [
+      "Jianfa Lai",
+      "Zixiong Yu",
+      "Songtao Tian",
+      "Qian Lin"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In this paper, we study the generalization ability of the wide residual network on $\\mathbb{S}^{d-1}$ with the ReLU activation function. We first show that as the width $m\\rightarrow\\infty$, the residual network kernel (RNK) uniformly converges to the residual neural tangent kernel (RNTK). This uniform convergence further guarantees that the generalization error of the residual network converges to that of the kernel regression with respect to the RNTK. As direct corollaries, we then show $i)$ the wide residual network with the early stopping strategy can achieve the minimax rate provided that the target regression function falls in the reproducing kernel Hilbert space (RKHS) associated with the RNTK; $ii)$ the wide residual network can not generalize well if it is trained till overfitting the data. We finally illustrate some experiments to reconcile the contradiction between our theoretical result and the widely observed ``benign overfitting phenomenon''",
+    "url": "http://arxiv.org/abs/2305.18506v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Scaling Wide Residual Networks for Panoptic Segmentation",
+    "authors": [
+      "Liang-Chieh Chen",
+      "Huiyu Wang",
+      "Siyuan Qiao"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "The Wide Residual Networks (Wide-ResNets), a shallow but wide model variant of the Residual Networks (ResNets) by stacking a small number of residual blocks with large channel sizes, have demonstrated outstanding performance on multiple dense prediction tasks. However, since proposed, the Wide-ResNet architecture has barely evolved over the years. In this work, we revisit its architecture design for the recent challenging panoptic segmentation task, which aims to unify semantic segmentation and instance segmentation. A baseline model is obtained by incorporating the simple and effective Squeeze-and-Excitation and Switchable Atrous Convolution to the Wide-ResNets. Its network capacity is further scaled up or down by adjusting the width (i.e., channel size) and depth (i.e., number of layers), resulting in a family of SWideRNets (short for Scaling Wide Residual Networks). We demonstrate that such a simple scaling scheme, coupled with grid search, identifies several SWideRNets that significantly advance state-of-the-art performance on panoptic segmentation datasets in both the fast model regime and strong model regime.",
+    "url": "http://arxiv.org/abs/2011.11675v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

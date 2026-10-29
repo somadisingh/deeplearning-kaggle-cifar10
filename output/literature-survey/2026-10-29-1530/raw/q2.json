@@ -1,0 +1,329 @@
+[
+  {
+    "title": "A Framework for Risk Assessment and Optimal Line Upgrade Selection to Mitigate Wildfire Risk",
+    "authors": [
+      "Sofia Taylor",
+      "Line A. Roald"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "As wildfires in the United States are becoming more frequent and severe, mitigating wildfire ignition risk from power line faults is an increasingly crucial effort. Long-term ignition prevention strategies, especially converting overhead lines to underground cables, are expensive. Thus, it is important to prioritize upgrades on lines that will reduce wildfire ignition risk the most. However, since so many factors contribute to ignition risk, it is difficult to quantify the wildfire risk associated with power lines. This paper examines how various risk definitions based on historical wildfire risk maps can be used to inform transmission upgrade planning. These risk metrics are evaluated using an optimization model that determines which overhead lines should be undergrounded such that the total wildfire risk in the network is minimized. The risk assignment and upgrade selection are tested on both a synthetic network and the actual transmission lines in California.",
+    "url": "http://arxiv.org/abs/2110.07348v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Co-optimization of power line shutoff and restoration under high wildfire ignition risk",
+    "authors": [
+      "Noah Rhodes",
+      "Line Roald"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Electric power infrastructure has ignited several of the most destructive wildfires in recent history. Preemptive power shutoffs are an effective tool to mitigate the risk of ignitions from power lines, but at the same time can cause widespread power outages. This work proposes a mathematical optimization problem to help utilities decide where and when to implement these shutoffs, as well as how to most efficiently restore power once the wildfire risk is lower. Specifically, our model co-optimizes the power shutoff (considering both wildfire risk reduction and power outages) as well as the post-event restoration efforts given constraints related to inspection and energization of lines, and is implemented as a rolling horizon optimization problem that is resolved whenever new forecasts of load and wildfire risk become available. We demonstrate our method on the IEEE RTS-GMLC test case using real wildfire risk data and forecasts from US Geological Survey, and investigate the sensitivity of the results to the forecast quality, decision horizon and system restoration budget. The software implementation is available in the open source software package PowerModelsWildfire.jl.",
+    "url": "http://arxiv.org/abs/2204.02507v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Back to the Basics: Revisiting Out-of-Distribution Detection Baselines",
+    "authors": [
+      "Johnson Kuan",
+      "Jonas Mueller"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "We study simple methods for out-of-distribution (OOD) image detection that are compatible with any already trained classifier, relying on only its predictions or learned representations. Evaluating the OOD detection performance of various methods when utilized with ResNet-50 and Swin Transformer models, we find methods that solely consider the model's predictions can be easily outperformed by also considering the learned representations. Based on our analysis, we advocate for a dead-simple approach that has been neglected in other studies: simply flag as OOD images whose average distance to their K nearest neighbors is large (in the representation space of an image classifier trained on the in-distribution data).",
+    "url": "http://arxiv.org/abs/2207.03061v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Accuracy on the Line: On the Strong Correlation Between Out-of-Distribution and In-Distribution Generalization",
+    "authors": [
+      "John Miller",
+      "Rohan Taori",
+      "Aditi Raghunathan",
+      "Shiori Sagawa",
+      "Pang Wei Koh",
+      "Vaishaal Shankar",
+      "Percy Liang",
+      "Yair Carmon",
+      "Ludwig Schmidt"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "For machine learning systems to be reliable, we must understand their performance in unseen, out-of-distribution environments. In this paper, we empirically show that out-of-distribution performance is strongly correlated with in-distribution performance for a wide range of models and distribution shifts. Specifically, we demonstrate strong correlations between in-distribution and out-of-distribution performance on variants of CIFAR-10 & ImageNet, a synthetic pose estimation task derived from YCB objects, satellite imagery classification in FMoW-WILDS, and wildlife classification in iWildCam-WILDS. The strong correlations hold across model architectures, hyperparameters, training set size, and training duration, and are more precise than what is expected from existing domain adaptation theory. To complete the picture, we also investigate cases where the correlation is weaker, for instance some synthetic distribution shifts from CIFAR-10-C and the tissue classification dataset Camelyon17-WILDS. Finally, we provide a candidate theory based on a Gaussian data model that shows how changes in the data covariance arising from distribution shift can affect the observed correlations.",
+    "url": "http://arxiv.org/abs/2107.04649v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Accuracy on the wrong line: On the pitfalls of noisy data for out-of-distribution generalisation",
+    "authors": [
+      "Amartya Sanyal",
+      "Yaxi Hu",
+      "Yaodong Yu",
+      "Yian Ma",
+      "Yixin Wang",
+      "Bernhard Schölkopf"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "\"Accuracy-on-the-line\" is a widely observed phenomenon in machine learning, where a model's accuracy on in-distribution (ID) and out-of-distribution (OOD) data is positively correlated across different hyperparameters and data configurations. But when does this useful relationship break down? In this work, we explore its robustness. The key observation is that noisy data and the presence of nuisance features can be sufficient to shatter the Accuracy-on-the-line phenomenon. In these cases, ID and OOD accuracy can become negatively correlated, leading to \"Accuracy-on-the-wrong-line\". This phenomenon can also occur in the presence of spurious (shortcut) features, which tend to overshadow the more complex signal (core, non-spurious) features, resulting in a large nuisance feature space. Moreover, scaling to larger datasets does not mitigate this undesirable behavior and may even exacerbate it. We formally prove a lower bound on Out-of-distribution (OOD) error in a linear classification model, characterizing the conditions on the noise and nuisance features for a large OOD error. We finally demonstrate this phenomenon across both synthetic and real datasets with noisy data and nuisance features.",
+    "url": "http://arxiv.org/abs/2406.19049v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "In-Distribution and Out-of-Distribution Self-supervised ECG Representation Learning for Arrhythmia Detection",
+    "authors": [
+      "Sahar Soltanieh",
+      "Javad Hashemi",
+      "Ali Etemad"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "This paper presents a systematic investigation into the effectiveness of Self-Supervised Learning (SSL) methods for Electrocardiogram (ECG) arrhythmia detection. We begin by conducting a novel analysis of the data distributions on three popular ECG-based arrhythmia datasets: PTB-XL, Chapman, and Ribeiro. To the best of our knowledge, our study is the first to quantitatively explore and characterize these distributions in the area. We then perform a comprehensive set of experiments using different augmentations and parameters to evaluate the effectiveness of various SSL methods, namely SimCRL, BYOL, and SwAV, for ECG representation learning, where we observe the best performance achieved by SwAV. Furthermore, our analysis shows that SSL methods achieve highly competitive results to those achieved by supervised state-of-the-art methods. To further assess the performance of these methods on both In-Distribution (ID) and Out-of-Distribution (OOD) ECG data, we conduct cross-dataset training and testing experiments. Our comprehensive experiments show almost identical results when comparing ID and OOD schemes, indicating that SSL techniques can learn highly effective representations that generalize well across different OOD datasets. This finding can have major implications for ECG-based arrhythmia detection. Lastly, to further analyze our results, we perform detailed per-disease studies on the performance of the SSL methods on the three datasets.",
+    "url": "http://arxiv.org/abs/2304.06427v2",
+    "doi": "10.1109/JBHI.2023.3331626",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "On the Learnability of Out-of-distribution Detection",
+    "authors": [
+      "Zhen Fang",
+      "Yixuan Li",
+      "Feng Liu",
+      "Bo Han",
+      "Jie Lu"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Supervised learning aims to train a classifier under the assumption that training and test data are from the same distribution. To ease the above assumption, researchers have studied a more realistic setting: out-of-distribution (OOD) detection, where test data may come from classes that are unknown during training (i.e., OOD data). Due to the unavailability and diversity of OOD data, good generalization ability is crucial for effective OOD detection algorithms, and corresponding learning theory is still an open problem. To study the generalization of OOD detection, this paper investigates the probably approximately correct (PAC) learning theory of OOD detection that fits the commonly used evaluation metrics in the literature. First, we find a necessary condition for the learnability of OOD detection. Then, using this condition, we prove several impossibility theorems for the learnability of OOD detection under some scenarios. Although the impossibility theorems are frustrating, we find that some conditions of these impossibility theorems may not hold in some practical scenarios. Based on this observation, we next give several necessary and sufficient conditions to characterize the learnability of OOD detection in some practical scenarios. Lastly, we offer theoretical support for representative OOD detection works based on our OOD theory.",
+    "url": "http://arxiv.org/abs/2404.04865v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "The Value of Out-of-Distribution Data",
+    "authors": [
+      "Ashwin De Silva",
+      "Rahul Ramesh",
+      "Carey E. Priebe",
+      "Pratik Chaudhari",
+      "Joshua T. Vogelstein"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "We expect the generalization error to improve with more samples from a similar task, and to deteriorate with more samples from an out-of-distribution (OOD) task. In this work, we show a counter-intuitive phenomenon: the generalization error of a task can be a non-monotonic function of the number of OOD samples. As the number of OOD samples increases, the generalization error on the target task improves before deteriorating beyond a threshold. In other words, there is value in training on small amounts of OOD data. We use Fisher's Linear Discriminant on synthetic datasets and deep networks on computer vision benchmarks such as MNIST, CIFAR-10, CINIC-10, PACS and DomainNet to demonstrate and analyze this phenomenon. In the idealistic setting where we know which samples are OOD, we show that these non-monotonic trends can be exploited using an appropriately weighted objective of the target and OOD empirical risk. While its practical utility is limited, this does suggest that if we can detect OOD samples, then there may be ways to benefit from them. When we do not know which samples are OOD, we show how a number of go-to strategies such as data-augmentation, hyper-parameter optimization, and pre-training are not enough to ensure that the target generalization error does not deteriorate with the number of OOD samples in the dataset.",
+    "url": "http://arxiv.org/abs/2208.10967v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Histogram- and Diffusion-Based Medical Out-of-Distribution Detection",
+    "authors": [
+      "Evi M. C. Huijben",
+      "Sina Amirrajab",
+      "Josien P. W. Pluim"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Out-of-distribution (OOD) detection is crucial for the safety and reliability of artificial intelligence algorithms, especially in the medical domain. In the context of the Medical OOD (MOOD) detection challenge 2023, we propose a pipeline that combines a histogram-based method and a diffusion-based method. The histogram-based method is designed to accurately detect homogeneous anomalies in the toy examples of the challenge, such as blobs with constant intensity values. The diffusion-based method is based on one of the latest methods for unsupervised anomaly detection, called DDPM-OOD. We explore this method and propose extensive post-processing steps for pixel-level and sample-level anomaly detection on brain MRI and abdominal CT data provided by the challenge. Our results show that the proposed DDPM method is sensitive to blur and bias field samples, but faces challenges with anatomical deformation, black slice, and swapped patches. These findings suggest that further research is needed to improve the performance of DDPM for OOD detection in medical images.",
+    "url": "http://arxiv.org/abs/2310.08654v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Embedded out-of-distribution detection on an autonomous robot platform",
+    "authors": [
+      "Michael Yuhas",
+      "Yeli Feng",
+      "Daniel Jun Xian Ng",
+      "Zahra Rahiminasab",
+      "Arvind Easwaran"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Machine learning (ML) is actively finding its way into modern cyber-physical systems (CPS), many of which are safety-critical real-time systems. It is well known that ML outputs are not reliable when testing data are novel with regards to model training and validation data, i.e., out-of-distribution (OOD) test data. We implement an unsupervised deep neural network-based OOD detector on a real-time embedded autonomous Duckiebot and evaluate detection performance. Our OOD detector produces a success rate of 87.5% for emergency stopping a Duckiebot on a braking test bed we designed. We also provide case analysis on computing resource challenges specific to the Robot Operating System (ROS) middleware on the Duckiebot.",
+    "url": "http://arxiv.org/abs/2106.15965v1",
+    "doi": "10.1145/3445034.3460509",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Aggregation Hides Out-of-Distribution Generalization Failures from Spurious Correlations",
+    "authors": [
+      "Olawale Salaudeen",
+      "Haoran Zhang",
+      "Kumail Alhamoud",
+      "Sara Beery",
+      "Marzyeh Ghassemi"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Benchmarks for out-of-distribution (OOD) generalization frequently show a strong positive correlation between in-distribution (ID) and OOD accuracy across models, termed \"accuracy-on-the-line.\" This pattern is often taken to imply that spurious correlations - correlations that improve ID but reduce OOD performance - are rare in practice. We find that this positive correlation is often an artifact of aggregating heterogeneous OOD examples. Using a simple gradient-based method, OODSelect, we identify semantically coherent OOD subsets where accuracy on the line does not hold. Across widely used distribution shift benchmarks, the OODSelect uncovers subsets, sometimes over half of the standard OOD set, where higher ID accuracy predicts lower OOD accuracy. Our findings indicate that aggregate metrics can obscure important failure modes of OOD robustness. We release code and the identified subsets to facilitate further research.",
+    "url": "http://arxiv.org/abs/2510.24884v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Batch-Ensemble Stochastic Neural Networks for Out-of-Distribution Detection",
+    "authors": [
+      "Xiongjie Chen",
+      "Yunpeng Li",
+      "Yongxin Yang"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Out-of-distribution (OOD) detection has recently received much attention from the machine learning community due to its importance in deploying machine learning models in real-world applications. In this paper we propose an uncertainty quantification approach by modelling the distribution of features. We further incorporate an efficient ensemble mechanism, namely batch-ensemble, to construct the batch-ensemble stochastic neural networks (BE-SNNs) and overcome the feature collapse problem. We compare the performance of the proposed BE-SNNs with the other state-of-the-art approaches and show that BE-SNNs yield superior performance on several OOD benchmarks, such as the Two-Moons dataset, the FashionMNIST vs MNIST dataset, FashionMNIST vs NotMNIST dataset, and the CIFAR10 vs SVHN dataset.",
+    "url": "http://arxiv.org/abs/2206.12911v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Toward domain generalized pruning by scoring out-of-distribution importance",
+    "authors": [
+      "Rizhao Cai",
+      "Haoliang Li",
+      "Alex Kot"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Filter pruning has been widely used for compressing convolutional neural networks to reduce computation costs during the deployment stage. Recent studies have shown that filter pruning techniques can achieve lossless compression of deep neural networks, reducing redundant filters (kernels) without sacrificing accuracy performance. However, the evaluation is done when the training and testing data are from similar environmental conditions (independent and identically distributed), and how the filter pruning techniques would affect the cross-domain generalization (out-of-distribution) performance is largely ignored. We conduct extensive empirical experiments and reveal that although the intra-domain performance could be maintained after filter pruning, the cross-domain performance will decay to a large extent. As scoring a filter's importance is one of the central problems for pruning, we design the importance scoring estimation by using the variance of domain-level risks to consider the pruning risk in the unseen distribution. As such, we can remain more domain generalized filters. The experiments show that under the same pruning ratio, our method can achieve significantly better cross-domain generalization performance than the baseline filter pruning method. For the first attempt, our work sheds light on the joint problem of domain generalization and filter pruning research.",
+    "url": "http://arxiv.org/abs/2210.13810v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "In-Distribution Forcing for Long Video Generation at Test Time",
+    "authors": [
+      "Jeongwoo Shin",
+      "Youngyoon Choi",
+      "Sangwoo Jo",
+      "Hyunmog Kim",
+      "Sungjoon Choi",
+      "Joonseok Lee",
+      "Jaewoong Choi",
+      "Jaemoo Choi"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Modern autoregressive (AR) video diffusion models excel at short-horizon video generation, yet generating long videos remains challenging due to drifting, where colors and textures shift, and motion dynamics decay. Existing works primarily rely on KV conditioning, which selects or modifies cached key-value (KV) entries to mitigate drifting. However, we observe that KV conditioning alone is insufficient as it assumes cached KV entries remain in-distribution. This assumption fails beyond the training horizon: nothing constrains the construction of KV entries during rollout, giving rise to the KV-provenance problem where cached entries themselves become out-of-distribution (OOD). To address this, we propose In-Distribution Forcing (ID-Forcing), a test-time framework that aligns both KV caching and KV conditioning with training configurations. Its key mechanism, self-caching, prevents OOD KV entries at their source. Each chunk is cached without attending to prior KV entry, keeping the rolling window exactly in-distribution. Consequently, ID-Forcing seamlessly extends short-horizon models to minute-scale video generation. Extensive evaluations show that our method remains competitive on standard video generation benchmark while substantially outperforming prior work in mitigating drifting, as validated by both our drift metrics and a user study.",
+    "url": "http://arxiv.org/abs/2610.03120v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Retrieving Temperatures and Abundances of Exoplanet Atmospheres with High-Resolution Cross-Correlation Spectroscopy",
+    "authors": [
+      "Matteo Brogi",
+      "Michael R Line"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Hi-resolution spectroscopy (R > 25,000) has recently emerged as one of the leading methods to detect atomic and molecular species in the atmospheres of exoplanets. However, it has so far been lacking in a robust method to extract quantitative constraints on temperature structure and molecular/atomic abundances. In this work we present a novel Bayesian atmospheric retrieval framework applicable to high resolution cross-correlation spectroscopy (HRCCS) that relies upon the cross-correlation between data and models to extract the planetary spectral signal. We successfully test the framework on simulated data and show that it can correctly determine Bayesian credibility intervals on atmospheric temperatures and abundances allowing for a quantitative exploration of the inherent degeneracies. Furthermore, our new framework permits us to trivially combine and explore the synergies between HRCCS and low-resolution spectroscopy (LRS) to provide maximal leverage on the information contained within each. This framework also allows us to quantitatively assess the impact of molecular line opacities at high resolution. We apply the framework to VLT CRIRES K-band spectra of HD 209458 b and HD 189733 b and retrieve abundant carbon monoxide but sub-solar abundances for water, largely invariant under different model assumptions. This confirms previous analysis of these datasets, but is possibly at odds with detections of water at different wavelengths and spectral resolutions. The framework presented here is the first step towards a true synergy between space observatories and ground-based hi-resolution observations.",
+    "url": "http://arxiv.org/abs/1811.01681v2",
+    "doi": "10.3847/1538-3881/aaffd3",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Chance-Constrained AC Optimal Power Flow Integrating HVDC Lines and Controllability",
+    "authors": [
+      "Andreas Venzke",
+      "Lejla Halilbasic",
+      "Adelie Barre",
+      "Line Roald",
+      "Spyros Chatzivasileiadis"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "The integration of large-scale renewable generation has major implications on the operation of power systems, two of which we address in this work. First, system operators have to deal with higher degrees of uncertainty due to forecast errors and variability in renewable energy production. Second, with abundant potential of renewable generation in remote locations, there is an increasing interest in the use of High Voltage Direct Current lines (HVDC) to increase transmission capacity. These HVDC transmission lines and the flexibility and controllability they offer must be incorporated effectively and safely into the system. In this work, we introduce an optimization tool that addresses both challenges by incorporating the full AC power flow equations, chance constraints to address the uncertainty of renewable infeed, modelling of point-to-point HVDC lines, and optimized corrective control policies to model the generator and HVDC response to uncertainty. The main contributions are twofold. First, we introduce a HVDC line model and the corresponding HVDC participation factors in a chance-constrained AC-OPF framework. Second, we modify an existing algorithm for solving the chance-constrained AC-OPF to allow for optimization of the generation and HVDC participation factors. Using realistic wind forecast data, for 10 and IEEE 39 bus systems with HVDC lines and wind farms, we show that our proposed OPF formulation achieves good in- and out-of-sample performance whereas not considering uncertainty leads to high constraint violation probabilities. In addition, we find that optimizing the participation factors reduces the cost of uncertainty significantly.",
+    "url": "http://arxiv.org/abs/1810.09218v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Enabling Undergrounding of Long-Distance Transmission Lines with Low Frequency AC Technology",
+    "authors": [
+      "David K. Sehloff",
+      "Line A. Roald"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "With increasing prevalence of severe natural hazards and the ignition of wildfires by power lines, many power system planners are considering converting overhead lines to underground cables to mitigate risks related to these events. Systems with a large proportion of underground cables can bring challenges due to the capacitance and losses of the cables, factors which may limit the potential for hardening in critical areas. Low frequency AC (LFAC) transmission solves these problems, as lowering the frequency decreases both the effects of capacitance and the losses. This paper presents a tractable frequency-dependent model for underground cables and incorporates it into the open source optimal power flow tool VariableFrequencyOPF.jl. The model and implementation are used to demonstrate the benefits of LFAC in a case study involving two multi-terminal cable upgrades with LFAC, including a comparison with HVDC. The results demonstrate the value of LFAC systems for both power flow control and reduction of losses.",
+    "url": "http://arxiv.org/abs/2206.09045v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards In-distribution Compatibility in Out-of-distribution Detection",
+    "authors": [
+      "Boxi Wu",
+      "Jie Jiang",
+      "Haidong Ren",
+      "Zifan Du",
+      "Wenxiao Wang",
+      "Zhifeng Li",
+      "Deng Cai",
+      "Xiaofei He",
+      "Binbin Lin",
+      "Wei Liu"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Deep neural network, despite its remarkable capability of discriminating targeted in-distribution samples, shows poor performance on detecting anomalous out-of-distribution data. To address this defect, state-of-the-art solutions choose to train deep networks on an auxiliary dataset of outliers. Various training criteria for these auxiliary outliers are proposed based on heuristic intuitions. However, we find that these intuitively designed outlier training criteria can hurt in-distribution learning and eventually lead to inferior performance. To this end, we identify three causes of the in-distribution incompatibility: contradictory gradient, false likelihood, and distribution shift. Based on our new understandings, we propose a new out-of-distribution detection method by adapting both the top-design of deep models and the loss function. Our method achieves in-distribution compatibility by pursuing less interference with the probabilistic characteristic of in-distribution features. On several benchmarks, our method not only achieves the state-of-the-art out-of-distribution detection performance but also improves the in-distribution accuracy.",
+    "url": "http://arxiv.org/abs/2208.13433v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Out-of-distribution Detection by Cross-class Vicinity Distribution of In-distribution Data",
+    "authors": [
+      "Zhilin Zhao",
+      "Longbing Cao",
+      "Kun-Yu Lin"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Deep neural networks for image classification only learn to map in-distribution inputs to their corresponding ground truth labels in training without differentiating out-of-distribution samples from in-distribution ones. This results from the assumption that all samples are independent and identically distributed (IID) without distributional distinction. Therefore, a pretrained network learned from in-distribution samples treats out-of-distribution samples as in-distribution and makes high-confidence predictions on them in the test phase. To address this issue, we draw out-of-distribution samples from the vicinity distribution of training in-distribution samples for learning to reject the prediction on out-of-distribution inputs. A \\textit{Cross-class Vicinity Distribution} is introduced by assuming that an out-of-distribution sample generated by mixing multiple in-distribution samples does not share the same classes of its constituents. We thus improve the discriminability of a pretrained network by finetuning it with out-of-distribution samples drawn from the cross-class vicinity distribution, where each out-of-distribution input corresponds to a complementary label. Experiments on various in-/out-of-distribution datasets show that the proposed method significantly outperforms the existing methods in improving the capacity of discriminating between in- and out-of-distribution samples.",
+    "url": "http://arxiv.org/abs/2206.09385v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "SOOD-ImageNet: a Large-Scale Dataset for Semantic Out-Of-Distribution Image Classification and Semantic Segmentation",
+    "authors": [
+      "Alberto Bacchin",
+      "Davide Allegro",
+      "Stefano Ghidoni",
+      "Emanuele Menegatti"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Out-of-Distribution (OOD) detection in computer vision is a crucial research area, with related benchmarks playing a vital role in assessing the generalizability of models and their applicability in real-world scenarios. However, existing OOD benchmarks in the literature suffer from two main limitations: (1) they often overlook semantic shift as a potential challenge, and (2) their scale is limited compared to the large datasets used to train modern models. To address these gaps, we introduce SOOD-ImageNet, a novel dataset comprising around 1.6M images across 56 classes, designed for common computer vision tasks such as image classification and semantic segmentation under OOD conditions, with a particular focus on the issue of semantic shift. We ensured the necessary scalability and quality by developing an innovative data engine that leverages the capabilities of modern vision-language models, complemented by accurate human checks. Through extensive training and evaluation of various models on SOOD-ImageNet, we showcase its potential to significantly advance OOD research in computer vision. The project page is available at https://github.com/bach05/SOODImageNet.git.",
+    "url": "http://arxiv.org/abs/2409.01109v1",
+    "doi": "10.1007/978-3-031-91672-4_6",
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

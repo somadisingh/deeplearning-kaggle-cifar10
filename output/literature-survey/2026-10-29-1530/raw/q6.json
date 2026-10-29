@@ -1,0 +1,320 @@
+[
+  {
+    "title": "CIFAR-10-Warehouse: Broad and More Realistic Testbeds in Model Generalization Analysis",
+    "authors": [
+      "Xiaoxiao Sun",
+      "Xingjian Leng",
+      "Zijian Wang",
+      "Yang Yang",
+      "Zi Huang",
+      "Liang Zheng"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Analyzing model performance in various unseen environments is a critical research problem in the machine learning community. To study this problem, it is important to construct a testbed with out-of-distribution test sets that have broad coverage of environmental discrepancies. However, existing testbeds typically either have a small number of domains or are synthesized by image corruptions, hindering algorithm design that demonstrates real-world effectiveness. In this paper, we introduce CIFAR-10-Warehouse, consisting of 180 datasets collected by prompting image search engines and diffusion models in various ways. Generally sized between 300 and 8,000 images, the datasets contain natural images, cartoons, certain colors, or objects that do not naturally appear. With CIFAR-10-W, we aim to enhance the evaluation and deepen the understanding of two generalization tasks: domain generalization and model accuracy prediction in various out-of-distribution environments. We conduct extensive benchmarking and comparison experiments and show that CIFAR-10-W offers new and interesting insights inherent to these tasks. We also discuss other fields that would benefit from CIFAR-10-W.",
+    "url": "http://arxiv.org/abs/2310.04414v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Midterm Status Report of the ILC Technology Network Activities",
+    "authors": [
+      "ILC Technology Network"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "The ILC Technology Network (ITN) was established in 2022 by the ILC International Development Team, a subcommittee of the International Committee for Future Accelerators, to advance engineering studies toward the realisation of the International Linear Collider (ILC). While the ITN work packages focus on engineering activities for the ILC, their topics are also relevant to a broad range of accelerator applications in particle physics and beyond. These work packages are being carried out now by laboratories in Asia and Europe in close collaboration. This report summarises the current status of the ITN activities.",
+    "url": "http://arxiv.org/abs/2603.01172v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Efficient Architecture Search by Network Transformation",
+    "authors": [
+      "Han Cai",
+      "Tianyao Chen",
+      "Weinan Zhang",
+      "Yong Yu",
+      "Jun Wang"
+    ],
+    "year": 2017,
+    "venue": "arXiv",
+    "abstract": "Techniques for automatically designing deep neural network architectures such as reinforcement learning based approaches have recently shown promising results. However, their success is based on vast computational resources (e.g. hundreds of GPUs), making them difficult to be widely used. A noticeable limitation is that they still design and train each network from scratch during the exploration of the architecture space, which is highly inefficient. In this paper, we propose a new framework toward efficient architecture search by exploring the architecture space based on the current network and reusing its weights. We employ a reinforcement learning agent as the meta-controller, whose action is to grow the network depth or layer width with function-preserving transformations. As such, the previously validated networks can be reused for further exploration, thus saves a large amount of computational cost. We apply our method to explore the architecture space of the plain convolutional neural networks (no skip-connections, branching etc.) on image benchmark datasets (CIFAR-10, SVHN) with restricted computational resources (5 GPUs). Our method can design highly competitive networks that outperform existing networks using the same design scheme. On CIFAR-10, our model without skip-connections achieves 4.23\\% test error rate, exceeding a vast majority of modern architectures and approaching DenseNet. Furthermore, by applying our method to explore the DenseNet architecture space, we are able to achieve more accurate networks with fewer parameters.",
+    "url": "http://arxiv.org/abs/1707.04873v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Additive Powers-of-Two Quantization: An Efficient Non-uniform Discretization for Neural Networks",
+    "authors": [
+      "Yuhang Li",
+      "Xin Dong",
+      "Wei Wang"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "We propose Additive Powers-of-Two~(APoT) quantization, an efficient non-uniform quantization scheme for the bell-shaped and long-tailed distribution of weights and activations in neural networks. By constraining all quantization levels as the sum of Powers-of-Two terms, APoT quantization enjoys high computational efficiency and a good match with the distribution of weights. A simple reparameterization of the clipping function is applied to generate a better-defined gradient for learning the clipping threshold. Moreover, weight normalization is presented to refine the distribution of weights to make the training more stable and consistent. Experimental results show that our proposed method outperforms state-of-the-art methods, and is even competitive with the full-precision models, demonstrating the effectiveness of our proposed APoT quantization. For example, our 4-bit quantized ResNet-50 on ImageNet achieves 76.6% top-1 accuracy without bells and whistles; meanwhile, our model reduces 22% computational cost compared with the uniformly quantized counterpart. The code is available at https://github.com/yhhhli/APoT_Quantization.",
+    "url": "http://arxiv.org/abs/1909.13144v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "RMNet: Equivalently Removing Residual Connection from Networks",
+    "authors": [
+      "Fanxu Meng",
+      "Hao Cheng",
+      "Jiaxin Zhuang",
+      "Ke Li",
+      "Xing Sun"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Although residual connection enables training very deep neural networks, it is not friendly for online inference due to its multi-branch topology. This encourages many researchers to work on designing DNNs without residual connections at inference. For example, RepVGG re-parameterizes multi-branch topology to a VGG-like (single-branch) model when deploying, showing great performance when the network is relatively shallow. However, RepVGG can not transform ResNet to VGG equivalently because re-parameterizing methods can only be applied to linear blocks and the non-linear layers (ReLU) have to be put outside of the residual connection which results in limited representation ability, especially for deeper networks. In this paper, we aim to remedy this problem and propose to remove the residual connection in a vanilla ResNet equivalently by a reserving and merging (RM) operation on ResBlock. Specifically, the RM operation allows input feature maps to pass through the block while reserving their information and merges all the information at the end of each block, which can remove residual connections without changing the original output. As a plug-in method, RM Operation basically has three advantages: 1) its implementation makes it naturally friendly for high ratio network pruning. 2) it helps break the depth limitation of RepVGG. 3) it leads to better accuracy-speed trade-off network (RMNet) compared to ResNet and RepVGG. We believe the ideology of RM Operation can inspire many insights on model design for the community in the future. Code is available at: https://github.com/fxmeng/RMNet.",
+    "url": "http://arxiv.org/abs/2111.00687v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Dense Residual Network: Enhancing Global Dense Feature Flow for Character Recognition",
+    "authors": [
+      "Zhao Zhang",
+      "Zemin Tang",
+      "Yang Wang",
+      "Zheng Zhang",
+      "Choujun Zhan",
+      "Zhengjun Zha",
+      "Meng Wang"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Deep Convolutional Neural Networks (CNNs), such as Dense Convolutional Networks (DenseNet), have achieved great success for image representation by discovering deep hierarchical information. However, most existing networks simply stacks the convolutional layers and hence failing to fully discover local and global feature information among layers. In this paper, we mainly explore how to enhance the local and global dense feature flow by exploiting hierarchical features fully from all the convolution layers. Technically, we propose an efficient and effective CNN framework, i.e., Fast Dense Residual Network (FDRN), for text recognition. To construct FDRN, we propose a new fast residual dense block (f-RDB) to retain the ability of local feature fusion and local residual learning of original RDB, which can reduce the computing efforts at the same time. After fully learning local residual dense features, we utilize the sum operation and several f-RDBs to define a new block termed global dense block (GDB) by imitating the construction of dense blocks to learn global dense residual features adaptively in a holistic way. Finally, we use two convolution layers to construct a down-sampling block to reduce the global feature size and extract deeper features. Extensive simulations show that FDRN obtains the enhanced recognition results, compared with other related models.",
+    "url": "http://arxiv.org/abs/2001.09021v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CosineGate: Semantic Dynamic Routing via Cosine Incompatibility in Residual Networks",
+    "authors": [
+      "Yogeswar Reddy Thota"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Modern deep residual networks perform substantial redundant computation by evaluating all residual blocks for every input, even when identity mappings suffice. We introduce CosineGate, an end-to-end differentiable architecture for dynamic routing in residual networks that uses cosine incompatibility between identity and residual feature representations as a self-supervised skip signal. CosineGate measures semantic redundancy through the Cosine Incompatibility Ratio (CIR), defined as 1 - cos(x, F(x)), and uses Gumbel-Softmax relaxation to enable per-sample, per-block gating during training. A progressive FLOPs regularization term controls average compute usage without destabilizing optimization. On CIFAR-10, CosineGate spans the accuracy-efficiency Pareto frontier: an aggressive configuration achieves 89.9 percent accuracy with 24.1 percent FLOPs savings, a balanced configuration achieves 91.3 percent accuracy with 28.5 percent savings at epoch 160, and a conservative configuration reaches a peak of 93.2 percent accuracy with minimal compute reduction. These results match or exceed ResNet-20 (91.3 percent) while reducing computation, without auxiliary supervision, distillation, or task-specific heuristics. Our results demonstrate that simple geometric measures of feature incompatibility provide a principled and effective signal for dynamic residual routing.",
+    "url": "http://arxiv.org/abs/2512.22206v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "ThriftyNets : Convolutional Neural Networks with Tiny Parameter Budget",
+    "authors": [
+      "Guillaume Coiffier",
+      "Ghouthi Boukli Hacene",
+      "Vincent Gripon"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Typical deep convolutional architectures present an increasing number of feature maps as we go deeper in the network, whereas spatial resolution of inputs is decreased through downsampling operations. This means that most of the parameters lay in the final layers, while a large portion of the computations are performed by a small fraction of the total parameters in the first layers. In an effort to use every parameter of a network at its maximum, we propose a new convolutional neural network architecture, called ThriftyNet. In ThriftyNet, only one convolutional layer is defined and used recursively, leading to a maximal parameter factorization. In complement, normalization, non-linearities, downsamplings and shortcut ensure sufficient expressivity of the model. ThriftyNet achieves competitive performance on a tiny parameters budget, exceeding 91% accuracy on CIFAR-10 with less than 40K parameters in total, and 74.3% on CIFAR-100 with less than 600K parameters.",
+    "url": "http://arxiv.org/abs/2007.10106v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CINIC-10 is not ImageNet or CIFAR-10",
+    "authors": [
+      "Luke N. Darlow",
+      "Elliot J. Crowley",
+      "Antreas Antoniou",
+      "Amos J. Storkey"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "In this brief technical report we introduce the CINIC-10 dataset as a plug-in extended alternative for CIFAR-10. It was compiled by combining CIFAR-10 with images selected and downsampled from the ImageNet database. We present the approach to compiling the dataset, illustrate the example images for different classes, give pixel distributions for each part of the repository, and give some standard benchmarks for well known models. Details for download, usage, and compilation can be found in the associated github repository.",
+    "url": "http://arxiv.org/abs/1810.03505v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Efficient Network Generation Under General Preferential Attachment",
+    "authors": [
+      "James Atwood",
+      "Bruno Ribeiro",
+      "Don Towsley"
+    ],
+    "year": 2014,
+    "venue": "arXiv",
+    "abstract": "Preferential attachment (PA) models of network structure are widely used due to their explanatory power and conceptual simplicity. PA models are able to account for the scale-free degree distributions observed in many real-world large networks through the remarkably simple mechanism of sequentially introducing nodes that attach preferentially to high-degree nodes. The ability to efficiently generate instances from PA models is a key asset in understanding both the models themselves and the real networks that they represent. Surprisingly, little attention has been paid to the problem of efficient instance generation. In this paper, we show that the complexity of generating network instances from a PA model depends on the preference function of the model, provide efficient data structures that work under any preference function, and present empirical results from an implementation based on these data structures. We demonstrate that, by indexing growing networks with a simple augmented heap, we can implement a network generator which scales many orders of magnitude beyond existing capabilities ($10^6$ -- $10^8$ nodes). We show the utility of an efficient and general PA network generator by investigating the consequences of varying the preference functions of an existing model. We also provide \"quicknet\", a freely-available open-source implementation of the methods described in this work.",
+    "url": "http://arxiv.org/abs/1403.4521v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Autonomy Architectures for Safe Planning in Unknown Environments Under Budget Constraints",
+    "authors": [
+      "Daniel M. Cherenson",
+      "Devansh R. Agrawal",
+      "Dimitra Panagou"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Mission planning can often be formulated as a constrained control problem under multiple path constraints (i.e., safety constraints) and budget constraints (i.e., resource expenditure constraints). In a priori unknown environments, verifying that an offline solution will satisfy the constraints for all time can be difficult, if not impossible. We present ReRoot, a novel sampling-based framework that enforces safety and budget constraints for nonlinear systems in unknown environments. The main idea is that ReRoot grows multiple reverse RRT* trees online, starting from renewal sets, i.e., sets where the budget constraints are renewed. The dynamically feasible backup trajectories guarantee safety and reduce resource expenditure, which provides a principled backup policy when integrated into the gatekeeper safety verification architecture. We demonstrate our approach in simulation with a fixed-wing UAV in a GNSS-denied environment with a budget constraint on localization error that can be renewed at visual landmarks.",
+    "url": "http://arxiv.org/abs/2504.03001v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Testing the Efficient Network TRaining (ENTR) Hypothesis: initially reducing training image size makes Convolutional Neural Network training for image recognition tasks more efficient",
+    "authors": [
+      "Thomas Cherico Wanger",
+      "Peter Frohn"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Convolutional Neural Networks (CNN) for image recognition tasks are seeing rapid advances in the available architectures and how networks are trained based on large computational infrastructure and standard datasets with millions of images. In contrast, performance and time constraints for example, of small devices and free cloud GPUs necessitate efficient network training (i.e., highest accuracy in the shortest inference time possible), often on small datasets. Here, we hypothesize that initially decreasing image size during training makes the training process more efficient, because pre-shaping weights with small images and later utilizing these weights with larger images reduces initial network parameters and total inference time. We test this Efficient Network TRaining (ENTR) Hypothesis by training pre-trained Residual Network (ResNet) models (ResNet18, 34, & 50) on three small datasets (steel microstructures, bee images, and geographic aerial images) with a free cloud GPU. Based on three training regimes of i) not, ii) gradually or iii) in one step increasing image size over the training process, we show that initially reducing image size increases training efficiency consistently across datasets and networks. We interpret these results mechanistically in the framework of regularization theory. Support for the ENTR hypothesis is an important contribution, because network efficiency improvements for image recognition tasks are needed for practical applications. In the future, it will be exciting to see how the ENTR hypothesis holds for large standard datasets like ImageNet or CIFAR, to better understand the underlying mechanisms, and how these results compare to other fields such as structural learning.",
+    "url": "http://arxiv.org/abs/1807.11583v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Fast Decision Algorithms for Efficient Access Point Assignment in SDN-Controlled Wireless Access Networks",
+    "authors": [
+      "Pablo Fondo-Ferreiro",
+      "Saber Mhiri",
+      "Cristina López-Bravo",
+      "Francisco Javier González-Castaño",
+      "Felipe Gil-Castiñeira"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Global optimization of access point (AP) assignment to user terminals requires efficient monitoring of user behavior, fast decision algorithms, efficient control signaling, and fast AP reassignment mechanisms. In this scenario, software defined networking (SDN) technology may be suitable for network monitoring, signaling, and control. We recently proposed embedding virtual switches in user terminals for direct management by an SDN controller, further contributing to SDN-oriented access network optimization. However, since users may restrict terminal-side traffic monitoring for privacy reasons (a common assumption by previous authors), we infer user traffic classes at the APs. On the other hand, since handovers will be more frequent in dense small-cell networks (e.g., mmWave-based 5G deployments will require dense network topologies with inter-site distances of ~150-200 m), the delay to take assignment decisions should be minimal. To this end, we propose taking fast decisions based exclusively on extremely simple network-side application flow-type predictions based on past user behavior. Using real data we show that a centralized allocation algorithm based on those predictions achieves network utilization levels that approximate those of optimal allocations. We also test a distributed version of this algorithm. Finally, we quantify the elapsed time since a user traffic event takes place until its terminal is assigned an AP, when needed.",
+    "url": "http://arxiv.org/abs/2403.18745v1",
+    "doi": "10.1109/TNSM.2019.2925506",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Korean VLBI Network: the First Dedicated Mm-Wavelength VLBI Network in East Asia",
+    "authors": [
+      "Kiyoaki Wajima",
+      "Hyun-Goo Kim",
+      "Seog-Tae Han",
+      "Duk-Gyoo Roh",
+      "Do-Heung Je",
+      "Se-Jin Oh",
+      "Seog-Oh Wi",
+      "Korean VLBI Network Group"
+    ],
+    "year": 2005,
+    "venue": "arXiv",
+    "abstract": "  Korean VLBI Network (KVN) is the first dedicated mm-wavelength VLBI Network in East Asia and will be available from the middle of 2008. KVN consists of three stations and has the maximum observation frequency of 129 GHz with the maximum baseline length of 480 km. KVN has unique characteristics in the multifrequency, simultaneous observing system. By taking advantage of this we are considering various science topics, including not only maser emitting regions and young stellar objects in our galaxy, but also extragalactic objects. Construction of the first site is in progress. We are concurrently developing components, including receivers, data acquisition systems, and a correlator, and also arranging the international collaboration.",
+    "url": "http://arxiv.org/abs/astro-ph/0511065v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Efficient ResNets: Residual Network Design",
+    "authors": [
+      "Aditya Thakur",
+      "Harish Chauhan",
+      "Nikunj Gupta"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "ResNets (or Residual Networks) are one of the most commonly used models for image classification tasks. In this project, we design and train a modified ResNet model for CIFAR-10 image classification. In particular, we aimed at maximizing the test accuracy on the CIFAR-10 benchmark while keeping the size of our ResNet model under the specified fixed budget of 5 million trainable parameters. Model size, typically measured as the number of trainable parameters, is important when models need to be stored on devices with limited storage capacity (e.g. IoT/edge devices). In this article, we present our residual network design which has less than 5 million parameters. We show that our ResNet achieves a test accuracy of 96.04% on CIFAR-10 which is much higher than ResNet18 (which has greater than 11 million trainable parameters) when equipped with a number of training strategies and suitable ResNet hyperparameters. Models and code are available at https://github.com/Nikunj-Gupta/Efficient_ResNets.",
+    "url": "http://arxiv.org/abs/2306.12100v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Siamese Residual Neural Network for Musical Shape Evaluation in Piano Performance Assessment",
+    "authors": [
+      "Xiaoquan Li",
+      "Stephan Weiss",
+      "Yijun Yan",
+      "Yinhe Li",
+      "Jinchang Ren",
+      "John Soraghan",
+      "Ming Gong"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Understanding and identifying musical shape plays an important role in music education and performance assessment. To simplify the otherwise time- and cost-intensive musical shape evaluation, in this paper we explore how artificial intelligence (AI) driven models can be applied. Considering musical shape evaluation as a classification problem, a light-weight Siamese residual neural network (S-ResNN) is proposed to automatically identify musical shapes. To assess the proposed approach in the context of piano musical shape evaluation, we have generated a new dataset, containing 4116 music pieces derived by 147 piano preparatory exercises and performed in 28 categories of musical shapes. The experimental results show that the S-ResNN significantly outperforms a number of benchmark methods in terms of the precision, recall and F1 score.",
+    "url": "http://arxiv.org/abs/2401.02566v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "KITINet: KInetic Theory Inspired Inter-Channel Information Exchange for Residual Networks",
+    "authors": [
+      "Mingquan Feng",
+      "Yifan Fu",
+      "Tongcheng Zhang",
+      "Yu Jiang",
+      "Yixin Huang",
+      "Junchi Yan"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Residual connections are foundational to modern neural networks, yet the standard additive update provides no explicit mechanism for structured inter-channel interaction. We introduce KITINet (KInetics Theory Inspired Network), a training-time module with no additional trainable parameters that augments residual updates with stochastic pairwise feature interactions inspired by collision sampling in kinetic theory. KITINet reshapes channel groups as particles and mixes their features according to relative distance and velocity, while leaving the underlying residual layer trainable in the usual way. The module is disabled at inference, so the deployed model is identical to the original backbone and incurs no additional inference cost. Across language pre-training and fine-tuning, image classification, and PDE operator learning, KITINet demonstrates broad and robust performance gains across diverse tasks and architectures. We further observe enhanced parameter condensation across several settings and develop a simplified stochastic analysis that provides a mechanistic account of how collision-inspired interactions can promote condensation dynamics.",
+    "url": "http://arxiv.org/abs/2505.17919v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Regularization parameter selection in indirect regression by residual based bootstrap",
+    "authors": [
+      "Nicolai Bissantz",
+      "Justin Chown",
+      "Holger Dette"
+    ],
+    "year": 2016,
+    "venue": "arXiv",
+    "abstract": "Residual-based analysis is generally considered a cornerstone of statistical methodology. For a special case of indirect regression, we investigate the residual-based empirical distribution function and provide a uniform expansion of this estimator, which is also shown to be asymptotically most precise. This investigation naturally leads to a completely data-driven technique for selecting a regularization parameter used in our indirect regression function estimator. The resulting methodology is based on a smooth bootstrap of the model residuals. A simulation study demonstrates the effectiveness of our approach.",
+    "url": "http://arxiv.org/abs/1610.08663v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Image Completion on CIFAR-10",
+    "authors": [
+      "Mason Swofford"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "This project performed image completion on CIFAR-10, a dataset of 60,000 32x32 RGB images, using three different neural network architectures: fully convolutional networks, convolutional networks with fully connected layers, and encoder-decoder convolutional networks. The highest performing model was a deep fully convolutional network, which was able to achieve a mean squared error of .015 when comparing the original image pixel values with the predicted pixel values. As well, this network was able to output in-painted images which appeared real to the human eye.",
+    "url": "http://arxiv.org/abs/1810.03213v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "DiResNet: Direction-aware Residual Network for Road Extraction in VHR Remote Sensing Images",
+    "authors": [
+      "Lei Ding",
+      "Lorenzo Bruzzone"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "The binary segmentation of roads in very high resolution (VHR) remote sensing images (RSIs) has always been a challenging task due to factors such as occlusions (caused by shadows, trees, buildings, etc.) and the intra-class variances of road surfaces. The wide use of convolutional neural networks (CNNs) has greatly improved the segmentation accuracy and made the task end-to-end trainable. However, there are still margins to improve in terms of the completeness and connectivity of the results. In this paper, we consider the specific context of road extraction and present a direction-aware residual network (DiResNet) that includes three main contributions: 1) An asymmetric residual segmentation network with deconvolutional layers and a structural supervision to enhance the learning of road topology (DiResSeg); 2) A pixel-level supervision of local directions to enhance the embedding of linear features; 3) A refinement network to optimize the segmentation results (DiResRef). Ablation studies on two benchmark datasets (the Massachusetts dataset and the DeepGlobe dataset) have confirmed the effectiveness of the presented designs. Comparative experiments with other approaches show that the proposed method has advantages in both overall accuracy and F1-score. The code is available at: https://github.com/ggsDing/DiResNet.",
+    "url": "http://arxiv.org/abs/2005.07232v2",
+    "doi": "10.1109/TGRS.2020.3034011",
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]
