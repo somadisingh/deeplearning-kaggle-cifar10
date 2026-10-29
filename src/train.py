@@ -44,6 +44,7 @@ def parse_args():
     p.add_argument("--cutout", type=int, default=12)
     p.add_argument("--whiten-bias-epochs", type=int, default=3)
     p.add_argument("--trivialaugment", action="store_true")
+    p.add_argument("--sam-rho", type=float, default=0.0, help="SAM neighborhood radius; 0 = plain SGD")
     p.add_argument("--val", type=int, default=5000, help="holdout size from train; 0 = train on all 50k")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--teachers", nargs="*", default=[], help="run dirs of teacher models for distillation")
@@ -287,20 +288,40 @@ def main():
         net.whiten.bias.requires_grad = epoch < args.whiten_bias_epochs
         net.train()
         for x, y in loader:
-            logits = net(x)
-            loss = ce(logits, y)
+            t_logits = None
             if teachers:
                 with torch.no_grad():
                     for t in teachers:
                         t.eval()
                     t_logits = torch.stack([t(x) for t in teachers]).mean(0)
-                T = args.kd_temp
-                kd = F.kl_div(F.log_softmax(logits / T, 1), F.softmax(t_logits / T, 1),
-                              reduction="none").sum(1) * T * T
-                loss = (1 - args.kd_alpha) * loss + args.kd_alpha * kd
-            loss = loss.sum()
+
+            def compute_loss():
+                logits = net(x)
+                loss = ce(logits, y)
+                if t_logits is not None:
+                    T = args.kd_temp
+                    kd = F.kl_div(F.log_softmax(logits / T, 1), F.softmax(t_logits / T, 1),
+                                  reduction="none").sum(1) * T * T
+                    loss = (1 - args.kd_alpha) * loss + args.kd_alpha * kd
+                return loss.sum()
+
+            loss = compute_loss()
             opt.zero_grad(set_to_none=True)
             loss.backward()
+            if args.sam_rho > 0:
+                # SAM (Foret et al., 2021): step with the gradient taken at the worst-case point
+                # within an L2 ball of radius rho around the current weights.
+                params = [p for p in net.parameters() if p.grad is not None]
+                with torch.no_grad():
+                    norm = torch.norm(torch.stack([p.grad.norm() for p in params])) + 1e-12
+                    eps = [p.grad * (args.sam_rho / norm) for p in params]
+                    for p, e in zip(params, eps):
+                        p.add_(e)
+                opt.zero_grad(set_to_none=True)
+                compute_loss().backward()
+                with torch.no_grad():
+                    for p, e in zip(params, eps):
+                        p.sub_(e)
             opt.step()
             sched.step()
             step += 1
