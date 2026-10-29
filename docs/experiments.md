@@ -80,6 +80,7 @@ cosine), label smoothing 0.1, TrivialAugment + flip + 4px translate + 12px cutou
 | w128-256-352_d111_e40 (AirResNet) | 95.58% | 0.85 | 89.3% |
 | w128-256-352_ta_e120 (AirResNet) | 96.20% | 0.86 | 90.3% |
 | sla_ta_e120_b1024 (AirResNet + SLA) | 96.40% | 0.863 | 90.7% |
+| ta_e120_b1024_s1 (AirResNet, seed 1) | 96.28% | 0.857 | 90.5% |
 | preact_ta_e200 (PreActResNet) | **96.82%** | **0.884** | 91.3% |
 
 The airbench-style models sat about 4 points below the CIFAR-10.1 line; the standard ResNet sits about 3 below,
