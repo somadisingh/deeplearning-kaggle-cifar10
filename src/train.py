@@ -43,6 +43,7 @@ def parse_args():
     p.add_argument("--translate", type=int, default=4)
     p.add_argument("--cutout", type=int, default=12)
     p.add_argument("--whiten-bias-epochs", type=int, default=3)
+    p.add_argument("--trivialaugment", action="store_true")
     p.add_argument("--val", type=int, default=5000, help="holdout size from train; 0 = train on all 50k")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--teachers", nargs="*", default=[], help="run dirs of teacher models for distillation")
@@ -100,25 +101,73 @@ def batch_cutout(x, size):
     return x.masked_fill(mask, 0)
 
 
+_TA_IMAGES = None
+
+
+def _ta_init(images):
+    global _TA_IMAGES
+    torch.set_num_threads(1)
+    _TA_IMAGES = images
+
+
+def _ta_chunk(start, end, seed):
+    from torchvision.transforms import v2
+    torch.manual_seed(seed)
+    ta = v2.TrivialAugmentWide()
+    return torch.stack([ta(img) for img in _TA_IMAGES[start:end]]).numpy()
+
+
+class TrivialAugmentSource:
+    """Per-image TrivialAugment (Müller & Hutter, 2021) on CPU worker processes. The next epoch's
+    images are computed in the background while the GPU trains on the current one."""
+
+    def __init__(self, images_uint8, device, seed, workers=None, chunk=1000):
+        from concurrent.futures import ProcessPoolExecutor
+        self.n, self.device, self.seed, self.chunk = len(images_uint8), device, seed, chunk
+        self.pool = ProcessPoolExecutor(workers or os.cpu_count() - 2, initializer=_ta_init,
+                                        initargs=(images_uint8,))
+        self.epoch = 0
+        self.pending = self._submit()
+
+    def _submit(self):
+        s = self.seed * 100_000 + self.epoch * 1000
+        return [self.pool.submit(_ta_chunk, i, min(i + self.chunk, self.n), s + k)
+                for k, i in enumerate(range(0, self.n, self.chunk))]
+
+    def next(self):
+        x = np.concatenate([f.result() for f in self.pending])
+        self.epoch += 1
+        self.pending = self._submit()
+        x = torch.from_numpy(x).to(self.device).float().div(255)
+        return (x - MEAN.to(self.device)) / STD.to(self.device)
+
+
 class Loader:
     """Augmented epochs built on-device. Flip is random per image on epoch 0, then every image's
-    flip alternates each epoch (airbench's 'alternating flip')."""
+    flip alternates each epoch (airbench's 'alternating flip'). With a `source` (TrivialAugment),
+    fresh base images arrive every epoch and flips are random per image."""
 
-    def __init__(self, images, labels, batch_size, translate, cutout):
+    def __init__(self, images, labels, batch_size, translate, cutout, source=None):
         n = len(images)
         flip = (torch.rand(n, device=images.device) < 0.5).view(-1, 1, 1, 1)
         base = torch.where(flip, images.flip(-1), images)
         self.padded = F.pad(base, (translate,) * 4, mode="reflect") if translate else base
         self.labels, self.bs, self.cutout, self.translate = labels, batch_size, cutout, translate
         self.size = images.shape[-1]
+        self.source = source
         self.epoch = 0
 
     def __len__(self):
         return len(self.labels) // self.bs
 
     def __iter__(self):
+        if self.source is not None:
+            base = self.source.next()
+            flip = (torch.rand(len(base), device=base.device) < 0.5).view(-1, 1, 1, 1)
+            base = torch.where(flip, base.flip(-1), base)
+            self.padded = F.pad(base, (self.translate,) * 4, mode="reflect") if self.translate else base
         x = batch_crop(self.padded, self.size) if self.translate else self.padded
-        if self.epoch % 2 == 1:
+        if self.source is None and self.epoch % 2 == 1:
             x = x.flip(-1)
         if self.cutout:
             x = batch_cutout(x, self.cutout)
@@ -204,7 +253,11 @@ def main():
         for p in t.parameters():
             p.requires_grad = False
 
-    loader = Loader(x_tr, y_tr, args.batch_size, args.translate, args.cutout)
+    source = None
+    if args.trivialaugment:
+        raw = np.load(os.path.join(ROOT, "data", "cifar10_cache.npz"))["x_train"][tr_idx]
+        source = TrivialAugmentSource(torch.from_numpy(raw).permute(0, 3, 1, 2).contiguous(), device, args.seed)
+    loader = Loader(x_tr, y_tr, args.batch_size, args.translate, args.cutout, source)
     total_steps = ceil(len(loader) * args.epochs)
 
     kilostep = 1024 * (1 + 1 / (1 - args.momentum))
@@ -264,6 +317,8 @@ def main():
         if step >= total_steps:
             break
 
+    if source is not None:
+        source.pool.shutdown(cancel_futures=True)
     result = dict(vars(args), params=n_params, params_total=n_total, train_time=time.time() - t0)
     if len(va_idx):
         va_logits = predict(net, x_va, tta=2)
