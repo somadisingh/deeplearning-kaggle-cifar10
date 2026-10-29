@@ -10,6 +10,7 @@ only passed through the finished model to write predictions.
 """
 import argparse
 import json
+import math
 import os
 import time
 from math import ceil
@@ -19,7 +20,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from models import AirResNet, count_params, init_whitening
+from models import AirResNet, PreActResNet, count_params, init_whitening
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 MEAN = torch.tensor((0.4914, 0.4822, 0.4465)).view(1, 3, 1, 1)
@@ -45,6 +46,12 @@ def parse_args():
     p.add_argument("--whiten-bias-epochs", type=int, default=3)
     p.add_argument("--trivialaugment", action="store_true")
     p.add_argument("--sam-rho", type=float, default=0.0, help="SAM neighborhood radius; 0 = plain SGD")
+    p.add_argument("--arch", choices=["air", "preact"], default="air",
+                   help="air: airbench-style AirResNet with its decoupled SGD recipe; preact: standard "
+                        "pre-activation ResNet trained with plain SGD + cosine schedule")
+    p.add_argument("--sgd-lr", type=float, default=0.1, help="preact: peak lr per 128 examples")
+    p.add_argument("--sgd-wd", type=float, default=5e-4, help="preact: weight decay")
+    p.add_argument("--sgd-warmup-epochs", type=float, default=5)
     p.add_argument("--ssl", choices=["none", "sla", "rot"], default="none",
                    help="rotation self-supervision: SLA+SD joint labels, or an auxiliary rotation head")
     p.add_argument("--sla-beta", type=float, default=1.0, help="weight of the plain-head CE in SLA+SD")
@@ -235,9 +242,14 @@ def predict(net, images, tta=2, bs=2000, fn=None):
     return torch.cat(out).float()
 
 
+def build_net(arch, widths, depth, ssl):
+    cls = PreActResNet if arch == "preact" else AirResNet
+    return cls(tuple(widths), tuple(depth), ssl=ssl)
+
+
 def load_run(run_dir, device):
     cfg = json.load(open(os.path.join(run_dir, "config.json")))
-    net = AirResNet(tuple(cfg["widths"]), tuple(cfg["depth"]), ssl=cfg.get("ssl", "none")).to(device)
+    net = build_net(cfg.get("arch", "air"), cfg["widths"], cfg["depth"], cfg.get("ssl", "none")).to(device)
     net.load_state_dict(torch.load(os.path.join(run_dir, "model.pt"), map_location=device))
     return net.eval()
 
@@ -265,13 +277,14 @@ def main():
         x_va, y_va = x_all[va_t], y_all[va_t]
 
     assert not (args.ssl != "none" and args.teachers), "SSL heads and teacher distillation are not combined"
-    net = AirResNet(tuple(args.widths), tuple(args.depth), ssl=args.ssl).to(device)
+    net = build_net(args.arch, args.widths, args.depth, args.ssl).to(device)
     n_params = count_params(net)
     n_total = count_params(net, trainable_only=False)
     print(f"params: {n_params:,} trainable, {n_total:,} total", flush=True)
     if not args.allow_big:
         assert n_total <= PARAM_LIMIT, f"{n_total} params exceeds the 5M limit"
-    init_whitening(net.whiten, x_tr[:5000])
+    if args.arch == "air":
+        init_whitening(net.whiten, x_tr[:5000])
 
     teachers = [load_run(t, device) for t in args.teachers]
     for t in teachers:
@@ -285,22 +298,36 @@ def main():
     loader = Loader(x_tr, y_tr, args.batch_size, args.translate, args.cutout, source)
     total_steps = ceil(len(loader) * args.epochs)
 
-    kilostep = 1024 * (1 + 1 / (1 - args.momentum))
-    lr = args.lr / kilostep
-    wd = args.wd * args.batch_size / kilostep
-    lr_bias = lr * args.bias_scaler
-    norm_biases = [p for n, p in net.named_parameters() if "norm" in n and p.requires_grad]
-    others = [p for n, p in net.named_parameters() if "norm" not in n and p.requires_grad]
-    opt = torch.optim.SGD([dict(params=norm_biases, lr=lr_bias, weight_decay=wd / lr_bias),
-                           dict(params=others, lr=lr, weight_decay=wd / lr)],
-                          momentum=args.momentum, nesterov=True)
-    warm = int(total_steps * args.warmup)
+    if args.arch == "air":
+        kilostep = 1024 * (1 + 1 / (1 - args.momentum))
+        lr = args.lr / kilostep
+        wd = args.wd * args.batch_size / kilostep
+        lr_bias = lr * args.bias_scaler
+        norm_biases = [p for n, p in net.named_parameters() if "norm" in n and p.requires_grad]
+        others = [p for n, p in net.named_parameters() if "norm" not in n and p.requires_grad]
+        opt = torch.optim.SGD([dict(params=norm_biases, lr=lr_bias, weight_decay=wd / lr_bias),
+                               dict(params=others, lr=lr, weight_decay=wd / lr)],
+                              momentum=args.momentum, nesterov=True)
+        warm = int(total_steps * args.warmup)
 
-    def lr_mult(step):
-        if step < warm:
-            f = step / warm
-            return 0.2 * (1 - f) + f
-        return (total_steps - step) / (total_steps - warm)
+        def lr_mult(step):
+            if step < warm:
+                f = step / warm
+                return 0.2 * (1 - f) + f
+            return (total_steps - step) / (total_steps - warm)
+    else:
+        # Standard recipe: Nesterov SGD (momentum 0.9), lr scaled linearly with batch size, weight decay
+        # on conv/linear weights only, linear warmup then cosine decay to zero; loss is the batch mean.
+        decay = [p for p in net.parameters() if p.ndim > 1]
+        no_decay = [p for p in net.parameters() if p.ndim <= 1]
+        opt = torch.optim.SGD([dict(params=decay, weight_decay=args.sgd_wd), dict(params=no_decay, weight_decay=0)],
+                              lr=args.sgd_lr * args.batch_size / 128, momentum=0.9, nesterov=True)
+        warm = int(len(loader) * args.sgd_warmup_epochs)
+
+        def lr_mult(step):
+            if step < warm:
+                return (step + 1) / warm
+            return 0.5 * (1 + math.cos(math.pi * (step - warm) / (total_steps - warm)))
 
     sched = torch.optim.lr_scheduler.LambdaLR(opt, lr_mult)
     alpha = 0.95**5 * (torch.arange(total_steps + 1) / total_steps) ** 3
@@ -309,7 +336,8 @@ def main():
 
     history, step, t0 = [], 0, time.time()
     for epoch in range(ceil(args.epochs)):
-        net.whiten.bias.requires_grad = epoch < args.whiten_bias_epochs
+        if args.arch == "air":
+            net.whiten.bias.requires_grad = epoch < args.whiten_bias_epochs
         net.train()
         for x, y in loader:
             t_logits = None
@@ -318,6 +346,8 @@ def main():
                     for t in teachers:
                         t.eval()
                     t_logits = torch.stack([t(x) for t in teachers]).mean(0)
+
+            norm_by = len(x) if args.arch == "preact" else 1
 
             def compute_loss():
                 if args.ssl == "sla":
@@ -334,7 +364,7 @@ def main():
                     j = joint.view(n, 4, -1)
                     agg = torch.stack([j[:, k, k::4] for k in range(4)]).mean(0).detach()
                     sd = F.kl_div(F.log_softmax(single, 1), F.softmax(agg, 1), reduction="none").sum(1)
-                    return (joint_loss + sd + args.sla_beta * ce(single, y)).sum()
+                    return (joint_loss + sd + args.sla_beta * ce(single, y)).sum() / norm_by
                 if args.ssl == "rot":
                     # Auxiliary rotation prediction (Hendrycks et al., 2019; hendrycks/ss-ood):
                     # classification loss on the unrotated images only, plus lambda times the
@@ -344,7 +374,7 @@ def main():
                     rot_y = torch.arange(4, device=y.device).repeat(n)
                     rot_loss = F.cross_entropy(net.rot_head(z) * net.scale, rot_y,
                                                reduction="none").view(n, 4).mean(1)
-                    return (ce(net.head(z[::4]) * net.scale, y) + args.rot_weight * rot_loss).sum()
+                    return (ce(net.head(z[::4]) * net.scale, y) + args.rot_weight * rot_loss).sum() / norm_by
                 logits = net(x)
                 loss = ce(logits, y)
                 if t_logits is not None:
@@ -352,7 +382,7 @@ def main():
                     kd = F.kl_div(F.log_softmax(logits / T, 1), F.softmax(t_logits / T, 1),
                                   reduction="none").sum(1) * T * T
                     loss = (1 - args.kd_alpha) * loss + args.kd_alpha * kd
-                return loss.sum()
+                return loss.sum() / norm_by
 
             loss = compute_loss()
             opt.zero_grad(set_to_none=True)
@@ -374,12 +404,13 @@ def main():
             opt.step()
             sched.step()
             step += 1
-            if step % 5 == 0:
+            if args.arch == "air" and step % 5 == 0:
                 lookahead.update(net, decay=alpha[step].item())
             if step >= total_steps:
-                lookahead.update(net, decay=1.0)
+                if args.arch == "air":
+                    lookahead.update(net, decay=1.0)
                 break
-        rec = dict(epoch=epoch + 1, loss=loss.item() / len(y), time=round(time.time() - t0, 1))
+        rec = dict(epoch=epoch + 1, loss=loss.item() * norm_by / len(y), time=round(time.time() - t0, 1))
         if len(va_idx) and ((epoch + 1) % args.eval_every == 0 or step >= total_steps):
             rec["val_acc"] = (predict(net, x_va, tta=0).argmax(1) == y_va).float().mean().item()
         history.append(rec)

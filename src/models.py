@@ -1,11 +1,13 @@
 """Residual CNNs for 32x32 CIFAR-10, all under 5M parameters.
 
+`PreActResNet` is a standard pre-activation ResNet with average pooling.
 `AirResNet` follows the airbench96 design (Jordan, 2024): a frozen 2x2 patch-whitening stem,
 then three stages of conv -> maxpool -> BN -> GELU followed by residual pairs of 3x3 convs.
 `depth` sets how many residual pairs each stage gets.
 """
 import torch
 from torch import nn
+import torch.nn.functional as F
 
 
 class BatchNorm(nn.BatchNorm2d):
@@ -103,3 +105,56 @@ def init_whitening(layer, images, eps=5e-4):
     evals, evecs = evals.flip(0).view(-1, 1, 1, 1), evecs.T.reshape(c * h * w, c, h, w).flip(0)
     scaled = evecs / torch.sqrt(evals + eps)
     layer.weight.data[:] = torch.cat((scaled, -scaled)).to(layer.weight.device)
+
+
+class PreActBlock(nn.Module):
+    """Pre-activation basic block (He et al., 2016b): BN-ReLU-conv-BN-ReLU-conv, plus an identity or
+    1x1 projection skip connection."""
+
+    def __init__(self, cin, cout, stride):
+        super().__init__()
+        self.bn1, self.conv1 = nn.BatchNorm2d(cin), nn.Conv2d(cin, cout, 3, stride, 1, bias=False)
+        self.bn2, self.conv2 = nn.BatchNorm2d(cout), nn.Conv2d(cout, cout, 3, 1, 1, bias=False)
+        self.skip = None
+        if stride != 1 or cin != cout:
+            self.skip = nn.Conv2d(cin, cout, 1, stride, bias=False)
+
+    def forward(self, x):
+        out = F.relu(self.bn1(x))
+        skip = self.skip(out) if self.skip is not None else x
+        out = self.conv1(out)
+        out = self.conv2(F.relu(self.bn2(out)))
+        return out + skip
+
+
+class PreActResNet(nn.Module):
+    """Standard CIFAR pre-activation ResNet: 3x3 stem, stages of PreActBlocks (stride 2 between stages),
+    global average pooling and a linear classifier. Same `ssl` heads as AirResNet."""
+
+    def __init__(self, widths=(64, 128, 256), depth=(4, 4, 3), num_classes=10, ssl="none"):
+        super().__init__()
+        self.stem = nn.Conv2d(3, widths[0], 3, 1, 1, bias=False)
+        blocks, cin = [], widths[0]
+        for i, (w, d) in enumerate(zip(widths, depth)):
+            for j in range(d):
+                blocks.append(PreActBlock(cin, w, 2 if (i > 0 and j == 0) else 1))
+                cin = w
+        self.blocks = nn.Sequential(*blocks)
+        self.bn = nn.BatchNorm2d(cin)
+        self.head = nn.Linear(cin, num_classes)
+        self.scale = 1.0
+        self.ssl = ssl
+        if ssl == "sla":
+            self.joint_head = nn.Linear(cin, num_classes * 4)
+        elif ssl == "rot":
+            self.rot_head = nn.Linear(cin, 4)
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode="fan_out", nonlinearity="relu")
+
+    def features(self, x):
+        x = F.relu(self.bn(self.blocks(self.stem(x))))
+        return F.adaptive_avg_pool2d(x, 1).flatten(1)
+
+    def forward(self, x):
+        return self.head(self.features(x)) * self.scale
