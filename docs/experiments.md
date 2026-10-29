@@ -51,3 +51,20 @@ SLA+SD smoke test (TrivialAugment recipe, 2 epochs): batch 1024 (4096 rotated im
 memory on the 24 GB M4 Pro and swaps; batch 512 works at 95 s/epoch (4.1× SGD). After 2 epochs the plain
 (self-distilled) head reaches 58.2% and the 4-rotation aggregate 53.7% on the holdout (SGD smoke at batch 1024: 48.7%,
 not directly comparable because the batch size differs). Model has 4.86M params.
+
+## Sweep 3: SLA+SD on an NYU HPC A100 (2026-10-29)
+
+Same 4.84M model + TrivialAugment, 120 epochs, batch 1024, 45k/5k split (seed 0), run on an A100-SXM4-40GB
+(torch 2.15+cu132). SLA+SD (Lee et al., 2020) adds a 40-way joint (class × rotation) head; the model has 4.86M params.
+The control is the same recipe without SLA on the same GPU.
+
+| run | val acc (TTA) | train time |
+|---|---|---|
+| ta_e120_b1024_a100 (control) | 95.90% | 4.0 min |
+| sla_ta_e120_b1024: self-distilled head | 96.30% | 12.4 min |
+| sla_ta_e120_b1024: 4-rotation aggregate | 96.32% | |
+| sla_ta_e120_b1024: head + aggregate (mean of softmaxes) | **96.40%** | |
+
+SLA+SD beats the same-GPU control by +0.4 to +0.5 points. The Mac run of the control recipe scored 96.20%,
+so run-to-run variation is about ±0.3; the gain is suggestive, not certain. `submission_sla.csv` holds the
+head + aggregate predictions of this 45k-trained model.
