@@ -68,3 +68,20 @@ The control is the same recipe without SLA on the same GPU.
 SLA+SD beats the same-GPU control by +0.4 to +0.5 points. The Mac run of the control recipe scored 96.20%,
 so run-to-run variation is about ±0.3; the gain is suggestive, not certain. `submission_sla.csv` holds the
 head + aggregate predictions of this 45k-trained model.
+
+## Sweep 4: standard pre-activation ResNet (2026-10-29, A100)
+
+PreActResNet (3×3 stem, pre-activation basic blocks, stages 4/4/3 at widths 64/128/256, global average
+pooling; 4.70M params) trained with plain Nesterov SGD (lr 0.4 at batch 512, wd 5e-4, 5-epoch warmup,
+cosine), label smoothing 0.1, TrivialAugment + flip + 4px translate + 12px cutout, 200 epochs, 22 min.
+
+| run | holdout val (TTA) | Kaggle public | Recht line prediction |
+|---|---|---|---|
+| w128-256-352_d111_e40 (AirResNet) | 95.58% | 0.85 | 89.3% |
+| w128-256-352_ta_e120 (AirResNet) | 96.20% | 0.86 | 90.3% |
+| sla_ta_e120_b1024 (AirResNet + SLA) | 96.40% | 0.863 | 90.7% |
+| preact_ta_e200 (PreActResNet) | **96.82%** | **0.884** | 91.3% |
+
+The airbench-style models sat about 4 points below the CIFAR-10.1 line; the standard ResNet sits about 3 below,
+so it gains more on the hidden set (+2.1) than its holdout gain (+0.4) predicts. The architecture family
+matters for this shift, as Recht et al. also found for width vs depth and Cutout.
