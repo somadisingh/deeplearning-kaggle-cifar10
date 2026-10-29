@@ -28,3 +28,21 @@ flip / translate / cutout; epoch time is unchanged (~20 s).
 
 Longer training is worth +0.4 to +0.6 points. TrivialAugment hurts at 40 epochs and helps slightly at
 120 (+0.2, within one standard error of a 5k holdout, ~0.27 points), so it needs long schedules.
+
+## Diagnostic: photometric shift check (2026-10-29)
+
+`src/shift_check.py` re-renders the 5k holdout with the evaluation set's per-channel mean/std
+(unlabeled pixel statistics only; test images are not classified) and measures the accuracy drop (TTA on).
+
+| model | clean | test stats ×1 | test stats ×2 | per-image brightness spread +0.07 | contrast ×1.15 |
+|---|---|---|---|---|---|
+| w128-256-352_d111_e40 | 95.58 | 95.46 | 95.16 | 95.42 | 95.36 |
+| w96-256-352_d211_e40 | 95.36 | 95.14 | 95.08 | 95.06 | 95.04 |
+| w128-256-352_e120 | 96.02 | 95.94 | 95.68 | 95.78 | 95.78 |
+| w128-256-352_ta_e120 | 96.20 | 96.16 | 96.16 | 95.96 | 96.00 |
+
+Drops are at most 0.4 points, so brightness/contrast differences do not explain the Kaggle gap;
+the frozen whitening stem is not fragile to this shift. TrivialAugment makes the model the most stable.
+
+SAM smoke test (TrivialAugment recipe, 2 epochs, rho 0.05): 46 s/epoch vs 23 s for SGD (1.97×);
+holdout accuracy after 2 epochs 39.7% vs 48.7% for SGD.
