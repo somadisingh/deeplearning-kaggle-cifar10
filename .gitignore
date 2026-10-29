@@ -9,3 +9,4 @@ runs/
 *.pth
 .claude/
 logs/
+hpc_upload/

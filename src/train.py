@@ -129,7 +129,7 @@ class TrivialAugmentSource:
     def __init__(self, images_uint8, device, seed, workers=None, chunk=1000):
         from concurrent.futures import ProcessPoolExecutor
         self.n, self.device, self.seed, self.chunk = len(images_uint8), device, seed, chunk
-        self.pool = ProcessPoolExecutor(workers or os.cpu_count() - 2, initializer=_ta_init,
+        self.pool = ProcessPoolExecutor(workers or max(1, len(os.sched_getaffinity(0)) - 1 if hasattr(os, "sched_getaffinity") else os.cpu_count() - 2), initializer=_ta_init,
                                         initargs=(images_uint8,))
         self.epoch = 0
         self.pending = self._submit()
@@ -247,7 +247,11 @@ def load_run(run_dir, device):
 
 def main():
     args = parse_args()
-    device = "mps" if torch.backends.mps.is_available() else "cpu"
+    if torch.cuda.is_available():
+        device = "cuda"
+        torch.backends.cudnn.benchmark = True
+    else:
+        device = "mps" if torch.backends.mps.is_available() else "cpu"
     torch.manual_seed(args.seed)
     out_dir = os.path.join(ROOT, "runs", args.name)
     os.makedirs(out_dir, exist_ok=True)
