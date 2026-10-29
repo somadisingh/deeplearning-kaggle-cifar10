@@ -45,6 +45,10 @@ def parse_args():
     p.add_argument("--whiten-bias-epochs", type=int, default=3)
     p.add_argument("--trivialaugment", action="store_true")
     p.add_argument("--sam-rho", type=float, default=0.0, help="SAM neighborhood radius; 0 = plain SGD")
+    p.add_argument("--ssl", choices=["none", "sla", "rot"], default="none",
+                   help="rotation self-supervision: SLA+SD joint labels, or an auxiliary rotation head")
+    p.add_argument("--sla-beta", type=float, default=1.0, help="weight of the plain-head CE in SLA+SD")
+    p.add_argument("--rot-weight", type=float, default=0.5, help="lambda for the auxiliary rotation loss")
     p.add_argument("--val", type=int, default=5000, help="holdout size from train; 0 = train on all 50k")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--teachers", nargs="*", default=[], help="run dirs of teacher models for distillation")
@@ -194,18 +198,33 @@ class Lookahead:
                 p.copy_(e)
 
 
+def rotate4(x):
+    """Stack the 4 rotations of each image, interleaved: row 4*i + k is image i rotated by k*90 degrees."""
+    return torch.stack([torch.rot90(x, k, (2, 3)) for k in range(4)], 1).flatten(0, 1)
+
+
+def sla_aggregate(net, x):
+    """SLA+AG (Lee et al., 2020, eq. 4): for the copy rotated by k, keep the joint logits of labels
+    (i, k), then average those logits over the 4 rotations."""
+    joint = net.joint_head(net.features(rotate4(x))) * net.scale
+    joint = joint.view(len(x), 4, -1)
+    return torch.stack([joint[:, k, k::4] for k in range(4)]).mean(0)
+
+
 @torch.no_grad()
-def predict(net, images, tta=2, bs=2000):
-    """Logits with test-time augmentation: 0 none, 1 mirror, 2 mirror + 1px translations."""
+def predict(net, images, tta=2, bs=2000, fn=None):
+    """Logits with test-time augmentation: 0 none, 1 mirror, 2 mirror + 1px translations.
+    `fn(net, x)` replaces the plain forward pass (e.g. sla_aggregate)."""
     net.eval()
+    fn = fn or (lambda m, x: m(x))
 
     def mirror(x):
-        return 0.5 * net(x) + 0.5 * net(x.flip(-1))
+        return 0.5 * fn(net, x) + 0.5 * fn(net, x.flip(-1))
 
     out = []
     for x in images.split(bs):
         if tta == 0:
-            out.append(net(x))
+            out.append(fn(net, x))
             continue
         logits = mirror(x)
         if tta >= 2:
@@ -218,7 +237,7 @@ def predict(net, images, tta=2, bs=2000):
 
 def load_run(run_dir, device):
     cfg = json.load(open(os.path.join(run_dir, "config.json")))
-    net = AirResNet(tuple(cfg["widths"]), tuple(cfg["depth"])).to(device)
+    net = AirResNet(tuple(cfg["widths"]), tuple(cfg["depth"]), ssl=cfg.get("ssl", "none")).to(device)
     net.load_state_dict(torch.load(os.path.join(run_dir, "model.pt"), map_location=device))
     return net.eval()
 
@@ -241,7 +260,8 @@ def main():
         va_t = torch.from_numpy(va_idx).to(device)
         x_va, y_va = x_all[va_t], y_all[va_t]
 
-    net = AirResNet(tuple(args.widths), tuple(args.depth)).to(device)
+    assert not (args.ssl != "none" and args.teachers), "SSL heads and teacher distillation are not combined"
+    net = AirResNet(tuple(args.widths), tuple(args.depth), ssl=args.ssl).to(device)
     n_params = count_params(net)
     n_total = count_params(net, trainable_only=False)
     print(f"params: {n_params:,} trainable, {n_total:,} total", flush=True)
@@ -296,6 +316,31 @@ def main():
                     t_logits = torch.stack([t(x) for t in teachers]).mean(0)
 
             def compute_loss():
+                if args.ssl == "sla":
+                    # SLA+SD (Lee et al., 2020, eqs. 3 and 5; hankook/SLA create_sla_sd_trainer):
+                    # joint (class, rotation) cross-entropy averaged over the 4 rotations, plus
+                    # self-distillation of the aggregated joint prediction (held constant) into the
+                    # plain head on the unrotated image, plus beta * its usual cross-entropy.
+                    n = len(x)
+                    z = net.features(rotate4(x))
+                    joint = net.joint_head(z) * net.scale
+                    joint_y = (y.view(-1, 1) * 4 + torch.arange(4, device=y.device)).flatten()
+                    joint_loss = F.cross_entropy(joint, joint_y, reduction="none").view(n, 4).mean(1)
+                    single = net.head(z[::4]) * net.scale
+                    j = joint.view(n, 4, -1)
+                    agg = torch.stack([j[:, k, k::4] for k in range(4)]).mean(0).detach()
+                    sd = F.kl_div(F.log_softmax(single, 1), F.softmax(agg, 1), reduction="none").sum(1)
+                    return (joint_loss + sd + args.sla_beta * ce(single, y)).sum()
+                if args.ssl == "rot":
+                    # Auxiliary rotation prediction (Hendrycks et al., 2019; hendrycks/ss-ood):
+                    # classification loss on the unrotated images only, plus lambda times the
+                    # 4-way rotation loss averaged over all 4 rotations.
+                    n = len(x)
+                    z = net.features(rotate4(x))
+                    rot_y = torch.arange(4, device=y.device).repeat(n)
+                    rot_loss = F.cross_entropy(net.rot_head(z) * net.scale, rot_y,
+                                               reduction="none").view(n, 4).mean(1)
+                    return (ce(net.head(z[::4]) * net.scale, y) + args.rot_weight * rot_loss).sum()
                 logits = net(x)
                 loss = ce(logits, y)
                 if t_logits is not None:
@@ -346,7 +391,13 @@ def main():
         result["val_acc_tta"] = (va_logits.argmax(1) == y_va).float().mean().item()
         torch.save(va_logits.cpu(), os.path.join(out_dir, "val_logits.pt"))
         np.save(os.path.join(out_dir, "val_idx.npy"), va_idx)
+        if args.ssl == "sla":
+            va_agg = predict(net, x_va, tta=2, fn=sla_aggregate)
+            result["val_acc_tta_sla_agg"] = (va_agg.argmax(1) == y_va).float().mean().item()
+            torch.save(va_agg.cpu(), os.path.join(out_dir, "val_logits_sla_agg.pt"))
     torch.save(predict(net, x_test, tta=2).cpu(), os.path.join(out_dir, "test_logits.pt"))
+    if args.ssl == "sla":
+        torch.save(predict(net, x_test, tta=2, fn=sla_aggregate).cpu(), os.path.join(out_dir, "test_logits_sla_agg.pt"))
     torch.save(net.state_dict(), os.path.join(out_dir, "model.pt"))
     json.dump(result, open(os.path.join(out_dir, "config.json"), "w"), indent=1)
     json.dump(history, open(os.path.join(out_dir, "history.json"), "w"))

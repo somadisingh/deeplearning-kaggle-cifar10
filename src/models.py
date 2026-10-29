@@ -55,7 +55,12 @@ class Stage(nn.Module):
 
 
 class AirResNet(nn.Module):
-    def __init__(self, widths=(128, 256, 384), depth=(1, 1, 1), scale=1 / 9, num_classes=10):
+    """`ssl` adds a rotation self-supervision head on the shared features:
+    "sla" a joint (class x rotation) head with num_classes * 4 outputs, label y * 4 + k for an image
+    rotated by k * 90 degrees (Lee et al., 2020); "rot" a 4-way rotation head (Hendrycks et al., 2019).
+    `head` stays the plain num_classes classifier, so forward() is unchanged."""
+
+    def __init__(self, widths=(128, 256, 384), depth=(1, 1, 1), scale=1 / 9, num_classes=10, ssl="none"):
         super().__init__()
         ws = 2 * 3 * 2 * 2
         self.whiten = Conv(3, ws, k=2, padding=0, bias=True)
@@ -69,10 +74,17 @@ class AirResNet(nn.Module):
         self.pool = nn.AdaptiveMaxPool2d(1)
         self.head = nn.Linear(cin, num_classes, bias=False)
         self.scale = scale
+        self.ssl = ssl
+        if ssl == "sla":
+            self.joint_head = nn.Linear(cin, num_classes * 4, bias=False)
+        elif ssl == "rot":
+            self.rot_head = nn.Linear(cin, 4, bias=False)
+
+    def features(self, x):
+        return self.pool(self.stages(self.act(self.whiten(x)))).flatten(1)
 
     def forward(self, x):
-        x = self.stages(self.act(self.whiten(x)))
-        return self.head(self.pool(x).flatten(1)) * self.scale
+        return self.head(self.features(x)) * self.scale
 
 
 def count_params(model, trainable_only=True):
