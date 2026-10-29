@@ -85,3 +85,6 @@ cosine), label smoothing 0.1, TrivialAugment + flip + 4px translate + 12px cutou
 The airbench-style models sat about 4 points below the CIFAR-10.1 line; the standard ResNet sits about 3 below,
 so it gains more on the hidden set (+2.1) than its holdout gain (+0.4) predicts. The architecture family
 matters for this shift, as Recht et al. also found for width vs depth and Cutout.
+
+Seed 1 of the AirResNet SLA comparison (different holdout split, seed 1): SLA+SD self-distilled head 96.68%,
+rotation aggregate 96.30%; control without SLA 96.28%. Across two seeds SLA adds +0.4 to +0.5 on the holdout.
