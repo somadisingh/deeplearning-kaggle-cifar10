@@ -46,3 +46,8 @@ the frozen whitening stem is not fragile to this shift. TrivialAugment makes the
 
 SAM smoke test (TrivialAugment recipe, 2 epochs, rho 0.05): 46 s/epoch vs 23 s for SGD (1.97×);
 holdout accuracy after 2 epochs 39.7% vs 48.7% for SGD.
+
+SLA+SD smoke test (TrivialAugment recipe, 2 epochs): batch 1024 (4096 rotated images per step) runs out of
+memory on the 24 GB M4 Pro and swaps; batch 512 works at 95 s/epoch (4.1× SGD). After 2 epochs the plain
+(self-distilled) head reaches 58.2% and the 4-rotation aggregate 53.7% on the holdout (SGD smoke at batch 1024: 48.7%,
+not directly comparable because the batch size differs). Model has 4.86M params.
