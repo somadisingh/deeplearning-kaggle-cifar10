@@ -89,3 +89,17 @@ matters for this shift, as Recht et al. also found for width vs depth and Cutout
 
 Seed 1 of the AirResNet SLA comparison (different holdout split, seed 1): SLA+SD self-distilled head 96.68%,
 rotation aggregate 96.30%; control without SLA 96.28%. Across two seeds SLA adds +0.4 to +0.5 on the holdout.
+
+## Resume list (HPC job ends ~2026-10-29 23:50; continue in the next A100 session)
+
+State on the A100 (persists in `/scratch/ss20288/cifar10`): `.venv` (torch 2.15+cu132), `data/cifar10_cache.npz`
+(hash verified), `src/` (current code), `runs/` and `logs/` for every A100 run, `export_preds.py`.
+Archives of finished runs are in `~/cifar10_results/` (with `SHA256SUMS`).
+
+Next steps, in order:
+1. Copy back the PreActResNet + SLA run (`preact_sla_ta_e200`): archive, CSV, compare with `preact_ta_e200` (96.82%).
+2. Retrain the winning PreActResNet recipe on all 50k images (`--val 0`, 200 epochs; ~25 min without SLA,
+   ~95 min with SLA) and write the final `submission.csv`.
+3. Seeds of the winning PreActResNet recipe to confirm the choice on the holdout.
+4. Possible improvements on the PreActResNet: SAM at equal wall-clock (implemented, `--sam-rho`), width/depth variants
+   under 5M, longer schedule.
