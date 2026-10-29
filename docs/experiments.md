@@ -83,6 +83,8 @@ cosine), label smoothing 0.1, TrivialAugment + flip + 4px translate + 12px cutou
 | ta_e120_b1024_s1 (AirResNet, seed 1) | 96.28% | 0.857 | 90.5% |
 | preact_ta_e200 (PreActResNet) | **96.82%** | **0.884** | 91.3% |
 
+| preact_sla_ta_e200 (PreActResNet + SLA+SD, 4.71M) | **97.56%** (head; aggregate 97.42%) | pending | 92.5% |
+
 The airbench-style models sat about 4 points below the CIFAR-10.1 line; the standard ResNet sits about 3 below,
 so it gains more on the hidden set (+2.1) than its holdout gain (+0.4) predicts. The architecture family
 matters for this shift, as Recht et al. also found for width vs depth and Cutout.
@@ -97,9 +99,9 @@ State on the A100 (persists in `/scratch/ss20288/cifar10`): `.venv` (torch 2.15+
 Archives of finished runs are in `~/cifar10_results/` (with `SHA256SUMS`).
 
 Next steps, in order:
-1. Copy back the PreActResNet + SLA run (`preact_sla_ta_e200`): archive, CSV, compare with `preact_ta_e200` (96.82%).
-2. Retrain the winning PreActResNet recipe on all 50k images (`--val 0`, 200 epochs; ~25 min without SLA,
-   ~95 min with SLA) and write the final `submission.csv`.
+1. ~~Copy back the PreActResNet + SLA run~~ done: 97.56% holdout, `submission_preact_sla_ta_e200.csv`; it is the new winner.
+2. Retrain the winning recipe (PreActResNet + SLA+SD + TrivialAugment, 200 epochs, batch 512) on all 50k images
+   (`--val 0`, ~95 min on the A100) and write the final `submission.csv`.
 3. Seeds of the winning PreActResNet recipe to confirm the choice on the holdout.
 4. Possible improvements on the PreActResNet: SAM at equal wall-clock (implemented, `--sam-rho`), width/depth variants
    under 5M, longer schedule.
