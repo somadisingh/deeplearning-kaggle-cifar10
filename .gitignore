@@ -10,3 +10,4 @@ runs/
 .claude/
 logs/
 hpc_upload/
+hpc_runs/
