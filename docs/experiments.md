@@ -164,3 +164,8 @@ averages the members' running statistics and member 0 is saved too. At about the
 `shake2x40d_ta_e600`: 4.56M params, Shake-Shake-Image blocks, batch 256, lr 0.2 per 128, wd 1e-4, label smoothing 0.1,
 TrivialAugment + cutout, 600 epochs cosine, ~11 s/epoch, 1.8 h total. Holdout (TTA): **97.16%**; plain PreActResNet
 200 epochs 96.82%, PreActResNet + SLA 97.56%. Below the ~97.4% bar for trying Shake-Shake + SLA (~7 h), so not pursued.
+
+## Anti-aliased PreActResNet (2026-10-30, A100)
+
+`preact_blur_ta_e200`: BlurPool ([1,2,1]^2) before every stride-2 conv and on strided skips, 0 extra params, 200 epochs,
+25 min. Holdout (TTA): **97.00%** vs 96.82% without (+0.18, one seed): under the +0.3 bar, not stacked.
