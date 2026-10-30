@@ -56,6 +56,8 @@ def parse_args():
     p.add_argument("--ssl", choices=["none", "sla", "rot"], default="none",
                    help="rotation self-supervision: SLA+SD joint labels, or an auxiliary rotation head")
     p.add_argument("--sla-beta", type=float, default=1.0, help="weight of the plain-head CE in SLA+SD")
+    p.add_argument("--ckpt-every", type=int, default=10, help="save a resumable checkpoint every N epochs")
+    p.add_argument("--resume", action="store_true", help="continue from runs/<name>/ckpt.pt if it exists")
     p.add_argument("--rot-weight", type=float, default=0.5, help="lambda for the auxiliary rotation loss")
     p.add_argument("--val", type=int, default=5000, help="holdout size from train; 0 = train on all 50k")
     p.add_argument("--seed", type=int, default=0)
@@ -338,8 +340,20 @@ def main():
     lookahead = Lookahead(net)
     ce = nn.CrossEntropyLoss(label_smoothing=args.label_smoothing, reduction="none")
 
-    history, step, t0 = [], 0, time.time()
-    for epoch in range(ceil(args.epochs)):
+    history, step, t0, start_epoch = [], 0, time.time(), 0
+    ckpt_path = os.path.join(out_dir, "ckpt.pt")
+    if args.resume and os.path.exists(ckpt_path):
+        ck = torch.load(ckpt_path, map_location=device, weights_only=False)
+        net.load_state_dict(ck["net"])
+        opt.load_state_dict(ck["opt"])
+        sched.load_state_dict(ck["sched"])
+        lookahead.ema = ck["lookahead"]
+        history, step, start_epoch = ck["history"], ck["step"], ck["epoch"]
+        t0 -= ck["elapsed"]
+        loader.epoch = start_epoch
+        torch.manual_seed(args.seed * 1000 + start_epoch)
+        print(f"resumed from epoch {start_epoch}", flush=True)
+    for epoch in range(start_epoch, ceil(args.epochs)):
         if args.arch == "air":
             net.whiten.bias.requires_grad = epoch < args.whiten_bias_epochs
         net.train()
@@ -419,6 +433,11 @@ def main():
             rec["val_acc"] = (predict(net, x_va, tta=0).argmax(1) == y_va).float().mean().item()
         history.append(rec)
         print(json.dumps(rec), flush=True)
+        if args.ckpt_every and (epoch + 1) % args.ckpt_every == 0 and step < total_steps:
+            torch.save(dict(net=net.state_dict(), opt=opt.state_dict(), sched=sched.state_dict(),
+                            lookahead=lookahead.ema, history=history, step=step, epoch=epoch + 1,
+                            elapsed=time.time() - t0), ckpt_path + ".tmp")
+            os.replace(ckpt_path + ".tmp", ckpt_path)
         if step >= total_steps:
             break
 
