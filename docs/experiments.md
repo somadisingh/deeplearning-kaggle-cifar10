@@ -119,3 +119,16 @@ images (`--val 0`), 92 min. Predictions (head + rotation aggregate) are `submiss
 of 512; 200 epochs, 13.6 s/epoch (2x SGD), 44 min. Holdout (TTA): **97.18%** (+0.36), one seed.
 Meets the +0.3 bar for one seed; a second seed is needed before stacking SAM on SLA (~3 h per 200-epoch run).
 CSV: `submission_preact_ta_e200_sam05.csv` (45k-trained, no SLA).
+
+## Resume list (after HPC session 2, 2026-10-30)
+
+Done: all-50k final retrain (Kaggle 0.909, `submission.csv`); SAM one seed (+0.36).
+Next, in order:
+1. SAM seed 2 on PreActResNet (~45 min); if it holds, SAM + SLA on PreActResNet, 200 epochs (~3 h, use `--resume`
+   across two jobs), compare with 97.56%.
+2. PAPA (`src/train_papa.py`, p=4, PreActResNet, no SLA first, ~90 min); compare at equal compute with 97.56%.
+3. Shake-Shake-26 2x40d pilot (`--arch shake --widths 40 80 160 --depth 4 4 4 --sgd-lr 0.2 --sgd-wd 1e-4
+   --batch-size 128`): measure epoch time, then 600 epochs with `--resume` across jobs.
+4. Anti-aliasing (`--blur`) and 400-epoch / wider variants, one run each.
+5. Retrain whatever wins on all 50k for the final submission.
+Rule: stack only changes that win by >= 0.3 on the holdout across 2 seeds.
