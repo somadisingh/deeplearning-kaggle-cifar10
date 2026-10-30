@@ -131,13 +131,14 @@ class PreActResNet(nn.Module):
     """Standard CIFAR pre-activation ResNet: 3x3 stem, stages of PreActBlocks (stride 2 between stages),
     global average pooling and a linear classifier. Same `ssl` heads as AirResNet."""
 
-    def __init__(self, widths=(64, 128, 256), depth=(4, 4, 3), num_classes=10, ssl="none"):
+    def __init__(self, widths=(64, 128, 256), depth=(4, 4, 3), num_classes=10, ssl="none", blur=False):
         super().__init__()
         self.stem = nn.Conv2d(3, widths[0], 3, 1, 1, bias=False)
         blocks, cin = [], widths[0]
+        block = BlurPreActBlock if blur else PreActBlock
         for i, (w, d) in enumerate(zip(widths, depth)):
             for j in range(d):
-                blocks.append(PreActBlock(cin, w, 2 if (i > 0 and j == 0) else 1))
+                blocks.append(block(cin, w, 2 if (i > 0 and j == 0) else 1))
                 cin = w
         self.blocks = nn.Sequential(*blocks)
         self.bn = nn.BatchNorm2d(cin)
@@ -154,6 +155,114 @@ class PreActResNet(nn.Module):
 
     def features(self, x):
         x = F.relu(self.bn(self.blocks(self.stem(x))))
+        return F.adaptive_avg_pool2d(x, 1).flatten(1)
+
+    def forward(self, x):
+        return self.head(self.features(x)) * self.scale
+
+
+class BlurPool(nn.Module):
+    """Fixed [1, 2, 1] x [1, 2, 1] low-pass filter followed by stride-2 subsampling (Zhang, 2019),
+    applied per channel; no trainable parameters."""
+
+    def __init__(self, channels):
+        super().__init__()
+        k = torch.tensor([1.0, 2.0, 1.0])
+        k = (k[:, None] * k[None, :]) / 16
+        self.register_buffer("kernel", k.expand(channels, 1, 3, 3).clone())
+        self.channels = channels
+
+    def forward(self, x):
+        return F.conv2d(F.pad(x, (1, 1, 1, 1), mode="reflect"), self.kernel, stride=2, groups=self.channels)
+
+
+class BlurPreActBlock(PreActBlock):
+    """PreActBlock with anti-aliased downsampling (Zhang, 2019; Vasconcelos et al., 2021): the strided
+    3x3 conv becomes conv(stride 1) -> BlurPool, and the strided 1x1 skip becomes BlurPool -> 1x1 conv."""
+
+    def __init__(self, cin, cout, stride):
+        super().__init__(cin, cout, stride)
+        if stride == 2:
+            self.conv1 = nn.Sequential(nn.Conv2d(cin, cout, 3, 1, 1, bias=False), BlurPool(cout))
+            self.skip = nn.Sequential(BlurPool(cin), nn.Conv2d(cin, cout, 1, bias=False))
+
+
+class ShakeShake(torch.autograd.Function):
+    """Shake-Shake-Image (Gastaldi, 2017): per-image random convex weights alpha in the forward pass and
+    independent beta in the backward pass; 0.5 / 0.5 at test time."""
+
+    @staticmethod
+    def forward(ctx, x1, x2, training):
+        if not training:
+            return 0.5 * (x1 + x2)
+        alpha = torch.rand(x1.size(0), 1, 1, 1, device=x1.device, dtype=x1.dtype)
+        return alpha * x1 + (1 - alpha) * x2
+
+    @staticmethod
+    def backward(ctx, grad):
+        beta = torch.rand(grad.size(0), 1, 1, 1, device=grad.device, dtype=grad.dtype)
+        return beta * grad, (1 - beta) * grad, None
+
+
+class ShakeBlock(nn.Module):
+    """Two residual branches of ReLU-conv-BN-ReLU-conv-BN combined by ShakeShake. The downsampling skip is
+    Gastaldi's: two stride-2 1x1-conv paths (one offset by a pixel), concatenated, then BN."""
+
+    def __init__(self, cin, cout, stride):
+        super().__init__()
+
+        def branch():
+            return nn.Sequential(nn.ReLU(), nn.Conv2d(cin, cout, 3, stride, 1, bias=False), nn.BatchNorm2d(cout),
+                                 nn.ReLU(), nn.Conv2d(cout, cout, 3, 1, 1, bias=False), nn.BatchNorm2d(cout))
+
+        self.b1, self.b2 = branch(), branch()
+        self.down = None
+        if stride != 1 or cin != cout:
+            self.down_a = nn.Conv2d(cin, cout // 2, 1, bias=False)
+            self.down_b = nn.Conv2d(cin, cout - cout // 2, 1, bias=False)
+            self.down_bn = nn.BatchNorm2d(cout)
+            self.down = True
+        self.stride = stride
+
+    def skip(self, x):
+        if self.down is None:
+            return x
+        x = F.relu(x)
+        a = F.avg_pool2d(x, 1, self.stride)
+        b = F.avg_pool2d(F.pad(x[:, :, 1:, 1:], (0, 1, 0, 1)), 1, self.stride)
+        return self.down_bn(torch.cat([self.down_a(a), self.down_b(b)], 1))
+
+    def forward(self, x):
+        return self.skip(x) + ShakeShake.apply(self.b1(x), self.b2(x), self.training)
+
+
+class ShakeResNet(nn.Module):
+    """Shake-Shake ResNet for CIFAR (Gastaldi, 2017): 3x3 conv stem with 16 channels, three stages of
+    ShakeBlocks (stride 2 between stages), ReLU, global average pooling, linear classifier.
+    Shake-Shake-26 2x32d is widths (32, 64, 128), depth (4, 4, 4): about 2.9M parameters."""
+
+    def __init__(self, widths=(32, 64, 128), depth=(4, 4, 4), num_classes=10, ssl="none"):
+        super().__init__()
+        self.stem = nn.Sequential(nn.Conv2d(3, 16, 3, 1, 1, bias=False), nn.BatchNorm2d(16))
+        blocks, cin = [], 16
+        for i, (w, d) in enumerate(zip(widths, depth)):
+            for j in range(d):
+                blocks.append(ShakeBlock(cin, w, 2 if (i > 0 and j == 0) else 1))
+                cin = w
+        self.blocks = nn.Sequential(*blocks)
+        self.head = nn.Linear(cin, num_classes)
+        self.scale = 1.0
+        self.ssl = ssl
+        if ssl == "sla":
+            self.joint_head = nn.Linear(cin, num_classes * 4)
+        elif ssl == "rot":
+            self.rot_head = nn.Linear(cin, 4)
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight, mode="fan_out", nonlinearity="relu")
+
+    def features(self, x):
+        x = F.relu(self.blocks(self.stem(x)))
         return F.adaptive_avg_pool2d(x, 1).flatten(1)
 
     def forward(self, x):

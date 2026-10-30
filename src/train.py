@@ -20,7 +20,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from models import AirResNet, PreActResNet, count_params, init_whitening
+from models import AirResNet, PreActResNet, ShakeResNet, count_params, init_whitening
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 MEAN = torch.tensor((0.4914, 0.4822, 0.4465)).view(1, 3, 1, 1)
@@ -46,9 +46,10 @@ def parse_args():
     p.add_argument("--whiten-bias-epochs", type=int, default=3)
     p.add_argument("--trivialaugment", action="store_true")
     p.add_argument("--sam-rho", type=float, default=0.0, help="SAM neighborhood radius; 0 = plain SGD")
-    p.add_argument("--arch", choices=["air", "preact"], default="air",
+    p.add_argument("--arch", choices=["air", "preact", "shake"], default="air",
                    help="air: airbench-style AirResNet with its decoupled SGD recipe; preact: standard "
-                        "pre-activation ResNet trained with plain SGD + cosine schedule")
+                        "pre-activation ResNet (shake: Shake-Shake ResNet) trained with plain SGD + cosine schedule")
+    p.add_argument("--blur", action="store_true", help="preact: anti-aliased (BlurPool) downsampling")
     p.add_argument("--sgd-lr", type=float, default=0.1, help="preact: peak lr per 128 examples")
     p.add_argument("--sgd-wd", type=float, default=5e-4, help="preact: weight decay")
     p.add_argument("--sgd-warmup-epochs", type=float, default=5)
@@ -242,14 +243,17 @@ def predict(net, images, tta=2, bs=2000, fn=None):
     return torch.cat(out).float()
 
 
-def build_net(arch, widths, depth, ssl):
-    cls = PreActResNet if arch == "preact" else AirResNet
+def build_net(arch, widths, depth, ssl, blur=False):
+    if arch == "preact":
+        return PreActResNet(tuple(widths), tuple(depth), ssl=ssl, blur=blur)
+    cls = ShakeResNet if arch == "shake" else AirResNet
     return cls(tuple(widths), tuple(depth), ssl=ssl)
 
 
 def load_run(run_dir, device):
     cfg = json.load(open(os.path.join(run_dir, "config.json")))
-    net = build_net(cfg.get("arch", "air"), cfg["widths"], cfg["depth"], cfg.get("ssl", "none")).to(device)
+    net = build_net(cfg.get("arch", "air"), cfg["widths"], cfg["depth"], cfg.get("ssl", "none"),
+                    cfg.get("blur", False)).to(device)
     net.load_state_dict(torch.load(os.path.join(run_dir, "model.pt"), map_location=device))
     return net.eval()
 
@@ -277,7 +281,7 @@ def main():
         x_va, y_va = x_all[va_t], y_all[va_t]
 
     assert not (args.ssl != "none" and args.teachers), "SSL heads and teacher distillation are not combined"
-    net = build_net(args.arch, args.widths, args.depth, args.ssl).to(device)
+    net = build_net(args.arch, args.widths, args.depth, args.ssl, args.blur).to(device)
     n_params = count_params(net)
     n_total = count_params(net, trainable_only=False)
     print(f"params: {n_params:,} trainable, {n_total:,} total", flush=True)
@@ -347,7 +351,7 @@ def main():
                         t.eval()
                     t_logits = torch.stack([t(x) for t in teachers]).mean(0)
 
-            norm_by = len(x) if args.arch == "preact" else 1
+            norm_by = 1 if args.arch == "air" else len(x)
 
             def compute_loss():
                 if args.ssl == "sla":
