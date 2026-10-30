@@ -4,6 +4,9 @@
 `AirResNet` follows the airbench96 design (Jordan, 2024): a frozen 2x2 patch-whitening stem,
 then three stages of conv -> maxpool -> BN -> GELU followed by residual pairs of 3x3 convs.
 `depth` sets how many residual pairs each stage gets.
+
+The AirResNet parts (BatchNorm, Conv, init_whitening) are adapted from cifar10-airbench by Keller Jordan,
+MIT License, https://github.com/KellerJordan/cifar10-airbench. See THIRD_PARTY_NOTICES.md.
 """
 import torch
 from torch import nn

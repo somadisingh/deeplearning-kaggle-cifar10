@@ -5,6 +5,9 @@ hyperparameters, label smoothing, flip + 4px translate + cutout, Lookahead-style
 flip/translate test-time augmentation. Optional knowledge distillation from teacher checkpoints
 that were themselves trained from scratch by this script.
 
+The data pipeline (batch_crop, batch_cutout), the decoupled SGD hyperparameters, the Lookahead EMA and the
+flip / translate TTA are adapted from cifar10-airbench by Keller Jordan (MIT License); see THIRD_PARTY_NOTICES.md.
+
 Only `x_train`/`y_train` are ever used for training or model selection. The test images are
 only passed through the finished model to write predictions.
 """
