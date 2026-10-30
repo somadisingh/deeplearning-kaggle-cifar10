@@ -132,3 +132,11 @@ Next, in order:
 4. Anti-aliasing (`--blur`) and 400-epoch / wider variants, one run each.
 5. Retrain whatever wins on all 50k for the final submission.
 Rule: stack only changes that win by >= 0.3 on the holdout across 2 seeds.
+
+## SAM + SLA on the PreActResNet (2026-10-30, A100, resumed across two sessions)
+
+`preact_sla_ta_e200_sam05`: PreActResNet + SLA+SD + TrivialAugment + SAM (rho 0.05), 200 epochs, ~50 s/epoch
+(2x the SLA run), 2.8 h. Holdout (TTA): head 97.56%, rotation aggregate 97.36%, head + aggregate 97.58%.
+Same recipe without SAM: 97.56 / 97.42 / 97.54. **No gain from SAM on top of SLA**, so it is not worth 2x compute;
+SLA already captures what SAM added to the plain ResNet (+0.36). CSV: `submission_preact_sla_ta_e200_sam05.csv`
+(45k-trained; agrees with the final `submission.csv` on 96.0% of test images).
