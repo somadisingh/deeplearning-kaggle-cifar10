@@ -158,3 +158,9 @@ averages the members' running statistics and member 0 is saved too. At about the
   next session re-run `scripts/hpc_next.sh` (finished runs are skipped) to resume it (~1.2 h left).
   If its holdout beats 97.56%, try Shake-Shake + SLA and retrain the winner on all 50k.
 - Optional: PAPA + SLA with the fixed soup (BN stats averaged), seeds of the final recipe.
+
+## Shake-Shake-26 2x40d (2026-10-30, A100, resumed across two sessions)
+
+`shake2x40d_ta_e600`: 4.56M params, Shake-Shake-Image blocks, batch 256, lr 0.2 per 128, wd 1e-4, label smoothing 0.1,
+TrivialAugment + cutout, 600 epochs cosine, ~11 s/epoch, 1.8 h total. Holdout (TTA): **97.16%**; plain PreActResNet
+200 epochs 96.82%, PreActResNet + SLA 97.56%. Below the ~97.4% bar for trying Shake-Shake + SLA (~7 h), so not pursued.
