@@ -188,3 +188,16 @@ epochs (+0.30, one seed): just at the bar, but below PreActResNet + SLA at 200 e
 83 min. Holdout (TTA): head **97.78%**, rotation aggregate 97.54% (seed 0: 97.56% / 97.42%). Seed-to-seed spread
 about 0.2 points. CSV `submissions/submission_preact_sla_ta_e200_s1.csv` (45k-trained; agrees with the final
 50k `submission.csv` on 97.1% of test images). The 50k model stays the final submission.
+
+## Queued for the next HPC session (2026-10-30)
+
+From a second pass over the lecture 8 slides (self-supervised learning). Run with `scripts/hpc_next.sh`
+(resumable; finished runs are skipped):
+
+1. `preact_sla_ta_e300`: final recipe for 300 epochs (training-schedule lesson from the MAE ablation). ~2.1 h.
+2. `preact_sla2v_ta_e200`: two augmented views per image with a Jensen-Shannon consistency loss (weight 12) on top
+   of SLA (supervised form of SimCLR's positive pairs). Batch 256, 2x cost per epoch. ~2.8 h.
+
+Keep a run only if it beats the final recipe (97.56% / 97.78% over two seeds) by about 0.3 points; then retrain it on
+all 50k images (~2.3 h for SLA-300, ~3.1 h for two-view). Code for rotation x colour-permutation labels
+(`--ssl sla_cp`) also exists but is not queued.
