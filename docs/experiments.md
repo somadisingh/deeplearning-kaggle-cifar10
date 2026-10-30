@@ -149,3 +149,12 @@ independently trained PreActResNet (+0.37), but the final soup scored only 96.20
 recomputed on clean images (96.94% when recomputed on flip/crop/cutout images). Fixed in `train_papa.py`: the soup now
 averages the members' running statistics and member 0 is saved too. At about the same compute, PreActResNet + SLA
 (97.56%) is still better, so PAPA without SLA is not a winner; no CSV.
+
+## Resume list (after HPC session 3, 2026-10-30)
+
+- Final submission unchanged: `submission.csv` (PreActResNet + SLA, all 50k, Kaggle 0.909).
+- SAM + SLA: no gain; PAPA (no SLA): members 97.2%, below SLA's 97.56%. Neither is stacked.
+- Shake-Shake-26 2x40d (`shake2x40d_ta_e600`, 600 epochs, ~11 s/epoch) is mid-run with checkpoints on /scratch;
+  next session re-run `scripts/hpc_next.sh` (finished runs are skipped) to resume it (~1.2 h left).
+  If its holdout beats 97.56%, try Shake-Shake + SLA and retrain the winner on all 50k.
+- Optional: PAPA + SLA with the fixed soup (BN stats averaged), seeds of the final recipe.
