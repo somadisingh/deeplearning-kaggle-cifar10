@@ -169,3 +169,9 @@ TrivialAugment + cutout, 600 epochs cosine, ~11 s/epoch, 1.8 h total. Holdout (T
 
 `preact_blur_ta_e200`: BlurPool ([1,2,1]^2) before every stride-2 conv and on strided skips, 0 extra params, 200 epochs,
 25 min. Holdout (TTA): **97.00%** vs 96.82% without (+0.18, one seed): under the +0.3 bar, not stacked.
+
+## PreActResNet for 400 epochs (2026-10-30, A100)
+
+`preact_ta_e400`: same recipe as `preact_ta_e200`, 400 epochs, 44 min. Holdout (TTA): **97.12%** vs 96.82% at 200
+epochs (+0.30, one seed): just at the bar, but below PreActResNet + SLA at 200 epochs (97.56%). A 400-epoch SLA run
+(~3 h) is the only way it could matter.
