@@ -116,7 +116,7 @@ The survey ranked ten steps. We tested all ten. The table gives the result of ea
 | 3 | PreActResNet + SLA, 200 epochs | +0.3 to +0.8 | Holdout 97.56% (+0.74) | Kept (best) |
 | 4 | Shake-Shake-26 2x40d, long schedule | +0.6 to +1.2 | Holdout 97.16% (600 epochs) | Not kept |
 | 5 | SAM on the PreActResNet | +0.3 to +0.6 | +0.36 alone; +0.04 with SLA | Not kept |
-| 6 | Distillation into one network | +0.3 to +0.8 | See `docs/LOGBOOK.md` | – |
+| 6 | Distillation from 2 SLA teachers into one network | +0.3 to +0.8 | Holdout 97.18% (+0.36 over the plain ResNet), below 97.56% | Not kept |
 | 7 | PAPA with 4 copies | +0.5 to +1.0 | 97.2% per copy, below 97.56% | Not kept |
 | 8 | 400 epochs | +0.2 to +0.6 | Holdout 97.12% (+0.30) | Not kept |
 | 9 | Anti-aliasing | 0 to +0.5 | Holdout 97.00% (+0.18) | Not kept |

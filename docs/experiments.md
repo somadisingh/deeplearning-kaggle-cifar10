@@ -175,3 +175,9 @@ TrivialAugment + cutout, 600 epochs cosine, ~11 s/epoch, 1.8 h total. Holdout (T
 `preact_ta_e400`: same recipe as `preact_ta_e200`, 400 epochs, 44 min. Holdout (TTA): **97.12%** vs 96.82% at 200
 epochs (+0.30, one seed): just at the bar, but below PreActResNet + SLA at 200 epochs (97.56%). A 400-epoch SLA run
 (~3 h) is the only way it could matter.
+
+## Distillation (2026-10-30, A100)
+
+`preact_kd_sla2_ta_e200`: PreActResNet student (no SLA), teachers `preact_sla_ta_e200` and `preact_sla_ta_e200_sam05`
+(same 45k split), same augmented view for teachers and student, loss 0.5 CE (label smoothing 0.1) + 0.5 KL at T = 4,
+200 epochs, 33 min. Holdout (TTA): **97.18%** (+0.36 over 96.82%), below the teachers' recipe (97.56%). Not kept.

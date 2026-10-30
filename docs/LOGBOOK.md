@@ -176,7 +176,7 @@ We tested each method against the correct baseline. No method beat the final rec
 | `shake2x40d_ta_e600` | Shake-Shake-26 2x40d, 600 epochs (Gastaldi, 2017) | 97.16% | 97.56% | below |
 | `preact_blur_ta_e200` | Anti-aliased downsampling (Zhang, 2019) | 97.00% | 96.82% | +0.18, not kept |
 | `preact_ta_e400` | 400 epochs | 97.12% | 96.82% | +0.30, below 97.56% |
-| `preact_kd_sla2_ta_e200` | Distillation from 2 SLA teachers (Hinton et al., 2015) | see section 7 | 97.56% | see section 7 |
+| `preact_kd_sla2_ta_e200` | Distillation from 2 SLA teachers (Hinton et al., 2015) | 97.18% | 97.56% | below |
 
 Notes:
 
@@ -191,7 +191,8 @@ The student is a PreActResNet without SLA. The teachers are `preact_sla_ta_e200`
 Both teachers trained on the same 45,000 images. Thus, the holdout stays clean.
 The teacher and the student see the same augmented image (Beyer et al., 2022). The loss is 0.5 × cross-entropy + 0.5 × KL divergence at temperature 4.
 
-Result: see `docs/experiments.md` and `results/runs/preact_kd_sla2_ta_e200/config.json`.
+Result: the student got **97.18%** on the holdout. This is +0.36 points more than the same ResNet without distillation (96.82%).
+But it is 0.38 points less than the teachers' recipe (PreActResNet + SLA, 97.56%). Thus, we did not keep it.
 
 ## 8. Kaggle public scores
 
@@ -223,6 +224,6 @@ Result: see `docs/experiments.md` and `results/runs/preact_kd_sla2_ta_e200/confi
 1. Do not select models with the public leaderboard. Use a holdout from the training data.
 2. The architecture family has an effect on accuracy under shift. A fast-training airbench net was 1.4 points worse on Kaggle than a standard ResNet with the same holdout accuracy.
 3. SLA (rotation labels) gave the largest gain for its cost: +0.4 to +0.7 points.
-4. SAM, PAPA, longer schedules and anti-aliasing each gave +0.2 to +0.4 points on the plain ResNet. They did not add to SLA.
+4. SAM, PAPA, distillation, longer schedules and anti-aliasing each gave +0.2 to +0.4 points on the plain ResNet. None of them beat SLA.
 5. Calculate BN statistics on data that is similar to the training data. Clean-image statistics decreased the PAPA model by 1 point.
 6. Make long runs resumable. HPC jobs stop after 3 to 5 hours.
