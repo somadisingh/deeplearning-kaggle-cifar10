@@ -25,3 +25,14 @@ fi
 # 3. Shake-Shake-26 2x40d (4.56M), 600 epochs, resumable across sessions (Gastaldi: lr 0.2 per 128, wd 1e-4).
 run shake2x40d_ta_e600 --arch shake --widths 40 80 160 --depth 4 4 4 --batch-size 256 --sgd-lr 0.2 --sgd-wd 1e-4 \
   --label-smoothing 0.1 --trivialaugment --epochs 600 --eval-every 20 --ckpt-every 10 --resume
+
+# 4. Anti-aliased PreActResNet (BlurPool downsampling, 0 extra params), 200 epochs; compare with preact_ta_e200 (96.82%).
+run preact_blur_ta_e200 --blur --epochs 200 $PA
+
+# 5. PreActResNet for 400 epochs; compare with preact_ta_e200 (96.82%, 200 epochs).
+run preact_ta_e400 --epochs 400 $PA
+
+# 6. Distillation: PreActResNet student taught by the two best SLA teachers (both trained on the same 45k split,
+#    so the holdout stays clean), same augmented view for teacher and student; compare with 97.56%.
+run preact_kd_sla2_ta_e200 --epochs 200 --teachers ../runs/preact_sla_ta_e200 ../runs/preact_sla_ta_e200_sam05 \
+  --kd-alpha 0.5 --kd-temp 4 $PA
