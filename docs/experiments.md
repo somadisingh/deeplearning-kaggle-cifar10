@@ -112,3 +112,10 @@ Next steps, in order:
 images (`--val 0`), 92 min. Predictions (head + rotation aggregate) are `submission.csv`
 (= `submission_preact_sla_ta_e200_full.csv`); they agree with the 45k-trained version on 96.2% of test images.
 **Kaggle public: 0.909** (up from 0.884 for the 45k PreActResNet without SLA).
+
+## SAM on the PreActResNet (2026-10-30, A100)
+
+`preact_ta_e200_sam05`: same recipe as `preact_ta_e200` (96.82%) plus SAM, rho 0.05, ascent on the full batch
+of 512; 200 epochs, 13.6 s/epoch (2x SGD), 44 min. Holdout (TTA): **97.18%** (+0.36), one seed.
+Meets the +0.3 bar for one seed; a second seed is needed before stacking SAM on SLA (~3 h per 200-epoch run).
+CSV: `submission_preact_ta_e200_sam05.csv` (45k-trained, no SLA).
