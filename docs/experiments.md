@@ -181,3 +181,10 @@ epochs (+0.30, one seed): just at the bar, but below PreActResNet + SLA at 200 e
 `preact_kd_sla2_ta_e200`: PreActResNet student (no SLA), teachers `preact_sla_ta_e200` and `preact_sla_ta_e200_sam05`
 (same 45k split), same augmented view for teachers and student, loss 0.5 CE (label smoothing 0.1) + 0.5 KL at T = 4,
 200 epochs, 33 min. Holdout (TTA): **97.18%** (+0.36 over 96.82%), below the teachers' recipe (97.56%). Not kept.
+
+## Seed check of the final recipe (2026-10-30, A100)
+
+`preact_sla_ta_e200_s1`: PreActResNet + SLA+SD + TrivialAugment, 200 epochs, seed 1 (its own 5k holdout split),
+83 min. Holdout (TTA): head **97.78%**, rotation aggregate 97.54% (seed 0: 97.56% / 97.42%). Seed-to-seed spread
+about 0.2 points. CSV `submissions/submission_preact_sla_ta_e200_s1.csv` (45k-trained; agrees with the final
+50k `submission.csv` on 97.1% of test images). The 50k model stays the final submission.

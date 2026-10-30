@@ -161,6 +161,8 @@ The holdout gain was 0.4 points. The Kaggle gain was 2.1 points. The architectur
 | `preact_sla_ta_e200_full` | 50,000 | – | **0.909** |
 
 SLA added 0.74 points on the PreActResNet. This is our best recipe.
+A second seed (`preact_sla_ta_e200_s1`, seed 1, its own holdout split) got **97.78%** (head) and 97.54% (vote).
+Thus, the recipe gives 97.56% to 97.78% on the holdout. The difference between seeds is about 0.2 points.
 We trained it again on all 50,000 images (92 minutes on the A100). This is the final `submission.csv`.
 The prediction is the mean of the softmax of the normal head and the softmax of the 4-rotation vote.
 
