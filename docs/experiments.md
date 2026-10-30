@@ -140,3 +140,12 @@ Rule: stack only changes that win by >= 0.3 on the holdout across 2 seeds.
 Same recipe without SAM: 97.56 / 97.42 / 97.54. **No gain from SAM on top of SLA**, so it is not worth 2x compute;
 SLA already captures what SAM added to the plain ResNet (+0.36). CSV: `submission_preact_sla_ta_e200_sam05.csv`
 (45k-trained; agrees with the final `submission.csv` on 96.0% of test images).
+
+## PAPA (2026-10-30, A100)
+
+`papa4_preact_ta_e200`: 4 PreActResNets (no SLA), TrivialAugment, 200 epochs, pulled toward their mean every step
+(alpha 0.99, scaled by lr), 103 min. Each member ends at **97.18-97.20%** on the holdout (TTA), vs 96.82% for one
+independently trained PreActResNet (+0.37), but the final soup scored only 96.20% because its BN statistics were
+recomputed on clean images (96.94% when recomputed on flip/crop/cutout images). Fixed in `train_papa.py`: the soup now
+averages the members' running statistics and member 0 is saved too. At about the same compute, PreActResNet + SLA
+(97.56%) is still better, so PAPA without SLA is not a winner; no CSV.

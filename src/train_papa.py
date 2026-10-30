@@ -8,7 +8,8 @@ draws and label smoothing (drawn from {0, 0.05, 0.1}, as in the paper's random r
 
 with alpha_papa = 0.99 and f = 10 at batch 64 (the paper's from-scratch defaults); at larger batches f is scaled
 down so each copy gets the same number of pulls per epoch (f = 1 at batch 512). At the end the copies are averaged into
-one network (the "average soup"); its BatchNorm statistics are recomputed on un-augmented training images.
+one network (the "average soup"), averaging BatchNorm running statistics too (the copies end up in one basin).
+Recomputing BN statistics on clean training images instead cost ~1 point on the holdout (96.20% vs 97.2% members).
 Only that single averaged network (<= 5M params) produces predictions.
 
 Deviations from the paper: no Mixup / CutMix / Random Erasing draws (our recipe already uses TrivialAugment +
@@ -56,6 +57,7 @@ def parse_args():
     p.add_argument("--eval-every", type=int, default=10)
     p.add_argument("--ckpt-every", type=int, default=10)
     p.add_argument("--resume", action="store_true")
+    p.add_argument("--recompute-bn", action="store_true", help="recompute soup BN stats on clean train images")
     return p.parse_args()
 
 
@@ -189,7 +191,8 @@ def main():
         rec = dict(epoch=epoch + 1, loss=loss.item(), time=round(time.time() - t0, 1))
         if len(va_idx) and ((epoch + 1) % args.eval_every == 0 or epoch + 1 == args.epochs):
             average_into(mean_net, nets)
-            recompute_bn(mean_net, x_tr[:10000])
+            if args.recompute_bn:
+                recompute_bn(mean_net, x_tr[:10000])
             rec["val_acc_soup"] = (predict(mean_net, x_va, tta=0).argmax(1) == y_va).float().mean().item()
             rec["val_acc_member0"] = (predict(nets[0], x_va, tta=0).argmax(1) == y_va).float().mean().item()
         history.append(rec)
@@ -204,8 +207,10 @@ def main():
     if source is not None:
         source.pool.shutdown(cancel_futures=True)
     average_into(mean_net, nets)
-    recompute_bn(mean_net, x_tr[:10000])
+    if args.recompute_bn:
+        recompute_bn(mean_net, x_tr[:10000])
     net = mean_net
+    torch.save(nets[0].state_dict(), os.path.join(out_dir, "member0.pt"))
     result = dict(vars(args), params=count_params(net), params_total=n_total, smoothing=smoothing,
                   train_time=time.time() - t0)
     if len(va_idx):
