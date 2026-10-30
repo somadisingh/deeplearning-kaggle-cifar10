@@ -111,3 +111,4 @@ Next steps, in order:
 `preact_sla_ta_e200_full`: PreActResNet + SLA+SD + TrivialAugment, 200 epochs, batch 512, all 50,000 training
 images (`--val 0`), 92 min. Predictions (head + rotation aggregate) are `submission.csv`
 (= `submission_preact_sla_ta_e200_full.csv`); they agree with the 45k-trained version on 96.2% of test images.
+**Kaggle public: 0.909** (up from 0.884 for the 45k PreActResNet without SLA).
