@@ -124,8 +124,8 @@ CSV: `submission_preact_ta_e200_sam05.csv` (45k-trained, no SLA).
 
 Done: all-50k final retrain (Kaggle 0.909, `submission.csv`); SAM one seed (+0.36).
 Next, in order:
-1. SAM seed 2 on PreActResNet (~45 min); if it holds, SAM + SLA on PreActResNet, 200 epochs (~3 h, use `--resume`
-   across two jobs), compare with 97.56%.
+1. SAM + SLA on PreActResNet (user approved stacking): `scripts/hpc_next.sh` (resumable; started at the end of
+   session 2, ~20 epochs done). Re-run the script next session; compare with 97.56%; if it wins, retrain on all 50k.
 2. PAPA (`src/train_papa.py`, p=4, PreActResNet, no SLA first, ~90 min); compare at equal compute with 97.56%.
 3. Shake-Shake-26 2x40d pilot (`--arch shake --widths 40 80 160 --depth 4 4 4 --sgd-lr 0.2 --sgd-wd 1e-4
    --batch-size 128`): measure epoch time, then 600 epochs with `--resume` across jobs.
