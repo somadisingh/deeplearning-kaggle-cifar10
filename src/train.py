@@ -56,8 +56,11 @@ def parse_args():
     p.add_argument("--sgd-lr", type=float, default=0.1, help="preact: peak lr per 128 examples")
     p.add_argument("--sgd-wd", type=float, default=5e-4, help="preact: weight decay")
     p.add_argument("--sgd-warmup-epochs", type=float, default=5)
-    p.add_argument("--ssl", choices=["none", "sla", "rot"], default="none",
+    p.add_argument("--ssl", choices=["none", "sla", "sla_cp", "rot"], default="none",
                    help="rotation self-supervision: SLA+SD joint labels, or an auxiliary rotation head")
+    p.add_argument("--two-view", action="store_true",
+                   help="two augmented views per image + Jensen-Shannon consistency between their predictions")
+    p.add_argument("--cons-weight", type=float, default=12.0, help="weight of the two-view JS loss (AugMix uses 12)")
     p.add_argument("--sla-beta", type=float, default=1.0, help="weight of the plain-head CE in SLA+SD")
     p.add_argument("--ckpt-every", type=int, default=10, help="save a resumable checkpoint every N epochs")
     p.add_argument("--resume", action="store_true", help="continue from runs/<name>/ckpt.pt if it exists")
@@ -165,7 +168,7 @@ class Loader:
     flip alternates each epoch (airbench's 'alternating flip'). With a `source` (TrivialAugment),
     fresh base images arrive every epoch and flips are random per image."""
 
-    def __init__(self, images, labels, batch_size, translate, cutout, source=None):
+    def __init__(self, images, labels, batch_size, translate, cutout, source=None, two_view=False):
         n = len(images)
         flip = (torch.rand(n, device=images.device) < 0.5).view(-1, 1, 1, 1)
         base = torch.where(flip, images.flip(-1), images)
@@ -173,6 +176,7 @@ class Loader:
         self.labels, self.bs, self.cutout, self.translate = labels, batch_size, cutout, translate
         self.size = images.shape[-1]
         self.source = source
+        self.two_view = two_view
         self.epoch = 0
 
     def __len__(self):
@@ -189,11 +193,22 @@ class Loader:
             x = x.flip(-1)
         if self.cutout:
             x = batch_cutout(x, self.cutout)
+        x2 = None
+        if self.two_view:
+            # Second view of the same images: its own crop, flip and cutout (the TrivialAugment op is shared).
+            x2 = batch_crop(self.padded, self.size) if self.translate else self.padded
+            flip = (torch.rand(len(x2), device=x2.device) < 0.5).view(-1, 1, 1, 1)
+            x2 = torch.where(flip, x2.flip(-1), x2)
+            if self.cutout:
+                x2 = batch_cutout(x2, self.cutout)
         self.epoch += 1
         idx = torch.randperm(len(x), device=x.device)
         for i in range(len(self)):
             j = idx[i * self.bs : (i + 1) * self.bs]
-            yield x[j], self.labels[j]
+            if x2 is None:
+                yield x[j], self.labels[j]
+            else:
+                yield torch.cat([x[j], x2[j]]), self.labels[j]
 
 
 # ---------------------------------------------------------------- model helpers
@@ -216,12 +231,24 @@ def rotate4(x):
     return torch.stack([torch.rot90(x, k, (2, 3)) for k in range(4)], 1).flatten(0, 1)
 
 
+PERMS = [(0, 1, 2), (0, 2, 1), (1, 0, 2), (1, 2, 0), (2, 0, 1), (2, 1, 0)]  # RGB channel orders
+
+
+def colour_permute(x, perm_idx):
+    """Apply channel permutation PERMS[perm_idx[i]] to image i."""
+    order = torch.tensor(PERMS, device=x.device)[perm_idx]  # (n, 3)
+    return torch.gather(x, 1, order.view(-1, 3, 1, 1).expand_as(x))
+
+
 def sla_aggregate(net, x):
     """SLA+AG (Lee et al., 2020, eq. 4): for the copy rotated by k, keep the joint logits of labels
-    (i, k), then average those logits over the 4 rotations."""
+    (i, k), then average those logits over the 4 rotations. With rotation x colour-permutation labels
+    (24 transformations), the copies keep the original colour order (permutation 0)."""
     joint = net.joint_head(net.features(rotate4(x))) * net.scale
-    joint = joint.view(len(x), 4, -1)
-    return torch.stack([joint[:, k, k::4] for k in range(4)]).mean(0)
+    m = joint.shape[1] // 10
+    joint = joint.view(len(x), 4, 10, m)
+    step = m // 4
+    return torch.stack([joint[:, k, :, k * step] for k in range(4)]).mean(0)
 
 
 @torch.no_grad()
@@ -304,7 +331,8 @@ def main():
     if args.trivialaugment:
         raw = np.load(os.path.join(ROOT, "data", "cifar10_cache.npz"))["x_train"][tr_idx]
         source = TrivialAugmentSource(torch.from_numpy(raw).permute(0, 3, 1, 2).contiguous(), device, args.seed)
-    loader = Loader(x_tr, y_tr, args.batch_size, args.translate, args.cutout, source)
+    assert not args.two_view or args.ssl in ("sla", "sla_cp"), "--two-view is implemented on top of SLA"
+    loader = Loader(x_tr, y_tr, args.batch_size, args.translate, args.cutout, source, two_view=args.two_view)
     total_steps = ceil(len(loader) * args.epochs)
 
     if args.arch == "air":
@@ -368,24 +396,46 @@ def main():
                         t.eval()
                     t_logits = torch.stack([t(x) for t in teachers]).mean(0)
 
-            norm_by = 1 if args.arch == "air" else len(x)
+            norm_by = 1 if args.arch == "air" else len(y)
 
             def compute_loss():
-                if args.ssl == "sla":
+                if args.ssl in ("sla", "sla_cp"):
                     # SLA+SD (Lee et al., 2020, eqs. 3 and 5; hankook/SLA create_sla_sd_trainer):
-                    # joint (class, rotation) cross-entropy averaged over the 4 rotations, plus
+                    # joint (class, transformation) cross-entropy averaged over the 4 rotated copies, plus
                     # self-distillation of the aggregated joint prediction (held constant) into the
                     # plain head on the unrotated image, plus beta * its usual cross-entropy.
-                    n = len(x)
-                    z = net.features(rotate4(x))
+                    # sla_cp: the transformation is rotation x RGB permutation (24); each image gets one
+                    # random permutation, shared by its 4 rotated copies, so the cost stays at 4x.
+                    xs, ys = x, y
+                    if args.two_view:
+                        ys = torch.cat([y, y])
+                    n = len(xs)
+                    rots = torch.arange(4, device=y.device).repeat(n, 1)  # (n, 4)
+                    xr = rotate4(xs)
+                    m = 4
+                    t = rots
+                    if args.ssl == "sla_cp":
+                        m = 24
+                        perm = torch.randint(0, 6, (n,), device=y.device)
+                        xr = colour_permute(xr, perm.repeat_interleave(4))
+                        t = rots * 6 + perm.view(-1, 1)
+                    z = net.features(xr)
                     joint = net.joint_head(z) * net.scale
-                    joint_y = (y.view(-1, 1) * 4 + torch.arange(4, device=y.device)).flatten()
+                    joint_y = (ys.view(-1, 1) * m + t).flatten()
                     joint_loss = F.cross_entropy(joint, joint_y, reduction="none").view(n, 4).mean(1)
                     single = net.head(z[::4]) * net.scale
-                    j = joint.view(n, 4, -1)
-                    agg = torch.stack([j[:, k, k::4] for k in range(4)]).mean(0).detach()
+                    j = joint.view(n, 4, 10, m)
+                    agg = torch.gather(j, 3, t.view(n, 4, 1, 1).expand(n, 4, 10, 1)).squeeze(3).mean(1).detach()
                     sd = F.kl_div(F.log_softmax(single, 1), F.softmax(agg, 1), reduction="none").sum(1)
-                    return (joint_loss + sd + args.sla_beta * ce(single, y)).sum() / norm_by
+                    per_img = joint_loss + sd + args.sla_beta * ce(single, ys)
+                    if args.two_view:
+                        # Jensen-Shannon consistency between the two views (Hendrycks et al., 2020, AugMix).
+                        h = n // 2
+                        p1, p2 = F.softmax(single[:h], 1), F.softmax(single[h:], 1)
+                        mix = ((p1 + p2) / 2).clamp_min(1e-7).log()
+                        js = 0.5 * (F.kl_div(mix, p1, reduction="none").sum(1) + F.kl_div(mix, p2, reduction="none").sum(1))
+                        return (0.5 * (per_img[:h] + per_img[h:]) + args.cons_weight * js).sum() / norm_by
+                    return per_img.sum() / norm_by
                 if args.ssl == "rot":
                     # Auxiliary rotation prediction (Hendrycks et al., 2019; hendrycks/ss-ood):
                     # classification loss on the unrotated images only, plus lambda times the
@@ -452,12 +502,12 @@ def main():
         result["val_acc_tta"] = (va_logits.argmax(1) == y_va).float().mean().item()
         torch.save(va_logits.cpu(), os.path.join(out_dir, "val_logits.pt"))
         np.save(os.path.join(out_dir, "val_idx.npy"), va_idx)
-        if args.ssl == "sla":
+        if args.ssl in ("sla", "sla_cp"):
             va_agg = predict(net, x_va, tta=2, fn=sla_aggregate)
             result["val_acc_tta_sla_agg"] = (va_agg.argmax(1) == y_va).float().mean().item()
             torch.save(va_agg.cpu(), os.path.join(out_dir, "val_logits_sla_agg.pt"))
     torch.save(predict(net, x_test, tta=2).cpu(), os.path.join(out_dir, "test_logits.pt"))
-    if args.ssl == "sla":
+    if args.ssl in ("sla", "sla_cp"):
         torch.save(predict(net, x_test, tta=2, fn=sla_aggregate).cpu(), os.path.join(out_dir, "test_logits_sla_agg.pt"))
     torch.save(net.state_dict(), os.path.join(out_dir, "model.pt"))
     json.dump(result, open(os.path.join(out_dir, "config.json"), "w"), indent=1)

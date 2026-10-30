@@ -80,8 +80,8 @@ class AirResNet(nn.Module):
         self.head = nn.Linear(cin, num_classes, bias=False)
         self.scale = scale
         self.ssl = ssl
-        if ssl == "sla":
-            self.joint_head = nn.Linear(cin, num_classes * 4, bias=False)
+        if ssl in ("sla", "sla_cp"):
+            self.joint_head = nn.Linear(cin, num_classes * (24 if ssl == "sla_cp" else 4), bias=False)
         elif ssl == "rot":
             self.rot_head = nn.Linear(cin, 4, bias=False)
 
@@ -148,8 +148,8 @@ class PreActResNet(nn.Module):
         self.head = nn.Linear(cin, num_classes)
         self.scale = 1.0
         self.ssl = ssl
-        if ssl == "sla":
-            self.joint_head = nn.Linear(cin, num_classes * 4)
+        if ssl in ("sla", "sla_cp"):
+            self.joint_head = nn.Linear(cin, num_classes * (24 if ssl == "sla_cp" else 4))
         elif ssl == "rot":
             self.rot_head = nn.Linear(cin, 4)
         for m in self.modules():
@@ -256,8 +256,8 @@ class ShakeResNet(nn.Module):
         self.head = nn.Linear(cin, num_classes)
         self.scale = 1.0
         self.ssl = ssl
-        if ssl == "sla":
-            self.joint_head = nn.Linear(cin, num_classes * 4)
+        if ssl in ("sla", "sla_cp"):
+            self.joint_head = nn.Linear(cin, num_classes * (24 if ssl == "sla_cp" else 4))
         elif ssl == "rot":
             self.rot_head = nn.Linear(cin, 4)
         for m in self.modules():

@@ -36,3 +36,12 @@ run preact_ta_e400 --epochs 400 $PA
 #    so the holdout stays clean), same augmented view for teacher and student; compare with 97.56%.
 run preact_kd_sla2_ta_e200 --epochs 200 --teachers ../runs/preact_sla_ta_e200 ../runs/preact_sla_ta_e200_sam05 \
   --kd-alpha 0.5 --kd-temp 4 $PA
+
+# 7. Final recipe (PreActResNet + SLA) for 300 epochs instead of 200; compare with 97.56% (seed 0) / 97.78% (seed 1).
+#    ~2.1 h on the 45k split.
+run preact_sla_ta_e300 --ssl sla --epochs 300 $PA
+
+# 8. Two augmented views per image + Jensen-Shannon consistency on top of SLA (supervised form of SimCLR's
+#    positive pairs; JS loss as in AugMix). 2x the work per epoch, so batch 256 to fit memory. ~2.8 h.
+run preact_sla2v_ta_e200 --ssl sla --two-view --cons-weight 12 --epochs 200 --arch preact --widths 64 128 256 \
+  --depth 4 4 3 --batch-size 256 --label-smoothing 0.1 --trivialaugment --eval-every 10 --ckpt-every 10 --resume
