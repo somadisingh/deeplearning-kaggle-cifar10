@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Exploring Flat Minima for Domain Generalization with Large Learning Rates",
+    "authors": [
+      "Jian Zhang",
+      "Lei Qi",
+      "Yinghuan Shi",
+      "Yang Gao"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Domain Generalization (DG) aims to generalize to arbitrary unseen domains. A promising approach to improve model generalization in DG is the identification of flat minima. One typical method for this task is SWAD, which involves averaging weights along the training trajectory. However, the success of weight averaging depends on the diversity of weights, which is limited when training with a small learning rate. Instead, we observe that leveraging a large learning rate can simultaneously promote weight diversity and facilitate the identification of flat regions in the loss landscape. However, employing a large learning rate suffers from the convergence problem, which cannot be resolved by simply averaging the training weights. To address this issue, we introduce a training strategy called Lookahead which involves the weight interpolation, instead of average, between fast and slow weights. The fast weight explores the weight space with a large learning rate, which is not converged while the slow weight interpolates with it to ensure the convergence. Besides, weight interpolation also helps identify flat minima by implicitly optimizing the local entropy loss that measures flatness. To further prevent overfitting during training, we propose two variants to regularize the training weight with weighted averaged weight or with accumulated history weight. Taking advantage of this new perspective, our methods achieve state-of-the-art performance on both classification and semantic segmentation domain generalization benchmarks. The code is available at https://github.com/koncle/DG-with-Large-LR.",
+    "url": "http://arxiv.org/abs/2309.06337v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "SWAD: Domain Generalization by Seeking Flat Minima",
+    "authors": [
+      "Junbum Cha",
+      "Sanghyuk Chun",
+      "Kyungjae Lee",
+      "Han-Cheol Cho",
+      "Seunghyun Park",
+      "Yunsung Lee",
+      "Sungrae Park"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Domain generalization (DG) methods aim to achieve generalizability to an unseen target domain by using only training data from the source domains. Although a variety of DG methods have been proposed, a recent study shows that under a fair evaluation protocol, called DomainBed, the simple empirical risk minimization (ERM) approach works comparable to or even outperforms previous methods. Unfortunately, simply solving ERM on a complex, non-convex loss function can easily lead to sub-optimal generalizability by seeking sharp minima. In this paper, we theoretically show that finding flat minima results in a smaller domain generalization gap. We also propose a simple yet effective method, named Stochastic Weight Averaging Densely (SWAD), to find flat minima. SWAD finds flatter minima and suffers less from overfitting than does the vanilla SWA by a dense and overfit-aware stochastic weight sampling strategy. SWAD shows state-of-the-art performances on five DG benchmarks, namely PACS, VLCS, OfficeHome, TerraIncognita, and DomainNet, with consistent and large margins of +1.6% averagely on out-of-domain accuracy. We also compare SWAD with conventional generalization methods, such as data augmentation and consistency regularization methods, to verify that the remarkable performance improvements are originated from by seeking flat minima, not from better in-domain generalizability. Last but not least, SWAD is readily adaptable to existing DG methods without modification; the combination of SWAD and an existing DG method further improves DG performances. Source code is available at https://github.com/khanrc/swad.",
+    "url": "http://arxiv.org/abs/2102.08604v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Modality-Balanced Collaborative Distillation for Multi-Modal Domain Generalization",
+    "authors": [
+      "Xiaohan Wang",
+      "Zhangtao Cheng",
+      "Ting Zhong",
+      "Leiting Chen",
+      "Fan Zhou"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Weight Averaging (WA) has emerged as a powerful technique for enhancing generalization by promoting convergence to a flat loss landscape, which correlates with stronger out-of-distribution performance. However, applying WA directly to multi-modal domain generalization (MMDG) is challenging: differences in optimization speed across modalities lead WA to overfit to faster-converging ones in early stages, suppressing the contribution of slower yet complementary modalities, thereby hindering effective modality fusion and skewing the loss surface toward sharper, less generalizable minima. To address this issue, we propose MBCD, a unified collaborative distillation framework that retains WA's flatness-inducing advantages while overcoming its shortcomings in multi-modal contexts. MBCD begins with adaptive modality dropout in the student model to curb early-stage bias toward dominant modalities. A gradient consistency constraint then aligns learning signals between uni-modal branches and the fused representation, encouraging coordinated and smoother optimization. Finally, a WA-based teacher conducts cross-modal distillation by transferring fused knowledge to each uni-modal branch, which strengthens cross-modal interactions and steer convergence toward flatter solutions. Extensive experiments on MMDG benchmarks show that MBCD consistently outperforms existing methods, achieving superior accuracy and robustness across diverse unseen domains.",
+    "url": "http://arxiv.org/abs/2511.20258v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

@@ -1,0 +1,656 @@
+{
+ "1806.00451": {
+  "paperId": "f445493badf53febbaeab340a4fca98d9e4ab7f7",
+  "externalIds": {
+   "MAG": "2806021783",
+   "DBLP": "journals/corr/abs-1806-00451",
+   "ArXiv": "1806.00451",
+   "CorpusId": 44141423
+  },
+  "title": "Do CIFAR-10 Classifiers Generalize to CIFAR-10?",
+  "venue": "arXiv.org",
+  "year": 2018,
+  "citationCount": 486
+ },
+ "2107.04649": {
+  "paperId": "106cc848e51ad0938e73c1b3b2ebb90d4bdea143",
+  "externalIds": {
+   "DBLP": "journals/corr/abs-2107-04649",
+   "ArXiv": "2107.04649",
+   "CorpusId": 235795331
+  },
+  "title": "Accuracy on the Line: on the Strong Correlation Between Out-of-Distribution and In-Distribution Generalization",
+  "venue": "International Conference on Machine Learning",
+  "year": 2021,
+  "citationCount": 357
+ },
+ "2007.00644": {
+  "paperId": "e609165fac8e4923423f754fb82292a614395c92",
+  "externalIds": {
+   "MAG": "3104911444",
+   "ArXiv": "2007.00644",
+   "DBLP": "conf/nips/TaoriDSCRS20",
+   "CorpusId": 220280805
+  },
+  "title": "Measuring Robustness to Natural Distribution Shifts in Image Classification",
+  "venue": "Neural Information Processing Systems",
+  "year": 2020,
+  "citationCount": 742
+ },
+ "2207.04075": {
+  "paperId": "626935a1cb28ced88036ee2551fccc023709e939",
+  "externalIds": {
+   "DBLP": "journals/corr/abs-2207-04075",
+   "ArXiv": "2207.04075",
+   "DOI": "10.48550/arXiv.2207.04075",
+   "CorpusId": 250426113
+  },
+  "title": "Models Out of Line: A Fourier Lens on Distribution Shift Robustness",
+  "venue": "Neural Information Processing Systems",
+  "year": 2022,
+  "citationCount": 2
+ },
+ "2304.01910": {
+  "paperId": "e6f16c099333f922b9d184c02715a164cde29cfc",
+  "externalIds": {
+   "ArXiv": "2304.01910",
+   "DBLP": "conf/iclr/Jordan24",
+   "CorpusId": 257921858
+  },
+  "title": "On the Variance of Neural Network Training with respect to Test Sets and Distributions",
+  "venue": "International Conference on Learning Representations",
+  "year": 2023,
+  "citationCount": 24
+ },
+ "2404.00498": {
+  "paperId": "420eeb5e4c2241e5f1c9680aff708d6e002c336f",
+  "externalIds": {
+   "ArXiv": "2404.00498",
+   "DBLP": "journals/corr/abs-2404-00498",
+   "DOI": "10.48550/arXiv.2404.00498",
+   "CorpusId": 268819769
+  },
+  "title": "94% on CIFAR-10 in 3.29 Seconds on a Single GPU",
+  "venue": "arXiv.org",
+  "year": 2024,
+  "citationCount": 24
+ },
+ "2005.09619": {
+  "paperId": "96351ffc9bcb9e579b93937b28e3cf3827a00184",
+  "externalIds": {
+   "MAG": "3026767020",
+   "DBLP": "journals/corr/abs-2005-09619",
+   "ArXiv": "2005.09619",
+   "CorpusId": 218684960
+  },
+  "title": "Identifying Statistical Bias in Dataset Replication",
+  "venue": "International Conference on Machine Learning",
+  "year": 2020,
+  "citationCount": 56
+ },
+ "1904.11486": {
+  "paperId": "8c92054c26fb4c6dd7435bc99fbb8af3323eae1b",
+  "externalIds": {
+   "MAG": "2913314773",
+   "DBLP": "conf/icml/Zhang19",
+   "ArXiv": "1904.11486",
+   "CorpusId": 53416878
+  },
+  "title": "Making Convolutional Networks Shift-Invariant Again",
+  "venue": "International Conference on Machine Learning",
+  "year": 2019,
+  "citationCount": 1018
+ },
+ "2108.03489": {
+  "paperId": "15d7105b4e334468a4eddb14f681583cbc8a5dd0",
+  "externalIds": {
+   "DBLP": "journals/corr/abs-2108-03489",
+   "ArXiv": "2108.03489",
+   "DOI": "10.1109/ICCV48922.2021.01036",
+   "CorpusId": 236957212
+  },
+  "title": "Impact of Aliasing on Generalization in Deep Convolutional Networks",
+  "venue": "IEEE International Conference on Computer Vision",
+  "year": 2021,
+  "citationCount": 41
+ },
+ "2011.14214": {
+  "paperId": "d2a3103f976a29b5098b192ffaa97888731fbfd3",
+  "externalIds": {
+   "ArXiv": "2011.14214",
+   "DBLP": "journals/corr/abs-2011-14214",
+   "MAG": "3110410353",
+   "DOI": "10.1109/CVPR46437.2021.00377",
+   "CorpusId": 227229063
+  },
+  "title": "Truly shift-invariant convolutional neural networks",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2020,
+  "citationCount": 95
+ },
+ "1905.13545": {
+  "paperId": "bceeb52a9d4a4127d6664eea4870e8a60b378eff",
+  "externalIds": {
+   "MAG": "3034175346",
+   "ArXiv": "1905.13545",
+   "DBLP": "journals/corr/abs-1905-13545",
+   "DOI": "10.1109/cvpr42600.2020.00871",
+   "CorpusId": 173188317
+  },
+  "title": "High-Frequency Component Helps Explain the Generalization of Convolutional Neural Networks",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2019,
+  "citationCount": 751
+ },
+ "1906.08988": {
+  "paperId": "934d7bffdba0b560a80a518b99a791a16b3e198c",
+  "externalIds": {
+   "ArXiv": "1906.08988",
+   "MAG": "2971028215",
+   "DBLP": "conf/nips/YinLSCG19",
+   "CorpusId": 195317007
+  },
+  "title": "A Fourier Perspective on Model Robustness in Computer Vision",
+  "venue": "Neural Information Processing Systems",
+  "year": 2019,
+  "citationCount": 686
+ },
+ "2008.07545": {
+  "paperId": "4689be87951544240f64e77f3ee8d7ffc04f25a2",
+  "externalIds": {
+   "ArXiv": "2008.07545",
+   "DBLP": "conf/icml/WadiaDSDS21",
+   "CorpusId": 235825911
+  },
+  "title": "Whitening and Second Order Optimization Both Make Information in the Dataset Unusable During Training, and Can Reduce or Prevent Generalization",
+  "venue": "International Conference on Machine Learning",
+  "year": 2020,
+  "citationCount": 21
+ },
+ "2202.06985": {
+  "paperId": "1029d92f424c2ecd6d6a309f05dde6c0faa313db",
+  "externalIds": {
+   "ArXiv": "2202.06985",
+   "DBLP": "conf/nips/AbeBPZC22",
+   "DOI": "10.52202/068431-2438",
+   "CorpusId": 246863391
+  },
+  "title": "Deep Ensembles Work, But Are They Necessary?",
+  "venue": "Neural Information Processing Systems",
+  "year": 2022,
+  "citationCount": 102
+ },
+ "2007.08483": {
+  "paperId": "e0b8b6bf45f845702a684e078eefcc440cad6c83",
+  "externalIds": {
+   "MAG": "3042806674",
+   "DBLP": "conf/nips/LobachevaCKV20",
+   "ArXiv": "2007.08483",
+   "CorpusId": 220546475
+  },
+  "title": "On Power Laws in Deep Ensembles",
+  "venue": "Neural Information Processing Systems",
+  "year": 2020,
+  "citationCount": 50
+ },
+ "2210.09184": {
+  "paperId": "00961426bef856073e7a57d785883b1b0a2f6050",
+  "externalIds": {
+   "DBLP": "conf/iclr/LaurentLTDMBF23",
+   "ArXiv": "2210.09184",
+   "DOI": "10.48550/arXiv.2210.09184",
+   "CorpusId": 252918484
+  },
+  "title": "Packed-Ensembles for Efficient Uncertainty Estimation",
+  "venue": "International Conference on Learning Representations",
+  "year": 2022,
+  "citationCount": 66
+ },
+ "2010.06610": {
+  "paperId": "4ea5678069a6c4213f53972872a211d780f9f42b",
+  "externalIds": {
+   "DBLP": "conf/iclr/HavasiJFLSLDT21",
+   "ArXiv": "2010.06610",
+   "MAG": "3093141676",
+   "CorpusId": 222341528
+  },
+  "title": "Training independent subnetworks for robust prediction",
+  "venue": "International Conference on Learning Representations",
+  "year": 2020,
+  "citationCount": 252
+ },
+ "2002.06715": {
+  "paperId": "b145ea2049648535d6081407ebd315b072248183",
+  "externalIds": {
+   "MAG": "2994797252",
+   "ArXiv": "2002.06715",
+   "DBLP": "conf/iclr/WenTB20",
+   "CorpusId": 211132990
+  },
+  "title": "BatchEnsemble: An Alternative Approach to Efficient Ensemble and Lifelong Learning",
+  "venue": "International Conference on Learning Representations",
+  "year": 2020,
+  "citationCount": 610
+ },
+ "2601.16936": {
+  "paperId": "0a733bbc2839ef1b143a0d6eae42d1b9ce1175eb",
+  "externalIds": {
+   "ArXiv": "2601.16936",
+   "DBLP": "journals/corr/abs-2601-16936",
+   "DOI": "10.48550/arXiv.2601.16936",
+   "CorpusId": 284982376
+  },
+  "title": "Is BatchEnsemble a Single Model? On Calibration and Diversity of Efficient Ensembles",
+  "venue": "arXiv.org",
+  "year": 2026,
+  "citationCount": 4
+ },
+ "2304.03094": {
+  "paperId": "2fb84dcdfa68e31742e20ffff3f32a04ec85d3da",
+  "externalIds": {
+   "DBLP": "journals/corr/abs-2304-03094",
+   "ArXiv": "2304.03094",
+   "DOI": "10.48550/arXiv.2304.03094",
+   "CorpusId": 257984998
+  },
+  "title": "PopulAtion Parameter Averaging (PAPA)",
+  "venue": "Trans. Mach. Learn. Res.",
+  "year": 2023,
+  "citationCount": 27
+ },
+ "2302.14685": {
+  "paperId": "7d80762f652be9d47d38fc3bb55a1a975d2ec595",
+  "externalIds": {
+   "DBLP": "conf/cvpr/JainASDB23",
+   "ArXiv": "2302.14685",
+   "DOI": "10.1109/CVPR52729.2023.01540",
+   "CorpusId": 257233097
+  },
+  "title": "DART: Diversify-Aggregate-Repeat Training Improves Generalization of Neural Networks",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2023,
+  "citationCount": 29
+ },
+ "2306.07684": {
+  "paperId": "e35776788d031de23050caadbb22bcb6e469a526",
+  "externalIds": {
+   "DBLP": "conf/nips/Zhang00ZXS23",
+   "ArXiv": "2306.07684",
+   "DOI": "10.48550/arXiv.2306.07684",
+   "CorpusId": 259144973
+  },
+  "title": "Lookaround Optimizer: k steps around, 1 step average",
+  "venue": "Neural Information Processing Systems",
+  "year": 2023,
+  "citationCount": 12
+ },
+ "2102.08604": {
+  "paperId": "4d87a9f6a0bc9c67088193402813da5cba3f06c1",
+  "externalIds": {
+   "ArXiv": "2102.08604",
+   "DBLP": "conf/nips/ChaCLCPLP21",
+   "CorpusId": 235367622
+  },
+  "title": "SWAD: Domain Generalization by Seeking Flat Minima",
+  "venue": "Neural Information Processing Systems",
+  "year": 2021,
+  "citationCount": 650
+ },
+ "1912.05671": {
+  "paperId": "3f06d02513a2763e472d2b5d5db08e9061081b9e",
+  "externalIds": {
+   "MAG": "3035081900",
+   "DBLP": "conf/icml/FrankleD0C20",
+   "ArXiv": "1912.05671",
+   "CorpusId": 209324341
+  },
+  "title": "Linear Mode Connectivity and the Lottery Ticket Hypothesis",
+  "venue": "International Conference on Machine Learning",
+  "year": 2019,
+  "citationCount": 875
+ },
+ "2203.05482": {
+  "paperId": "54020e5fe48ebb250f27d744e20a63cac2988a84",
+  "externalIds": {
+   "DBLP": "conf/icml/WortsmanIGRLMNF22",
+   "ArXiv": "2203.05482",
+   "DOI": "10.48550/arXiv.2203.05482",
+   "CorpusId": 247362886
+  },
+  "title": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time",
+  "venue": "International Conference on Machine Learning",
+  "year": 2022,
+  "citationCount": 1893
+ },
+ "1908.07086": {
+  "paperId": "d2a2be6ce932a0f1939f31cfff4d64ea3d76723d",
+  "externalIds": {
+   "MAG": "3005295611",
+   "DBLP": "journals/corr/abs-1908-07086",
+   "ArXiv": "1908.07086",
+   "DOI": "10.1109/ICCV.2019.00971",
+   "CorpusId": 201103726
+  },
+  "title": "Human Uncertainty Makes Classification More Robust",
+  "venue": "IEEE International Conference on Computer Vision",
+  "year": 2019,
+  "citationCount": 422
+ },
+ "2306.03536": {
+  "paperId": "7ae382583eee01df36b9e45c32cfb0b0f8108516",
+  "externalIds": {
+   "DBLP": "conf/icml/ZhaoLAL23",
+   "ArXiv": "2306.03536",
+   "DOI": "10.48550/arXiv.2306.03536",
+   "CorpusId": 259089251
+  },
+  "title": "On Pitfalls of Test-Time Adaptation",
+  "venue": "International Conference on Machine Learning",
+  "year": 2023,
+  "citationCount": 91
+ },
+ "2011.11156": {
+  "paperId": "cb960c8c269d1bf629e1238624af4d0bcd062cd8",
+  "externalIds": {
+   "ArXiv": "2011.11156",
+   "DBLP": "conf/iccv/ShanmugamBBG21",
+   "DOI": "10.1109/ICCV48922.2021.00125",
+   "CorpusId": 238634826
+  },
+  "title": "Better Aggregation in Test-Time Augmentation",
+  "venue": "IEEE International Conference on Computer Vision",
+  "year": 2020,
+  "citationCount": 264
+ },
+ "2002.09103": {
+  "paperId": "8286fbad6d4712d950689930720134bc8828963f",
+  "externalIds": {
+   "DBLP": "conf/uai/LyzhovMAMV20",
+   "MAG": "3008960265",
+   "ArXiv": "2002.09103",
+   "CorpusId": 211252848
+  },
+  "title": "Greedy Policy Search: A Simple Baseline for Learnable Test-Time Augmentation",
+  "venue": "Conference on Uncertainty in Artificial Intelligence",
+  "year": 2020,
+  "citationCount": 116
+ },
+ "2410.01083": {
+  "paperId": "fd4c51aea178d7ddac7ebd86e758ea072d194216",
+  "externalIds": {
+   "DBLP": "journals/corr/abs-2410-01083",
+   "ArXiv": "2410.01083",
+   "DOI": "10.48550/arXiv.2410.01083",
+   "CorpusId": 273025938
+  },
+  "title": "Deep Nets with Subsampling Layers Unwittingly Discard Useful Activations at Test-Time",
+  "venue": "European Conference on Computer Vision",
+  "year": 2024,
+  "citationCount": 1
+ },
+ "1705.07485": {
+  "paperId": "3fea412361b2d14cb3c6723968b421c1c8cb38e8",
+  "externalIds": {
+   "ArXiv": "1705.07485",
+   "DBLP": "journals/corr/Gastaldi17",
+   "MAG": "2619184049",
+   "CorpusId": 39320941
+  },
+  "title": "Shake-Shake regularization",
+  "venue": "arXiv.org",
+  "year": 2017,
+  "citationCount": 398
+ },
+ "1802.02375": {
+  "paperId": "b842cd963a5e61c48b467c92aee035485256ee12",
+  "externalIds": {
+   "DBLP": "journals/access/YamadaIAK19",
+   "MAG": "2903105043",
+   "ArXiv": "1802.02375",
+   "DOI": "10.1109/ACCESS.2019.2960566",
+   "CorpusId": 54445621
+  },
+  "title": "Shakedrop Regularization for Deep Residual Learning",
+  "venue": "IEEE Access",
+  "year": 2018,
+  "citationCount": 180
+ },
+ "1610.02915": {
+  "paperId": "5bdf07c9897ca70788fff61dec56178a2bd0c29c",
+  "externalIds": {
+   "MAG": "2531425418",
+   "DBLP": "journals/corr/HanKK16",
+   "ArXiv": "1610.02915",
+   "DOI": "10.1109/CVPR.2017.668",
+   "CorpusId": 5398883
+  },
+  "title": "Deep Pyramidal Residual Networks",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2016,
+  "citationCount": 771
+ },
+ "2206.13089": {
+  "paperId": "3cd9d015ede760a5af1d44a05bf12ab2e00b7fb6",
+  "externalIds": {
+   "ArXiv": "2206.13089",
+   "DBLP": "conf/nips/BaekJRK22",
+   "DOI": "10.48550/arXiv.2206.13089",
+   "CorpusId": 250072215
+  },
+  "title": "Agreement-on-the-Line: Predicting the Performance of Neural Networks under Distribution Shift",
+  "venue": "Neural Information Processing Systems",
+  "year": 2022,
+  "citationCount": 125
+ },
+ "1906.02629": {
+  "paperId": "f8de25118af2abc4c48afb947d6ec298e05ef1e5",
+  "externalIds": {
+   "MAG": "2970206392",
+   "ArXiv": "1906.02629",
+   "DBLP": "journals/corr/abs-1906-02629",
+   "CorpusId": 174802983
+  },
+  "title": "When Does Label Smoothing Help?",
+  "venue": "Neural Information Processing Systems",
+  "year": 2019,
+  "citationCount": 2575
+ },
+ "2106.05945": {
+  "paperId": "5f0f4a3fa3cff7ffcedabbc9ed0dad2dd71f7028",
+  "externalIds": {
+   "ArXiv": "2106.05945",
+   "DBLP": "conf/nips/StantonIKAW21",
+   "CorpusId": 235390933
+  },
+  "title": "Does Knowledge Distillation Really Work?",
+  "venue": "Neural Information Processing Systems",
+  "year": 2021,
+  "citationCount": 334
+ },
+ "2311.01441": {
+  "paperId": "f71ee484b9182cfe00ed260ae0c70014cabf9f59",
+  "externalIds": {
+   "ArXiv": "2311.01441",
+   "DBLP": "journals/corr/abs-2311-01441",
+   "DOI": "10.48550/arXiv.2311.01441",
+   "CorpusId": 264935664
+  },
+  "title": "Distilling Out-of-Distribution Robustness from Vision-Language Foundation Models",
+  "venue": "Neural Information Processing Systems",
+  "year": 2023,
+  "citationCount": 14
+ },
+ "1902.00423": {
+  "paperId": "fc7c428f604d13604a1d62e8a3e1b393c730791a",
+  "externalIds": {
+   "MAG": "3033416539",
+   "PubMedCentral": "8321059",
+   "DBLP": "journals/jimaging/BarzD20",
+   "ArXiv": "1902.00423",
+   "DOI": "10.3390/jimaging6060041",
+   "CorpusId": 59553564,
+   "PubMed": "34460587"
+  },
+  "title": "Do We Train on Test Data? Purging CIFAR of Near-Duplicates",
+  "venue": "Journal of Imaging",
+  "year": 2019,
+  "citationCount": 139
+ },
+ "1903.12261": {
+  "paperId": "49b64383fe36268410c430352637ed23b16820c5",
+  "externalIds": {
+   "MAG": "2949706958",
+   "DBLP": "journals/corr/abs-1807-01697",
+   "ArXiv": "1903.12261",
+   "CorpusId": 56657912
+  },
+  "title": "Benchmarking Neural Network Robustness to Common Corruptions and Perturbations",
+  "venue": "International Conference on Learning Representations",
+  "year": 2019,
+  "citationCount": 4961
+ },
+ "1910.05872": {
+  "paperId": "88d08a5bd00a301455e0f6a454642550775fb427",
+  "externalIds": {
+   "MAG": "2979927723",
+   "DBLP": "journals/corr/abs-1910-05872",
+   "ArXiv": "1910.05872",
+   "CorpusId": 204509054
+  },
+  "title": "Rethinking Data Augmentation: Self-Supervision and Self-Distillation",
+  "venue": "arXiv.org",
+  "year": 2019,
+  "citationCount": 68
+ },
+ "1906.12340": {
+  "paperId": "db787640c9b42416ff8d7015546e667e58267177",
+  "externalIds": {
+   "DBLP": "journals/corr/abs-1906-12340",
+   "ArXiv": "1906.12340",
+   "MAG": "2954540134",
+   "CorpusId": 195750576
+  },
+  "title": "Using Self-Supervised Learning Can Improve Model Robustness and Uncertainty",
+  "venue": "Neural Information Processing Systems",
+  "year": 2019,
+  "citationCount": 1116
+ },
+ "2006.16971": {
+  "paperId": "aa12f44062c06f90526cb128f10e829846145b1f",
+  "externalIds": {
+   "MAG": "3104140305",
+   "DBLP": "conf/nips/SchneiderRE0BB20",
+   "ArXiv": "2006.16971",
+   "CorpusId": 220266097
+  },
+  "title": "Improving robustness against common corruptions by covariate shift adaptation",
+  "venue": "Neural Information Processing Systems",
+  "year": 2020,
+  "citationCount": 708
+ },
+ "2006.10726": {
+  "paperId": "9ce09b03f056253252f3e8c0c65d86a27117a0ac",
+  "externalIds": {
+   "MAG": "3036246552",
+   "DBLP": "journals/corr/abs-2006-10726",
+   "ArXiv": "2006.10726",
+   "CorpusId": 219792825
+  },
+  "title": "Fully Test-time Adaptation by Entropy Minimization",
+  "venue": "arXiv.org",
+  "year": 2020,
+  "citationCount": 71
+ },
+ "1812.01187": {
+  "paperId": "29309743870c825f9645a4803af727402462e513",
+  "externalIds": {
+   "ArXiv": "1812.01187",
+   "DBLP": "conf/cvpr/HeZ0ZXL19",
+   "MAG": "2902332991",
+   "DOI": "10.1109/CVPR.2019.00065",
+   "CorpusId": 54445469
+  },
+  "title": "Bag of Tricks for Image Classification with Convolutional Neural Networks",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2018,
+  "citationCount": 1669
+ },
+ "1706.04599": {
+  "paperId": "d65ce2b8300541414bfe51d03906fca72e93523c",
+  "externalIds": {
+   "MAG": "2950953798",
+   "DBLP": "conf/icml/GuoPSW17",
+   "ArXiv": "1706.04599",
+   "CorpusId": 28671436
+  },
+  "title": "On Calibration of Modern Neural Networks",
+  "venue": "International Conference on Machine Learning",
+  "year": 2017,
+  "citationCount": 10838
+ },
+ "2302.01381": {
+  "paperId": "4c78c6bf6b56e7111d9bbbae591a444c1418d2d0",
+  "externalIds": {
+   "ArXiv": "2302.01381",
+   "DBLP": "conf/nips/ShiCBSHB023",
+   "DOI": "10.48550/arXiv.2302.01381",
+   "CorpusId": 256598334
+  },
+  "title": "Effective Robustness against Natural Distribution Shifts for Models with Different Training Data",
+  "venue": "Neural Information Processing Systems",
+  "year": 2023,
+  "citationCount": 17
+ },
+ "2206.06232": {
+  "paperId": "b698dbfaf9b961502062cbfcbe05d319047d8495",
+  "externalIds": {
+   "DBLP": "journals/corr/abs-2206-06232",
+   "ArXiv": "2206.06232",
+   "DOI": "10.48550/arXiv.2206.06232",
+   "CorpusId": 249625761
+  },
+  "title": "Towards Understanding Sharpness-Aware Minimization",
+  "venue": "International Conference on Machine Learning",
+  "year": 2022,
+  "citationCount": 216
+ },
+ "1805.09501": {
+  "paperId": "f723eb3e7159f07b97464c8d947d15e78612abe4",
+  "externalIds": {
+   "ArXiv": "1805.09501",
+   "MAG": "2804047946",
+   "DBLP": "journals/corr/abs-1805-09501",
+   "CorpusId": 43928340
+  },
+  "title": "AutoAugment: Learning Augmentation Policies from Data",
+  "venue": "arXiv.org",
+  "year": 2018,
+  "citationCount": 2026
+ },
+ "2112.05135": {
+  "paperId": "fe34bca61e451a532f45c680c232cb78bdc558cf",
+  "externalIds": {
+   "ArXiv": "2112.05135",
+   "DBLP": "journals/corr/abs-2112-05135",
+   "DOI": "10.1109/CVPR52688.2022.01628",
+   "CorpusId": 245005966
+  },
+  "title": "PixMix: Dreamlike Pictures Comprehensively Improve Safety Measures",
+  "venue": "Computer Vision and Pattern Recognition",
+  "year": 2021,
+  "citationCount": 202
+ },
+ "1803.05407": {
+  "paperId": "b8989afff14fb630ca58b6afa917fb42574228ee",
+  "externalIds": {
+   "MAG": "2792287754",
+   "ArXiv": "1803.05407",
+   "DBLP": "journals/corr/abs-1803-05407",
+   "CorpusId": 3833416
+  },
+  "title": "Averaging Weights Leads to Wider Optima and Better Generalization",
+  "venue": "Conference on Uncertainty in Artificial Intelligence",
+  "year": 2018,
+  "citationCount": 2247
+ }
+}

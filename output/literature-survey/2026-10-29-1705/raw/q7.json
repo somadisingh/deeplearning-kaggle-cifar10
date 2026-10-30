@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Absum: Simple Regularization Method for Reducing Structural Sensitivity of Convolutional Neural Networks",
+    "authors": [
+      "Sekitoshi Kanai",
+      "Yasutoshi Ida",
+      "Yasuhiro Fujiwara",
+      "Masanori Yamada",
+      "Shuichi Adachi"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "We propose Absum, which is a regularization method for improving adversarial robustness of convolutional neural networks (CNNs). Although CNNs can accurately recognize images, recent studies have shown that the convolution operations in CNNs commonly have structural sensitivity to specific noise composed of Fourier basis functions. By exploiting this sensitivity, they proposed a simple black-box adversarial attack: Single Fourier attack. To reduce structural sensitivity, we can use regularization of convolution filter weights since the sensitivity of linear transform can be assessed by the norm of the weights. However, standard regularization methods can prevent minimization of the loss function because they impose a tight constraint for obtaining high robustness. To solve this problem, Absum imposes a loose constraint; it penalizes the absolute values of the summation of the parameters in the convolution layers. Absum can improve robustness against single Fourier attack while being as simple and efficient as standard regularization methods (e.g., weight decay and L1 regularization). Our experiments demonstrate that Absum improves robustness against single Fourier attack more than standard regularization methods. Furthermore, we reveal that robust CNNs with Absum are more robust against transferred attacks due to decreasing the common sensitivity and against high-frequency noise than standard regularization methods. We also reveal that Absum can improve robustness against gradient-based attacks (projected gradient descent) when used with adversarial training.",
+    "url": "http://arxiv.org/abs/1909.08830v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Local Convolutions Cause an Implicit Bias towards High Frequency Adversarial Examples",
+    "authors": [
+      "Josue Ortega Caro",
+      "Yilong Ju",
+      "Ryan Pyle",
+      "Sourav Dey",
+      "Wieland Brendel",
+      "Fabio Anselmi",
+      "Ankit Patel"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Adversarial Attacks are still a significant challenge for neural networks. Recent work has shown that adversarial perturbations typically contain high-frequency features, but the root cause of this phenomenon remains unknown. Inspired by theoretical work on linear full-width convolutional models, we hypothesize that the local (i.e. bounded-width) convolutional operations commonly used in current neural networks are implicitly biased to learn high frequency features, and that this is one of the root causes of high frequency adversarial examples. To test this hypothesis, we analyzed the impact of different choices of linear and nonlinear architectures on the implicit bias of the learned features and the adversarial perturbations, in both spatial and frequency domains. We find that the high-frequency adversarial perturbations are critically dependent on the convolution operation because the spatially-limited nature of local convolutions induces an implicit bias towards high frequency features. The explanation for the latter involves the Fourier Uncertainty Principle: a spatially-limited (local in the space domain) filter cannot also be frequency-limited (local in the frequency domain). Furthermore, using larger convolution kernel sizes or avoiding convolutions (e.g. by using Vision Transformers architecture) significantly reduces this high frequency bias, but not the overall susceptibility to attacks. Looking forward, our work strongly suggests that understanding and controlling the implicit bias of architectures will be essential for achieving adversarial robustness.",
+    "url": "http://arxiv.org/abs/2006.11440v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "FAD: Frequency Adaptation and Diversion for Cross-domain Few-shot Learning",
+    "authors": [
+      "Ruixiao Shi",
+      "Fu Feng",
+      "Yucheng Xie",
+      "Jing Wang",
+      "Xin Geng"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Cross-domain few-shot learning (CD-FSL) requires models to generalize from limited labeled samples under significant distribution shifts. While recent methods enhance adaptability through lightweight task-specific modules, they operate solely in the spatial domain and overlook frequency-specific variations that are often critical for robust transfer. We observe that spatially similar images across domains can differ substantially in their spectral representations, with low and high frequencies capturing complementary semantic information at coarse and fine levels. This indicates that uniform spatial adaptation may overlook these spectral distinctions, thus constraining generalization. To address this, we introduce Frequency Adaptation and Diversion (FAD), a frequency-aware framework that explicitly models and modulates spectral components. At its core is the Frequency Diversion Adapter, which transforms intermediate features into the frequency domain using the discrete Fourier transform (DFT), partitions them into low, mid, and high-frequency bands via radial masks, and reconstructs each band using inverse DFT (IDFT). Each frequency band is then adapted using a dedicated convolutional branch with a kernel size tailored to its spectral scale, enabling targeted and disentangled adaptation across frequencies. Extensive experiments on the Meta-Dataset benchmark demonstrate that FAD consistently outperforms state-of-the-art methods on both seen and unseen domains, validating the utility of frequency-domain representations and band-wise adaptation for improving generalization in CD-FSL.",
+    "url": "http://arxiv.org/abs/2505.08349v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "FreqTrack: Frequency Learning based Vision Transformer for RGB-Event Object Tracking",
+    "authors": [
+      "Jinlin You",
+      "Muyu Li",
+      "Xudong Zhao"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Existing single-modal RGB trackers often face performance bottlenecks in complex dynamic scenes, while the introduction of event sensors offers new potential for enhancing tracking capabilities. However, most current RGB-event fusion methods, primarily designed in the spatial domain using convolutional, Transformer, or Mamba architectures, fail to fully exploit the unique temporal response and high-frequency characteristics of event data. To address this, we1 propose FreqTrack, a frequency-aware RGBE tracking framework that establishes complementary inter-modal correlations through frequency-domain transformations for more robust feature fusion. We design a Spectral Enhancement Transformer (SET) layer that incorporates multi-head dynamic Fourier filtering to adaptively enhance and select frequency-domain features. Additionally, we develop a Wavelet Edge Refinement (WER) module, which leverages learnable wavelet transforms to explicitly extract multi-scale edge structures from event data, effectively improving modeling capability in high-speed and low-light scenarios. Extensive experiments on the COESOT and FE108 datasets demonstrate that FreqTrack achieves highly competitive performance, particularly attaining leading precision of 76.6\\% on the COESOT benchmark, validating the effectiveness of frequency-domain modeling for RGBE tracking.",
+    "url": "http://arxiv.org/abs/2604.14526v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "D3R-Net: Dual-Domain Denoising Reconstruction Network for Robust Industrial Anomaly Detection",
+    "authors": [
+      "Dmytro Filatov",
+      "Valentyn Fedorov",
+      "Vira Filatova",
+      "Andrii Zelenchuk"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Unsupervised anomaly detection (UAD) is a key ingredient of automated visual inspection in modern manufacturing. The reconstruction-based methods appeal because they have basic architectural design and they process data quickly but they produce oversmoothed results for high-frequency details. As a result, subtle defects are partially reconstructed rather than highlighted, which limits segmentation accuracy. We build on this line of work and introduce D3R-Net, a Dual-Domain Denoising Reconstruction framework that couples a self-supervised 'healing' task with frequency-aware regularization. During training, the network receives synthetically corrupted normal images and is asked to reconstruct the clean targets, which prevents trivial identity mapping and pushes the model to learn the manifold of defect-free textures. In addition to the spatial mean squared error, we employ a Fast Fourier Transform (FFT) magnitude loss that encourages consistency in the frequency domain. The implementation also allows an optional structural similarity (SSIM) term, which we study in an ablation. On the MVTec AD Hazelnut benchmark, D3R-Net with the FFT loss improves localization consistency over a spatial-only baseline: PRO AUC increases from 0.603 to 0.687, while image-level ROC AUC remains robust. Evaluated across fifteen MVTec categories, the FFT variant raises the average pixel ROC AUC from 0.733 to 0.751 and PRO AUC from 0.417 to 0.468 compared to the MSE-only baseline, at roughly 20 FPS on a single GPU. The network is trained from scratch and uses a lightweight convolutional autoencoder backbone, providing a practical alternative to heavy pre-trained feature embedding methods.",
+    "url": "http://arxiv.org/abs/2602.00126v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

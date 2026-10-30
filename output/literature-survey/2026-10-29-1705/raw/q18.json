@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Mimicking Human Visual Development for Learning Robust Image Representations",
+    "authors": [
+      "Ankita Raj",
+      "Kaashika Prajaapat",
+      "Tapan Kumar Gandhi",
+      "Chetan Arora"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "The human visual system is remarkably adept at adapting to changes in the input distribution; a capability modern convolutional neural networks (CNNs) still struggle to match. Drawing inspiration from the developmental trajectory of human vision, we propose a progressive blurring curriculum to improve the generalization and robustness of CNNs. Human infants are born with poor visual acuity, gradually refining their ability to perceive fine details. Mimicking this process, we begin training CNNs on highly blurred images during the initial epochs and progressively reduce the blur as training advances. This approach encourages the network to prioritize global structures over high-frequency artifacts, improving robustness against distribution shifts and noisy inputs. Challenging prior claims that blurring in the initial training epochs imposes a stimulus deficit and irreversibly harms model performance, we reveal that early-stage blurring enhances generalization with minimal impact on in-domain accuracy. Our experiments demonstrate that the proposed curriculum reduces mean corruption error (mCE) by up to 8.30% on CIFAR-10-C and 4.43% on ImageNet-100-C datasets, compared to standard training without blurring. Unlike static blur-based augmentation, which applies blurred images randomly throughout training, our method follows a structured progression, yielding consistent gains across various datasets. Furthermore, our approach complements other augmentation techniques, such as CutMix and MixUp, and enhances both natural and adversarial robustness against common attack methods. Code is available at https://github.com/rajankita/Visual_Acuity_Curriculum.",
+    "url": "http://arxiv.org/abs/2512.14360v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Balanced Product of Calibrated Experts for Long-Tailed Recognition",
+    "authors": [
+      "Emanuel Sanchez Aimar",
+      "Arvi Jonnarth",
+      "Michael Felsberg",
+      "Marco Kuhlmann"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Many real-world recognition problems are characterized by long-tailed label distributions. These distributions make representation learning highly challenging due to limited generalization over the tail classes. If the test distribution differs from the training distribution, e.g. uniform versus long-tailed, the problem of the distribution shift needs to be addressed. A recent line of work proposes learning multiple diverse experts to tackle this issue. Ensemble diversity is encouraged by various techniques, e.g. by specializing different experts in the head and the tail classes. In this work, we take an analytical approach and extend the notion of logit adjustment to ensembles to form a Balanced Product of Experts (BalPoE). BalPoE combines a family of experts with different test-time target distributions, generalizing several previous approaches. We show how to properly define these distributions and combine the experts in order to achieve unbiased predictions, by proving that the ensemble is Fisher-consistent for minimizing the balanced error. Our theoretical analysis shows that our balanced ensemble requires calibrated experts, which we achieve in practice using mixup. We conduct extensive experiments and our method obtains new state-of-the-art results on three long-tailed datasets: CIFAR-100-LT, ImageNet-LT, and iNaturalist-2018. Our code is available at https://github.com/emasa/BalPoE-CalibratedLT.",
+    "url": "http://arxiv.org/abs/2206.05260v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

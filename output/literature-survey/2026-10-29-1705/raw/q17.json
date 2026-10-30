@@ -1,0 +1,172 @@
+[
+  {
+    "title": "ShakeDrop Regularization for Deep Residual Learning",
+    "authors": [
+      "Yoshihiro Yamada",
+      "Masakazu Iwamura",
+      "Takuya Akiba",
+      "Koichi Kise"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Overfitting is a crucial problem in deep neural networks, even in the latest network architectures. In this paper, to relieve the overfitting effect of ResNet and its improvements (i.e., Wide ResNet, PyramidNet, and ResNeXt), we propose a new regularization method called ShakeDrop regularization. ShakeDrop is inspired by Shake-Shake, which is an effective regularization method, but can be applied to ResNeXt only. ShakeDrop is more effective than Shake-Shake and can be applied not only to ResNeXt but also ResNet, Wide ResNet, and PyramidNet. An important key is to achieve stability of training. Because effective regularization often causes unstable training, we introduce a training stabilizer, which is an unusual use of an existing regularizer. Through experiments under various conditions, we demonstrate the conditions under which ShakeDrop works well.",
+    "url": "http://arxiv.org/abs/1802.02375v3",
+    "doi": "10.1109/ACCESS.2019.2960566",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Shake-Shake regularization",
+    "authors": [
+      "Xavier Gastaldi"
+    ],
+    "year": 2017,
+    "venue": "arXiv",
+    "abstract": "The method introduced in this paper aims at helping deep learning practitioners faced with an overfit problem. The idea is to replace, in a multi-branch network, the standard summation of parallel branches with a stochastic affine combination. Applied to 3-branch residual networks, shake-shake regularization improves on the best single shot published results on CIFAR-10 and CIFAR-100 by reaching test errors of 2.86% and 15.85%. Experiments on architectures without skip connections or Batch Normalization show encouraging results and open the door to a large set of applications. Code is available at https://github.com/xgastaldi/shake-shake",
+    "url": "http://arxiv.org/abs/1705.07485v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Normalization Before Shaking Toward Learning Symmetrically Distributed Representation Without Margin in Speech Emotion Recognition",
+    "authors": [
+      "Che-Wei Huang",
+      "Shrikanth S. Narayanan"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Regularization is crucial to the success of many practical deep learning models, in particular in a more often than not scenario where there are only a few to a moderate number of accessible training samples. In addition to weight decay, data augmentation and dropout, regularization based on multi-branch architectures, such as Shake-Shake regularization, has been proven successful in many applications and attracted more and more attention. However, beyond model-based representation augmentation, it is unclear how Shake-Shake regularization helps to provide further improvement on classification tasks, let alone the baffling interaction between batch normalization and shaking. In this work, we present our investigation on Shake-Shake regularization, drawing connections to the vicinal risk minimization principle and discriminative feature learning in verification tasks. Furthermore, we identify a strong resemblance between batch normalized residual blocks and batch normalized recurrent neural networks, where both of them share a similar convergence behavior, which could be mitigated by a proper initialization of batch normalization. Based on the findings, our experiments on speech emotion recognition demonstrate simultaneously an improvement on the classification accuracy and a reduction on the generalization gap both with statistical significance.",
+    "url": "http://arxiv.org/abs/1808.00876v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Shaking Acoustic Spectral Sub-bands Can Better Regularize Learning in Affective Computing",
+    "authors": [
+      "Che-Wei Huang",
+      "Shrikanth Narayanan"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "In this work, we investigate a recently proposed regularization technique based on multi-branch architectures, called Shake-Shake regularization, for the task of speech emotion recognition. In addition, we also propose variants to incorporate domain knowledge into model configurations. The experimental results demonstrate: $1)$ independently shaking sub-bands delivers favorable models compared to shaking the entire spectral-temporal feature maps. $2)$ with proper patience in early stopping, the proposed models can simultaneously outperform the baseline and maintain a smaller performance gap between training and validation.",
+    "url": "http://arxiv.org/abs/1804.06779v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Emotion and Theme Recognition in Music with Frequency-Aware RF-Regularized CNNs",
+    "authors": [
+      "Khaled Koutini",
+      "Shreyan Chowdhury",
+      "Verena Haunschmid",
+      "Hamid Eghbal-zadeh",
+      "Gerhard Widmer"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "We present CP-JKU submission to MediaEval 2019; a Receptive Field-(RF)-regularized and Frequency-Aware CNN approach for tagging music with emotion/mood labels. We perform an investigation regarding the impact of the RF of the CNNs on their performance on this dataset. We observe that ResNets with smaller receptive fields -- originally adapted for acoustic scene classification -- also perform well in the emotion tagging task. We improve the performance of such architectures using techniques such as Frequency Awareness and Shake-Shake regularization, which were used in previous work on general acoustic recognition tasks.",
+    "url": "http://arxiv.org/abs/1911.05833v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Averaging Weights Leads to Wider Optima and Better Generalization",
+    "authors": [
+      "Pavel Izmailov",
+      "Dmitrii Podoprikhin",
+      "Timur Garipov",
+      "Dmitry Vetrov",
+      "Andrew Gordon Wilson"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Deep neural networks are typically trained by optimizing a loss function with an SGD variant, in conjunction with a decaying learning rate, until convergence. We show that simple averaging of multiple points along the trajectory of SGD, with a cyclical or constant learning rate, leads to better generalization than conventional training. We also show that this Stochastic Weight Averaging (SWA) procedure finds much flatter solutions than SGD, and approximates the recent Fast Geometric Ensembling (FGE) approach with a single model. Using SWA we achieve notable improvement in test accuracy over conventional SGD training on a range of state-of-the-art residual networks, PyramidNets, DenseNets, and Shake-Shake networks on CIFAR-10, CIFAR-100, and ImageNet. In short, SWA is extremely easy to implement, improves generalization, and has almost no computational overhead.",
+    "url": "http://arxiv.org/abs/1803.05407v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Convolutional Neural Networks with Dynamic Regularization",
+    "authors": [
+      "Yi Wang",
+      "Zhen-Peng Bian",
+      "Junhui Hou",
+      "Lap-Pui Chau"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Regularization is commonly used for alleviating overfitting in machine learning. For convolutional neural networks (CNNs), regularization methods, such as DropBlock and Shake-Shake, have illustrated the improvement in the generalization performance. However, these methods lack a self-adaptive ability throughout training. That is, the regularization strength is fixed to a predefined schedule, and manual adjustments are required to adapt to various network architectures. In this paper, we propose a dynamic regularization method for CNNs. Specifically, we model the regularization strength as a function of the training loss. According to the change of the training loss, our method can dynamically adjust the regularization strength in the training procedure, thereby balancing the underfitting and overfitting of CNNs. With dynamic regularization, a large-scale model is automatically regularized by the strong perturbation, and vice versa. Experimental results show that the proposed method can improve the generalization capability on off-the-shelf network architectures and outperform state-of-the-art regularization methods.",
+    "url": "http://arxiv.org/abs/1909.11862v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Data Augmentation using Random Image Cropping and Patching for Deep CNNs",
+    "authors": [
+      "Ryo Takahashi",
+      "Takashi Matsubara",
+      "Kuniaki Uehara"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Deep convolutional neural networks (CNNs) have achieved remarkable results in image processing tasks. However, their high expression ability risks overfitting. Consequently, data augmentation techniques have been proposed to prevent overfitting while enriching datasets. Recent CNN architectures with more parameters are rendering traditional data augmentation techniques insufficient. In this study, we propose a new data augmentation technique called random image cropping and patching (RICAP) which randomly crops four images and patches them to create a new training image. Moreover, RICAP mixes the class labels of the four images, resulting in an advantage similar to label smoothing. We evaluated RICAP with current state-of-the-art CNNs (e.g., the shake-shake regularization model) by comparison with competitive data augmentation techniques such as cutout and mixup. RICAP achieves a new state-of-the-art test error of $2.19\\%$ on CIFAR-10. We also confirmed that deep CNNs with RICAP achieve better results on classification tasks using CIFAR-100 and ImageNet and an image-caption retrieval task using Microsoft COCO.",
+    "url": "http://arxiv.org/abs/1811.09030v2",
+    "doi": "10.1109/TCSVT.2019.2935128",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Removing the Feature Correlation Effect of Multiplicative Noise",
+    "authors": [
+      "Zijun Zhang",
+      "Yining Zhang",
+      "Zongpeng Li"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Multiplicative noise, including dropout, is widely used to regularize deep neural networks (DNNs), and is shown to be effective in a wide range of architectures and tasks. From an information perspective, we consider injecting multiplicative noise into a DNN as training the network to solve the task with noisy information pathways, which leads to the observation that multiplicative noise tends to increase the correlation between features, so as to increase the signal-to-noise ratio of information pathways. However, high feature correlation is undesirable, as it increases redundancy in representations. In this work, we propose non-correlating multiplicative noise (NCMN), which exploits batch normalization to remove the correlation effect in a simple yet effective way. We show that NCMN significantly improves the performance of standard multiplicative noise on image classification tasks, providing a better alternative to dropout for batch-normalized networks. Additionally, we present a unified view of NCMN and shake-shake regularization, which explains the performance gain of the latter.",
+    "url": "http://arxiv.org/abs/1809.07023v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Receptive-Field Regularized CNNs for Music Classification and Tagging",
+    "authors": [
+      "Khaled Koutini",
+      "Hamid Eghbal-Zadeh",
+      "Verena Haunschmid",
+      "Paul Primus",
+      "Shreyan Chowdhury",
+      "Gerhard Widmer"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Convolutional Neural Networks (CNNs) have been successfully used in various Music Information Retrieval (MIR) tasks, both as end-to-end models and as feature extractors for more complex systems. However, the MIR field is still dominated by the classical VGG-based CNN architecture variants, often in combination with more complex modules such as attention, and/or techniques such as pre-training on large datasets. Deeper models such as ResNet -- which surpassed VGG by a large margin in other domains -- are rarely used in MIR. One of the main reasons for this, as we will show, is the lack of generalization of deeper CNNs in the music domain. In this paper, we present a principled way to make deep architectures like ResNet competitive for music-related tasks, based on well-designed regularization strategies. In particular, we analyze the recently introduced Receptive-Field Regularization and Shake-Shake, and show that they significantly improve the generalization of deep CNNs on music-related tasks, and that the resulting deep CNNs can outperform current more complex models such as CNNs augmented with pre-training and attention. We demonstrate this on two different MIR tasks and two corresponding datasets, thus offering our deep regularized CNNs as a new baseline for these datasets, which can also be used as a feature-extracting module in future, more complex approaches.",
+    "url": "http://arxiv.org/abs/2007.13503v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "On the Origins of the Block Structure Phenomenon in Neural Network Representations",
+    "authors": [
+      "Thao Nguyen",
+      "Maithra Raghu",
+      "Simon Kornblith"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Recent work has uncovered a striking phenomenon in large-capacity neural networks: they contain blocks of contiguous hidden layers with highly similar representations. This block structure has two seemingly contradictory properties: on the one hand, its constituent layers exhibit highly similar dominant first principal components (PCs), but on the other hand, their representations, and their common first PC, are highly dissimilar across different random seeds. Our work seeks to reconcile these discrepant properties by investigating the origin of the block structure in relation to the data and training methods. By analyzing properties of the dominant PCs, we find that the block structure arises from dominant datapoints - a small group of examples that share similar image statistics (e.g. background color). However, the set of dominant datapoints, and the precise shared image statistic, can vary across random seeds. Thus, the block structure reflects meaningful dataset statistics, but is simultaneously unique to each model. Through studying hidden layer activations and creating synthetic datapoints, we demonstrate that these simple image statistics dominate the representational geometry of the layers inside the block structure. We explore how the phenomenon evolves through training, finding that the block structure takes shape early in training, but the underlying representations and the corresponding dominant datapoints continue to change substantially. Finally, we study the interplay between the block structure and different training mechanisms, introducing a targeted intervention to eliminate the block structure, as well as examining the effects of pretraining and Shake-Shake regularization.",
+    "url": "http://arxiv.org/abs/2202.07184v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

@@ -1,0 +1,344 @@
+[
+  {
+    "title": "Distilling Out-of-Distribution Robustness from Vision-Language Foundation Models",
+    "authors": [
+      "Andy Zhou",
+      "Jindong Wang",
+      "Yu-Xiong Wang",
+      "Haohan Wang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "We propose a conceptually simple and lightweight framework for improving the robustness of vision models through the combination of knowledge distillation and data augmentation. We address the conjecture that larger models do not make for better teachers by showing strong gains in out-of-distribution robustness when distilling from pretrained foundation models. Following this finding, we propose Discrete Adversarial Distillation (DAD), which leverages a robust teacher to generate adversarial examples and a VQGAN to discretize them, creating more informative samples than standard data augmentation techniques. We provide a theoretical framework for the use of a robust teacher in the knowledge distillation with data augmentation setting and demonstrate strong gains in out-of-distribution robustness and clean accuracy across different student architectures. Notably, our method adds minor computational overhead compared to similar techniques and can be easily combined with other data augmentations for further improvements.",
+    "url": "http://arxiv.org/abs/2311.01441v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-Knowledge Distillation via Dropout",
+    "authors": [
+      "Hyoje Lee",
+      "Yeachan Park",
+      "Hyun Seo",
+      "Myungjoo Kang"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "To boost the performance, deep neural networks require deeper or wider network structures that involve massive computational and memory costs. To alleviate this issue, the self-knowledge distillation method regularizes the model by distilling the internal knowledge of the model itself. Conventional self-knowledge distillation methods require additional trainable parameters or are dependent on the data. In this paper, we propose a simple and effective self-knowledge distillation method using a dropout (SD-Dropout). SD-Dropout distills the posterior distributions of multiple models through a dropout sampling. Our method does not require any additional trainable modules, does not rely on data, and requires only simple operations. Furthermore, this simple method can be easily combined with various self-knowledge distillation approaches. We provide a theoretical and experimental analysis of the effect of forward and reverse KL-divergences in our work. Extensive experiments on various vision tasks, i.e., image classification, object detection, and distribution shift, demonstrate that the proposed method can effectively improve the generalization of a single network. Further experiments show that the proposed method also improves calibration performance, adversarial robustness, and out-of-distribution detection ability.",
+    "url": "http://arxiv.org/abs/2208.05642v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Do Students Debias Like Teachers? On the Distillability of Bias Mitigation Methods",
+    "authors": [
+      "Jiali Cheng",
+      "Chirag Agarwal",
+      "Hadi Amiri"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Knowledge distillation (KD) is an effective method for model compression and transferring knowledge between models. However, its effect on model's robustness against spurious correlations that degrade performance on out-of-distribution data remains underexplored. This study investigates the effect of knowledge distillation on the transferability of ``debiasing'' capabilities from teacher models to student models on natural language inference (NLI) and image classification tasks. Through extensive experiments, we illustrate several key findings: (i) overall the debiasing capability of a model is undermined post-KD; (ii) training a debiased model does not benefit from injecting teacher knowledge; (iii) although the overall robustness of a model may remain stable post-distillation, significant variations can occur across different types of biases; and (iv) we pin-point the internal attention pattern and circuit that causes the distinct behavior post-KD. Given the above findings, we propose three effective solutions to improve the distillability of debiasing methods: developing high quality data for augmentation, implementing iterative knowledge distillation, and initializing student models with weights obtained from teacher models. To the best of our knowledge, this is the first study on the effect of KD on debiasing and its interenal mechanism at scale. Our findings provide understandings on how KD works and how to design better debiasing methods.",
+    "url": "http://arxiv.org/abs/2510.26038v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "When Data-Free Knowledge Distillation Meets Non-Transferable Teacher: Escaping Out-of-Distribution Trap is All You Need",
+    "authors": [
+      "Ziming Hong",
+      "Runnan Chen",
+      "Zengmao Wang",
+      "Bo Han",
+      "Bo Du",
+      "Tongliang Liu"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Data-free knowledge distillation (DFKD) transfers knowledge from a teacher to a student without access the real in-distribution (ID) data. Its common solution is to use a generator to synthesize fake data and use them as a substitute for real ID data. However, existing works typically assume teachers are trustworthy, leaving the robustness and security of DFKD from untrusted teachers largely unexplored. In this work, we conduct the first investigation into distilling non-transferable learning (NTL) teachers using DFKD, where the transferability from an ID domain to an out-of-distribution (OOD) domain is prohibited. We find that NTL teachers fool DFKD through divert the generator's attention from the useful ID knowledge to the misleading OOD knowledge. This hinders ID knowledge transfer but prioritizes OOD knowledge transfer. To mitigate this issue, we propose Adversarial Trap Escaping (ATEsc) to benefit DFKD by identifying and filtering out OOD-like synthetic samples. Specifically, inspired by the evidence that NTL teachers show stronger adversarial robustness on OOD samples than ID samples, we split synthetic samples into two groups according to their robustness. The fragile group is treated as ID-like data and used for normal knowledge distillation, while the robust group is seen as OOD-like data and utilized for forgetting OOD knowledge. Extensive experiments demonstrate the effectiveness of ATEsc for improving DFKD against NTL teachers. Code is released at https://github.com/tmllab/2025_ICML_ATEsc.",
+    "url": "http://arxiv.org/abs/2507.04119v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Distilling Robustness into Natural Language Inference Models with Domain-Targeted Augmentation",
+    "authors": [
+      "Joe Stacey",
+      "Marek Rei"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Knowledge distillation optimises a smaller student model to behave similarly to a larger teacher model, retaining some of the performance benefits. While this method can improve results on in-distribution examples, it does not necessarily generalise to out-of-distribution (OOD) settings. We investigate two complementary methods for improving the robustness of the resulting student models on OOD domains. The first approach augments the distillation with generated unlabelled examples that match the target distribution. The second method upsamples data points among the training set that are similar to the target distribution. When applied on the task of natural language inference (NLI), our experiments on MNLI show that distillation with these modifications outperforms previous robustness solutions. We also find that these methods improve performance on OOD domains even beyond the target domain.",
+    "url": "http://arxiv.org/abs/2305.13067v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Spectral Geometry for Deep Learning: Compression and Hallucination Detection via Random Matrix Theory",
+    "authors": [
+      "Davide Ettori"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Large language models and deep neural networks achieve strong performance but suffer from reliability issues and high computational cost. This thesis proposes a unified framework based on spectral geometry and random matrix theory to address both problems by analyzing the eigenvalue structure of hidden activations. The first contribution, EigenTrack, is a real-time method for detecting hallucinations and out-of-distribution behavior in language and vision-language models using spectral features and their temporal dynamics. The second contribution, RMT-KD, is a principled compression method that identifies informative spectral components and applies iterative knowledge distillation to produce compact and efficient models while preserving accuracy. Together, these results show that spectral statistics provide interpretable and robust signals for monitoring uncertainty and guiding compression in large-scale neural networks.",
+    "url": "http://arxiv.org/abs/2601.17357v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Rethinking Data Augmentation for Robust Visual Question Answering",
+    "authors": [
+      "Long Chen",
+      "Yuhang Zheng",
+      "Jun Xiao"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Data Augmentation (DA) -- generating extra training samples beyond original training set -- has been widely-used in today's unbiased VQA models to mitigate the language biases. Current mainstream DA strategies are synthetic-based methods, which synthesize new samples by either editing some visual regions/words, or re-generating them from scratch. However, these synthetic samples are always unnatural and error-prone. To avoid this issue, a recent DA work composes new augmented samples by randomly pairing pristine images and other human-written questions. Unfortunately, to guarantee augmented samples have reasonable ground-truth answers, they manually design a set of heuristic rules for several question types, which extremely limits its generalization abilities. To this end, we propose a new Knowledge Distillation based Data Augmentation for VQA, dubbed KDDAug. Specifically, we first relax the requirements of reasonable image-question pairs, which can be easily applied to any question types. Then, we design a knowledge distillation (KD) based answer assignment to generate pseudo answers for all composed image-question pairs, which are robust to both in-domain and out-of-distribution settings. Since KDDAug is a model-agnostic DA strategy, it can be seamlessly incorporated into any VQA architectures. Extensive ablation studies on multiple backbones and benchmarks have demonstrated the effectiveness and generalization abilities of KDDAug.",
+    "url": "http://arxiv.org/abs/2207.08739v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Robustness Challenges in Model Distillation and Pruning for Natural Language Understanding",
+    "authors": [
+      "Mengnan Du",
+      "Subhabrata Mukherjee",
+      "Yu Cheng",
+      "Milad Shokouhi",
+      "Xia Hu",
+      "Ahmed Hassan Awadallah"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Recent work has focused on compressing pre-trained language models (PLMs) like BERT where the major focus has been to improve the in-distribution performance for downstream tasks. However, very few of these studies have analyzed the impact of compression on the generalizability and robustness of compressed models for out-of-distribution (OOD) data. Towards this end, we study two popular model compression techniques including knowledge distillation and pruning and show that the compressed models are significantly less robust than their PLM counterparts on OOD test sets although they obtain similar performance on in-distribution development sets for a task. Further analysis indicates that the compressed models overfit on the shortcut samples and generalize poorly on the hard ones. We further leverage this observation to develop a regularization strategy for robust model compression based on sample uncertainty. Experimental results on several natural language understanding tasks demonstrate that our bias mitigation framework improves the OOD generalization of the compressed models, while not sacrificing the in-distribution task performance.",
+    "url": "http://arxiv.org/abs/2110.08419v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Object Attribute Matters in Visual Question Answering",
+    "authors": [
+      "Peize Li",
+      "Qingyi Si",
+      "Peng Fu",
+      "Zheng Lin",
+      "Yan Wang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Visual question answering is a multimodal task that requires the joint comprehension of visual and textual information. However, integrating visual and textual semantics solely through attention layers is insufficient to comprehensively understand and align information from both modalities. Intuitively, object attributes can naturally serve as a bridge to unify them, which has been overlooked in previous research. In this paper, we propose a novel VQA approach from the perspective of utilizing object attribute, aiming to achieve better object-level visual-language alignment and multimodal scene understanding. Specifically, we design an attribute fusion module and a contrastive knowledge distillation module. The attribute fusion module constructs a multimodal graph neural network to fuse attributes and visual features through message passing. The enhanced object-level visual features contribute to solving fine-grained problem like counting-question. The better object-level visual-language alignment aids in understanding multimodal scenes, thereby improving the model's robustness. Furthermore, to augment scene understanding and the out-of-distribution performance, the contrastive knowledge distillation module introduces a series of implicit knowledge. We distill knowledge into attributes through contrastive loss, which further strengthens the representation learning of attribute features and facilitates visual-linguistic alignment. Intensive experiments on six datasets, COCO-QA, VQAv2, VQA-CPv2, VQA-CPv1, VQAvs and TDIUC, show the superiority of the proposed method.",
+    "url": "http://arxiv.org/abs/2401.09442v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Optimizing Three Critical Factors for Practical and Effective OOD Detection Fine-Tuning",
+    "authors": [
+      "Hyunjun Choi",
+      "JaeHo Chung",
+      "Hawook Jeong"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In out-of-distribution (OOD) detection, fine-tuning with auxiliary outlier data often improves detection performance at the cost of classification accuracy. This trade-off stems from the loss of the original in-distribution (ID) distribution during fine-tuning. To establish a more practical and effective paradigm, we optimize three critical factors: model reminder, data sampling, and representation learning. We propose: (1) Self-Knowledge Distillation (SKD) to mitigate accuracy reduction; (2) Semi-hard Outlier Sampling (SOS) to improve detection efficiency with minimal data; and (3) Outlier-aware Supervised Contrastive Learning (OSCL) to promote ID-OOD separability. Optimizing these factors produces cumulative gains, boosting both OOD detection performance and classification accuracy. Our framework outperforms existing methods across diverse benchmarks, particularly in long-tailed scenarios, providing a robust baseline for real-world OOD detection.",
+    "url": "http://arxiv.org/abs/2308.01030v2",
+    "doi": "10.1007/978-3-032-31930-2_29",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Feature Representation Learning for Robust Retinal Disease Detection from Optical Coherence Tomography Images",
+    "authors": [
+      "Sharif Amit Kamran",
+      "Khondker Fariha Hossain",
+      "Alireza Tavakkoli",
+      "Stewart Lee Zuckerbrod",
+      "Salah A. Baker"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Ophthalmic images may contain identical-looking pathologies that can cause failure in automated techniques to distinguish different retinal degenerative diseases. Additionally, reliance on large annotated datasets and lack of knowledge distillation can restrict ML-based clinical support systems' deployment in real-world environments. To improve the robustness and transferability of knowledge, an enhanced feature-learning module is required to extract meaningful spatial representations from the retinal subspace. Such a module, if used effectively, can detect unique disease traits and differentiate the severity of such retinal degenerative pathologies. In this work, we propose a robust disease detection architecture with three learning heads, i) A supervised encoder for retinal disease classification, ii) An unsupervised decoder for the reconstruction of disease-specific spatial information, and iii) A novel representation learning module for learning the similarity between encoder-decoder feature and enhancing the accuracy of the model. Our experimental results on two publicly available OCT datasets illustrate that the proposed model outperforms existing state-of-the-art models in terms of accuracy, interpretability, and robustness for out-of-distribution retinal disease detection.",
+    "url": "http://arxiv.org/abs/2206.12136v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Tractable Representation Learning with Probabilistic Circuits",
+    "authors": [
+      "Steven Braun",
+      "Sahil Sidheekh",
+      "Antonio Vergari",
+      "Martin Mundt",
+      "Sriraam Natarajan",
+      "Kristian Kersting"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Probabilistic circuits (PCs) are powerful probabilistic models that enable exact and tractable inference, making them highly suitable for probabilistic reasoning and inference tasks. While dominant in neural networks, representation learning with PCs remains underexplored, with prior approaches relying on external neural embeddings or activation-based encodings. To address this gap, we introduce autoencoding probabilistic circuits (APCs), a novel framework leveraging the tractability of PCs to model probabilistic embeddings explicitly. APCs extend PCs by jointly modeling data and embeddings, obtaining embedding representations through tractable probabilistic inference. The PC encoder allows the framework to natively handle arbitrary missing data and is seamlessly integrated with a neural decoder in a hybrid, end-to-end trainable architecture enabled by differentiable sampling. Our empirical evaluation demonstrates that APCs outperform existing PC-based autoencoding methods in reconstruction quality, generate embeddings competitive with, and exhibit superior robustness in handling missing data compared to neural autoencoders. These results highlight APCs as a powerful and flexible representation learning method that exploits the probabilistic inference capabilities of PCs, showing promising directions for robust inference, out-of-distribution detection, and knowledge distillation.",
+    "url": "http://arxiv.org/abs/2507.04385v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Cloud-Device Collaborative Learning for Multimodal Large Language Models",
+    "authors": [
+      "Guanqun Wang",
+      "Jiaming Liu",
+      "Chenxuan Li",
+      "Junpeng Ma",
+      "Yuan Zhang",
+      "Xinyu Wei",
+      "Kevin Zhang",
+      "Maurice Chong",
+      "Ray Zhang",
+      "Yijiang Liu",
+      "Shanghang Zhang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "The burgeoning field of Multimodal Large Language Models (MLLMs) has exhibited remarkable performance in diverse tasks such as captioning, commonsense reasoning, and visual scene understanding. However, the deployment of these large-scale MLLMs on client devices is hindered by their extensive model parameters, leading to a notable decline in generalization capabilities when these models are compressed for device deployment. Addressing this challenge, we introduce a Cloud-Device Collaborative Continual Adaptation framework, designed to enhance the performance of compressed, device-deployed MLLMs by leveraging the robust capabilities of cloud-based, larger-scale MLLMs. Our framework is structured into three key components: a device-to-cloud uplink for efficient data transmission, cloud-based knowledge adaptation, and an optimized cloud-to-device downlink for model deployment. In the uplink phase, we employ an Uncertainty-guided Token Sampling (UTS) strategy to effectively filter out-of-distribution tokens, thereby reducing transmission costs and improving training efficiency. On the cloud side, we propose Adapter-based Knowledge Distillation (AKD) method to transfer refined knowledge from large-scale to compressed, pocket-size MLLMs. Furthermore, we propose a Dynamic Weight update Compression (DWC) strategy for the downlink, which adaptively selects and quantizes updated weight parameters, enhancing transmission efficiency and reducing the representational disparity between cloud and device models. Extensive experiments on several multimodal benchmarks demonstrate the superiority of our proposed framework over prior Knowledge Distillation and device-cloud collaboration methods. Notably, we also validate the feasibility of our approach to real-world experiments.",
+    "url": "http://arxiv.org/abs/2312.16279v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "MCC-KD: Multi-CoT Consistent Knowledge Distillation",
+    "authors": [
+      "Hongzhan Chen",
+      "Siyue Wu",
+      "Xiaojun Quan",
+      "Rui Wang",
+      "Ming Yan",
+      "Ji Zhang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Large language models (LLMs) have showcased remarkable capabilities in complex reasoning through chain of thought (CoT) prompting. Recently, there has been a growing interest in transferring these reasoning abilities from LLMs to smaller models. However, achieving both the diversity and consistency in rationales presents a challenge. In this paper, we focus on enhancing these two aspects and propose Multi-CoT Consistent Knowledge Distillation (MCC-KD) to efficiently distill the reasoning capabilities. In MCC-KD, we generate multiple rationales for each question and enforce consistency among the corresponding predictions by minimizing the bidirectional KL-divergence between the answer distributions. We investigate the effectiveness of MCC-KD with different model architectures (LLaMA/FlanT5) and various model scales (3B/7B/11B/13B) on both mathematical reasoning and commonsense reasoning benchmarks. The empirical results not only confirm MCC-KD's superior performance on in-distribution datasets but also highlight its robust generalization ability on out-of-distribution datasets.",
+    "url": "http://arxiv.org/abs/2310.14747v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Contrastive Teacher-Student Framework for Novelty Detection under Style Shifts",
+    "authors": [
+      "Hossein Mirzaei",
+      "Mojtaba Nafez",
+      "Moein Madadi",
+      "Arad Maleki",
+      "Mahdi Hajialilue",
+      "Zeinab Sadat Taghavi",
+      "Sepehr Rezaee",
+      "Ali Ansari",
+      "Bahar Dibaei Nia",
+      "Kian Shamsaie",
+      "Mohammadreza Salehi",
+      "Mackenzie W. Mathis",
+      "Mahdieh Soleymani Baghshah",
+      "Mohammad Sabokrou",
+      "Mohammad Hossein Rohban"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "There have been several efforts to improve Novelty Detection (ND) performance. However, ND methods often suffer significant performance drops under minor distribution shifts caused by changes in the environment, known as style shifts. This challenge arises from the ND setup, where the absence of out-of-distribution (OOD) samples during training causes the detector to be biased toward the dominant style features in the in-distribution (ID) data. As a result, the model mistakenly learns to correlate style with core features, using this shortcut for detection. Robust ND is crucial for real-world applications like autonomous driving and medical imaging, where test samples may have different styles than the training data. Motivated by this, we propose a robust ND method that crafts an auxiliary OOD set with style features similar to the ID set but with different core features. Then, a task-based knowledge distillation strategy is utilized to distinguish core features from style features and help our model rely on core features for discriminating crafted OOD and ID sets. We verified the effectiveness of our method through extensive experimental evaluations on several datasets, including synthetic and real-world benchmarks, against nine different ND methods.",
+    "url": "http://arxiv.org/abs/2501.17289v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Distilling the Unknown to Unveil Certainty",
+    "authors": [
+      "Zhilin Zhao",
+      "Longbing Cao",
+      "Yixuan Zhang",
+      "Kun-Yu Lin",
+      "Wei-Shi Zheng"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Out-of-distribution (OOD) detection is critical for identifying test samples that deviate from in-distribution (ID) data, ensuring network robustness and reliability. This paper presents a flexible framework for OOD knowledge distillation that extracts OOD-sensitive information from a network to develop a binary classifier capable of distinguishing between ID and OOD samples in both scenarios, with and without access to training ID data. To accomplish this, we introduce Confidence Amendment (CA), an innovative methodology that transforms an OOD sample into an ID one while progressively amending prediction confidence derived from the network to enhance OOD sensitivity. This approach enables the simultaneous synthesis of both ID and OOD samples, each accompanied by an adjusted prediction confidence, thereby facilitating the training of a binary classifier sensitive to OOD. Theoretical analysis provides bounds on the generalization error of the binary classifier, demonstrating the pivotal role of confidence amendment in enhancing OOD sensitivity. Extensive experiments spanning various datasets and network architectures confirm the efficacy of the proposed method in detecting OOD samples.",
+    "url": "http://arxiv.org/abs/2311.07975v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Preserving Angles Improves Feature Distillation",
+    "authors": [
+      "Evelyn J. Mannix",
+      "Liam Hodgkinson",
+      "Howard Bondell"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Knowledge distillation methods compress models by training a student network using the classification outputs of a high quality teacher model, but can fail to effectively transfer the properties of computer vision foundation models from the teacher to the student. While it has been recently shown that feature distillation$\\unicode{x2013}$where a teacher model's output features are replicated instead$\\unicode{x2013}$can reproduce performance for foundation models across numerous downstream tasks, they fall short in matching critical properties such as robustness and out-of-distribution (OOD) detection performance. This paper overcomes this shortcoming by introducing Cosine-similarity Preserving Compression (CosPress), a feature distillation technique that learns a mapping to compress the latent space of the teacher model into the smaller latent space of the student, by preserving the cosine similarities between image embeddings. This enables direct optimisation of the student network and produces a more faithful reproduction of the teacher's properties. It is shown that distillation with CosPress on a variety of datasets, including ImageNet, produces more accurate models with greater performance on generalisability, robustness and OOD detection benchmarks, and that this technique provides a competitive pathway for training highly performant lightweight models on small datasets. Code is available at github.com/emannix/cospress.",
+    "url": "http://arxiv.org/abs/2411.15239v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "KroneckerBERT: Learning Kronecker Decomposition for Pre-trained Language Models via Knowledge Distillation",
+    "authors": [
+      "Marzieh S. Tahaei",
+      "Ella Charlaix",
+      "Vahid Partovi Nia",
+      "Ali Ghodsi",
+      "Mehdi Rezagholizadeh"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "The development of over-parameterized pre-trained language models has made a significant contribution toward the success of natural language processing. While over-parameterization of these models is the key to their generalization power, it makes them unsuitable for deployment on low-capacity devices. We push the limits of state-of-the-art Transformer-based pre-trained language model compression using Kronecker decomposition. We use this decomposition for compression of the embedding layer, all linear mappings in the multi-head attention, and the feed-forward network modules in the Transformer layer. We perform intermediate-layer knowledge distillation using the uncompressed model as the teacher to improve the performance of the compressed model. We present our KroneckerBERT, a compressed version of the BERT_BASE model obtained using this framework. We evaluate the performance of KroneckerBERT on well-known NLP benchmarks and show that for a high compression factor of 19 (5% of the size of the BERT_BASE model), our KroneckerBERT outperforms state-of-the-art compression methods on the GLUE. Our experiments indicate that the proposed model has promising out-of-distribution robustness and is superior to the state-of-the-art compression methods on SQuAD.",
+    "url": "http://arxiv.org/abs/2109.06243v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Enhancing OOD Detection Using Latent Diffusion",
+    "authors": [
+      "Heng Gao",
+      "Jun Li"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Out-of-distribution (OOD) detection is crucial for the reliable deployment of machine learning models in real-world scenarios, enabling the identification of unknown samples or objects. A prominent approach to enhance OOD detection performance involves leveraging auxiliary datasets for training. Recent efforts have explored using generative models, such as Stable Diffusion (SD), to synthesize outlier data in the pixel space. However, synthesizing OOD data in the pixel space can lead to reduced robustness due to over-generation. To address this challenge, we propose Outlier-Aware Learning (OAL), a novel framework that generates synthetic OOD training data within the latent space, taking a further step to study how to utilize Stable Diffusion for developing a latent-based outlier synthesis approach. This improvement facilitates network training with fewer outliers and less computational cost. Besides, to regularize the model's decision boundary, we develop a mutual information-based contrastive learning module (MICL) that amplifies the distinction between In-Distribution (ID) and collected OOD data. Moreover, we develop a knowledge distillation module to prevent the degradation of ID classification accuracy when training with OOD data. The superior performance of our method on several benchmark datasets demonstrates its efficiency and effectiveness. Source code is available in https://github.com/HengGao12/OAL.",
+    "url": "http://arxiv.org/abs/2406.16525v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Probabilistic Self-supervised Learning via Scoring Rules Minimization",
+    "authors": [
+      "Amirhossein Vahidi",
+      "Simon Schoßer",
+      "Lisa Wimmer",
+      "Yawei Li",
+      "Bernd Bischl",
+      "Eyke Hüllermeier",
+      "Mina Rezaei"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In this paper, we propose a novel probabilistic self-supervised learning via Scoring Rule Minimization (ProSMIN), which leverages the power of probabilistic models to enhance representation quality and mitigate collapsing representations. Our proposed approach involves two neural networks; the online network and the target network, which collaborate and learn the diverse distribution of representations from each other through knowledge distillation. By presenting the input samples in two augmented formats, the online network is trained to predict the target network representation of the same sample under a different augmented view. The two networks are trained via our new loss function based on proper scoring rules. We provide a theoretical justification for ProSMIN's convergence, demonstrating the strict propriety of its modified scoring rule. This insight validates the method's optimization process and contributes to its robustness and effectiveness in improving representation quality. We evaluate our probabilistic model on various downstream tasks, such as in-distribution generalization, out-of-distribution detection, dataset corruption, low-shot learning, and transfer learning. Our method achieves superior accuracy and calibration, surpassing the self-supervised baseline in a wide range of experiments on large-scale datasets like ImageNet-O and ImageNet-C, ProSMIN demonstrates its scalability and real-world applicability.",
+    "url": "http://arxiv.org/abs/2309.02048v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

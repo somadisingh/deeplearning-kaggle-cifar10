@@ -1,0 +1,95 @@
+[
+  {
+    "title": "Self-Supervised Learning for Pre-training Capsule Networks: Overcoming Medical Imaging Dataset Challenges",
+    "authors": [
+      "Heba El-Shimy",
+      "Hind Zantout",
+      "Michael A. Lones",
+      "Neamat El Gayar"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Deep learning techniques are increasingly being adopted in diagnostic medical imaging. However, the limited availability of high-quality, large-scale medical datasets presents a significant challenge, often necessitating the use of transfer learning approaches. This study investigates self-supervised learning methods for pre-training capsule networks in polyp diagnostics for colon cancer. We used the PICCOLO dataset, comprising 3,433 samples, which exemplifies typical challenges in medical datasets: small size, class imbalance, and distribution shifts between data splits. Capsule networks offer inherent interpretability due to their architecture and inter-layer information routing mechanism. However, their limited native implementation in mainstream deep learning frameworks and the lack of pre-trained versions pose a significant challenge. This is particularly true if aiming to train them on small medical datasets, where leveraging pre-trained weights as initial parameters would be beneficial. We explored two auxiliary self-supervised learning tasks, colourisation and contrastive learning, for capsule network pre-training. We compared self-supervised pre-trained models against alternative initialisation strategies. Our findings suggest that contrastive learning and in-painting techniques are suitable auxiliary tasks for self-supervised learning in the medical domain. These techniques helped guide the model to capture important visual features that are beneficial for the downstream task of polyp classification, increasing its accuracy by 5.26% compared to other weight initialisation methods.",
+    "url": "http://arxiv.org/abs/2502.04748v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Improving Self-supervised Learning for Out-of-distribution Task via Auxiliary Classifier",
+    "authors": [
+      "Harshita Boonlia",
+      "Tanmoy Dam",
+      "Md Meftahul Ferdaus",
+      "Sreenatha G. Anavatti",
+      "Ankan Mullick"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "In real world scenarios, out-of-distribution (OOD) datasets may have a large distributional shift from training datasets. This phenomena generally occurs when a trained classifier is deployed on varying dynamic environments, which causes a significant drop in performance. To tackle this issue, we are proposing an end-to-end deep multi-task network in this work. Observing a strong relationship between rotation prediction (self-supervised) accuracy and semantic classification accuracy on OOD tasks, we introduce an additional auxiliary classification head in our multi-task network along with semantic classification and rotation prediction head. To observe the influence of this addition classifier in improving the rotation prediction head, our proposed learning method is framed into bi-level optimisation problem where the upper-level is trained to update the parameters for semantic classification and rotation prediction head. In the lower-level optimisation, only the auxiliary classification head is updated through semantic classification head by fixing the parameters of the semantic classification head. The proposed method has been validated through three unseen OOD datasets where it exhibits a clear improvement in semantic classification accuracy than other two baseline methods. Our code is available on GitHub \\url{https://github.com/harshita-555/OSSL}",
+    "url": "http://arxiv.org/abs/2209.02881v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Benchmark for Uncertainty & Robustness in Self-Supervised Learning",
+    "authors": [
+      "Ha Manh Bui",
+      "Iliana Maifeld-Carucci"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Self-Supervised Learning (SSL) is crucial for real-world applications, especially in data-hungry domains such as healthcare and self-driving cars. In addition to a lack of labeled data, these applications also suffer from distributional shifts. Therefore, an SSL method should provide robust generalization and uncertainty estimation in the test dataset to be considered a reliable model in such high-stakes domains. However, existing approaches often focus on generalization, without evaluating the model's uncertainty. The ability to compare SSL techniques for improving these estimates is therefore critical for research on the reliability of self-supervision models. In this paper, we explore variants of SSL methods, including Jigsaw Puzzles, Context, Rotation, Geometric Transformations Prediction for vision, as well as BERT and GPT for language tasks. We train SSL in auxiliary learning for vision and pre-training for language model, then evaluate the generalization (in-out classification accuracy) and uncertainty (expected calibration error) across different distribution covariate shift datasets, including MNIST-C, CIFAR-10-C, CIFAR-10.1, and MNLI. Our goal is to create a benchmark with outputs from experiments, providing a starting point for new SSL methods in Reliable Machine Learning. All source code to reproduce results is available at https://github.com/hamanhbui/reliable_ssl_baselines.",
+    "url": "http://arxiv.org/abs/2212.12411v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "DIRA-SS:Dynamic Domain Incremental Regularised Adaptation -- Self-Supervised",
+    "authors": [
+      "Abanoub Ghobrial",
+      "Kerstin Eder"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Autonomous systems (AS) often rely on Deep Neural Network (DNN) classifiers to operate in complex and dynamically changing environments. However, during operation, these classifiers may encounter domains that differ from those seen during development, causing performance degradation under distribution shift. Removing systems from operation for labelled data collection and retraining is often impractical, particularly when adaptation must occur quickly and at scale. This paper introduces DIRA-SS, a self-supervised extension of Dynamic Incremental Regularised Adaptation (DIRA) that enables online domain adaptation using only a small number of unlabelled target-domain samples. DIRA-SS augments an existing classifier with an auxiliary retraining branch and adapts the shared feature representation through a rotation-prediction task, while elastic weight consolidation regularises important source-domain parameters to reduce destructive updates. This allows the model to benefit from transfer learning without requiring classification labels during operation. We evaluate DIRA-SS on CIFAR-10C, CIFAR-100C, and ImageNet-C using ResNet architectures under severe common corruptions. The results show that DIRA-SS substantially improves performance over the non-adapted source model, achieves accuracy close to the supervised DIRA method, and outperforms existing unsupervised test-time adaptation baselines on ImageNet-C when using only 100 target-domain samples.",
+    "url": "http://arxiv.org/abs/2311.07461v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "T3R: Deeper Test-Time Adaptation for Graph Neural Networks via Gradient Rotation",
+    "authors": [
+      "Huy Truong",
+      "Alexander Lazovik",
+      "Victoria Degeler"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Graph Neural Networks (GNNs) deployed in real-world systems typically have fixed weights, often leading to degraded performance under distribution shifts. This issue can be mitigated by conventional fine-tuning, but in many real-world cases, collecting labeled data is expensive or infeasible. A potential approach is Test-Time Training (TTT), which adapts models' weights using unlabeled test data, yet it is typically limited to shallow updates that affect only a subset of model parameters. We propose T3R, leveraging multiple Rotograd matrices to improve task affinity between the target and auxiliary tasks, essential for effective test-time training. T3R further introduces a rotation technique that reorients self-supervised signals using these matrices to create surrogate gradients for the target task, allowing deeper adaptation across nearly the entire architecture. Empirically, T3R reduces MAE by 0.172 points over standard inference in regression datasets and achieves at least 9.37% relative improvement on cross-domain OGB classification benchmarks compared to models without adaptation. These results highlight the potential to develop an adaptation pipeline for graph-based systems, particularly in settings where conventional fine-tuning or retraining is infeasible.",
+    "url": "http://arxiv.org/abs/2606.30011v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Ti-MAE: Self-Supervised Masked Time Series Autoencoders",
+    "authors": [
+      "Zhe Li",
+      "Zhongwen Rao",
+      "Lujia Pan",
+      "Pengyun Wang",
+      "Zenglin Xu"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Multivariate Time Series forecasting has been an increasingly popular topic in various applications and scenarios. Recently, contrastive learning and Transformer-based models have achieved good performance in many long-term series forecasting tasks. However, there are still several issues in existing methods. First, the training paradigm of contrastive learning and downstream prediction tasks are inconsistent, leading to inaccurate prediction results. Second, existing Transformer-based models which resort to similar patterns in historical time series data for predicting future values generally induce severe distribution shift problems, and do not fully leverage the sequence information compared to self-supervised methods. To address these issues, we propose a novel framework named Ti-MAE, in which the input time series are assumed to follow an integrate distribution. In detail, Ti-MAE randomly masks out embedded time series data and learns an autoencoder to reconstruct them at the point-level. Ti-MAE adopts mask modeling (rather than contrastive learning) as the auxiliary task and bridges the connection between existing representation learning and generative Transformer-based methods, reducing the difference between upstream and downstream forecasting tasks while maintaining the utilization of original time series data. Experiments on several public real-world datasets demonstrate that our framework of masked autoencoding could learn strong representations directly from the raw data, yielding better performance in time series forecasting and classification tasks.",
+    "url": "http://arxiv.org/abs/2301.08871v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

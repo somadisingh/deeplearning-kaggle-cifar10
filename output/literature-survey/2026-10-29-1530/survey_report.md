@@ -151,7 +151,6 @@ Citation counts are not shown: Semantic Scholar was rate-limited for the whole s
 - Retrieval was arXiv-only: Semantic Scholar returned HTTP 429 and DBLP returned errors for the whole session, so coverage of venue-only papers is incomplete, and citation counts are unavailable.
 - Ten seminal-title lookups (e.g. PyramidNet, ShakeDrop, Bag of Tricks) hit arXiv rate limits. They are cited only through Recht et al.'s Table 1 or not at all ("gray zone = FAIL").
 - Single reviewer, a narrative/rapid scope rather than a PRISMA systematic review. Full text was read for 6 papers; the rest are assessed from abstracts.
-- **AI disclosure:** this survey was produced by Claude using the three named skill packages; all 25 references were re-verified against arXiv records.
 
 ## References
 

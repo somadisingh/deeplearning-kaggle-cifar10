@@ -1,0 +1,119 @@
+[
+  {
+    "title": "Deep Ensembles Work, But Are They Necessary?",
+    "authors": [
+      "Taiga Abe",
+      "E. Kelly Buchanan",
+      "Geoff Pleiss",
+      "Richard Zemel",
+      "John P. Cunningham"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Ensembling neural networks is an effective way to increase accuracy, and can often match the performance of individual larger models. This observation poses a natural question: given the choice between a deep ensemble and a single neural network with similar accuracy, is one preferable over the other? Recent work suggests that deep ensembles may offer distinct benefits beyond predictive power: namely, uncertainty quantification and robustness to dataset shift. In this work, we demonstrate limitations to these purported benefits, and show that a single (but larger) neural network can replicate these qualities. First, we show that ensemble diversity, by any metric, does not meaningfully contribute to an ensemble's uncertainty quantification on out-of-distribution (OOD) data, but is instead highly correlated with the relative improvement of a single larger model. Second, we show that the OOD performance afforded by ensembles is strongly determined by their in-distribution (InD) performance, and -- in this sense -- is not indicative of any \"effective robustness\". While deep ensembles are a practical way to achieve improvements to predictive power, uncertainty quantification, and robustness, our results show that these improvements can be replicated by a (larger) single model.",
+    "url": "http://arxiv.org/abs/2202.06985v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Models Out of Line: A Fourier Lens on Distribution Shift Robustness",
+    "authors": [
+      "Sara Fridovich-Keil",
+      "Brian R. Bartoldson",
+      "James Diffenderfer",
+      "Bhavya Kailkhura",
+      "Peer-Timo Bremer"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Improving the accuracy of deep neural networks (DNNs) on out-of-distribution (OOD) data is critical to an acceptance of deep learning (DL) in real world applications. It has been observed that accuracies on in-distribution (ID) versus OOD data follow a linear trend and models that outperform this baseline are exceptionally rare (and referred to as \"effectively robust\"). Recently, some promising approaches have been developed to improve OOD robustness: model pruning, data augmentation, and ensembling or zero-shot evaluating large pretrained models. However, there still is no clear understanding of the conditions on OOD data and model properties that are required to observe effective robustness. We approach this issue by conducting a comprehensive empirical study of diverse approaches that are known to impact OOD robustness on a broad range of natural and synthetic distribution shifts of CIFAR-10 and ImageNet. In particular, we view the \"effective robustness puzzle\" through a Fourier lens and ask how spectral properties of both models and OOD data influence the corresponding effective robustness. We find this Fourier lens offers some insight into why certain robust models, particularly those from the CLIP family, achieve OOD robustness. However, our analysis also makes clear that no known metric is consistently the best explanation (or even a strong explanation) of OOD robustness. Thus, to aid future research into the OOD puzzle, we address the gap in publicly-available models with effective robustness by introducing a set of pretrained models--RobustNets--with varying levels of OOD robustness.",
+    "url": "http://arxiv.org/abs/2207.04075v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Hit the Sweet Spot! Span-Level Ensemble for Large Language Models",
+    "authors": [
+      "Yangyifan Xu",
+      "Jianghao Chen",
+      "Junhong Wu",
+      "Jiajun Zhang"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Ensembling various LLMs to unlock their complementary potential and leverage their individual strengths is highly valuable. Previous studies typically focus on two main paradigms: sample-level and token-level ensembles. Sample-level ensemble methods either select or blend fully generated outputs, which hinders dynamic correction and enhancement of outputs during the generation process. On the other hand, token-level ensemble methods enable real-time correction through fine-grained ensemble at each generation step. However, the information carried by an individual token is quite limited, leading to suboptimal decisions at each step. To address these issues, we propose SweetSpan, a span-level ensemble method that effectively balances the need for real-time adjustments and the information required for accurate ensemble decisions. Our approach involves two key steps: First, we have each candidate model independently generate candidate spans based on the shared prefix. Second, we calculate perplexity scores to facilitate mutual evaluation among the candidate models and achieve robust span selection by filtering out unfaithful scores. To comprehensively evaluate ensemble methods, we propose a new challenging setting (ensemble models with significant performance gaps) in addition to the standard setting (ensemble the best-performing models) to assess the performance of model ensembles in more realistic scenarios. Experimental results in both standard and challenging settings across various language generation tasks demonstrate the effectiveness, robustness, and versatility of our approach compared with previous ensemble methods.",
+    "url": "http://arxiv.org/abs/2409.18583v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Learning from Data with Noisy Labels Using Temporal Self-Ensemble",
+    "authors": [
+      "Jun Ho Lee",
+      "Jae Soon Baik",
+      "Tae Hwan Hwang",
+      "Jun Won Choi"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "There are inevitably many mislabeled data in real-world datasets. Because deep neural networks (DNNs) have an enormous capacity to memorize noisy labels, a robust training scheme is required to prevent labeling errors from degrading the generalization performance of DNNs. Current state-of-the-art methods present a co-training scheme that trains dual networks using samples associated with small losses. In practice, however, training two networks simultaneously can burden computing resources. In this study, we propose a simple yet effective robust training scheme that operates by training only a single network. During training, the proposed method generates temporal self-ensemble by sampling intermediate network parameters from the weight trajectory formed by stochastic gradient descent optimization. The loss sum evaluated with these self-ensembles is used to identify incorrectly labeled samples. In parallel, our method generates multi-view predictions by transforming an input data into various forms and considers their agreement to identify incorrectly labeled samples. By combining the aforementioned metrics, we present the proposed {\\it self-ensemble-based robust training} (SRT) method, which can filter the samples with noisy labels to reduce their influence on training. Experiments on widely-used public datasets demonstrate that the proposed method achieves a state-of-the-art performance in some categories without training the dual networks.",
+    "url": "http://arxiv.org/abs/2207.10354v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "MESA: Boost Ensemble Imbalanced Learning with MEta-SAmpler",
+    "authors": [
+      "Zhining Liu",
+      "Pengfei Wei",
+      "Jing Jiang",
+      "Wei Cao",
+      "Jiang Bian",
+      "Yi Chang"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Imbalanced learning (IL), i.e., learning unbiased models from class-imbalanced data, is a challenging problem. Typical IL methods including resampling and reweighting were designed based on some heuristic assumptions. They often suffer from unstable performance, poor applicability, and high computational cost in complex tasks where their assumptions do not hold. In this paper, we introduce a novel ensemble IL framework named MESA. It adaptively resamples the training set in iterations to get multiple classifiers and forms a cascade ensemble model. MESA directly learns the sampling strategy from data to optimize the final metric beyond following random heuristics. Moreover, unlike prevailing meta-learning-based IL solutions, we decouple the model-training and meta-training in MESA by independently train the meta-sampler over task-agnostic meta-data. This makes MESA generally applicable to most of the existing learning models and the meta-sampler can be efficiently applied to new tasks. Extensive experiments on both synthetic and real-world tasks demonstrate the effectiveness, robustness, and transferability of MESA. Our code is available at https://github.com/ZhiningLiu1998/mesa.",
+    "url": "http://arxiv.org/abs/2010.08830v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Dynamical Low-Rank Ensemble Kalman filter for State/Parameter estimation",
+    "authors": [
+      "Fabio Nobile",
+      "Sébastien Riffaud",
+      "Thomas Trigo Trindade"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "We propose a Dynamical Low-Rank Ensemble Kalman Filter (DLR-ENKF) for efficient joint state-parameter estimation in high-dimensional dynamical systems. The method extends the DLR-ENKF formulation of arXiv:2509.11210 to the augmented state-parameter framework, tracking the filtering density within a dynamically evolving low-dimensional subspace. Key developments include a time-integration strategy that combines the Basis Update & Galerkin scheme with forecast/analysis discretisation, and a DEIM-based hyper-reduction technique for efficient evaluation of nonlinear terms. We demonstrate the effectiveness, robustness, and computational advantages of the proposed approach on benchmark problems. The results highlight the potential of dynamically evolving reduced bases to achieve accurate filtering and parameter estimation at reduced computational cost.",
+    "url": "http://arxiv.org/abs/2602.06614v2",
+    "doi": "10.1016/j.jcp.2026.115433",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Entanglement Witnesses of Condensation for Enhanced Quantum Sensing",
+    "authors": [
+      "Lillian I. Payne Torres",
+      "Irma Avdic",
+      "Anna O. Schouten",
+      "Olivia C. Wedig",
+      "Gregory S. Engel",
+      "David A. Mazziotti"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Quantum phenomena such as entanglement provide powerful resources for enhancing classical sensing. Here, we theoretically show that collective entanglement of spin qubits, arising from a condensation of particle-hole pairs, can strongly amplify transitions between ground and excited spin states, potentially improving signal contrast in optically detected magnetic resonance. This collective state exhibits an $\\mathcal{O}(\\sqrt{N})$ enhancement of the transition amplitude with respect to an applied microwave field, where $N$ is the number of entangled spin qubits. We computationally realize this amplification using an ensemble of $N$ triplet spins with magnetic dipole interactions, where the largest transition amplitudes occur at geometries for which the condensation of particle-hole pairs is strongest. This effect, robust to noise, originates from the concentration of entanglement into a single collective mode, reflected in a large eigenvalue of the particle-hole reduced density matrix -- an entanglement witness of condensation analogous to off-diagonal long-range order, though realized here in a finite system. These results offer a design principle for quantum sensors that exploit condensation-inspired entanglement to boost sensitivity in spin-based platforms.",
+    "url": "http://arxiv.org/abs/2511.17749v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

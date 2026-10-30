@@ -1,0 +1,185 @@
+{
+ "date": "2026-10-29",
+ "tool": "academic-research-plugin literature-survey scripts/paper_search.py, arXiv field-syntax queries (--sources arxiv --max-results 20)",
+ "sources_requested": [
+  "arxiv",
+  "s2",
+  "dblp"
+ ],
+ "sources_effective": "arXiv only for search. Semantic Scholar /paper/search returned HTTP 429; DBLP returned an HTML bot check, which was not bypassed. One Semantic Scholar /paper/batch call supplied venues and citation counts; one OpenAlex title search looked for Lu et al. 2020 (CIFAR-10.2) and found nothing.",
+ "topic_queries": [
+  {
+   "id": "q1",
+   "date_start": "2019-01",
+   "query": "(abs:\"effective robustness\" AND abs:\"distribution shift\")",
+   "results": 8
+  },
+  {
+   "id": "q2",
+   "date_start": "2019-01",
+   "query": "(abs:\"CIFAR-10.2\" OR (abs:\"CIFAR-10.1\" AND abs:\"reproduction\"))",
+   "results": 0
+  },
+  {
+   "id": "q3",
+   "date_start": "2019-01",
+   "query": "(abs:\"dataset replication\" AND abs:bias)",
+   "results": 3
+  },
+  {
+   "id": "q4",
+   "date_start": "2021-01",
+   "query": "(abs:\"CIFAR-10.1\" AND abs:variance)",
+   "results": 0
+  },
+  {
+   "id": "q5",
+   "date_start": "2018-01",
+   "query": "(abs:\"anti-aliasing\" AND abs:convolutional AND (abs:\"shift-invariant\" OR abs:\"shift invariance\"))",
+   "results": 5
+  },
+  {
+   "id": "q6",
+   "date_start": "2019-01",
+   "query": "(abs:aliasing AND abs:generalization AND abs:convolutional)",
+   "results": 20
+  },
+  {
+   "id": "q7",
+   "date_start": "2018-01",
+   "query": "(abs:\"high-frequency\" AND abs:robustness AND abs:Fourier AND abs:convolutional)",
+   "results": 5
+  },
+  {
+   "id": "q8",
+   "date_start": "2019-01",
+   "query": "(abs:whitening AND abs:generalization AND abs:\"neural networks\")",
+   "results": 20
+  },
+  {
+   "id": "q9",
+   "date_start": "2019-01",
+   "query": "(abs:\"BatchEnsemble\" OR abs:\"Packed-Ensembles\" OR abs:\"independent subnetworks\")",
+   "results": 20
+  },
+  {
+   "id": "q10",
+   "date_start": "2020-01",
+   "query": "(abs:ensembles AND abs:\"effective robustness\")",
+   "results": 7
+  },
+  {
+   "id": "q11",
+   "date_start": "2020-01",
+   "query": "(abs:\"parameter averaging\" AND abs:population) OR (abs:\"weight averaging\" AND abs:\"diverse\" AND abs:\"from scratch\")",
+   "results": 3
+  },
+  {
+   "id": "q12",
+   "date_start": "2020-01",
+   "query": "(abs:\"weight averaging\" AND abs:\"domain generalization\" AND abs:flat)",
+   "results": 3
+  },
+  {
+   "id": "q13",
+   "date_start": "2019-01",
+   "query": "(abs:\"knowledge distillation\" AND abs:\"out-of-distribution\" AND abs:robustness)",
+   "results": 20
+  },
+  {
+   "id": "q14",
+   "date_start": "2018-01",
+   "query": "(abs:\"CIFAR-10H\" OR (abs:\"soft labels\" AND abs:\"human uncertainty\"))",
+   "results": 20
+  },
+  {
+   "id": "q15",
+   "date_start": "2019-01",
+   "query": "(abs:\"test-time augmentation\" AND (abs:aggregation OR abs:policy))",
+   "results": 20
+  },
+  {
+   "id": "q16",
+   "date_start": "2021-01",
+   "query": "(abs:\"test-time adaptation\" AND abs:\"natural distribution shift\")",
+   "results": 6
+  },
+  {
+   "id": "q17",
+   "date_start": "2017-01",
+   "query": "(abs:\"ShakeDrop\" OR abs:\"Shake-Shake\")",
+   "results": 11
+  },
+  {
+   "id": "q18",
+   "date_start": "2018-01",
+   "query": "((abs:mixup OR abs:CutMix) AND abs:\"distribution shift\" AND abs:CIFAR)",
+   "results": 2
+  },
+  {
+   "id": "q19",
+   "date_start": "2019-01",
+   "query": "(abs:\"label smoothing\" AND abs:\"out-of-distribution\")",
+   "results": 13
+  },
+  {
+   "id": "q20",
+   "date_start": "2023-01",
+   "query": "(abs:\"CIFAR-10\" AND abs:\"parameter budget\" AND abs:residual)",
+   "results": 1
+  },
+  {
+   "id": "q21",
+   "date_start": "2019-01",
+   "query": "(abs:\"CIFAR-10.1\" AND abs:augmentation)",
+   "results": 1
+  },
+  {
+   "id": "q22",
+   "date_start": "2019-01",
+   "query": "(abs:\"self-supervised\" AND abs:auxiliary AND abs:\"distribution shift\" AND abs:classification)",
+   "results": 6
+  }
+ ],
+ "records_total": 194,
+ "unique_records": 192,
+ "seminal_verification": {
+  "method": "one export.arxiv.org id_list request for 50 IDs; title similarity >= 0.70 (ARS arXiv protocol)",
+  "passed": 50,
+  "failed": 0,
+  "file": "seminal/arxiv_id_check.json",
+  "venues_and_citations": "seminal/s2_batch.json"
+ },
+ "unverifiable_and_not_cited_directly": [
+  "Lu et al. 2020, 'Harder or Different? A Closer Look at Distribution Shift in Dataset Reproduction' (CIFAR-10.2): not found on arXiv or OpenAlex; described only through Miller et al. 2021, Appendix"
+ ],
+ "included_in_synthesis": 45,
+ "full_text_read": [
+  "1806.00451",
+  "2107.04649 (appendix on CIFAR-10.2)",
+  "2207.04075",
+  "2202.06985 (abstract, sections 1 and 5)",
+  "2304.01910",
+  "2404.00498",
+  "1805.09501",
+  "1705.07485",
+  "1802.02375",
+  "1610.02915",
+  "2304.03094",
+  "1912.05671",
+  "2306.07684",
+  "2302.14685",
+  "2210.09184",
+  "2601.16936",
+  "2007.08483",
+  "2010.06610",
+  "2108.03489",
+  "1904.11486",
+  "2306.03536",
+  "2410.01083",
+  "1908.07086",
+  "2008.07545"
+ ],
+ "screening": "title screen of 192 unique records -> 41 relevant; plus seminal set by ID; exclusions: off-topic arXiv matches (astronomy, chemistry, NLP, VLM test-time tuning), methods needing pretrained weights or external data (CLIP distillation, generated data, PixMix fractals)",
+ "notes": "Previous survey (output/literature-survey/2026-10-29-1530) covered augmentation, SAM, SWA/EMA, KD, CIFAR-10.1 line; this round excludes those queries and targets effective robustness, architecture/aliasing, budget ensembles, weight averaging, test-time methods."
+}

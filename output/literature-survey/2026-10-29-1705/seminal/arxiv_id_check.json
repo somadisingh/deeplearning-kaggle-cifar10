@@ -1,0 +1,828 @@
+{
+ "1806.00451": {
+  "expected": "Do CIFAR-10 Classifiers Generalize to CIFAR-10?",
+  "found": {
+   "title": "Do CIFAR-10 Classifiers Generalize to CIFAR-10?",
+   "year": "2018",
+   "authors": [
+    "Benjamin Recht",
+    "Rebecca Roelofs",
+    "Ludwig Schmidt",
+    "Vaishaal Shankar"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2107.04649": {
+  "expected": "Accuracy on the Line: On the Strong Correlation Between Out-of-Distribution and In-Distribution Generalization",
+  "found": {
+   "title": "Accuracy on the Line: On the Strong Correlation Between Out-of-Distribution and In-Distribution Generalization",
+   "year": "2021",
+   "authors": [
+    "John Miller",
+    "Rohan Taori",
+    "Aditi Raghunathan",
+    "Shiori Sagawa",
+    "Pang Wei Koh",
+    "Vaishaal Shankar",
+    "Percy Liang",
+    "Yair Carmon",
+    "Ludwig Schmidt"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2007.00644": {
+  "expected": "Measuring Robustness to Natural Distribution Shifts in Image Classification",
+  "found": {
+   "title": "Measuring Robustness to Natural Distribution Shifts in Image Classification",
+   "year": "2020",
+   "authors": [
+    "Rohan Taori",
+    "Achal Dave",
+    "Vaishaal Shankar",
+    "Nicholas Carlini",
+    "Benjamin Recht",
+    "Ludwig Schmidt"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2207.04075": {
+  "expected": "Models Out of Line: A Fourier Lens on Distribution Shift Robustness",
+  "found": {
+   "title": "Models Out of Line: A Fourier Lens on Distribution Shift Robustness",
+   "year": "2022",
+   "authors": [
+    "Sara Fridovich-Keil",
+    "Brian R. Bartoldson",
+    "James Diffenderfer",
+    "Bhavya Kailkhura",
+    "Peer-Timo Bremer"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2304.01910": {
+  "expected": "On the Variance of Neural Network Training with respect to Test Sets and Distributions",
+  "found": {
+   "title": "On the Variance of Neural Network Training with respect to Test Sets and Distributions",
+   "year": "2023",
+   "authors": [
+    "Keller Jordan"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2404.00498": {
+  "expected": "94% on CIFAR-10 in 3.29 Seconds on a Single GPU",
+  "found": {
+   "title": "94% on CIFAR-10 in 3.29 Seconds on a Single GPU",
+   "year": "2024",
+   "authors": [
+    "Keller Jordan"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2005.09619": {
+  "expected": "Identifying Statistical Bias in Dataset Replication",
+  "found": {
+   "title": "Identifying Statistical Bias in Dataset Replication",
+   "year": "2020",
+   "authors": [
+    "Logan Engstrom",
+    "Andrew Ilyas",
+    "Shibani Santurkar",
+    "Dimitris Tsipras",
+    "Jacob Steinhardt",
+    "Aleksander Madry"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1904.11486": {
+  "expected": "Making Convolutional Networks Shift-Invariant Again",
+  "found": {
+   "title": "Making Convolutional Networks Shift-Invariant Again",
+   "year": "2019",
+   "authors": [
+    "Richard Zhang"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2108.03489": {
+  "expected": "Impact of Aliasing on Generalization in Deep Convolutional Networks",
+  "found": {
+   "title": "Impact of Aliasing on Generalization in Deep Convolutional Networks",
+   "year": "2021",
+   "authors": [
+    "Cristina Vasconcelos",
+    "Hugo Larochelle",
+    "Vincent Dumoulin",
+    "Rob Romijnders",
+    "Nicolas Le Roux",
+    "Ross Goroshin"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2011.14214": {
+  "expected": "Truly shift-invariant convolutional neural networks",
+  "found": {
+   "title": "Truly shift-invariant convolutional neural networks",
+   "year": "2020",
+   "authors": [
+    "Anadi Chaman",
+    "Ivan Dokmani\u0107"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1905.13545": {
+  "expected": "High-frequency Component Helps Explain the Generalization of Convolutional Neural Networks",
+  "found": {
+   "title": "High Frequency Component Helps Explain the Generalization of Convolutional Neural Networks",
+   "year": "2019",
+   "authors": [
+    "Haohan Wang",
+    "Xindi Wu",
+    "Zeyi Huang",
+    "Eric P. Xing"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 0.994,
+  "verdict": "PASS"
+ },
+ "1906.08988": {
+  "expected": "A Fourier Perspective on Model Robustness in Computer Vision",
+  "found": {
+   "title": "A Fourier Perspective on Model Robustness in Computer Vision",
+   "year": "2019",
+   "authors": [
+    "Dong Yin",
+    "Raphael Gontijo Lopes",
+    "Jonathon Shlens",
+    "Ekin D. Cubuk",
+    "Justin Gilmer"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2008.07545": {
+  "expected": "Whitening and second order optimization both make information in the dataset unusable during training, and can reduce or prevent generalization",
+  "found": {
+   "title": "Whitening and second order optimization both make information in the dataset unusable during training, and can reduce or prevent generalization",
+   "year": "2020",
+   "authors": [
+    "Neha S. Wadia",
+    "Daniel Duckworth",
+    "Samuel S. Schoenholz",
+    "Ethan Dyer",
+    "Jascha Sohl-Dickstein"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2202.06985": {
+  "expected": "Deep Ensembles Work, But Are They Necessary?",
+  "found": {
+   "title": "Deep Ensembles Work, But Are They Necessary?",
+   "year": "2022",
+   "authors": [
+    "Taiga Abe",
+    "E. Kelly Buchanan",
+    "Geoff Pleiss",
+    "Richard Zemel",
+    "John P. Cunningham"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2007.08483": {
+  "expected": "On Power Laws in Deep Ensembles",
+  "found": {
+   "title": "On Power Laws in Deep Ensembles",
+   "year": "2020",
+   "authors": [
+    "Ekaterina Lobacheva",
+    "Nadezhda Chirkova",
+    "Maxim Kodryan",
+    "Dmitry Vetrov"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2210.09184": {
+  "expected": "Packed-Ensembles for Efficient Uncertainty Estimation",
+  "found": {
+   "title": "Packed-Ensembles for Efficient Uncertainty Estimation",
+   "year": "2022",
+   "authors": [
+    "Olivier Laurent",
+    "Adrien Lafage",
+    "Enzo Tartaglione",
+    "Geoffrey Daniel",
+    "Jean-Marc Martinez",
+    "Andrei Bursuc",
+    "Gianni Franchi"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2010.06610": {
+  "expected": "Training independent subnetworks for robust prediction",
+  "found": {
+   "title": "Training independent subnetworks for robust prediction",
+   "year": "2020",
+   "authors": [
+    "Marton Havasi",
+    "Rodolphe Jenatton",
+    "Stanislav Fort",
+    "Jeremiah Zhe Liu",
+    "Jasper Snoek",
+    "Balaji Lakshminarayanan",
+    "Andrew M. Dai",
+    "Dustin Tran"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2002.06715": {
+  "expected": "BatchEnsemble: An Alternative Approach to Efficient Ensemble and Lifelong Learning",
+  "found": {
+   "title": "BatchEnsemble: An Alternative Approach to Efficient Ensemble and Lifelong Learning",
+   "year": "2020",
+   "authors": [
+    "Yeming Wen",
+    "Dustin Tran",
+    "Jimmy Ba"
+   ],
+   "journal_ref": "Eighth International Conference on Learning Representations (ICLR 2020)"
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2601.16936": {
+  "expected": "Is BatchEnsemble a Single Model? On Calibration and Diversity of Efficient Ensembles",
+  "found": {
+   "title": "Is BatchEnsemble a Single Model? On Calibration and Diversity of Efficient Ensembles",
+   "year": "2026",
+   "authors": [
+    "Anton Zamyatin",
+    "Patrick Indri",
+    "Sagar Malhotra",
+    "Thomas G\u00e4rtner"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2304.03094": {
+  "expected": "PopulAtion Parameter Averaging (PAPA)",
+  "found": {
+   "title": "PopulAtion Parameter Averaging (PAPA)",
+   "year": "2023",
+   "authors": [
+    "Alexia Jolicoeur-Martineau",
+    "Emy Gervais",
+    "Kilian Fatras",
+    "Yan Zhang",
+    "Simon Lacoste-Julien"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2302.14685": {
+  "expected": "DART: Diversify-Aggregate-Repeat Training Improves Generalization of Neural Networks",
+  "found": {
+   "title": "DART: Diversify-Aggregate-Repeat Training Improves Generalization of Neural Networks",
+   "year": "2023",
+   "authors": [
+    "Samyak Jain",
+    "Sravanti Addepalli",
+    "Pawan Sahu",
+    "Priyam Dey",
+    "R. Venkatesh Babu"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2306.07684": {
+  "expected": "Lookaround Optimizer: k steps around, 1 step average",
+  "found": {
+   "title": "Lookaround Optimizer: $k$ steps around, 1 step average",
+   "year": "2023",
+   "authors": [
+    "Jiangtao Zhang",
+    "Shunyu Liu",
+    "Jie Song",
+    "Tongtian Zhu",
+    "Zhengqi Xu",
+    "Mingli Song"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2102.08604": {
+  "expected": "SWAD: Domain Generalization by Seeking Flat Minima",
+  "found": {
+   "title": "SWAD: Domain Generalization by Seeking Flat Minima",
+   "year": "2021",
+   "authors": [
+    "Junbum Cha",
+    "Sanghyuk Chun",
+    "Kyungjae Lee",
+    "Han-Cheol Cho",
+    "Seunghyun Park",
+    "Yunsung Lee",
+    "Sungrae Park"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1912.05671": {
+  "expected": "Linear Mode Connectivity and the Lottery Ticket Hypothesis",
+  "found": {
+   "title": "Linear Mode Connectivity and the Lottery Ticket Hypothesis",
+   "year": "2019",
+   "authors": [
+    "Jonathan Frankle",
+    "Gintare Karolina Dziugaite",
+    "Daniel M. Roy",
+    "Michael Carbin"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2203.05482": {
+  "expected": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time",
+  "found": {
+   "title": "Model soups: averaging weights of multiple fine-tuned models improves accuracy without increasing inference time",
+   "year": "2022",
+   "authors": [
+    "Mitchell Wortsman",
+    "Gabriel Ilharco",
+    "Samir Yitzhak Gadre",
+    "Rebecca Roelofs",
+    "Raphael Gontijo-Lopes",
+    "Ari S. Morcos",
+    "Hongseok Namkoong",
+    "Ali Farhadi",
+    "Yair Carmon",
+    "Simon Kornblith",
+    "Ludwig Schmidt"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1908.07086": {
+  "expected": "Human uncertainty makes classification more robust",
+  "found": {
+   "title": "Human uncertainty makes classification more robust",
+   "year": "2019",
+   "authors": [
+    "Joshua C. Peterson",
+    "Ruairidh M. Battleday",
+    "Thomas L. Griffiths",
+    "Olga Russakovsky"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2306.03536": {
+  "expected": "On Pitfalls of Test-Time Adaptation",
+  "found": {
+   "title": "On Pitfalls of Test-Time Adaptation",
+   "year": "2023",
+   "authors": [
+    "Hao Zhao",
+    "Yuejiang Liu",
+    "Alexandre Alahi",
+    "Tao Lin"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2011.11156": {
+  "expected": "Better Aggregation in Test-Time Augmentation",
+  "found": {
+   "title": "Better Aggregation in Test-Time Augmentation",
+   "year": "2020",
+   "authors": [
+    "Divya Shanmugam",
+    "Davis Blalock",
+    "Guha Balakrishnan",
+    "John Guttag"
+   ],
+   "journal_ref": "ICCV 2021"
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2002.09103": {
+  "expected": "Greedy Policy Search: A Simple Baseline for Learnable Test-Time Augmentation",
+  "found": {
+   "title": "Greedy Policy Search: A Simple Baseline for Learnable Test-Time Augmentation",
+   "year": "2020",
+   "authors": [
+    "Dmitry Molchanov",
+    "Alexander Lyzhov",
+    "Yuliya Molchanova",
+    "Arsenii Ashukha",
+    "Dmitry Vetrov"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2410.01083": {
+  "expected": "Deep Nets with Subsampling Layers Unwittingly Discard Useful Activations at Test-Time",
+  "found": {
+   "title": "Deep Nets with Subsampling Layers Unwittingly Discard Useful Activations at Test-Time",
+   "year": "2024",
+   "authors": [
+    "Chiao-An Yang",
+    "Ziwei Liu",
+    "Raymond A. Yeh"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1705.07485": {
+  "expected": "Shake-Shake regularization",
+  "found": {
+   "title": "Shake-Shake regularization",
+   "year": "2017",
+   "authors": [
+    "Xavier Gastaldi"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1802.02375": {
+  "expected": "ShakeDrop Regularization for Deep Residual Learning",
+  "found": {
+   "title": "ShakeDrop Regularization for Deep Residual Learning",
+   "year": "2018",
+   "authors": [
+    "Yoshihiro Yamada",
+    "Masakazu Iwamura",
+    "Takuya Akiba",
+    "Koichi Kise"
+   ],
+   "journal_ref": "IEEE Access, 7, 1, pp.186126-186136 (2019)"
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1610.02915": {
+  "expected": "Deep Pyramidal Residual Networks",
+  "found": {
+   "title": "Deep Pyramidal Residual Networks",
+   "year": "2016",
+   "authors": [
+    "Dongyoon Han",
+    "Jiwhan Kim",
+    "Junmo Kim"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2206.13089": {
+  "expected": "Agreement-on-the-Line: Predicting the Performance of Neural Networks under Distribution Shift",
+  "found": {
+   "title": "Agreement-on-the-Line: Predicting the Performance of Neural Networks under Distribution Shift",
+   "year": "2022",
+   "authors": [
+    "Christina Baek",
+    "Yiding Jiang",
+    "Aditi Raghunathan",
+    "Zico Kolter"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1906.02629": {
+  "expected": "When Does Label Smoothing Help?",
+  "found": {
+   "title": "When Does Label Smoothing Help?",
+   "year": "2019",
+   "authors": [
+    "Rafael M\u00fcller",
+    "Simon Kornblith",
+    "Geoffrey Hinton"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2106.05945": {
+  "expected": "Does Knowledge Distillation Really Work?",
+  "found": {
+   "title": "Does Knowledge Distillation Really Work?",
+   "year": "2021",
+   "authors": [
+    "Samuel Stanton",
+    "Pavel Izmailov",
+    "Polina Kirichenko",
+    "Alexander A. Alemi",
+    "Andrew Gordon Wilson"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2311.01441": {
+  "expected": "Distilling Out-of-Distribution Robustness from Vision-Language Foundation Models",
+  "found": {
+   "title": "Distilling Out-of-Distribution Robustness from Vision-Language Foundation Models",
+   "year": "2023",
+   "authors": [
+    "Andy Zhou",
+    "Jindong Wang",
+    "Yu-Xiong Wang",
+    "Haohan Wang"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1902.00423": {
+  "expected": "Do We Train on Test Data? Purging CIFAR of Near-Duplicates",
+  "found": {
+   "title": "Do We Train on Test Data? Purging CIFAR of Near-Duplicates",
+   "year": "2019",
+   "authors": [
+    "Bj\u00f6rn Barz",
+    "Joachim Denzler"
+   ],
+   "journal_ref": "Journal of Imaging. 2020; 6(6):41"
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1903.12261": {
+  "expected": "Benchmarking Neural Network Robustness to Common Corruptions and Perturbations",
+  "found": {
+   "title": "Benchmarking Neural Network Robustness to Common Corruptions and Perturbations",
+   "year": "2019",
+   "authors": [
+    "Dan Hendrycks",
+    "Thomas Dietterich"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1910.05872": {
+  "expected": "Self-supervised Label Augmentation via Input Transformations",
+  "found": {
+   "title": "Self-supervised Label Augmentation via Input Transformations",
+   "year": "2019",
+   "authors": [
+    "Hankook Lee",
+    "Sung Ju Hwang",
+    "Jinwoo Shin"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1906.12340": {
+  "expected": "Using Self-Supervised Learning Can Improve Model Robustness and Uncertainty",
+  "found": {
+   "title": "Using Self-Supervised Learning Can Improve Model Robustness and Uncertainty",
+   "year": "2019",
+   "authors": [
+    "Dan Hendrycks",
+    "Mantas Mazeika",
+    "Saurav Kadavath",
+    "Dawn Song"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2006.16971": {
+  "expected": "Improving robustness against common corruptions by covariate shift adaptation",
+  "found": {
+   "title": "Improving robustness against common corruptions by covariate shift adaptation",
+   "year": "2020",
+   "authors": [
+    "Steffen Schneider",
+    "Evgenia Rusak",
+    "Luisa Eck",
+    "Oliver Bringmann",
+    "Wieland Brendel",
+    "Matthias Bethge"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2006.10726": {
+  "expected": "Tent: Fully Test-time Adaptation by Entropy Minimization",
+  "found": {
+   "title": "Tent: Fully Test-time Adaptation by Entropy Minimization",
+   "year": "2020",
+   "authors": [
+    "Dequan Wang",
+    "Evan Shelhamer",
+    "Shaoteng Liu",
+    "Bruno Olshausen",
+    "Trevor Darrell"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1812.01187": {
+  "expected": "Bag of Tricks for Image Classification with Convolutional Neural Networks",
+  "found": {
+   "title": "Bag of Tricks for Image Classification with Convolutional Neural Networks",
+   "year": "2018",
+   "authors": [
+    "Tong He",
+    "Zhi Zhang",
+    "Hang Zhang",
+    "Zhongyue Zhang",
+    "Junyuan Xie",
+    "Mu Li"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1706.04599": {
+  "expected": "On Calibration of Modern Neural Networks",
+  "found": {
+   "title": "On Calibration of Modern Neural Networks",
+   "year": "2017",
+   "authors": [
+    "Chuan Guo",
+    "Geoff Pleiss",
+    "Yu Sun",
+    "Kilian Q. Weinberger"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2302.01381": {
+  "expected": "Effective Robustness against Natural Distribution Shifts for Models with Different Training Data",
+  "found": {
+   "title": "Effective Robustness against Natural Distribution Shifts for Models with Different Training Data",
+   "year": "2023",
+   "authors": [
+    "Zhouxing Shi",
+    "Nicholas Carlini",
+    "Ananth Balashankar",
+    "Ludwig Schmidt",
+    "Cho-Jui Hsieh",
+    "Alex Beutel",
+    "Yao Qin"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2206.06232": {
+  "expected": "Towards Understanding Sharpness-Aware Minimization",
+  "found": {
+   "title": "Towards Understanding Sharpness-Aware Minimization",
+   "year": "2022",
+   "authors": [
+    "Maksym Andriushchenko",
+    "Nicolas Flammarion"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1805.09501": {
+  "expected": "AutoAugment: Learning Augmentation Policies from Data",
+  "found": {
+   "title": "AutoAugment: Learning Augmentation Policies from Data",
+   "year": "2018",
+   "authors": [
+    "Ekin D. Cubuk",
+    "Barret Zoph",
+    "Dandelion Mane",
+    "Vijay Vasudevan",
+    "Quoc V. Le"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "2112.05135": {
+  "expected": "PixMix: Dreamlike Pictures Comprehensively Improve Safety Measures",
+  "found": {
+   "title": "PixMix: Dreamlike Pictures Comprehensively Improve Safety Measures",
+   "year": "2021",
+   "authors": [
+    "Dan Hendrycks",
+    "Andy Zou",
+    "Mantas Mazeika",
+    "Leonard Tang",
+    "Bo Li",
+    "Dawn Song",
+    "Jacob Steinhardt"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ },
+ "1803.05407": {
+  "expected": "Averaging Weights Leads to Wider Optima and Better Generalization",
+  "found": {
+   "title": "Averaging Weights Leads to Wider Optima and Better Generalization",
+   "year": "2018",
+   "authors": [
+    "Pavel Izmailov",
+    "Dmitrii Podoprikhin",
+    "Timur Garipov",
+    "Dmitry Vetrov",
+    "Andrew Gordon Wilson"
+   ],
+   "journal_ref": null
+  },
+  "similarity": 1.0,
+  "verdict": "PASS"
+ }
+}

@@ -1,0 +1,327 @@
+[
+  {
+    "title": "Evaluating Prediction Uncertainty Estimates from BatchEnsemble",
+    "authors": [
+      "Morten Blørstad",
+      "Herman Jangsett Mostein",
+      "Nello Blaser",
+      "Pekka Parviainen"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Deep learning models struggle with uncertainty estimation. Many approaches are either computationally infeasible or underestimate uncertainty. We investigate \\textit{BatchEnsemble} as a general and scalable method for uncertainty estimation across both tabular and time series tasks. To extend BatchEnsemble to sequential modeling, we introduce GRUBE, a novel BatchEnsemble GRU cell. We compare the BatchEnsemble to Monte Carlo dropout and deep ensemble models. Our results show that BatchEnsemble matches the uncertainty estimation performance of deep ensembles, and clearly outperforms Monte Carlo dropout. GRUBE achieves similar or better performance in both prediction and uncertainty estimation. These findings show that BatchEnsemble and GRUBE achieve similar performance with fewer parameters and reduced training and inference time compared to traditional ensembles.",
+    "url": "http://arxiv.org/abs/2601.21581v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "BatchEnsemble: An Alternative Approach to Efficient Ensemble and Lifelong Learning",
+    "authors": [
+      "Yeming Wen",
+      "Dustin Tran",
+      "Jimmy Ba"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Ensembles, where multiple neural networks are trained individually and their predictions are averaged, have been shown to be widely successful for improving both the accuracy and predictive uncertainty of single neural networks. However, an ensemble's cost for both training and testing increases linearly with the number of networks, which quickly becomes untenable.\n  In this paper, we propose BatchEnsemble, an ensemble method whose computational and memory costs are significantly lower than typical ensembles. BatchEnsemble achieves this by defining each weight matrix to be the Hadamard product of a shared weight among all ensemble members and a rank-one matrix per member. Unlike ensembles, BatchEnsemble is not only parallelizable across devices, where one device trains one member, but also parallelizable within a device, where multiple ensemble members are updated simultaneously for a given mini-batch. Across CIFAR-10, CIFAR-100, WMT14 EN-DE/EN-FR translation, and out-of-distribution tasks, BatchEnsemble yields competitive accuracy and uncertainties as typical ensembles; the speedup at test time is 3X and memory reduction is 3X at an ensemble of size 4. We also apply BatchEnsemble to lifelong learning, where on Split-CIFAR-100, BatchEnsemble yields comparable performance to progressive neural networks while having a much lower computational and memory costs. We further show that BatchEnsemble can easily scale up to lifelong learning on Split-ImageNet which involves 100 sequential learning tasks.",
+    "url": "http://arxiv.org/abs/2002.06715v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Is BatchEnsemble a Single Model? On Calibration and Diversity of Efficient Ensembles",
+    "authors": [
+      "Anton Zamyatin",
+      "Patrick Indri",
+      "Sagar Malhotra",
+      "Thomas Gärtner"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "In resource-constrained and low-latency settings, uncertainty estimates must be efficiently obtained. Deep Ensembles provide robust epistemic uncertainty (EU) but require training multiple full-size models. BatchEnsemble aims to deliver ensemble-like EU at far lower parameter and memory cost by applying learned rank-1 perturbations to a shared base network. We show that BatchEnsemble not only underperforms Deep Ensembles but closely tracks a single model baseline in terms of accuracy, calibration and out-of-distribution (OOD) detection on CIFAR10/10C/SVHN. A controlled study on MNIST finds members are near-identical in function and parameter space, indicating limited capacity to realize distinct predictive modes. Thus, BatchEnsemble behaves more like a single model than a true ensemble.",
+    "url": "http://arxiv.org/abs/2601.16936v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Cortical representations of Auditory Perception using Graph Independent Component on EEG",
+    "authors": [
+      "Pranav Sankhe",
+      "Ritik Madan"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Recent studies indicate that the neurons involved in a cognitive task aren't locally limited but span out to multiple human brain regions. We obtain network components and their locations for the task of listening to music. The recorded EEG data is modeled as a graph, and it is assumed that the overall activity is a contribution of several independent subnetworks. To identify these intrinsic cognitive subnetworks corresponding to music perception, we propose to decompose the whole brain graph-network into multiple subnetworks. We perform this decomposition to a group of brain networks by performing Graph-Independent Component Analysis. Graph-ICA is a variant of ICA that decomposes the measured graph into independent source graphs. Having obtained independent subnetworks, we calculate the electrode positions by computing the local maxima of these subnetwork matrices. We observe that the computed electrodes' location corresponds to the temporal lobes and the Broca's area, which are indeed involved in the task of auditory processing and perception. The computed electrodes also span the brain's frontal lobe, which is involved in attention and generating a stimulus-evoked response. The weight of the subnetwork that corresponds to the aforementioned brain regions increases with the increase in the music recording's tempo. The results suggest that whole-brain networks can be decomposed into independent subnetworks and analyze cognitive responses to music stimulus.",
+    "url": "http://arxiv.org/abs/2110.12904v1",
+    "doi": "10.17605/OSF.IO/DTC3G",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Leukocyte Classification using Multimodal Architecture Enhanced by Knowledge Distillation",
+    "authors": [
+      "Litao Yang",
+      "Deval Mehta",
+      "Dwarikanath Mahapatra",
+      "Zongyuan Ge"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Recently, a lot of automated white blood cells (WBC) or leukocyte classification techniques have been developed. However, all of these methods only utilize a single modality microscopic image i.e. either blood smear or fluorescence based, thus missing the potential of a better learning from multimodal images. In this work, we develop an efficient multimodal architecture based on a first of its kind multimodal WBC dataset for the task of WBC classification. Specifically, our proposed idea is developed in two steps - 1) First, we learn modality specific independent subnetworks inside a single network only; 2) We further enhance the learning capability of the independent subnetworks by distilling knowledge from high complexity independent teacher networks. With this, our proposed framework can achieve a high performance while maintaining low complexity for a multimodal dataset. Our unique contribution is two-fold - 1) We present a first of its kind multimodal WBC dataset for WBC classification; 2) We develop a high performing multimodal architecture which is also efficient and low in complexity at the same time.",
+    "url": "http://arxiv.org/abs/2208.08331v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Packed-Ensemble Surrogate Models for Fluid Flow Estimation Arround Airfoil Geometries",
+    "authors": [
+      "Anthony Kalaydjian",
+      "Anton Balykov",
+      "Alexi Semiz",
+      "Adrien Chan-Hon-Tong"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Physical based simulations can be very time and computationally demanding tasks. One way of accelerating these processes is by making use of data-driven surrogate models that learn from existing simulations. Ensembling methods are particularly relevant in this domain as their smoothness properties coincide with the smoothness of physical phenomena. The drawback is that they can remain costly. This research project focused on studying Packed-Ensembles that generalize Deep Ensembles but remain faster to train. Several models have been trained and compared in terms of multiple important metrics. PE(8,4,1) has been identified as the clear winner in this particular task, beating down its Deep Ensemble conterpart while accelerating the training time by 25%.",
+    "url": "http://arxiv.org/abs/2312.13403v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "LoMETab: Beyond Rank-1 Ensembles for Tabular Deep Learning",
+    "authors": [
+      "Changryeol Choi",
+      "Hyewon Park",
+      "Yujin Kwon",
+      "Gowun Jeong"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Recent tabular learning benchmarks increasingly show a tight performance cluster rather than a clear hierarchy among leading methods, spanning gradient boosted decision trees, attention-based architectures, and implicit ensembles such as TabM. As benchmark gains plateau, a complementary goal is to understand and control the mechanisms that make simple neural tabular models competitive. We propose LoMETab, a rank-$r$ generalization of multiplicative implicit ensembles. LoMETab lifts the rank-1 BatchEnsemble/TabM modulation to a rank-$r$ identity-residual Hadamard family by parameterizing each member weight as $W_k = W \\odot (1 + A_kB_k^\\top)$, where $W$ is shared and $(A_k, B_k)$ are member-specific low-rank factors. This exposes two practical diversity-control axes: the adapter rank $r$ and the initialization scale $σ_{\\mathrm{init}}$, and we prove that for $r \\ge 2$ this generalization strictly enlarges BatchEnsemble's hypothesis class. Empirically, we show that this added capacity manifests as measurable predictive diversity after training: on representative classification datasets, LoMETab sustains higher pairwise KL than an additive low-rank ablation, and $(r, σ_{\\mathrm{init}})$ provides broad control over pairwise KL, varying by up to several orders of magnitude across configurations. The induced diversity is reflected in task-appropriate output-level measures: argmax disagreement for classification and ambiguity for regression, indicating that the control extends beyond pairwise KL to decision- and output-level member variation. Finally, experiments sweeping over adapter rank $r$ and initialization scale $σ_{\\mathrm{init}}$ reveal that predictive performance is dataset-dependent over the $(r, σ_{\\mathrm{init}})$ grid, supporting LoMETab as a controllable family of implicit ensembles rather than a fixed rank-1 construction.",
+    "url": "http://arxiv.org/abs/2605.14365v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Packed-Ensembles for Efficient Uncertainty Estimation",
+    "authors": [
+      "Olivier Laurent",
+      "Adrien Lafage",
+      "Enzo Tartaglione",
+      "Geoffrey Daniel",
+      "Jean-Marc Martinez",
+      "Andrei Bursuc",
+      "Gianni Franchi"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Deep Ensembles (DE) are a prominent approach for achieving excellent performance on key metrics such as accuracy, calibration, uncertainty estimation, and out-of-distribution detection. However, hardware limitations of real-world systems constrain to smaller ensembles and lower-capacity networks, significantly deteriorating their performance and properties. We introduce Packed-Ensembles (PE), a strategy to design and train lightweight structured ensembles by carefully modulating the dimension of their encoding space. We leverage grouped convolutions to parallelize the ensemble into a single shared backbone and forward pass to improve training and inference speeds. PE is designed to operate within the memory limits of a standard neural network. Our extensive research indicates that PE accurately preserves the properties of DE, such as diversity, and performs equally well in terms of accuracy, calibration, out-of-distribution detection, and robustness to distribution shift. We make our code available at https://github.com/ENSTA-U2IS/torch-uncertainty.",
+    "url": "http://arxiv.org/abs/2210.09184v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Embedded Ensembles: Infinite Width Limit and Operating Regimes",
+    "authors": [
+      "Maksim Velikanov",
+      "Roman Kail",
+      "Ivan Anokhin",
+      "Roman Vashurin",
+      "Maxim Panov",
+      "Alexey Zaytsev",
+      "Dmitry Yarotsky"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "A memory efficient approach to ensembling neural networks is to share most weights among the ensembled models by means of a single reference network. We refer to this strategy as Embedded Ensembling (EE); its particular examples are BatchEnsembles and Monte-Carlo dropout ensembles. In this paper we perform a systematic theoretical and empirical analysis of embedded ensembles with different number of models. Theoretically, we use a Neural-Tangent-Kernel-based approach to derive the wide network limit of the gradient descent dynamics. In this limit, we identify two ensemble regimes - independent and collective - depending on the architecture and initialization strategy of ensemble models. We prove that in the independent regime the embedded ensemble behaves as an ensemble of independent models. We confirm our theoretical prediction with a wide range of experiments with finite networks, and further study empirically various effects such as transition between the two regimes, scaling of ensemble performance with the network width and number of models, and dependence of performance on a number of architecture and hyperparameter choices.",
+    "url": "http://arxiv.org/abs/2202.12297v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "LoRA-Ensemble: Efficient Uncertainty Modelling for Self-Attention Networks",
+    "authors": [
+      "Dominik J. Mühlematter",
+      "Michelle Halbheer",
+      "Alexander Becker",
+      "Dominik Narnhofer",
+      "Helge Aasen",
+      "Konrad Schindler",
+      "Mehmet Ozgur Turkoglu"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Numerous real-world decisions rely on machine learning algorithms and require calibrated uncertainty estimates. However, modern methods often yield overconfident, uncalibrated predictions. The dominant approach to quantifying the uncertainty inherent in the model is to train an ensemble of separate predictors and measure their empirical variance. In an explicit implementation, the ensemble has a high computational cost and memory footprint, especially if the base model itself is already large, like modern transformers. This motivates efforts to develop implicit ensemble methods that emulate the ensemble without explicitly instantiating all its members. We introduce LoRA-Ensemble, a parameter-efficient ensembling method for self-attention networks. It is based on Low-Rank Adaptation (LoRA), originally developed for efficient LLM fine-tuning, and extends it into an implicit ensembling scheme, where all ensemble members share the same, pre-trained self-attention network, but have individual low-rank matrices for the attention projections. The resulting method not only outperforms state-of-the-art implicit techniques like BatchEnsemble, but even matches or exceeds the accuracy of an Explicit Ensemble, while at the same time achieving superior calibration.",
+    "url": "http://arxiv.org/abs/2405.14438v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Encoding the latent posterior of Bayesian Neural Networks for uncertainty quantification",
+    "authors": [
+      "Gianni Franchi",
+      "Andrei Bursuc",
+      "Emanuel Aldea",
+      "Severine Dubuisson",
+      "Isabelle Bloch"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Bayesian neural networks (BNNs) have been long considered an ideal, yet unscalable solution for improving the robustness and the predictive uncertainty of deep neural networks. While they could capture more accurately the posterior distribution of the network parameters, most BNN approaches are either limited to small networks or rely on constraining assumptions such as parameter independence. These drawbacks have enabled prominence of simple, but computationally heavy approaches such as Deep Ensembles, whose training and testing costs increase linearly with the number of networks. In this work we aim for efficient deep BNNs amenable to complex computer vision architectures, e.g. ResNet50 DeepLabV3+, and tasks, e.g. semantic segmentation, with fewer assumptions on the parameters. We achieve this by leveraging variational autoencoders (VAEs) to learn the interaction and the latent distribution of the parameters at each network layer. Our approach, Latent-Posterior BNN (LP-BNN), is compatible with the recent BatchEnsemble method, leading to highly efficient ({in terms of computation and} memory during both training and testing) ensembles. LP-BNN s attain competitive results across multiple metrics in several challenging benchmarks for image classification, semantic segmentation and out-of-distribution detection.",
+    "url": "http://arxiv.org/abs/2012.02818v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Reducing Bias and Variance: Generative Semantic Guidance and Bi-Layer Ensemble for Image Clustering",
+    "authors": [
+      "Feijiang Li",
+      "Zhenxiong Li",
+      "Jieting Wang",
+      "Zizheng Jiu",
+      "Saixiong Liu",
+      "Liang Du"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Image clustering aims to partition unlabeled image datasets into distinct groups. A core aspect of this task is constructing and leveraging prior knowledge to guide the clustering process. Recent approaches introduce semantic descriptions as prior information, most of which typically relying on matching-based techniques with predefined vocabularies. However, the limited matching space restricts their adaptability to downstream clustering tasks. Moreover, these methods primarily focus on reducing bias to improve performance, frequently overlooking the importance of variance reduction. To address these limitations, we propose GSEC (Image Clustering based on Generative Semantic Guidance and Bi-Layer Ensemble), a framework designed to reduce bias through generative semantic guidance and mitigate variance via ensemble learning. Our method employs Multimodal Large Language Models to generate semantic descriptions and derive image embeddings via weighted averaging. Additionally, a bi-layer ensemble strategy integrates cross-modal information through BatchEnsemble in the inner layer and aligns outputs via an alignment mechanism in the outer layer. Comparative experiments demonstrate that GSEC outperforms 18 state-of-the-art methods across six benchmark datasets, while further analysis confirms its effectiveness in simultaneously reducing both bias and variance. The code is available at https://github.com/2017LI/GSEC.git.",
+    "url": "http://arxiv.org/abs/2605.12961v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Learning the Structure of Triangular Transport Maps",
+    "authors": [
+      "Morten Blørstad",
+      "Pekka Parviainen",
+      "Berent Ånund Strømnes Lunde"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Triangular transport maps provide a flexible approach to sampling-based probabilistic modeling, including density estimation, generative modeling, and Bayesian inference. They transform an unknown target distribution into a simpler reference through a monotone triangular map. The map structure is defined by a variable ordering and sparsity pattern, which together encode a directed acyclic graph. Map quality can depend strongly on this structure, yet finding a good structure is computationally expensive because each candidate generally requires fitting a different map. A central challenge is therefore to learn density and structure jointly, while keeping computation manageable as dimension grows. We introduce Self-Structuring Transport Maps (SSTM), which learn the map, ordering, and sparsity jointly. We use SoftSort to learn the variable ordering and $L_0$ gates to learn the sparsity, while preserving a triangular structure. To keep the map scalable, we use a monotone BatchEnsemble that shares one weight matrix across all map components through rank-one adapters. Across synthetic and real data, jointly learning the structure and map gives better density estimates than estimating the structure first. When the structure is identifiable from the density, SSTM matches the density performance of a map fitted with the true structure and outperforms autoregressive flows. On large datasets, SSTM is competitive with autoregressive flows.",
+    "url": "http://arxiv.org/abs/2609.37122v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards a Better Theoretical Understanding of Independent Subnetwork Training",
+    "authors": [
+      "Egor Shulgin",
+      "Peter Richtárik"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Modern advancements in large-scale machine learning would be impossible without the paradigm of data-parallel distributed computing. Since distributed computing with large-scale models imparts excessive pressure on communication channels, significant recent research has been directed toward co-designing communication compression strategies and training algorithms with the goal of reducing communication costs. While pure data parallelism allows better data scaling, it suffers from poor model scaling properties. Indeed, compute nodes are severely limited by memory constraints, preventing further increases in model size. For this reason, the latest achievements in training giant neural network models also rely on some form of model parallelism. In this work, we take a closer theoretical look at Independent Subnetwork Training (IST), which is a recently proposed and highly effective technique for solving the aforementioned problems. We identify fundamental differences between IST and alternative approaches, such as distributed methods with compressed communication, and provide a precise analysis of its optimization performance on a quadratic model.",
+    "url": "http://arxiv.org/abs/2306.16484v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Subradiance in Multiply Excited States of Dipole-Coupled V-Type Atoms",
+    "authors": [
+      "Raphael Holzinger",
+      "Laurin Ostermann",
+      "Helmut Ritsch"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "We generalize the theoretical modeling of collective atomic super- and subradiance to the multilevel case including spontaneous emission from several excited states towards a common ground state. We show that in a closely packed ensemble of $N$ atoms with $N-1$ distinct excited states each, one can find a new class of non-radiating dark states,, which allows for long-term storage of $N-1$ photonic excitations. Via dipole-dipole coupling only a single atom in the ground state is sufficient in order to suppress the decay of all $N-1$ other atoms. By means of some generic geometric configurations, like a triangle of V-type atoms or a chain of atoms with a $J=0 \\to J=1$ transition, we study such subradiance including dipole-dipole interactions and show that even at finite distances long lifetimes can be observed. While generally hard to prepare deterministically, we identify various possibilities for a probabilistic preparation via a phase controlled laser pump and decay.",
+    "url": "http://arxiv.org/abs/1905.01483v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Surface permeability and surface flow tortuosity of particulate porous media",
+    "authors": [
+      "Penpark Sirimark",
+      "Alex V. Lukyanov",
+      "Tristan Pryer"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "The dispersion process in particulate porous media at low saturation levels takes place over the surface elements of constituent particles and, as we have found previously by comparison with experiments, can be accurately described by super-fast non-linear diffusion partial differential equations. To enhance the predictive power of the mathematical model in practical applications, one requires the knowledge of the effective surface permeability of the particle-in-contact ensemble, which can be directly related with the macroscopic permeability of the particulate media. We have shown previously that permeability of a single particulate element can be accurately determined through the solution of the Laplace-Beltrami Dirichlet boundary-value problem. Here, we demonstrate how that methodology can be applied to study permeability of a randomly packed ensemble of interconnected particles. Using surface finite element techniques we examine numerical solutions to the Laplace-Beltrami problem set in the multiply-connected domains of interconnected particles. We are able to rigorously estimate tortuosity effects of the surface flows in a particle ensemble setting.",
+    "url": "http://arxiv.org/abs/1906.03081v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Independent, Incidence Independent and Weakly Reversible Decompositions of Chemical Reaction Networks",
+    "authors": [
+      "Bryan S. Hernandez",
+      "Deza A. Amistas",
+      "Ralph John L. De la Cruz",
+      "Lauro L. Fontanil",
+      "Aurelio A. de los Reyes",
+      "Eduardo R. Mendoza"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Chemical reaction networks (CRNs) are directed graphs with reactant or product complexes as vertices, and reactions as arcs. A CRN is weakly reversible if each of its connected components is strongly connected. Weakly reversible networks can be considered as the most important class of reaction networks. Now, the stoichiometric subspace of a network is the linear span of the reaction vectors (i.e., difference between the product and the reactant complexes). A decomposition of a CRN is independent (incidence independent) if the direct sum of the stoichiometric subspaces (incidence maps) of the subnetworks equals the stoichiometric subspace (incidence map) of the whole network. Decompositions can be used to study relationships between steady states of the whole system (induced from partitioning the reaction set of the underlying network) and those of its subsystems. In this work, we revisit our novel method of finding independent decomposition, and use it to expand applicability on (vector) components of steady states. We also explore CRNs with embedded deficiency zero independent subnetworks. In addition, we establish a method for finding incidence independent decomposition of a CRN. We determine all the forms of independent and incidence independent decompositions of a network, and provide the number of such decompositions. Lastly, for weakly reversible networks, we determine that incidence independence is a sufficient condition for weak reversibility of a decomposition, and we identify subclasses of weakly reversible networks where any independent decomposition is weakly reversible.",
+    "url": "http://arxiv.org/abs/2108.05546v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Energy-Efficient Clustered Cell-Free Networking with Access Point Selection",
+    "authors": [
+      "Ouyang Zhou",
+      "Junyuan Wang",
+      "Fuqiang Liu",
+      "Jiangzhou Wang"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Ultra-densely deploying access points (APs) to support the increasing data traffic would significantly escalate the cell-edge problem resulting from traditional cellular networks. By removing the cell boundaries and coordinating all APs for joint transmission, the cell-edge problem can be alleviated, which in turn leads to unaffordable system complexity and channel measurement overhead. A new scalable clustered cell-free network architecture has been proposed recently, under which the large-scale network is flexibly partitioned into a set of independent subnetworks operating parallelly. In this paper, we study the energy-efficient clustered cell-free networking problem with AP selection. Specifically, we propose a user-centric ratio-fixed AP-selection based clustering (UCR-ApSel) algorithm to form subnetworks dynamically. Following this, we analyze the average energy efficiency achieved with the proposed UCR-ApSel scheme theoretically and derive an effective closed-form upper-bound. Based on the analytical upper-bound expression, the optimal AP-selection ratio that maximizes the average energy efficiency is further derived as a simple explicit function of the total number of APs and the number of subnetworks. Simulation results demonstrate the effectiveness of the derived optimal AP-selection ratio and show that the proposed UCR-ApSel algorithm with the optimal AP-selection ratio achieves around 40% higher energy efficiency than the baselines. The analysis provides important insights to the design and optimization of future ultra-dense wireless communication systems.",
+    "url": "http://arxiv.org/abs/2403.00339v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A decomposition-based approach for deriving positive steady states of a class of chemical reaction networks with non-mass-action kinetics",
+    "authors": [
+      "Bryan S. Hernandez",
+      "Patrick Vincent N. Lubenia"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Steady states are frequently used to investigate the long-term behaviors of (bio)-chemical systems. Recently, there has been a growing interest in network-based approaches due to their efficiency in deriving parametrizations of positive steady states in systems with mass-action kinetics. In this study, we extend this approach to derive positive steady states in networks under non-mass-action kinetics, specifically mixed kinetics. In a system with mixed kinetics, some reactions {may follow} mass-action kinetics, while others in the same network follow different rate laws, such as quotient rate laws. An example of such complexity is evident in a mathematical model of the insulin signaling pathway in type 2 diabetes. To compute its positive {steady states}, we adapt our existing network decomposition approach, originally designed for mass-action kinetics, to handle networks with non-mass-action kinetics. This approach involves breaking down a given network into smaller, independent subnetworks to derive the positive steady states of each subnetwork separately. These individual steady states are then combined to obtain the positive steady states of the entire network. This strategy makes computations more manageable for complex and large networks. More importantly, this method could separate reactions with purely mass-action kinetics into certain subnetworks from those that follow different rate laws. We also present an illustrative example that provides insights into methods for transforming networks with mixed kinetics into their associated mass-action systems.",
+    "url": "http://arxiv.org/abs/2304.11594v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Decomposed Linear Dynamical Systems (dLDS) for learning the latent components of neural dynamics",
+    "authors": [
+      "Noga Mudrik",
+      "Yenho Chen",
+      "Eva Yezerets",
+      "Christopher J. Rozell",
+      "Adam S. Charles"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Learning interpretable representations of neural dynamics at a population level is a crucial first step to understanding how observed neural activity relates to perception and behavior. Models of neural dynamics often focus on either low-dimensional projections of neural activity, or on learning dynamical systems that explicitly relate to the neural state over time. We discuss how these two approaches are interrelated by considering dynamical systems as representative of flows on a low-dimensional manifold. Building on this concept, we propose a new decomposed dynamical system model that represents complex non-stationary and nonlinear dynamics of time series data as a sparse combination of simpler, more interpretable components. Our model is trained through a dictionary learning procedure, where we leverage recent results in tracking sparse vectors over time. The decomposed nature of the dynamics is more expressive than previous switched approaches for a given number of parameters and enables modeling of overlapping and non-stationary dynamics. In both continuous-time and discrete-time instructional examples we demonstrate that our model can well approximate the original system, learn efficient representations, and capture smooth transitions between dynamical modes, focusing on intuitive low-dimensional non-stationary linear and nonlinear systems. Furthermore, we highlight our model's ability to efficiently capture and demix population dynamics generated from multiple independent subnetworks, a task that is computationally impractical for switched models. Finally, we apply our model to neural \"full brain\" recordings of C. elegans data, illustrating a diversity of dynamics that is obscured when classified into discrete states.",
+    "url": "http://arxiv.org/abs/2206.02972v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

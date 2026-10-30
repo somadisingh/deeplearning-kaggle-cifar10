@@ -1,0 +1,220 @@
+[
+  {
+    "title": "Improving Out-of-Distribution Detection in Echocardiographic View Classication through Enhancing Semantic Features",
+    "authors": [
+      "Jaeik Jeon",
+      "Seongmin Ha",
+      "Yeonggul Jang",
+      "Yeonyee E. Yoon",
+      "Jiyeon Kim",
+      "Hyunseok Jeong",
+      "Dawun Jeong",
+      "Youngtaek Hong",
+      "Seung-Ah Lee Hyuk-Jae Chang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In echocardiographic view classification, accurately detecting out-of-distribution (OOD) data is essential but challenging, especially given the subtle differences between in-distribution and OOD data. While conventional OOD detection methods, such as Mahalanobis distance (MD) are effective in far-OOD scenarios with clear distinctions between distributions, they struggle to discern the less obvious variations characteristic of echocardiographic data. In this study, we introduce a novel use of label smoothing to enhance semantic feature representation in echocardiographic images, demonstrating that these enriched semantic features are key for significantly improving near-OOD instance detection. By combining label smoothing with MD-based OOD detection, we establish a new benchmark for accuracy in echocardiographic OOD detection.",
+    "url": "http://arxiv.org/abs/2308.16483v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Label Smoothed Embedding Hypothesis for Out-of-Distribution Detection",
+    "authors": [
+      "Dara Bahri",
+      "Heinrich Jiang",
+      "Yi Tay",
+      "Donald Metzler"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Detecting out-of-distribution (OOD) examples is critical in many applications. We propose an unsupervised method to detect OOD samples using a $k$-NN density estimate with respect to a classification model's intermediate activations on in-distribution samples. We leverage a recent insight about label smoothing, which we call the \\emph{Label Smoothed Embedding Hypothesis}, and show that one of the implications is that the $k$-NN density estimator performs better as an OOD detection method both theoretically and empirically when the model is trained with label smoothing. Finally, we show that our proposal outperforms many OOD baselines and also provide new finite-sample high-probability statistical results for $k$-NN density estimation's ability to detect OOD examples.",
+    "url": "http://arxiv.org/abs/2102.05131v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Adaptive Label Smoothing for Out-of-Distribution Detection",
+    "authors": [
+      "Mingle Xu",
+      "Jaehwan Lee",
+      "Sook Yoon",
+      "Dong Sun Park"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Out-of-distribution (OOD) detection, which aims to distinguish unknown classes from known classes, has received increasing attention recently. A main challenge within is the unavailable of samples from the unknown classes in the training process, and an effective strategy is to improve the performance for known classes. Using beneficial strategies such as data augmentation and longer training is thus a way to improve OOD detection. However, label smoothing, an effective method for classifying known classes, degrades the performance of OOD detection, and this phenomenon is under exploration. In this paper, we first analyze that the limited and predefined learning target in label smoothing results in the smaller maximal probability and logit, which further leads to worse OOD detection performance. To mitigate this issue, we then propose a novel regularization method, called adaptive label smoothing (ALS), and the core is to push the non-true classes to have same probabilities whereas the maximal probability is neither fixed nor limited. Extensive experimental results in six datasets with two backbones suggest that ALS contributes to classifying known samples and discerning unknown samples with clear margins. Our code will be available to the public.",
+    "url": "http://arxiv.org/abs/2410.06134v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Adversarial Unlearning: Reducing Confidence Along Adversarial Directions",
+    "authors": [
+      "Amrith Setlur",
+      "Benjamin Eysenbach",
+      "Virginia Smith",
+      "Sergey Levine"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Supervised learning methods trained with maximum likelihood objectives often overfit on training data. Most regularizers that prevent overfitting look to increase confidence on additional examples (e.g., data augmentation, adversarial training), or reduce it on training data (e.g., label smoothing). In this work we propose a complementary regularization strategy that reduces confidence on self-generated examples. The method, which we call RCAD (Reducing Confidence along Adversarial Directions), aims to reduce confidence on out-of-distribution examples lying along directions adversarially chosen to increase training loss. In contrast to adversarial training, RCAD does not try to robustify the model to output the original label, but rather regularizes it to have reduced confidence on points generated using much larger perturbations than in conventional adversarial training. RCAD can be easily integrated into training pipelines with a few lines of code. Despite its simplicity, we find on many classification benchmarks that RCAD can be added to existing techniques (e.g., label smoothing, MixUp training) to increase test accuracy by 1-3% in absolute value, with more significant gains in the low data regime. We also provide a theoretical analysis that helps to explain these benefits in simplified settings, showing that RCAD can provably help the model unlearn spurious features in the training data.",
+    "url": "http://arxiv.org/abs/2206.01367v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "EchoGLAD: Hierarchical Graph Neural Networks for Left Ventricle Landmark Detection on Echocardiograms",
+    "authors": [
+      "Masoud Mokhtari",
+      "Mobina Mahdavi",
+      "Hooman Vaseli",
+      "Christina Luong",
+      "Purang Abolmaesumi",
+      "Teresa S. M. Tsang",
+      "Renjie Liao"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "The functional assessment of the left ventricle chamber of the heart requires detecting four landmark locations and measuring the internal dimension of the left ventricle and the approximate mass of the surrounding muscle. The key challenge of automating this task with machine learning is the sparsity of clinical labels, i.e., only a few landmark pixels in a high-dimensional image are annotated, leading many prior works to heavily rely on isotropic label smoothing. However, such a label smoothing strategy ignores the anatomical information of the image and induces some bias. To address this challenge, we introduce an echocardiogram-based, hierarchical graph neural network (GNN) for left ventricle landmark detection (EchoGLAD). Our main contributions are: 1) a hierarchical graph representation learning framework for multi-resolution landmark detection via GNNs; 2) induced hierarchical supervision at different levels of granularity using a multi-level loss. We evaluate our model on a public and a private dataset under the in-distribution (ID) and out-of-distribution (OOD) settings. For the ID setting, we achieve the state-of-the-art mean absolute errors (MAEs) of 1.46 mm and 1.86 mm on the two datasets. Our model also shows better OOD generalization than prior works with a testing MAE of 4.3 mm.",
+    "url": "http://arxiv.org/abs/2307.12229v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Midpoint Regularization: from High Uncertainty Training to Conservative Classification",
+    "authors": [
+      "Hongyu Guo"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Label Smoothing (LS) improves model generalization through penalizing models from generating overconfident output distributions. For each training sample the LS strategy smooths the one-hot encoded training signal by distributing its distribution mass over the non-ground truth classes. We extend this technique by considering example pairs, coined PLS. PLS first creates midpoint samples by averaging random sample pairs and then learns a smoothing distribution during training for each of these midpoint samples, resulting in midpoints with high uncertainty labels for training. We empirically show that PLS significantly outperforms LS, achieving up to 30% of relative classification error reduction. We also visualize that PLS produces very low winning softmax scores for both in and out of distribution samples.",
+    "url": "http://arxiv.org/abs/2106.13913v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Learning Confidence for Transformer-based Neural Machine Translation",
+    "authors": [
+      "Yu Lu",
+      "Jiali Zeng",
+      "Jiajun Zhang",
+      "Shuangzhi Wu",
+      "Mu Li"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Confidence estimation aims to quantify the confidence of the model prediction, providing an expectation of success. A well-calibrated confidence estimate enables accurate failure prediction and proper risk measurement when given noisy samples and out-of-distribution data in real-world settings. However, this task remains a severe challenge for neural machine translation (NMT), where probabilities from softmax distribution fail to describe when the model is probably mistaken. To address this problem, we propose an unsupervised confidence estimate learning jointly with the training of the NMT model. We explain confidence as how many hints the NMT model needs to make a correct prediction, and more hints indicate low confidence. Specifically, the NMT model is given the option to ask for hints to improve translation accuracy at the cost of some slight penalty. Then, we approximate their level of confidence by counting the number of hints the model uses. We demonstrate that our learned confidence estimate achieves high accuracy on extensive sentence/word-level quality estimation tasks. Analytical results verify that our confidence estimate can correctly assess underlying risk in two real-world scenarios: (1) discovering noisy samples and (2) detecting out-of-domain data. We further propose a novel confidence-based instance-specific label smoothing approach based on our learned confidence estimate, which outperforms standard label smoothing.",
+    "url": "http://arxiv.org/abs/2203.11413v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Free Lunch for Domain Adversarial Training: Environment Label Smoothing",
+    "authors": [
+      "YiFan Zhang",
+      "Xue Wang",
+      "Jian Liang",
+      "Zhang Zhang",
+      "Liang Wang",
+      "Rong Jin",
+      "Tieniu Tan"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "A fundamental challenge for machine learning models is how to generalize learned models for out-of-distribution (OOD) data. Among various approaches, exploiting invariant features by Domain Adversarial Training (DAT) received widespread attention. Despite its success, we observe training instability from DAT, mostly due to over-confident domain discriminator and environment label noise. To address this issue, we proposed Environment Label Smoothing (ELS), which encourages the discriminator to output soft probability, which thus reduces the confidence of the discriminator and alleviates the impact of noisy environment labels. We demonstrate, both experimentally and theoretically, that ELS can improve training stability, local convergence, and robustness to noisy environment labels. By incorporating ELS with DAT methods, we are able to yield state-of-art results on a wide range of domain generalization/adaptation tasks, particularly when the environment labels are highly noisy.",
+    "url": "http://arxiv.org/abs/2302.00194v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Where are we with calibration under dataset shift in image classification?",
+    "authors": [
+      "Mélanie Roschewitz",
+      "Raghav Mehta",
+      "Fabio de Sousa Ribeiro",
+      "Ben Glocker"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "We conduct an extensive study on the state of calibration under real-world dataset shift for image classification. Our work provides important insights on the choice of post-hoc and in-training calibration techniques, and yields practical guidelines for all practitioners interested in robust calibration under shift. We compare various post-hoc calibration methods, and their interactions with common in-training calibration strategies (e.g., label smoothing), across a wide range of natural shifts, on eight different classification tasks across several imaging domains. We find that: (i) simultaneously applying entropy regularisation and label smoothing yield the best calibrated raw probabilities under dataset shift, (ii) post-hoc calibrators exposed to a small amount of semantic out-of-distribution data (unrelated to the task) are most robust under shift, (iii) recent calibration methods specifically aimed at increasing calibration under shifts do not necessarily offer significant improvements over simpler post-hoc calibration methods, (iv) improving calibration under shifts often comes at the cost of worsening in-distribution calibration. Importantly, these findings hold for randomly initialised classifiers, as well as for those finetuned from foundation models, the latter being consistently better calibrated compared to models trained from scratch. Finally, we conduct an in-depth analysis of ensembling effects, finding that (i) applying calibration prior to ensembling (instead of after) is more effective for calibration under shifts, (ii) for ensembles, OOD exposure deteriorates the ID-shifted calibration trade-off, (iii) ensembling remains one of the most effective methods to improve calibration robustness and, combined with finetuning from foundation models, yields best calibration results overall.",
+    "url": "http://arxiv.org/abs/2507.07780v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "SafeECGMatch: Calibration-Aware Joint Frequency and Time Space Semi-Supervised Learning for Open-Set ECG Classification",
+    "authors": [
+      "Hongkyu Koh",
+      "Ikbeom Jang"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Electrocardiogram (ECG) classification models often suffer from severe label scarcity, making semi-supervised learning (SSL) an attractive strategy for reducing annotation costs. In clinical settings, however, unlabeled pools frequently contain out-of-distribution (OOD) anomalies or diagnostic groups absent from the labeled set. Standard SSL forces incorrect pseudo-labels onto these unseen classes, producing overconfident predictions. To address this, we propose SafeECGMatch, a calibration-aware safe SSL framework for single-label ECG classification under label distribution mismatch. Methodologically, SafeECGMatch employs a dual-branch architecture extracting time-frequency latent representations via ECG-specific augmentations. Crucially, it dynamically aligns confidence with empirical accuracy through adaptive label smoothing and temperature scaling, calibrating both the multiclass classifier and the OOD detector across temporal and spectral domains. This joint optimization allows trustworthy OOD rejection and reliable pseudo-labeling. Evaluated on the PTB-XL and PhysioNet/CinC Challenge benchmarks, SafeECGMatch achieves state-of-the-art accuracy and calibration, advancing reliable knowledge discovery in physiological time-series. Code is available at https://github.com/labhai/SafeECGMatch.",
+    "url": "http://arxiv.org/abs/2606.08037v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CaliMatch: Adaptive Calibration for Improving Safe Semi-supervised Learning",
+    "authors": [
+      "Jinsoo Bae",
+      "Seoung Bum Kim",
+      "Hyungrok Do"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Semi-supervised learning (SSL) uses unlabeled data to improve the performance of machine learning models when labeled data is scarce. However, its real-world applications often face the label distribution mismatch problem, in which the unlabeled dataset includes instances whose ground-truth labels are absent from the labeled training dataset. Recent studies, referred to as safe SSL, have addressed this issue by using both classification and out-of-distribution (OOD) detection. However, the existing methods may suffer from overconfidence in deep neural networks, leading to increased SSL errors because of high confidence in incorrect pseudo-labels or OOD detection. To address this, we propose a novel method, CaliMatch, which calibrates both the classifier and the OOD detector to foster safe SSL. CaliMatch presents adaptive label smoothing and temperature scaling, which eliminates the need to manually tune the smoothing degree for effective calibration. We give a theoretical justification for why improving the calibration of both the classifier and the OOD detector is crucial in safe SSL. Extensive evaluations on CIFAR-10, CIFAR-100, SVHN, TinyImageNet, and ImageNet demonstrate that CaliMatch outperforms the existing methods in safe SSL tasks.",
+    "url": "http://arxiv.org/abs/2508.00922v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Model Calibration in Dense Classification with Adaptive Label Perturbation",
+    "authors": [
+      "Jiawei Liu",
+      "Changkun Ye",
+      "Shan Wang",
+      "Ruikai Cui",
+      "Jing Zhang",
+      "Kaihao Zhang",
+      "Nick Barnes"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "For safety-related applications, it is crucial to produce trustworthy deep neural networks whose prediction is associated with confidence that can represent the likelihood of correctness for subsequent decision-making. Existing dense binary classification models are prone to being over-confident. To improve model calibration, we propose Adaptive Stochastic Label Perturbation (ASLP) which learns a unique label perturbation level for each training image. ASLP employs our proposed Self-Calibrating Binary Cross Entropy (SC-BCE) loss, which unifies label perturbation processes including stochastic approaches (like DisturbLabel), and label smoothing, to correct calibration while maintaining classification rates. ASLP follows Maximum Entropy Inference of classic statistical mechanics to maximise prediction entropy with respect to missing information. It performs this while: (1) preserving classification accuracy on known data as a conservative solution, or (2) specifically improves model calibration degree by minimising the gap between the prediction accuracy and expected confidence of the target training label. Extensive results demonstrate that ASLP can significantly improve calibration degrees of dense binary classification models on both in-distribution and out-of-distribution data. The code is available on https://github.com/Carlisle-Liu/ASLP.",
+    "url": "http://arxiv.org/abs/2307.13539v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "On Mixup Training: Improved Calibration and Predictive Uncertainty for Deep Neural Networks",
+    "authors": [
+      "Sunil Thulasidasan",
+      "Gopinath Chennupati",
+      "Jeff Bilmes",
+      "Tanmoy Bhattacharya",
+      "Sarah Michalak"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Mixup~\\cite{zhang2017mixup} is a recently proposed method for training deep neural networks where additional samples are generated during training by convexly combining random pairs of images and their associated labels. While simple to implement, it has been shown to be a surprisingly effective method of data augmentation for image classification: DNNs trained with mixup show noticeable gains in classification performance on a number of image classification benchmarks. In this work, we discuss a hitherto untouched aspect of mixup training -- the calibration and predictive uncertainty of models trained with mixup. We find that DNNs trained with mixup are significantly better calibrated -- i.e., the predicted softmax scores are much better indicators of the actual likelihood of a correct prediction -- than DNNs trained in the regular fashion. We conduct experiments on a number of image classification architectures and datasets -- including large-scale datasets like ImageNet -- and find this to be the case. Additionally, we find that merely mixing features does not result in the same calibration benefit and that the label smoothing in mixup training plays a significant role in improving calibration. Finally, we also observe that mixup-trained DNNs are less prone to over-confident predictions on out-of-distribution and random-noise data. We conclude that the typical overconfidence seen in neural networks, even on in-distribution data is likely a consequence of training with hard labels, suggesting that mixup be employed for classification tasks where predictive uncertainty is a significant concern.",
+    "url": "http://arxiv.org/abs/1905.11001v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

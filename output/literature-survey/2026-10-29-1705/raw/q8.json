@@ -1,0 +1,333 @@
+[
+  {
+    "title": "Whitening Improves Robustness to Spurious Correlations in Linear Probes",
+    "authors": [
+      "Floris Holstege",
+      "Bram Wouters",
+      "Noud van Giersbergen",
+      "Cees Diks"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Deep neural networks tend to rely on simple features that may be spurious and thus fail to generalize. We study this problem in the setting of linear probes, where a (generalized) linear model is fitted on the representations of a (pretrained) model. We use the connection of these models to the max-margin classifier, and show they favor directions associated with large eigenvalues of the covariance matrix. Whitening removes this preference by equalizing the eigenvalues of the covariance matrix. This observation motivates whitening as a preprocessing step that can reduce reliance on spurious correlations without requiring prior knowledge of their presence or labeled data. We examine the effect of whitening on a synthetic data-generating process and standard spurious correlation benchmarks, and find that it improves robustness. We also find that whitening can improve robustness when added to existing approaches.",
+    "url": "http://arxiv.org/abs/2609.39177v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Adaptive whitening in neural populations with gain-modulating interneurons",
+    "authors": [
+      "Lyndon R. Duong",
+      "David Lipshutz",
+      "David J. Heeger",
+      "Dmitri B. Chklovskii",
+      "Eero P. Simoncelli"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Statistical whitening transformations play a fundamental role in many computational systems, and may also play an important role in biological sensory systems. Existing neural circuit models of adaptive whitening operate by modifying synaptic interactions; however, such modifications would seem both too slow and insufficiently reversible. Motivated by the extensive neuroscience literature on gain modulation, we propose an alternative model that adaptively whitens its responses by modulating the gains of individual neurons. Starting from a novel whitening objective, we derive an online algorithm that whitens its outputs by adjusting the marginal variances of an overcomplete set of projections. We map the algorithm onto a recurrent neural network with fixed synaptic weights and gain-modulating interneurons. We demonstrate numerically that sign-constraining the gains improves robustness of the network to ill-conditioned inputs, and a generalization of the circuit achieves a form of local whitening in convolutional populations, such as those found throughout the visual or auditory systems.",
+    "url": "http://arxiv.org/abs/2301.11955v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Neural Networks as Kernel Learners: The Silent Alignment Effect",
+    "authors": [
+      "Alexander Atanasov",
+      "Blake Bordelon",
+      "Cengiz Pehlevan"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Neural networks in the lazy training regime converge to kernel machines. Can neural networks in the rich feature learning regime learn a kernel machine with a data-dependent kernel? We demonstrate that this can indeed happen due to a phenomenon we term silent alignment, which requires that the tangent kernel of a network evolves in eigenstructure while small and before the loss appreciably decreases, and grows only in overall scale afterwards. We show that such an effect takes place in homogenous neural networks with small initialization and whitened data. We provide an analytical treatment of this effect in the linear network case. In general, we find that the kernel develops a low-rank contribution in the early phase of training, and then evolves in overall scale, yielding a function equivalent to a kernel regression solution with the final network's tangent kernel. The early spectral learning of the kernel depends on the depth. We also demonstrate that non-whitened data can weaken the silent alignment effect.",
+    "url": "http://arxiv.org/abs/2111.00034v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Switchable Whitening for Deep Representation Learning",
+    "authors": [
+      "Xingang Pan",
+      "Xiaohang Zhan",
+      "Jianping Shi",
+      "Xiaoou Tang",
+      "Ping Luo"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Normalization methods are essential components in convolutional neural networks (CNNs). They either standardize or whiten data using statistics estimated in predefined sets of pixels. Unlike existing works that design normalization techniques for specific tasks, we propose Switchable Whitening (SW), which provides a general form unifying different whitening methods as well as standardization methods. SW learns to switch among these operations in an end-to-end manner. It has several advantages. First, SW adaptively selects appropriate whitening or standardization statistics for different tasks (see Fig.1), making it well suited for a wide range of tasks without manual design. Second, by integrating benefits of different normalizers, SW shows consistent improvements over its counterparts in various challenging benchmarks. Third, SW serves as a useful tool for understanding the characteristics of whitening and standardization techniques. We show that SW outperforms other alternatives on image classification (CIFAR-10/100, ImageNet), semantic segmentation (ADE20K, Cityscapes), domain adaptation (GTA5, Cityscapes), and image style transfer (COCO). For example, without bells and whistles, we achieve state-of-the-art performance with 45.33% mIoU on the ADE20K dataset. Code is available at https://github.com/XingangPan/Switchable-Whitening.",
+    "url": "http://arxiv.org/abs/1904.09739v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Stochastic Whitening Batch Normalization",
+    "authors": [
+      "Shengdong Zhang",
+      "Ehsan Nezhadarya",
+      "Homa Fashandi",
+      "Jiayi Liu",
+      "Darin Graham",
+      "Mohak Shah"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Batch Normalization (BN) is a popular technique for training Deep Neural Networks (DNNs). BN uses scaling and shifting to normalize activations of mini-batches to accelerate convergence and improve generalization. The recently proposed Iterative Normalization (IterNorm) method improves these properties by whitening the activations iteratively using Newton's method. However, since Newton's method initializes the whitening matrix independently at each training step, no information is shared between consecutive steps. In this work, instead of exact computation of whitening matrix at each time step, we estimate it gradually during training in an online fashion, using our proposed Stochastic Whitening Batch Normalization (SWBN) algorithm. We show that while SWBN improves the convergence rate and generalization of DNNs, its computational overhead is less than that of IterNorm. Due to the high efficiency of the proposed method, it can be easily employed in most DNN architectures with a large number of layers. We provide comprehensive experiments and comparisons between BN, IterNorm, and SWBN layers to demonstrate the effectiveness of the proposed technique in conventional (many-shot) image classification and few-shot classification tasks.",
+    "url": "http://arxiv.org/abs/2106.04413v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Zeta: Dual Whitening for Matrix Optimization via Coordinate-Adaptive Preconditioning",
+    "authors": [
+      "Kaiwen Chen",
+      "Shuhai Zhang",
+      "Zimo Liu",
+      "Linxiao Li",
+      "Ying Sun",
+      "Yuchen Li",
+      "Yifan Zhang",
+      "Bo Han",
+      "Mingkui Tan",
+      "Qiuwu Chen"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Large-scale neural network training increasingly relies on matrix-aware optimizers that exploit the structure of weight parameters beyond element-wise adaptation. However, existing matrix-aware methods such as Muon have an underappreciated vulnerability: their core operation, Newton-Schulz iteration, depends critically on input conditioning, yet the raw momentum matrices exhibit severe coordinate-wise scale heterogeneity. In this paper, we first verify this scale heterogeneity through a chi-square uniformity test, showing that intra-matrix scale imbalance is prevalent across Transformer layers and that coordinate whitening effectively corrects it. Motivated by this finding, we propose Zeta, a dual whitening optimizer that applies coordinate whitening and spectral whitening in a strictly ordered pipeline. The ordering is not a tunable choice but follows from a mathematical dependency: coordinate whitening establishes the statistical isotropy that spectral whitening requires to function reliably. We further prove that this dual pipeline strictly reduces orthogonalization error relative to pure spectral methods by improving the condition number of the input. Empirically, Zeta matches or surpasses strong baselines across language modeling (0.6B to 8B parameters), mixture-of-experts architectures, and vision tasks, demonstrating that resolving scale imbalance before orthogonalization leads to faster convergence and better generalization. Code is available at https://github.com/AIGCodeOS/aigcode_zeta_optimizer.",
+    "url": "http://arxiv.org/abs/2606.14187v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Iterative Normalization: Beyond Standardization towards Efficient Whitening",
+    "authors": [
+      "Lei Huang",
+      "Yi Zhou",
+      "Fan Zhu",
+      "Li Liu",
+      "Ling Shao"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Batch Normalization (BN) is ubiquitously employed for accelerating neural network training and improving the generalization capability by performing standardization within mini-batches. Decorrelated Batch Normalization (DBN) further boosts the above effectiveness by whitening. However, DBN relies heavily on either a large batch size, or eigen-decomposition that suffers from poor efficiency on GPUs. We propose Iterative Normalization (IterNorm), which employs Newton's iterations for much more efficient whitening, while simultaneously avoiding the eigen-decomposition. Furthermore, we develop a comprehensive study to show IterNorm has better trade-off between optimization and generalization, with theoretical and experimental support. To this end, we exclusively introduce Stochastic Normalization Disturbance (SND), which measures the inherent stochastic uncertainty of samples when applied to normalization operations. With the support of SND, we provide natural explanations to several phenomena from the perspective of optimization, e.g., why group-wise whitening of DBN generally outperforms full-whitening and why the accuracy of BN degenerates with reduced batch sizes. We demonstrate the consistently improved performance of IterNorm with extensive experiments on CIFAR-10 and ImageNet over BN and DBN.",
+    "url": "http://arxiv.org/abs/1904.03441v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Error Autocorrelation Objective Function for Improved System Modeling",
+    "authors": [
+      "Anand Ramakrishnan",
+      "Warren B. Jackson",
+      "Kent Evans"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Deep learning models are trained to minimize the error between the model's output and the actual values. The typical cost function, the Mean Squared Error (MSE), arises from maximizing the log-likelihood of additive independent, identically distributed Gaussian noise. However, minimizing MSE fails to minimize the residuals' cross-correlations, leading to over-fitting and poor extrapolation of the model outside the training set (generalization). In this paper, we introduce a \"whitening\" cost function, the Ljung-Box statistic, which not only minimizes the error but also minimizes the correlations between errors, ensuring that the fits enforce compatibility with an independent and identically distributed (i.i.d) gaussian noise model. The results show significant improvement in generalization for recurrent neural networks (RNNs) (1d) and image autoencoders (2d). Specifically, we look at both temporal correlations for system-id in simulated and actual mechanical systems. We also look at spatial correlation in vision autoencoders to demonstrate that the whitening objective functions lead to much better extrapolation--a property very desirable for reliable control systems.",
+    "url": "http://arxiv.org/abs/2008.03582v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Mechanism Study of Delayed Loss Spikes in Batch-Normalized Linear Models",
+    "authors": [
+      "Peifeng Gao",
+      "Wenyi Fang",
+      "Yang Zheng",
+      "Difan Zou"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Delayed loss spikes have been reported in neural-network training, but existing theory mainly explains earlier non-monotone behavior caused by overly large fixed learning rates. We study one stylized hypothesis: normalization can postpone instability by gradually increasing the effective learning rate during otherwise stable descent. To test this hypothesis at theorem level, we analyze batch-normalized linear models. Our flagship result concerns whitened square-loss linear regression, where we derive explicit no-rising-edge and delayed-onset conditions, bound the waiting time to directional onset, and show that the rising edge self-stabilizes within finitely many iterations. Combined with a square-loss decomposition, this yields a concrete delayed-spike mechanism in the whitened regime. For logistic regression, under highly restrictive active-margin assumptions, we prove only a supporting finite-horizon directional precursor in a knife-edge regime, with an optional appendix-only loss lower bound under an extra non-degeneracy condition. The paper should therefore be read as a stylized mechanism study rather than a general explanation of neural-network loss spikes. Within that scope, the results isolate one concrete delayed-instability pathway induced by batch normalization.",
+    "url": "http://arxiv.org/abs/2604.16809v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Visualization for Multivariate Gaussian Anomaly Detection in Images",
+    "authors": [
+      "Joao P C Bertoldo",
+      "David Arrustico"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "This paper introduces a simplified variation of the PaDiM (Pixel-Wise Anomaly Detection through Instance Modeling) method for anomaly detection in images, fitting a single multivariate Gaussian (MVG) distribution to the feature vectors extracted from a backbone convolutional neural network (CNN) and using their Mahalanobis distance as the anomaly score. We introduce an intermediate step in this framework by applying a whitening transformation to the feature vectors, which enables the generation of heatmaps capable of visually explaining the features learned by the MVG. The proposed technique is evaluated on the MVTec-AD dataset, and the results show the importance of visual model validation, providing insights into issues in this framework that were otherwise invisible. The visualizations generated for this paper are publicly available at https://doi.org/10.5281/zenodo.7937978.",
+    "url": "http://arxiv.org/abs/2307.06052v1",
+    "doi": "10.1109/IPTA59101.2023.10320060",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Testing General Relativity Through Gravitational Wave Classification: A Convolutional Neural Network Framework",
+    "authors": [
+      "Lavinia Heisenberg",
+      "Shayan Hemmatyar",
+      "Hector Villarrubia-Rojo"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "We present a machine learning framework for testing general relativity (GR) with gravitational wave signals from binary black hole mergers. Using the source parameters of 173 BBH events from the GWTC catalog as a realistic astrophysical population, we generate simulated GR waveforms and construct beyond GR (BGR) waveforms by applying controlled phase deformations. We introduce a response function formalism that provides a systematic framework for quantifying how any observable responds to modifications of GR. We train convolutional neural networks (CNNs) on two input representations: whitened waveforms and a response function type observable derived from the waveform mismatch, which isolates the effect of phase deviations from the bulk signal. Using response functions as the CNN input improves the classification sensitivity by a factor of approximately 33 compared to whitened waveforms, demonstrating that the choice of observable representation is as important as the classifier architecture. We study the fundamental limits of this classification through Bayes optimal error analysis, averaging methods that reveal coherent patterns hidden in noise, and a comparison between CNN accuracy and a single feature classifier as a proxy for human performance. At all deformation scales, the CNN outperforms the best single feature approach. We extend the framework to physically motivated theories using the parameterized post Einsteinian (ppE) formalism and apply it to massive gravity, where the classifier detects deviations for graviton masses of order $m_g \\sim 10^{-23}\\;\\mathrm{eV}/c^2$ with aLIGO design sensitivity.",
+    "url": "http://arxiv.org/abs/2605.02453v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Mousse: Rectifying the Geometry of Muon with Curvature-Aware Preconditioning",
+    "authors": [
+      "Yechen Zhang",
+      "Shuhao Xing",
+      "Junhao Huang",
+      "Kai Lv",
+      "Yunhua Zhou",
+      "Xipeng Qiu",
+      "Qipeng Guo",
+      "Kai Chen"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Recent advances in spectral optimization, notably Muon, have demonstrated that constraining update steps to the Stiefel manifold can significantly accelerate training and improve generalization. However, Muon implicitly assumes an isotropic optimization landscape, enforcing a uniform spectral update norm across all eigen-directions. We argue that this \"egalitarian\" constraint is suboptimal for Deep Neural Networks, where the curvature spectrum is known to be highly heavy-tailed and ill-conditioned. In such landscapes, Muon risks amplifying instabilities in high-curvature directions while limiting necessary progress in flat directions. In this work, we propose \\textbf{Mousse} (\\textbf{M}uon \\textbf{O}ptimization \\textbf{U}tilizing \\textbf{S}hampoo's \\textbf{S}tructural \\textbf{E}stimation), a novel optimizer that reconciles the structural stability of spectral methods with the geometric adaptivity of second-order preconditioning. Instead of applying Newton-Schulz orthogonalization directly to the momentum matrix, Mousse operates in a whitened coordinate system induced by Kronecker-factored statistics (derived from Shampoo). Mathematically, we formulate Mousse as the solution to a spectral steepest descent problem constrained by an anisotropic trust region, where the optimal update is derived via the polar decomposition of the whitened gradient. Empirical results across language models ranging from 160M to 800M parameters demonstrate that Mousse consistently outperforms Muon, achieving around $\\sim$12\\% reduction in training steps with negligible computational overhead.",
+    "url": "http://arxiv.org/abs/2603.09697v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Clarifying Shampoo: Adapting Spectral Descent to Stochasticity and the Parameter Trajectory",
+    "authors": [
+      "Runa Eschenhagen",
+      "Anna Cai",
+      "Tsung-Hsien Lee",
+      "Hao-Jun Michael Shi"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Optimizers leveraging the matrix structure in neural networks, such as Shampoo and Muon, are more data-efficient than element-wise algorithms like Adam and Signum. While in specific settings, Shampoo and Muon reduce to spectral descent analogous to how Adam and Signum reduce to sign descent, their general relationship and relative data efficiency under controlled settings remain unclear. Through extensive experiments on language models, we demonstrate that Shampoo achieves higher token efficiency than Muon, mirroring Adam's advantage over Signum. We show that Shampoo's update applied to weight matrices can be decomposed into an adapted Muon update. Consistent with this, Shampoo's benefits can be exclusively attributed to its application to weight matrices, challenging interpretations agnostic to parameter shapes. This admits a new perspective that also avoids shortcomings of related interpretations based on variance adaptation and whitening: rather than enforcing semi-orthogonality as in spectral descent, Shampoo's updates are time-averaged semi-orthogonal in expectation.",
+    "url": "http://arxiv.org/abs/2602.09314v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Tree-Preconditioned Differentiable Optimization and Axioms as Layers",
+    "authors": [
+      "Yuexin Liao"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "This paper introduces a differentiable framework that embeds the axiomatic structure of Random Utility Models (RUM) directly into deep neural networks. Although projecting empirical choice data onto the RUM polytope is NP-hard in general, we uncover an isomorphism between RUM consistency and flow conservation on the Boolean lattice. Leveraging this combinatorial structure, we derive a novel Tree-Preconditioned Conjugate Gradient solver. By exploiting the spanning tree of the constraint graph, our preconditioner effectively \"whitens\" the ill-conditioned Hessian spectrum induced by the Interior Point Method barrier, achieving superlinear convergence and scaling to problem sizes previously deemed unsolvable. We further formulate the projection as a differentiable layer via the Implicit Function Theorem, where the exact Jacobian propagates geometric constraints during backpropagation. Empirical results demonstrate that this \"Axioms-as-Layers\" paradigm eliminates the structural overfitting inherent in penalty-based methods, enabling models that are jointly trainable, provably rational, and capable of generalizing from sparse data regimes where standard approximations fail.",
+    "url": "http://arxiv.org/abs/2601.06036v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Finite Versus Infinite Neural Networks: an Empirical Study",
+    "authors": [
+      "Jaehoon Lee",
+      "Samuel S. Schoenholz",
+      "Jeffrey Pennington",
+      "Ben Adlam",
+      "Lechao Xiao",
+      "Roman Novak",
+      "Jascha Sohl-Dickstein"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "We perform a careful, thorough, and large scale empirical study of the correspondence between wide neural networks and kernel methods. By doing so, we resolve a variety of open questions related to the study of infinitely wide neural networks. Our experimental results include: kernel methods outperform fully-connected finite-width networks, but underperform convolutional finite width networks; neural network Gaussian process (NNGP) kernels frequently outperform neural tangent (NT) kernels; centered and ensembled finite networks have reduced posterior variance and behave more similarly to infinite networks; weight decay and the use of a large learning rate break the correspondence between finite and infinite networks; the NTK parameterization outperforms the standard parameterization for finite width networks; diagonal regularization of kernels acts similarly to early stopping; floating point precision limits kernel performance beyond a critical dataset size; regularized ZCA whitening improves accuracy; finite network performance depends non-monotonically on width in ways not captured by double descent phenomena; equivariance of CNNs is only beneficial for narrow networks far from the kernel regime. Our experiments additionally motivate an improved layer-wise scaling for weight decay which improves generalization in finite-width networks. Finally, we develop improved best practices for using NNGP and NT kernels for prediction, including a novel ensembling technique. Using these best practices we achieve state-of-the-art results on CIFAR-10 classification for kernels corresponding to each architecture class we consider.",
+    "url": "http://arxiv.org/abs/2007.15801v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Generalized Matheron Variational Implicit Processes",
+    "authors": [
+      "Luis A. Ortega",
+      "Andrés R. Masegosa",
+      "Thomas D. Nielsen"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Implicit-process priors specify distributions over functions through sample-forward mechanisms such as Bayesian neural networks and stochastic simulators, but their function-space densities are typically unavailable. We introduce Generalized Matheron Variational Implicit Processes (GMVIP), a pathwise variational family for posterior inference with such priors. For Gaussian-process priors, GMVIP recovers the standard inducing-variable variational GP construction; for general implicit priors, its empirical covariance construction preserves the prior mean and covariance in the population limit. GMVIP constructs posterior samples by drawing a function from the prior and applying a correction anchored at a set of inducing inputs. The effect of this correction away from the inducing inputs is determined directly from prior samples, allowing the posterior to retain the structure and variability of the original implicit process. The (surrogate) prior and variational posterior use the same pathwise construction and differ only in the distribution of whitened inducing coefficients, yielding a tractable coefficient-space Kullback-Leibler divergence. Experiments on regression, classification, and forecasting with simulator-defined and retrieval-conditioned empirical trajectory priors show that GMVIP is broadly competitive with existing methods.",
+    "url": "http://arxiv.org/abs/2610.07938v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Convolutional neural networks for the detection of the early inspiral of a gravitational-wave signal",
+    "authors": [
+      "Gregory Baltus",
+      "Justin Janquart",
+      "Melissa Lopez",
+      "Amit Reza",
+      "Sarah Caudill",
+      "Jean-Rene Cudell"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "GW170817 has led to the first example of multi-messenger astronomy with observations from gravitational wave interferometers and electromagnetic telescopes combined to characterise the source. However, detections of the early inspiral phase by the gravitational wave detectors would allow the observation of the earlier stages of the merger in the electromagnetic band, improving multi-messenger astronomy and giving access to new information. In this paper, we introduce a new machine-learning-based approach to produce early-warning alerts for an inspiraling binary neutron star system, based only on the early inspiral part of the signal. We give a proof of concept to show the possibility to use a combination of small convolutional neural networks trained on the whitened detector strain in the time domain to detect and classify early inspirals. Each of those is targeting a specific range of chirp masses dividing the binary neutron star category into three sub-classes: light, intermediate and heavy. In this work, we focus on one LIGO detector at design sensitivity and generate noise from the design power spectral density. We show that within this setup it is possible to produce an early alert up to 100 seconds before the merger for the best-case scenario. We also present some future upgrades that will enhance the detection capabilities of our convolutional neural networks. Finally, we also show that the current number of detections for a realistic binary neutron star population is comparable to that of matched filtering and that there is a high probability to detect GW170817- and GW190425-like events at design sensitivity.",
+    "url": "http://arxiv.org/abs/2104.00594v1",
+    "doi": "10.1103/PhysRevD.103.102003",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "DNN-Based Online Source Counting Based on Spatial Generalized Magnitude Squared Coherence",
+    "authors": [
+      "Henri Gode",
+      "Simon Doclo"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "The number of active sound sources is a key parameter in many acoustic signal processing tasks, such as source localization, source separation, and multi-microphone speech enhancement. This paper proposes a novel method for online source counting by detecting changes in the number of active sources based on spatial coherence. The proposed method exploits the fact that a single coherent source in spatially white background noise yields high spatial coherence, whereas only noise results in low spatial coherence. By applying a spatial whitening operation, the source counting problem is reformulated as a change detection task, aiming to identify the time frames when the number of active sources changes. The method leverages the generalized magnitude-squared coherence as a measure to quantify spatial coherence, providing features for a compact neural network trained to detect source count changes framewise. Simulation results with binaural hearing aids in reverberant acoustic scenes with up to 4 speakers and background noise demonstrate the effectiveness of the proposed method for online source counting.",
+    "url": "http://arxiv.org/abs/2601.21114v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "RobustNet: Improving Domain Generalization in Urban-Scene Segmentation via Instance Selective Whitening",
+    "authors": [
+      "Sungha Choi",
+      "Sanghun Jung",
+      "Huiwon Yun",
+      "Joanne Kim",
+      "Seungryong Kim",
+      "Jaegul Choo"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Enhancing the generalization capability of deep neural networks to unseen domains is crucial for safety-critical applications in the real world such as autonomous driving. To address this issue, this paper proposes a novel instance selective whitening loss to improve the robustness of the segmentation networks for unseen domains. Our approach disentangles the domain-specific style and domain-invariant content encoded in higher-order statistics (i.e., feature covariance) of the feature representations and selectively removes only the style information causing domain shift. As shown in Fig. 1, our method provides reasonable predictions for (a) low-illuminated, (b) rainy, and (c) unseen structures. These types of images are not included in the training dataset, where the baseline shows a significant performance drop, contrary to ours. Being simple yet effective, our approach improves the robustness of various backbone networks without additional computational cost. We conduct extensive experiments in urban-scene segmentation and show the superiority of our approach to existing work. Our code is available at https://github.com/shachoi/RobustNet.",
+    "url": "http://arxiv.org/abs/2103.15597v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "WDiscOOD: Out-of-Distribution Detection via Whitened Linear Discriminant Analysis",
+    "authors": [
+      "Yiye Chen",
+      "Yunzhi Lin",
+      "Ruinian Xu",
+      "Patricio A. Vela"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Deep neural networks are susceptible to generating overconfident yet erroneous predictions when presented with data beyond known concepts. This challenge underscores the importance of detecting out-of-distribution (OOD) samples in the open world. In this work, we propose a novel feature-space OOD detection score based on class-specific and class-agnostic information. Specifically, the approach utilizes Whitened Linear Discriminant Analysis to project features into two subspaces - the discriminative and residual subspaces - for which the in-distribution (ID) classes are maximally separated and closely clustered, respectively. The OOD score is then determined by combining the deviation from the input data to the ID pattern in both subspaces. The efficacy of our method, named WDiscOOD, is verified on the large-scale ImageNet-1k benchmark, with six OOD datasets that cover a variety of distribution shifts. WDiscOOD demonstrates superior performance on deep classifiers with diverse backbone architectures, including CNN and vision transformer. Furthermore, we also show that WDiscOOD more effectively detects novel concepts in representation spaces trained with contrastive objectives, including supervised contrastive loss and multi-modality contrastive loss.",
+    "url": "http://arxiv.org/abs/2303.07543v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Truly shift-invariant convolutional neural networks",
+    "authors": [
+      "Anadi Chaman",
+      "Ivan Dokmanić"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Thanks to the use of convolution and pooling layers, convolutional neural networks were for a long time thought to be shift-invariant. However, recent works have shown that the output of a CNN can change significantly with small shifts in input: a problem caused by the presence of downsampling (stride) layers. The existing solutions rely either on data augmentation or on anti-aliasing, both of which have limitations and neither of which enables perfect shift invariance. Additionally, the gains obtained from these methods do not extend to image patterns not seen during training. To address these challenges, we propose adaptive polyphase sampling (APS), a simple sub-sampling scheme that allows convolutional neural networks to achieve 100% consistency in classification performance under shifts, without any loss in accuracy. With APS, the networks exhibit perfect consistency to shifts even before training, making it the first approach that makes convolutional neural networks truly shift-invariant.",
+    "url": "http://arxiv.org/abs/2011.14214v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Making Convolutional Networks Shift-Invariant Again",
+    "authors": [
+      "Richard Zhang"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Modern convolutional networks are not shift-invariant, as small input shifts or translations can cause drastic changes in the output. Commonly used downsampling methods, such as max-pooling, strided-convolution, and average-pooling, ignore the sampling theorem. The well-known signal processing fix is anti-aliasing by low-pass filtering before downsampling. However, simply inserting this module into deep networks degrades performance; as a result, it is seldomly used today. We show that when integrated correctly, it is compatible with existing architectural components, such as max-pooling and strided-convolution. We observe \\textit{increased accuracy} in ImageNet classification, across several commonly-used architectures, such as ResNet, DenseNet, and MobileNet, indicating effective regularization. Furthermore, we observe \\textit{better generalization}, in terms of stability and robustness to input corruptions. Our results demonstrate that this classical signal processing technique has been undeservingly overlooked in modern deep networks. Code and anti-aliased versions of popular networks are available at https://richzhang.github.io/antialiased-cnns/ .",
+    "url": "http://arxiv.org/abs/1904.11486v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Exploring Novel Pooling Strategies for Edge Preserved Feature Maps in Convolutional Neural Networks",
+    "authors": [
+      "Adithya Sineesh",
+      "Mahesh Raveendranatha Panicker"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "With the introduction of anti-aliased convolutional neural networks (CNN), there has been some resurgence in relooking the way pooling is done in CNNs. The fundamental building block of the anti-aliased CNN has been the application of Gaussian smoothing before the pooling operation to reduce the distortion due to aliasing thereby making CNNs shift invariant. Wavelet based approaches have also been proposed as a possibility of additional noise removal capability and gave interesting results for even segmentation tasks. However, all the approaches proposed completely remove the high frequency components under the assumption that they are noise. However, by removing high frequency components, the edges in the feature maps are also smoothed. In this work, an exhaustive analysis of the edge preserving pooling options for classification, segmentation and autoencoders are presented. Two novel pooling approaches are presented such as Laplacian-Gaussian Concatenation with Attention (LGCA) pooling and Wavelet based approximate-detailed coefficient concatenation with attention (WADCA) pooling. The results suggest that the proposed pooling approaches outperform the conventional pooling as well as blur pooling for classification, segmentation and autoencoders.",
+    "url": "http://arxiv.org/abs/2110.08842v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "What Does CNN Shift Invariance Look Like? A Visualization Study",
+    "authors": [
+      "Jake Lee",
+      "Junfeng Yang",
+      "Zhangyang Wang"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Feature extraction with convolutional neural networks (CNNs) is a popular method to represent images for machine learning tasks. These representations seek to capture global image content, and ideally should be independent of geometric transformations. We focus on measuring and visualizing the shift invariance of extracted features from popular off-the-shelf CNN models. We present the results of three experiments comparing representations of millions of images with exhaustively shifted objects, examining both local invariance (within a few pixels) and global invariance (across the image frame). We conclude that features extracted from popular networks are not globally invariant, and that biases and artifacts exist within this variance. Additionally, we determine that anti-aliased models significantly improve local invariance but do not impact global invariance. Finally, we provide a code repository for experiment reproduction, as well as a website to interact with our results at https://jakehlee.github.io/visualize-invariance.",
+    "url": "http://arxiv.org/abs/2011.04127v1",
+    "doi": "10.1007/978-3-030-68238-5_15",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Truly shift-equivariant convolutional neural networks with adaptive polyphase upsampling",
+    "authors": [
+      "Anadi Chaman",
+      "Ivan Dokmanić"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Convolutional neural networks lack shift equivariance due to the presence of downsampling layers. In image classification, adaptive polyphase downsampling (APS-D) was recently proposed to make CNNs perfectly shift invariant. However, in networks used for image reconstruction tasks, it can not by itself restore shift equivariance. We address this problem by proposing adaptive polyphase upsampling (APS-U), a non-linear extension of conventional upsampling, which allows CNNs with symmetric encoder-decoder architecture (for example U-Net) to exhibit perfect shift equivariance. With MRI and CT reconstruction experiments, we show that networks containing APS-D/U layers exhibit state of the art equivariance performance without sacrificing on image reconstruction quality. In addition, unlike prior methods like data augmentation and anti-aliasing, the gains in equivariance obtained from APS-D/U also extend to images outside the training distribution.",
+    "url": "http://arxiv.org/abs/2105.04040v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

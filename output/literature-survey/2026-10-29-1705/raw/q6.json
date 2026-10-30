@@ -1,0 +1,316 @@
+[
+  {
+    "title": "Aliasing in Convnets: A Frame-Theoretic Perspective",
+    "authors": [
+      "Daniel Haider",
+      "Vincent Lostanlen",
+      "Martin Ehler",
+      "Nicki Holighaus",
+      "Peter Balazs"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Using a stride in a convolutional layer inherently introduces aliasing, which has implications for numerical stability and statistical generalization. While techniques such as the parametrizations via paraunitary systems have been used to promote orthogonal convolution and thus ensure Parseval stability, a general analysis of aliasing and its effects on the stability has not been done in this context. In this article, we adapt a frame-theoretic approach to describe aliasing in convolutional layers with 1D kernels, leading to practical estimates for stability bounds and characterizations of Parseval stability, that are tailored to take short kernel sizes into account. From this, we derive two computationally very efficient optimization objectives that promote Parseval stability via systematically suppressing aliasing. Finally, for layers with random kernels, we derive closed-form expressions for the expected value and variance of the terms that describe the aliasing effects, revealing fundamental insights into the aliasing behavior at initialization.",
+    "url": "http://arxiv.org/abs/2507.06152v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Blending Anti-Aliasing into Vision Transformer",
+    "authors": [
+      "Shengju Qian",
+      "Hao Shao",
+      "Yi Zhu",
+      "Mu Li",
+      "Jiaya Jia"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "The transformer architectures, based on self-attention mechanism and convolution-free design, recently found superior performance and booming applications in computer vision. However, the discontinuous patch-wise tokenization process implicitly introduces jagged artifacts into attention maps, arising the traditional problem of aliasing for vision transformers. Aliasing effect occurs when discrete patterns are used to produce high frequency or continuous information, resulting in the indistinguishable distortions. Recent researches have found that modern convolution networks still suffer from this phenomenon. In this work, we analyze the uncharted problem of aliasing in vision transformer and explore to incorporate anti-aliasing properties. Specifically, we propose a plug-and-play Aliasing-Reduction Module(ARM) to alleviate the aforementioned issue. We investigate the effectiveness and generalization of the proposed method across multiple tasks and various vision transformer families. This lightweight design consistently attains a clear boost over several famous structures. Furthermore, our module also improves data efficiency and robustness of vision transformers.",
+    "url": "http://arxiv.org/abs/2110.15156v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Wavehax: Aliasing-Free Neural Waveform Synthesis Based on 2D Convolution and Harmonic Prior for Reliable Complex Spectrogram Estimation",
+    "authors": [
+      "Reo Yoneyama",
+      "Atsushi Miyashita",
+      "Ryuichi Yamamoto",
+      "Tomoki Toda"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Neural vocoders often struggle with aliasing in latent feature spaces, caused by time-domain nonlinear operations and resampling layers. Aliasing folds high-frequency components into the low-frequency range, making aliased and original frequency components indistinguishable and introducing two practical issues. First, aliasing complicates the waveform generation process, as the subsequent layers must address these aliasing effects, increasing the computational complexity. Second, it limits extrapolation performance, particularly in handling high fundamental frequencies, which degrades the perceptual quality of generated speech waveforms. This paper demonstrates that 1) time-domain nonlinear operations inevitably introduce aliasing but provide a strong inductive bias for harmonic generation, and 2) time-frequency-domain processing can achieve aliasing-free waveform synthesis but lacks the inductive bias for effective harmonic generation. Building on this insight, we propose Wavehax, an aliasing-free neural WAVEform generator that integrates 2D convolution and a HArmonic prior for reliable Complex Spectrogram estimation. Experimental results show that Wavehax achieves speech quality comparable to existing high-fidelity neural vocoders and exhibits exceptional robustness in scenarios requiring high fundamental frequency extrapolation, where aliasing effects become typically severe. Moreover, Wavehax requires less than 5% of the multiply-accumulate operations and model parameters compared to HiFi-GAN V1, while achieving over four times faster CPU inference speed.",
+    "url": "http://arxiv.org/abs/2411.06807v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Anti-aliasing of neural distortion effects via model fine tuning",
+    "authors": [
+      "Alistair Carson",
+      "Alec Wright",
+      "Stefan Bilbao"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Neural networks have become ubiquitous with guitar distortion effects modelling in recent years. Despite their ability to yield perceptually convincing models, they are susceptible to frequency aliasing when driven by high frequency and high gain inputs. Nonlinear activation functions create both the desired harmonic distortion and unwanted aliasing distortion as the bandwidth of the signal is expanded beyond the Nyquist frequency. Here, we present a method for reducing aliasing in neural models via a teacher-student fine tuning approach, where the teacher is a pre-trained model with its weights frozen, and the student is a copy of this with learnable parameters. The student is fine-tuned against an aliasing-free dataset generated by passing sinusoids through the original model and removing non-harmonic components from the output spectra. Our results show that this method significantly suppresses aliasing for both long-short-term-memory networks (LSTM) and temporal convolutional networks (TCN). In the majority of our case studies, the reduction in aliasing was greater than that achieved by two times oversampling. One side-effect of the proposed method is that harmonic distortion components are also affected. This adverse effect was found to be model-dependent, with the LSTM models giving the best balance between anti-aliasing and preserving the perceived similarity to an analog reference device.",
+    "url": "http://arxiv.org/abs/2505.11375v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Making Convolutional Networks Shift-Invariant Again",
+    "authors": [
+      "Richard Zhang"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Modern convolutional networks are not shift-invariant, as small input shifts or translations can cause drastic changes in the output. Commonly used downsampling methods, such as max-pooling, strided-convolution, and average-pooling, ignore the sampling theorem. The well-known signal processing fix is anti-aliasing by low-pass filtering before downsampling. However, simply inserting this module into deep networks degrades performance; as a result, it is seldomly used today. We show that when integrated correctly, it is compatible with existing architectural components, such as max-pooling and strided-convolution. We observe \\textit{increased accuracy} in ImageNet classification, across several commonly-used architectures, such as ResNet, DenseNet, and MobileNet, indicating effective regularization. Furthermore, we observe \\textit{better generalization}, in terms of stability and robustness to input corruptions. Our results demonstrate that this classical signal processing technique has been undeservingly overlooked in modern deep networks. Code and anti-aliased versions of popular networks are available at https://richzhang.github.io/antialiased-cnns/ .",
+    "url": "http://arxiv.org/abs/1904.11486v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Impact of Aliasing on Generalization in Deep Convolutional Networks",
+    "authors": [
+      "Cristina Vasconcelos",
+      "Hugo Larochelle",
+      "Vincent Dumoulin",
+      "Rob Romijnders",
+      "Nicolas Le Roux",
+      "Ross Goroshin"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "We investigate the impact of aliasing on generalization in Deep Convolutional Networks and show that data augmentation schemes alone are unable to prevent it due to structural limitations in widely used architectures. Drawing insights from frequency analysis theory, we take a closer look at ResNet and EfficientNet architectures and review the trade-off between aliasing and information loss in each of their major components. We show how to mitigate aliasing by inserting non-trainable low-pass filters at key locations, particularly where networks lack the capacity to learn them. These simple architectural changes lead to substantial improvements in generalization on i.i.d. and even more on out-of-distribution conditions, such as image classification under natural corruptions on ImageNet-C [11] and few-shot learning on Meta-Dataset [26]. State-of-the art results are achieved on both datasets without introducing additional trainable parameters and using the default hyper-parameters of open source codebases.",
+    "url": "http://arxiv.org/abs/2108.03489v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "High-Performance Gridding For Radio Interferometric Image Synthesis",
+    "authors": [
+      "Daniel Muscat"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Convolutional Gridding is a technique (algorithm) extensively used in Radio Interferometric Image Synthesis for fast inversion of functions sampled with irregular intervals on the Fourier plane. In this thesis, we propose some modifications to the technique to execute faster on a GPU. These modifications give rise to \\textit{Hybrid Gridding} and \\textit{Pruned NN Interpolation}, which take advantage of the oversampling of the Gridding Convolutional Function in Convolutional Gridding to try to make gridding faster with no reduction in the quality of the output. Our experiments showed that given the right conditions, Hybrid Gridding executes up to $6.8\\times$ faster than Convolutional Gridding, and Pruned NN Interpolation is generally slower than Hybrid Gridding.\n  The two new techniques feature the downsampling of an oversampled grid through convolution to accelerate the Fourier inversion. It is a well-known approximate technique which suffers from aliasing. In this thesis, we are re-proposing the technique as a \\textit{Convolution-Based FFT Pruning} algorithm able to suppress aliasing below arithmetic noise. The algorithm uses the recently discovered least-misfit gridding functions, which through our experiments gave promising results, although not as good as expected from the related published work on the stated gridding functions. Nevertheless, our experiments showed that, given the right conditions, Convolutional-Based Pruning reduces the Fourier inversion execution time on a GPU by approximately a factor of $8\\times$.",
+    "url": "http://arxiv.org/abs/2111.04141v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Multi-branch Cascaded Swin Transformers with Attention to k-space Sampling Pattern for Accelerated MRI Reconstruction",
+    "authors": [
+      "Mevan Ekanayake",
+      "Kamlesh Pawar",
+      "Mehrtash Harandi",
+      "Gary Egan",
+      "Zhaolin Chen"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Global correlations are widely seen in human anatomical structures due to similarity across tissues and bones. These correlations are reflected in magnetic resonance imaging (MRI) scans as a result of close-range proton density and T1/T2 parameters. Furthermore, to achieve accelerated MRI, k-space data are undersampled which causes global aliasing artifacts. Convolutional neural network (CNN) models are widely utilized for accelerated MRI reconstruction, but those models are limited in capturing global correlations due to the intrinsic locality of the convolution operation. The self-attention-based transformer models are capable of capturing global correlations among image features, however, the current contributions of transformer models for MRI reconstruction are minute. The existing contributions mostly provide CNN-transformer hybrid solutions and rarely leverage the physics of MRI. In this paper, we propose a physics-based stand-alone (convolution free) transformer model titled, the Multi-head Cascaded Swin Transformers (McSTRA) for accelerated MRI reconstruction. McSTRA combines several interconnected MRI physics-related concepts with the transformer networks: it exploits global MR features via the shifted window self-attention mechanism; it extracts MR features belonging to different spectral components separately using a multi-head setup; it iterates between intermediate de-aliasing and k-space correction via a cascaded network with data consistency in k-space and intermediate loss computations; furthermore, we propose a novel positional embedding generation mechanism to guide self-attention utilizing the point spread function corresponding to the undersampling mask. Our model significantly outperforms state-of-the-art MRI reconstruction methods both visually and quantitatively while depicting improved resolution and removal of aliasing artifacts.",
+    "url": "http://arxiv.org/abs/2207.08412v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Mip-Grid: Anti-aliased Grid Representations for Neural Radiance Fields",
+    "authors": [
+      "Seungtae Nam",
+      "Daniel Rho",
+      "Jong Hwan Ko",
+      "Eunbyung Park"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Despite the remarkable achievements of neural radiance fields (NeRF) in representing 3D scenes and generating novel view images, the aliasing issue, rendering \"jaggies\" or \"blurry\" images at varying camera distances, remains unresolved in most existing approaches. The recently proposed mip-NeRF has addressed this challenge by rendering conical frustums instead of rays. However, it relies on MLP architecture to represent the radiance fields, missing out on the fast training speed offered by the latest grid-based methods. In this work, we present mip-Grid, a novel approach that integrates anti-aliasing techniques into grid-based representations for radiance fields, mitigating the aliasing artifacts while enjoying fast training time. The proposed method generates multi-scale grids by applying simple convolution operations over a shared grid representation and uses the scale-aware coordinate to retrieve features at different scales from the generated multi-scale grids. To test the effectiveness, we integrated the proposed method into the two recent representative grid-based methods, TensoRF and K-Planes. Experimental results demonstrate that mip-Grid greatly improves the rendering performance of both methods and even outperforms mip-NeRF on multi-scale datasets while achieving significantly faster training time. For code and demo videos, please see https://stnamjef.github.io/mipgrid.github.io/.",
+    "url": "http://arxiv.org/abs/2402.14196v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Alias-Free Generative Adversarial Networks",
+    "authors": [
+      "Tero Karras",
+      "Miika Aittala",
+      "Samuli Laine",
+      "Erik Härkönen",
+      "Janne Hellsten",
+      "Jaakko Lehtinen",
+      "Timo Aila"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "We observe that despite their hierarchical convolutional nature, the synthesis process of typical generative adversarial networks depends on absolute pixel coordinates in an unhealthy manner. This manifests itself as, e.g., detail appearing to be glued to image coordinates instead of the surfaces of depicted objects. We trace the root cause to careless signal processing that causes aliasing in the generator network. Interpreting all signals in the network as continuous, we derive generally applicable, small architectural changes that guarantee that unwanted information cannot leak into the hierarchical synthesis process. The resulting networks match the FID of StyleGAN2 but differ dramatically in their internal representations, and they are fully equivariant to translation and rotation even at subpixel scales. Our results pave the way for generative models better suited for video and animation.",
+    "url": "http://arxiv.org/abs/2106.12423v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CAST: Causal Anchored Simplex Transport for Distribution-Valued Time Series",
+    "authors": [
+      "Jiecheng Lu",
+      "Jieqi Di",
+      "Runhua Wu",
+      "Yuwei Zhou"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Many decision-facing stochastic systems are observed through aggregate distributions rather than scalar trajectories: queue occupancies, mobility shares, public-health mixtures, generation-source shares, ecological compositions, and air-quality severity profiles all live on the probability simplex and evolve over time. We study causal (online) forecasting for these distribution-valued time series and argue that the transition operator itself should be structured around the simplex. We introduce CAST (Causal Anchored Simplex Transport), a successor-local operator that (i) retrieves empirical successors from causal context, (ii) stabilizes them with a persistence anchor, and (iii) applies a bounded local stochastic transport on ordered supports; every stage preserves the simplex by construction. We identify a structural failure mode, latent transition-kernel aliasing, where similar observed distributions evolve differently under different contextual regimes, and prove that any forecaster depending only on an aliased summary incurs an irreducible weighted Jensen-Shannon excess-risk lower bound, while the CAST hypothesis class contains the regime-aware Bayes successor; for ordered supports an additional Pinsker separation holds whenever the transported successor lies outside the no-transport anchor hull. On eleven public and simulated benchmarks spanning ecology, energy, diet, mortality, employment, air quality, severe weather, mobility, and G/G/1, G_t/G/1 queue occupancy, CAST attains the best average rank on both one-step KL (1.27) and autoregressive rollout JSD (1.91), winning 8/11 sections on each metric against a broad statistical, compositional, recurrent, convolutional, and Transformer baseline set, and top-2 on all 11 sections for offline KL. Component ablations and a controlled synthetic aliasing experiment corroborate the theory.",
+    "url": "http://arxiv.org/abs/2605.16919v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Stride and Translation Invariance in CNNs",
+    "authors": [
+      "Coenraad Mouton",
+      "Johannes C. Myburgh",
+      "Marelie H. Davel"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Convolutional Neural Networks have become the standard for image classification tasks, however, these architectures are not invariant to translations of the input image. This lack of invariance is attributed to the use of stride which ignores the sampling theorem, and fully connected layers which lack spatial reasoning. We show that stride can greatly benefit translation invariance given that it is combined with sufficient similarity between neighbouring pixels, a characteristic which we refer to as local homogeneity. We also observe that this characteristic is dataset-specific and dictates the relationship between pooling kernel size and stride required for translation invariance. Furthermore we find that a trade-off exists between generalization and translation invariance in the case of pooling kernel size, as larger kernel sizes lead to better invariance but poorer generalization. Finally we explore the efficacy of other solutions proposed, namely global average pooling, anti-aliasing, and data augmentation, both empirically and through the lens of local homogeneity.",
+    "url": "http://arxiv.org/abs/2103.10097v1",
+    "doi": "10.1007/978-3-030-66151-9_17",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Learning-Driven Lossy Image Compression; A Comprehensive Survey",
+    "authors": [
+      "Sonain Jamil",
+      "Md. Jalil Piran",
+      " MuhibUrRahman"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "In the realm of image processing and computer vision (CV), machine learning (ML) architectures are widely applied. Convolutional neural networks (CNNs) solve a wide range of image processing issues and can solve image compression problem. Compression of images is necessary due to bandwidth and memory constraints. Helpful, redundant, and irrelevant information are three different forms of information found in images. This paper aims to survey recent techniques utilizing mostly lossy image compression using ML architectures including different auto-encoders (AEs) such as convolutional auto-encoders (CAEs), variational auto-encoders (VAEs), and AEs with hyper-prior models, recurrent neural networks (RNNs), CNNs, generative adversarial networks (GANs), principal component analysis (PCA) and fuzzy means clustering. We divide all of the algorithms into several groups based on architecture. We cover still image compression in this survey. Various discoveries for the researchers are emphasized and possible future directions for researchers. The open research problems such as out of memory (OOM), striped region distortion (SRD), aliasing, and compatibility of the frameworks with central processing unit (CPU) and graphics processing unit (GPU) simultaneously are explained. The majority of the publications in the compression domain surveyed are from the previous five years and use a variety of approaches.",
+    "url": "http://arxiv.org/abs/2201.09240v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Tutorial of Fourier and Hankel transforms for ultrafast optics",
+    "authors": [
+      "Yi-Hao Chen"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "This tutorial is designed to clarify a few misconceptions in the field of ultrafast optics. (1) Analytic signal that underlies the complex-conjugate decomposition of the field is discussed, as well as the misunderstanding between propagation-constant-offset and offset-frequency analytic signal and slowly-varying envelope assumption. (2) It contains complete derivations of the general formulations of several Fourier-transform relations. It shows the importance of having Fourier-transform constants as parameters, and helps clarify the arbitrary selection of Fourier-transform constants and conventions. (3) It also clarifies the correct Fourier-transform convention to be employed in ultrafast optics. (4) Moreover, multiple Fourier-transform aspects are discussed, involving convolution, aliasing, phase effect, and short-time Fourier transform. (5) In addition to the Fourier transform, a tutorial on the Hankel transform is provided. Its numerical implementation based on the fast Hankel transform with high accuracy (FHATHA) is also provided. Despite being a tutorial, I, for the first time, propose a new numerical scheme for the fast Hankel transform that outperforms both the original FHATHA and the discrete Hankel transform.",
+    "url": "http://arxiv.org/abs/2412.20698v14",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Embedded Machine Learning for Microcontroller-Class Edge Devices: Data, Feature, Evaluation, and Deployment Pipelines",
+    "authors": [
+      "Mostafa Darvishi"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Embedded machine learning moves inference from cloud services to resource-constrained devices that must acquire data, preprocess signals, run a model, and act within tight limits on memory, energy, and latency. This paper presents a systems-oriented synthesis of an embedded machine-learning workflow for microcontroller-class platforms. The emphasis is placed on engineering decisions that are often hidden in generic machine-learning introductions: sampling and buffering, feature extraction as dimensionality reduction, validation under class imbalance, model/runtime co-design, and streaming deployment. Two representative signal families are used throughout the paper. The first is inertial motion recognition, where a two-second, three-axis accelerometer window is transformed from raw samples into root-mean-square and spectral features before classification. The second is keyword spotting, where audio is sampled, anti-aliased, transformed into mel-frequency cepstral coefficients, and processed by a compact one-dimensional convolutional network. The paper concludes with practical design rules for robust on-device inference, including data curation, quantization, thresholding, scheduling, and field monitoring.",
+    "url": "http://arxiv.org/abs/2606.18122v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Plug-and-Play Approach to Multiparametric Quantitative MRI: Image Reconstruction using Pre-Trained Deep Denoisers",
+    "authors": [
+      "Ketan Fatania",
+      "Carolin M. Pirkl",
+      "Marion I. Menzel",
+      "Peter Hall",
+      "Mohammad Golbabaee"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Current spatiotemporal deep learning approaches to Magnetic Resonance Fingerprinting (MRF) build artefact-removal models customised to a particular k-space subsampling pattern which is used for fast (compressed) acquisition. This may not be useful when the acquisition process is unknown during training of the deep learning model and/or changes during testing time. This paper proposes an iterative deep learning plug-and-play reconstruction approach to MRF which is adaptive to the forward acquisition process. Spatiotemporal image priors are learned by an image denoiser i.e. a Convolutional Neural Network (CNN), trained to remove generic white gaussian noise (not a particular subsampling artefact) from data. This CNN denoiser is then used as a data-driven shrinkage operator within the iterative reconstruction algorithm. This algorithm with the same denoiser model is then tested on two simulated acquisition processes with distinct subsampling patterns. The results show consistent de-aliasing performance against both acquisition schemes and accurate mapping of tissues' quantitative bio-properties. Software available: https://github.com/ketanfatania/QMRI-PnP-Recon-POC",
+    "url": "http://arxiv.org/abs/2202.05269v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Recovery of TESS Stellar Rotation Periods Using Deep Learning",
+    "authors": [
+      "Zachary R. Claytor",
+      "Jennifer L. van Saders",
+      "Joe Llama",
+      "Peter Sadowski",
+      "Brandon Quach",
+      "Ellis Avallone"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "We used a convolutional neural network to infer stellar rotation periods from a set of synthetic light curves simulated with realistic spot evolution patterns. We convolved these simulated light curves with real TESS light curves containing minimal intrinsic astrophysical variability to allow the network to learn TESS systematics and estimate rotation periods despite them. In addition to periods, we predict uncertainties via heteroskedastic regression to estimate the credibility of the period predictions. In the most credible half of the test data, we recover 10%-accurate periods for 46% of the targets, and 20%-accurate periods for 69% of the targets. Using our trained network, we successfully recover periods of real stars with literature rotation measurements, even past the 13.7-day limit generally encountered by TESS rotation searches using conventional period-finding techniques. Our method also demonstrates resistance to half-period aliases. We present the neural network and simulated training data, and introduce the software butterpy used to synthesize the light curves using realistic star spot evolution.",
+    "url": "http://arxiv.org/abs/2104.14566v1",
+    "doi": "10.3847/1538-4357/ac498f",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Frequency Regularization: Unveiling the Spectral Inductive Bias of Deep Neural Networks",
+    "authors": [
+      "Jiahao Lu"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Regularization techniques such as L2 regularization (Weight Decay) and Dropout are fundamental to training deep neural networks, yet their underlying physical mechanisms regarding feature frequency selection remain poorly understood. In this work, we investigate the Spectral Bias of modern Convolutional Neural Networks (CNNs). We introduce a Visual Diagnostic Framework to track the dynamic evolution of weight frequencies during training and propose a novel metric, the Spectral Suppression Ratio (SSR), to quantify the \"low-pass filtering\" intensity of different regularizers. By addressing the aliasing issue in small kernels (e.g., 3x3) through discrete radial profiling, our empirical results on ResNet-18 and CIFAR-10 demonstrate that L2 regularization suppresses high-frequency energy accumulation by over 3x compared to unregularized baselines. Furthermore, we reveal a critical Accuracy-Robustness Trade-off: while L2 models are sensitive to broadband Gaussian noise due to over-specialization in low frequencies, they exhibit superior robustness against high-frequency information loss (e.g., low resolution), outperforming baselines by >6% in blurred scenarios. This work provides a signal-processing perspective on generalization, confirming that regularization enforces a strong spectral inductive bias towards low-frequency structures.",
+    "url": "http://arxiv.org/abs/2512.22192v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "AirObject: A Temporally Evolving Graph Embedding for Object Identification",
+    "authors": [
+      "Nikhil Varma Keetha",
+      "Chen Wang",
+      "Yuheng Qiu",
+      "Kuan Xu",
+      "Sebastian Scherer"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Object encoding and identification are vital for robotic tasks such as autonomous exploration, semantic scene understanding, and re-localization. Previous approaches have attempted to either track objects or generate descriptors for object identification. However, such systems are limited to a \"fixed\" partial object representation from a single viewpoint. In a robot exploration setup, there is a requirement for a temporally \"evolving\" global object representation built as the robot observes the object from multiple viewpoints. Furthermore, given the vast distribution of unknown novel objects in the real world, the object identification process must be class-agnostic. In this context, we propose a novel temporal 3D object encoding approach, dubbed AirObject, to obtain global keypoint graph-based embeddings of objects. Specifically, the global 3D object embeddings are generated using a temporal convolutional network across structural information of multiple frames obtained from a graph attention-based encoding method. We demonstrate that AirObject achieves the state-of-the-art performance for video object identification and is robust to severe occlusion, perceptual aliasing, viewpoint shift, deformation, and scale transform, outperforming the state-of-the-art single-frame and sequential descriptors. To the best of our knowledge, AirObject is one of the first temporal object encoding methods. Source code is available at https://github.com/Nik-V9/AirObject.",
+    "url": "http://arxiv.org/abs/2111.15150v2",
+    "doi": "10.1109/CVPR52688.2022.00822",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "WaveCNet: Wavelet Integrated CNNs to Suppress Aliasing Effect for Noise-Robust Image Classification",
+    "authors": [
+      "Qiufu Li",
+      "Linlin Shen",
+      "Sheng Guo",
+      "Zhihui Lai"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Though widely used in image classification, convolutional neural networks (CNNs) are prone to noise interruptions, i.e. the CNN output can be drastically changed by small image noise. To improve the noise robustness, we try to integrate CNNs with wavelet by replacing the common down-sampling (max-pooling, strided-convolution, and average pooling) with discrete wavelet transform (DWT). We firstly propose general DWT and inverse DWT (IDWT) layers applicable to various orthogonal and biorthogonal discrete wavelets like Haar, Daubechies, and Cohen, etc., and then design wavelet integrated CNNs (WaveCNets) by integrating DWT into the commonly used CNNs (VGG, ResNets, and DenseNet). During the down-sampling, WaveCNets apply DWT to decompose the feature maps into the low-frequency and high-frequency components. Containing the main information including the basic object structures, the low-frequency component is transmitted into the following layers to generate robust high-level features. The high-frequency components are dropped to remove most of the data noises. The experimental results show that %wavelet accelerates the CNN training, and WaveCNets achieve higher accuracy on ImageNet than various vanilla CNNs. We have also tested the performance of WaveCNets on the noisy version of ImageNet, ImageNet-C and six adversarial attacks, the results suggest that the proposed DWT/IDWT layers could provide better noise-robustness and adversarial robustness. When applying WaveCNets as backbones, the performance of object detectors (i.e., faster R-CNN and RetinaNet) on COCO detection dataset are consistently improved. We believe that suppression of aliasing effect, i.e. separation of low frequency and high frequency information, is the main advantages of our approach. The code of our DWT/IDWT layer and different WaveCNets are available at https://github.com/CVI-SZU/WaveCNet.",
+    "url": "http://arxiv.org/abs/2107.13335v1",
+    "doi": "10.1109/TIP.2021.3101395",
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

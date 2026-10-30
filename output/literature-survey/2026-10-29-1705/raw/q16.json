@@ -1,0 +1,100 @@
+[
+  {
+    "title": "GRPO-TTA: Test-Time Visual Tuning for Vision-Language Models via GRPO-Driven Reinforcement Learning",
+    "authors": [
+      "Yujun Li",
+      "Hongyuan Zhang",
+      "Yuan Yuan"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Group Relative Policy Optimization (GRPO) has recently shown strong performance in post-training large language models and vision-language models. It raises a question of whether the GRPO also significantly promotes the test-time adaptation (TTA) of vision language models. In this paper, we propose Group Relative Policy Optimization for Test-Time Adaptation (GRPO-TTA), which adapts GRPO to the TTA setting by reformulating class-specific prompt prediction as a group-wise policy optimization problem. Specifically, we construct output groups by sampling top-K class candidates from CLIP similarity distributions, enabling probability-driven optimization without access to ground-truth labels. Moreover, we design reward functions tailored to test-time adaptation, including alignment rewards and dispersion rewards, to guide effective visual encoder tuning. Extensive experiments across diverse benchmarks demonstrate that GRPO-TTA consistently outperforms existing test-time adaptation methods, with notably larger performance gains under natural distribution shifts.",
+    "url": "http://arxiv.org/abs/2605.03403v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "WISE-ATTA: When to Ask for Labels in Budgeted Active Test-Time Adaptation",
+    "authors": [
+      "Muhammad Huzaifa",
+      "Lea Schönherr",
+      "Thorsten Eisenhofer"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Active test-time adaptation (ATTA) improves robustness under distribution shift by updating a deployed model during inference while selectively querying supervision. However, most existing ATTA methods implicitly assume that supervision can be requested for every incoming test batch, which can incur substantial annotation cost over long test streams. In this work, we introduce budgeted ATTA in which labels are available for only a fraction of test batches. This formulation shifts the central challenge from deciding what to label within a batch to deciding when supervision should be applied over time. To address this challenge, we propose a budget-aware approach WISE-ATTA that allocates supervision over the test stream based on lightweight signals computed online, prioritizing periods where supervision is likely to be most useful. When a batch is selected for supervision, we further employ a drift-based sample selection criterion that targets samples exhibiting ongoing, unconverged adaptation dynamics, enabling effective updates from a single labeled example. We evaluate this approach on synthetic corruptions (ImageNet-C) and natural distribution shifts (ImageNet-R/K/A). Across settings, WISE-ATTA achieves competitive or improved performance compared to recent ATTA methods while requiring substantially fewer labels. Overall, we find that the timing of supervision is a key, yet underexplored, aspect of active test-time adaptation. Code: https://github.com/Muhammad-Huzaifaa/WISE-ATTA",
+    "url": "http://arxiv.org/abs/2609.37687v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Evaluating Test-Time Adaptation For Facial Expression Recognition Under Natural Cross-Dataset Distribution Shifts",
+    "authors": [
+      "John Turnbull",
+      "Shivam Grover",
+      "Amin Jalali",
+      "Ali Etemad"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Deep learning models often struggle under natural distribution shifts, a common challenge in real-world deployments. Test-Time Adaptation (TTA) addresses this by adapting models during inference without labeled source data. We present the first evaluation of TTA methods for FER under natural domain shifts, performing cross-dataset experiments with widely used FER datasets. This moves beyond synthetic corruptions to examine real-world shifts caused by differing collection protocols, annotation standards, and demographics. Results show TTA can boost FER performance under natural shifts by up to 11.34\\%. Entropy minimization methods such as TENT and SAR perform best when the target distribution is clean. In contrast, prototype adjustment methods like T3A excel under larger distributional distance scenarios. Finally, feature alignment methods such as SHOT deliver the largest gains when the target distribution is noisier than our source. Our cross-dataset analysis shows that TTA effectiveness is governed by the distributional distance and the severity of the natural shift across domains.",
+    "url": "http://arxiv.org/abs/2603.19994v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "ComMem: Complementary Memory Systems for Test-Time Adaptation of Vision-Language Models",
+    "authors": [
+      "Guanglong Sun",
+      "Shuang Cui",
+      "Bo Lei",
+      "Liyuan Wang",
+      "Zihan Zhai",
+      "Hongwei Yan",
+      "Hang Su",
+      "Jun Zhu",
+      "Yi Zhong"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Test-time adaptation (TTA) of vision-language models (VLMs) is essential for their robust deployment in dynamic, real-world environments. However, existing TTA methods often adapt locally without accumulating knowledge over time, or operating within a single modality without exploiting VLMs' inherently multi-modal nature. Inspired by the \\textbf{Com}plementary \\textbf{Mem}ory systems of the biological brain, we propose \\textbf{ComMem}, an innovative approach that mimics the distinct but cooperative roles of the hippocampus and neocortex to enable effective TTA for VLMs. ComMem consists of two key components: a fast-adapting detailed memory, akin to the hippocampus, that forms a dynamic visual cache from high-confidence test samples; and a slow-integrating abstract memory, akin to the neocortex, that continually refines global textual prototypes. For each test instance, ComMem jointly optimizes both memory systems to ensure cross-modal consistency. Extensive experiments on 15 benchmark datasets show that ComMem significantly outperforms state-of-the-art methods under both natural distribution shifts and cross-dataset generalization, offering a promising direction for enhancing VLMs' practical adaptability.",
+    "url": "http://arxiv.org/abs/2606.28719v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A-TPT: Angular Diversity Calibration Properties for Test-Time Prompt Tuning of Vision-Language Models",
+    "authors": [
+      "Shihab Aaqil Ahamed",
+      "Udaya S. K. P. Miriya Thanthrige",
+      "Ranga Rodrigo",
+      "Muhammad Haris Khan"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Test-time prompt tuning (TPT) has emerged as a promising technique for adapting large vision-language models (VLMs) to unseen tasks without relying on labeled data. However, the lack of dispersion between textual features can hurt calibration performance, which raises concerns about VLMs' reliability, trustworthiness, and safety. Current TPT approaches primarily focus on improving prompt calibration by either maximizing average textual feature dispersion or enforcing orthogonality constraints to encourage angular separation. However, these methods may not always have optimal angular separation between class-wise textual features, which implies overlooking the critical role of angular diversity. To address this, we propose A-TPT, a novel TPT framework that introduces angular diversity to encourage uniformity in the distribution of normalized textual features induced by corresponding learnable prompts. This uniformity is achieved by maximizing the minimum pairwise angular distance between features on the unit hypersphere. We show that our approach consistently surpasses state-of-the-art TPT methods in reducing the aggregate average calibration error while maintaining comparable accuracy through extensive experiments with various backbones on different datasets. Notably, our approach exhibits superior zero-shot calibration performance on natural distribution shifts and generalizes well to medical datasets. We provide extensive analyses, including theoretical aspects, to establish the grounding of A-TPT. These results highlight the potency of promoting angular diversity to achieve well-dispersed textual features, significantly improving VLM calibration during test-time adaptation. Our code will be made publicly available.",
+    "url": "http://arxiv.org/abs/2510.26441v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CloudFixer: Test-Time Adaptation for 3D Point Clouds via Diffusion-Guided Geometric Transformation",
+    "authors": [
+      "Hajin Shim",
+      "Changhun Kim",
+      "Eunho Yang"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "3D point clouds captured from real-world sensors frequently encompass noisy points due to various obstacles, such as occlusion, limited resolution, and variations in scale. These challenges hinder the deployment of pre-trained point cloud recognition models trained on clean point clouds, leading to significant performance degradation. While test-time adaptation (TTA) strategies have shown promising results on this issue in the 2D domain, their application to 3D point clouds remains under-explored. Among TTA methods, an input adaptation approach, which directly converts test instances to the source domain using a pre-trained diffusion model, has been proposed in the 2D domain. Despite its robust TTA performance in practical situations, naively adopting this into the 3D domain may be suboptimal due to the neglect of inherent properties of point clouds, and its prohibitive computational cost. Motivated by these limitations, we propose CloudFixer, a test-time input adaptation method tailored for 3D point clouds, employing a pre-trained diffusion model. Specifically, CloudFixer optimizes geometric transformation parameters with carefully designed objectives that leverage the geometric properties of point clouds. We also substantially improve computational efficiency by avoiding backpropagation through the diffusion model and a prohibitive generation process. Furthermore, we propose an online model adaptation strategy by aligning the original model prediction with that of the adapted input. Extensive experiments showcase the superiority of CloudFixer over various TTA baselines, excelling in handling common corruptions and natural distribution shifts across diverse real-world scenarios. Our code is available at https://github.com/shimazing/CloudFixer",
+    "url": "http://arxiv.org/abs/2407.16193v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

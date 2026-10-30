@@ -1,0 +1,316 @@
+[
+  {
+    "title": "Complex-Valued Unitary Representations as Classification Heads for Improved Uncertainty Quantification in Deep Neural Networks",
+    "authors": [
+      "Akbar Anbar Jafari",
+      "Cagri Ozcinar",
+      "Gholamreza Anbarjafari"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Modern deep neural networks achieve high predictive accuracy but remain poorly calibrated: their confidence scores do not reliably reflect the true probability of correctness. We propose a quantum-inspired classification head architecture that projects backbone features into a complex-valued Hilbert space and evolves them under a learned unitary transformation parameterised via the Cayley map. Through a controlled hybrid experimental design - training a single shared backbone and comparing lightweight interchangeable heads - we isolate the effect of complex-valued unitary representations on calibration. Our ablation study on CIFAR-10 reveals that the unitary magnitude head (complex features evolved under a Cayley unitary, read out via magnitude and softmax) achieves an Expected Calibration Error (ECE) of 0.0146, representing a 2.4x improvement over a standard softmax head (0.0355) and a 3.5x improvement over temperature scaling (0.0510). Surprisingly, replacing the softmax readout with a Born rule measurement layer - the quantum-mechanically motivated approach - degrades calibration to an ECE of 0.0819. On the CIFAR-10H human-uncertainty benchmark, the wave function head achieves the lowest KL-divergence (0.336) to human soft labels among all compared methods, indicating that complex-valued representations better capture the structure of human perceptual ambiguity. We provide theoretical analysis connecting norm-preserving unitary dynamics to calibration through feature-space geometry, report negative results on out-of-distribution detection and sentiment analysis to delineate the method's scope, and discuss practical implications for safety-critical applications. Code is publicly available.",
+    "url": "http://arxiv.org/abs/2602.15283v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "An Assessment of Human vs. Model Uncertainty in Soft-Label Learning and Calibration",
+    "authors": [
+      "Maja Pavlovic",
+      "Silviu Paun",
+      "Massimo Poesio"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Central to human-aligned AI is understanding the benefits of human-elicited labels over synthetic alternatives. While human soft-labels improve calibration by capturing uncertainty, prior studies conflate these benefits with the implicit correction of mislabeled data (mode shifts), obscuring true effects of soft-labels. We present a controlled audit of soft-label learning across MNIST and a synthetic variant, re-annotating subsets to extract human uncertainty. By decoupling soft-label supervision from underlying label mode shifts, we show that while human soft-labels do provide accuracy gains, their larger value lies in acting as a regularizer that improves model calibration on difficult samples and promotes stable convergence across training runs. Dataset cartography reveals models trained on human soft-labels mirror human uncertainty, whereas those trained on synthetic labels fail to align with humans. Broadly, this work provides a diagnostic testbed for human-AI uncertainty alignment.",
+    "url": "http://arxiv.org/abs/2605.18648v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Training sound event detection with soft labels from crowdsourced annotations",
+    "authors": [
+      "Irene Martín-Morató",
+      "Manu Harju",
+      "Paul Ahokas",
+      "Annamaria Mesaros"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In this paper, we study the use of soft labels to train a system for sound event detection (SED). Soft labels can result from annotations which account for human uncertainty about categories, or emerge as a natural representation of multiple opinions in annotation. Converting annotations to hard labels results in unambiguous categories for training, at the cost of losing the details about the labels distribution. This work investigates how soft labels can be used, and what benefits they bring in training a SED system. The results show that the system is capable of learning information about the activity of the sounds which is reflected in the soft labels and is able to detect sounds that are missed in the typical binary target training setup. We also release a new dataset produced through crowdsourcing, containing temporally strong labels for sound events in real-life recordings, with both soft and hard labels.",
+    "url": "http://arxiv.org/abs/2302.14572v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "No Need to Sacrifice Data Quality for Quantity: Crowd-Informed Machine Annotation for Cost-Effective Understanding of Visual Data",
+    "authors": [
+      "Christopher Klugmann",
+      "Rafid Mahmood",
+      "Guruprasad Hegde",
+      "Amit Kale",
+      "Daniel Kondermann"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Labeling visual data is expensive and time-consuming. Crowdsourcing systems promise to enable highly parallelizable annotations through the participation of monetarily or otherwise motivated workers, but even this approach has its limits. The solution: replace manual work with machine work. But how reliable are machine annotators? Sacrificing data quality for high throughput cannot be acceptable, especially in safety-critical applications such as autonomous driving. In this paper, we present a framework that enables quality checking of visual data at large scales without sacrificing the reliability of the results. We ask annotators simple questions with discrete answers, which can be highly automated using a convolutional neural network trained to predict crowd responses. Unlike the methods of previous work, which aim to directly predict soft labels to address human uncertainty, we use per-task posterior distributions over soft labels as our training objective, leveraging a Dirichlet prior for analytical accessibility. We demonstrate our approach on two challenging real-world automotive datasets, showing that our model can fully automate a significant portion of tasks, saving costs in the high double-digit percentage range. Our model reliably predicts human uncertainty, allowing for more accurate inspection and filtering of difficult examples. Additionally, we show that the posterior distributions over soft labels predicted by our model can be used as priors in further inference processes, reducing the need for numerous human labelers to approximate true soft labels accurately. This results in further cost reductions and more efficient use of human resources in the annotation process.",
+    "url": "http://arxiv.org/abs/2409.00048v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Does Model Uncertainty Track Human Ambiguity? Evidence from Multi-Annotator Vision Benchmarks",
+    "authors": [
+      "Manya Singh",
+      "Arjun Pakrashi"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Human-model alignment is critical for trustworthy AI-assisted decision-making systems. Yet, most work evaluates model predictions against single ground-truth labels, overlooking that humans themselves often disagree on labels, a signal of genuine ambiguity. We investigate whether models struggle on the same instances that humans find difficult. We measure this on two vision datasets (FER+ and CIFAR-10H) where multiple human annotations per image capture human disagreement patterns. We evaluate eight pretrained models across three architectures (ResNet, EfficientNet, MobileNetV3) in two parts: first, whether model uncertainty (softmax confidence, entropy) correlates with human disagreement, and second, whether predictive multiplicity measures (inter-model disagreement, Jensen-Shannon divergence) do. We find that it does not: alignment is weak in both dimensions. At the discrete label level, 50.4% of CIFAR-10H images and 33.5% of FER+ images receive multiple valid classifications from humans, while the models converge on only one. These instances represent a critical failure case where humans perceive ambiguity and would request expert review, yet models decide confidently. At the continuous score level, single-model uncertainty correlates weakly with human disagreement ($ρ= 0.24--0.55$), and predictive multiplicity provides only modest improvement. Widely-used uncertainty quantification methods do not reliably identify instances humans find ambiguous. Model uncertainty should not be treated as a trustworthy signal by default for decision-making in high-stakes scenarios.",
+    "url": "http://arxiv.org/abs/2609.34506v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Rational Model of Dimension-reduced Human Categorization",
+    "authors": [
+      "Yifan Hong",
+      "Chen Wang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Humans can categorize with only a few samples despite the numerous features. To mimic this ability, we propose a novel dimension-reduced category representation using a mixture of probabilistic principal component analyzers (mPPCA). Tests on the ${\\tt CIFAR-10H}$ dataset demonstrate that mPPCA with only a single principal component for each category effectively predicts human categorization of natural images. We further impose a hierarchical prior on mPPCA to account for new category generalization. mPPCA captures human behavior in our experiments on images with simple size-color combinations. We also provide sufficient and necessary conditions when reducing dimensions in categorization is rational.",
+    "url": "http://arxiv.org/abs/2305.14383v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Transfer and Marginalize: Explaining Away Label Noise with Privileged Information",
+    "authors": [
+      "Mark Collier",
+      "Rodolphe Jenatton",
+      "Efi Kokiopoulou",
+      "Jesse Berent"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Supervised learning datasets often have privileged information, in the form of features which are available at training time but are not available at test time e.g. the ID of the annotator that provided the label. We argue that privileged information is useful for explaining away label noise, thereby reducing the harmful impact of noisy labels. We develop a simple and efficient method for supervised learning with neural networks: it transfers via weight sharing the knowledge learned with privileged information and approximately marginalizes over privileged information at test time. Our method, TRAM (TRansfer and Marginalize), has minimal training time overhead and has the same test-time cost as not using privileged information. TRAM performs strongly on CIFAR-10H, ImageNet and Civil Comments benchmarks.",
+    "url": "http://arxiv.org/abs/2202.09244v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Noise-Adaptive Conformal Classification with Marginal Coverage",
+    "authors": [
+      "Teresa Bortolotti",
+      "Y. X. Rachel Wang",
+      "Xin Tong",
+      "Alessandra Menafoglio",
+      "Simone Vantini",
+      "Matteo Sesia"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Conformal inference provides a rigorous statistical framework for uncertainty quantification in machine learning, enabling well-calibrated prediction sets with precise coverage guarantees for any classification model. However, its reliance on the idealized assumption of perfect data exchangeability limits its effectiveness in the presence of real-world complications, such as low-quality labels---a widespread issue in modern large-scale data sets. This work tackles this open problem by introducing an adaptive conformal inference method capable of efficiently handling deviations from exchangeability caused by random label noise, leading to informative prediction sets with tight marginal coverage guarantees even in those challenging scenarios. We validate our method through extensive numerical experiments demonstrating its effectiveness on synthetic and real data sets, including BigEarthNet and CIFAR-10H.",
+    "url": "http://arxiv.org/abs/2501.18060v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Bayesian Inference for Correlated Human Experts and Classifiers",
+    "authors": [
+      "Markelle Kelly",
+      "Alex Boyd",
+      "Sam Showalter",
+      "Mark Steyvers",
+      "Padhraic Smyth"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Applications of machine learning often involve making predictions based on both model outputs and the opinions of human experts. In this context, we investigate the problem of querying experts for class label predictions, using as few human queries as possible, and leveraging the class probability estimates of pre-trained classifiers. We develop a general Bayesian framework for this problem, modeling expert correlation via a joint latent representation, enabling simulation-based inference about the utility of additional expert queries, as well as inference of posterior distributions over unobserved expert labels. We apply our approach to two real-world medical classification problems, as well as to CIFAR-10H and ImageNet-16H, demonstrating substantial reductions relative to baselines in the cost of querying human experts while maintaining high prediction accuracy.",
+    "url": "http://arxiv.org/abs/2506.05636v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Adaptive conformal classification with noisy labels",
+    "authors": [
+      "Matteo Sesia",
+      "Y. X. Rachel Wang",
+      "Xin Tong"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "This paper develops novel conformal prediction methods for classification tasks that can automatically adapt to random label contamination in the calibration sample, leading to more informative prediction sets with stronger coverage guarantees compared to state-of-the-art approaches. This is made possible by a precise characterization of the effective coverage inflation (or deflation) suffered by standard conformal inferences in the presence of label contamination, which is then made actionable through new calibration algorithms. Our solution is flexible and can leverage different modeling assumptions about the label contamination process, while requiring no knowledge of the underlying data distribution or of the inner workings of the machine-learning classifier. The advantages of the proposed methods are demonstrated through extensive simulations and an application to object classification with the CIFAR-10H image data set.",
+    "url": "http://arxiv.org/abs/2309.05092v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Bayesian Online Learning for Consensus Prediction",
+    "authors": [
+      "Sam Showalter",
+      "Alex Boyd",
+      "Padhraic Smyth",
+      "Mark Steyvers"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Given a pre-trained classifier and multiple human experts, we investigate the task of online classification where model predictions are provided for free but querying humans incurs a cost. In this practical but under-explored setting, oracle ground truth is not available. Instead, the prediction target is defined as the consensus vote of all experts. Given that querying full consensus can be costly, we propose a general framework for online Bayesian consensus estimation, leveraging properties of the multivariate hypergeometric distribution. Based on this framework, we propose a family of methods that dynamically estimate expert consensus from partial feedback by producing a posterior over expert and model beliefs. Analyzing this posterior induces an interpretable trade-off between querying cost and classification performance. We demonstrate the efficacy of our framework against a variety of baselines on CIFAR-10H and ImageNet-16H, two large-scale crowdsourced datasets.",
+    "url": "http://arxiv.org/abs/2312.07679v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "L2CU: Learning to Complement Unseen Users",
+    "authors": [
+      "Dileepa Pitawela",
+      "Gustavo Carneiro",
+      "Hsiang-Ting Chen"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Recent research highlights the potential of machine learning models to learn to complement (L2C) human strengths; however, generalizing this capability to unseen users remains a significant challenge. Existing L2C methods oversimplify interaction between human and AI by relying on a single, global user model that neglects individual user variability, leading to suboptimal cooperative performance. Addressing this, we introduce L2CU, a novel L2C framework for human-AI cooperative classification with unseen users. Given sparse and noisy user annotations, L2CU identifies representative annotator profiles capturing distinct labeling patterns. By matching unseen users to these profiles, L2CU leverages profile-specific models to complement the user and achieve superior joint accuracy. We evaluate L2CU on datasets (CIFAR-10N, CIFAR-10H, Fashion-MNIST-H, Chaoyang and AgNews), demonstrating its effectiveness as a model-agnostic solution for improving human-AI cooperative classification.",
+    "url": "http://arxiv.org/abs/2601.06119v1",
+    "doi": "10.1109/ACCESS.2025.3648122",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Uncertainty Estimation by Human Perception versus Neural Models",
+    "authors": [
+      "Pedro Mendes",
+      "Paolo Romano",
+      "David Garlan"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Modern neural networks (NNs) often achieve high predictive accuracy but are poorly calibrated, producing overconfident predictions even when wrong. This miscalibration poses serious challenges in applications where reliable uncertainty estimates are critical. In this work, we investigate how human perceptual uncertainty compares to uncertainty estimated by NNs. Using three vision benchmarks annotated with both human disagreement and crowdsourced confidence, we assess the correlation between model-predicted uncertainty and human-perceived uncertainty. Our results show that current methods only weakly align with human intuition, with correlations varying significantly across tasks and uncertainty metrics. Notably, we find that incorporating human-derived soft labels into the training process can improve calibration without compromising accuracy. These findings reveal a persistent gap between model and human uncertainty and highlight the potential of leveraging human insights to guide the development of more trustworthy AI systems.",
+    "url": "http://arxiv.org/abs/2506.15850v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Distributions In, Distributions Out: The Case for Soft-Label Training",
+    "authors": [
+      "Agamdeep Singh",
+      "Ashish Tiwari",
+      "Hosein Hasanbeig",
+      "Priyanshu Gupta"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Supervised classifiers output a distribution over classes but are typically trained against a single label obtained by collapsing multiple annotators into a majority vote. On tasks where annotator disagreement reflects genuine ambiguity -- natural language inference, politeness, visually ambiguous categorization -- this collapse discards information and forces models to express uniform confidence on inputs where humans systematically disagree. We compare soft-label training, which uses the full annotation distribution as the target, against hard-label training across three datasets spanning vision and NLP (ChaosNLI, POPQUORN, CIFAR-10H). Soft-label training matches or exceeds hard-label accuracy on every dataset, reduces KL divergence to the annotator distribution by 32% on average (p < 10^-4), and produces predictions whose per-sample entropy correlates 61% more strongly with annotator entropy -- models trained on distributions are uncertain precisely where humans are. We argue these benefits follow from a basic observation: when annotators legitimately disagree, the annotation distribution is the correct learning target, not a noisy estimate of it.",
+    "url": "http://arxiv.org/abs/2511.14117v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Identify ambiguous tasks combining crowdsourced labels by weighting Areas Under the Margin",
+    "authors": [
+      "Tanguy Lefort",
+      "Benjamin Charlier",
+      "Alexis Joly",
+      "Joseph Salmon"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "In supervised learning - for instance in image classification - modern massive datasets are commonly labeled by a crowd of workers. The obtained labels in this crowdsourcing setting are then aggregated for training, generally leveraging a per-worker trust score. Yet, such workers oriented approaches discard the tasks' ambiguity. Ambiguous tasks might fool expert workers, which is often harmful for the learning step. In standard supervised learning settings - with one label per task - the Area Under the Margin (AUM) was tailored to identify mislabeled data. We adapt the AUM to identify ambiguous tasks in crowdsourced learning scenarios, introducing the Weighted Areas Under the Margin (WAUM). The WAUM is an average of AUMs weighted according to task-dependent scores. We show that the WAUM can help discarding ambiguous tasks from the training set, leading to better generalization performance. We report improvements over existing strategies for learning with a crowd, both on simulated settings, and on real datasets such as CIFAR-10H (a crowdsourced dataset with a high number of answered labels),LabelMe and Music (two datasets with few answered votes).",
+    "url": "http://arxiv.org/abs/2209.15380v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Conformal Set-based Human-AI Complementarity with Multiple Experts",
+    "authors": [
+      "Helbert Paat",
+      "Guohao Shen"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Decision support systems are designed to assist human experts in classification tasks by providing conformal prediction sets derived from a pre-trained model. This human-AI collaboration has demonstrated enhanced classification performance compared to using either the model or the expert independently. In this study, we focus on the selection of instance-specific experts from a pool of multiple human experts, contrasting it with existing research that typically focuses on single-expert scenarios. We characterize the conditions under which multiple experts can benefit from the conformal sets. With the insight that only certain experts may be relevant for each instance, we explore the problem of subset selection and introduce a greedy algorithm that utilizes conformal sets to identify the subset of expert predictions that will be used in classifying an instance. This approach is shown to yield better performance compared to naive methods for human subset selection. Based on real expert predictions from the CIFAR-10H and ImageNet-16H datasets, our simulation study indicates that our proposed greedy algorithm achieves near-optimal subsets, resulting in improved classification performance among multiple experts.",
+    "url": "http://arxiv.org/abs/2508.06997v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Learning Shrinks the Hard Tail: Training-Dependent Inference Scaling in a Solvable Linear Model",
+    "authors": [
+      "Noam Levi"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "We analyze neural scaling laws in a solvable model of last-layer fine-tuning where targets have intrinsic, instance-heterogeneous difficulty. In our Latent Instance Difficulty (LID) model, each input's target variance is governed by a latent ``precision'' drawn from a heavy-tailed distribution. While generalization loss recovers standard scaling laws, our main contribution connects this to inference. The pass@$k$ failure rate exhibits a power-law decay, $k^{-β_\\text{eff}}$, but the observed exponent $β_\\text{eff}$ is training-dependent. It grows with sample size $N$ before saturating at an intrinsic limit $β$ set by the difficulty distribution's tail. This coupling reveals that learning shrinks the ``hard tail'' of the error distribution: improvements in the model's generalization error steepen the pass@$k$ curve until irreducible target variance dominates. The LID model yields testable, closed-form predictions for this behavior, including a compute-allocation rule that favors training before saturation and inference attempts after. We validate these predictions in simulations and in two real-data proxies: CIFAR-10H (human-label variance) and a maths teacher-student distillation task.",
+    "url": "http://arxiv.org/abs/2601.03764v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "When Can Human-AI Teams Outperform Individuals? Tight Bounds with Impossibility Guarantees",
+    "authors": [
+      "Dongxin Guo",
+      "Jikun Wu",
+      "Siu-Ming Yiu"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Human-AI teams fail to outperform their best member in 70% of studies, yet no theory specifies when complementarity is achievable. We derive tight bounds for the broad class of confidence-based aggregation rules by integrating signal detection theory with information-theoretic analysis, yielding four results: (1) a complementarity theorem (teams outperform individuals iff error correlation $ρ_{HM} < ρ^*$, with $ρ^* \\approx a$ in the symmetric near-chance regime); (2) minimax bounds showing gains scale as $Θ(\\sqrt{Δd})$ with metacognitive sensitivity difference; (3) an impossibility result proving no confidence-based aggregation rule achieves complementarity when $ρ_{HM} \\geq ρ^*$; and (4) multi-class generalization $ρ^*_K \\approx ρ^*/\\sqrt{K-1}$. Predictions match observed team accuracy ($R = 0.94$ on ImageNet-16H, $R = 0.91$ on CIFAR-10H) and the multi-class threshold scaling holds on human data ($R = 0.93$, $K = 16$), with robustness under non-Gaussian distributions. The framework explains why complementarity is rare and provides actionable design formulas; results apply to aggregation, not to interactive deliberation that generates novel answers.",
+    "url": "http://arxiv.org/abs/2605.08710v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Human Uncertainty in Concept-Based AI Systems",
+    "authors": [
+      "Katherine M. Collins",
+      "Matthew Barker",
+      "Mateo Espinosa Zarlenga",
+      "Naveen Raman",
+      "Umang Bhatt",
+      "Mateja Jamnik",
+      "Ilia Sucholutsky",
+      "Adrian Weller",
+      "Krishnamurthy Dvijotham"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Placing a human in the loop may abate the risks of deploying AI systems in safety-critical settings (e.g., a clinician working with a medical AI system). However, mitigating risks arising from human error and uncertainty within such human-AI interactions is an important and understudied issue. In this work, we study human uncertainty in the context of concept-based models, a family of AI systems that enable human feedback via concept interventions where an expert intervenes on human-interpretable concepts relevant to the task. Prior work in this space often assumes that humans are oracles who are always certain and correct. Yet, real-world decision-making by humans is prone to occasional mistakes and uncertainty. We study how existing concept-based models deal with uncertain interventions from humans using two novel datasets: UMNIST, a visual dataset with controlled simulated uncertainty based on the MNIST dataset, and CUB-S, a relabeling of the popular CUB concept dataset with rich, densely-annotated soft labels from humans. We show that training with uncertain concept labels may help mitigate weaknesses of concept-based systems when handling uncertain interventions. These results allow us to identify several open challenges, which we argue can be tackled through future multidisciplinary research on building interactive uncertainty-aware systems. To facilitate further research, we release a new elicitation platform, UElic, to collect uncertain feedback from humans in collaborative prediction tasks.",
+    "url": "http://arxiv.org/abs/2303.12872v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Confidence Calibration under Ambiguous Ground Truth",
+    "authors": [
+      "Linwei Tao",
+      "Haoyang Luo",
+      "Minjing Dong",
+      "Chang Xu"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Confidence calibration assumes a unique ground-truth label per input, yet this assumption fails wherever annotators genuinely disagree. Post-hoc calibrators fitted on majority-voted labels, the standard single-label targets used in practice, can appear well-calibrated under conventional evaluation yet remain substantially miscalibrated against the underlying annotator distribution. We show that this failure is structural: under simplifying assumptions, Temperature Scaling is biased toward temperatures that underestimate annotator uncertainty, with true-label miscalibration increasing monotonically with annotation entropy. To address this, we develop a family of ambiguity-aware post-hoc calibrators that optimise proper scoring rules against the full label distribution and require no model retraining. Our methods span progressively weaker annotation requirements: Dirichlet-Soft leverages the full annotator distribution and achieves the best overall calibration quality across settings; Monte Carlo Temperature Scaling with a single annotation per example (MCTS S=1) matches full-distribution calibration across all benchmarks, demonstrating that pre-aggregated label distributions are unnecessary; and Label-Smooth Temperature Scaling (LS-TS) operates with voted labels alone by constructing data-driven pseudo-soft targets from the model's own confidence. Experiments on four benchmarks with real multi-annotator distributions (CIFAR-10H, ChaosNLI) and clinically-informed synthetic annotations (ISIC~2019, DermaMNIST) show that Dirichlet-Soft reduces true-label ECE by 55-87% relative to Temperature Scaling, while LS-TS reduces ECE by 9-77% without any annotator data.",
+    "url": "http://arxiv.org/abs/2603.22879v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

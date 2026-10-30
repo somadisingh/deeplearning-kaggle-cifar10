@@ -1,0 +1,322 @@
+[
+  {
+    "title": "Improved Text Classification via Test-Time Augmentation",
+    "authors": [
+      "Helen Lu",
+      "Divya Shanmugam",
+      "Harini Suresh",
+      "John Guttag"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Test-time augmentation -- the aggregation of predictions across transformed examples of test inputs -- is an established technique to improve the performance of image classification models. Importantly, TTA can be used to improve model performance post-hoc, without additional training. Although test-time augmentation (TTA) can be applied to any data modality, it has seen limited adoption in NLP due in part to the difficulty of identifying label-preserving transformations. In this paper, we present augmentation policies that yield significant accuracy improvements with language models. A key finding is that augmentation policy design -- for instance, the number of samples generated from a single, non-deterministic augmentation -- has a considerable impact on the benefit of TTA. Experiments across a binary classification task and dataset show that test-time augmentation can deliver consistent improvements over current state-of-the-art approaches.",
+    "url": "http://arxiv.org/abs/2206.13607v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Greedy Policy Search: A Simple Baseline for Learnable Test-Time Augmentation",
+    "authors": [
+      "Dmitry Molchanov",
+      "Alexander Lyzhov",
+      "Yuliya Molchanova",
+      "Arsenii Ashukha",
+      "Dmitry Vetrov"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Test-time data augmentation$-$averaging the predictions of a machine learning model across multiple augmented samples of data$-$is a widely used technique that improves the predictive performance. While many advanced learnable data augmentation techniques have emerged in recent years, they are focused on the training phase. Such techniques are not necessarily optimal for test-time augmentation and can be outperformed by a policy consisting of simple crops and flips. The primary goal of this paper is to demonstrate that test-time augmentation policies can be successfully learned too. We introduce greedy policy search (GPS), a simple but high-performing method for learning a policy of test-time augmentation. We demonstrate that augmentation policies learned with GPS achieve superior predictive performance on image classification problems, provide better in-domain uncertainty estimation, and improve the robustness to domain shift.",
+    "url": "http://arxiv.org/abs/2002.09103v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Better Aggregation in Test-Time Augmentation",
+    "authors": [
+      "Divya Shanmugam",
+      "Davis Blalock",
+      "Guha Balakrishnan",
+      "John Guttag"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Test-time augmentation -- the aggregation of predictions across transformed versions of a test input -- is a common practice in image classification. Traditionally, predictions are combined using a simple average. In this paper, we present 1) experimental analyses that shed light on cases in which the simple average is suboptimal and 2) a method to address these shortcomings. A key finding is that even when test-time augmentation produces a net improvement in accuracy, it can change many correct predictions into incorrect predictions. We delve into when and why test-time augmentation changes a prediction from being correct to incorrect and vice versa. Building on these insights, we present a learning-based method for aggregating test-time augmentations. Experiments across a diverse set of models, datasets, and augmentations show that our method delivers consistent improvements over existing approaches.",
+    "url": "http://arxiv.org/abs/2011.11156v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Class-Invariant Test-Time Augmentation for Domain Generalization",
+    "authors": [
+      "Zhicheng Lin",
+      "Xiaolin Wu",
+      "Xi Zhang"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Deep models often suffer significant performance degradation under distribution shifts. Domain generalization (DG) seeks to mitigate this challenge by enabling models to generalize to unseen domains. Most prior approaches rely on multi-domain training or computationally intensive test-time adaptation. In contrast, we propose a complementary strategy: lightweight test-time augmentation. Specifically, we develop a novel Class-Invariant Test-Time Augmentation (CI-TTA) technique. The idea is to generate multiple variants of each input image through elastic and grid deformations that nevertheless belong to the same class as the original input. Their predictions are aggregated through a confidence-guided filtering scheme that remove unreliable outputs, ensuring the final decision relies on consistent and trustworthy cues. Extensive Experiments on PACS and Office-Home datasets demonstrate consistent gains across different DG algorithms and backbones, highlighting the effectiveness and generality of our approach.",
+    "url": "http://arxiv.org/abs/2509.14420v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Robust framework for sound event localization and detection on real recordings",
+    "authors": [
+      "Jin Sob Kim",
+      "Hyun Joon Park",
+      "Wooseok Shin",
+      "Sung Won Han"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "This technical report describes the systems submitted to the DCASE2022 challenge task 3: sound event localization and detection (SELD). The task aims to detect occurrences of sound events and specify their class, furthermore estimate their position. Our system utilizes a ResNet-based model under a proposed robust framework for SELD. To guarantee the generalized performance on the real-world sound scenes, we design the total framework with augmentation techniques, a pipeline of mixing datasets from real-world sound scenes and emulations, and test time augmentation. Augmentation techniques and exploitation of external sound sources enable training diverse samples and keeping the opportunity to train the real-world context enough by maintaining the number of the real recording samples in the batch. In addition, we design a test time augmentation and a clustering-based model ensemble method to aggregate confident predictions. Experimental results show that the model under a proposed framework outperforms the baseline methods and achieves competitive performance in real-world sound recordings.",
+    "url": "http://arxiv.org/abs/2512.22156v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Boosting Anomaly Detection Using Unsupervised Diverse Test-Time Augmentation",
+    "authors": [
+      "Seffi Cohen",
+      "Niv Goldshlager",
+      "Lior Rokach",
+      "Bracha Shapira"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Anomaly detection is a well-known task that involves the identification of abnormal events that occur relatively infrequently. Methods for improving anomaly detection performance have been widely studied. However, no studies utilizing test-time augmentation (TTA) for anomaly detection in tabular data have been performed. TTA involves aggregating the predictions of several synthetic versions of a given test sample; TTA produces different points of view for a specific test instance and might decrease its prediction bias. We propose the Test-Time Augmentation for anomaly Detection (TTAD) technique, a TTA-based method aimed at improving anomaly detection performance. TTAD augments a test instance based on its nearest neighbors; various methods, including the k-Means centroid and SMOTE methods, are used to produce the augmentations. Our technique utilizes a Siamese network to learn an advanced distance metric when retrieving a test instance's neighbors. Our experiments show that the anomaly detector that uses our TTA technique achieved significantly higher AUC results on all datasets evaluated.",
+    "url": "http://arxiv.org/abs/2110.15700v1",
+    "doi": "10.3390/e25050820",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Auto Machine Learning for Medical Image Analysis by Unifying the Search on Data Augmentation and Neural Architecture",
+    "authors": [
+      "Jianwei Zhang",
+      "Dong Li",
+      "Lituan Wang",
+      "Lei Zhang"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Automated data augmentation, which aims at engineering augmentation policy automatically, recently draw a growing research interest. Many previous auto-augmentation methods utilized a Density Matching strategy by evaluating policies in terms of the test-time augmentation performance. In this paper, we theoretically and empirically demonstrated the inconsistency between the train and validation set of small-scale medical image datasets, referred to as in-domain sampling bias. Next, we demonstrated that the in-domain sampling bias might cause the inefficiency of Density Matching. To address the problem, an improved augmentation search strategy, named Augmented Density Matching, was proposed by randomly sampling policies from a prior distribution for training. Moreover, an efficient automatical machine learning(AutoML) algorithm was proposed by unifying the search on data augmentation and neural architecture. Experimental results indicated that the proposed methods outperformed state-of-the-art approaches on MedMNIST, a pioneering benchmark designed for AutoML in medical image analysis.",
+    "url": "http://arxiv.org/abs/2207.10351v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GATTA: Graph Active Learning with Test-Time Augmentation",
+    "authors": [
+      "Zsombor Bánfi",
+      "András Gézsi",
+      "András Formanek"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Test-time augmentation (TTA) has proven effective for improving model robustness and uncertainty estimation in computer vision, yet its application to graph-structured data remains largely unexplored. We introduce GATTA (Graph Active Learning with Test-Time Augmentation), a framework for enhancing active learning by aggregating predictions across multiple augmented views to produce more reliable uncertainty estimates. To address the challenge of label-preserving graph augmentations, GATTA incorporates a consistency-based filtering mechanism that discards augmented views yielding unreliable predictions. We systematically evaluate GATTA across multiple graph datasets, GNN architectures, and acquisition strategies. Our results show that simple uncertainty-based methods, such as Entropy and Least Confidence, benefit most from TTA, achieving performance competitive with more sophisticated and computationally expensive approaches. GATTA generalizes across architectures, outperforms model-side ensemble methods such as MC Dropout. We further show that GATTA scales efficiently with both ensemble size and graph size. Extensive analysis of augmentation types, strengths, and filtering strategies provides practical guidelines for effective deployment. Our findings demonstrate that augmenting simple methods with TTA offers a more efficient path to strong active learning performance than engineering complex acquisition functions, enabling practitioners to achieve competitive results with lower computational overhead and reduced implementation complexity.",
+    "url": "http://arxiv.org/abs/2608.15084v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Deep Nets with Subsampling Layers Unwittingly Discard Useful Activations at Test-Time",
+    "authors": [
+      "Chiao-An Yang",
+      "Ziwei Liu",
+      "Raymond A. Yeh"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Subsampling layers play a crucial role in deep nets by discarding a portion of an activation map to reduce its spatial dimensions. This encourages the deep net to learn higher-level representations. Contrary to this motivation, we hypothesize that the discarded activations are useful and can be incorporated on the fly to improve models' prediction. To validate our hypothesis, we propose a search and aggregate method to find useful activation maps to be used at test time. We applied our approach to the task of image classification and semantic segmentation. Extensive experiments over nine different architectures on multiple datasets show that our method consistently improves model test-time performance, complementing existing test-time augmentation techniques. Our code is available at https://github.com/ca-joe-yang/discard-in-subsampling.",
+    "url": "http://arxiv.org/abs/2410.01083v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Uncertainty-Aware Segmentation Quality Prediction via Deep Learning Bayesian Modeling: Comprehensive Evaluation and Interpretation on Skin Cancer and Liver Segmentation",
+    "authors": [
+      "Sikha O K",
+      "Meritxell Riera-Marín",
+      "Adrian Galdran",
+      "Javier García Lopez",
+      "Julia Rodríguez-Comas",
+      "Gemma Piella",
+      "Miguel A. González Ballester"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Image segmentation is a critical step in computational biomedical image analysis, typically evaluated using metrics like the Dice coefficient during training and validation. However, in clinical settings without manual annotations, assessing segmentation quality becomes challenging, and models lacking reliability indicators face adoption barriers. To address this gap, we propose a novel framework for predicting segmentation quality without requiring ground truth annotations during test time. Our approach introduces two complementary frameworks: one leveraging predicted segmentation and uncertainty maps, and another integrating the original input image, uncertainty maps, and predicted segmentation maps. We present Bayesian adaptations of two benchmark segmentation models-SwinUNet and Feature Pyramid Network with ResNet50-using Monte Carlo Dropout, Ensemble, and Test Time Augmentation to quantify uncertainty. We evaluate four uncertainty estimates: confidence map, entropy, mutual information, and expected pairwise Kullback-Leibler divergence on 2D skin lesion and 3D liver segmentation datasets, analyzing their correlation with segmentation quality metrics. Our framework achieves an R2 score of 93.25 and Pearson correlation of 96.58 on the HAM10000 dataset, outperforming previous segmentation quality assessment methods. For 3D liver segmentation, Test Time Augmentation with entropy achieves an R2 score of 85.03 and a Pearson correlation of 65.02, demonstrating cross-modality robustness. Additionally, we propose an aggregation strategy that combines multiple uncertainty estimates into a single score per image, offering a more robust and comprehensive assessment of segmentation quality. Finally, we use Grad-CAM and UMAP-based embedding analysis to interpret the model's behavior and reliability, highlighting the impact of uncertainty integration.",
+    "url": "http://arxiv.org/abs/2508.01460v1",
+    "doi": "10.1016/j.compmedimag.2025.102547",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Reuse Before You Retrieve: Diagnosing Headroom and Complementarity for Test-Time Augmentation of Embodied Multimodal Policies",
+    "authors": [
+      "Yuhwan Jeong",
+      "Kuk-Jin Yoon"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Frozen vision-language-action (VLA) policies are increasingly improved at test time by sampling additional policy behaviors or introducing external demonstrations. Yet there is little guidance for deciding which intervention a deployed policy actually needs. Additional sampling is useful only when better behavior already exists within the policy's stochastic rollouts and can be identified, whereas retrieval is most useful when the relevant action prior is not reliably represented by the policy. We study this decision through two measurable factors, recoverable headroom and retrieval complementarity, which characterize how much useful behavior is already available to recover and whether an external action prior fills a measurable gap. We evaluate an episode-level retry selector under retryable or parallel execution, together with retrieval across multiple frozen VLA policies and environments. The selector consistently recovers substantial latent capability across all tested VLA backbones on LIBERO, with gains of up to 21.0 success-rate points that closely track recoverable headroom. It also transfers to a different robot and simulator and remains effective under degraded observations, while experiments with autoregressive OpenVLA illustrate the distinction between available headroom and the ability to rank candidate rollouts. Retrieval behaves differently, improving the policy with the largest measured action-prior gap and providing further gains when combined with selection. Together, these results provide an empirical basis for characterizing test-time augmentation opportunities by separating capability that can be recovered from the frozen policy from behavioral priors that may need to be introduced externally.",
+    "url": "http://arxiv.org/abs/2608.17484v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Fine-Tuning Pre-Trained Code Models for AI-Generated Code Detection",
+    "authors": [
+      "Jany-Gabriel Ispas",
+      "Sergiu Nisioi"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "This paper describes the system submitted by team \\textbf{Archaeology} to SemEval-2026 Task~13 on AI-generated code detection. The shared task consists of three subtasks; we participate in Subtask-A (binary classification: human-written vs.\\ AI-generated code) and Subtask-B (11-class attribution of the generating model). Starting from a TF-IDF and Logistic Regression baseline, we fine-tune four pre-trained code models (CodeBERT, GraphCodeBERT, UniXcoder, and CodeT5+) with separate strategies for each subtask. For Subtask-A, we use leave-one-language-out cross-validation, code augmentation, chunked inference with trimmed-mean aggregation, and threshold calibration on a difficult dataset. For Subtask-B, we use sandwich token packing, class-balanced loss, and multi-seed ensembling with test-time augmentation. Our best submissions obtain macro-F1 scores of 0.737 on Subtask-A (6th/81 teams) and 0.422 on Subtask-B (7th/34 teams).",
+    "url": "http://arxiv.org/abs/2605.01596v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Rethinking Uncertainty in Segmentation: From Estimation to Decision",
+    "authors": [
+      "Saket Maganti"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "In medical image segmentation, uncertainty estimates are often reported but rarely used to guide decisions. We study the missing step: how uncertainty maps are converted into actionable policies such as accepting, flagging, or deferring predictions. We formulate segmentation as a two-stage pipeline, estimation followed by decision, and show that optimizing uncertainty alone fails to capture most of the achievable safety gains. Using retinal vessel segmentation benchmarks (DRIVE, STARE, CHASE_DB1), we evaluate two uncertainty sources (Monte Carlo Dropout and Test-Time Augmentation) combined with three deferral strategies, and introduce a simple confidence-aware deferral rule that prioritizes uncertain and low-confidence predictions. Our results show that the best method and policy combination removes up to 80 percent of segmentation errors at only 25 percent pixel deferral, while achieving strong cross-dataset robustness. We further show that calibration improvements do not translate to better decision quality, highlighting a disconnect between standard uncertainty metrics and real-world utility. These findings suggest that uncertainty should be evaluated based on the decisions it enables, rather than in isolation.",
+    "url": "http://arxiv.org/abs/2604.13262v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "ECG Classification with a Convolutional Recurrent Neural Network",
+    "authors": [
+      "Halla Sigurthorsdottir",
+      "Jérôme Van Zaen",
+      "Ricard Delgado-Gonzalo",
+      "Mathieu Lemay"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "We developed a convolutional recurrent neural network to classify 12-lead ECG signals for the challenge of PhysioNet/ Computing in Cardiology 2020 as team Pink Irish Hat. The model combines convolutional and recurrent layers, takes sliding windows of ECG signals as input and yields the probability of each class as output. The convolutional part extracts features from each sliding window. The bi-directional gated recurrent unit (GRU) layer and an attention layer aggregate these features from all windows into a single feature vector. Finally, a dense layer outputs class probabilities. The final decision is made using test time augmentation (TTA) and an optimized decision threshold. Several hyperparameters of our architecture were optimized, the most important of which turned out to be the choice of optimizer and the number of filters per convolutional layer. Our network achieved a challenge score of 0.511 on the hidden validation set and 0.167 on the full hidden test set, ranking us 23rd out of 41 in the official ranking.",
+    "url": "http://arxiv.org/abs/2009.13320v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Technical Report for ICRA 2026 GOOSE 2D Fine-Grained Semantic Segmentation Challenge: Leveraging DINOv3 for Robust Outdoor Scene Understanding in Field Robotics",
+    "authors": [
+      "Jaeil Park",
+      "Hyobin Choi",
+      "Sangjin Lee",
+      "Hyungtae Lim",
+      "Sung-Hoon Yoon"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "The GOOSE 2D Fine-Grained Semantic Segmentation Challenge at the ICRA 2026 Workshop on Field Robotics evaluates dense semantic segmentation of off-road imagery over a fine-grained taxonomy of 64 classes and 11 evaluated non-void coarse categories. We present the first-place solution to this challenge. Our solution comprises two complementary improvements: (a) a network-level design that combines a self-supervised DINOv3 ViT-L/16 backbone, a ViT-Adapter, and a Mask2Former mask-classification decoder, together with a coarse-category auxiliary loss on the global [CLS] token; and (b) an inference-time aggregation strategy based on multi-scale and horizontal-flip test-time augmentation and an ensemble of the top three checkpoints selected using Codabench scores. Our method achieves an official composite score of 76.57%, consisting of 69.32% fine-class mIoU and 83.81% category-level mIoU, and ranks first on the final phase leaderboard: www.codabench.org/competitions/14257/#/results-tab.",
+    "url": "http://arxiv.org/abs/2606.18582v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Improving Calibration of Black-Box Radiology AI Using Test-Time Augmentation",
+    "authors": [
+      "Nathan Le",
+      "Magdalini Paschali",
+      "Arogya Koirala",
+      "Andrew Johnston",
+      "Zhongnan Fang",
+      "David B. Larson",
+      "Akshay S. Chaudhari",
+      "Camila Gonzalez"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Radiology AI systems increasingly inform clinical decisions such as triage, follow-up imaging, and treatment planning. For these decisions to be made safely, model outputs must be well calibrated, meaning predicted probabilities accurately reflect true risk. Many standard techniques for improving calibration, such as MC Dropout and Deep Ensembles, require access to model parameters or retraining. However, proprietary clinical AI systems operate as black boxes, preventing access to the model's internals. To that end, we propose a model-agnostic framework for improving calibration of black-box models using clinically grounded test-time augmentation (TTA). Our framework applies geometric and physics-inspired 3D CT perturbations and learns probability-level aggregation strategies without access to model internals or the original training data. Across pulmonary embolism and intracranial hemorrhage detection tasks, DualTTA achieved the strongest overall calibration among TTA methods, reducing the Expected Calibration Error by 54% (0.239 -> 0.109) and 43% (0.051 -> 0.029), respectively, while requiring only input-output access. Additionally, DualTTA outperformed uncertainty estimation techniques that require access to model internals, such as Temperature Scaling, MC Dropout, and Deep Ensembles, in most calibration metrics. These results demonstrate that learned TTA aggregation can improve the calibration of clinical AI systems, providing a practical approach for improving the reliability of black-box medical AI.",
+    "url": "http://arxiv.org/abs/2609.29931v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Efficient Test-Time Scaling for Small Vision-Language Models",
+    "authors": [
+      "Mehmet Onurcan Kaya",
+      "Desmond Elliott",
+      "Dim P. Papadopoulos"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Small Vision-Language Models (VLMs) provide a computationally efficient alternative to larger models, at the cost of weaker generalization abilities and downstream task performance. These shortcomings could be addressed by test-time scaling techniques, but existing methods are typically computationally demanding, contradicting the resource-efficient design goals of small models. To address these limitations, we propose two novel and efficient test-time scaling strategies that leverage the model-internal features rather than external supervision: (i) Test-Time Augmentation (TTAug), which generates multiple augmented inputs and aggregates outputs at the token level without parameter updates, and (ii) Test-Time Adaptation (TTAdapt), which adapts model parameters during inference using consensus-based pseudolabels from TTAug. Through extensive experiments across nine benchmarks, we demonstrate consistent performance improvements while maintaining computational efficiency suitable for resource-constrained environments. The generality of our approach is demonstrated both within models at different scales and across different VLMs without additional tuning.",
+    "url": "http://arxiv.org/abs/2510.03574v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Dynamic Graph Recommendation via Sparse Augmentation and Singular Adaptation",
+    "authors": [
+      "Zhen Tao",
+      "Yuehang Cao",
+      "Yang Fang",
+      "Yunhui Liu",
+      "Xiang Zhao",
+      "Tieke He"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Dynamic recommendation, focusing on modeling user preference from historical interactions and providing recommendations on current time, plays a key role in many personalized services. Recent works show that pre-trained dynamic graph neural networks (GNNs) can achieve excellent performance. However, existing methods by fine-tuning node representations at large scales demand significant computational resources. Additionally, the long-tail distribution of degrees leads to insufficient representations for nodes with sparse interactions, posing challenges for efficient fine-tuning. To address these issues, we introduce GraphSASA, a novel method for efficient fine-tuning in dynamic recommendation systems. GraphSASA employs test-time augmentation by leveraging the similarity of node representation distributions during hierarchical graph aggregation, which enhances node representations. Then it applies singular value decomposition, freezing the original vector matrix while focusing fine-tuning on the derived singular value matrices, which reduces the parameter burden of fine-tuning and improves the fine-tuning adaptability. Experimental results demonstrate that our method achieves state-of-the-art performance on three large-scale datasets.",
+    "url": "http://arxiv.org/abs/2511.11969v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Adaptive Test-Time Augmentation for Low-Power CPU",
+    "authors": [
+      "Luca Mocerino",
+      "Roberto G. Rizzo",
+      "Valentino Peluso",
+      "Andrea Calimera",
+      "Enrico Macii"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Convolutional Neural Networks (ConvNets) are trained offline using the few available data and may therefore suffer from substantial accuracy loss when ported on the field, where unseen input patterns received under unpredictable external conditions can mislead the model. Test-Time Augmentation (TTA) techniques aim to alleviate such common side effect at inference-time, first running multiple feed-forward passes on a set of altered versions of the same input sample, and then computing the main outcome through a consensus of the aggregated predictions. Unfortunately, the implementation of TTA on embedded CPUs introduces latency penalties that limit its adoption on edge applications. To tackle this issue, we propose AdapTTA, an adaptive implementation of TTA that controls the number of feed-forward passes dynamically, depending on the complexity of the input. Experimental results on state-of-the-art ConvNets for image classification deployed on a commercial ARM Cortex-A CPU demonstrate AdapTTA reaches remarkable latency savings, from 1.49X to 2.21X, and hence a higher frame rate compared to static TTA, still preserving the same accuracy gain.",
+    "url": "http://arxiv.org/abs/2105.06183v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Domain Generalizable Adaptation of 3D Vision-Language Models via Regularized Fine-Tuning",
+    "authors": [
+      "Sneha Paul",
+      "Zachary Patterson",
+      "Nizar Bouguila"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Domain adaptation remains a central challenge in 3D vision, especially for multimodal foundation models that align 3D point clouds with visual and textual data. While these models demonstrate strong general capabilities, adapting them to downstream domains with limited data often leads to overfitting and catastrophic forgetting. To address this, we introduce ReFine3D, a regularized fine-tuning framework designed for domain-generalizable tuning of 3D large multimodal models (LMMs). ReFine3D combines selective layer tuning with two targeted regularization strategies: multi-view consistency across augmented point clouds and text diversity through synonym-based prompts generated by large language models. Additionally, we incorporate point-rendered vision supervision and a test-time augmentation mechanism with confidence-based aggregation to further enhance robustness. Extensive experiments across different 3D domain generalization benchmarks show that ReFine3D improves base-to-novel class generalization by 1.36%, cross-dataset transfer by 2.43%, robustness to corruption by 1.80%, and few-shot accuracy by up to 3.11%, outperforming prior state-of-the-art methods with minimal added computational overhead.",
+    "url": "http://arxiv.org/abs/2606.18472v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

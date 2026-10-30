@@ -1,0 +1,64 @@
+[
+  {
+    "title": "Identifying Statistical Bias in Dataset Replication",
+    "authors": [
+      "Logan Engstrom",
+      "Andrew Ilyas",
+      "Shibani Santurkar",
+      "Dimitris Tsipras",
+      "Jacob Steinhardt",
+      "Aleksander Madry"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Dataset replication is a useful tool for assessing whether improvements in test accuracy on a specific benchmark correspond to improvements in models' ability to generalize reliably. In this work, we present unintuitive yet significant ways in which standard approaches to dataset replication introduce statistical bias, skewing the resulting observations. We study ImageNet-v2, a replication of the ImageNet dataset on which models exhibit a significant (11-14%) drop in accuracy, even after controlling for a standard human-in-the-loop measure of data quality. We show that after correcting for the identified statistical bias, only an estimated $3.6\\% \\pm 1.5\\%$ of the original $11.7\\% \\pm 1.0\\%$ accuracy drop remains unaccounted for. We conclude with concrete recommendations for recognizing and avoiding bias in dataset replication. Code for our study is publicly available at http://github.com/MadryLab/dataset-replication-analysis .",
+    "url": "http://arxiv.org/abs/2005.09619v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "In Silico Development of Psychometric Scales: Feasibility of Representative Population Data Simulation with LLMs",
+    "authors": [
+      "Enrico Cipriani",
+      "Pavel Okopnyi",
+      "Danilo Menicucci",
+      "Simone Grassini"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Developing and validating psychometric scales requires large samples, multiple testing phases, and substantial resources. Recent advances in Large Language Models (LLMs) enable the generation of synthetic participant data by prompting models to answer items while impersonating individuals of specific demographic profiles, potentially allowing in silico piloting before real data collection. Across four preregistered studies (N = circa 300 each), we tested whether LLM-simulated datasets can reproduce the latent structures and measurement properties of human responses. In Studies 1-2, we compared LLM-generated data with real datasets for two validated scales; in Studies 3-4, we created new scales using EFA on simulated data and then examined whether these structures generalized to newly collected human samples. Simulated datasets replicated the intended factor structures in three of four studies and showed consistent configural and metric invariance, with scalar invariance achieved for the two newly developed scales. However, correlation-based tests revealed substantial differences between real and synthetic datasets, and notable discrepancies appeared in score distributions and variances. Thus, while LLMs capture group-level latent structures, they do not approximate individual-level data properties. Simulated datasets also showed full internal invariance across gender. Overall, LLM-generated data appear useful for early-stage, group-level psychometric prototyping, but not as substitutes for individual-level validation. We discuss methodological limitations, risks of bias and data pollution, and ethical considerations related to in silico psychometric simulations.",
+    "url": "http://arxiv.org/abs/2512.02910v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Detecting clusters and groups of galaxies populating the local Universe in large optical spectroscopic surveys",
+    "authors": [
+      "I. Marini",
+      "P. Popesso",
+      "K. Dolag",
+      "M. Bravo",
+      "A. Robotham",
+      "E. Tempel",
+      "Q. Li",
+      "X. Yang",
+      "B. Csizi",
+      "P. Behroozi",
+      "V. Biffi",
+      "A. Biviano",
+      "G. Lamer",
+      "N. Malavasi",
+      "D. Mazengo",
+      "V. Toptun"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Wide-field cosmological surveys provide hundreds of thousands of spectroscopically confirmed galaxy groups and clusters, valuable for tracing baryonic matter distribution. However, controlling systematics in identifying host dark matter halos and estimating their properties is crucial. We evaluate three group detection methods on a simulated dataset replicating the GAMA selection to understand systematics and selection effects. This is key for interpreting data from SDSS, GAMA, DESI, WAVES, and leveraging optical catalogues in the (X-ray) eROSITA era to quantify baryonic mass in galaxy groups. Using a lightcone from the Magneticum hydrodynamical simulation, we simulate a spectroscopic galaxy survey in the local Universe (down to $z<0.2$ and stellar mass completeness $M_{\\star}\\geq10^{9.8} M_{\\odot}$). We assess completeness and contamination of reconstructed halo catalogues, evaluate membership accuracy, and analyse the halo mass recovery rate of group finders. All three group finders achieve high completeness ($>80\\%$) at group and cluster scales, confirming optical selection's suitability for dense regions. Contamination at low masses ($M_{200}<10^{13} M_{\\odot}$) arises from interlopers and fragmentation. Membership is at least 70\\% accurate above the group mass scale, but inaccuracies bias halo mass estimates using galaxy velocity dispersion. Alternative proxies, like total stellar luminosity or mass, yield more accurate halo masses. The cumulative luminosity function of galaxy members matches predictions, showing the group finders' accuracy in identifying galaxy populations. These results confirm the reliability and completeness of spectroscopic catalogues produced by state-of-the-art group finders. This supports studies requiring large spectroscopic samples of galaxy groups and clusters, as well as investigations into galaxy evolution across diverse environments.",
+    "url": "http://arxiv.org/abs/2411.16455v1",
+    "doi": "10.1051/0004-6361/202452028",
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]
