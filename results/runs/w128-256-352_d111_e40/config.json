@@ -1,0 +1,35 @@
+{
+ "name": "w128-256-352_d111_e40",
+ "widths": [
+  128,
+  256,
+  352
+ ],
+ "depth": [
+  1,
+  1,
+  1
+ ],
+ "epochs": 40.0,
+ "batch_size": 1024,
+ "lr": 9.0,
+ "momentum": 0.85,
+ "wd": 0.012,
+ "bias_scaler": 64.0,
+ "label_smoothing": 0.2,
+ "warmup": 0.1,
+ "translate": 4,
+ "cutout": 12,
+ "whiten_bias_epochs": 3,
+ "val": 5000,
+ "seed": 0,
+ "teachers": [],
+ "kd_alpha": 0.5,
+ "kd_temp": 4.0,
+ "allow_big": false,
+ "eval_every": 5,
+ "params": 4844152,
+ "params_total": 4846648,
+ "train_time": 814.264230966568,
+ "val_acc_tta": 0.9557999968528748
+}

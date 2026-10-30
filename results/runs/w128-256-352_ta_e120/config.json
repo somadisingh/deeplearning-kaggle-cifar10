@@ -1,0 +1,37 @@
+{
+ "name": "w128-256-352_ta_e120",
+ "widths": [
+  128,
+  256,
+  352
+ ],
+ "depth": [
+  1,
+  1,
+  1
+ ],
+ "epochs": 120.0,
+ "batch_size": 1024,
+ "lr": 9.0,
+ "momentum": 0.85,
+ "wd": 0.012,
+ "bias_scaler": 64.0,
+ "label_smoothing": 0.2,
+ "warmup": 0.1,
+ "translate": 4,
+ "cutout": 12,
+ "whiten_bias_epochs": 3,
+ "trivialaugment": true,
+ "sam_rho": 0.0,
+ "val": 5000,
+ "seed": 0,
+ "teachers": [],
+ "kd_alpha": 0.5,
+ "kd_temp": 4.0,
+ "allow_big": false,
+ "eval_every": 10,
+ "params": 4844152,
+ "params_total": 4846648,
+ "train_time": 2456.7958793640137,
+ "val_acc_tta": 0.9620000123977661
+}
