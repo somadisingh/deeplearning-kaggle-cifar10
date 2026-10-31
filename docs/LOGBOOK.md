@@ -344,3 +344,39 @@ The best weight is different for each run. Thus, a part of this gain is noise.
 
 The 0.3-point rule is a limit for cost. It is not a statistical test. On 5,000 images, it finds a true +0.3-point gain only 30% to 55% of the time.
 For the next comparisons, we will also give the number of images that each change fixes and breaks (paired McNemar test).
+
+### 11.4 Checks on the Mac and code changes (2026-10-31)
+
+We did two checks on the Mac with saved models. We did not train a new model.
+
+| Check (45k holdout, head + vote) | SLA, 200 epochs | SLA, 300 epochs | SLA + CutMix, 200 epochs |
+|---|---|---|---|
+| Current TTA (mirror + 2 diagonal 1-pixel shifts) | 97.54% | 97.74% | — |
+| TTA with 4 axis 1-pixel shifts + mirror | 97.54% | 97.86% | — |
+| TTA with 8 neighbour 1-pixel shifts + mirror | 97.56% | 97.76% | — |
+| Live network | — | — | 97.52% |
+| EMA, BN calculated on upright images (old method) | — | — | 97.44% (head 96.98%) |
+| EMA, BN calculated on the 4 rotated copies | — | — | 97.64% (head 97.42%) |
+| EMA, BN calculated on the 4 rotated copies + CutMix | — | — | 97.58% |
+| Live network, BN calculated again on upright images | — | — | 97.48% (head 97.00%) |
+
+Results:
+
+1. The symmetric TTA does not give a gain on both runs. We keep the current TTA.
+2. The BN statistics caused the EMA loss. When we calculate BN on upright images only, the live network also loses 0.4 points on the head.
+3. With the correct BN statistics, EMA is 0.12 points better than the live network. This is one run (approximately 6 images). It is less than the 0.2-point limit. Thus, we do not train a new EMA model. EMA does not increase the training time, so we can use it in the next runs.
+4. The best head/vote weight is different for each run. The mean of the three runs is 97.68% (0.25), 97.66% (0.5) and 97.67% (0.75). We keep 0.5.
+
+Code changes:
+
+| Change | Location |
+|---|---|
+| New option `--split-seed` (default 0) selects the holdout split. `--seed` now sets only the training random state. Runs with seed 0 do not change. | `src/train.py` |
+| New file `src/predictor.py` gives one predictor (head + vote, weight 0.5). `make_submission.py`, `export_preds.py` and the validation use it. `make_submission.py` now gives the same CSV as the final submission. | `src/predictor.py` |
+| EMA calculates BN statistics on the 4 rotated copies (SLA) and with CutMix (when CutMix is on), as in training. | `src/train.py` (`recompute_bn`, `ema_eval_copy`) |
+| The checkpoint keeps the TrivialAugment epoch and the torch, CUDA and NumPy random states. A resumed run uses them. | `src/train.py` |
+| CutMix uses a NumPy generator with the seed. | `src/train.py` |
+| The second SAM pass does not change the BN statistics. | `src/train.py` |
+| `--cutmix` with `--two-view` stops with an error. | `src/train.py` |
+
+We tested the changes with a small network on the Mac: SLA + CutMix + EMA + TrivialAugment, a stop and a resume, and SAM.
