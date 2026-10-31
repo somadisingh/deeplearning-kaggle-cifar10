@@ -222,7 +222,7 @@ We did two more runs on the A100 with seed 0:
 |---|---|---|---|---|
 | Normal head | 97.58% | 97.68% | 97.66% | 97.56% |
 | 4-rotation vote | 97.52% | 97.68% | 97.64% | 97.42% |
-| Head + vote | 97.66% | 97.74% | 97.70% | – |
+| Head + vote | 97.66% | 97.74% | 97.70% | 97.54% |
 
 Per-copy augmentation did not change the accuracy. Thus, we did not do the two-view run.
 The 300-epoch runs got approximately +0.1 points, with or without CutMix. Thus, CutMix does not add accuracy.
@@ -277,3 +277,67 @@ Submissions 7 to 10 trained on 45,000 images. On the same 45k data, the changes 
 4. SAM, PAPA, distillation, longer schedules and anti-aliasing each gave +0.2 to +0.4 points on the plain ResNet. None of them beat SLA.
 5. Calculate BN statistics on data that is similar to the training data. Clean-image statistics decreased the PAPA model by 1 point.
 6. Make long runs resumable. HPC jobs stop after 3 to 5 hours.
+
+## 11. Pipeline audit (2026-10-31)
+
+We did a full review of the code, the data and our method. We also read more papers about the shift to CIFAR-10.1.
+The review did not start a training run. It did not change the data or the final submission.
+
+### 11.1 Result
+
+We did not find an error that causes the gap between the holdout (97.6%) and Kaggle (0.90).
+These items are correct:
+
+- All 50,000 training images and all 2,000 test images are 32 × 32 RGB PNG files. The cache is equal to the files.
+- The labels and the IDs are equal to the CSV files. No test image is an exact copy of a training image.
+- The training images and the test images get the same normalization.
+- The SLA joint label is `class × 4 + rotation` during training and during prediction. The rotation order agrees.
+- Augmentation occurs before the rotation. BN and bias parameters get no weight decay.
+- The final model has 4,706,674 parameters and all 200 epochs completed.
+- All 15 submission files have 2,000 rows, the correct ID order and labels 0 to 9.
+- No code trains on the test images, labels them or adapts to them.
+
+The test images are a little brighter and have more contrast than the training images:
+
+| Pixel statistic | Training | Test |
+|---|---|---|
+| Channel mean (R, G, B) | 0.491, 0.482, 0.447 | 0.513, 0.498, 0.461 |
+| Channel std (R, G, B) | 0.247, 0.243, 0.262 | 0.265, 0.262, 0.275 |
+| Spread of image brightness | 0.125 | 0.144 |
+
+`src/shift_check.py` shows that this difference costs a maximum of 0.4 points. Thus, it does not cause a 7-point gap.
+The line of Recht et al. (2018) gives approximately 92.8% at 97.7% holdout accuracy. Miller et al. (2021) show the same line for 1,060 models.
+Our 0.909 is approximately 1.6 points below the line. The public split has approximately 1,000 images. One standard error is approximately 0.9 points.
+Thus, we think that the gap comes from the shift in the hidden images, and not from an error.
+
+### 11.2 Problems that we found
+
+| Problem | Location | Effect |
+|---|---|---|
+| We compared runs with the normal head. But we submit the normal head + the 4-rotation vote. | `docs/LOGBOOK.md`, Phase 8 | SLA-300 gets +0.20 points on head + vote (97.54% → 97.74%), not +0.12. |
+| The seed also selects the holdout split. Seed 0 and seed 1 have only 527 holdout images in common. | `src/train.py:105` | The seed spread of 0.2 points is not a correct measurement. We cannot test a seed-0 + seed-1 ensemble on either holdout. |
+| The weight average (EMA) calculates BN statistics on upright images only. Training used 4 rotations and CutMix. | `src/train.py:272`, `src/train.py:428` | The EMA result (−0.4 points) can be too low. |
+| SAM does the second forward pass in training mode. Thus, the BN statistics change two times in each step. | `src/train.py:539`–`552` | The SAM result can be too low. |
+| `make_submission.py` uses the normal head only. `export_preds.py` uses head + vote. | `src/make_submission.py:20` | The final CSV is correct (it came from `export_preds.py`). Use `export_preds.py` for all SLA submissions. |
+| A resumed run does not keep the TrivialAugment epoch or the random state. | `src/train.py:161`, `src/train.py:450` | Small. A resumed run is not equal to a run without a stop. |
+| CutMix uses the NumPy random generator without a seed. | `src/train.py:262` | No effect on accuracy. Runs are not reproducible. |
+
+The weight of the normal head and the vote is 0.5 each. We calculated other weights from the saved holdout outputs:
+
+| Run | Vote only | 0.25 head | 0.5 head (submitted) | 0.75 head | Head only |
+|---|---|---|---|---|---|
+| SLA, 200 epochs | 97.42% | 97.50% | 97.54% | 97.64% | 97.56% |
+| SLA, 300 epochs | 97.68% | 97.84% | 97.74% | 97.70% | 97.68% |
+| SLA + CutMix, 300 epochs | 97.64% | 97.70% | 97.70% | 97.66% | 97.66% |
+
+The best weight is different for each run. Thus, a part of this gain is noise.
+
+### 11.3 Decisions
+
+1. The 50k SLA-300 retrain is the best next submission. We export it with `scripts/export_preds.py`.
+2. We do not use an ensemble of different networks. Two networks have 9.4M parameters. This is more than the 5M limit.
+3. We do not adapt BN to the test images. The rules do not permit it. It also increased the CIFAR-10.1 error from 12.8% to 19.0% (Zhao et al., 2023).
+4. Other tests from the audit are optional: one fixed head/vote weight, a BN fix for EMA, symmetric 1-pixel TTA, and a wider ResNet with 80/160/320 channels.
+
+The 0.3-point rule is a limit for cost. It is not a statistical test. On 5,000 images, it finds a true +0.3-point gain only 30% to 55% of the time.
+For the next comparisons, we will also give the number of images that each change fixes and breaks (paired McNemar test).
