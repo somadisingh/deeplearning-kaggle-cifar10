@@ -1,23 +1,26 @@
-"""Write submission.csv from one run's saved test logits (TTA already applied)."""
+"""Write submission.csv from one run's saved test logits (TTA already applied), with the shared predictor
+(head + 4-rotation vote for SLA runs), so it matches scripts/export_preds.py."""
 import argparse
 import json
 import os
 
 import numpy as np
 import pandas as pd
-import torch
+
+from predictor import load_probs
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("run")
+    p.add_argument("--tag", default="", help="\"\" (live network), ema, ema_best or ema_e<epoch>")
     p.add_argument("--out", default=os.path.join(ROOT, "submission.csv"))
     args = p.parse_args()
     run_dir = os.path.join(ROOT, "runs", args.run)
     cfg = json.load(open(os.path.join(run_dir, "config.json")))
     assert cfg["params_total"] <= 5_000_000, "final model must have at most 5M parameters"
-    logits = torch.load(os.path.join(run_dir, "test_logits.pt"))
+    logits = load_probs(run_dir, "test", args.tag)
     test = pd.read_csv(os.path.join(ROOT, "data", "test.csv"))
     sample = pd.read_csv(os.path.join(ROOT, "data", "sample_submission.csv"))
     ids = np.load(os.path.join(ROOT, "data", "cifar10_cache.npz"))["test_ids"]

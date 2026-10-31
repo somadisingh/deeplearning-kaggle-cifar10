@@ -25,6 +25,7 @@ import torch.nn.functional as F
 from torch import nn
 
 from models import AirResNet, PreActResNet, ShakeResNet, count_params, init_whitening
+from predictor import combine
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 MEAN = torch.tensor((0.4914, 0.4822, 0.4465)).view(1, 3, 1, 1)
@@ -77,7 +78,9 @@ def parse_args():
     p.add_argument("--resume", action="store_true", help="continue from runs/<name>/ckpt.pt if it exists")
     p.add_argument("--rot-weight", type=float, default=0.5, help="lambda for the auxiliary rotation loss")
     p.add_argument("--val", type=int, default=5000, help="holdout size from train; 0 = train on all 50k")
-    p.add_argument("--seed", type=int, default=0)
+    p.add_argument("--seed", type=int, default=0, help="training randomness (init, augmentation, CutMix)")
+    p.add_argument("--split-seed", type=int, default=0,
+                   help="holdout split; kept apart from --seed so runs with different seeds share one holdout")
     p.add_argument("--teachers", nargs="*", default=[], help="run dirs of teacher models for distillation")
     p.add_argument("--kd-alpha", type=float, default=0.5, help="weight of the distillation loss")
     p.add_argument("--kd-temp", type=float, default=4.0)
@@ -166,6 +169,13 @@ class TrivialAugmentSource:
         return [self.pool.submit(_ta_chunk, i, min(i + self.chunk, self.n), s + k)
                 for k, i in enumerate(range(0, self.n, self.chunk))]
 
+    def seek(self, epoch):
+        """Continue from `epoch` after a resume: drop the queued epoch and queue that one instead."""
+        for f in self.pending:
+            f.cancel()
+        self.epoch = epoch
+        self.pending = self._submit()
+
     def next(self):
         x = np.concatenate([f.result() for f in self.pending])
         self.epoch += 1
@@ -253,13 +263,13 @@ def rotate4(x):
     return torch.stack([torch.rot90(x, k, (2, 3)) for k in range(4)], 1).flatten(0, 1)
 
 
-def cutmix_box(x, lam):
+def cutmix_box(x, lam, rng):
     """CutMix (Yun et al., 2019): paste one box from a shuffled partner into every image. Works on (B, C, H, W)
     and on per-copy views (B, 4, C, H, W). Returns the mixed images, the partner order and the kept area."""
     h, w = x.shape[-2:]
     r = math.sqrt(1 - lam)
     bh, bw = int(h * r), int(w * r)
-    cy, cx = np.random.randint(h), np.random.randint(w)
+    cy, cx = rng.integers(h), rng.integers(w)
     y1, y2 = max(cy - bh // 2, 0), min(cy + bh // 2, h)
     x1, x2 = max(cx - bw // 2, 0), min(cx + bw // 2, w)
     partner = torch.randperm(len(x), device=x.device)
@@ -269,14 +279,16 @@ def cutmix_box(x, lam):
 
 
 @torch.no_grad()
-def recompute_bn(net, images, bs=500):
+def recompute_bn(net, images, bs=500, forward=None):
+    """Recompute BN statistics on `images`. `forward(net, x)` replaces the plain forward pass, so the
+    statistics can match training (e.g. the 4 rotated copies of SLA)."""
     for m in net.modules():
         if isinstance(m, nn.BatchNorm2d):
             m.reset_running_stats()
             m.momentum = None
     net.train()
     for x in images.split(bs):
-        net(x)
+        net(x) if forward is None else forward(net, x)
     net.eval()
 
 
@@ -354,7 +366,8 @@ def main():
     os.makedirs(out_dir, exist_ok=True)
 
     x_all, y_all, x_test, test_ids = load_data(device)
-    tr_idx, va_idx = split(len(y_all), args.val, args.seed)
+    tr_idx, va_idx = split(len(y_all), args.val, args.split_seed)
+    np_rng = np.random.default_rng(args.seed)
     tr_t = torch.from_numpy(tr_idx).to(device)
     x_tr, y_tr = x_all[tr_t], y_all[tr_t]
     if len(va_idx):
@@ -383,6 +396,7 @@ def main():
     assert not args.two_view or args.ssl in ("sla", "sla_cp"), "--two-view is implemented on top of SLA"
     assert not ((args.cutmix or args.sla_percopy) and args.ssl not in ("sla", "sla_cp")), "--cutmix/--sla-percopy need SLA"
     assert not (args.sla_percopy and args.two_view), "--sla-percopy and --two-view are separate tests"
+    assert not (args.cutmix and args.two_view), "--cutmix and --two-view are not combined (labels would not double)"
     loader = Loader(x_tr, y_tr, args.batch_size, args.translate, args.cutout, source, two_view=args.two_view,
                     percopy=args.sla_percopy)
     total_steps = ceil(len(loader) * args.epochs)
@@ -426,12 +440,20 @@ def main():
     ce = nn.CrossEntropyLoss(label_smoothing=args.label_smoothing, reduction="none")
 
     def ema_eval_copy():
-        """The weight average with BN statistics recomputed on augmented training images (crop, flip, cutout)."""
+        """The weight average with BN statistics recomputed on augmented training images (crop, flip, cutout),
+        passed through the network as in training: CutMix and the 4 rotated copies for SLA."""
         e = copy.deepcopy(ema_net)
         imgs = batch_crop(loader.padded[:10000], 32) if args.translate else loader.padded[:10000]
         if args.cutout:
             imgs = batch_cutout(imgs, args.cutout)
-        recompute_bn(e, imgs)
+        bn_rng = np.random.default_rng(args.seed + 1)
+
+        def forward(m, x):
+            if args.cutmix and bn_rng.random() < args.cutmix:
+                x, _, _ = cutmix_box(x, bn_rng.beta(1.0, 1.0), bn_rng)
+            return m.features(rotate4(x)) if args.ssl in ("sla", "sla_cp") else m(x)
+
+        recompute_bn(e, imgs, bs=args.batch_size, forward=forward)
         return e
 
     history, step, t0, start_epoch = [], 0, time.time(), 0
@@ -448,7 +470,15 @@ def main():
         history, step, start_epoch = ck["history"], ck["step"], ck["epoch"]
         t0 -= ck["elapsed"]
         loader.epoch = start_epoch
-        torch.manual_seed(args.seed * 1000 + start_epoch)
+        if source is not None:
+            source.seek(ck.get("source_epoch", start_epoch))
+        if "rng" in ck:
+            torch.set_rng_state(ck["rng"]["torch"].cpu())  # map_location moved it to the device
+            if ck["rng"].get("cuda") is not None and torch.cuda.is_available():
+                torch.cuda.set_rng_state_all([r.cpu() for r in ck["rng"]["cuda"]])
+            np_rng.bit_generator.state = ck["rng"]["numpy"]
+        else:
+            torch.manual_seed(args.seed * 1000 + start_epoch)
         print(f"resumed from epoch {start_epoch}", flush=True)
     for epoch in range(start_epoch, ceil(args.epochs)):
         if args.arch == "air":
@@ -464,8 +494,8 @@ def main():
 
             norm_by = 1 if args.arch == "air" else len(y)
             y_b, lam = None, 1.0
-            if args.cutmix and np.random.rand() < args.cutmix:
-                x, partner, lam = cutmix_box(x, np.random.beta(1.0, 1.0))
+            if args.cutmix and np_rng.random() < args.cutmix:
+                x, partner, lam = cutmix_box(x, np_rng.beta(1.0, 1.0), np_rng)
                 y_b = y[partner]
 
             def compute_loss():
@@ -549,7 +579,14 @@ def main():
                     for p, e in zip(params, eps):
                         p.add_(e)
                 opt.zero_grad(set_to_none=True)
+                # Keep BN running statistics from the first pass only (momentum 0 leaves them unchanged).
+                bns = [m for m in net.modules() if isinstance(m, nn.modules.batchnorm._BatchNorm)]
+                moms = [m.momentum for m in bns]
+                for m in bns:
+                    m.momentum = 0.0
                 compute_loss().backward()
+                for m, mom in zip(bns, moms):
+                    m.momentum = mom
                 with torch.no_grad():
                     for p, e in zip(params, eps):
                         p.sub_(e)
@@ -590,6 +627,9 @@ def main():
             torch.save(dict(net=net.state_dict(), opt=opt.state_dict(), sched=sched.state_dict(),
                             lookahead=lookahead.ema, history=history, step=step, epoch=epoch + 1,
                             ema=ema_net.state_dict() if ema_net is not None else None, ema_best=ema_best,
+                            source_epoch=source.epoch if source is not None else None,
+                            rng=dict(torch=torch.get_rng_state(), numpy=np_rng.bit_generator.state,
+                                     cuda=torch.cuda.get_rng_state_all() if torch.cuda.is_available() else None),
                             elapsed=time.time() - t0), ckpt_path + ".tmp")
             os.replace(ckpt_path + ".tmp", ckpt_path)
         if step >= total_steps:
@@ -607,6 +647,7 @@ def main():
             va_agg = predict(net, x_va, tta=2, fn=sla_aggregate)
             result["val_acc_tta_sla_agg"] = (va_agg.argmax(1) == y_va).float().mean().item()
             torch.save(va_agg.cpu(), os.path.join(out_dir, "val_logits_sla_agg.pt"))
+            result["val_acc_tta_comb"] = (combine(va_logits, va_agg).argmax(1) == y_va).float().mean().item()
     torch.save(predict(net, x_test, tta=2).cpu(), os.path.join(out_dir, "test_logits.pt"))
     if args.ssl in ("sla", "sla_cp"):
         torch.save(predict(net, x_test, tta=2, fn=sla_aggregate).cpu(), os.path.join(out_dir, "test_logits_sla_agg.pt"))
@@ -627,8 +668,9 @@ def main():
             if len(va_idx):
                 result[f"val_acc_tta_{tag}"] = (predict(e, x_va, tta=2).argmax(1) == y_va).float().mean().item()
                 if args.ssl in ("sla", "sla_cp"):
-                    result[f"val_acc_tta_{tag}_sla_agg"] = (predict(e, x_va, tta=2, fn=sla_aggregate).argmax(1)
-                                                            == y_va).float().mean().item()
+                    e_head, e_vote = predict(e, x_va, tta=2), predict(e, x_va, tta=2, fn=sla_aggregate)
+                    result[f"val_acc_tta_{tag}_sla_agg"] = (e_vote.argmax(1) == y_va).float().mean().item()
+                    result[f"val_acc_tta_{tag}_comb"] = (combine(e_head, e_vote).argmax(1) == y_va).float().mean().item()
     json.dump(result, open(os.path.join(out_dir, "config.json"), "w"), indent=1)
     json.dump(history, open(os.path.join(out_dir, "history.json"), "w"))
     print(json.dumps({k: result[k] for k in ("name", "params", "train_time") + (("val_acc_tta",) if len(va_idx) else ())}))
