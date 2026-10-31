@@ -256,3 +256,18 @@ Holdout (TTA): head 97.66%, rotation vote 97.64%, head + vote 97.70% (baseline 2
 CSV exported as `submissions/submission_preact_sla_cutmix_e300.csv` (head + vote softmax sum, 45k model);
 it agrees with the final 50k submission on 96.35% of test images. The final submission does not change.
 `preact_sla_ta_e300` (the control) was not run: it did not fit in the job.
+
+## Per-copy augmentation and SLA 300 epochs (2026-10-31, A100)
+
+Both seed 0, 45k train / 5k holdout, TTA. Baseline `preact_sla_ta_e200`: head 97.56%, vote 97.42%.
+
+| Run | Epochs | Time | Head | Vote | Head + vote |
+|---|---|---|---|---|---|
+| `preact_sla_percopy_e200` (4 views per image get their own augmentation) | 200 | 83 min | 97.58% | 97.52% | 97.66% |
+| `preact_sla_cutmix_e300` | 300 | 124 min | 97.66% | 97.64% | 97.70% |
+| `preact_sla_ta_e300` | 300 | 125 min | 97.68% | 97.68% | 97.74% |
+
+Per-copy: +0.02, no effect, so two-view (gated on 97.76%) is dropped. 300 epochs: +0.12 with or without CutMix,
+so CutMix adds nothing at either length. All are below the +0.3 rule; the final submission does not change.
+CSVs (head + vote, 45k models): `submissions/submission_preact_sla_percopy_e200.csv`,
+`submissions/submission_preact_sla_ta_e300.csv` (agree with the final 50k submission on 95.85% / 96.50% of test images).

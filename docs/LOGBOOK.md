@@ -209,7 +209,25 @@ CutMix did not add accuracy. The weight average was 0.4 points worse than the li
 | Head + vote | 97.70% | – |
 
 The gain is +0.10 points. This is less than our limit of +0.3 points (the seed spread is approximately 0.2 points). Thus, we did not change the final model.
-We saved the predictions in `submissions/submission_preact_sla_cutmix_e300.csv`. We did not do the 300-epoch run without CutMix, because there was not sufficient HPC time.
+We saved the predictions in `submissions/submission_preact_sla_cutmix_e300.csv`. We did the 300-epoch run without CutMix in the next HPC session (see below).
+
+### Phase 8: Per-copy augmentation and 300 epochs (2026-10-31)
+
+We did two more runs on the A100 with seed 0:
+
+- `preact_sla_percopy_e200`: each of the four rotated copies of an image gets its own random augmentation.
+- `preact_sla_ta_e300`: the final recipe for 300 epochs, without CutMix. This run is the control for the CutMix run.
+
+| Prediction | Per-copy, 200 epochs | 300 epochs | CutMix, 300 epochs | Final recipe, 200 epochs |
+|---|---|---|---|---|
+| Normal head | 97.58% | 97.68% | 97.66% | 97.56% |
+| 4-rotation vote | 97.52% | 97.68% | 97.64% | 97.42% |
+| Head + vote | 97.66% | 97.74% | 97.70% | – |
+
+Per-copy augmentation did not change the accuracy. Thus, we did not do the two-view run.
+The 300-epoch runs got approximately +0.1 points, with or without CutMix. Thus, CutMix does not add accuracy.
+All gains are less than our limit of +0.3 points. We did not change the final model.
+We saved the predictions of the two runs in `submissions/`.
 
 ## 7. Distillation result
 
