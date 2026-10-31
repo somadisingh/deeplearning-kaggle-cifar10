@@ -216,3 +216,16 @@ Added from the SLA follow-up research (three cheapest methods), with the two que
 
 Then: repeat at seed 1 any run that beats 97.56% by 0.2 or more; combine confirmed winners in one 45k run; retrain on
 all 50k; submit by Nov 5.
+
+## Ranked training priorities (2026-10-31)
+
+| # | Run | Question | A100 time (45k) |
+|---|---|---|---|
+| 1 | `preact_sla_cutmix_e200` (running) | does CutMix inside SLA beat 97.56% / 97.78%? (judged on the live network) | ~85 min |
+| 2 | `preact_sla_ta_e200_ema` | does the weight average beat the live network on the baseline recipe? | ~85 min |
+| 3 | `preact_sla_percopy_e200` | per-copy augmentation | ~85 min |
+| 4 | `preact_sla_ta_e300` | 300 epochs | ~2.1 h |
+| 5 | `preact_sla2v_ta_e200` | two views + JS consistency, only if #3 reaches 97.76% | ~2.8 h |
+
+The winner is retrained on all 50k with `--ema-epoch <best weight-average epoch on 45k>`, and two CSVs are exported
+(live network and weight average) with `scripts/export_preds.py`.

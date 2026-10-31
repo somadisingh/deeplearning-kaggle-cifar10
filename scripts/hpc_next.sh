@@ -20,7 +20,15 @@ run() {  # run <name> <args...>; skips finished runs
 # 1. CutMix inside SLA: box pasted before the rotations, losses mixed by area, p = 0.5 per batch. ~85 min.
 run preact_sla_cutmix_e200 --cutmix 0.5 --epochs 200 $SLA
 
-# Paused by request (2026-10-31): only the CutMix run is queued for now. The other prepared runs:
-# run preact_sla_percopy_e200 --sla-percopy --epochs 200 $SLA                      # per-copy augmentation, ~85 min
-# run preact_sla_ta_e300 --epochs 300 $SLA                                          # SLA-300, ~2.1 h
-# two-view consistency: --two-view --cons-weight 12 --batch-size 256 (see docs/experiments.md), ~2.8 h
+# Ranked training priorities (2026-10-31). Only #1 is enabled; uncomment the next one when it is approved.
+# 2. Baseline recipe + weight average on 45k (~85 min): does the weight average beat the live network?
+# run preact_sla_ta_e200_ema --epochs 200 $SLA
+# 3. Per-copy augmentation (~85 min)
+# run preact_sla_percopy_e200 --sla-percopy --epochs 200 $SLA
+# 4. SLA-300 (~2.1 h)
+# run preact_sla_ta_e300 --epochs 300 $SLA
+# 5. Two views + JS consistency (~2.8 h), only if #3 reaches 97.76%:
+# run preact_sla2v_ta_e200 --two-view --cons-weight 12 --epochs 200 --arch preact --widths 64 128 256 --depth 4 4 3 \
+#   --ssl sla --batch-size 256 --label-smoothing 0.1 --trivialaugment --eval-every 10 --ckpt-every 10 --resume --ema 0.999
+# Final: retrain the winner on all 50k with --val 0 --ema-epoch <best weight-average epoch on 45k>, and export two
+# CSVs (live network and weight average) with export_preds.py <run> and export_preds.py <run> ema_e<epoch>.

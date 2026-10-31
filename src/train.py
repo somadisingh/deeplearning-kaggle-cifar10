@@ -576,7 +576,14 @@ def main():
                 if rec["val_acc_ema"] > ema_best[0]:
                     ema_best = (rec["val_acc_ema"], epoch + 1, copy.deepcopy(e.state_dict()))
         if ema_net is not None and args.ema_epoch == epoch + 1:
-            torch.save(ema_eval_copy().state_dict(), os.path.join(out_dir, f"model_ema_e{epoch + 1}.pt"))
+            e = ema_eval_copy()
+            tag = f"ema_e{epoch + 1}"
+            torch.save(e.state_dict(), os.path.join(out_dir, f"model_{tag}.pt"))
+            torch.save(predict(e, x_test, tta=2).cpu(), os.path.join(out_dir, f"test_logits_{tag}.pt"))
+            if args.ssl in ("sla", "sla_cp"):
+                torch.save(predict(e, x_test, tta=2, fn=sla_aggregate).cpu(),
+                           os.path.join(out_dir, f"test_logits_{tag}_sla_agg.pt"))
+            net.train()
         history.append(rec)
         print(json.dumps(rec), flush=True)
         if args.ckpt_every and (epoch + 1) % args.ckpt_every == 0 and step < total_steps:
