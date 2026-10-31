@@ -269,5 +269,8 @@ Both seed 0, 45k train / 5k holdout, TTA. Baseline `preact_sla_ta_e200`: head 97
 
 Per-copy: +0.02, no effect, so two-view (gated on 97.76%) is dropped. 300 epochs: +0.12 with or without CutMix,
 so CutMix adds nothing at either length. All are below the +0.3 rule; the final submission does not change.
+Correction: baseline head + vote is 97.54%, so on the submitted predictor the gains are +0.20 (300 epochs),
++0.16 (CutMix 300), +0.12 (per-copy). 300 epochs is retrained on all 50k as `preact_sla_ta_e300_full`; its CSV uses
+head + vote (`scripts/export_preds.py`), not `src/make_submission.py` (head only).
 CSVs (head + vote, 45k models): `submissions/submission_preact_sla_percopy_e200.csv`,
 `submissions/submission_preact_sla_ta_e300.csv` (agree with the final 50k submission on 95.85% / 96.50% of test images).

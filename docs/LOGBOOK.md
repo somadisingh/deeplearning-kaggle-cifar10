@@ -206,7 +206,7 @@ CutMix did not add accuracy. The weight average was 0.4 points worse than the li
 |---|---|---|
 | Normal head | 97.66% | 97.56% |
 | 4-rotation vote | 97.64% | 97.42% |
-| Head + vote | 97.70% | – |
+| Head + vote | 97.70% | 97.54% |
 
 The gain is +0.10 points. This is less than our limit of +0.3 points (the seed spread is approximately 0.2 points). Thus, we did not change the final model.
 We saved the predictions in `submissions/submission_preact_sla_cutmix_e300.csv`. We did the 300-epoch run without CutMix in the next HPC session (see below).
@@ -226,6 +226,8 @@ We did two more runs on the A100 with seed 0:
 
 Per-copy augmentation did not change the accuracy. Thus, we did not do the two-view run.
 The 300-epoch runs got approximately +0.1 points, with or without CutMix. Thus, CutMix does not add accuracy.
+On the head + vote prediction, which we use for the submission, the gains are larger: +0.20 points for 300 epochs, +0.16 points for CutMix with 300 epochs, and +0.12 points for per-copy augmentation.
+The 300-epoch gain is the largest result in this phase. It is less than +0.3 points, but it is the best candidate for a retrain on all 50,000 images (`preact_sla_ta_e300_full`).
 All gains are less than our limit of +0.3 points. We did not change the final model.
 We saved the predictions of the two runs in `submissions/`.
 
