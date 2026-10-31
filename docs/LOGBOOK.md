@@ -248,6 +248,11 @@ But it is 0.38 points less than the teachers' recipe (PreActResNet + SLA, 97.56%
 | 4 | AirResNet, seed 1, 120 epochs | 96.28% | 0.857 |
 | 5 | PreActResNet, 200 epochs | 96.82% | 0.884 |
 | 6 | PreActResNet + SLA, all 50k (final) | 97.56% (45k version) | **0.909** |
+| 7 | PreActResNet + SLA + per-copy augmentation, 45k | 97.58% | 0.896 |
+| 8 | PreActResNet + SLA + CutMix, 300 epochs, 45k | 97.66% | 0.902 |
+| 9 | PreActResNet + SLA, 300 epochs, 45k | 97.68% | 0.904 |
+
+Submissions 7 to 9 trained on 45,000 images. The final model trained on all 50,000 images and still has the best public score. We did not use these public scores to select a model.
 
 ## 9. Final model
 
