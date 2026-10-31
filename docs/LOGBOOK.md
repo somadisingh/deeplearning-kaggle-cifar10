@@ -187,6 +187,19 @@ Notes:
   With BN statistics from augmented images, the averaged model got 96.94%. We changed the code. The averaged model now uses the mean of the BN statistics of the copies.
 - Shake-Shake needs a long schedule. We trained it for 600 epochs over two HPC sessions with checkpoints (`--resume`).
 
+### Phase 7: CutMix inside SLA (2026-10-31)
+
+`preact_sla_cutmix_e200`: the final recipe with CutMix (Yun et al., 2019). With probability 0.5, each batch gets one box from a shuffled partner image.
+The box goes in before the four rotations, and the losses are mixed by area. The run also kept a weight average (EMA, decay 0.999).
+
+| Prediction | CutMix run | Final recipe (seed 0) |
+|---|---|---|
+| Normal head | 97.42% | 97.56% |
+| 4-rotation vote | 97.52% | 97.42% |
+| Weight average, normal head | 96.98% | – |
+
+CutMix did not add accuracy. The weight average was 0.4 points worse than the live network at the end of the cosine schedule. We queued a 300-epoch CutMix run for the next session.
+
 ## 7. Distillation result
 
 The student is a PreActResNet without SLA. The teachers are `preact_sla_ta_e200` and `preact_sla_ta_e200_sam05`.

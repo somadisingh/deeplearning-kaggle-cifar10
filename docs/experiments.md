@@ -229,3 +229,9 @@ all 50k; submit by Nov 5.
 
 The winner is retrained on all 50k with `--ema-epoch <best weight-average epoch on 45k>`, and two CSVs are exported
 (live network and weight average) with `scripts/export_preds.py`.
+
+## CutMix inside SLA (2026-10-31, A100)
+
+`preact_sla_cutmix_e200`: final recipe + CutMix (p 0.5, Beta(1,1), box before the rotations), EMA 0.999 logged,
+84 min. Holdout (TTA): head 97.42%, rotation vote 97.52% (baseline 97.56% / 97.42%). Weight average: 96.98% / 97.08%,
+best at the last epoch, below the live network. No gain; no CSV. Queued next: `preact_sla_cutmix_e300` (~2.1 h).

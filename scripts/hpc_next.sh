@@ -20,6 +20,9 @@ run() {  # run <name> <args...>; skips finished runs
 # 1. CutMix inside SLA: box pasted before the rotations, losses mixed by area, p = 0.5 per batch. ~85 min.
 run preact_sla_cutmix_e200 --cutmix 0.5 --epochs 200 $SLA
 
+# 1b. CutMix inside SLA for 300 epochs (requested 2026-10-31; a fresh cosine schedule, not a continuation). ~2.1 h.
+run preact_sla_cutmix_e300 --cutmix 0.5 --epochs 300 $SLA
+
 # Ranked training priorities (2026-10-31). Only #1 is enabled; uncomment the next one when it is approved.
 # 2. Baseline recipe + weight average on 45k (~85 min): does the weight average beat the live network?
 # run preact_sla_ta_e200_ema --epochs 200 $SLA
