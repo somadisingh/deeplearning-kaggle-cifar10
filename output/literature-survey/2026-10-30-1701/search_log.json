@@ -1,0 +1,569 @@
+{
+ "date": "2026-10-30",
+ "round": 3,
+ "topic": "methods that improve on SLA (self-supervised label augmentation)",
+ "tool": "academic-research-plugin literature-survey scripts/paper_search.py, arXiv field-syntax queries (--sources arxiv --max-results 30)",
+ "sources_requested": [
+  "arxiv"
+ ],
+ "sources_effective": "arXiv only for the 26 searches (one request each, >= 4 s apart, no errors or retries). Forward citations: Semantic Scholar /citations first, OpenAlex on failure or when the S2 record was incomplete; see forward_citations.",
+ "query_note": "Each query was wrapped in parentheses so that the date filter paper_search.py appends (AND submittedDate:[YYYYMM010000 TO 99991231235959]) applies to every OR branch.",
+ "topic_queries": [
+  {
+   "id": "q1",
+   "date_start": "2019-01",
+   "query": "(abs:\"label augmentation\" AND (abs:\"self-supervised\" OR abs:\"self-supervision\"))",
+   "results": 3,
+   "arxiv_total_hits": 3
+  },
+  {
+   "id": "q2",
+   "date_start": "2019-01",
+   "query": "(abs:\"joint label\" AND (abs:rotation OR abs:transformation))",
+   "results": 4,
+   "arxiv_total_hits": 4
+  },
+  {
+   "id": "q3",
+   "date_start": "2019-01",
+   "query": "((abs:\"rotation prediction\" OR abs:\"predicting rotations\") AND abs:supervised AND abs:auxiliary)",
+   "results": 8,
+   "arxiv_total_hits": 8
+  },
+  {
+   "id": "q4",
+   "date_start": "2019-01",
+   "query": "(abs:\"self-supervised\" AND abs:\"auxiliary task\" AND abs:\"fully supervised\")",
+   "results": 8,
+   "arxiv_total_hits": 8
+  },
+  {
+   "id": "q5",
+   "date_start": "2019-01",
+   "query": "(abs:\"input transformations\" AND abs:\"self-supervised\" AND abs:labels)",
+   "results": 3,
+   "arxiv_total_hits": 3
+  },
+  {
+   "id": "q6",
+   "date_start": "2020-01",
+   "query": "(abs:\"label augmentation\" AND (abs:robustness OR abs:corruption OR abs:augmented))",
+   "results": 30,
+   "arxiv_total_hits": 43
+  },
+  {
+   "id": "q7",
+   "date_start": "2021-01",
+   "query": "(abs:gated AND abs:\"self-supervised\" AND abs:\"supervised learning\")",
+   "results": 30,
+   "arxiv_total_hits": 61
+  },
+  {
+   "id": "q8",
+   "date_start": "2019-01",
+   "query": "(abs:\"self-knowledge distillation\" AND abs:CIFAR)",
+   "results": 3,
+   "arxiv_total_hits": 3
+  },
+  {
+   "id": "q9",
+   "date_start": "2019-01",
+   "query": "(abs:\"self-distillation\" AND abs:\"self-supervised\" AND abs:auxiliary)",
+   "results": 4,
+   "arxiv_total_hits": 4
+  },
+  {
+   "id": "q10",
+   "date_start": "2020-01",
+   "query": "(abs:\"knowledge distillation\" AND (abs:\"self-supervised augmented\" OR abs:\"self-supervision augmented\"))",
+   "results": 5,
+   "arxiv_total_hits": 5
+  },
+  {
+   "id": "q11",
+   "date_start": "2020-01",
+   "query": "(abs:\"knowledge distillation\" AND abs:\"self-supervision\" AND abs:rotation)",
+   "results": 2,
+   "arxiv_total_hits": 2
+  },
+  {
+   "id": "q12",
+   "date_start": "2020-01",
+   "query": "(abs:\"supervised contrastive\" AND abs:\"cross-entropy\" AND abs:\"CIFAR-10\")",
+   "results": 3,
+   "arxiv_total_hits": 3
+  },
+  {
+   "id": "q13",
+   "date_start": "2019-01",
+   "query": "(abs:\"self-supervised\" AND abs:regularization AND abs:\"supervised learning\" AND abs:CIFAR)",
+   "results": 14,
+   "arxiv_total_hits": 14
+  },
+  {
+   "id": "q14",
+   "date_start": "2020-01",
+   "query": "(abs:equivariant AND abs:\"self-supervised\" AND abs:rotation AND abs:classification)",
+   "results": 7,
+   "arxiv_total_hits": 7
+  },
+  {
+   "id": "q15",
+   "date_start": "2020-01",
+   "query": "(abs:\"shifting transformations\" OR (abs:\"shifted instances\" AND abs:contrastive))",
+   "results": 30,
+   "arxiv_total_hits": 46
+  },
+  {
+   "id": "q16",
+   "date_start": "2020-01",
+   "query": "(abs:\"soft augmentation\" OR (abs:\"soft labels\" AND abs:\"augmentation strength\") OR (abs:\"augmented data\" AND abs:\"effective labels\"))",
+   "results": 4,
+   "arxiv_total_hits": 4
+  },
+  {
+   "id": "q17",
+   "date_start": "2018-01",
+   "query": "(abs:\"augmentation multiplicity\" OR abs:\"batch augmentation\" OR abs:\"multiple augmentation samples\")",
+   "results": 29,
+   "arxiv_total_hits": 29
+  },
+  {
+   "id": "q18",
+   "date_start": "2019-01",
+   "query": "(abs:\"consistency regularization\" AND abs:supervised AND abs:augmentation AND abs:CIFAR)",
+   "results": 14,
+   "arxiv_total_hits": 14
+  },
+  {
+   "id": "q19",
+   "date_start": "2019-01",
+   "query": "(abs:mixup AND abs:\"self-supervised\" AND abs:auxiliary)",
+   "results": 0,
+   "arxiv_total_hits": 0
+  },
+  {
+   "id": "q20",
+   "date_start": "2019-06",
+   "query": "(abs:CutMix AND (abs:\"self-supervised\" OR abs:\"self-distillation\"))",
+   "results": 7,
+   "arxiv_total_hits": 7
+  },
+  {
+   "id": "q21",
+   "date_start": "2019-01",
+   "query": "(abs:\"auxiliary learning\" AND (abs:\"auxiliary labels\" OR abs:meta))",
+   "results": 22,
+   "arxiv_total_hits": 22
+  },
+  {
+   "id": "q22",
+   "date_start": "2018-01",
+   "query": "(abs:\"auxiliary tasks\" AND (abs:weighting OR abs:\"gradient similarity\" OR abs:\"gradient surgery\") AND abs:classification)",
+   "results": 22,
+   "arxiv_total_hits": 22
+  },
+  {
+   "id": "q23",
+   "date_start": "2019-01",
+   "query": "(abs:\"self-supervised\" AND abs:robustness AND abs:auxiliary AND abs:rotation)",
+   "results": 5,
+   "arxiv_total_hits": 5
+  },
+  {
+   "id": "q24",
+   "date_start": "2016-01",
+   "query": "(abs:rotation AND abs:equivariant AND abs:\"CIFAR-10\" AND abs:residual)",
+   "results": 1,
+   "arxiv_total_hits": 1
+  },
+  {
+   "id": "q25",
+   "date_start": "2021-01",
+   "query": "(abs:\"pretext task\" AND abs:supervised AND abs:jointly AND abs:\"image classification\")",
+   "results": 1,
+   "arxiv_total_hits": 1
+  },
+  {
+   "id": "q26",
+   "date_start": "2020-01",
+   "query": "(abs:\"self-supervised\" AND abs:supervised AND abs:\"multi-task\" AND abs:CIFAR)",
+   "results": 2,
+   "arxiv_total_hits": 2
+  }
+ ],
+ "records_total": 261,
+ "unique_records": 254,
+ "dedup": "by arXiv id (version stripped), then normalized title (lowercase, non-alphanumerics removed)",
+ "forward_citations": {
+  "method": "Semantic Scholar GET /graph/v1/paper/arXiv:ID/citations?fields=title,year,venue,externalIds,citationCount&limit=1000 (offset paging), >= 3 s between calls, HTTP 429 -> back off 5, 10, 20 s, then give up. OpenAlex fallback: every work whose title equals the seed title (plus the OpenAlex record of the arXiv DOI 10.48550/arXiv.ID and the S2 record title), then filter=cites:W... per-page=200. Cursor paging past page 1 returned HTTP 401 'API key required for cursor paging', so page=1,2,... paging was used (anonymous). Completeness check: if the S2 list was below 80% of the largest OpenAlex cited_by_count of the same paper, the OpenAlex lists were fetched and merged (by arXiv id, DOI, normalized title).",
+  "seeds": {
+   "1910.05872": {
+    "source_used": "semantic_scholar+openalex",
+    "n_citing": 310,
+    "s2_n": 295,
+    "openalex_n": 187,
+    "openalex_max_cited_by": 145,
+    "attempts": [
+     {
+      "source": "semantic_scholar",
+      "status": "ok",
+      "n": 68
+     },
+     {
+      "source": "openalex",
+      "reason": "S2 list (68) < 80% of OpenAlex cited_by_count (145)",
+      "status": "ok",
+      "n": 187,
+      "seed_works": [
+       "https://openalex.org/W3034337759",
+       "https://openalex.org/W2979927723"
+      ]
+     },
+     {
+      "source": "semantic_scholar",
+      "reason": "proceedings record 6bfa8f8b09ec21fe06d4eee28c3fb6cce879be1d (S2 citationCount 227)",
+      "status": "ok",
+      "n": 227
+     }
+    ],
+    "titles_checked": [
+     "Self-supervised Label Augmentation via Input Transformations",
+     "Rethinking Data Augmentation: Self-Supervision and Self-Distillation"
+    ],
+    "s2_record_title": "Rethinking Data Augmentation: Self-Supervision and Self-Distillation",
+    "s2_record_citationCount": 68,
+    "s2_title_match": {
+     "paperId": "6bfa8f8b09ec21fe06d4eee28c3fb6cce879be1d",
+     "externalIds": {
+      "MAG": "3037584823",
+      "DBLP": "conf/icml/LeeHS20",
+      "CorpusId": 220249782
+     },
+     "title": "Self-supervised Label Augmentation via Input Transformations",
+     "venue": "International Conference on Machine Learning",
+     "year": 2019,
+     "citationCount": 227,
+     "matchScore": 233.14478
+    },
+    "seed": "SLA",
+    "file": "citing/1910.05872.json"
+   },
+   "1906.12340": {
+    "source_used": "semantic_scholar",
+    "n_citing": 1103,
+    "s2_n": 1119,
+    "openalex_n": null,
+    "openalex_max_cited_by": 452,
+    "attempts": [
+     {
+      "source": "semantic_scholar",
+      "status": "ok",
+      "n": 1119
+     }
+    ],
+    "titles_checked": [
+     "Using Self-Supervised Learning Can Improve Model Robustness and Uncertainty"
+    ],
+    "s2_record_title": "Using Self-Supervised Learning Can Improve Model Robustness and Uncertainty",
+    "s2_record_citationCount": 1119,
+    "seed": "Hendrycks2019",
+    "file": "citing/1906.12340.json"
+   },
+   "2107.13715": {
+    "source_used": "semantic_scholar+openalex",
+    "n_citing": 117,
+    "s2_n": 102,
+    "openalex_n": 84,
+    "openalex_max_cited_by": 84,
+    "attempts": [
+     {
+      "source": "semantic_scholar",
+      "status": "HTTP 429 after 5/10/20 s back-off",
+      "n": null
+     },
+     {
+      "source": "openalex",
+      "status": "ok",
+      "n": 84,
+      "seed_works": [
+       "https://openalex.org/W3183222077"
+      ]
+     },
+     {
+      "source": "semantic_scholar",
+      "reason": "second pass after the step-2 give-up",
+      "status": "ok",
+      "n": 102
+     }
+    ],
+    "titles_checked": [
+     "Hierarchical Self-supervised Augmented Knowledge Distillation"
+    ],
+    "s2_record_title": null,
+    "s2_record_citationCount": null,
+    "seed": "HSAKD",
+    "file": "citing/2107.13715.json"
+   },
+   "2007.08176": {
+    "source_used": "semantic_scholar+openalex",
+    "n_citing": 801,
+    "s2_n": 774,
+    "openalex_n": 331,
+    "openalex_max_cited_by": 331,
+    "attempts": [
+     {
+      "source": "semantic_scholar",
+      "status": "HTTP 429 after 5/10/20 s back-off",
+      "n": null
+     },
+     {
+      "source": "openalex",
+      "status": "cites:W3043138801 failed: HTTP 401: {\"error\":\"API key required for cursor paging\",\"message\":\"Paging past the first page with cursor= needs a free API key. Get one in a minute at https://openalex.org/settings/api\"}",
+      "n": null,
+      "seed_works": [
+       "https://openalex.org/W3043138801"
+      ]
+     },
+     {
+      "source": "openalex",
+      "reason": "S2 gave up on HTTP 429 and OpenAlex cursor paging needs an API key; retried with page paging",
+      "status": "ok",
+      "n": 331,
+      "seed_works": [
+       "https://openalex.org/W3043138801"
+      ]
+     },
+     {
+      "source": "semantic_scholar",
+      "reason": "second pass after the step-2 give-up",
+      "status": "ok",
+      "n": 774
+     }
+    ],
+    "titles_checked": [
+     "CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances"
+    ],
+    "s2_record_title": null,
+    "s2_record_citationCount": null,
+    "seed": "CSI",
+    "file": "citing/2007.08176.json"
+   },
+   "2301.05865": {
+    "source_used": "semantic_scholar+openalex",
+    "n_citing": 10,
+    "s2_n": 5,
+    "openalex_n": 7,
+    "openalex_max_cited_by": 7,
+    "attempts": [
+     {
+      "source": "semantic_scholar",
+      "status": "ok",
+      "n": 5
+     },
+     {
+      "source": "openalex",
+      "reason": "S2 list (5) < 80% of OpenAlex cited_by_count (7)",
+      "status": "ok",
+      "n": 7,
+      "seed_works": [
+       "https://openalex.org/W4401110415"
+      ]
+     }
+    ],
+    "titles_checked": [
+     "Gated Self-supervised Learning For Improving Supervised Learning"
+    ],
+    "s2_record_title": "Gated Self-supervised Learning for Improving Supervised Learning",
+    "s2_record_citationCount": 5,
+    "seed": "GatedSSL",
+    "file": "citing/2301.05865.json"
+   },
+   "2211.04625": {
+    "source_used": "semantic_scholar",
+    "n_citing": 23,
+    "s2_n": 23,
+    "openalex_n": null,
+    "openalex_max_cited_by": 25,
+    "attempts": [
+     {
+      "source": "semantic_scholar",
+      "status": "ok",
+      "n": 23
+     }
+    ],
+    "titles_checked": [
+     "Soft Augmentation for Image Classification"
+    ],
+    "s2_record_title": "Soft Augmentation for Image Classification",
+    "s2_record_citationCount": 23,
+    "seed": "SoftAug",
+    "file": "citing/2211.04625.json"
+   },
+   "2408.01977": {
+    "source_used": "semantic_scholar",
+    "n_citing": 2,
+    "s2_n": 2,
+    "openalex_n": null,
+    "openalex_max_cited_by": 0,
+    "attempts": [
+     {
+      "source": "semantic_scholar",
+      "status": "ok",
+      "n": 2
+     }
+    ],
+    "titles_checked": [
+     "Label Augmentation for Neural Networks Robustness"
+    ],
+    "s2_record_title": "Label Augmentation for Neural Networks Robustness",
+    "s2_record_citationCount": 2,
+    "seed": "LabelAug2024",
+    "file": "citing/2408.01977.json"
+   }
+  },
+  "log": "citing_runs.log"
+ },
+ "seminal_verification": {
+  "method": "one export.arxiv.org id_list request for 20 IDs; title similarity >= 0.70 (ARS arXiv protocol, SequenceMatcher on normalized titles)",
+  "passed": 20,
+  "failed": 0,
+  "short_title_matches": [
+   "1912.02781: expected 'AugMix' is a short form; full-title similarity 0.1463, main title before the colon 1.0",
+   "1905.08094: expected 'Be Your Own Teacher' is a short form; full-title similarity 0.3248, main title before the colon 1.0"
+  ],
+  "corrected_ids": {},
+  "file": "seminal/arxiv_id_check.json",
+  "raw": "seminal/id_list_response.xml"
+ },
+ "title_searches": [
+  {
+   "title": "Decoupled self-supervised label augmentation for fully-supervised image classification",
+   "attempts": [
+    "ti:\"decoupled self supervised label augmentation for fully supervised image classification\"",
+    "ti:decoupled AND ti:self AND ti:supervised AND ti:label AND ti:augmentation AND ti:fully AND ti:supervised AND ti:image",
+    "ti:decoupled AND ti:\"label augmentation\"",
+    "abs:decoupled AND abs:\"label augmentation\""
+   ],
+   "match": null
+  },
+  {
+   "title": "What are effective labels for augmented data? Improving robustness with AutoLabel",
+   "attempts": [
+    "ti:\"what are effective labels for augmented data improving robustness with autolabel\"",
+    "ti:effective AND ti:labels AND ti:augmented AND ti:data AND ti:robustness AND ti:autolabel"
+   ],
+   "match": {
+    "id": "2302.11188",
+    "title": "What Are Effective Labels for Augmented Data? Improving Calibration and Robustness with AutoLabel",
+    "year": "2023",
+    "similarity": 0.9091,
+    "authors": [
+     "Yao Qin",
+     "Xuezhi Wang",
+     "Balaji Lakshminarayanan",
+     "Ed H. Chi",
+     "Alex Beutel"
+    ],
+    "journal_ref": null,
+    "doi": null
+   }
+  }
+ ],
+ "decoupled_sla_not_on_arxiv": {
+  "file": "seminal/decoupled_sla_openalex.json",
+  "openalex_match": {
+   "openalex_id": "https://openalex.org/W3208417938",
+   "title": "Decoupled self-supervised label augmentation for fully-supervised image classification",
+   "year": 2021,
+   "doi": "https://doi.org/10.1016/j.knosys.2021.107605",
+   "venue": "Knowledge-Based Systems",
+   "authors": [
+    "Wanshun Gao",
+    "Meiqing Wu",
+    "Siew-Kei Lam",
+    "Qihui Xia",
+    "Jianhua Zou"
+   ],
+   "cited_by_count": 14,
+   "similarity": 1.0
+  }
+ },
+ "bibtex": {
+  "file": "references.bib",
+  "source": "https://arxiv.org/bibtex/ID",
+  "entries": 21,
+  "ids": [
+   "1910.05872",
+   "1906.12340",
+   "2107.13715",
+   "2211.04625",
+   "2408.01977",
+   "2301.05865",
+   "2007.08176",
+   "2006.07114",
+   "2004.11362",
+   "1901.09335",
+   "2105.13343",
+   "1909.12220",
+   "2006.12000",
+   "2203.16172",
+   "1905.04899",
+   "1901.08933",
+   "2111.09613",
+   "1912.02781",
+   "2003.13964",
+   "1905.08094",
+   "2302.11188"
+  ]
+ },
+ "full_text_downloaded": [
+  "fulltext/1910.05872.pdf",
+  "fulltext/1906.12340.pdf",
+  "fulltext/2107.13715.pdf",
+  "fulltext/2211.04625.pdf",
+  "fulltext/2408.01977.pdf",
+  "fulltext/2301.05865.pdf",
+  "fulltext/2007.08176.pdf",
+  "fulltext/2006.07114.pdf",
+  "fulltext/1901.09335.pdf",
+  "fulltext/2105.13343.pdf",
+  "fulltext/1909.12220.pdf",
+  "fulltext/2006.12000.pdf",
+  "fulltext/2203.16172.pdf",
+  "fulltext/1901.08933.pdf",
+  "fulltext/2111.09613.pdf",
+  "fulltext/2302.11188.pdf"
+ ],
+ "full_text_not_downloaded": [
+  {
+   "requested": "decoupled_sla",
+   "reason": "id check failed or title not found on arXiv"
+  }
+ ],
+ "venue_lookup": {
+  "file": "s2_batch_venues.json",
+  "status": "ok",
+  "found": 254
+ },
+ "keyword_list": {
+  "file": "keyword_hits.txt",
+  "keywords": [
+   "label augmentation",
+   "joint",
+   "self-supervis",
+   "rotation",
+   "auxiliary",
+   "distillation",
+   "consistency",
+   "contrastive",
+   "soft label",
+   "augmentation",
+   "CIFAR"
+  ],
+  "unique_papers_all_sources": 2344,
+  "search_only": 231,
+  "matching": 892
+ },
+ "notes": "Round 3 targets methods that improve on SLA. Retrieval only: no screening, full-text reading or synthesis in this step. Previous rounds: output/literature-survey/2026-10-29-1530 and 2026-10-29-1705."
+}

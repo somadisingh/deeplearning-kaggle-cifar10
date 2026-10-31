@@ -1,0 +1,123 @@
+[
+  {
+    "title": "Canonical Capsules: Self-Supervised Capsules in Canonical Pose",
+    "authors": [
+      "Weiwei Sun",
+      "Andrea Tagliasacchi",
+      "Boyang Deng",
+      "Sara Sabour",
+      "Soroosh Yazdani",
+      "Geoffrey Hinton",
+      "Kwang Moo Yi"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "We propose a self-supervised capsule architecture for 3D point clouds. We compute capsule decompositions of objects through permutation-equivariant attention, and self-supervise the process by training with pairs of randomly rotated objects. Our key idea is to aggregate the attention masks into semantic keypoints, and use these to supervise a decomposition that satisfies the capsule invariance/equivariance properties. This not only enables the training of a semantically consistent decomposition, but also allows us to learn a canonicalization operation that enables object-centric reasoning. To train our neural network we require neither classification labels nor manually-aligned training datasets. Yet, by learning an object-centric representation in a self-supervised manner, our method outperforms the state-of-the-art on 3D point cloud reconstruction, canonicalization, and unsupervised classification.",
+    "url": "http://arxiv.org/abs/2012.04718v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "EquiCaps: Predictor-Free Pose-Aware Pre-Trained Capsule Networks",
+    "authors": [
+      "Athinoulla Konstantinou",
+      "Georgios Leontidis",
+      "Mamatha Thota",
+      "Aiden Durrant"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Learning self-supervised representations that are invariant and equivariant to transformations is crucial for advancing beyond traditional visual classification tasks. However, many methods rely on predictor architectures to encode equivariance, despite evidence that architectural choices, such as capsule networks, inherently excel at learning interpretable pose-aware representations. To explore this, we introduce EquiCaps (Equivariant Capsule Network), a capsule-based approach to pose-aware self-supervision that eliminates the need for a specialised predictor for enforcing equivariance. Instead, we leverage the intrinsic pose-awareness capabilities of capsules to improve performance in pose estimation tasks. To further challenge our assumptions, we increase task complexity via multi-geometric transformations to enable a more thorough evaluation of invariance and equivariance by introducing 3DIEBench-T, an extension of a 3D object-rendering benchmark dataset. Empirical results demonstrate that EquiCaps outperforms prior state-of-the-art equivariant methods on rotation prediction, achieving a supervised-level $R^2$ of 0.78 on the 3DIEBench rotation prediction benchmark and improving upon SIE and CapsIE by 0.05 and 0.04 $R^2$, respectively. Moreover, in contrast to non-capsule-based equivariant approaches, EquiCaps maintains robust equivariant performance under combined geometric transformations, underscoring its generalisation capabilities and the promise of predictor-free capsule architectures.",
+    "url": "http://arxiv.org/abs/2506.09895v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards Self-Supervised Gaze Estimation",
+    "authors": [
+      "Arya Farkhondeh",
+      "Cristina Palmero",
+      "Simone Scardapane",
+      "Sergio Escalera"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Recent joint embedding-based self-supervised methods have surpassed standard supervised approaches on various image recognition tasks such as image classification. These self-supervised methods aim at maximizing agreement between features extracted from two differently transformed views of the same image, which results in learning an invariant representation with respect to appearance and geometric image transformations. However, the effectiveness of these approaches remains unclear in the context of gaze estimation, a structured regression task that requires equivariance under geometric transformations (e.g., rotations, horizontal flip). In this work, we propose SwAT, an equivariant version of the online clustering-based self-supervised approach SwAV, to learn more informative representations for gaze estimation. We demonstrate that SwAT, with ResNet-50 and supported with uncurated unlabeled face images, outperforms state-of-the-art gaze estimation methods and supervised baselines in various experiments. In particular, we achieve up to 57% and 25% improvements in cross-dataset and within-dataset evaluation tasks on existing benchmarks (ETH-XGaze, Gaze360, and MPIIFaceGaze).",
+    "url": "http://arxiv.org/abs/2203.10974v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Understanding the Role of Equivariance in Self-supervised Learning",
+    "authors": [
+      "Yifei Wang",
+      "Kaiwen Hu",
+      "Sharut Gupta",
+      "Ziyu Ye",
+      "Yisen Wang",
+      "Stefanie Jegelka"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Contrastive learning has been a leading paradigm for self-supervised learning, but it is widely observed that it comes at the price of sacrificing useful features (\\eg colors) by being invariant to data augmentations. Given this limitation, there has been a surge of interest in equivariant self-supervised learning (E-SSL) that learns features to be augmentation-aware. However, even for the simplest rotation prediction method, there is a lack of rigorous understanding of why, when, and how E-SSL learns useful features for downstream tasks. To bridge this gap between practice and theory, we establish an information-theoretic perspective to understand the generalization ability of E-SSL. In particular, we identify a critical explaining-away effect in E-SSL that creates a synergy between the equivariant and classification tasks. This synergy effect encourages models to extract class-relevant features to improve its equivariant prediction, which, in turn, benefits downstream tasks requiring semantic features. Based on this perspective, we theoretically analyze the influence of data transformations and reveal several principles for practical designs of E-SSL. Our theory not only aligns well with existing E-SSL methods but also sheds light on new directions by exploring the benefits of model equivariance. We believe that a theoretically grounded understanding on the role of equivariance would inspire more principled and advanced designs in this field. Code is available at https://github.com/kaotty/Understanding-ESSL.",
+    "url": "http://arxiv.org/abs/2411.06508v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Imaging with Equivariant Deep Learning",
+    "authors": [
+      "Dongdong Chen",
+      "Mike Davies",
+      "Matthias J. Ehrhardt",
+      "Carola-Bibiane Schönlieb",
+      "Ferdia Sherry",
+      "Julián Tachella"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "From early image processing to modern computational imaging, successful models and algorithms have relied on a fundamental property of natural signals: symmetry. Here symmetry refers to the invariance property of signal sets to transformations such as translation, rotation or scaling. Symmetry can also be incorporated into deep neural networks in the form of equivariance, allowing for more data-efficient learning. While there has been important advances in the design of end-to-end equivariant networks for image classification in recent years, computational imaging introduces unique challenges for equivariant network solutions since we typically only observe the image through some noisy ill-conditioned forward operator that itself may not be equivariant. We review the emerging field of equivariant imaging and show how it can provide improved generalization and new imaging opportunities. Along the way we show the interplay between the acquisition physics and group actions and links to iterative reconstruction, blind compressed sensing and self-supervised learning.",
+    "url": "http://arxiv.org/abs/2209.01725v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Equivariant Spatio-Temporal Self-Supervision for LiDAR Object Detection",
+    "authors": [
+      "Deepti Hegde",
+      "Suhas Lohit",
+      "Kuan-Chuan Peng",
+      "Michael J. Jones",
+      "Vishal M. Patel"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Popular representation learning methods encourage feature invariance under transformations applied at the input. However, in 3D perception tasks like object localization and segmentation, outputs are naturally equivariant to some transformations, such as rotation. Using pre-training loss functions that encourage equivariance of features under certain transformations provides a strong self-supervision signal while also retaining information of geometric relationships between transformed feature representations. This can enable improved performance in downstream tasks that are equivariant to such transformations. In this paper, we propose a spatio-temporal equivariant learning framework by considering both spatial and temporal augmentations jointly. Our experiments show that the best performance arises with a pre-training approach that encourages equivariance to translation, scaling, and flip, rotation and scene flow. For spatial augmentations, we find that depending on the transformation, either a contrastive objective or an equivariance-by-classification objective yields best results. To leverage real-world object deformations and motion, we consider sequential LiDAR scene pairs and develop a novel 3D scene flow-based equivariance objective that leads to improved performance overall. We show our pre-training method for 3D object detection which outperforms existing equivariant and invariant approaches in many settings.",
+    "url": "http://arxiv.org/abs/2404.11737v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "PeCLR: Self-Supervised 3D Hand Pose Estimation from monocular RGB via Equivariant Contrastive Learning",
+    "authors": [
+      "Adrian Spurr",
+      "Aneesh Dahiya",
+      "Xi Wang",
+      "Xucong Zhang",
+      "Otmar Hilliges"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Encouraged by the success of contrastive learning on image classification tasks, we propose a new self-supervised method for the structured regression task of 3D hand pose estimation. Contrastive learning makes use of unlabeled data for the purpose of representation learning via a loss formulation that encourages the learned feature representations to be invariant under any image transformation. For 3D hand pose estimation, it too is desirable to have invariance to appearance transformation such as color jitter. However, the task requires equivariance under affine transformations, such as rotation and translation. To address this issue, we propose an equivariant contrastive objective and demonstrate its effectiveness in the context of 3D hand pose estimation. We experimentally investigate the impact of invariant and equivariant contrastive objectives and show that learning equivariant features leads to better representations for the task of 3D hand pose estimation. Furthermore, we show that standard ResNets with sufficient depth, trained on additional unlabeled data, attain improvements of up to 14.5% in PA-EPE on FreiHAND and thus achieves state-of-the-art performance without any task specific, specialized architectures. Code and models are available at https://ait.ethz.ch/projects/2021/PeCLR/",
+    "url": "http://arxiv.org/abs/2106.05953v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

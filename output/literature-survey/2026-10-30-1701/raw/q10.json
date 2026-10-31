@@ -1,0 +1,84 @@
+[
+  {
+    "title": "Knowledge Distillation Using Hierarchical Self-Supervision Augmented Distribution",
+    "authors": [
+      "Chuanguang Yang",
+      "Zhulin An",
+      "Linhang Cai",
+      "Yongjun Xu"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Knowledge distillation (KD) is an effective framework that aims to transfer meaningful information from a large teacher to a smaller student. Generally, KD often involves how to define and transfer knowledge. Previous KD methods often focus on mining various forms of knowledge, for example, feature maps and refined information. However, the knowledge is derived from the primary supervised task and thus is highly task-specific. Motivated by the recent success of self-supervised representation learning, we propose an auxiliary self-supervision augmented task to guide networks to learn more meaningful features. Therefore, we can derive soft self-supervision augmented distributions as richer dark knowledge from this task for KD. Unlike previous knowledge, this distribution encodes joint knowledge from supervised and self-supervised feature learning. Beyond knowledge exploration, we propose to append several auxiliary branches at various hidden layers, to fully take advantage of hierarchical feature maps. Each auxiliary branch is guided to learn self-supervision augmented task and distill this distribution from teacher to student. Overall, we call our KD method as Hierarchical Self-Supervision Augmented Knowledge Distillation (HSSAKD). Experiments on standard image classification show that both offline and online HSSAKD achieves state-of-the-art performance in the field of KD. Further transfer experiments on object detection further verify that HSSAKD can guide the network to learn better features. The code is available at https://github.com/winycg/HSAKD.",
+    "url": "http://arxiv.org/abs/2109.03075v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Customizing Synthetic Data for Data-Free Student Learning",
+    "authors": [
+      "Shiya Luo",
+      "Defang Chen",
+      "Can Wang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Data-free knowledge distillation (DFKD) aims to obtain a lightweight student model without original training data. Existing works generally synthesize data from the pre-trained teacher model to replace the original training data for student learning. To more effectively train the student model, the synthetic data shall be customized to the current student learning ability. However, this is ignored in the existing DFKD methods and thus negatively affects the student training. To address this issue, we propose Customizing Synthetic Data for Data-Free Student Learning (CSD) in this paper, which achieves adaptive data synthesis using a self-supervised augmented auxiliary task to estimate the student learning ability. Specifically, data synthesis is dynamically adjusted to enlarge the cross entropy between the labels and the predictions from the self-supervised augmented task, thus generating hard samples for the student model. The experiments on various datasets and teacher-student models show the effectiveness of our proposed method. Code is available at: $\\href{https://github.com/luoshiya/CSD}{https://github.com/luoshiya/CSD}$",
+    "url": "http://arxiv.org/abs/2307.04542v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards Effective Data-Free Knowledge Distillation via Diverse Diffusion Augmentation",
+    "authors": [
+      "Muquan Li",
+      "Dongyang Zhang",
+      "Tao He",
+      "Xiurui Xie",
+      "Yuan-Fang Li",
+      "Ke Qin"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Data-free knowledge distillation (DFKD) has emerged as a pivotal technique in the domain of model compression, substantially reducing the dependency on the original training data. Nonetheless, conventional DFKD methods that employ synthesized training data are prone to the limitations of inadequate diversity and discrepancies in distribution between the synthesized and original datasets. To address these challenges, this paper introduces an innovative approach to DFKD through diverse diffusion augmentation (DDA). Specifically, we revise the paradigm of common data synthesis in DFKD to a composite process through leveraging diffusion models subsequent to data synthesis for self-supervised augmentation, which generates a spectrum of data samples with similar distributions while retaining controlled variations. Furthermore, to mitigate excessive deviation in the embedding space, we introduce an image filtering technique grounded in cosine similarity to maintain fidelity during the knowledge distillation process. Comprehensive experiments conducted on CIFAR-10, CIFAR-100, and Tiny-ImageNet datasets showcase the superior performance of our method across various teacher-student network configurations, outperforming the contemporary state-of-the-art DFKD methods. Code will be available at:https://github.com/SLGSP/DDA.",
+    "url": "http://arxiv.org/abs/2410.17606v1",
+    "doi": "10.1145/3664647.3680711",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Hierarchical Self-supervised Augmented Knowledge Distillation",
+    "authors": [
+      "Chuanguang Yang",
+      "Zhulin An",
+      "Linhang Cai",
+      "Yongjun Xu"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Knowledge distillation often involves how to define and transfer knowledge from teacher to student effectively. Although recent self-supervised contrastive knowledge achieves the best performance, forcing the network to learn such knowledge may damage the representation learning of the original class recognition task. We therefore adopt an alternative self-supervised augmented task to guide the network to learn the joint distribution of the original recognition task and self-supervised auxiliary task. It is demonstrated as a richer knowledge to improve the representation power without losing the normal classification capability. Moreover, it is incomplete that previous methods only transfer the probabilistic knowledge between the final layers. We propose to append several auxiliary classifiers to hierarchical intermediate feature maps to generate diverse self-supervised knowledge and perform the one-to-one transfer to teach the student network thoroughly. Our method significantly surpasses the previous SOTA SSKD with an average improvement of 2.56\\% on CIFAR-100 and an improvement of 0.77\\% on ImageNet across widely used network pairs. Codes are available at https://github.com/winycg/HSAKD.",
+    "url": "http://arxiv.org/abs/2107.13715v2",
+    "doi": "10.24963/ijcai.2021/168",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "LEMON: A Large Endoscopic MONocular Dataset and Foundation Model for Perception in Surgical Settings",
+    "authors": [
+      "Chengan Che",
+      "Chao Wang",
+      "Tom Vercauteren",
+      "Sophia Tsoka",
+      "Luis C. Garcia-Peraza-Herrera"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Traditional open-access datasets focusing on surgical procedures are often limited by their small size, typically consisting of fewer than 100 videos and less than 30 hours of footage, which leads to poor model generalization. To address this data limitation, a new dataset called LEMON has been compiled using a novel aggregation pipeline that collects high-resolution videos from online sources. Featuring an extensive collection of over 4K surgical videos totaling 938 hours (85 million frames) of high-quality footage across multiple procedure types, LEMON offers a comprehensive resource surpassing existing alternatives in size and scope, including two novel downstream tasks. To demonstrate the effectiveness of this diverse dataset, we introduce LemonFM, a foundation model pretrained on LEMON using a novel self-supervised augmented knowledge distillation approach. LemonFM consistently outperforms existing surgical foundation models across four downstream tasks and six datasets, achieving significant gains in surgical phase recognition (+9.5pp, +9.4pp, and +8.4pp in Jaccard on AutoLaparo, M2CAI16, and Cholec80), surgical action recognition (+4.4pp in mAP on CholecT50), surgical tool presence detection (+5.3pp and +10.2pp in mAP on Cholec80 and GraSP), and surgical semantic segmentation (+10.3pp in mDice on CholecSeg8k). LEMON and LemonFM will serve as foundational resources for the research community and industry, accelerating progress in developing autonomous robotic surgery systems and ultimately contributing to safer and more accessible surgical care worldwide. Dataset, code, and models are publicly available at https://github.com/visurg-ai/LEMON.",
+    "url": "http://arxiv.org/abs/2503.19740v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

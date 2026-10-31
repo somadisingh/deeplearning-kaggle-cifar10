@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Distill on the Go: Online knowledge distillation in self-supervised learning",
+    "authors": [
+      "Prashant Bhat",
+      "Elahe Arani",
+      "Bahram Zonooz"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Self-supervised learning solves pretext prediction tasks that do not require annotations to learn feature representations. For vision tasks, pretext tasks such as predicting rotation, solving jigsaw are solely created from the input data. Yet, predicting this known information helps in learning representations useful for downstream tasks. However, recent works have shown that wider and deeper models benefit more from self-supervised learning than smaller models. To address the issue of self-supervised pre-training of smaller models, we propose Distill-on-the-Go (DoGo), a self-supervised learning paradigm using single-stage online knowledge distillation to improve the representation quality of the smaller models. We employ deep mutual learning strategy in which two models collaboratively learn from each other to improve one another. Specifically, each model is trained using self-supervised learning along with distillation that aligns each model's softmax probabilities of similarity scores with that of the peer model. We conduct extensive experiments on multiple benchmark datasets, learning objectives, and architectures to demonstrate the potential of our proposed method. Our results show significant performance gain in the presence of noisy and limited labels and generalization to out-of-distribution data.",
+    "url": "http://arxiv.org/abs/2104.09866v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "WaterMono: Teacher-Guided Anomaly Masking and Enhancement Boosting for Robust Underwater Self-Supervised Monocular Depth Estimation",
+    "authors": [
+      "Yilin Ding",
+      "Kunqian Li",
+      "Han Mei",
+      "Shuaixin Liu",
+      "Guojia Hou"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Depth information serves as a crucial prerequisite for various visual tasks, whether on land or underwater. Recently, self-supervised methods have achieved remarkable performance on several terrestrial benchmarks despite the absence of depth annotations. However, in more challenging underwater scenarios, they encounter numerous brand-new obstacles such as the influence of marine life and degradation of underwater images, which break the assumption of a static scene and bring low-quality images, respectively. Besides, the camera angles of underwater images are more diverse. Fortunately, we have discovered that knowledge distillation presents a promising approach for tackling these challenges. In this paper, we propose WaterMono, a novel framework for depth estimation coupled with image enhancement. It incorporates the following key measures: (1) We present a Teacher-Guided Anomaly Mask to identify dynamic regions within the images; (2) We employ depth information combined with the Underwater Image Formation Model to generate enhanced images, which in turn contribute to the depth estimation task; and (3) We utilize a rotated distillation strategy to enhance the model's rotational robustness. Comprehensive experiments demonstrate the effectiveness of our proposed method for both depth estimation and image enhancement. The source code and pre-trained models are available on the project home page: https://github.com/OUCVisionGroup/WaterMono.",
+    "url": "http://arxiv.org/abs/2406.13344v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

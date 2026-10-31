@@ -1,0 +1,332 @@
+{
+ "seed": "2301.05865",
+ "seed_title": "Gated Self-supervised Learning For Improving Supervised Learning",
+ "retrieved_utc": "2026-10-30T21:08:23+00:00",
+ "checked_utc": "2026-10-30T21:11:07+00:00",
+ "source_used": "semantic_scholar+openalex",
+ "attempts": [
+  {
+   "source": "semantic_scholar",
+   "status": "ok",
+   "n": 5
+  },
+  {
+   "source": "openalex",
+   "reason": "S2 list (5) < 80% of OpenAlex cited_by_count (7)",
+   "status": "ok",
+   "n": 7,
+   "seed_works": [
+    "https://openalex.org/W4401110415"
+   ]
+  }
+ ],
+ "completeness_check": {
+  "s2_record": {
+   "paperId": "9346d616ba61fa97c9789326b4e69c042b3f4d9a",
+   "externalIds": {
+    "ArXiv": "2301.05865",
+    "DBLP": "journals/corr/abs-2301-05865",
+    "DOI": "10.1109/CAI59869.2024.00120",
+    "CorpusId": 255941840
+   },
+   "title": "Gated Self-supervised Learning for Improving Supervised Learning",
+   "venue": "Conference on Algebraic Informatics",
+   "year": 2023,
+   "citationCount": 5
+  },
+  "openalex_arxiv_doi_record": {
+   "id": "https://openalex.org/W4401110415",
+   "display_name": "Gated Self-supervised Learning for Improving Supervised Learning",
+   "publication_year": 2024,
+   "doi": "https://doi.org/10.1109/cai59869.2024.00120",
+   "cited_by_count": 7
+  },
+  "openalex_exact_title_works": [
+   {
+    "id": "https://openalex.org/W4401110415",
+    "display_name": "Gated Self-supervised Learning for Improving Supervised Learning",
+    "publication_year": 2024,
+    "doi": "https://doi.org/10.1109/cai59869.2024.00120",
+    "cited_by_count": 7
+   }
+  ],
+  "titles_checked": [
+   "Gated Self-supervised Learning For Improving Supervised Learning"
+  ]
+ },
+ "n_citing": 10,
+ "citing": [
+  {
+   "title": "Enhancing robustness against adversarial attacks in biomedical image classification through squeezed quantized self-supervised contrastive learning",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1016/j.bspc.2026.110093",
+   "venue": "Biomedical Signal Processing and Control",
+   "citation_count": 0,
+   "s2_paper_id": "f136eb5f40be2ea62e8dd3bcf52383c007971bf3",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Comparative Analysis of Self-Supervised Learning Methods for Skin Lesion Segmentation",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1109/fet68771.2026.11601426",
+   "venue": "European Future Technologies Conference and Exhibition",
+   "citation_count": 0,
+   "s2_paper_id": "bd0317e8c690be478406bb94ea6b8b4eed014577",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7169576823"
+  },
+  {
+   "title": "Noise Reduction in Brain Magnetic Resonance Imaging Using a Convolutional Autoencoder",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.21512/commit.v20i1.13231",
+   "venue": "Journal",
+   "citation_count": 0,
+   "s2_paper_id": "e5127e59e47e9e3e9f347166e7938e5489b5c924",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Towards Adaptive Fusion of Multimodal Deep Networks for Human Action Recognition",
+   "year": 2025,
+   "arxiv_id": "2512.04943",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 1,
+   "s2_paper_id": "61cb3c1a5ceae9b1822ef9ee2901384203f4806f",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Self-Supervised Learning for Fruit and Vegetable Spoilage Detection: Reducing Dependency on Labeled Data",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1109/icicos68590.2025.11329934",
+   "venue": "2025 8th International Conference on Informatics and Computational Sciences (ICICoS)",
+   "citation_count": 0,
+   "s2_paper_id": "90a33932beab9f402fd519287e654bbdc460bf3c",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7124446904"
+  },
+  {
+   "title": "A Framework for Assessing the Potential of Artificial Intelligence in the Circular Bioeconomy",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.3390/su17083535",
+   "venue": "Sustainability",
+   "citation_count": 39,
+   "openalex_id": "https://openalex.org/W4409444797",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Flame combustion state recognition in municipal solid waste incineration processes based on image multi-threshold segmentation and DQN-PL model",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.energy.2025.136967",
+   "venue": "Energy",
+   "citation_count": 14,
+   "openalex_id": "https://openalex.org/W4410991022",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Multisite T1-weighted MRI classification of Alzheimer’s disease using 3D-CNN-HSCAM architecture with contrastive domain adaptation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.bspc.2025.108686",
+   "venue": "Biomedical Signal Processing and Control",
+   "citation_count": 2,
+   "openalex_id": "https://openalex.org/W4414804557",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "IMPROVING IMAGE CLASSIFICATION ACCURACY WITH OVERSAMPLING AND DATA AUGMENTATION USING DEEP LEARNING: A CASE STUDY ON THE SIMPSONS CHARACTERS DATASET",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.34288/jri.v6i4.348",
+   "venue": "Jurnal Riset Informatika",
+   "citation_count": 2,
+   "openalex_id": "https://openalex.org/W4408289073",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "ZELF: A Zero-shot Ensemble Learning Framework for PPE detection in Industrial Workplaces",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1016/j.trpro.2026.03.012",
+   "venue": "Transportation research procedia",
+   "citation_count": 0,
+   "openalex_id": "https://openalex.org/W7163681308",
+   "found_in": [
+    "openalex"
+   ]
+  }
+ ],
+ "raw": {
+  "semantic_scholar": [
+   {
+    "paperId": "f136eb5f40be2ea62e8dd3bcf52383c007971bf3",
+    "externalIds": {
+     "DBLP": "journals/bspc/PunnT26",
+     "DOI": "10.1016/j.bspc.2026.110093",
+     "CorpusId": 286878216
+    },
+    "title": "Enhancing robustness against adversarial attacks in biomedical image classification through squeezed quantized self-supervised contrastive learning",
+    "venue": "Biomedical Signal Processing and Control",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "bd0317e8c690be478406bb94ea6b8b4eed014577",
+    "externalIds": {
+     "DOI": "10.1109/FET68771.2026.11601426",
+     "CorpusId": 290253910
+    },
+    "title": "Comparative Analysis of Self-Supervised Learning Methods for Skin Lesion Segmentation",
+    "venue": "European Future Technologies Conference and Exhibition",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "e5127e59e47e9e3e9f347166e7938e5489b5c924",
+    "externalIds": {
+     "DOI": "10.21512/commit.v20i1.13231",
+     "CorpusId": 287210336
+    },
+    "title": "Noise Reduction in Brain Magnetic Resonance Imaging Using a Convolutional Autoencoder",
+    "venue": "Journal",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "61cb3c1a5ceae9b1822ef9ee2901384203f4806f",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2512-04943",
+     "ArXiv": "2512.04943",
+     "DOI": "10.48550/arXiv.2512.04943",
+     "CorpusId": 283556981
+    },
+    "title": "Towards Adaptive Fusion of Multimodal Deep Networks for Human Action Recognition",
+    "venue": "arXiv.org",
+    "year": 2025,
+    "citationCount": 1
+   },
+   {
+    "paperId": "90a33932beab9f402fd519287e654bbdc460bf3c",
+    "externalIds": {
+     "DOI": "10.1109/ICICoS68590.2025.11329934",
+     "CorpusId": 284806788
+    },
+    "title": "Self-Supervised Learning for Fruit and Vegetable Spoilage Detection: Reducing Dependency on Labeled Data",
+    "venue": "2025 8th International Conference on Informatics and Computational Sciences (ICICoS)",
+    "year": 2025,
+    "citationCount": 0
+   }
+  ],
+  "openalex": [
+   {
+    "openalex_id": "https://openalex.org/W4409444797",
+    "title": "A Framework for Assessing the Potential of Artificial Intelligence in the Circular Bioeconomy",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/su17083535",
+    "arxiv_id": null,
+    "venue": "Sustainability",
+    "citationCount": 39,
+    "cites_seed_works": [
+     "W4401110415"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4410991022",
+    "title": "Flame combustion state recognition in municipal solid waste incineration processes based on image multi-threshold segmentation and DQN-PL model",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.energy.2025.136967",
+    "arxiv_id": null,
+    "venue": "Energy",
+    "citationCount": 14,
+    "cites_seed_works": [
+     "W4401110415"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4414804557",
+    "title": "Multisite T1-weighted MRI classification of Alzheimer’s disease using 3D-CNN-HSCAM architecture with contrastive domain adaptation",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.bspc.2025.108686",
+    "arxiv_id": null,
+    "venue": "Biomedical Signal Processing and Control",
+    "citationCount": 2,
+    "cites_seed_works": [
+     "W4401110415"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4408289073",
+    "title": "IMPROVING IMAGE CLASSIFICATION ACCURACY WITH OVERSAMPLING AND DATA AUGMENTATION USING DEEP LEARNING: A CASE STUDY ON THE SIMPSONS CHARACTERS DATASET",
+    "year": 2024,
+    "doi": "https://doi.org/10.34288/jri.v6i4.348",
+    "arxiv_id": null,
+    "venue": "Jurnal Riset Informatika",
+    "citationCount": 2,
+    "cites_seed_works": [
+     "W4401110415"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7124446904",
+    "title": "Self-Supervised Learning for Fruit and Vegetable Spoilage Detection: Reducing Dependency on Labeled Data",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/icicos68590.2025.11329934",
+    "arxiv_id": null,
+    "venue": "International Conference on Informatics and Computational Sciences (ICICoS)",
+    "citationCount": 1,
+    "cites_seed_works": [
+     "W4401110415"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7163681308",
+    "title": "ZELF: A Zero-shot Ensemble Learning Framework for PPE detection in Industrial Workplaces",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.trpro.2026.03.012",
+    "arxiv_id": null,
+    "venue": "Transportation research procedia",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W4401110415"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7169576823",
+    "title": "Comparative Analysis of Self-Supervised Learning Methods for Skin Lesion Segmentation",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/fet68771.2026.11601426",
+    "arxiv_id": null,
+    "venue": "International Conference on Frontiers of Engineering and Emerging Technologies (FET)",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W4401110415"
+    ]
+   }
+  ]
+ }
+}

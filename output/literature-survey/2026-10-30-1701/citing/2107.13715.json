@@ -1,0 +1,3869 @@
+{
+ "seed": "2107.13715",
+ "seed_title": "Hierarchical Self-supervised Augmented Knowledge Distillation",
+ "retrieved_utc": "2026-10-30T21:07:04+00:00",
+ "checked_utc": "2026-10-30T21:10:55+00:00",
+ "source_used": "semantic_scholar+openalex",
+ "attempts": [
+  {
+   "source": "semantic_scholar",
+   "status": "HTTP 429 after 5/10/20 s back-off",
+   "n": null
+  },
+  {
+   "source": "openalex",
+   "status": "ok",
+   "n": 84,
+   "seed_works": [
+    "https://openalex.org/W3183222077"
+   ]
+  },
+  {
+   "source": "semantic_scholar",
+   "reason": "second pass after the step-2 give-up",
+   "status": "ok",
+   "n": 102
+  }
+ ],
+ "completeness_check": {
+  "openalex_arxiv_doi_record": {
+   "id": "https://openalex.org/W3183222077",
+   "display_name": "Hierarchical Self-supervised Augmented Knowledge Distillation",
+   "publication_year": 2021,
+   "doi": "https://doi.org/10.24963/ijcai.2021/168",
+   "cited_by_count": 84
+  },
+  "openalex_exact_title_works": [
+   {
+    "id": "https://openalex.org/W3183222077",
+    "display_name": "Hierarchical Self-supervised Augmented Knowledge Distillation",
+    "publication_year": 2021,
+    "doi": "https://doi.org/10.24963/ijcai.2021/168",
+    "cited_by_count": 84
+   }
+  ],
+  "titles_checked": [
+   "Hierarchical Self-supervised Augmented Knowledge Distillation"
+  ]
+ },
+ "n_citing": 117,
+ "citing": [
+  {
+   "title": "TMDKD: tutor-guided multi-dimensional difficulty-aware knowledge distillation",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1007/s00530-026-02726-8",
+   "venue": "Multimedia Systems",
+   "citation_count": 0,
+   "s2_paper_id": "60b752395a5872b95266c940388f0e84512d836d",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7223357514"
+  },
+  {
+   "title": "MTP-DP: Multiscale Temporal Patches and Dual-Focus Prompts for LLM-based Multimodal Time Series Forecasting",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1109/iccvdm71812.2026.11709145",
+   "venue": "2026 7th International Conference on Computer Vision and Data Mining (ICCVDM)",
+   "citation_count": 0,
+   "s2_paper_id": "0d7a0e9bd12606e482f4f855c8ac20a63b8b3edd",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7215070919"
+  },
+  {
+   "title": "Hierarchical Neuron Energy Feature Decoupled Distillation for Low-Resolution Face Recognition",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.3390/electronics15153351",
+   "venue": "Electronics",
+   "citation_count": 0,
+   "s2_paper_id": "e4f0f1b0a847e31d61571d18615fe4d556c3555d",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7171684532"
+  },
+  {
+   "title": "A layered self-supervised knowledge distillation framework for efficient image representation learning",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1007/s00607-026-01671-8",
+   "venue": "Computing",
+   "citation_count": 0,
+   "s2_paper_id": "ef64d10e4a6b1473dc9a8cd45da7cf9819b94899",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7161590871"
+  },
+  {
+   "title": "Dual-view collaborative distillation",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1007/s00530-026-02365-z",
+   "venue": "Multimedia Systems",
+   "citation_count": 0,
+   "s2_paper_id": "db33df935bcdd7752c920b220c4d00a8047fb9b8",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7160426970"
+  },
+  {
+   "title": "GaitKD: A Universal Decoupled Distillation Framework for Efficient Gait Recognition",
+   "year": 2026,
+   "arxiv_id": "2604.26255",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 1,
+   "s2_paper_id": "e9ab48ea8c128f135214a72546ea587e14851e6a",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "MultiScale Knowledge Distillation",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1007/s10994-026-07035-9",
+   "venue": "Machine-mediated learning",
+   "citation_count": 0,
+   "s2_paper_id": "db914628d97ab7f34d88d05ed4de3047095145c7",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7148930685"
+  },
+  {
+   "title": "Online knowledge distillation optimization based on Multi-Student model Multi-Task collaborative learning",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1016/j.knosys.2026.115910",
+   "venue": "Knowledge-Based Systems",
+   "citation_count": 0,
+   "s2_paper_id": "cf6370aa69984866899a08519715c5217f1a9fea",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Cross-branch knowledge distillation via shallow layer guidance",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1007/s00530-026-02245-6",
+   "venue": "Multimedia Systems",
+   "citation_count": 0,
+   "s2_paper_id": "e1996be3ab3ea1365d4b1100509842dc8d504af4",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7134929200"
+  },
+  {
+   "title": "Teacher-Guided Student Self-Knowledge Distillation Using Diffusion Model",
+   "year": 2026,
+   "arxiv_id": "2602.02107",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 0,
+   "s2_paper_id": "95b088ec6ddd9afc37679e277d7a7a2dfcef222e",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "BicKD: Bilateral Contrastive Knowledge Distillation",
+   "year": 2026,
+   "arxiv_id": "2602.01265",
+   "doi": "10.1109/ijcnn69854.2026.11729705",
+   "venue": "IEEE International Joint Conference on Neural Network",
+   "citation_count": 0,
+   "s2_paper_id": "57a7a9ee09d73ce43a3bcd789120a1bcea683e8c",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Label-enhanced contrastive knowledge distillation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1007/s10115-025-02654-5",
+   "venue": "Knowledge and Information Systems",
+   "citation_count": 0,
+   "s2_paper_id": "daaab4f4024711362a0e05f0f19ebcc3a5118ad6",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7117538493"
+  },
+  {
+   "title": "MMT-ARD: Multimodal Multi-Teacher Adversarial Distillation for Robust Vision-Language Models",
+   "year": 2025,
+   "arxiv_id": "2511.17448",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 14,
+   "s2_paper_id": "92f9228a5ff7d2aef9e67687e84c498e1e951afd",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "A Multi-Teacher Knowledge Distillation Framework with Aggregation Techniques for Lightweight Deep Models",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.3390/asi8050146",
+   "venue": "Applied System Innovation",
+   "citation_count": 2,
+   "s2_paper_id": "fca564110af41ef2792a024b2cac6f13ac2abc7e",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4414652277"
+  },
+  {
+   "title": "HRSGD: High-order recurrent medical image fusion via self-supervised generative distillation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.neucom.2025.130545",
+   "venue": "Neurocomputing",
+   "citation_count": 4,
+   "s2_paper_id": "4d4b48c8716c9646e2e093ec74c6605ee73ca4e2",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4411040284"
+  },
+  {
+   "title": "Iterative Knowledge Distillation: Artificial Neural Network Models Knowledge Cumulation for Increasing End Device Model Performance",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1109/icraie65839.2025.11239099",
+   "venue": "International Conference on Recent Advances and Innovations in Engineering",
+   "citation_count": 0,
+   "s2_paper_id": "049ee442229cf5552ab423892b76b5e933d8920e",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4416404117"
+  },
+  {
+   "title": "Aligning to the teacher: multilevel feature-aligned knowledge distillation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.7717/peerj-cs.3075",
+   "venue": "PeerJ Computer Science",
+   "citation_count": 1,
+   "s2_paper_id": "e19f68116ad5058e101d5fb1d38370a7fa910559",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4412954922"
+  },
+  {
+   "title": "MedKit: Multi-level feature distillation with knowledge injection for radiology report generation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.eswa.2025.129003",
+   "venue": "Expert systems with applications",
+   "citation_count": 6,
+   "s2_paper_id": "247c3892014fe814831b7cc91a51e0215dd31888",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4412431074"
+  },
+  {
+   "title": "Frequency-Aligned Knowledge Distillation for Lightweight Spatiotemporal Forecasting",
+   "year": 2025,
+   "arxiv_id": "2507.02939",
+   "doi": "10.1109/iccv51701.2025.00682",
+   "venue": "IEEE International Conference on Computer Vision",
+   "citation_count": 115,
+   "s2_paper_id": "94f285055aeb674d4e1f5572c4faa1f91e698e68",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Eikd: method of extracting important information from feature map for knowledge distillation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1007/s13042-025-02716-8",
+   "venue": "International Journal of Machine Learning and Cybernetics",
+   "citation_count": 1,
+   "s2_paper_id": "447afb2cad85ec097dc6c62a40f106fc535ebeaa",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4411538531"
+  },
+  {
+   "title": "SRKD: Towards Efficient 3D Point Cloud Segmentation via Structure- and Relation-aware Knowledge Distillation",
+   "year": 2025,
+   "arxiv_id": "2506.17290",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 15,
+   "s2_paper_id": "689a0af35f5f06499bb111edddd9a9e1f02ada41",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "A Layered Self-Supervised Knowledge Distillation Framework for Efficient Multimodal Learning on the Edge",
+   "year": 2025,
+   "arxiv_id": "2506.07055",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 1,
+   "s2_paper_id": "9ddfc34f4589f9fc58b1add45ca5cb79c944c6e7",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Multimodal Emotion Recognition in Conversations: A Survey of Methods, Trends, Challenges and Prospects",
+   "year": 2025,
+   "arxiv_id": "2505.20511",
+   "doi": null,
+   "venue": "Conference on Empirical Methods in Natural Language Processing",
+   "citation_count": 58,
+   "s2_paper_id": "e19cf688d84b41e3076fa3a016698b1939d7d8b9",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "MoKD: Multi-Task Optimization for Knowledge Distillation",
+   "year": 2025,
+   "arxiv_id": "2505.08170",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 1,
+   "s2_paper_id": "2bd26f2a7221f15930054afaa10ee7b7ae0bc0e7",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Foundation models and intelligent decision-making: Progress, challenges, and perspectives",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.xinn.2025.100948",
+   "venue": "Innovation (Cambridge (Mass.))",
+   "citation_count": 123,
+   "s2_paper_id": "060617252126279a1ebac3e10237430ae484f97a",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4410291923"
+  },
+  {
+   "title": "HierSum: A Global and Local Attention Mechanism for Video Summarization",
+   "year": 2025,
+   "arxiv_id": "2504.18689",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 3,
+   "s2_paper_id": "336264c439b13996492c607add89d7003a34bc41",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Bias-variance decomposition knowledge distillation for medical image segmentation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.neucom.2025.130230",
+   "venue": "Neurocomputing",
+   "citation_count": 3,
+   "s2_paper_id": "cbdf5fafbd7a6bc0c18ba1523b11afa01e2ca46d",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4409378632"
+  },
+  {
+   "title": "AESeg: Affinity-enhanced segmenter using feature class mapping knowledge distillation for efficient RGB-D semantic segmentation of indoor scenes",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.neunet.2025.107438",
+   "venue": "Neural Networks",
+   "citation_count": 6,
+   "s2_paper_id": "119dc2893903cd8a10bdcb567af2c8a3625e6832",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4408853641"
+  },
+  {
+   "title": "VRM: Knowledge Distillation via Virtual Relation Matching",
+   "year": 2025,
+   "arxiv_id": "2502.20760",
+   "doi": "10.1109/iccv51701.2025.00260",
+   "venue": "IEEE International Conference on Computer Vision",
+   "citation_count": 11,
+   "s2_paper_id": "877d3d9eda3835ce614135fb657fc96e39dece38",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W7160030580"
+  },
+  {
+   "title": "Multi-Teacher Knowledge Distillation with Reinforcement Learning for Visual Recognition",
+   "year": 2025,
+   "arxiv_id": "2502.18510",
+   "doi": null,
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "citation_count": 53,
+   "s2_paper_id": "405c8e99df02826a9d1e7f88566bd28f87616566",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Ground truth is the best teacher: supervised semantic segmentation inspired by knowledge transfer mechanisms",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1007/s00530-024-01620-5",
+   "venue": "Multimedia Systems",
+   "citation_count": 0,
+   "s2_paper_id": "4ad5fd618e7ce5ce104a44290d0584125b2398bc",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4406038037"
+  },
+  {
+   "title": "Spatio-temporal masked autoencoder-based phonetic segments classification from ultrasound",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.specom.2025.103186",
+   "venue": "Speech Communication",
+   "citation_count": 3,
+   "s2_paper_id": "795f8422987035b6e8cdb9259818d6fce9ef59e7",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4406476969"
+  },
+  {
+   "title": "Supervised Contrastive Knowledge Distillation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.22266/ijies2024.1231.27",
+   "venue": "International Journal of Intelligent Engineering and Systems",
+   "citation_count": 1,
+   "s2_paper_id": "413526bb83dc2d6b357a9f1d8f31854ae67311bb",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Distillation and prompt in Chinese CLIP model",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1145/3718441.3718475",
+   "venue": "Proceedings of the 2024 2nd Asia Symposium on Image and Graphics",
+   "citation_count": 0,
+   "s2_paper_id": "e962f42c29ee2654330637ef60e68cc034451d50",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4409829902"
+  },
+  {
+   "title": "Boosting Network Intrusion Detection with Two-Level Ensemble Learning and Knowledge Distillation Approaches",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1109/scopes64467.2024.10990972",
+   "venue": "Software and Compilers for Embedded Systems",
+   "citation_count": 0,
+   "s2_paper_id": "5e53bd3622f83b42138d89748e5789c9e89b0bcb",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4410428374"
+  },
+  {
+   "title": "Category contrastive distillation with self-supervised classification",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1007/s11760-024-03678-0",
+   "venue": "Signal, Image and Video Processing",
+   "citation_count": 0,
+   "s2_paper_id": "5619cf0fd19981f3afe0eb661cc69b40283bb8b0",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4405184002"
+  },
+  {
+   "title": "FIMKD: Feature-Implicit Mapping Knowledge Distillation for RGB-D Indoor Scene Semantic Segmentation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1109/tai.2024.3452052",
+   "venue": "IEEE Transactions on Artificial Intelligence",
+   "citation_count": 3,
+   "s2_paper_id": "a6c13882daa94114e1eee24309ed2f05ce40314f",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4402039364"
+  },
+  {
+   "title": "Big2Small: Learning from masked image modelling with heterogeneous self‐supervised knowledge distillation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1049/csy2.70002",
+   "venue": "IET Cyber-Systems and Robotics",
+   "citation_count": 0,
+   "s2_paper_id": "f35dfb7b53e641d02835a39b3005064fdc8ccb1b",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4405933945"
+  },
+  {
+   "title": "Cross-View Consistency Regularisation for Knowledge Distillation",
+   "year": 2024,
+   "arxiv_id": "2412.16493",
+   "doi": "10.1145/3664647.3681206",
+   "venue": "ACM Multimedia",
+   "citation_count": 18,
+   "s2_paper_id": "923c2c6938c1e61b7ba3e526c4f2eb1be48d35c6",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4403780854"
+  },
+  {
+   "title": "Preview-Based Category Contrastive Learning for Knowledge Distillation",
+   "year": 2024,
+   "arxiv_id": "2410.14143",
+   "doi": "10.1109/tcsvt.2025.3541067",
+   "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+   "citation_count": 2,
+   "s2_paper_id": "ec2d3cff7e8ebdb9caf54e2bd160d60e0add43e8",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4407354654"
+  },
+  {
+   "title": "Prototype-Driven Multi-Feature Generation for Visible-Infrared Person Re-identification",
+   "year": 2024,
+   "arxiv_id": "2409.05642",
+   "doi": "10.1109/icassp49660.2025.10889917",
+   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+   "citation_count": 12,
+   "s2_paper_id": "12dab3f447198e3a36a09e5bd862c218f05a03f5",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "A coded knowledge distillation framework for image classification based on adaptive JPEG encoding",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1016/j.patcog.2024.110966",
+   "venue": "Pattern Recognition",
+   "citation_count": 12,
+   "s2_paper_id": "6e99fc2dfead884f3ad9527455f88e37274ec6cc",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4402177703"
+  },
+  {
+   "title": "PDD: Pruning Neural Networks During Knowledge Distillation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1007/s12559-024-10350-9",
+   "venue": "Cognitive Computation",
+   "citation_count": 4,
+   "s2_paper_id": "ada8a1e57c263f6f58effeab4acb7fbd5ff86a76",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4402091721"
+  },
+  {
+   "title": "Efficient Deep Neural Network Compression for Environmental Sound Classification on Microcontroller Units",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.55730/1300-0632.4084",
+   "venue": "Turkish J. Electr. Eng. Comput. Sci.",
+   "citation_count": 3,
+   "s2_paper_id": "74aa4477c1c87b26cd4dfa8f45dd7fa953d356fc",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4401140880"
+  },
+  {
+   "title": "How to Train the Teacher Model for Effective Knowledge Distillation",
+   "year": 2024,
+   "arxiv_id": "2407.18041",
+   "doi": "10.1007/978-3-031-73024-5_1",
+   "venue": "European Conference on Computer Vision",
+   "citation_count": 23,
+   "s2_paper_id": "4b4265ec38baa99f3bb8a96c89622ce70fdbac2e",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4404672046"
+  },
+  {
+   "title": "Variational AdaBoost knowledge distillation for skin lesion classification in dermatology images",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1007/s40747-024-01501-4",
+   "venue": "Complex & Intelligent Systems",
+   "citation_count": 4,
+   "s2_paper_id": "19a314f6257ead4ed30fb9d35d7de0e85e5d10d8",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4399918660"
+  },
+  {
+   "title": "Online Policy Distillation with Decision-Attention",
+   "year": 2024,
+   "arxiv_id": "2406.05488",
+   "doi": "10.1109/ijcnn60899.2024.10651412",
+   "venue": "IEEE International Joint Conference on Neural Network",
+   "citation_count": 3,
+   "s2_paper_id": "1ede14fb8daf21b91ad2b775d1fc0b0840d918fd",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4402352359"
+  },
+  {
+   "title": "A Unified Asymmetric Knowledge Distillation Framework for Image Classification",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1007/s11063-024-11606-z",
+   "venue": "Neural Processing Letters",
+   "citation_count": 3,
+   "s2_paper_id": "09f6d2622920d9465cb890bb4323a9b62ff01b8f",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4396828763"
+  },
+  {
+   "title": "Online Relational Knowledge Distillation for Image Classification",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1109/cscwd61410.2024.10580514",
+   "venue": "International Conference on Computer Supported Cooperative Work in Design",
+   "citation_count": 1,
+   "s2_paper_id": "9b3321dd35ed9c1751e43cc22196a761f286ac6e",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Class-wise Image Mixture Guided Self-Knowledge Distillation for Image Classification",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1109/cscwd61410.2024.10580038",
+   "venue": "International Conference on Computer Supported Cooperative Work in Design",
+   "citation_count": 5,
+   "s2_paper_id": "ceecf3f00eb5e26f228a59fbd4e7f065ff1d0fea",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4400490325"
+  },
+  {
+   "title": "A Comprehensive Review of Knowledge Distillation in Computer Vision",
+   "year": 2024,
+   "arxiv_id": "2404.00936",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 28,
+   "s2_paper_id": "8faa7150d3c745a48b1a83762ce73776bdd89d08",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Knowledge Distillation in Video-Based Human Action Recognition: An Intuitive Approach to Efficient and Flexible Model Training",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.3390/jimaging10040085",
+   "venue": "Journal of Imaging",
+   "citation_count": 6,
+   "s2_paper_id": "83c028bdad85d4a2f5826f52b32bc21d845ca8c7",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4393357772"
+  },
+  {
+   "title": "eTag: Class-Incremental Learning via Embedding Distillation and Task-Oriented Generation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1609/aaai.v38i11.29153",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "citation_count": 41,
+   "s2_paper_id": "7e8eb02e342dc53eceea470e25741ebf5dd92354",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4393159688"
+  },
+  {
+   "title": "Multi-perspective analysis on data augmentation in knowledge distillation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1016/j.neucom.2024.127516",
+   "venue": "Neurocomputing",
+   "citation_count": 10,
+   "s2_paper_id": "59fed81b2182f715c0c9357cdcae26bc01269ea2",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4392453506"
+  },
+  {
+   "title": "Precise Knowledge Transfer via Flow Matching",
+   "year": 2024,
+   "arxiv_id": "2402.02012",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 3,
+   "s2_paper_id": "a27e4e70d102a9c09be045da152b2404c0517a91",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Bayes Conditional Distribution Estimation for Knowledge Distillation Based on Conditional Mutual Information",
+   "year": 2024,
+   "arxiv_id": "2401.08732",
+   "doi": null,
+   "venue": "International Conference on Learning Representations",
+   "citation_count": 36,
+   "s2_paper_id": "73468c74f84e6034a225ee1e229c4279d8fc044f",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Knowledge distillation for object detection based on Inconsistency-based Feature Imitation and Global Relation Imitation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1016/j.neucom.2023.127060",
+   "venue": "Neurocomputing",
+   "citation_count": 10,
+   "s2_paper_id": "bc0abd248da2eda7b25fe7d554ca5aefce2b3cef",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4388798188"
+  },
+  {
+   "title": "Hybrid mix-up contrastive knowledge distillation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1016/j.ins.2024.120107",
+   "venue": "Information Sciences",
+   "citation_count": 16,
+   "s2_paper_id": "748b8cb0c45c5cad0b59ade549f554bf3c465f55",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4390705187"
+  },
+  {
+   "title": "Homogeneous teacher based buffer knowledge distillation for tiny neural networks",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1016/j.sysarc.2024.103078",
+   "venue": "Journal of systems architecture",
+   "citation_count": 2,
+   "s2_paper_id": "582ef05f5487b49b0d59f5c29cbbf24a98670fa7",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4391289278"
+  },
+  {
+   "title": "Comparative Knowledge Distillation",
+   "year": 2023,
+   "arxiv_id": "2311.02253",
+   "doi": "10.1109/wacv61041.2025.00748",
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "citation_count": 7,
+   "s2_paper_id": "cb23064700957a37aaf00f73b16f6c6930ca8c77",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Heterogeneous Generative Knowledge Distillation with Masked Image Modeling",
+   "year": 2023,
+   "arxiv_id": "2309.09571",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 3,
+   "s2_paper_id": "36d8c548f1e93c68c4e95da02f438e17a49da8fd",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "CLIP-KD: An Empirical Study of CLIP Model Distillation",
+   "year": 2023,
+   "arxiv_id": "2307.12732",
+   "doi": "10.1109/cvpr52733.2024.01510",
+   "venue": "Computer Vision and Pattern Recognition",
+   "citation_count": 152,
+   "s2_paper_id": "cebb04d531606229d9ed598fd85c201996fe6e67",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Customizing Synthetic Data for Data-Free Student Learning",
+   "year": 2023,
+   "arxiv_id": "2307.04542",
+   "doi": "10.1109/icme55011.2023.00312",
+   "venue": "IEEE International Conference on Multimedia and Expo",
+   "citation_count": 3,
+   "s2_paper_id": "e10a30aef950acd016349275fd60eff86b332095",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4386158762"
+  },
+  {
+   "title": "SKDBERT: Compressing BERT via Stochastic Knowledge Distillation",
+   "year": 2023,
+   "arxiv_id": "2211.14466",
+   "doi": "10.1609/aaai.v37i6.25902",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "citation_count": 14,
+   "s2_paper_id": "a9d8032564b917b45ccb28de659e78dbfb1944e5",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4382239116"
+  },
+  {
+   "title": "Categories of Response-Based, Feature-Based, and Relation-Based Knowledge Distillation",
+   "year": 2023,
+   "arxiv_id": "2306.10687",
+   "doi": "10.1007/978-3-031-32095-8_1",
+   "venue": "arXiv.org",
+   "citation_count": 52,
+   "s2_paper_id": "be20d0da24aaaebbc4340497a2aadd5813e17a39",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4380479950"
+  },
+  {
+   "title": "Team AcieLee: Technical Report for EPIC-SOUNDS Audio-Based Interaction Recognition Challenge 2023",
+   "year": 2023,
+   "arxiv_id": "2306.08998",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 0,
+   "s2_paper_id": "a0ed2234d8a6264c52e554193ffd6d1606f804f7",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Catch-Up Distillation: You Only Need to Train Once for Accelerating Sampling",
+   "year": 2023,
+   "arxiv_id": "2305.10769",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 24,
+   "s2_paper_id": "f6e172d775d3adf921080761234c4326b9b1a671",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "eTag: Class-Incremental Learning with Embedding Distillation and Task-Oriented Generation",
+   "year": 2023,
+   "arxiv_id": "2304.10103",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 3,
+   "s2_paper_id": "133775be947b406a94eb4bb237822da6ef896397",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Towards Understanding the Effect of Pretraining Label Granularity",
+   "year": 2023,
+   "arxiv_id": "2303.16887",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 4,
+   "s2_paper_id": "9cb1a2c157958251a4186d9c85e14ce41d408d64",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Understanding the Role of the Projector in Knowledge Distillation",
+   "year": 2023,
+   "arxiv_id": "2303.11098",
+   "doi": "10.1609/aaai.v38i5.28219",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "citation_count": 84,
+   "s2_paper_id": "d24a0b0bda424d011b24228ba90163421f7a31f2",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4393154084"
+  },
+  {
+   "title": "When Object Detection Meets Knowledge Distillation: A Survey",
+   "year": 2023,
+   "arxiv_id": null,
+   "doi": "10.1109/tpami.2023.3257546",
+   "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+   "citation_count": 188,
+   "s2_paper_id": "67109f93e1b1c87aae3f62e7ccc3ec4e0a33e3e4",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4327522797"
+  },
+  {
+   "title": "Adversarial local distribution regularization for knowledge distillation",
+   "year": 2023,
+   "arxiv_id": null,
+   "doi": "10.1109/wacv56688.2023.00466",
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "citation_count": 7,
+   "s2_paper_id": "26a334322ece1efbed67c2d2f55414206a2aab4f",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4319300290"
+  },
+  {
+   "title": "Reflective Learning for Online Knowledge Distillation",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": "10.1109/iccc56324.2022.10066050",
+   "venue": "2022 IEEE 8th International Conference on Computer and Communications (ICCC)",
+   "citation_count": 2,
+   "s2_paper_id": "8446b1ba793d72425a8d46924b3526208a76d203",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4328027808"
+  },
+  {
+   "title": "A self-supervised temporal temperature prediction method based on dilated contrastive learning",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": "10.1016/j.jprocont.2022.11.005",
+   "venue": "Journal of Process Control",
+   "citation_count": 12,
+   "s2_paper_id": "950192e9c9374d4c7e73b2f4717228a71174a782",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4310150497"
+  },
+  {
+   "title": "Ladder Siamese Network: A Method and Insights for Multi-Level Self-Supervised Learning",
+   "year": 2022,
+   "arxiv_id": "2211.13844",
+   "doi": "10.1109/icip49359.2023.10222599",
+   "venue": "International Conference on Information Photonics",
+   "citation_count": 3,
+   "s2_paper_id": "baae351142a07d9d0b3d332ba9e983fbde797982",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Online cross-layer knowledge distillation on graph neural networks with deep supervision",
+   "year": 2022,
+   "arxiv_id": "2210.13743",
+   "doi": "10.1007/s00521-023-08900-7",
+   "venue": "Neural computing & applications (Print)",
+   "citation_count": 4,
+   "s2_paper_id": "fcc4dcceeaa676a662cea6b699f94d03c2ee3550",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4385655132"
+  },
+  {
+   "title": "Pay Attention to Your Positive Pairs: Positive Pair Aware Contrastive Knowledge Distillation",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": "10.1145/3503161.3548256",
+   "venue": "ACM Multimedia",
+   "citation_count": 12,
+   "s2_paper_id": "085c071051e3ab6b607bde614215a8127328f5b3",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Multiple-Stage Knowledge Distillation",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": "10.3390/app12199453",
+   "venue": "Applied Sciences",
+   "citation_count": 6,
+   "s2_paper_id": "a63477526db43b7c6a4dd3d534f40e3a0a37611d",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4296741027"
+  },
+  {
+   "title": "MixSKD: Self-Knowledge Distillation from Mixup for Image Recognition",
+   "year": 2022,
+   "arxiv_id": "2208.05768",
+   "doi": "10.1007/978-3-031-20053-3_31",
+   "venue": "European Conference on Computer Vision",
+   "citation_count": 95,
+   "s2_paper_id": "57379ffd229a508ae5276b3f6ca262958b7c5297",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4313182973"
+  },
+  {
+   "title": "Online Knowledge Distillation via Mutual Contrastive Learning for Visual Recognition",
+   "year": 2022,
+   "arxiv_id": "2207.11518",
+   "doi": "10.1109/tpami.2023.3257878",
+   "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+   "citation_count": 115,
+   "s2_paper_id": "26ead6b2f0821ae6f18641ac28afe849477db881",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4327662218"
+  },
+  {
+   "title": "HEAD: HEtero-Assists Distillation for Heterogeneous Object Detectors",
+   "year": 2022,
+   "arxiv_id": "2207.05345",
+   "doi": "10.1007/978-3-031-20077-9_19",
+   "venue": "European Conference on Computer Vision",
+   "citation_count": 31,
+   "s2_paper_id": "99eb885e75f045ae14a4a7d9acf69dca3ea019a5",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4312735356"
+  },
+  {
+   "title": "Prior Gradient Mask Guided Pruning-Aware Fine-Tuning",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": "10.1609/aaai.v36i1.19888",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "citation_count": 45,
+   "s2_paper_id": "4cbfa720b09abc0e1832cdb72ce67d1f10416c89",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4283815570"
+  },
+  {
+   "title": "Localizing Semantic Patches for Accelerating Image Classification",
+   "year": 2022,
+   "arxiv_id": "2206.03367",
+   "doi": "10.1109/icme52920.2022.9859979",
+   "venue": "IEEE International Conference on Multimedia and Expo",
+   "citation_count": 2,
+   "s2_paper_id": "b133dcffaa2df2c4f9acd6da6b5f3db1a3f2a955",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4281804120"
+  },
+  {
+   "title": "InDistill: Information flow-preserving knowledge distillation for model compression",
+   "year": 2022,
+   "arxiv_id": "2205.10003",
+   "doi": "10.1109/wacv61041.2025.00875",
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "citation_count": 9,
+   "s2_paper_id": "66f93289f2e0bd9ed6481d95bb8e60eff3390b75",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Teacher-student collaborative knowledge distillation for image classification",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": "10.1007/s10489-022-03486-4",
+   "venue": "Applied intelligence (Boston)",
+   "citation_count": 68,
+   "s2_paper_id": "1f9ed1ea26210d6f8a3333c2a2ffb6255d2b0a1c",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4229453673"
+  },
+  {
+   "title": "Cross-Domain Correlation Distillation for Unsupervised Domain Adaptation in Nighttime Semantic Segmentation",
+   "year": 2022,
+   "arxiv_id": "2205.00858",
+   "doi": "10.1109/cvpr52688.2022.00968",
+   "venue": "Computer Vision and Pattern Recognition",
+   "citation_count": 91,
+   "s2_paper_id": "f158716e2464ce9b261581ba5accdc1fb4b48b31",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4312527924"
+  },
+  {
+   "title": "SELF-LLP: Self-supervised learning from label proportions with self-ensemble",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": "10.1016/j.patcog.2022.108767",
+   "venue": "Pattern Recognition",
+   "citation_count": 22,
+   "s2_paper_id": "0a3cd570cd1c4f3ea207c48b90704b6c7b3e83b3",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4225285820"
+  },
+  {
+   "title": "Proto2Proto: Can you recognize the car, the way I do?",
+   "year": 2022,
+   "arxiv_id": "2204.11830",
+   "doi": "10.1109/cvpr52688.2022.00999",
+   "venue": "Computer Vision and Pattern Recognition",
+   "citation_count": 34,
+   "s2_paper_id": "144e7e0e94e5a75f2dc5991b5276d17d643e74f4",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4312971720"
+  },
+  {
+   "title": "Cross-Image Relational Knowledge Distillation for Semantic Segmentation",
+   "year": 2022,
+   "arxiv_id": "2204.06986",
+   "doi": "10.1109/cvpr52688.2022.01200",
+   "venue": "Computer Vision and Pattern Recognition",
+   "citation_count": 311,
+   "s2_paper_id": "ea7029d694d12292ef8374ac0f5ca821d48edb87",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4312309807"
+  },
+  {
+   "title": "CoupleFace: Relation Matters for Face Recognition Distillation",
+   "year": 2022,
+   "arxiv_id": "2204.05502",
+   "doi": "10.1007/978-3-031-19775-8_40",
+   "venue": "European Conference on Computer Vision",
+   "citation_count": 25,
+   "s2_paper_id": "13bed0633f870113c79e4086dfae9952ef805f71",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4312358144"
+  },
+  {
+   "title": "Optimizing for In-Memory Deep Learning With Emerging Memory Technology",
+   "year": 2021,
+   "arxiv_id": "2112.00324",
+   "doi": "10.1109/tnnls.2023.3285488",
+   "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+   "citation_count": 1,
+   "s2_paper_id": "322c8e09f605b5da4b1ea6f408ce6c073a324051",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4226461637"
+  },
+  {
+   "title": "Information Theoretic Representation Distillation",
+   "year": 2021,
+   "arxiv_id": "2112.00459",
+   "doi": null,
+   "venue": "British Machine Vision Conference",
+   "citation_count": 30,
+   "s2_paper_id": "bedb5992c7c2941964e62cd075df63c02b7864d5",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W3215728706"
+  },
+  {
+   "title": "Knowledge Distillation Using Hierarchical Self-Supervision Augmented Distribution",
+   "year": 2021,
+   "arxiv_id": "2109.03075",
+   "doi": "10.1109/tnnls.2022.3186807",
+   "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+   "citation_count": 33,
+   "s2_paper_id": "69bdbbaf1411d21758ae8b2709b6477f13fb6e59",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W3198500549"
+  },
+  {
+   "title": "Multi-View Correlation Distillation for Incremental Object Detection",
+   "year": 2021,
+   "arxiv_id": "2107.01787",
+   "doi": "10.1016/j.patcog.2022.108863",
+   "venue": "Pattern Recognition",
+   "citation_count": 79,
+   "s2_paper_id": "20333d9b3d297f736c6ed865d6b34f4da5987daf",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W3181595505"
+  },
+  {
+   "title": "Teacher's pet: understanding and mitigating biases in distillation",
+   "year": 2021,
+   "arxiv_id": "2106.10494",
+   "doi": null,
+   "venue": "Trans. Mach. Learn. Res.",
+   "citation_count": 35,
+   "s2_paper_id": "b057d01576177dcf055dcc3601471b68190658f6",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Mutual Contrastive Learning for Visual Representation Learning",
+   "year": 2021,
+   "arxiv_id": "2104.12565",
+   "doi": "10.1609/aaai.v36i3.20211",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "citation_count": 101,
+   "s2_paper_id": "edce12538963c689deb7504bb3b0664184ccfc20",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W3159551428"
+  },
+  {
+   "title": "Knowledge Distillation With Feature Self Attention",
+   "year": 2023,
+   "arxiv_id": null,
+   "doi": "10.1109/access.2023.3265382",
+   "venue": "IEEE Access",
+   "citation_count": 6,
+   "s2_paper_id": "b75f6b23da4e0b92d861647f5e519f208029c059",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4362683512"
+  },
+  {
+   "title": "InDistill: Transferring Knowledge From Pruned Intermediate Layers",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 2,
+   "s2_paper_id": "cc18ba10a783f16b9e8e72d202882329656fe4bf",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Data-Based Distillation: Teaching What You Should Teach",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": null,
+   "venue": null,
+   "citation_count": 0,
+   "s2_paper_id": "8c2df3ddedf5439ca0a79ad4c4ff7054adc55ccd",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "NeuRes: Highly Activated Neurons Responses Transfer via Distilling Sparse Activation Maps",
+   "year": 2022,
+   "arxiv_id": null,
+   "doi": "10.1109/access.2022.3227804",
+   "venue": "IEEE Access",
+   "citation_count": 7,
+   "s2_paper_id": "72293a8242f3e3068898925c73461add6cab9608",
+   "found_in": [
+    "semantic_scholar",
+    "openalex"
+   ],
+   "openalex_id": "https://openalex.org/W4312284807"
+  },
+  {
+   "title": "T EACHING WISER , L EARNING SMARTER : M ULTI - STAGE D ECOUPLED R ELATIONAL K NOWLEDGE D IS - TILLATION WITH A DAPTIVE S TAGE S ELECTION",
+   "year": null,
+   "arxiv_id": null,
+   "doi": null,
+   "venue": null,
+   "citation_count": 0,
+   "s2_paper_id": "4950a831e0e48c067c6c6cc7276ef3716b51dc79",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Category Contrastive Distillation with Self-Supervised Classi�cation",
+   "year": null,
+   "arxiv_id": null,
+   "doi": null,
+   "venue": null,
+   "citation_count": 0,
+   "s2_paper_id": "6535dc60b7dc1980ff48aaca8cfa9df4a0ad8779",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Enhancing spatiotemporal prediction through the integration of Mamba state space models and Diffusion Transformers",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.knosys.2025.113347",
+   "venue": "Knowledge-Based Systems",
+   "citation_count": 41,
+   "openalex_id": "https://openalex.org/W4408803960",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Attention correction feature and boundary constraint knowledge distillation for efficient 3D medical image segmentation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1016/j.eswa.2024.125670",
+   "venue": "Expert Systems with Applications",
+   "citation_count": 20,
+   "openalex_id": "https://openalex.org/W4404136090",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Why logit distillation works: A novel knowledge distillation technique by deriving target augmentation and logits distortion",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.ipm.2024.104056",
+   "venue": "Information Processing & Management",
+   "citation_count": 9,
+   "openalex_id": "https://openalex.org/W4407874019",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "PURF: Improving teacher representations by imposing smoothness constraints for knowledge distillation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1016/j.asoc.2024.111579",
+   "venue": "Applied Soft Computing",
+   "citation_count": 8,
+   "openalex_id": "https://openalex.org/W4394602965",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Logitwise Distillation Network: Improving Knowledge Distillation via Introducing Sample Confidence",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.3390/app15052285",
+   "venue": "Applied Sciences",
+   "citation_count": 3,
+   "openalex_id": "https://openalex.org/W4407765948",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "What Role Does Data Augmentation Play in Knowledge Distillation?",
+   "year": 2023,
+   "arxiv_id": null,
+   "doi": "10.1007/978-3-031-26284-5_31",
+   "venue": "Lecture notes in computer science",
+   "citation_count": 10,
+   "openalex_id": "https://openalex.org/W4321504816",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Knowledge distillation from relative distribution",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.eswa.2025.127736",
+   "venue": "Expert Systems with Applications",
+   "citation_count": 3,
+   "openalex_id": "https://openalex.org/W4409776511",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Style Factorization: Explore Diverse Style Variation for Domain Generalization",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1109/icassp48485.2024.10447540",
+   "venue": "IEEE International Conference on Acoustics Speech and Signal Processing",
+   "citation_count": 4,
+   "openalex_id": "https://openalex.org/W4392904023",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Adaptive lightweight network construction method for Self-Knowledge Distillation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1016/j.neucom.2025.129477",
+   "venue": "Neurocomputing",
+   "citation_count": 3,
+   "openalex_id": "https://openalex.org/W4406744737",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "MobileViT-FocR: MobileViT with Fixed-One-Centre Loss and Gradient Reversal for Generalised Fake Face Detection",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1007/978-3-031-53311-2_7",
+   "venue": "Lecture notes in computer science",
+   "citation_count": 2,
+   "openalex_id": "https://openalex.org/W4391274855",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Teacher-Student Consistent Distillation for Source-Free Domain Adaptation Object Detection",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1007/978-981-95-4097-6_16",
+   "venue": "Communications in computer and information science",
+   "citation_count": 1,
+   "openalex_id": "https://openalex.org/W4416159132",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Adaptive Network Construction Method for Self-Knowledge Distillation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.2139/ssrn.4884260",
+   "venue": "SSRN Electronic Journal",
+   "citation_count": 0,
+   "openalex_id": "https://openalex.org/W4400274458",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "CPG: Channel Pruning with DFS Guided Grouping for Efficient Medical Image Segmentation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1007/978-981-96-6585-3_20",
+   "venue": "Lecture notes in computer science",
+   "citation_count": 0,
+   "openalex_id": "https://openalex.org/W4411555875",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Distill4Geo: Streamlined Knowledge Transfer from Contrastive Weight-Sharing Teachers to Independent, Lightweight View Experts",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1007/978-981-95-4097-6_37",
+   "venue": "Communications in computer and information science",
+   "citation_count": 0,
+   "openalex_id": "https://openalex.org/W4416159133",
+   "found_in": [
+    "openalex"
+   ]
+  },
+  {
+   "title": "Contributions to evaluating and improving the faithfulness for text generation",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.70675/28453a20z78f2z4fa2za6edz700065e69e97",
+   "venue": null,
+   "citation_count": 0,
+   "openalex_id": "https://openalex.org/W7152654849",
+   "found_in": [
+    "openalex"
+   ]
+  }
+ ],
+ "raw": {
+  "semantic_scholar": [
+   {
+    "paperId": "60b752395a5872b95266c940388f0e84512d836d",
+    "externalIds": {
+     "DOI": "10.1007/s00530-026-02726-8",
+     "CorpusId": 293903246
+    },
+    "title": "TMDKD: tutor-guided multi-dimensional difficulty-aware knowledge distillation",
+    "venue": "Multimedia Systems",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "0d7a0e9bd12606e482f4f855c8ac20a63b8b3edd",
+    "externalIds": {
+     "DOI": "10.1109/ICCVDM71812.2026.11709145",
+     "CorpusId": 292569707
+    },
+    "title": "MTP-DP: Multiscale Temporal Patches and Dual-Focus Prompts for LLM-based Multimodal Time Series Forecasting",
+    "venue": "2026 7th International Conference on Computer Vision and Data Mining (ICCVDM)",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "e4f0f1b0a847e31d61571d18615fe4d556c3555d",
+    "externalIds": {
+     "DOI": "10.3390/electronics15153351",
+     "CorpusId": 290722053
+    },
+    "title": "Hierarchical Neuron Energy Feature Decoupled Distillation for Low-Resolution Face Recognition",
+    "venue": "Electronics",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "ef64d10e4a6b1473dc9a8cd45da7cf9819b94899",
+    "externalIds": {
+     "DBLP": "journals/computing/DahriMYKAAAQ26",
+     "DOI": "10.1007/s00607-026-01671-8",
+     "CorpusId": 288509239
+    },
+    "title": "A layered self-supervised knowledge distillation framework for efficient image representation learning",
+    "venue": "Computing",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "db33df935bcdd7752c920b220c4d00a8047fb9b8",
+    "externalIds": {
+     "DBLP": "journals/mms/WangLLY26",
+     "DOI": "10.1007/s00530-026-02365-z",
+     "CorpusId": 288021675
+    },
+    "title": "Dual-view collaborative distillation",
+    "venue": "Multimedia Systems",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "e9ab48ea8c128f135214a72546ea587e14851e6a",
+    "externalIds": {
+     "ArXiv": "2604.26255",
+     "DBLP": "journals/corr/abs-2604-26255",
+     "DOI": "10.48550/arXiv.2604.26255",
+     "CorpusId": 287874350
+    },
+    "title": "GaitKD: A Universal Decoupled Distillation Framework for Efficient Gait Recognition",
+    "venue": "arXiv.org",
+    "year": 2026,
+    "citationCount": 1
+   },
+   {
+    "paperId": "db914628d97ab7f34d88d05ed4de3047095145c7",
+    "externalIds": {
+     "DBLP": "journals/ml/LiuYL26",
+     "DOI": "10.1007/s10994-026-07035-9",
+     "CorpusId": 287117455
+    },
+    "title": "MultiScale Knowledge Distillation",
+    "venue": "Machine-mediated learning",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "cf6370aa69984866899a08519715c5217f1a9fea",
+    "externalIds": {
+     "DBLP": "journals/kbs/XuMZWXWXG26",
+     "DOI": "10.1016/j.knosys.2026.115910",
+     "CorpusId": 287124809
+    },
+    "title": "Online knowledge distillation optimization based on Multi-Student model Multi-Task collaborative learning",
+    "venue": "Knowledge-Based Systems",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "e1996be3ab3ea1365d4b1100509842dc8d504af4",
+    "externalIds": {
+     "DBLP": "journals/mms/ZhuWM26",
+     "DOI": "10.1007/s00530-026-02245-6",
+     "CorpusId": 286555848
+    },
+    "title": "Cross-branch knowledge distillation via shallow layer guidance",
+    "venue": "Multimedia Systems",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "95b088ec6ddd9afc37679e277d7a7a2dfcef222e",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2602-02107",
+     "ArXiv": "2602.02107",
+     "DOI": "10.48550/arXiv.2602.02107",
+     "CorpusId": 285271436
+    },
+    "title": "Teacher-Guided Student Self-Knowledge Distillation Using Diffusion Model",
+    "venue": "arXiv.org",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "57a7a9ee09d73ce43a3bcd789120a1bcea683e8c",
+    "externalIds": {
+     "ArXiv": "2602.01265",
+     "DBLP": "journals/corr/abs-2602-01265",
+     "DOI": "10.1109/IJCNN69854.2026.11729705",
+     "CorpusId": 285271472
+    },
+    "title": "BicKD: Bilateral Contrastive Knowledge Distillation",
+    "venue": "IEEE International Joint Conference on Neural Network",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "daaab4f4024711362a0e05f0f19ebcc3a5118ad6",
+    "externalIds": {
+     "DBLP": "journals/kais/QiaoTHZCS26",
+     "DOI": "10.1007/s10115-025-02654-5",
+     "CorpusId": 284412753
+    },
+    "title": "Label-enhanced contrastive knowledge distillation",
+    "venue": "Knowledge and Information Systems",
+    "year": 2025,
+    "citationCount": 0
+   },
+   {
+    "paperId": "92f9228a5ff7d2aef9e67687e84c498e1e951afd",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2511-17448",
+     "ArXiv": "2511.17448",
+     "DOI": "10.48550/arXiv.2511.17448",
+     "CorpusId": 283225969
+    },
+    "title": "MMT-ARD: Multimodal Multi-Teacher Adversarial Distillation for Robust Vision-Language Models",
+    "venue": "arXiv.org",
+    "year": 2025,
+    "citationCount": 14
+   },
+   {
+    "paperId": "fca564110af41ef2792a024b2cac6f13ac2abc7e",
+    "externalIds": {
+     "DOI": "10.3390/asi8050146",
+     "CorpusId": 281789761
+    },
+    "title": "A Multi-Teacher Knowledge Distillation Framework with Aggregation Techniques for Lightweight Deep Models",
+    "venue": "Applied System Innovation",
+    "year": 2025,
+    "citationCount": 2
+   },
+   {
+    "paperId": "4d4b48c8716c9646e2e093ec74c6605ee73ca4e2",
+    "externalIds": {
+     "DBLP": "journals/ijon/LiNCQZS25",
+     "DOI": "10.1016/j.neucom.2025.130545",
+     "CorpusId": 279191160
+    },
+    "title": "HRSGD: High-order recurrent medical image fusion via self-supervised generative distillation",
+    "venue": "Neurocomputing",
+    "year": 2025,
+    "citationCount": 4
+   },
+   {
+    "paperId": "049ee442229cf5552ab423892b76b5e933d8920e",
+    "externalIds": {
+     "DOI": "10.1109/ICRAIE65839.2025.11239099",
+     "CorpusId": 283101769
+    },
+    "title": "Iterative Knowledge Distillation: Artificial Neural Network Models Knowledge Cumulation for Increasing End Device Model Performance",
+    "venue": "International Conference on Recent Advances and Innovations in Engineering",
+    "year": 2025,
+    "citationCount": 0
+   },
+   {
+    "paperId": "e19f68116ad5058e101d5fb1d38370a7fa910559",
+    "externalIds": {
+     "PubMedCentral": "12453741",
+     "DBLP": "journals/peerj-cs/ZhangHXPWYLL25",
+     "DOI": "10.7717/peerj-cs.3075",
+     "CorpusId": 280625207,
+     "PubMed": "40989300"
+    },
+    "title": "Aligning to the teacher: multilevel feature-aligned knowledge distillation",
+    "venue": "PeerJ Computer Science",
+    "year": 2025,
+    "citationCount": 1
+   },
+   {
+    "paperId": "247c3892014fe814831b7cc91a51e0215dd31888",
+    "externalIds": {
+     "DBLP": "journals/eswa/SuSLWWMLYY26",
+     "DOI": "10.1016/j.eswa.2025.129003",
+     "CorpusId": 280062269
+    },
+    "title": "MedKit: Multi-level feature distillation with knowledge injection for radiology report generation",
+    "venue": "Expert systems with applications",
+    "year": 2025,
+    "citationCount": 6
+   },
+   {
+    "paperId": "94f285055aeb674d4e1f5572c4faa1f91e698e68",
+    "externalIds": {
+     "DBLP": "conf/iccv/LiYZDAXTW25",
+     "ArXiv": "2507.02939",
+     "DOI": "10.1109/ICCV51701.2025.00682",
+     "CorpusId": 280146188
+    },
+    "title": "Frequency-Aligned Knowledge Distillation for Lightweight Spatiotemporal Forecasting",
+    "venue": "IEEE International Conference on Computer Vision",
+    "year": 2025,
+    "citationCount": 115
+   },
+   {
+    "paperId": "447afb2cad85ec097dc6c62a40f106fc535ebeaa",
+    "externalIds": {
+     "DBLP": "journals/mlc/ZhangZZGWZ25",
+     "DOI": "10.1007/s13042-025-02716-8",
+     "CorpusId": 279691013
+    },
+    "title": "Eikd: method of extracting important information from feature map for knowledge distillation",
+    "venue": "International Journal of Machine Learning and Cybernetics",
+    "year": 2025,
+    "citationCount": 1
+   },
+   {
+    "paperId": "689a0af35f5f06499bb111edddd9a9e1f02ada41",
+    "externalIds": {
+     "ArXiv": "2506.17290",
+     "DBLP": "journals/corr/abs-2506-17290",
+     "DOI": "10.48550/arXiv.2506.17290",
+     "CorpusId": 279999440
+    },
+    "title": "SRKD: Towards Efficient 3D Point Cloud Segmentation via Structure- and Relation-aware Knowledge Distillation",
+    "venue": "arXiv.org",
+    "year": 2025,
+    "citationCount": 15
+   },
+   {
+    "paperId": "9ddfc34f4589f9fc58b1add45ca5cb79c944c6e7",
+    "externalIds": {
+     "ArXiv": "2506.07055",
+     "DBLP": "journals/corr/abs-2506-07055",
+     "DOI": "10.48550/arXiv.2506.07055",
+     "CorpusId": 279251061
+    },
+    "title": "A Layered Self-Supervised Knowledge Distillation Framework for Efficient Multimodal Learning on the Edge",
+    "venue": "arXiv.org",
+    "year": 2025,
+    "citationCount": 1
+   },
+   {
+    "paperId": "e19cf688d84b41e3076fa3a016698b1939d7d8b9",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2505-20511",
+     "ArXiv": "2505.20511",
+     "DOI": "10.48550/arXiv.2505.20511",
+     "CorpusId": 278910977
+    },
+    "title": "Multimodal Emotion Recognition in Conversations: A Survey of Methods, Trends, Challenges and Prospects",
+    "venue": "Conference on Empirical Methods in Natural Language Processing",
+    "year": 2025,
+    "citationCount": 58
+   },
+   {
+    "paperId": "2bd26f2a7221f15930054afaa10ee7b7ae0bc0e7",
+    "externalIds": {
+     "ArXiv": "2505.08170",
+     "DBLP": "journals/corr/abs-2505-08170",
+     "DOI": "10.48550/arXiv.2505.08170",
+     "CorpusId": 278535309
+    },
+    "title": "MoKD: Multi-Task Optimization for Knowledge Distillation",
+    "venue": "arXiv.org",
+    "year": 2025,
+    "citationCount": 1
+   },
+   {
+    "paperId": "060617252126279a1ebac3e10237430ae484f97a",
+    "externalIds": {
+     "PubMedCentral": "12169281",
+     "DOI": "10.1016/j.xinn.2025.100948",
+     "CorpusId": 278553346,
+     "PubMed": "40528892"
+    },
+    "title": "Foundation models and intelligent decision-making: Progress, challenges, and perspectives",
+    "venue": "Innovation (Cambridge (Mass.))",
+    "year": 2025,
+    "citationCount": 123
+   },
+   {
+    "paperId": "336264c439b13996492c607add89d7003a34bc41",
+    "externalIds": {
+     "ArXiv": "2504.18689",
+     "DBLP": "journals/corr/abs-2504-18689",
+     "DOI": "10.48550/arXiv.2504.18689",
+     "CorpusId": 278164967
+    },
+    "title": "HierSum: A Global and Local Attention Mechanism for Video Summarization",
+    "venue": "arXiv.org",
+    "year": 2025,
+    "citationCount": 3
+   },
+   {
+    "paperId": "cbdf5fafbd7a6bc0c18ba1523b11afa01e2ca46d",
+    "externalIds": {
+     "DBLP": "journals/ijon/YuTDZPLZQX25",
+     "DOI": "10.1016/j.neucom.2025.130230",
+     "CorpusId": 277757127
+    },
+    "title": "Bias-variance decomposition knowledge distillation for medical image segmentation",
+    "venue": "Neurocomputing",
+    "year": 2025,
+    "citationCount": 3
+   },
+   {
+    "paperId": "119dc2893903cd8a10bdcb567af2c8a3625e6832",
+    "externalIds": {
+     "DBLP": "journals/nn/ZhouXQDXY25",
+     "DOI": "10.1016/j.neunet.2025.107438",
+     "CorpusId": 277363067,
+     "PubMed": "40184869"
+    },
+    "title": "AESeg: Affinity-enhanced segmenter using feature class mapping knowledge distillation for efficient RGB-D semantic segmentation of indoor scenes",
+    "venue": "Neural Networks",
+    "year": 2025,
+    "citationCount": 6
+   },
+   {
+    "paperId": "877d3d9eda3835ce614135fb657fc96e39dece38",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2502-20760",
+     "ArXiv": "2502.20760",
+     "DOI": "10.1109/ICCV51701.2025.00260",
+     "CorpusId": 276724769
+    },
+    "title": "VRM: Knowledge Distillation via Virtual Relation Matching",
+    "venue": "IEEE International Conference on Computer Vision",
+    "year": 2025,
+    "citationCount": 11
+   },
+   {
+    "paperId": "405c8e99df02826a9d1e7f88566bd28f87616566",
+    "externalIds": {
+     "DBLP": "conf/aaai/YangYYAYH025",
+     "ArXiv": "2502.18510",
+     "DOI": "10.48550/arXiv.2502.18510",
+     "CorpusId": 276618061
+    },
+    "title": "Multi-Teacher Knowledge Distillation with Reinforcement Learning for Visual Recognition",
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "year": 2025,
+    "citationCount": 53
+   },
+   {
+    "paperId": "4ad5fd618e7ce5ce104a44290d0584125b2398bc",
+    "externalIds": {
+     "DBLP": "journals/mms/YuLZLYZ25",
+     "DOI": "10.1007/s00530-024-01620-5",
+     "CorpusId": 275315013
+    },
+    "title": "Ground truth is the best teacher: supervised semantic segmentation inspired by knowledge transfer mechanisms",
+    "venue": "Multimedia Systems",
+    "year": 2025,
+    "citationCount": 0
+   },
+   {
+    "paperId": "795f8422987035b6e8cdb9259818d6fce9ef59e7",
+    "externalIds": {
+     "DBLP": "journals/speech/DanXZYCDY25",
+     "DOI": "10.1016/j.specom.2025.103186",
+     "CorpusId": 275597915
+    },
+    "title": "Spatio-temporal masked autoencoder-based phonetic segments classification from ultrasound",
+    "venue": "Speech Communication",
+    "year": 2025,
+    "citationCount": 3
+   },
+   {
+    "paperId": "413526bb83dc2d6b357a9f1d8f31854ae67311bb",
+    "externalIds": {
+     "DOI": "10.22266/ijies2024.1231.27",
+     "CorpusId": 273632300
+    },
+    "title": "Supervised Contrastive Knowledge Distillation",
+    "venue": "International Journal of Intelligent Engineering and Systems",
+    "year": 2024,
+    "citationCount": 1
+   },
+   {
+    "paperId": "e962f42c29ee2654330637ef60e68cc034451d50",
+    "externalIds": {
+     "DOI": "10.1145/3718441.3718475",
+     "CorpusId": 278131695
+    },
+    "title": "Distillation and prompt in Chinese CLIP model",
+    "venue": "Proceedings of the 2024 2nd Asia Symposium on Image and Graphics",
+    "year": 2024,
+    "citationCount": 0
+   },
+   {
+    "paperId": "5e53bd3622f83b42138d89748e5789c9e89b0bcb",
+    "externalIds": {
+     "DOI": "10.1109/SCOPES64467.2024.10990972",
+     "CorpusId": 278666579
+    },
+    "title": "Boosting Network Intrusion Detection with Two-Level Ensemble Learning and Knowledge Distillation Approaches",
+    "venue": "Software and Compilers for Embedded Systems",
+    "year": 2024,
+    "citationCount": 0
+   },
+   {
+    "paperId": "5619cf0fd19981f3afe0eb661cc69b40283bb8b0",
+    "externalIds": {
+     "DBLP": "journals/sivp/ChenXZW25",
+     "DOI": "10.1007/s11760-024-03678-0",
+     "CorpusId": 274628040
+    },
+    "title": "Category contrastive distillation with self-supervised classification",
+    "venue": "Signal, Image and Video Processing",
+    "year": 2024,
+    "citationCount": 0
+   },
+   {
+    "paperId": "a6c13882daa94114e1eee24309ed2f05ce40314f",
+    "externalIds": {
+     "DBLP": "journals/tai/ZhouXLJ24",
+     "DOI": "10.1109/TAI.2024.3452052",
+     "CorpusId": 272277001
+    },
+    "title": "FIMKD: Feature-Implicit Mapping Knowledge Distillation for RGB-D Indoor Scene Semantic Segmentation",
+    "venue": "IEEE Transactions on Artificial Intelligence",
+    "year": 2024,
+    "citationCount": 3
+   },
+   {
+    "paperId": "f35dfb7b53e641d02835a39b3005064fdc8ccb1b",
+    "externalIds": {
+     "DOI": "10.1049/csy2.70002",
+     "CorpusId": 275178675
+    },
+    "title": "Big2Small: Learning from masked image modelling with heterogeneous self‐supervised knowledge distillation",
+    "venue": "IET Cyber-Systems and Robotics",
+    "year": 2024,
+    "citationCount": 0
+   },
+   {
+    "paperId": "923c2c6938c1e61b7ba3e526c4f2eb1be48d35c6",
+    "externalIds": {
+     "ArXiv": "2412.16493",
+     "DBLP": "journals/corr/abs-2412-16493",
+     "DOI": "10.1145/3664647.3681206",
+     "CorpusId": 273645756
+    },
+    "title": "Cross-View Consistency Regularisation for Knowledge Distillation",
+    "venue": "ACM Multimedia",
+    "year": 2024,
+    "citationCount": 18
+   },
+   {
+    "paperId": "ec2d3cff7e8ebdb9caf54e2bd160d60e0add43e8",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2410-14143",
+     "ArXiv": "2410.14143",
+     "DOI": "10.1109/TCSVT.2025.3541067",
+     "CorpusId": 273482581
+    },
+    "title": "Preview-Based Category Contrastive Learning for Knowledge Distillation",
+    "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+    "year": 2024,
+    "citationCount": 2
+   },
+   {
+    "paperId": "12dab3f447198e3a36a09e5bd862c218f05a03f5",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2409-05642",
+     "ArXiv": "2409.05642",
+     "DOI": "10.1109/ICASSP49660.2025.10889917",
+     "CorpusId": 272525383
+    },
+    "title": "Prototype-Driven Multi-Feature Generation for Visible-Infrared Person Re-identification",
+    "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+    "year": 2024,
+    "citationCount": 12
+   },
+   {
+    "paperId": "6e99fc2dfead884f3ad9527455f88e37274ec6cc",
+    "externalIds": {
+     "DBLP": "journals/pr/SalamahHY25",
+     "DOI": "10.1016/j.patcog.2024.110966",
+     "CorpusId": 272380729
+    },
+    "title": "A coded knowledge distillation framework for image classification based on adaptive JPEG encoding",
+    "venue": "Pattern Recognition",
+    "year": 2024,
+    "citationCount": 12
+   },
+   {
+    "paperId": "ada8a1e57c263f6f58effeab4acb7fbd5ff86a76",
+    "externalIds": {
+     "DBLP": "journals/cogcom/DanYZZYQZDHY24",
+     "DOI": "10.1007/s12559-024-10350-9",
+     "CorpusId": 272318869
+    },
+    "title": "PDD: Pruning Neural Networks During Knowledge Distillation",
+    "venue": "Cognitive Computation",
+    "year": 2024,
+    "citationCount": 4
+   },
+   {
+    "paperId": "74aa4477c1c87b26cd4dfa8f45dd7fa953d356fc",
+    "externalIds": {
+     "DBLP": "journals/elektrik/ChenMLF24",
+     "DOI": "10.55730/1300-0632.4084",
+     "CorpusId": 271577846
+    },
+    "title": "Efficient Deep Neural Network Compression for Environmental Sound Classification on Microcontroller Units",
+    "venue": "Turkish J. Electr. Eng. Comput. Sci.",
+    "year": 2024,
+    "citationCount": 3
+   },
+   {
+    "paperId": "4b4265ec38baa99f3bb8a96c89622ce70fdbac2e",
+    "externalIds": {
+     "ArXiv": "2407.18041",
+     "DBLP": "conf/eccv/HamidiDTYS24",
+     "DOI": "10.48550/arXiv.2407.18041",
+     "CorpusId": 271432479
+    },
+    "title": "How to Train the Teacher Model for Effective Knowledge Distillation",
+    "venue": "European Conference on Computer Vision",
+    "year": 2024,
+    "citationCount": 23
+   },
+   {
+    "paperId": "19a314f6257ead4ed30fb9d35d7de0e85e5d10d8",
+    "externalIds": {
+     "DBLP": "journals/comintsys/YuXWZLQYX24",
+     "DOI": "10.1007/s40747-024-01501-4",
+     "CorpusId": 270695182
+    },
+    "title": "Variational AdaBoost knowledge distillation for skin lesion classification in dermatology images",
+    "venue": "Complex & Intelligent Systems",
+    "year": 2024,
+    "citationCount": 4
+   },
+   {
+    "paperId": "1ede14fb8daf21b91ad2b775d1fc0b0840d918fd",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2406-05488",
+     "ArXiv": "2406.05488",
+     "DOI": "10.1109/IJCNN60899.2024.10651412",
+     "CorpusId": 270371125
+    },
+    "title": "Online Policy Distillation with Decision-Attention",
+    "venue": "IEEE International Joint Conference on Neural Network",
+    "year": 2024,
+    "citationCount": 3
+   },
+   {
+    "paperId": "09f6d2622920d9465cb890bb4323a9b62ff01b8f",
+    "externalIds": {
+     "DBLP": "journals/npl/YeTZZC24",
+     "DOI": "10.1007/s11063-024-11606-z",
+     "CorpusId": 269753667
+    },
+    "title": "A Unified Asymmetric Knowledge Distillation Framework for Image Classification",
+    "venue": "Neural Processing Letters",
+    "year": 2024,
+    "citationCount": 3
+   },
+   {
+    "paperId": "9b3321dd35ed9c1751e43cc22196a761f286ac6e",
+    "externalIds": {
+     "DBLP": "conf/cscwd/ZhouYLHAX24",
+     "DOI": "10.1109/CSCWD61410.2024.10580514",
+     "CorpusId": 271092168
+    },
+    "title": "Online Relational Knowledge Distillation for Image Classification",
+    "venue": "International Conference on Computer Supported Cooperative Work in Design",
+    "year": 2024,
+    "citationCount": 1
+   },
+   {
+    "paperId": "ceecf3f00eb5e26f228a59fbd4e7f065ff1d0fea",
+    "externalIds": {
+     "DBLP": "conf/cscwd/DongYLHAX24",
+     "DOI": "10.1109/CSCWD61410.2024.10580038",
+     "CorpusId": 271091587
+    },
+    "title": "Class-wise Image Mixture Guided Self-Knowledge Distillation for Image Classification",
+    "venue": "International Conference on Computer Supported Cooperative Work in Design",
+    "year": 2024,
+    "citationCount": 5
+   },
+   {
+    "paperId": "8faa7150d3c745a48b1a83762ce73776bdd89d08",
+    "externalIds": {
+     "ArXiv": "2404.00936",
+     "DBLP": "journals/corr/abs-2404-00936",
+     "DOI": "10.48550/arXiv.2404.00936",
+     "CorpusId": 268820185
+    },
+    "title": "A Comprehensive Review of Knowledge Distillation in Computer Vision",
+    "venue": "arXiv.org",
+    "year": 2024,
+    "citationCount": 28
+   },
+   {
+    "paperId": "83c028bdad85d4a2f5826f52b32bc21d845ca8c7",
+    "externalIds": {
+     "PubMedCentral": "11051277",
+     "DBLP": "journals/jimaging/CamarenaGC24",
+     "DOI": "10.3390/jimaging10040085",
+     "CorpusId": 268846972,
+     "PubMed": "38667983"
+    },
+    "title": "Knowledge Distillation in Video-Based Human Action Recognition: An Intuitive Approach to Efficient and Flexible Model Training",
+    "venue": "Journal of Imaging",
+    "year": 2024,
+    "citationCount": 6
+   },
+   {
+    "paperId": "7e8eb02e342dc53eceea470e25741ebf5dd92354",
+    "externalIds": {
+     "DBLP": "conf/aaai/Huang0YADX24",
+     "DOI": "10.1609/aaai.v38i11.29153",
+     "CorpusId": 268692501
+    },
+    "title": "eTag: Class-Incremental Learning via Embedding Distillation and Task-Oriented Generation",
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "year": 2024,
+    "citationCount": 41
+   },
+   {
+    "paperId": "59fed81b2182f715c0c9357cdcae26bc01269ea2",
+    "externalIds": {
+     "DBLP": "journals/ijon/LiSQS24",
+     "DOI": "10.1016/j.neucom.2024.127516",
+     "CorpusId": 268319031
+    },
+    "title": "Multi-perspective analysis on data augmentation in knowledge distillation",
+    "venue": "Neurocomputing",
+    "year": 2024,
+    "citationCount": 10
+   },
+   {
+    "paperId": "a27e4e70d102a9c09be045da152b2404c0517a91",
+    "externalIds": {
+     "ArXiv": "2402.02012",
+     "DBLP": "journals/corr/abs-2402-02012",
+     "DOI": "10.48550/arXiv.2402.02012",
+     "CorpusId": 267413092
+    },
+    "title": "Precise Knowledge Transfer via Flow Matching",
+    "venue": "arXiv.org",
+    "year": 2024,
+    "citationCount": 3
+   },
+   {
+    "paperId": "73468c74f84e6034a225ee1e229c4279d8fc044f",
+    "externalIds": {
+     "DBLP": "conf/iclr/YeHTY24",
+     "ArXiv": "2401.08732",
+     "DOI": "10.48550/arXiv.2401.08732",
+     "CorpusId": 267028501
+    },
+    "title": "Bayes Conditional Distribution Estimation for Knowledge Distillation Based on Conditional Mutual Information",
+    "venue": "International Conference on Learning Representations",
+    "year": 2024,
+    "citationCount": 36
+   },
+   {
+    "paperId": "bc0abd248da2eda7b25fe7d554ca5aefce2b3cef",
+    "externalIds": {
+     "DBLP": "journals/ijon/JuZ24",
+     "DOI": "10.1016/j.neucom.2023.127060",
+     "CorpusId": 265287209
+    },
+    "title": "Knowledge distillation for object detection based on Inconsistency-based Feature Imitation and Global Relation Imitation",
+    "venue": "Neurocomputing",
+    "year": 2024,
+    "citationCount": 10
+   },
+   {
+    "paperId": "748b8cb0c45c5cad0b59ade549f554bf3c465f55",
+    "externalIds": {
+     "DBLP": "journals/isci/ZhangTGLZ24",
+     "DOI": "10.1016/j.ins.2024.120107",
+     "CorpusId": 266948407
+    },
+    "title": "Hybrid mix-up contrastive knowledge distillation",
+    "venue": "Information Sciences",
+    "year": 2024,
+    "citationCount": 16
+   },
+   {
+    "paperId": "582ef05f5487b49b0d59f5c29cbbf24a98670fa7",
+    "externalIds": {
+     "DBLP": "journals/jsa/DaiLSHW24",
+     "DOI": "10.1016/j.sysarc.2024.103078",
+     "CorpusId": 267324351
+    },
+    "title": "Homogeneous teacher based buffer knowledge distillation for tiny neural networks",
+    "venue": "Journal of systems architecture",
+    "year": 2024,
+    "citationCount": 2
+   },
+   {
+    "paperId": "cb23064700957a37aaf00f73b16f6c6930ca8c77",
+    "externalIds": {
+     "DBLP": "conf/wacv/XuWLOFM25",
+     "ArXiv": "2311.02253",
+     "DOI": "10.1109/WACV61041.2025.00748",
+     "CorpusId": 265033252
+    },
+    "title": "Comparative Knowledge Distillation",
+    "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+    "year": 2023,
+    "citationCount": 7
+   },
+   {
+    "paperId": "36d8c548f1e93c68c4e95da02f438e17a49da8fd",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2309-09571",
+     "ArXiv": "2309.09571",
+     "DOI": "10.48550/arXiv.2309.09571",
+     "CorpusId": 262044560
+    },
+    "title": "Heterogeneous Generative Knowledge Distillation with Masked Image Modeling",
+    "venue": "arXiv.org",
+    "year": 2023,
+    "citationCount": 3
+   },
+   {
+    "paperId": "cebb04d531606229d9ed598fd85c201996fe6e67",
+    "externalIds": {
+     "DBLP": "conf/cvpr/YangAHBYYDX24",
+     "ArXiv": "2307.12732",
+     "DOI": "10.1109/CVPR52733.2024.01510",
+     "CorpusId": 260125303
+    },
+    "title": "CLIP-KD: An Empirical Study of CLIP Model Distillation",
+    "venue": "Computer Vision and Pattern Recognition",
+    "year": 2023,
+    "citationCount": 152
+   },
+   {
+    "paperId": "e10a30aef950acd016349275fd60eff86b332095",
+    "externalIds": {
+     "ArXiv": "2307.04542",
+     "DBLP": "journals/corr/abs-2307-04542",
+     "DOI": "10.1109/ICME55011.2023.00312",
+     "CorpusId": 259501712
+    },
+    "title": "Customizing Synthetic Data for Data-Free Student Learning",
+    "venue": "IEEE International Conference on Multimedia and Expo",
+    "year": 2023,
+    "citationCount": 3
+   },
+   {
+    "paperId": "a9d8032564b917b45ccb28de659e78dbfb1944e5",
+    "externalIds": {
+     "DBLP": "conf/aaai/DingJZGL23",
+     "DOI": "10.48550/arXiv.2211.14466",
+     "CorpusId": 254043742
+    },
+    "title": "SKDBERT: Compressing BERT via Stochastic Knowledge Distillation",
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "year": 2023,
+    "citationCount": 14
+   },
+   {
+    "paperId": "be20d0da24aaaebbc4340497a2aadd5813e17a39",
+    "externalIds": {
+     "ArXiv": "2306.10687",
+     "DBLP": "journals/corr/abs-2306-10687",
+     "DOI": "10.48550/arXiv.2306.10687",
+     "CorpusId": 259203401
+    },
+    "title": "Categories of Response-Based, Feature-Based, and Relation-Based Knowledge Distillation",
+    "venue": "arXiv.org",
+    "year": 2023,
+    "citationCount": 52
+   },
+   {
+    "paperId": "a0ed2234d8a6264c52e554193ffd6d1606f804f7",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2306-08998",
+     "ArXiv": "2306.08998",
+     "DOI": "10.48550/arXiv.2306.08998",
+     "CorpusId": 259165535
+    },
+    "title": "Team AcieLee: Technical Report for EPIC-SOUNDS Audio-Based Interaction Recognition Challenge 2023",
+    "venue": "arXiv.org",
+    "year": 2023,
+    "citationCount": 0
+   },
+   {
+    "paperId": "f6e172d775d3adf921080761234c4326b9b1a671",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2305-10769",
+     "ArXiv": "2305.10769",
+     "DOI": "10.48550/arXiv.2305.10769",
+     "CorpusId": 258762868
+    },
+    "title": "Catch-Up Distillation: You Only Need to Train Once for Accelerating Sampling",
+    "venue": "arXiv.org",
+    "year": 2023,
+    "citationCount": 24
+   },
+   {
+    "paperId": "133775be947b406a94eb4bb237822da6ef896397",
+    "externalIds": {
+     "ArXiv": "2304.10103",
+     "DBLP": "journals/corr/abs-2304-10103",
+     "DOI": "10.48550/arXiv.2304.10103",
+     "CorpusId": 258236477
+    },
+    "title": "eTag: Class-Incremental Learning with Embedding Distillation and Task-Oriented Generation",
+    "venue": "arXiv.org",
+    "year": 2023,
+    "citationCount": 3
+   },
+   {
+    "paperId": "9cb1a2c157958251a4186d9c85e14ce41d408d64",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2303-16887",
+     "ArXiv": "2303.16887",
+     "DOI": "10.48550/arXiv.2303.16887",
+     "CorpusId": 257805150
+    },
+    "title": "Towards Understanding the Effect of Pretraining Label Granularity",
+    "venue": "arXiv.org",
+    "year": 2023,
+    "citationCount": 4
+   },
+   {
+    "paperId": "d24a0b0bda424d011b24228ba90163421f7a31f2",
+    "externalIds": {
+     "DBLP": "conf/aaai/MilesM24",
+     "ArXiv": "2303.11098",
+     "DOI": "10.1609/aaai.v38i5.28219",
+     "CorpusId": 257632008
+    },
+    "title": "Understanding the Role of the Projector in Knowledge Distillation",
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "year": 2023,
+    "citationCount": 84
+   },
+   {
+    "paperId": "67109f93e1b1c87aae3f62e7ccc3ec4e0a33e3e4",
+    "externalIds": {
+     "DBLP": "journals/pami/LiXCYZYC23",
+     "DOI": "10.1109/TPAMI.2023.3257546",
+     "CorpusId": 257570575,
+     "PubMed": "37028387"
+    },
+    "title": "When Object Detection Meets Knowledge Distillation: A Survey",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "year": 2023,
+    "citationCount": 188
+   },
+   {
+    "paperId": "26a334322ece1efbed67c2d2f55414206a2aab4f",
+    "externalIds": {
+     "DBLP": "conf/wacv/NguyenDucLZCP23",
+     "DOI": "10.1109/WACV56688.2023.00466",
+     "CorpusId": 256646733
+    },
+    "title": "Adversarial local distribution regularization for knowledge distillation",
+    "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+    "year": 2023,
+    "citationCount": 7
+   },
+   {
+    "paperId": "8446b1ba793d72425a8d46924b3526208a76d203",
+    "externalIds": {
+     "DOI": "10.1109/ICCC56324.2022.10066050",
+     "CorpusId": 257654415
+    },
+    "title": "Reflective Learning for Online Knowledge Distillation",
+    "venue": "2022 IEEE 8th International Conference on Computer and Communications (ICCC)",
+    "year": 2022,
+    "citationCount": 2
+   },
+   {
+    "paperId": "950192e9c9374d4c7e73b2f4717228a71174a782",
+    "externalIds": {
+     "DOI": "10.1016/j.jprocont.2022.11.005",
+     "CorpusId": 256800311
+    },
+    "title": "A self-supervised temporal temperature prediction method based on dilated contrastive learning",
+    "venue": "Journal of Process Control",
+    "year": 2022,
+    "citationCount": 12
+   },
+   {
+    "paperId": "baae351142a07d9d0b3d332ba9e983fbde797982",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2211-13844",
+     "ArXiv": "2211.13844",
+     "DOI": "10.1109/ICIP49359.2023.10222599",
+     "CorpusId": 254017503
+    },
+    "title": "Ladder Siamese Network: A Method and Insights for Multi-Level Self-Supervised Learning",
+    "venue": "International Conference on Information Photonics",
+    "year": 2022,
+    "citationCount": 3
+   },
+   {
+    "paperId": "fcc4dcceeaa676a662cea6b699f94d03c2ee3550",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2210-13743",
+     "ArXiv": "2210.13743",
+     "DOI": "10.1007/s00521-023-08900-7",
+     "CorpusId": 253107469
+    },
+    "title": "Online cross-layer knowledge distillation on graph neural networks with deep supervision",
+    "venue": "Neural computing & applications (Print)",
+    "year": 2022,
+    "citationCount": 4
+   },
+   {
+    "paperId": "085c071051e3ab6b607bde614215a8127328f5b3",
+    "externalIds": {
+     "DBLP": "conf/mm/YuXJQH22",
+     "DOI": "10.1145/3503161.3548256",
+     "CorpusId": 252783102
+    },
+    "title": "Pay Attention to Your Positive Pairs: Positive Pair Aware Contrastive Knowledge Distillation",
+    "venue": "ACM Multimedia",
+    "year": 2022,
+    "citationCount": 12
+   },
+   {
+    "paperId": "a63477526db43b7c6a4dd3d534f40e3a0a37611d",
+    "externalIds": {
+     "DOI": "10.3390/app12199453",
+     "CorpusId": 252481152
+    },
+    "title": "Multiple-Stage Knowledge Distillation",
+    "venue": "Applied Sciences",
+    "year": 2022,
+    "citationCount": 6
+   },
+   {
+    "paperId": "57379ffd229a508ae5276b3f6ca262958b7c5297",
+    "externalIds": {
+     "DBLP": "conf/eccv/YangAZCZWXZ22",
+     "ArXiv": "2208.05768",
+     "DOI": "10.48550/arXiv.2208.05768",
+     "CorpusId": 251493077
+    },
+    "title": "MixSKD: Self-Knowledge Distillation from Mixup for Image Recognition",
+    "venue": "European Conference on Computer Vision",
+    "year": 2022,
+    "citationCount": 95
+   },
+   {
+    "paperId": "26ead6b2f0821ae6f18641ac28afe849477db881",
+    "externalIds": {
+     "DBLP": "journals/pami/YangAZZXZ23",
+     "ArXiv": "2207.11518",
+     "DOI": "10.1109/TPAMI.2023.3257878",
+     "CorpusId": 251040462,
+     "PubMed": "37030723"
+    },
+    "title": "Online Knowledge Distillation via Mutual Contrastive Learning for Visual Recognition",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "year": 2022,
+    "citationCount": 115
+   },
+   {
+    "paperId": "99eb885e75f045ae14a4a7d9acf69dca3ea019a5",
+    "externalIds": {
+     "ArXiv": "2207.05345",
+     "DBLP": "conf/eccv/WangLLJWWQL22",
+     "DOI": "10.48550/arXiv.2207.05345",
+     "CorpusId": 250451014
+    },
+    "title": "HEAD: HEtero-Assists Distillation for Heterogeneous Object Detectors",
+    "venue": "European Conference on Computer Vision",
+    "year": 2022,
+    "citationCount": 31
+   },
+   {
+    "paperId": "4cbfa720b09abc0e1832cdb72ce67d1f10416c89",
+    "externalIds": {
+     "DBLP": "conf/aaai/CaiAYYX22",
+     "DOI": "10.1609/aaai.v36i1.19888",
+     "CorpusId": 250297625
+    },
+    "title": "Prior Gradient Mask Guided Pruning-Aware Fine-Tuning",
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "year": 2022,
+    "citationCount": 45
+   },
+   {
+    "paperId": "b133dcffaa2df2c4f9acd6da6b5f3db1a3f2a955",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2206-03367",
+     "ArXiv": "2206.03367",
+     "DOI": "10.1109/ICME52920.2022.9859979",
+     "CorpusId": 249431875
+    },
+    "title": "Localizing Semantic Patches for Accelerating Image Classification",
+    "venue": "IEEE International Conference on Multimedia and Expo",
+    "year": 2022,
+    "citationCount": 2
+   },
+   {
+    "paperId": "66f93289f2e0bd9ed6481d95bb8e60eff3390b75",
+    "externalIds": {
+     "ArXiv": "2205.10003",
+     "DBLP": "conf/wacv/SarridisKKKP25",
+     "DOI": "10.1109/WACV61041.2025.00875",
+     "CorpusId": 254018432
+    },
+    "title": "InDistill: Information flow-preserving knowledge distillation for model compression",
+    "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+    "year": 2022,
+    "citationCount": 9
+   },
+   {
+    "paperId": "1f9ed1ea26210d6f8a3333c2a2ffb6255d2b0a1c",
+    "externalIds": {
+     "DBLP": "journals/apin/XuGLBLZ23",
+     "DOI": "10.1007/s10489-022-03486-4",
+     "CorpusId": 248683566
+    },
+    "title": "Teacher-student collaborative knowledge distillation for image classification",
+    "venue": "Applied intelligence (Boston)",
+    "year": 2022,
+    "citationCount": 68
+   },
+   {
+    "paperId": "f158716e2464ce9b261581ba5accdc1fb4b48b31",
+    "externalIds": {
+     "DBLP": "conf/cvpr/GaoGW022",
+     "ArXiv": "2205.00858",
+     "DOI": "10.1109/CVPR52688.2022.00968",
+     "CorpusId": 248496527
+    },
+    "title": "Cross-Domain Correlation Distillation for Unsupervised Domain Adaptation in Nighttime Semantic Segmentation",
+    "venue": "Computer Vision and Pattern Recognition",
+    "year": 2022,
+    "citationCount": 91
+   },
+   {
+    "paperId": "0a3cd570cd1c4f3ea207c48b90704b6c7b3e83b3",
+    "externalIds": {
+     "DBLP": "journals/pr/LiuQWTS22",
+     "DOI": "10.1016/j.patcog.2022.108767",
+     "CorpusId": 248605291
+    },
+    "title": "SELF-LLP: Self-supervised learning from label proportions with self-ensemble",
+    "venue": "Pattern Recognition",
+    "year": 2022,
+    "citationCount": 22
+   },
+   {
+    "paperId": "144e7e0e94e5a75f2dc5991b5276d17d643e74f4",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2204-11830",
+     "ArXiv": "2204.11830",
+     "DOI": "10.1109/CVPR52688.2022.00999",
+     "CorpusId": 248377257
+    },
+    "title": "Proto2Proto: Can you recognize the car, the way I do?",
+    "venue": "Computer Vision and Pattern Recognition",
+    "year": 2022,
+    "citationCount": 34
+   },
+   {
+    "paperId": "ea7029d694d12292ef8374ac0f5ca821d48edb87",
+    "externalIds": {
+     "DBLP": "conf/cvpr/YangZAJXZ22",
+     "ArXiv": "2204.06986",
+     "DOI": "10.1109/CVPR52688.2022.01200",
+     "CorpusId": 248178091
+    },
+    "title": "Cross-Image Relational Knowledge Distillation for Semantic Segmentation",
+    "venue": "Computer Vision and Pattern Recognition",
+    "year": 2022,
+    "citationCount": 311
+   },
+   {
+    "paperId": "13bed0633f870113c79e4086dfae9952ef805f71",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2204-05502",
+     "ArXiv": "2204.05502",
+     "DOI": "10.48550/arXiv.2204.05502",
+     "CorpusId": 248118779
+    },
+    "title": "CoupleFace: Relation Matters for Face Recognition Distillation",
+    "venue": "European Conference on Computer Vision",
+    "year": 2022,
+    "citationCount": 25
+   },
+   {
+    "paperId": "322c8e09f605b5da4b1ea6f408ce6c073a324051",
+    "externalIds": {
+     "ArXiv": "2112.00324",
+     "DBLP": "journals/tnn/WangLGZW24",
+     "DOI": "10.1109/TNNLS.2023.3285488",
+     "CorpusId": 244773469,
+     "PubMed": "37368806"
+    },
+    "title": "Optimizing for In-Memory Deep Learning With Emerging Memory Technology",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "year": 2021,
+    "citationCount": 1
+   },
+   {
+    "paperId": "bedb5992c7c2941964e62cd075df63c02b7864d5",
+    "externalIds": {
+     "DBLP": "conf/bmvc/MilesRM22",
+     "ArXiv": "2112.00459",
+     "CorpusId": 244773532
+    },
+    "title": "Information Theoretic Representation Distillation",
+    "venue": "British Machine Vision Conference",
+    "year": 2021,
+    "citationCount": 30
+   },
+   {
+    "paperId": "69bdbbaf1411d21758ae8b2709b6477f13fb6e59",
+    "externalIds": {
+     "DBLP": "journals/tnn/YangACX24",
+     "ArXiv": "2109.03075",
+     "DOI": "10.1109/TNNLS.2022.3186807",
+     "CorpusId": 237433772,
+     "PubMed": "35820013"
+    },
+    "title": "Knowledge Distillation Using Hierarchical Self-Supervision Augmented Distribution",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "year": 2021,
+    "citationCount": 33
+   },
+   {
+    "paperId": "20333d9b3d297f736c6ed865d6b34f4da5987daf",
+    "externalIds": {
+     "DBLP": "journals/pr/YangZZSWWY22",
+     "ArXiv": "2107.01787",
+     "DOI": "10.1016/j.patcog.2022.108863",
+     "CorpusId": 235731668
+    },
+    "title": "Multi-View Correlation Distillation for Incremental Object Detection",
+    "venue": "Pattern Recognition",
+    "year": 2021,
+    "citationCount": 79
+   },
+   {
+    "paperId": "b057d01576177dcf055dcc3601471b68190658f6",
+    "externalIds": {
+     "ArXiv": "2106.10494",
+     "DBLP": "journals/tmlr/LukasikBMK22",
+     "CorpusId": 235490043
+    },
+    "title": "Teacher's pet: understanding and mitigating biases in distillation",
+    "venue": "Trans. Mach. Learn. Res.",
+    "year": 2021,
+    "citationCount": 35
+   },
+   {
+    "paperId": "edce12538963c689deb7504bb3b0664184ccfc20",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2104-12565",
+     "ArXiv": "2104.12565",
+     "DOI": "10.1609/aaai.v36i3.20211",
+     "CorpusId": 233394227
+    },
+    "title": "Mutual Contrastive Learning for Visual Representation Learning",
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "year": 2021,
+    "citationCount": 101
+   },
+   {
+    "paperId": "b75f6b23da4e0b92d861647f5e519f208029c059",
+    "externalIds": {
+     "DBLP": "journals/access/ParkK23",
+     "DOI": "10.1109/ACCESS.2023.3265382",
+     "CorpusId": 258019735
+    },
+    "title": "Knowledge Distillation With Feature Self Attention",
+    "venue": "IEEE Access",
+    "year": 2023,
+    "citationCount": 6
+   },
+   {
+    "paperId": "cc18ba10a783f16b9e8e72d202882329656fe4bf",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2205-10003",
+     "DOI": "10.48550/arXiv.2205.10003",
+     "CorpusId": 248965057
+    },
+    "title": "InDistill: Transferring Knowledge From Pruned Intermediate Layers",
+    "venue": "arXiv.org",
+    "year": 2022,
+    "citationCount": 2
+   },
+   {
+    "paperId": "8c2df3ddedf5439ca0a79ad4c4ff7054adc55ccd",
+    "externalIds": {
+     "CorpusId": 254564851
+    },
+    "title": "Data-Based Distillation: Teaching What You Should Teach",
+    "venue": "",
+    "year": 2022,
+    "citationCount": 0
+   },
+   {
+    "paperId": "72293a8242f3e3068898925c73461add6cab9608",
+    "externalIds": {
+     "DBLP": "journals/access/AkhterHHH22",
+     "DOI": "10.1109/ACCESS.2022.3227804",
+     "CorpusId": 254485543
+    },
+    "title": "NeuRes: Highly Activated Neurons Responses Transfer via Distilling Sparse Activation Maps",
+    "venue": "IEEE Access",
+    "year": 2022,
+    "citationCount": 7
+   },
+   {
+    "paperId": "4950a831e0e48c067c6c6cc7276ef3716b51dc79",
+    "externalIds": {
+     "CorpusId": 273819999
+    },
+    "title": "T EACHING WISER , L EARNING SMARTER : M ULTI - STAGE D ECOUPLED R ELATIONAL K NOWLEDGE D IS - TILLATION WITH A DAPTIVE S TAGE S ELECTION",
+    "venue": "",
+    "year": null,
+    "citationCount": 0
+   },
+   {
+    "paperId": "6535dc60b7dc1980ff48aaca8cfa9df4a0ad8779",
+    "externalIds": {
+     "CorpusId": 282554788
+    },
+    "title": "Category Contrastive Distillation with Self-Supervised Classi�cation",
+    "venue": "",
+    "year": null,
+    "citationCount": 0
+   }
+  ],
+  "openalex": [
+   {
+    "openalex_id": "https://openalex.org/W4312309807",
+    "title": "Cross-Image Relational Knowledge Distillation for Semantic Segmentation",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/cvpr52688.2022.01200",
+    "arxiv_id": "2204.06986",
+    "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+    "citationCount": 288,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4327522797",
+    "title": "When Object Detection Meets Knowledge Distillation: A Survey",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/tpami.2023.3257546",
+    "arxiv_id": null,
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "citationCount": 192,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4327662218",
+    "title": "Online Knowledge Distillation via Mutual Contrastive Learning for Visual Recognition",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/tpami.2023.3257878",
+    "arxiv_id": "2207.11518",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "citationCount": 111,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4312527924",
+    "title": "Cross-Domain Correlation Distillation for Unsupervised Domain Adaptation in Nighttime Semantic Segmentation",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/cvpr52688.2022.00968",
+    "arxiv_id": "2205.00858",
+    "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+    "citationCount": 96,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W3159551428",
+    "title": "Mutual Contrastive Learning for Visual Representation Learning",
+    "year": 2022,
+    "doi": "https://doi.org/10.1609/aaai.v36i3.20211",
+    "arxiv_id": "2104.12565",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "citationCount": 94,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4313182973",
+    "title": "MixSKD: Self-Knowledge Distillation from Mixup for Image Recognition",
+    "year": 2022,
+    "doi": "https://doi.org/10.1007/978-3-031-20053-3_31",
+    "arxiv_id": "2208.05768",
+    "venue": "Lecture notes in computer science",
+    "citationCount": 90,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4229453673",
+    "title": "Teacher-student collaborative knowledge distillation for image classification",
+    "year": 2022,
+    "doi": "https://doi.org/10.1007/s10489-022-03486-4",
+    "arxiv_id": null,
+    "venue": "Applied Intelligence",
+    "citationCount": 75,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W3181595505",
+    "title": "Multi-View correlation distillation for incremental object detection",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.patcog.2022.108863",
+    "arxiv_id": "2107.01787",
+    "venue": "Pattern Recognition",
+    "citationCount": 70,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4410291923",
+    "title": "Foundation models and intelligent decision-making: Progress, challenges, and perspectives",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.xinn.2025.100948",
+    "arxiv_id": null,
+    "venue": "The Innovation",
+    "citationCount": 60,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4380479950",
+    "title": "Categories of Response-Based, Feature-Based, and Relation-Based Knowledge Distillation",
+    "year": 2023,
+    "doi": "https://doi.org/10.1007/978-3-031-32095-8_1",
+    "arxiv_id": "2306.10687",
+    "venue": "Studies in computational intelligence",
+    "citationCount": 43,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4393154084",
+    "title": "Understanding the Role of the Projector in Knowledge Distillation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1609/aaai.v38i5.28219",
+    "arxiv_id": "2303.11098",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "citationCount": 43,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4408803960",
+    "title": "Enhancing spatiotemporal prediction through the integration of Mamba state space models and Diffusion Transformers",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.knosys.2025.113347",
+    "arxiv_id": null,
+    "venue": "Knowledge-Based Systems",
+    "citationCount": 41,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4404136090",
+    "title": "Attention correction feature and boundary constraint knowledge distillation for efficient 3D medical image segmentation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.eswa.2024.125670",
+    "arxiv_id": null,
+    "venue": "Expert Systems with Applications",
+    "citationCount": 20,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4283815570",
+    "title": "Prior Gradient Mask Guided Pruning-Aware Fine-Tuning",
+    "year": 2022,
+    "doi": "https://doi.org/10.1609/aaai.v36i1.19888",
+    "arxiv_id": null,
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "citationCount": 38,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4312358144",
+    "title": "CoupleFace: Relation Matters for Face Recognition Distillation",
+    "year": 2022,
+    "doi": "https://doi.org/10.1007/978-3-031-19775-8_40",
+    "arxiv_id": "2204.05502",
+    "venue": "Lecture notes in computer science",
+    "citationCount": 27,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4312735356",
+    "title": "HEAD: HEtero-Assists Distillation for Heterogeneous Object Detectors",
+    "year": 2022,
+    "doi": "https://doi.org/10.1007/978-3-031-20077-9_19",
+    "arxiv_id": "2207.05345",
+    "venue": "Lecture notes in computer science",
+    "citationCount": 26,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W3198500549",
+    "title": "Knowledge Distillation Using Hierarchical Self-Supervision Augmented Distribution",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/tnnls.2022.3186807",
+    "arxiv_id": "2109.03075",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "citationCount": 24,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4393159688",
+    "title": "eTag: Class-Incremental Learning via Embedding Distillation and Task-Oriented Generation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1609/aaai.v38i11.29153",
+    "arxiv_id": null,
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "citationCount": 24,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4225285820",
+    "title": "SELF-LLP: Self-supervised learning from label proportions with self-ensemble",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.patcog.2022.108767",
+    "arxiv_id": null,
+    "venue": "Pattern Recognition",
+    "citationCount": 20,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4312971720",
+    "title": "Proto2Proto: Can you recognize the car, the way I do?",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/cvpr52688.2022.00999",
+    "arxiv_id": "2204.11830",
+    "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+    "citationCount": 19,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4310150497",
+    "title": "A self-supervised temporal temperature prediction method based on dilated contrastive learning",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.jprocont.2022.11.005",
+    "arxiv_id": null,
+    "venue": "Journal of Process Control",
+    "citationCount": 17,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4390705187",
+    "title": "Hybrid mix-up contrastive knowledge distillation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.ins.2024.120107",
+    "arxiv_id": null,
+    "venue": "Information Sciences",
+    "citationCount": 17,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4382239116",
+    "title": "SKDBERT: Compressing BERT via Stochastic Knowledge Distillation",
+    "year": 2023,
+    "doi": "https://doi.org/10.1609/aaai.v37i6.25902",
+    "arxiv_id": "2211.14466",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "citationCount": 14,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4403780854",
+    "title": "Cross-View Consistency Regularisation for Knowledge Distillation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1145/3664647.3681206",
+    "arxiv_id": "2412.16493",
+    "venue": "ACM International Conference on Multimedia (ACM MM)",
+    "citationCount": 13,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4388798188",
+    "title": "Knowledge distillation for object detection based on Inconsistency-based Feature Imitation and Global Relation Imitation",
+    "year": 2023,
+    "doi": "https://doi.org/10.1016/j.neucom.2023.127060",
+    "arxiv_id": null,
+    "venue": "Neurocomputing",
+    "citationCount": 10,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4392453506",
+    "title": "Multi-perspective analysis on data augmentation in knowledge distillation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.neucom.2024.127516",
+    "arxiv_id": null,
+    "venue": "Neurocomputing",
+    "citationCount": 10,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4400490325",
+    "title": "Class-wise Image Mixture Guided Self-Knowledge Distillation for Image Classification",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/cscwd61410.2024.10580038",
+    "arxiv_id": null,
+    "venue": "International Conference on Computer Supported Cooperative Work in Design (CSCWD)",
+    "citationCount": 9,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4402177703",
+    "title": "A coded knowledge distillation framework for image classification based on adaptive JPEG encoding",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.patcog.2024.110966",
+    "arxiv_id": null,
+    "venue": "Pattern Recognition",
+    "citationCount": 9,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4404672046",
+    "title": "How to Train the Teacher Model for Effective Knowledge Distillation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1007/978-3-031-73024-5_1",
+    "arxiv_id": "2407.18041",
+    "venue": "Lecture notes in computer science",
+    "citationCount": 9,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4407874019",
+    "title": "Why logit distillation works: A novel knowledge distillation technique by deriving target augmentation and logits distortion",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.ipm.2024.104056",
+    "arxiv_id": null,
+    "venue": "Information Processing & Management",
+    "citationCount": 9,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4394602965",
+    "title": "PURF: Improving teacher representations by imposing smoothness constraints for knowledge distillation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.asoc.2024.111579",
+    "arxiv_id": null,
+    "venue": "Applied Soft Computing",
+    "citationCount": 8,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4393357772",
+    "title": "Knowledge Distillation in Video-Based Human Action Recognition: An Intuitive Approach to Efficient and Flexible Model Training",
+    "year": 2024,
+    "doi": "https://doi.org/10.3390/jimaging10040085",
+    "arxiv_id": null,
+    "venue": "Journal of Imaging",
+    "citationCount": 7,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7160030580",
+    "title": "VRM: Knowledge Distillation via Virtual Relation Matching",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/iccv51701.2025.00260",
+    "arxiv_id": null,
+    "venue": "IEEE/CVF International Conference on Computer Vision (ICCV)",
+    "citationCount": 7,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4312284807",
+    "title": "NeuRes: Highly Activated Neurons Responses Transfer via Distilling Sparse Activation Maps",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/access.2022.3227804",
+    "arxiv_id": null,
+    "venue": "IEEE Access",
+    "citationCount": 7,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4362683512",
+    "title": "Knowledge Distillation With Feature Self Attention",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/access.2023.3265382",
+    "arxiv_id": null,
+    "venue": "IEEE Access",
+    "citationCount": 7,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4402039364",
+    "title": "FIMKD: Feature-Implicit Mapping Knowledge Distillation for RGB-D Indoor Scene Semantic Segmentation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/tai.2024.3452052",
+    "arxiv_id": null,
+    "venue": "IEEE Transactions on Artificial Intelligence",
+    "citationCount": 7,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4402091721",
+    "title": "PDD: Pruning Neural Networks During Knowledge Distillation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1007/s12559-024-10350-9",
+    "arxiv_id": null,
+    "venue": "Cognitive Computation",
+    "citationCount": 6,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4406476969",
+    "title": "Spatio-temporal masked autoencoder-based phonetic segments classification from ultrasound",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.specom.2025.103186",
+    "arxiv_id": null,
+    "venue": "Speech Communication",
+    "citationCount": 5,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4407765948",
+    "title": "Logitwise Distillation Network: Improving Knowledge Distillation via Introducing Sample Confidence",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/app15052285",
+    "arxiv_id": null,
+    "venue": "Applied Sciences",
+    "citationCount": 3,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4321504816",
+    "title": "What Role Does Data Augmentation Play in Knowledge Distillation?",
+    "year": 2023,
+    "doi": "https://doi.org/10.1007/978-3-031-26284-5_31",
+    "arxiv_id": null,
+    "venue": "Lecture notes in computer science",
+    "citationCount": 10,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4319300290",
+    "title": "Adversarial local distribution regularization for knowledge distillation",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/wacv56688.2023.00466",
+    "arxiv_id": null,
+    "venue": "IEEE Winter Conference on Applications of Computer Vision",
+    "citationCount": 8,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4296741027",
+    "title": "Multiple-Stage Knowledge Distillation",
+    "year": 2022,
+    "doi": "https://doi.org/10.3390/app12199453",
+    "arxiv_id": null,
+    "venue": "Applied Sciences",
+    "citationCount": 5,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4408853641",
+    "title": "AESeg: Affinity-enhanced segmenter using feature class mapping knowledge distillation for efficient RGB-D semantic segmentation of indoor scenes",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.neunet.2025.107438",
+    "arxiv_id": null,
+    "venue": "Neural Networks",
+    "citationCount": 5,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4328027808",
+    "title": "Reflective Learning for Online Knowledge Distillation",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/iccc56324.2022.10066050",
+    "arxiv_id": null,
+    "venue": "IEEE International Conference on Computer and Communications (ICCC)",
+    "citationCount": 4,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4385655132",
+    "title": "Online cross-layer knowledge distillation on graph neural networks with deep supervision",
+    "year": 2023,
+    "doi": "https://doi.org/10.1007/s00521-023-08900-7",
+    "arxiv_id": "2210.13743",
+    "venue": "Neural Computing and Applications",
+    "citationCount": 4,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4399918660",
+    "title": "Variational AdaBoost knowledge distillation for skin lesion classification in dermatology images",
+    "year": 2024,
+    "doi": "https://doi.org/10.1007/s40747-024-01501-4",
+    "arxiv_id": null,
+    "venue": "Complex & Intelligent Systems",
+    "citationCount": 4,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4391289278",
+    "title": "Homogeneous teacher based buffer knowledge distillation for tiny neural networks",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.sysarc.2024.103078",
+    "arxiv_id": null,
+    "venue": "Journal of Systems Architecture",
+    "citationCount": 3,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4409776511",
+    "title": "Knowledge distillation from relative distribution",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.eswa.2025.127736",
+    "arxiv_id": null,
+    "venue": "Expert Systems with Applications",
+    "citationCount": 3,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4411040284",
+    "title": "HRSGD: High-order recurrent medical image fusion via self-supervised generative distillation",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.neucom.2025.130545",
+    "arxiv_id": null,
+    "venue": "Neurocomputing",
+    "citationCount": 3,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4412431074",
+    "title": "MedKit: Multi-level feature distillation with knowledge injection for radiology report generation",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.eswa.2025.129003",
+    "arxiv_id": null,
+    "venue": "Expert Systems with Applications",
+    "citationCount": 3,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4407354654",
+    "title": "Preview-Based Category Contrastive Learning for Knowledge Distillation",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/tcsvt.2025.3541067",
+    "arxiv_id": "2410.14143",
+    "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+    "citationCount": 2,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4412954922",
+    "title": "Aligning to the teacher: multilevel feature-aligned knowledge distillation",
+    "year": 2025,
+    "doi": "https://doi.org/10.7717/peerj-cs.3075",
+    "arxiv_id": null,
+    "venue": "PeerJ Computer Science",
+    "citationCount": 2,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4392904023",
+    "title": "Style Factorization: Explore Diverse Style Variation for Domain Generalization",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/icassp48485.2024.10447540",
+    "arxiv_id": null,
+    "venue": "IEEE International Conference on Acoustics Speech and Signal Processing",
+    "citationCount": 4,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4396828763",
+    "title": "A Unified Asymmetric Knowledge Distillation Framework for Image Classification",
+    "year": 2024,
+    "doi": "https://doi.org/10.1007/s11063-024-11606-z",
+    "arxiv_id": null,
+    "venue": "Neural Processing Letters",
+    "citationCount": 3,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4406744737",
+    "title": "Adaptive lightweight network construction method for Self-Knowledge Distillation",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.neucom.2025.129477",
+    "arxiv_id": null,
+    "venue": "Neurocomputing",
+    "citationCount": 3,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4386158762",
+    "title": "Customizing Synthetic Data for Data-Free Student Learning",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/icme55011.2023.00312",
+    "arxiv_id": "2307.04542",
+    "venue": "IEEE International Conference on Multimedia and Expo (ICME)",
+    "citationCount": 2,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4391274855",
+    "title": "MobileViT-FocR: MobileViT with Fixed-One-Centre Loss and Gradient Reversal for Generalised Fake Face Detection",
+    "year": 2024,
+    "doi": "https://doi.org/10.1007/978-3-031-53311-2_7",
+    "arxiv_id": null,
+    "venue": "Lecture notes in computer science",
+    "citationCount": 2,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4401140880",
+    "title": "Efficient Deep Neural Network Compression for Environmental Sound Classification on Microcontroller Units",
+    "year": 2024,
+    "doi": "https://doi.org/10.55730/1300-0632.4084",
+    "arxiv_id": null,
+    "venue": "TURKISH JOURNAL OF ELECTRICAL ENGINEERING & COMPUTER SCIENCES",
+    "citationCount": 2,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4405933945",
+    "title": "Big2Small: Learning from masked image modelling with heterogeneous self‐supervised knowledge distillation",
+    "year": 2024,
+    "doi": "https://doi.org/10.1049/csy2.70002",
+    "arxiv_id": null,
+    "venue": "IET Cyber-Systems and Robotics",
+    "citationCount": 1,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4409378632",
+    "title": "Bias-variance decomposition knowledge distillation for medical image segmentation",
+    "year": 2025,
+    "doi": "https://doi.org/10.1016/j.neucom.2025.130230",
+    "arxiv_id": null,
+    "venue": "Neurocomputing",
+    "citationCount": 1,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4411538531",
+    "title": "Eikd: method of extracting important information from feature map for knowledge distillation",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/s13042-025-02716-8",
+    "arxiv_id": null,
+    "venue": "International Journal of Machine Learning and Cybernetics",
+    "citationCount": 1,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4414652277",
+    "title": "A Multi-Teacher Knowledge Distillation Framework with Aggregation Techniques for Lightweight Deep Models",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/asi8050146",
+    "arxiv_id": null,
+    "venue": "Applied System Innovation",
+    "citationCount": 1,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4416159132",
+    "title": "Teacher-Student Consistent Distillation for Source-Free Domain Adaptation Object Detection",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/978-981-95-4097-6_16",
+    "arxiv_id": null,
+    "venue": "Communications in computer and information science",
+    "citationCount": 1,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4226461637",
+    "title": "Optimizing for In-Memory Deep Learning With Emerging Memory Technology",
+    "year": 2023,
+    "doi": "https://doi.org/10.1109/tnnls.2023.3285488",
+    "arxiv_id": "2112.00324",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "citationCount": 2,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4281804120",
+    "title": "Localizing Semantic Patches for Accelerating Image Classification",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/icme52920.2022.9859979",
+    "arxiv_id": "2206.03367",
+    "venue": "IEEE International Conference on Multimedia and Expo (ICME)",
+    "citationCount": 2,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4402352359",
+    "title": "Online Policy Distillation with Decision-Attention",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/ijcnn60899.2024.10651412",
+    "arxiv_id": "2406.05488",
+    "venue": "International Joint Conference on Neural Networks (IJCNN)",
+    "citationCount": 1,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W3215728706",
+    "title": "Information Theoretic Representation Distillation",
+    "year": 2021,
+    "doi": "https://doi.org/10.48550/arxiv.2112.00459",
+    "arxiv_id": "2112.00459",
+    "venue": "arXiv (Cornell University)",
+    "citationCount": 14,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4400274458",
+    "title": "Adaptive Network Construction Method for Self-Knowledge Distillation",
+    "year": 2024,
+    "doi": "https://doi.org/10.2139/ssrn.4884260",
+    "arxiv_id": null,
+    "venue": "SSRN Electronic Journal",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4405184002",
+    "title": "Category contrastive distillation with self-supervised classification",
+    "year": 2024,
+    "doi": "https://doi.org/10.1007/s11760-024-03678-0",
+    "arxiv_id": null,
+    "venue": "Signal Image and Video Processing",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4406038037",
+    "title": "Ground truth is the best teacher: supervised semantic segmentation inspired by knowledge transfer mechanisms",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/s00530-024-01620-5",
+    "arxiv_id": null,
+    "venue": "Multimedia Systems",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4409829902",
+    "title": "Distillation and prompt in Chinese CLIP model",
+    "year": 2024,
+    "doi": "https://doi.org/10.1145/3718441.3718475",
+    "arxiv_id": null,
+    "venue": "Asia Symposium on Image and Graphics (ASIG)",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4410428374",
+    "title": "Boosting Network Intrusion Detection with Two-Level Ensemble Learning and Knowledge Distillation Approaches",
+    "year": 2024,
+    "doi": "https://doi.org/10.1109/scopes64467.2024.10990972",
+    "arxiv_id": null,
+    "venue": "International Conference on Signal Processing, Communication, Power and Embedded System (SCOPES)",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4411555875",
+    "title": "CPG: Channel Pruning with DFS Guided Grouping for Efficient Medical Image Segmentation",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/978-981-96-6585-3_20",
+    "arxiv_id": null,
+    "venue": "Lecture notes in computer science",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4416159133",
+    "title": "Distill4Geo: Streamlined Knowledge Transfer from Contrastive Weight-Sharing Teachers to Independent, Lightweight View Experts",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/978-981-95-4097-6_37",
+    "arxiv_id": null,
+    "venue": "Communications in computer and information science",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W4416404117",
+    "title": "Iterative Knowledge Distillation: Artificial Neural Network Models Knowledge Cumulation for Increasing End Device Model Performance",
+    "year": 2025,
+    "doi": "https://doi.org/10.1109/icraie65839.2025.11239099",
+    "arxiv_id": null,
+    "venue": "IEEE International Conference on Recent Advances and Innovations in Engineering (ICRAIE)",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7117538493",
+    "title": "Label-enhanced contrastive knowledge distillation",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/s10115-025-02654-5",
+    "arxiv_id": null,
+    "venue": "Knowledge and Information Systems",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7134929200",
+    "title": "Cross-branch knowledge distillation via shallow layer guidance",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s00530-026-02245-6",
+    "arxiv_id": null,
+    "venue": "Multimedia Systems",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7148930685",
+    "title": "MultiScale Knowledge Distillation",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s10994-026-07035-9",
+    "arxiv_id": null,
+    "venue": "Machine Learning",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7152654849",
+    "title": "Contributions to evaluating and improving the faithfulness for text generation",
+    "year": 2025,
+    "doi": "https://doi.org/10.70675/28453a20z78f2z4fa2za6edz700065e69e97",
+    "arxiv_id": null,
+    "venue": null,
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7160426970",
+    "title": "Dual-view collaborative distillation",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s00530-026-02365-z",
+    "arxiv_id": null,
+    "venue": "Multimedia Systems",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7161590871",
+    "title": "A layered self-supervised knowledge distillation framework for efficient image representation learning",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s00607-026-01671-8",
+    "arxiv_id": null,
+    "venue": "Computing",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7171684532",
+    "title": "Hierarchical Neuron Energy Feature Decoupled Distillation for Low-Resolution Face Recognition",
+    "year": 2026,
+    "doi": "https://doi.org/10.3390/electronics15153351",
+    "arxiv_id": null,
+    "venue": "Electronics",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7215070919",
+    "title": "MTP-DP: Multiscale Temporal Patches and Dual-Focus Prompts for LLM-based Multimodal Time Series Forecasting",
+    "year": 2026,
+    "doi": "https://doi.org/10.1109/iccvdm71812.2026.11709145",
+    "arxiv_id": null,
+    "venue": "International Conference on Computer Vision and Data Mining (ICCVDM)",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   },
+   {
+    "openalex_id": "https://openalex.org/W7223357514",
+    "title": "TMDKD: tutor-guided multi-dimensional difficulty-aware knowledge distillation",
+    "year": 2026,
+    "doi": "https://doi.org/10.1007/s00530-026-02726-8",
+    "arxiv_id": null,
+    "venue": "Multimedia Systems",
+    "citationCount": 0,
+    "cites_seed_works": [
+     "W3183222077"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,463 @@
+[
+  {
+    "title": "CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances",
+    "authors": [
+      "Jihoon Tack",
+      "Sangwoo Mo",
+      "Jongheon Jeong",
+      "Jinwoo Shin"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Novelty detection, i.e., identifying whether a given sample is drawn from outside the training distribution, is essential for reliable machine learning. To this end, there have been many attempts at learning a representation well-suited for novelty detection and designing a score based on such representation. In this paper, we propose a simple, yet effective method named contrasting shifted instances (CSI), inspired by the recent success on contrastive learning of visual representations. Specifically, in addition to contrasting a given sample with other instances as in conventional contrastive learning methods, our training scheme contrasts the sample with distributionally-shifted augmentations of itself. Based on this, we propose a new detection score that is specific to the proposed training scheme. Our experiments demonstrate the superiority of our method under various novelty detection scenarios, including unlabeled one-class, unlabeled multi-class and labeled multi-class settings, with various image benchmark datasets. Code and pre-trained models are available at https://github.com/alinlab/CSI.",
+    "url": "http://arxiv.org/abs/2007.08176v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Asymptotically efficient estimators for tail probabilities of extremals of $β$-Jacobi ensembles",
+    "authors": [
+      "Yutao Ma",
+      "Siyu Wang"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "In this paper, we consider the tail probabilities of extremals of $β$-Jacobi ensemble which plays an important role in multivariate analysis. The key steps in constructing estimators rely on the rate functions of large deviations. Therefore, under specific conditions, we consider stretching and shifting transformations applied to the $β$-Jacobi ensemble to ensure that its extremals satisfy the large deviations. The estimator we construct characterize the large deviation behavior and moderate deviation behavior of extremals under different assumptions.",
+    "url": "http://arxiv.org/abs/2409.16868v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Semantic Role Labeling Guided Out-of-distribution Detection",
+    "authors": [
+      "Jinan Zou",
+      "Maihao Guo",
+      "Yu Tian",
+      "Yuhao Lin",
+      "Haiyao Cao",
+      "Lingqiao Liu",
+      "Ehsan Abbasnejad",
+      "Javen Qinfeng Shi"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Identifying unexpected domain-shifted instances in natural language processing is crucial in real-world applications. Previous works identify the out-of-distribution (OOD) instance by leveraging a single global feature embedding to represent the sentence, which cannot characterize subtle OOD patterns well. Another major challenge current OOD methods face is learning effective low-dimensional sentence representations to identify the hard OOD instances that are semantically similar to the in-distribution (ID) data. In this paper, we propose a new unsupervised OOD detection method, namely Semantic Role Labeling Guided Out-of-distribution Detection (SRLOOD), that separates, extracts, and learns the semantic role labeling (SRL) guided fine-grained local feature representations from different arguments of a sentence and the global feature representations of the full sentence using a margin-based contrastive loss. A novel self-supervised approach is also introduced to enhance such global-local feature learning by predicting the SRL extracted role. The resulting model achieves SOTA performance on four OOD benchmarks, indicating the effectiveness of our approach. The code is publicly accessible via \\url{https://github.com/cytai/SRLOOD}.",
+    "url": "http://arxiv.org/abs/2305.18026v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Understanding normalization in contrastive representation learning and out-of-distribution detection",
+    "authors": [
+      "Tai Le-Gia",
+      "Jaehyun Ahn"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Contrastive representation learning has emerged as an outstanding approach for anomaly detection. In this work, we explore the $\\ell_2$-norm of contrastive features and its applications in out-of-distribution detection. We propose a simple method based on contrastive learning, which incorporates out-of-distribution data by discriminating against normal samples in the contrastive layer space. Our approach can be applied flexibly as an outlier exposure (OE) approach, where the out-of-distribution data is a huge collective of random images, or as a fully self-supervised learning approach, where the out-of-distribution data is self-generated by applying distribution-shifting transformations. The ability to incorporate additional out-of-distribution samples enables a feasible solution for datasets where AD methods based on contrastive learning generally underperform, such as aerial images or microscopy images. Furthermore, the high-quality features learned through contrastive learning consistently enhance performance in OE scenarios, even when the available out-of-distribution dataset is not diverse enough. Our extensive experiments demonstrate the superiority of our proposed method under various scenarios, including unimodal and multimodal settings, with various image datasets.",
+    "url": "http://arxiv.org/abs/2312.15288v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "AlgoBench: Benchmarking Algorithmic Adaptation in Code Generation",
+    "authors": [
+      "Xinyuan Song",
+      "Zekun Cai",
+      "Liang Zhao"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "High pass rates on established programming benchmarks such as HumanEval and LiveCodeBench do not always show whether a model can reason about algorithms. Many fixed benchmarks eventually become part of the public training ecosystem through released problem statements, editorials, and generated solutions, allowing later models to improve partly by exposure rather than by stronger algorithmic ability. We introduce ALGOBENCH, a framework that automatically builds novel algorithmic problems from known competitive-programming problems through structured constraint-shifting transformations. Each accepted ALGOBENCH variant is traceable to a source problem, but must make the original reference algorithm fail. Beyond pass@$k$, we introduce complexity-aware metrics -- including OPTT, OPTS, TRAPRATE, GAPT, and CONSENS -- to test whether a solution is not only functionally correct but also asymptotically suitable for the generated problem. Experiments across multiple LLMs and prompting strategies show that performance drops sharply on ALGOBENCH variants, retrieval can increase reuse of the old algorithm, and many correct-looking solutions fail to meet the required complexity. Error analysis shows that failures are mainly algorithmic rather than implementation-level, suggesting that ALGOBENCH evaluates adaptation beyond functional correctness.",
+    "url": "http://arxiv.org/abs/2607.00062v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Shifting Transformation Learning for Out-of-Distribution Detection",
+    "authors": [
+      "Sina Mohseni",
+      "Arash Vahdat",
+      "Jay Yadawa"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Detecting out-of-distribution (OOD) samples plays a key role in open-world and safety-critical applications such as autonomous systems and healthcare. Recently, self-supervised representation learning techniques (via contrastive learning and pretext learning) have shown effective in improving OOD detection. However, one major issue with such approaches is the choice of shifting transformations and pretext tasks which depends on the in-domain distribution. In this paper, we propose a simple framework that leverages a shifting transformation learning setting for learning multiple shifted representations of the training set for improved OOD detection. To address the problem of selecting optimal shifting transformation and pretext tasks, we propose a simple mechanism for automatically selecting the transformations and modulating their effect on representation learning without requiring any OOD training samples. In extensive experiments, we show that our simple framework outperforms state-of-the-art OOD detection models on several image datasets. We also characterize the criteria for a desirable OOD detector for real-world applications and demonstrate the efficacy of our proposed technique against state-of-the-art OOD detection techniques.",
+    "url": "http://arxiv.org/abs/2106.03899v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Why gauge invariance applies to statistical mechanics",
+    "authors": [
+      "Johanna Müller",
+      "Florian Sammüller",
+      "Matthias Schmidt"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "We give an introductory account of the recently identified gauge invariance of the equilibrium statistical mechanics of classical many-body systems [J. Müller et al., Phys. Rev. Lett. Phys. Rev. Lett. 133, 217101 (2024)]. The gauge transformation is a non-commutative shifting operation on phase space that keeps the differential phase space volume element and hence the Gibbs integration measure conserved. When thermally averaged any observable is an invariant, including thermodynamic and structural quantities. Shifting transformations are canonical in the sense of classical mechanics. They also form an infinite-dimensional group with generators of infinitesimal transformations that build a non-commutative Lie algebra. We lay out the connections with the underlying geometry of coordinate displacement and with Noether's theorem. Spatial localization of the shifting yields differential operators that satisfy commutator relationships, which we describe both in purely configurational and in full phase space setups. Standard operator calculus yields corresponding equilibrium hyperforce correlation sum rules for general observables and order parameters. Using Monte Carlos simulations we demonstrate explicitly the gauge invariance for finite shifting. We argue in favour of using the gauge invariance as a statistical mechanical construction principle for obtaining exact results and for formulating smart sampling algorithms.",
+    "url": "http://arxiv.org/abs/2409.14166v3",
+    "doi": "10.1088/1751-8121/adbfe6",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Application of Transformer Impedance Correction Tables in Power Flow Studies",
+    "authors": [
+      "Pooria Dehghanian",
+      "Ju Hee Yeo",
+      "Jessica Wert",
+      "Hanyue Li",
+      "Komal Shetye",
+      "Thomas J. Overbye"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Phase Shifting Transformers (PST) are used to control or block certain flows of real power through phase angle regulation across the device. Its functionality is crucial to special situations such as eliminating loop flow through an area and balancing real power flow between parallel paths. Impedance correction tables are used to model that the impedance of phase shifting transformers often vary as a function of their phase angle shift. The focus of this paper is to consider the modeling errors if the impact of this changing impedance is ignored. The simulations are tested through different scenarios using a 37-bus test case and a 10,000-bus synthetic power grid. The results verify the important role of impedance correction factor to get more accurate and optimal power solutions.",
+    "url": "http://arxiv.org/abs/2009.01382v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Integrable and superintegrable quantum mechanical systems with position dependent masses invariant with respect to one parametric Lie groups. 2. Systems with dilatation and shift symmetries",
+    "authors": [
+      "A. G. Nikitin"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "3d quantum mechanical systems with position dependent masses (PDM) admitting at least one second order integral of motion and symmetries with respect to dilatation or shift transformations are classified. Twenty-seven such systems are specified and the completeness of the classification results is proved.",
+    "url": "http://arxiv.org/abs/2407.20112v3",
+    "doi": "10.1088/1751-8121/adb6de",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Performance and Analysis of the Alchemical Transfer Method for Binding Free Energy Predictions of Diverse Ligands",
+    "authors": [
+      "Lieyang Chen",
+      "Yujie Wu",
+      "Chuanjie Wu",
+      "Ana Silveira",
+      "Woody Sherman",
+      "Huafeng Xu",
+      "Emilio Gallicchio"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "The Alchemical Transfer Method (ATM) is herein validated against the relative binding free energies of a diverse set of protein-ligand complexes. We employed a streamlined setup workflow, a bespoke force field, and the AToM-OpenMM software to compute the relative binding free energies (RBFE) of the benchmark set prepared by Schindler and collaborators at Merck KGaA. This benchmark set includes examples of standard small R-group ligand modifications as well as more challenging scenarios, such as large R-group changes, scaffold hopping, formal charge changes, and charge-shifting transformations. The novel coordinate perturbation scheme and a dual-topology approach of ATM address some of the challenges of single-topology alchemical relative binding free energy methods. Specifically, ATM eliminates the need for splitting electrostatic and Lennard-Jones interactions, atom mapping, defining ligand regions, and post-corrections for charge-changing perturbations. Thus, ATM is simpler and more broadly applicable than conventional alchemical methods, especially for scaffold-hopping and charge-changing transformations. Here, we performed well over 500 relative binding free energy calculations for eight protein targets and found that ATM achieves accuracy comparable to existing state-of-the-art methods, albeit with larger statistical fluctuations. We discuss insights into specific strengths and weaknesses of the ATM method that will inform future deployments. This study confirms that ATM is applicable as a production tool for relative binding free energy (RBFE) predictions across a wide range of perturbation types within a unified, open-source framework.",
+    "url": "http://arxiv.org/abs/2308.08671v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Equivalence of Polychromatic Arm Probabilities on the Square Lattice",
+    "authors": [
+      "Lily Reeves",
+      "Philippe Sosoe"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "We consider 2d critical Bernoulli percolation on the square lattice. We prove an approximate color-switching lemma comparing k-arm probabilities for different polychromatic color sequences. This result is well-known for site percolation on the triangular lattice in [Nolin08]. To handle the complications arising from the dual lattice, we introduce a shifting transformation to convert arms between the primal and dual lattices.",
+    "url": "http://arxiv.org/abs/2009.07029v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Kink in dual dilaton-axion theories with potential",
+    "authors": [
+      "Oleg V. Kechkin"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "The representation in terms of Ernst's complex potential is used to describe and analyze dilaton-axion theories with potential. The set of such systems is divided into pairs of dual systems with respect to the inversion of the Ernst potential. Using duality, a theory is constructed that is invariant with respect to the nonlinear Ehlers transformation. For this theory, a soliton solution is obtained that is dual to a dilaton kink in a system that is invariant with respect to the axion shift transformation.",
+    "url": "http://arxiv.org/abs/2308.11046v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Study of Directional Entropy Arising from \\(\\mathbb{Z} \\times \\mathbb{Z}_+\\) Semigroup Actions",
+    "authors": [
+      "Hasan Akin"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "In this chapter, we investigate directional entropy for semigroup actions generated by one-dimensional linear cellular automata (LCAs) and the shift transformation on the compact metric space $\\mathbb{Z}_m^{\\mathbb{N}}$. This work provides a systematic study of both \\emph{topological directional entropy} (TDE) within Milnor's geometric framework and \\emph{measure-theoretic directional entropy} via the Kolmogorov--Sinai formalism.",
+    "url": "http://arxiv.org/abs/2505.10428v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Efficient Attention-free Video Shift Transformers",
+    "authors": [
+      "Adrian Bulat",
+      "Brais Martinez",
+      "Georgios Tzimiropoulos"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "This paper tackles the problem of efficient video recognition. In this area, video transformers have recently dominated the efficiency (top-1 accuracy vs FLOPs) spectrum. At the same time, there have been some attempts in the image domain which challenge the necessity of the self-attention operation within the transformer architecture, advocating the use of simpler approaches for token mixing. However, there are no results yet for the case of video recognition, where the self-attention operator has a significantly higher impact (compared to the case of images) on efficiency. To address this gap, in this paper, we make the following contributions: (a) we construct a highly efficient \\& accurate attention-free block based on the shift operator, coined Affine-Shift block, specifically designed to approximate as closely as possible the operations in the MHSA block of a Transformer layer. Based on our Affine-Shift block, we construct our Affine-Shift Transformer and show that it already outperforms all existing shift/MLP--based architectures for ImageNet classification. (b) We extend our formulation in the video domain to construct Video Affine-Shift Transformer (VAST), the very first purely attention-free shift-based video transformer. (c) We show that VAST significantly outperforms recent state-of-the-art transformers on the most popular action recognition benchmarks for the case of models with low computational and memory footprint. Code will be made available.",
+    "url": "http://arxiv.org/abs/2208.11108v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Compact Snapshot Spectral Imaging with Calibration-Free Aperture Diffraction",
+    "authors": [
+      "Tao Lv",
+      "Quan Yuan",
+      "Shiqiao Li",
+      "Chenglong Huang",
+      "Linsen Chen",
+      "Chongde Zi",
+      "Shuming Wang",
+      "Xun Cao"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Snapshot Spectral Imaging (SSI) provides high-dimensional temporal-spatial-spectral observation to uncover intrinsic physical characteristics. However, its complex system and repetitive calibration requirements hinder edge applications. Here, we propose a compact, cost-effective, calibration-free SSI method, Aperture Diffraction Imaging Spectrometer (ADIS), which consists only of a diffractive lens with a binary mask and a Bayer-filtered sensor, requiring no additional physical footprint compared to standard RGB cameras. ADIS disperses and multiplexes wavelengths, mapping energy to distinct sensor locations, enabling full-resolution recovery from superpixel-level encodings. ADIS directly leverages theoretically computed PSFs to enable calibration-free spectral reconstruction, while tolerating lens-dependent variations across different optical configurations and bridging the gap between simulation and reality. To achieve SSI by solving a sparsely-constrained inverse problem, we introduce the Orthogonal Diffraction-Aware Unfolding Framework (ODAUF) with Voxel Shift Transformer (VST) for improved orthogonal diffraction perception. Integrating VST into ODAUF forms the efficient Orthogonal Diffraction-Aware Unfolding Voxel Shift Transformer (ODAUVST), delivering excellent recovery and reduced parameters. By elaborating on theory, systematic and comprehensive comparing, and demonstrating real SSI results, we validate the superiority of ADIS, achieving calibration-free full-resolution SSI within a commercial camera footprint.",
+    "url": "http://arxiv.org/abs/2608.29230v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A global DC branch model incorporating power system flexibility",
+    "authors": [
+      "F. M. Gatta",
+      "A. Geri",
+      "S. Lauria",
+      "M. Maccioni",
+      "L. Nati"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "In this letter we propose a generalized branch model to be used in DC optimal power flow (DCOPF) applications. Besides AC lines and transformers, the formulation allows for representing variable susceptance branches, phase shifting transformers, HVDC lines, zero impedance lines and open branches. The possibility to model branches with concurrently variable susceptance and controllable phase shift angles is also provided. The model is suited for use in DCOPF formulations aimed at the optimization of remedial actions so as to exploit power system flexibility; applications to small-, medium- and large-scale systems are presented to this purpose.",
+    "url": "http://arxiv.org/abs/2104.07746v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Chiral Anomaly of Kogut-Susskind Fermion in the (3+1)-dimensional Hamiltonian formalism",
+    "authors": [
+      "Shoto Aoki",
+      "Yoshio Kikukawa",
+      "Toshinari Takemoto"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "We consider Kogut-Susskind fermions (also known as staggered fermions) in a $(3+1)$-dimensional Hamiltonian formalism and examine a chiral transformation and its associated chiral anomaly. The Hamiltonian of the massless Kogut-Susskind fermion has symmetry under the shift transformations in each space direction $S_k \\, (k=1,2,3)$, and the product of the three shift transformations in particular (the odd shifts in general) may be regarded as a unitary discrete chiral transformation, modulo two-site translations. The hermitian part of the transformation kernel $Γ= i S_1 S_2 S_3$ can define an axial charge as $Q_A = (1/2)\\sum_x χ^\\dagger(x) \\left(Γ+Γ^\\dagger \\right)χ(x)$, which is non-onsite, nonquantized, and commutative with the vector charge, analogous to $\\tilde{Q}_A = (1/2) \\sum_n ( χ^\\dagger_n χ_{n+1} + χ^\\dagger_{n+1} χ_{n} )$ for the $(1+1)$ dimensional Kogut-Susskind fermion. However, our $Q_A$ cannot be expressed in terms of any quantized charges in a generalized Onsager algebra. Although $Q_A$ does not commute with the fermion Hamiltonian in general when coupled to background link gauge fields, we show that they become commutative for a class of $U(1)$ link configurations carrying nontrivial magnetic and electric fields. We then verify numerically that the vacuum expectation value of $Q_A$ satisfies the anomalous conservation law of axial charge in the continuum two-flavor theory under an adiabatic evolution of the link gauge field.",
+    "url": "http://arxiv.org/abs/2511.06198v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Virasoro Algebra and Asymptotic Symmetries from Fractional Bosonic Strings",
+    "authors": [
+      "Victor Alfonzo Diaz"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "The aim of this work is to further study the fractional bosonic string theory. In particular, we wrote the energy-momentum tensor in the fractional conformal gauge and study their symmetries. We introduced the Virasoro operators of all orders. In fact, we found the same $L_0 (\\widetilde{L}_0)$ operator originally defined in the work of fractional bosonic string up to a shift transformation. Also, we compute the algebra of our Fractional Virasoro Operators, finding that the satifies the $Witt$ algebra. Lastly, we showed that in the boundary of our theory we recover the lost conservation law associated to $τ$-diffeomorphism, proving that we have Poincaré invariance at the boundary.",
+    "url": "http://arxiv.org/abs/2009.11316v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GraphDF: A Discrete Flow Model for Molecular Graph Generation",
+    "authors": [
+      "Youzhi Luo",
+      "Keqiang Yan",
+      "Shuiwang Ji"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "We consider the problem of molecular graph generation using deep models. While graphs are discrete, most existing methods use continuous latent variables, resulting in inaccurate modeling of discrete graph structures. In this work, we propose GraphDF, a novel discrete latent variable model for molecular graph generation based on normalizing flow methods. GraphDF uses invertible modulo shift transforms to map discrete latent variables to graph nodes and edges. We show that the use of discrete latent variables reduces computational costs and eliminates the negative effect of dequantization. Comprehensive experimental results show that GraphDF outperforms prior methods on random generation, property optimization, and constrained optimization tasks.",
+    "url": "http://arxiv.org/abs/2102.01189v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Irrational-window-filter projection method and application to quasiperiodic Schrödinger eigenproblems",
+    "authors": [
+      "Kai Jiang",
+      "Xueyang Li",
+      "Yao Ma",
+      "Juan Zhang",
+      "Pingwen Zhang",
+      "Qi Zhou"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "In this paper, we propose a new algorithm, the irrational-window-filter projection method (IWFPM), for quasiperiodic systems with concentrated spectral point distribution. Based on the projection method (PM), IWFPM filters out dominant spectral points by defining an irrational window and uses a corresponding index-shift transform to make the FFT available. The error analysis on the function approximation level is also given. We apply IWFPM to 1D, 2D, and 3D quasiperiodic Schrödinger eigenproblems (QSEs) to demonstrate its accuracy and efficiency. IWFPM exhibits a significant computational advantage over PM for both extended and localized quantum states. More importantly, by using IWFPM, the existence of Anderson localization in 2D and 3D QSEs is numerically verified.",
+    "url": "http://arxiv.org/abs/2404.04507v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Fixed-Point Algorithm for the AC Power Flow Problem",
+    "authors": [
+      "Liangjie Chen",
+      "John W. Simpson-Porco"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "This paper presents an algorithm that solves the AC power flow problem for balanced, three-phase transmission systems at steady state. The algorithm extends the \"fixed-point power flow\" algorithm in the literature to include transmission losses, phase-shifting transformers, and a distributed slack bus model. The algorithm is derived by vectorizing the component-wise AC power flow equations and manipulating them into a novel equivalent fixed-point form. Preliminary theoretical results guaranteeing convergence are reported for the case of a two-bus power system. We validate the algorithm through extensive simulations on test systems of various sizes under different loading levels, and compare its convergence behavior against those of classic power flow algorithms.",
+    "url": "http://arxiv.org/abs/2210.01310v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Directional dependence of the plasmonic gain and nonreciprocity in drift-current biased graphene",
+    "authors": [
+      "Tiago A. Morgado",
+      "Mário G. Silveirinha"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Here, we investigate the nonreciprocal propagation and amplification of surface plasmons in drift-current biased graphene, using both Galilean and relativistic-type Doppler shift transformations of the graphene's conductivity. Consistent with previous studies, both conductivity models predict strongly nonreciprocal propagation of surface plasmons due to the drag effect caused by the drifting electrons. In particular, the Galilean Doppler shift model leads to stronger spectral asymmetries in the plasmon dispersion with regimes of unidirectional propagation. Remarkably, it is shown that both conductivity models predict regimes of nonreciprocal plasmon amplification in a wide angular sector of in-plane directions when the drift-current biased graphene sheet is coupled to a plasmonic substrate (namely, SiC), with the plasmon amplification rate being substantially higher for the relativistic Doppler shift model.",
+    "url": "http://arxiv.org/abs/2211.00401v1",
+    "doi": "10.1515/nanoph-2022-0451",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Maximal escape rate for shifts",
+    "authors": [
+      "Claudio Bonanno",
+      "Giampaolo Cristadoro",
+      "Marco Lenci"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "We consider the shift transformation on the space of infinite sequences over a finite alphabet endowed with the invariant product measure, and examine the presence of a \\emph{hole} on the space. The holes we study are specified by the sequences that do not contain a given finite word as initial sub-string. The measure of the set of sequences that do not fall into the hole in the first $n$ iterates of the shift is known to decay exponentially with $n$, and its exponential rate is called \\emph{escape rate}. In this paper we provide a complete characterization of the holes with maximal escape rate. In particular we show that, contrary to the case of equiprobable symbols, ordering the holes by their escape rate corresponds to neither the order by their measure nor by the length of the shortest periodic orbit they contain. Finally, we adapt our technique to the case of shifts endowed with Markov measures, where preliminary results show that a more intricate situation is to be expected.",
+    "url": "http://arxiv.org/abs/2112.14248v2",
+    "doi": "10.3934/dcds.2022135",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Congruences of shifted Jack Littlewood-Richardson coefficients",
+    "authors": [
+      "Ryan Mickler"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "The shifted Jack Littlewood-Richardson coefficients generalize the ordinary Jack coefficients and are Laurent polynomials in the Jack parameter $α$. We prove a previously conjectured congruence: coefficients indexed by triples differing by a single box move are congruent modulo the shared $α$-hook at the pivot. We also prove a shifted Macdonald analogue, with a power-of-$t$ twist, and establish that the normalized shifted Macdonald coefficients are Laurent polynomials in $q$ and $t$. The proofs combine coincidences of shifted coordinates with Laurent-preserving shift transforms, and the Macdonald input uses Knop's inversion formula and the integrality of the Bergeron-Garsia-Haiman-Tesler operators. Finally, we realize the Jack and Macdonald congruences as necessary edge conditions on Hilbert schemes of points, in equivariant cohomology and equivariant $K$-theory, respectively. In the Macdonald case a tautological determinant twist accounts for the power-of-$t$ normalization",
+    "url": "http://arxiv.org/abs/2606.17822v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Exploring Kernel Transformations for Implicit Neural Representations",
+    "authors": [
+      "Sheng Zheng",
+      "Chaoning Zhang",
+      "Dongshen Han",
+      "Fachrina Dewi Puspitasari",
+      "Xinhong Hao",
+      "Yang Yang",
+      "Heng Tao Shen"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Implicit neural representations (INRs), which leverage neural networks to represent signals by mapping coordinates to their corresponding attributes, have garnered significant attention. They are extensively utilized for image representation, with pixel coordinates as input and pixel values as output. In contrast to prior works focusing on investigating the effect of the model's inside components (activation function, for instance), this work pioneers the exploration of the effect of kernel transformation of input/output while keeping the model itself unchanged. A byproduct of our findings is a simple yet effective method that combines scale and shift to significantly boost INR with negligible computation overhead. Moreover, we present two perspectives, depth and normalization, to interpret the performance benefits caused by scale and shift transformation. Overall, our work provides a new avenue for future works to understand and improve INR through the lens of kernel transformation.",
+    "url": "http://arxiv.org/abs/2504.04728v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Two-dimensional pauli equation in noncommutative phase-space",
+    "authors": [
+      "Ilyas Haouam"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "In this paper, we investigated the Pauli equation in a two-dimensional noncommutative phase-space by considering a constant magnetic field perpendicular to the plane. We mapped the noncommutative problem to the equivalent commutative one through a set of two-dimensional Bopp-shift transformation. The energy spectrum and the wave function of the two-dimensional noncommutative Pauli equation are found, where the problem in question has been mapped to the Landau problem. Further, within the classical limit, we have derived the noncommutative semi-classical partition function of the two-dimensional Pauli system of one-particle and N-particle systems. Consequently, we have studied its thermodynamic properties, i.e. the Helmholtz free energy, mean energy, specific heat and entropy in noncommutative and commutative phase-spaces. The impact of the phase-space noncommutativity on the Pauli system is successfully examined.",
+    "url": "http://arxiv.org/abs/2012.06986v2",
+    "doi": "10.15407/ujpe66.9.771",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Dynamical entropy of probability measures on infinite product spaces",
+    "authors": [
+      "Maysam Maysami Sadr",
+      "Mina Shahrestani",
+      "Danial Bouzarjomehri Amnieh"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "The aim of this note is to introduce a notion of dynamical entropy, which we call infinite-product entropy, for probability measures on (countable) infinite cartesian product of any measurable space with itself. The idea behind the definition is that any infinite product space may be considered as a type of dynamical object. We have considered in a previous note a similar idea in topological dynamics to define a notion of dynamical entropy for arbitrary subsets of infinite products of compact topological spaces. We consider some basic properties of infinite-product entropy, e.g. shift invariance, convexity, subadditivity with respect to product of probability measures, the behavior with respect to dilation and restriction. We show that for a translation invariant probability measure the infinite-product entropy coincides with the usual entropy of a shift transformation. We consider some basic examples and computations. We also consider a variational inequality related to infinite-product entropy and topological entropy of subsets of infinite product spaces.",
+    "url": "http://arxiv.org/abs/2110.01541v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Ghost Policies: A New Paradigm for Understanding and Learning from Failure in Deep Reinforcement Learning",
+    "authors": [
+      "Xabier Olaz"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Deep Reinforcement Learning (DRL) agents often exhibit intricate failure modes that are difficult to understand, debug, and learn from. This opacity hinders their reliable deployment in real-world applications. To address this critical gap, we introduce ``Ghost Policies,'' a concept materialized through Arvolution, a novel Augmented Reality (AR) framework. Arvolution renders an agent's historical failed policy trajectories as semi-transparent ``ghosts'' that coexist spatially and temporally with the active agent, enabling an intuitive visualization of policy divergence. Arvolution uniquely integrates: (1) AR visualization of ghost policies, (2) a behavioural taxonomy of DRL maladaptation, (3) a protocol for systematic human disruption to scientifically study failure, and (4) a dual-learning loop where both humans and agents learn from these visualized failures. We propose a paradigm shift, transforming DRL agent failures from opaque, costly errors into invaluable, actionable learning resources, laying the groundwork for a new research field: ``Failure Visualization Learning.''",
+    "url": "http://arxiv.org/abs/2506.12366v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Thin Sheet Volume Integral Equation Solver for Simulation of Bianisotropic Metasurfaces",
+    "authors": [
+      "Sebastian Celis Sierra",
+      "Meruyert Khamitova",
+      "Ran Zhao",
+      "Sadeed Bin Sayed",
+      "Hakan Bagci"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "A thin-sheet (TS) volume integral equation (VIE) formulation incorporating generalized sheet transition conditions (GSTCs) is presented for the simulation of three-dimensional (3D) bianisotropic metasurfaces. The metasurface is represented as an equivalent TS, with its constitutive tensors derived from the GSTC susceptibility tensors. Invoking the TS approximation, the governing VIEs are reduced to surface integral equations (SIEs), in which tangential and normal flux density components are treated as distinct sets of unknowns and discretized using Rao-Wilton-Glisson and pulse basis functions, respectively. In contrast to conventional GSTC approaches based on conventional SIEs, which represent only tangential fields, the proposed framework rigorously enforces the bianisotropic GSTCs, including normal field interactions, while retaining the flux-based VIE character of the formulation. Numerical examples demonstrate the accuracy and robustness of the proposed TS-VIE-GSTC solver for polarization rotation, perfect reflection, multi-directional attenuation, and oblique phase-shift transformation.",
+    "url": "http://arxiv.org/abs/2604.21474v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "MultiGhostBench: A Multilingual Benchmark for Long-Form LLM-Generated Text Attribution under Distribution Shifts",
+    "authors": [
+      "Matteo Greco",
+      "Anudeex Shetty",
+      "Andrea Tagarelli",
+      "Jey Han Lau"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "While existing work on LLM authorship attribution (AA) has made progress, available benchmarks remain limited, often focusing on English, controlled settings, or relatively outdated models, with the few multilingual studies considering only relatively short texts. We introduce MultiGhostBench, a multilingual benchmark comprising 928 books generated by five recent LLMs across six languages and three scripts, with an average length of approximately 59K words per book. The benchmark supports evaluation under domain, author, and language shifts. Evaluation of representative AA methods shows that no single method consistently performs best across settings, and performance generally degrades under distribution shifts. Transformer-based detectors can retain generator-related information across languages, although transfer effectiveness varies by language pair, whereas statistical and fingerprint-based detectors are more language-dependent. We envision MultiGhostBench as a valuable resource for the development and evaluation of robust AA methods. The dataset and code can be found at https://github.com/GrecoMT/MultiGhostBench.",
+    "url": "http://arxiv.org/abs/2609.02379v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

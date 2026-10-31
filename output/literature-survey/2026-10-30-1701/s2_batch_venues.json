@@ -1,0 +1,3280 @@
+{
+ "request": "POST https://api.semanticscholar.org/graph/v1/paper/batch?fields=title,venue,year,externalIds,citationCount",
+ "n_ids": 254,
+ "status": "ok",
+ "data": {
+  "2106.08601": {
+   "paperId": "5bd0e1ec6abeffe6a1a91f63849a297ed41c36b3",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2106-08601",
+    "ArXiv": "2106.08601",
+    "CorpusId": 235446363
+   },
+   "title": "Self-supervised GANs with Label Augmentation",
+   "venue": "Neural Information Processing Systems",
+   "year": 2021,
+   "citationCount": 21
+  },
+  "2403.07265": {
+   "paperId": "23a4d90993453fb3f4484f7f87aba1e0aefd3583",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2403-07265",
+    "ArXiv": "2403.07265",
+    "DOI": "10.48550/arXiv.2403.07265",
+    "CorpusId": 268364355
+   },
+   "title": "Self-supervised Contrastive Learning for Implicit Collaborative Filtering",
+   "venue": "arXiv.org",
+   "year": 2024,
+   "citationCount": 2
+  },
+  "2411.10423": {
+   "paperId": "74ea2d4d98d51e57bc37c348c32ec73cfb3cbec3",
+   "externalIds": {
+    "ArXiv": "2411.10423",
+    "DBLP": "journals/corr/abs-2411-10423",
+    "DOI": "10.1007/978-3-031-80136-5_9",
+    "CorpusId": 274116919
+   },
+   "title": "Back to Supervision: Boosting Word Boundary Detection Through Frame Classification",
+   "venue": "International Conference on Pattern Recognition",
+   "year": 2024,
+   "citationCount": 0
+  },
+  "2302.10204": {
+   "paperId": "5b5d896ee06a41a43870ffd5b041d68b5ba788f9",
+   "externalIds": {
+    "DBLP": "conf/icdar/TualACDC23",
+    "ArXiv": "2302.10204",
+    "DOI": "10.48550/arXiv.2302.10204",
+    "CorpusId": 257050617
+   },
+   "title": "A Benchmark of Nested Named Entity Recognition Approaches in Historical Structured Documents",
+   "venue": "IEEE International Conference on Document Analysis and Recognition",
+   "year": 2023,
+   "citationCount": 10
+  },
+  "2106.04921": {
+   "paperId": "5fa7e6ed6b0c993d7023b46a498aa43d0dc6f3ca",
+   "externalIds": {
+    "ArXiv": "2106.04921",
+    "DBLP": "journals/corr/abs-2106-04921",
+    "DOI": "10.1109/ACCESS.2022.3233104",
+    "CorpusId": 235376962
+   },
+   "title": "Self-Supervised Feature Enhancement: Applying Internal Pretext Task to Supervised Learning",
+   "venue": "IEEE Access",
+   "year": 2021,
+   "citationCount": 3
+  },
+  "2106.04922": {
+   "paperId": "d41e6c63b62fe2ed9e4865c2ea0cf4c7f1cd218a",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2106-04922",
+    "ArXiv": "2106.04922",
+    "CorpusId": 235376878
+   },
+   "title": "Self-supervision of Feature Transformation for Further Improving Supervised Learning",
+   "venue": "arXiv.org",
+   "year": 2021,
+   "citationCount": 2
+  },
+  "1905.12236": {
+   "paperId": "8faf7d85cc4f95be0ea76a5d496bdd23294d2db9",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-1905-12236",
+    "ArXiv": "1905.12236",
+    "MAG": "2792166563",
+    "DOI": "10.1109/TBDATA.2018.2797977",
+    "CorpusId": 56767824
+   },
+   "title": "Kernel-Induced Label Propagation by Mapping for Semi-Supervised Classification",
+   "venue": "IEEE Transactions on Big Data",
+   "year": 2019,
+   "citationCount": 38
+  },
+  "2209.02881": {
+   "paperId": "cac7af9c12d9da146787b68df749d1487a6a2479",
+   "externalIds": {
+    "ArXiv": "2209.02881",
+    "DBLP": "conf/icip/BoonliaDFAM22",
+    "DOI": "10.1109/ICIP46576.2022.9898059",
+    "CorpusId": 252110951
+   },
+   "title": "Improving Self-Supervised Learning for Out-Of-Distribution Task via Auxiliary Classifier",
+   "venue": "International Conference on Information Photonics",
+   "year": 2022,
+   "citationCount": 5
+  },
+  "2008.00305": {
+   "paperId": "664a42d19faf669c03ce05bda2e48a52efc90e1f",
+   "externalIds": {
+    "DBLP": "conf/3dim/PoursaeedJQXK20",
+    "MAG": "3046762217",
+    "ArXiv": "2008.00305",
+    "DOI": "10.1109/3DV50981.2020.00112",
+    "CorpusId": 220935803
+   },
+   "title": "Self-Supervised Learning of Point Clouds via Orientation Estimation",
+   "venue": "International Conference on 3D Vision",
+   "year": 2020,
+   "citationCount": 144
+  },
+  "1907.10915": {
+   "paperId": "cafcee20d282a346e923965cfad8d689f4c6c92a",
+   "externalIds": {
+    "MAG": "2964126011",
+    "DBLP": "journals/corr/abs-1907-10915",
+    "ArXiv": "1907.10915",
+    "DOI": "10.1109/ACCESS.2019.2949697",
+    "CorpusId": 198897554
+   },
+   "title": "Self-Supervised Domain Adaptation for Computer Vision Tasks",
+   "venue": "IEEE Access",
+   "year": 2019,
+   "citationCount": 161
+  },
+  "2004.00161": {
+   "paperId": "e199a1d8269aab8b61d81ed071fbcfb257fe6e53",
+   "externalIds": {
+    "MAG": "3014916886",
+    "DBLP": "journals/corr/abs-2004-00161",
+    "ArXiv": "2004.00161",
+    "CorpusId": 214743351
+   },
+   "title": "Towards Lifelong Self-Supervision For Unpaired Image-to-Image Translation",
+   "venue": "arXiv.org",
+   "year": 2020,
+   "citationCount": 2
+  },
+  "2210.09866": {
+   "paperId": "2a5bfb60c2ed873ee1a63bd6982f928ba23fcf4c",
+   "externalIds": {
+    "ArXiv": "2210.09866",
+    "DBLP": "conf/eccv/AddepalliBDB22",
+    "DOI": "10.48550/arXiv.2210.09866",
+    "CorpusId": 252968148
+   },
+   "title": "Towards Efficient and Effective Self-Supervised Learning of Visual Representations",
+   "venue": "European Conference on Computer Vision",
+   "year": 2022,
+   "citationCount": 10
+  },
+  "2006.15919": {
+   "paperId": "1a1ba50403a2cc0006679515b1f5d7a06708ce7e",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2006-15919",
+    "ArXiv": "2006.15919",
+    "MAG": "3037051051",
+    "DOI": "10.1109/WACV48630.2021.00270",
+    "CorpusId": 220250552
+   },
+   "title": "Improving Few-Shot Learning using Composite Rotation based Auxiliary Task",
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "year": 2020,
+   "citationCount": 10
+  },
+  "2311.07461": {
+   "paperId": "38c541660c94e813a7e88491bea1bb8b36be0ec9",
+   "externalIds": {
+    "ArXiv": "2311.07461",
+    "CorpusId": 265150153
+   },
+   "title": "DIRA-SS:Dynamic Domain Incremental Regularised Adaptation -- Self-Supervised",
+   "venue": "",
+   "year": 2023,
+   "citationCount": 0
+  },
+  "2006.06614": {
+   "paperId": "6ae7f9743936e13fd8183ddc2174c724b63eced9",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2006-06614",
+    "ArXiv": "2006.06614",
+    "MAG": "3035317107",
+    "DOI": "10.1007/978-3-030-69538-5_37",
+    "CorpusId": 219573703
+   },
+   "title": "MatchGAN: A Self-Supervised Semi-Supervised Conditional Generative Adversarial Network",
+   "venue": "Asian Conference on Computer Vision",
+   "year": 2020,
+   "citationCount": 12
+  },
+  "2311.10319": {
+   "paperId": "aa388e5aac27201492f6ac317f7bf7982aa7887e",
+   "externalIds": {
+    "ArXiv": "2311.10319",
+    "DBLP": "journals/corr/abs-2311-10319",
+    "PubMedCentral": "11088676",
+    "DOI": "10.1038/s41598-024-61822-9",
+    "CorpusId": 265281091,
+    "PubMed": "38734825"
+   },
+   "title": "Shifting to machine supervision: annotation-efficient semi and self-supervised learning for automatic medical image segmentation and classification",
+   "venue": "Scientific Reports",
+   "year": 2023,
+   "citationCount": 26
+  },
+  "2005.11437": {
+   "paperId": "68d6b024891a981f349016def772b90e116ea1af",
+   "externalIds": {
+    "MAG": "3026419801",
+    "ArXiv": "2005.11437",
+    "DBLP": "conf/cvpr/ZhuMKG20",
+    "DOI": "10.1109/cvpr42600.2020.00657",
+    "CorpusId": 218870314
+   },
+   "title": "S3VAE: Self-Supervised Sequential VAE for Representation Disentanglement and Data Generation",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2020,
+   "citationCount": 118
+  },
+  "2303.18106": {
+   "paperId": "2c196b5c281f34e6d6bef8b10898ed1d1f45119c",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2303-18106",
+    "ArXiv": "2303.18106",
+    "DOI": "10.48550/arXiv.2303.18106",
+    "CorpusId": 257900918
+   },
+   "title": "Automatic Detection of Out-of-body Frames in Surgical Videos for Privacy Protection Using Self-supervised Learning and Minimal Labels",
+   "venue": "J. Medical Robotics Res.",
+   "year": 2023,
+   "citationCount": 2
+  },
+  "2003.02824": {
+   "paperId": "bc55547093065ce808d13c55c8baff334d197493",
+   "externalIds": {
+    "MAG": "3034373833",
+    "DBLP": "conf/cvpr/ChenLBAK20",
+    "ArXiv": "2003.02824",
+    "DOI": "10.1109/cvpr42600.2020.00947",
+    "CorpusId": 212414964
+   },
+   "title": "Action Segmentation With Joint Self-Supervised Temporal Domain Adaptation",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2020,
+   "citationCount": 147
+  },
+  "2007.13018": {
+   "paperId": "d0baf60fe783f320f8d78833e29d55f36998bd7d",
+   "externalIds": {
+    "DBLP": "journals/iotj/SaeedSOL21",
+    "MAG": "3098250197",
+    "ArXiv": "2007.13018",
+    "DOI": "10.1109/JIOT.2020.3009358",
+    "CorpusId": 220793490
+   },
+   "title": "Federated Self-Supervised Learning of Multisensor Representations for Embedded Intelligence",
+   "venue": "IEEE Internet of Things Journal",
+   "year": 2020,
+   "citationCount": 135
+  },
+  "2407.10550": {
+   "paperId": "ae9031848f86409f94f880a9d3d1ff9b4b76810d",
+   "externalIds": {
+    "ArXiv": "2407.10550",
+    "DBLP": "conf/eccv/ZhangXLLLG24",
+    "DOI": "10.48550/arXiv.2407.10550",
+    "CorpusId": 271212860
+   },
+   "title": "Learning Natural Consistency Representation for Face Forgery Video Detection",
+   "venue": "European Conference on Computer Vision",
+   "year": 2024,
+   "citationCount": 50
+  },
+  "1907.11879": {
+   "paperId": "1fbb44d29e8ae9ad15fa2a08e53e7d6606629cb4",
+   "externalIds": {
+    "DBLP": "journals/imwut/SaeedOL19",
+    "ArXiv": "1907.11879",
+    "MAG": "3099025572",
+    "DOI": "10.1145/3328932",
+    "CorpusId": 195357258
+   },
+   "title": "Multi-task Self-Supervised Learning for Human Activity Detection",
+   "venue": "Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies",
+   "year": 2019,
+   "citationCount": 352
+  },
+  "2108.12545": {
+   "paperId": "8923cf67bf9c199717558d70d08e3483dfbc5d8d",
+   "externalIds": {
+    "DBLP": "journals/ijcv/HoyerDWCG23",
+    "ArXiv": "2108.12545",
+    "DOI": "10.1007/s11263-023-01799-6",
+    "CorpusId": 263282818
+   },
+   "title": "Improving Semi-Supervised and Domain-Adaptive Semantic Segmentation with Self-Supervised Depth Estimation",
+   "venue": "International Journal of Computer Vision",
+   "year": 2021,
+   "citationCount": 56
+  },
+  "1910.05872": {
+   "paperId": "88d08a5bd00a301455e0f6a454642550775fb427",
+   "externalIds": {
+    "MAG": "2979927723",
+    "DBLP": "journals/corr/abs-1910-05872",
+    "ArXiv": "1910.05872",
+    "CorpusId": 204509054
+   },
+   "title": "Rethinking Data Augmentation: Self-Supervision and Self-Distillation",
+   "venue": "arXiv.org",
+   "year": 2019,
+   "citationCount": 68
+  },
+  "2510.23484": {
+   "paperId": "881a46e531cd7107660e852cf01842b6737a7f9b",
+   "externalIds": {
+    "DBLP": "conf/nips/MordacqLKO25",
+    "ArXiv": "2510.23484",
+    "DOI": "10.48550/arXiv.2510.23484",
+    "CorpusId": 282390243
+   },
+   "title": "T-REGS: Minimum Spanning Tree Regularization for Self-Supervised Learning",
+   "venue": "Neural Information Processing Systems",
+   "year": 2025,
+   "citationCount": 2
+  },
+  "2103.01315": {
+   "paperId": "04733e633493d5adc31f5f507ebf54a5e509fae4",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2103-01315",
+    "ArXiv": "2103.01315",
+    "DOI": "10.1109/CVPR46437.2021.01069",
+    "CorpusId": 232092147
+   },
+   "title": "Exploring Complementary Strengths of Invariant and Equivariant Representations for Few-Shot Learning",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2021,
+   "citationCount": 143
+  },
+  "2408.01977": {
+   "paperId": "af1188140b278b446bd2f6740395ad8960813d5e",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2408-01977",
+    "ArXiv": "2408.01977",
+    "DOI": "10.48550/arXiv.2408.01977",
+    "CorpusId": 271710093
+   },
+   "title": "Label Augmentation for Neural Networks Robustness",
+   "venue": "CoLLAs",
+   "year": 2024,
+   "citationCount": 2
+  },
+  "2212.14266": {
+   "paperId": "85ca3f50c60aa13237bfa2d46d9fc3c42ef5049c",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2212-14266",
+    "ArXiv": "2212.14266",
+    "DOI": "10.48550/arXiv.2212.14266",
+    "CorpusId": 255340475
+   },
+   "title": "Sequence Generation with Label Augmentation for Relation Extraction",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "year": 2022,
+   "citationCount": 29
+  },
+  "2609.16077": {
+   "paperId": "d2bc3792775d425b742fd1139304140c9f1e224a",
+   "externalIds": {
+    "ArXiv": "2609.16077",
+    "DOI": "10.1145/3776591.3837044",
+    "CorpusId": 292028495
+   },
+   "title": "Pseudo-Label Augmentation for Affect Sensing in Small Collaborative Groups",
+   "venue": "Companion Publication of the 28th International Conference on Multimodal Interaction",
+   "year": 2026,
+   "citationCount": 1
+  },
+  "2103.07531": {
+   "paperId": "2c0ccf919d5347b87677e7a16a3ba5e555f51710",
+   "externalIds": {
+    "DBLP": "conf/cvpr/Qiao021",
+    "ArXiv": "2103.07531",
+    "DOI": "10.1109/CVPR46437.2021.00672",
+    "CorpusId": 232233777
+   },
+   "title": "Uncertainty-guided Model Generalization to Unseen Domains",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2021,
+   "citationCount": 79
+  },
+  "2106.03419": {
+   "paperId": "77cd3ae8a0b9ef6865d5324a4d62280e6f7a1053",
+   "externalIds": {
+    "ArXiv": "2106.03419",
+    "DBLP": "journals/corr/abs-2106-03419",
+    "DOI": "10.21437/interspeech.2021-958",
+    "CorpusId": 235358651
+   },
+   "title": "Data Augmentation Methods for End-to-end Speech Recognition on Distant-Talk Scenarios",
+   "venue": "Interspeech",
+   "year": 2021,
+   "citationCount": 13
+  },
+  "2305.08344": {
+   "paperId": "06c4954ec7201e4217f5d15a32437d00f3ff938d",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2305-08344",
+    "ArXiv": "2305.08344",
+    "DOI": "10.48550/arXiv.2305.08344",
+    "CorpusId": 258686599
+   },
+   "title": "Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation",
+   "venue": "arXiv.org",
+   "year": 2023,
+   "citationCount": 2
+  },
+  "2402.06855": {
+   "paperId": "d5c037f3e6fe39d02e3e34b3f250606adae60d40",
+   "externalIds": {
+    "DBLP": "conf/iclr/Chidambaram025a",
+    "ArXiv": "2402.06855",
+    "DOI": "10.48550/arXiv.2402.06855",
+    "CorpusId": 267627172
+   },
+   "title": "For Better or For Worse? Learning Minimum Variance Features With Label Augmentation",
+   "venue": "International Conference on Learning Representations",
+   "year": 2024,
+   "citationCount": 3
+  },
+  "2409.16239": {
+   "paperId": "c977456d8b2c84d57ba8080c4a6dad9b65e0f84a",
+   "externalIds": {
+    "DBLP": "conf/wacv/KangLS25",
+    "ArXiv": "2409.16239",
+    "DOI": "10.1109/WACV61041.2025.00149",
+    "CorpusId": 272832146
+   },
+   "title": "Label-Augmented Dataset Distillation",
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "year": 2024,
+   "citationCount": 5
+  },
+  "2511.08071": {
+   "paperId": "aeb24634811a374b547e85b04847f96023180c0c",
+   "externalIds": {
+    "ArXiv": "2511.08071",
+    "DBLP": "journals/corr/abs-2511-08071",
+    "DOI": "10.48550/arXiv.2511.08071",
+    "CorpusId": 282921682
+   },
+   "title": "Radar-APLANC: Unsupervised Radar-based Heartbeat Sensing via Augmented Pseudo-Label and Noise Contrast",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2412.12222": {
+   "paperId": "e4fcad47055df8ca0988c2acf4791cafa629530e",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2412-12222",
+    "ArXiv": "2412.12222",
+    "DOI": "10.1109/LRA.2025.3604697",
+    "CorpusId": 281059305
+   },
+   "title": "Endangered Alert: A Field-Validated Self-Training Scheme for Detecting and Protecting Threatened Wildlife on Roads and Roadsides",
+   "venue": "IEEE Robotics and Automation Letters",
+   "year": 2024,
+   "citationCount": 7
+  },
+  "2408.11297": {
+   "paperId": "697aad9ef06add41b7f25e7bc671976c48ac68ad",
+   "externalIds": {
+    "ArXiv": "2408.11297",
+    "DBLP": "journals/corr/abs-2408-11297",
+    "DOI": "10.48550/arXiv.2408.11297",
+    "CorpusId": 271916135
+   },
+   "title": "Making Large Vision Language Models to be Good Few-shot Learners",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "year": 2024,
+   "citationCount": 11
+  },
+  "2509.11800": {
+   "paperId": "035bdadfaa183eca70e1869774ef01a32ca0c4b5",
+   "externalIds": {
+    "DBLP": "conf/miccai/GuTVAT25",
+    "ArXiv": "2509.11800",
+    "DOI": "10.48550/arXiv.2509.11800",
+    "CorpusId": 281315763
+   },
+   "title": "Pseudo-D: Informing Multi-View Uncertainty Estimation with Calibrated Neural Training Dynamics",
+   "venue": "UNSURE@MICCAI",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2012.04446": {
+   "paperId": "6695d3b92e7cd7f2359f698a09c7b3dc37996329",
+   "externalIds": {
+    "MAG": "3112972219",
+    "DBLP": "journals/corr/abs-2012-04446",
+    "ArXiv": "2012.04446",
+    "CorpusId": 227746022
+   },
+   "title": "LAMP: Label Augmented Multimodal Pretraining",
+   "venue": "arXiv.org",
+   "year": 2020,
+   "citationCount": 10
+  },
+  "2005.05623": {
+   "paperId": "ba13e430fd90d2f4160a88ab8b8b8f1d62c1df38",
+   "externalIds": {
+    "MAG": "3026003194",
+    "DBLP": "journals/corr/abs-2005-05623",
+    "ArXiv": "2005.05623",
+    "CorpusId": 208221336
+   },
+   "title": "Unsupervised Multi-label Dataset Generation from Web Data",
+   "venue": "arXiv.org",
+   "year": 2020,
+   "citationCount": 3
+  },
+  "2506.00816": {
+   "paperId": "c700cfe86ff2b6a734791ccf21e6cd3a2013aee7",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2506-00816",
+    "ArXiv": "2506.00816",
+    "DOI": "10.48550/arXiv.2506.00816",
+    "CorpusId": 279075259
+   },
+   "title": "L3A: Label-Augmented Analytic Adaptation for Multi-Label Class Incremental Learning",
+   "venue": "International Conference on Machine Learning",
+   "year": 2025,
+   "citationCount": 9
+  },
+  "2603.01941": {
+   "paperId": "52696f451fefe04a85d833bbc2641a08487c3973",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2603-01941",
+    "ArXiv": "2603.01941",
+    "DOI": "10.1016/j.neunet.2026.108673",
+    "CorpusId": 285356511,
+    "PubMed": "41666490"
+   },
+   "title": "BAED: A new paradigm for few-shot graph learning with explanation in the loop",
+   "venue": "Neural Networks",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2505.09294": {
+   "paperId": "30638e163151c9715d4e65a7f688d89258ad636e",
+   "externalIds": {
+    "ArXiv": "2505.09294",
+    "DBLP": "journals/corr/abs-2505-09294",
+    "DOI": "10.48550/arXiv.2505.09294",
+    "CorpusId": 278602510
+   },
+   "title": "On the Learning with Augmented Class via Forests",
+   "venue": "International Joint Conference on Artificial Intelligence",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2303.09216": {
+   "paperId": "a60fb5aba5db8551ad5b7bae9f7f2b7d39f9f8a7",
+   "externalIds": {
+    "ArXiv": "2303.09216",
+    "DBLP": "journals/corr/abs-2303-09216",
+    "DOI": "10.1002/rnc.7194",
+    "CorpusId": 257557478
+   },
+   "title": "Controlled descent training",
+   "venue": "International Journal of Robust and Nonlinear Control",
+   "year": 2023,
+   "citationCount": 1
+  },
+  "2204.13430": {
+   "paperId": "67fc3372158b129e5e1ef87062f0c337879e3cfa",
+   "externalIds": {
+    "ArXiv": "2204.13430",
+    "DBLP": "conf/icassp/DinkelYWZW22",
+    "DOI": "10.1109/icassp43922.2022.9746431",
+    "CorpusId": 248426881
+   },
+   "title": "Pseudo Strong Labels for Large Scale Weakly Supervised Audio Tagging",
+   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+   "year": 2022,
+   "citationCount": 9
+  },
+  "2407.14426": {
+   "paperId": "180de69f7fe33587658a1aa9dbebbca3d46e3934",
+   "externalIds": {
+    "ArXiv": "2407.14426",
+    "DBLP": "journals/corr/abs-2407-14426",
+    "DOI": "10.48550/arXiv.2407.14426",
+    "CorpusId": 271310181
+   },
+   "title": "Controllable and Efficient Multi-Class Pathology Nuclei Data Augmentation using Text-Conditioned Diffusion Models",
+   "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+   "year": 2024,
+   "citationCount": 12
+  },
+  "2301.03462": {
+   "paperId": "681f05c1952ce3e1dc48a4ceb230a6033092be68",
+   "externalIds": {
+    "ArXiv": "2301.03462",
+    "DBLP": "conf/cikm/0001CZHGS23",
+    "DOI": "10.1145/3583780.3615101",
+    "CorpusId": 255546203
+   },
+   "title": "Unleashing the Power of Shared Label Structures for Human Activity Recognition",
+   "venue": "International Conference on Information and Knowledge Management",
+   "year": 2023,
+   "citationCount": 15
+  },
+  "2302.08659": {
+   "paperId": "317948521f3e8fc5542af8cebdb28df00cc5c8ff",
+   "externalIds": {
+    "DBLP": "conf/aaai/Wang000Z23",
+    "ArXiv": "2302.08659",
+    "DOI": "10.48550/arXiv.2302.08659",
+    "CorpusId": 257019829
+   },
+   "title": "Uncertainty-aware Self-training for Low-resource Neural Sequence Labeling",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "year": 2023,
+   "citationCount": 7
+  },
+  "2110.08731": {
+   "paperId": "adbc62668e1d8890ff7e1643b6a42acf06fda168",
+   "externalIds": {
+    "ArXiv": "2110.08731",
+    "DBLP": "journals/corr/abs-2110-08731",
+    "CorpusId": 239016539
+   },
+   "title": "Improving End-To-End Modeling for Mispronunciation Detection with Effective Augmentation Mechanisms",
+   "venue": "Asia-Pacific Signal and Information Processing Association Annual Summit and Conference",
+   "year": 2021,
+   "citationCount": 10
+  },
+  "2309.08380": {
+   "paperId": "8a6fd3477a024c76ef2e0e0b2807a27f694aeed4",
+   "externalIds": {
+    "DBLP": "conf/icassp/Wu0LZDCLL25",
+    "ArXiv": "2309.08380",
+    "DOI": "10.1109/ICASSP49660.2025.10890206",
+    "CorpusId": 262013450
+   },
+   "title": "Unleashing Potential of Evidence in Knowledge-Intensive Dialogue Generation",
+   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+   "year": 2023,
+   "citationCount": 22
+  },
+  "2010.16368": {
+   "paperId": "1b5753753e54ec680cd3a75925f8694f2236ea41",
+   "externalIds": {
+    "ArXiv": "2010.16368",
+    "DBLP": "journals/corr/abs-2010-16368",
+    "MAG": "3096509182",
+    "DOI": "10.1109/ICASSP39728.2021.9413648",
+    "CorpusId": 226222259
+   },
+   "title": "Phoneme Based Neural Transducer for Large Vocabulary Speech Recognition",
+   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+   "year": 2020,
+   "citationCount": 37
+  },
+  "2403.17500": {
+   "paperId": "f436b1063687a96b355a04725f14d84350a97dc8",
+   "externalIds": {
+    "ArXiv": "2403.17500",
+    "DBLP": "journals/corr/abs-2403-17500",
+    "DOI": "10.48550/arXiv.2403.17500",
+    "CorpusId": 268692230
+   },
+   "title": "Variational Graph Auto-Encoder Based Inductive Learning Method for Semi-Supervised Classification",
+   "venue": "arXiv.org",
+   "year": 2024,
+   "citationCount": 1
+  },
+  "2312.16799": {
+   "paperId": "fe4868f39aee72f4d473554974d98b69d3d84296",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2312-16799",
+    "ArXiv": "2312.16799",
+    "DOI": "10.48550/arXiv.2312.16799",
+    "CorpusId": 266573455
+   },
+   "title": "Temporal Knowledge Distillation for Time-Sensitive Financial Services Applications",
+   "venue": "arXiv.org",
+   "year": 2023,
+   "citationCount": 5
+  },
+  "2301.05865": {
+   "paperId": "9346d616ba61fa97c9789326b4e69c042b3f4d9a",
+   "externalIds": {
+    "ArXiv": "2301.05865",
+    "DBLP": "journals/corr/abs-2301-05865",
+    "DOI": "10.1109/CAI59869.2024.00120",
+    "CorpusId": 255941840
+   },
+   "title": "Gated Self-supervised Learning for Improving Supervised Learning",
+   "venue": "Conference on Algebraic Informatics",
+   "year": 2023,
+   "citationCount": 5
+  },
+  "2307.14897": {
+   "paperId": "9f00f37206e2e60aef9c3090bf93543dee59bdc3",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2307-14897",
+    "ArXiv": "2307.14897",
+    "DOI": "10.48550/arXiv.2307.14897",
+    "CorpusId": 260202866
+   },
+   "title": "Mixture of Self-Supervised Learning",
+   "venue": "arXiv.org",
+   "year": 2023,
+   "citationCount": 0
+  },
+  "2303.13100": {
+   "paperId": "cefc84a9e8209875a85ec429a0a6fab27f8604e1",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2303-13100",
+    "ArXiv": "2303.13100",
+    "DOI": "10.1109/TGRS.2023.3331748",
+    "CorpusId": 257687581
+   },
+   "title": "PointGame: Geometrically and Adaptively Masked Autoencoder on Point Clouds",
+   "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+   "year": 2023,
+   "citationCount": 8
+  },
+  "2401.06595": {
+   "paperId": "ee358b81d70ada60d1f59845eefa28108e42e834",
+   "externalIds": {
+    "DBLP": "conf/aaai/0001WWLH24",
+    "ArXiv": "2401.06595",
+    "DOI": "10.48550/arXiv.2401.06595",
+    "CorpusId": 266977147
+   },
+   "title": "Every Node is Different: Dynamically Fusing Self-Supervised Tasks for Attributed Graph Clustering",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "year": 2024,
+   "citationCount": 29
+  },
+  "2402.05382": {
+   "paperId": "025c76e135c2cf2b40561dd9f6d0e3337f078999",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2402-05382",
+    "ArXiv": "2402.05382",
+    "DOI": "10.48550/arXiv.2402.05382",
+    "CorpusId": 259298822
+   },
+   "title": "Task-customized Masked Autoencoder via Mixture of Cluster-conditional Experts",
+   "venue": "International Conference on Learning Representations",
+   "year": 2024,
+   "citationCount": 36
+  },
+  "2110.03869": {
+   "paperId": "1d4f81eeba21b8d3e4acbea5026b0075a2835fc0",
+   "externalIds": {
+    "DBLP": "conf/icassp/TaoLDHL22",
+    "ArXiv": "2110.03869",
+    "DOI": "10.1109/ICASSP43922.2022.9747162",
+    "CorpusId": 238531261
+   },
+   "title": "Self-Supervised Speaker Recognition with Loss-Gated Learning",
+   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+   "year": 2021,
+   "citationCount": 75
+  },
+  "2301.09164": {
+   "paperId": "4dddd1aca14589219c16860cc774986da459861d",
+   "externalIds": {
+    "ArXiv": "2301.09164",
+    "DBLP": "journals/corr/abs-2301-09164",
+    "DOI": "10.48550/arXiv.2301.09164",
+    "CorpusId": 256105045
+   },
+   "title": "Unifying Synergies between Self-supervised Learning and Dynamic Computation",
+   "venue": "British Machine Vision Conference",
+   "year": 2023,
+   "citationCount": 0
+  },
+  "2509.04161": {
+   "paperId": "18b955a67dc8475077a8fba5d904ebc98fbdd6be",
+   "externalIds": {
+    "DBLP": "conf/ijcnn/HaoCXZHFFL25",
+    "ArXiv": "2509.04161",
+    "DOI": "10.1109/IJCNN64981.2025.11228261",
+    "CorpusId": 281103514
+   },
+   "title": "Wav2DF-TSL: Two-stage Learning with Efficient Pre-training and Hierarchical Experts Fusion for Robust Audio Deepfake Detection",
+   "venue": "IEEE International Joint Conference on Neural Network",
+   "year": 2025,
+   "citationCount": 6
+  },
+  "2208.01928": {
+   "paperId": "0c584646a8871df29e00b53c7b787fce81cb1b95",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2208-01928",
+    "ArXiv": "2208.01928",
+    "DOI": "10.48550/arXiv.2208.01928",
+    "CorpusId": 251280348
+   },
+   "title": "Self-Supervised Speaker Verification Using Dynamic Loss-Gate and Label Correction",
+   "venue": "Interspeech",
+   "year": 2022,
+   "citationCount": 47
+  },
+  "2609.33709": {
+   "paperId": "21c3f868f1b76f35a22e507158765f72d4c11809",
+   "externalIds": {
+    "ArXiv": "2609.33709",
+    "CorpusId": 292435101
+   },
+   "title": "Domain-Adaptive Dual-Gating Mixture of Experts for Generalizable Speech Deepfake Detection",
+   "venue": "",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2203.09034": {
+   "paperId": "ff3937aebf61ec9ed5ec4629d3884231f9de34e3",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2203-09034",
+    "ArXiv": "2203.09034",
+    "DOI": "10.1109/TMI.2022.3201974",
+    "CorpusId": 247519150,
+    "PubMed": "36018878"
+   },
+   "title": "GATE: Graph CCA for Temporal Self-Supervised Learning for Label-Efficient fMRI Analysis",
+   "venue": "IEEE Transactions on Medical Imaging",
+   "year": 2022,
+   "citationCount": 70
+  },
+  "2203.04311": {
+   "paperId": "043a8dac3e0b343ef16d2a4828e72098cbdfa36d",
+   "externalIds": {
+    "ArXiv": "2203.04311",
+    "DBLP": "journals/tsp/MouGLYW24",
+    "DOI": "10.1109/TSP.2024.3394654",
+    "CorpusId": 247318885
+   },
+   "title": "Cluster Head Detection for Hierarchical UAV Swarm With Graph Self-Supervised Learning",
+   "venue": "IEEE Transactions on Signal Processing",
+   "year": 2022,
+   "citationCount": 6
+  },
+  "2501.13796": {
+   "paperId": "fcf940265b6443518cb6704dc6bb306ff0b63fc7",
+   "externalIds": {
+    "ArXiv": "2501.13796",
+    "DBLP": "journals/corr/abs-2501-13796",
+    "DOI": "10.48550/arXiv.2501.13796",
+    "CorpusId": 275820595
+   },
+   "title": "PromptMono: Cross Prompting Attention for Self-Supervised Monocular Depth Estimation in Challenging Environments",
+   "venue": "arXiv.org",
+   "year": 2025,
+   "citationCount": 1
+  },
+  "2209.09076": {
+   "paperId": "be0cdc4fbcaa0b1b233e6c05c3666cca1d1d1d5e",
+   "externalIds": {
+    "ArXiv": "2209.09076",
+    "DBLP": "journals/corr/abs-2209-09076",
+    "DOI": "10.48550/arXiv.2209.09076",
+    "CorpusId": 252368127
+   },
+   "title": "SJTU-AISPEECH System for VoxCeleb Speaker Recognition Challenge 2022",
+   "venue": "arXiv.org",
+   "year": 2022,
+   "citationCount": 12
+  },
+  "2501.08057": {
+   "paperId": "d77931cf6a919943c681526cf8107bf0b40c1c92",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2501-08057",
+    "ArXiv": "2501.08057",
+    "DOI": "10.1109/ICASSP49660.2025.10890091",
+    "CorpusId": 275515698
+   },
+   "title": "Optimizing Speech Multi-View Feature Fusion through Conditional Computation",
+   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2603.06164": {
+   "paperId": "09f192f961599737d7f301a965aa8970ef555ad0",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2603-06164",
+    "ArXiv": "2603.06164",
+    "DOI": "10.48550/arXiv.2603.06164",
+    "CorpusId": 286365503
+   },
+   "title": "Do Compact SSL Backbones Matter for Audio Deepfake Detection? A Controlled Study with RAPTOR",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 13
+  },
+  "2512.04943": {
+   "paperId": "61cb3c1a5ceae9b1822ef9ee2901384203f4806f",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2512-04943",
+    "ArXiv": "2512.04943",
+    "DOI": "10.48550/arXiv.2512.04943",
+    "CorpusId": 283556981
+   },
+   "title": "Towards Adaptive Fusion of Multimodal Deep Networks for Human Action Recognition",
+   "venue": "arXiv.org",
+   "year": 2025,
+   "citationCount": 1
+  },
+  "2307.10695": {
+   "paperId": "df82e9ab09c3ee388e28fa0eb30d79bfc15cd428",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2307-10695",
+    "ArXiv": "2307.10695",
+    "DOI": "10.48550/arXiv.2307.10695",
+    "CorpusId": 259991397
+   },
+   "title": "Self2Self+: Single-Image Denoising with Self-Supervised Learning and Image Quality Assessment Loss",
+   "venue": "arXiv.org",
+   "year": 2023,
+   "citationCount": 7
+  },
+  "2602.16305": {
+   "paperId": "38b037ce1d825c127ca876025a3c74d51eb6091a",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2602-16305",
+    "ArXiv": "2602.16305",
+    "DOI": "10.48550/arXiv.2602.16305",
+    "CorpusId": 285726240
+   },
+   "title": "BAT: Better Audio Transformer Guided by Convex Gated Probing",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 2
+  },
+  "2507.18184": {
+   "paperId": "867e9688b5f7a3b7e30688aab54b1abf68f6a338",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2507-18184",
+    "ArXiv": "2507.18184",
+    "DOI": "10.1109/ICCVW69036.2025.00379",
+    "CorpusId": 280017223
+   },
+   "title": "MatSSL: Robust Self-Supervised Representation Learning for Metallographic Image Segmentation",
+   "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2409.05929": {
+   "paperId": "2a0d86ea61f05fadb693730c3b06cbe850e491d0",
+   "externalIds": {
+    "ArXiv": "2409.05929",
+    "CorpusId": 272550700
+   },
+   "title": "M3-JEPA: Multimodal Alignment via Multi-gate MoE based on the Joint-Embedding Predictive Architecture",
+   "venue": "",
+   "year": 2024,
+   "citationCount": 17
+  },
+  "2405.16177": {
+   "paperId": "e9179acb0634b9a61077393c23b96d17651ac799",
+   "externalIds": {
+    "ArXiv": "2405.16177",
+    "CorpusId": 270063130
+   },
+   "title": "Transformer Meets Gated Residual Networks To Enhance Photoplethysmogram Artifact Detection Informed by Mutual Information Neural Estimation",
+   "venue": "",
+   "year": 2024,
+   "citationCount": 3
+  },
+  "2308.11241": {
+   "paperId": "62bded80b5fe1648749a7b886d282a8e3cb0472e",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2308-11241",
+    "ArXiv": "2308.11241",
+    "DOI": "10.48550/arXiv.2308.11241",
+    "CorpusId": 261064963
+   },
+   "title": "An Effective Transformer-based Contextual Model and Temporal Gate Pooling for Speaker Identification",
+   "venue": "arXiv.org",
+   "year": 2023,
+   "citationCount": 2
+  },
+  "2303.12381": {
+   "paperId": "7f26e6012d8c263f9ddad25a3852b30fe524a8a3",
+   "externalIds": {
+    "ArXiv": "2303.12381",
+    "DOI": "10.1016/j.physa.2023.129286",
+    "CorpusId": 257663343
+   },
+   "title": "GSQAS: Graph Self-supervised Quantum Architecture Search",
+   "venue": "Physica A: Statistical Mechanics and its Applications",
+   "year": 2023,
+   "citationCount": 28
+  },
+  "2108.13969": {
+   "paperId": "e58da46fa6e0198658449bf460ce6c427de52f18",
+   "externalIds": {
+    "ArXiv": "2108.13969",
+    "CorpusId": 237364586
+   },
+   "title": "Semi-Supervised Crowd Counting from Unlabeled Data",
+   "venue": "",
+   "year": 2021,
+   "citationCount": 3
+  },
+  "2304.05754": {
+   "paperId": "c12799d7043f0d53f09e2a22d3146da2400cf616",
+   "externalIds": {
+    "ArXiv": "2304.05754",
+    "DBLP": "journals/corr/abs-2304-05754",
+    "DOI": "10.1109/TASLP.2023.3331949",
+    "CorpusId": 258078848
+   },
+   "title": "Self-Supervised Learning With Cluster-Aware-DINO for High-Performance Robust Speaker Verification",
+   "venue": "IEEE/ACM Transactions on Audio Speech and Language Processing",
+   "year": 2023,
+   "citationCount": 43
+  },
+  "2603.18556": {
+   "paperId": "43b4be55f5593e31c71e6566a73983477b720e30",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2603-18556",
+    "ArXiv": "2603.18556",
+    "DOI": "10.1109/TKDE.2025.3591503",
+    "CorpusId": 280385411
+   },
+   "title": "Latent Factor Modeling With Expert Network for Multi-Behavior Recommendation",
+   "venue": "IEEE Transactions on Knowledge and Data Engineering",
+   "year": 2025,
+   "citationCount": 11
+  },
+  "2606.03180": {
+   "paperId": "5f29d53bc7dfd59027aeee35153a87c5dd82b93e",
+   "externalIds": {
+    "ArXiv": "2606.03180",
+    "DBLP": "journals/corr/abs-2606-03180",
+    "DOI": "10.48550/arXiv.2606.03180",
+    "CorpusId": 288863058
+   },
+   "title": "GLINT: Sparsely Gated Vision-Language Alignment for Fine-Grained Radiology Representations",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 2
+  },
+  "2609.15338": {
+   "paperId": "922091f718024ddd351f1ae0b8c125740cb7b6a0",
+   "externalIds": {
+    "ArXiv": "2609.15338",
+    "CorpusId": 292027135
+   },
+   "title": "Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models",
+   "venue": "",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2607.03585": {
+   "paperId": "961d3f13029a3f1ba59938154beb475514460223",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2607-03585",
+    "ArXiv": "2607.03585",
+    "DOI": "10.48550/arXiv.2607.03585",
+    "CorpusId": 289934902
+   },
+   "title": "Modular Foundation Models for Time-Series Perception in Digital Twins",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 1
+  },
+  "2110.00329": {
+   "paperId": "d96da629082933f55eda67c543e93ae143c1c7bf",
+   "externalIds": {
+    "ArXiv": "2110.00329",
+    "DBLP": "journals/corr/abs-2110-00329",
+    "CorpusId": 238253065
+   },
+   "title": "Student Helping Teacher: Teacher Evolution via Self-Knowledge Distillation",
+   "venue": "arXiv.org",
+   "year": 2021,
+   "citationCount": 2
+  },
+  "2506.20431": {
+   "paperId": "431ec9f31297072dcd6264d0f251e7c027d17e95",
+   "externalIds": {
+    "ArXiv": "2506.20431",
+    "DBLP": "journals/corr/abs-2506-20431",
+    "DOI": "10.48550/arXiv.2506.20431",
+    "CorpusId": 280011386
+   },
+   "title": "Tackling Data Heterogeneity in Federated Learning through Knowledge Distillation with Inequitable Aggregation",
+   "venue": "arXiv.org",
+   "year": 2025,
+   "citationCount": 1
+  },
+  "2303.13005": {
+   "paperId": "30864e48dce502a69e05b51f5d624d2c0f5d3477",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2303-13005",
+    "ArXiv": "2303.13005",
+    "DOI": "10.1109/ICCV51070.2023.01576",
+    "CorpusId": 257687846
+   },
+   "title": "From Knowledge Distillation to Self-Knowledge Distillation: A Unified Approach with Normalized Loss and Customized Soft Labels",
+   "venue": "IEEE International Conference on Computer Vision",
+   "year": 2023,
+   "citationCount": 171
+  },
+  "2503.15096": {
+   "paperId": "9f2ac8e216b8e1ea6e4b2a0597ee5a263b9afaf9",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2503-15096",
+    "ArXiv": "2503.15096",
+    "DOI": "10.1109/CVPR52734.2025.02238",
+    "CorpusId": 277112970
+   },
+   "title": "When the Future Becomes the Past: Taming Temporal Correspondence for Self-supervised Video Representation Learning",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2025,
+   "citationCount": 21
+  },
+  "2303.15466": {
+   "paperId": "362e7184fcec5e3daf52cf5fb993799e457ba1c5",
+   "externalIds": {
+    "DBLP": "conf/cvpr/LinHMH0C23",
+    "ArXiv": "2303.15466",
+    "DOI": "10.1109/CVPR52729.2023.01882",
+    "CorpusId": 257771519
+   },
+   "title": "Supervised Masked Knowledge Distillation for Few-Shot Transformers",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2023,
+   "citationCount": 64
+  },
+  "2307.05325": {
+   "paperId": "b2567efb2bd3bfd9622f22c02365eb0bb85ccb35",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2307-05325",
+    "ArXiv": "2307.05325",
+    "DOI": "10.48550/arXiv.2307.05325",
+    "CorpusId": 259766207
+   },
+   "title": "Self-supervised adversarial masking for 3D point cloud representation learning",
+   "venue": "Asian Conference on Intelligent Information and Database Systems",
+   "year": 2023,
+   "citationCount": 4
+  },
+  "2201.06378": {
+   "paperId": "f0cb853084fb2c97ed0eb61ad012e651bb12bdf1",
+   "externalIds": {
+    "DBLP": "conf/icann/RafieeGAJRK22",
+    "ArXiv": "2201.06378",
+    "DOI": "10.1007/978-3-031-15937-4_39",
+    "CorpusId": 246015608
+   },
+   "title": "Self-Supervised Anomaly Detection by Self-Distillation and Negative Sampling",
+   "venue": "International Conference on Artificial Neural Networks",
+   "year": 2022,
+   "citationCount": 10
+  },
+  "2109.03075": {
+   "paperId": "69bdbbaf1411d21758ae8b2709b6477f13fb6e59",
+   "externalIds": {
+    "DBLP": "journals/tnn/YangACX24",
+    "ArXiv": "2109.03075",
+    "DOI": "10.1109/TNNLS.2022.3186807",
+    "CorpusId": 237433772,
+    "PubMed": "35820013"
+   },
+   "title": "Knowledge Distillation Using Hierarchical Self-Supervision Augmented Distribution",
+   "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+   "year": 2021,
+   "citationCount": 33
+  },
+  "2307.04542": {
+   "paperId": "e10a30aef950acd016349275fd60eff86b332095",
+   "externalIds": {
+    "ArXiv": "2307.04542",
+    "DBLP": "journals/corr/abs-2307-04542",
+    "DOI": "10.1109/ICME55011.2023.00312",
+    "CorpusId": 259501712
+   },
+   "title": "Customizing Synthetic Data for Data-Free Student Learning",
+   "venue": "IEEE International Conference on Multimedia and Expo",
+   "year": 2023,
+   "citationCount": 3
+  },
+  "2410.17606": {
+   "paperId": "460019916dcb7cc8b2e68694e14c1d533f3841b2",
+   "externalIds": {
+    "DBLP": "conf/mm/LiZ0XLQ24",
+    "ArXiv": "2410.17606",
+    "DOI": "10.1145/3664647.3680711",
+    "CorpusId": 273532203
+   },
+   "title": "Towards Effective Data-Free Knowledge Distillation via Diverse Diffusion Augmentation",
+   "venue": "ACM Multimedia",
+   "year": 2024,
+   "citationCount": 23
+  },
+  "2107.13715": {
+   "paperId": "4b8d8fb30a0464585c9e2ab895024bf9a6dbe8e4",
+   "externalIds": {
+    "MAG": "3183222077",
+    "DBLP": "journals/corr/abs-2107-13715",
+    "ArXiv": "2107.13715",
+    "DOI": "10.24963/ijcai.2021/168",
+    "CorpusId": 236493175
+   },
+   "title": "Hierarchical Self-supervised Augmented Knowledge Distillation",
+   "venue": "International Joint Conference on Artificial Intelligence",
+   "year": 2021,
+   "citationCount": 102
+  },
+  "2503.19740": {
+   "paperId": "f4478fc12ac2309493c1f7da71ed840a4f9d5bbe",
+   "externalIds": {
+    "ArXiv": "2503.19740",
+    "CorpusId": 277313778
+   },
+   "title": "LEMON: A Large Endoscopic MONocular Dataset and Foundation Model for Perception in Surgical Settings",
+   "venue": "",
+   "year": 2025,
+   "citationCount": 23
+  },
+  "2104.09866": {
+   "paperId": "a10bcfec38e04d0a2432827f1cee222a29135f72",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2104-09866",
+    "ArXiv": "2104.09866",
+    "DOI": "10.1109/CVPRW53098.2021.00301",
+    "CorpusId": 233307503
+   },
+   "title": "Distill on the Go: Online knowledge distillation in self-supervised learning",
+   "venue": "2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)",
+   "year": 2021,
+   "citationCount": 39
+  },
+  "2406.13344": {
+   "paperId": "b6ce8aa24cdfcf58d7253724583884d0a9ea7e17",
+   "externalIds": {
+    "ArXiv": "2406.13344",
+    "DBLP": "journals/corr/abs-2406-13344",
+    "DOI": "10.1109/TIM.2025.3553943",
+    "CorpusId": 270620589
+   },
+   "title": "WaterMono: Teacher-Guided Anomaly Masking and Enhancement Boosting for Robust Underwater Self-Supervised Monocular Depth Estimation",
+   "venue": "IEEE Transactions on Instrumentation and Measurement",
+   "year": 2024,
+   "citationCount": 17
+  },
+  "2203.08549": {
+   "paperId": "6baa48a69ce3f2ff9244317beda5d441066d7f9b",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2203-08549",
+    "ArXiv": "2203.08549",
+    "DOI": "10.48550/arXiv.2203.08549",
+    "CorpusId": 247321812
+   },
+   "title": "Is it all a cluster game? - Exploring Out-of-Distribution Detection based on Clustering in the Embedding Space",
+   "venue": "SafeAI@AAAI",
+   "year": 2022,
+   "citationCount": 10
+  },
+  "2207.09052": {
+   "paperId": "a8d8c304e21e2c5af66d6e804ce2e649640aedf4",
+   "externalIds": {
+    "DBLP": "conf/cvpr/ZhuWCCJ22",
+    "ArXiv": "2207.09052",
+    "DOI": "10.1109/CVPR52688.2022.00678",
+    "CorpusId": 250055528
+   },
+   "title": "Balanced Contrastive Learning for Long-Tailed Visual Recognition",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2022,
+   "citationCount": 321
+  },
+  "2305.13909": {
+   "paperId": "72bdf2151e9ac090d6b2ffbac4ee8b1891be5d26",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2305-13909",
+    "ArXiv": "2305.13909",
+    "DOI": "10.48550/arXiv.2305.13909",
+    "CorpusId": 258841298
+   },
+   "title": "Temporal Contrastive Learning for Spiking Neural Networks",
+   "venue": "International Conference on Artificial Neural Networks",
+   "year": 2023,
+   "citationCount": 5
+  },
+  "2101.06480": {
+   "paperId": "b77c7adccb229554e3d899b149f640ad414b2cd6",
+   "externalIds": {
+    "ArXiv": "2101.06480",
+    "DBLP": "journals/corr/abs-2101-06480",
+    "CorpusId": 231632298
+   },
+   "title": "SelfMatch: Combining Contrastive Self-Supervision and Consistency for Semi-Supervised Learning",
+   "venue": "arXiv.org",
+   "year": 2021,
+   "citationCount": 54
+  },
+  "2401.03753": {
+   "paperId": "b499a6a25dcd6c656340a8b4a5cfd246f1df5d99",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2401-03753",
+    "ArXiv": "2401.03753",
+    "DOI": "10.48550/arXiv.2401.03753",
+    "CorpusId": 266844149
+   },
+   "title": "Color-S4L: Self-supervised Semi-supervised Learning with Image Colorization",
+   "venue": "arXiv.org",
+   "year": 2024,
+   "citationCount": 4
+  },
+  "2107.12329": {
+   "paperId": "e7de826326ba51d8709b3cf55826aa51d5328f7f",
+   "externalIds": {
+    "ArXiv": "2107.12329",
+    "CorpusId": 246634445
+   },
+   "title": "AASAE: Augmentation-Augmented Stochastic Autoencoders",
+   "venue": "",
+   "year": 2021,
+   "citationCount": 2
+  },
+  "1906.10343": {
+   "paperId": "3d55d9386a9fec9a925b9decf033187a73a3e379",
+   "externalIds": {
+    "MAG": "2989610201",
+    "ArXiv": "1906.10343",
+    "CorpusId": 208202373
+   },
+   "title": "Exploring Self-Supervised Regularization for Supervised and Semi-Supervised Learning",
+   "venue": "",
+   "year": 2019,
+   "citationCount": 19
+  },
+  "2511.17426": {
+   "paperId": "dcbcc7c5c0093490f492b5e296c5e046630a3ce1",
+   "externalIds": {
+    "ArXiv": "2511.17426",
+    "DBLP": "journals/corr/abs-2511-17426",
+    "DOI": "10.48550/arXiv.2511.17426",
+    "CorpusId": 283225872
+   },
+   "title": "Self-Supervised Learning by Curvature Alignment",
+   "venue": "arXiv.org",
+   "year": 2025,
+   "citationCount": 1
+  },
+  "2011.11183": {
+   "paperId": "669cbe118d868941172dbebfcaca9a479301d23b",
+   "externalIds": {
+    "MAG": "3109620645",
+    "ArXiv": "2011.11183",
+    "DBLP": "conf/iccv/0001XH21",
+    "DOI": "10.1109/ICCV48922.2021.00934",
+    "CorpusId": 227127169
+   },
+   "title": "CoMatch: Semi-supervised Learning with Contrastive Graph Regularization",
+   "venue": "IEEE International Conference on Computer Vision",
+   "year": 2020,
+   "citationCount": 385
+  },
+  "1907.12087": {
+   "paperId": "ccbe37b5c4d8a5687153df6fedbb44d6f1c46d7d",
+   "externalIds": {
+    "MAG": "2965535361",
+    "DBLP": "journals/corr/abs-1907-12087",
+    "ArXiv": "1907.12087",
+    "DOI": "10.1109/WACV45572.2020.9093338",
+    "CorpusId": 198968328
+   },
+   "title": "Charting the Right Manifold: Manifold Mixup for Few-shot Learning",
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "year": 2019,
+   "citationCount": 393
+  },
+  "2110.01242": {
+   "paperId": "9af049a648f1f50a40ccff5c95ee2ea366fbddda",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2110-01242",
+    "ArXiv": "2110.01242",
+    "CorpusId": 238259433
+   },
+   "title": "Consistency Regularization Can Improve Robustness to Label Noise",
+   "venue": "arXiv.org",
+   "year": 2021,
+   "citationCount": 34
+  },
+  "2602.03604": {
+   "paperId": "7e65d820f13cf94be083495fd2c433c0886f5a9b",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2602-03604",
+    "ArXiv": "2602.03604",
+    "DOI": "10.48550/arXiv.2602.03604",
+    "CorpusId": 285276256
+   },
+   "title": "A Lightweight Library for Energy-Based Joint-Embedding Predictive Architectures",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 20
+  },
+  "2606.31275": {
+   "paperId": "a3b92e553de7eebd0ba75767abbc4981a7c22d2e",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2606-31275",
+    "ArXiv": "2606.31275",
+    "DOI": "10.48550/arXiv.2606.31275",
+    "CorpusId": 289690737
+   },
+   "title": "CLIMB: Centroid-Based Hierarchical Memory for Online Continual Self-Supervised Learning",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2312.02151": {
+   "paperId": "8d6ddc9b59a7d7a5ffd1f5d5b12fb4f3e5879be1",
+   "externalIds": {
+    "DBLP": "conf/avss/BandaraMP25",
+    "ArXiv": "2312.02151",
+    "DOI": "10.1109/AVSS65446.2025.11149867",
+    "CorpusId": 265609618
+   },
+   "title": "Guarding Barlow Twins Against Overfitting with Mixed Samples",
+   "venue": "Advanced Video and Signal Based Surveillance",
+   "year": 2023,
+   "citationCount": 13
+  },
+  "2605.17671": {
+   "paperId": "101274838d26060ebdbed1949b7a7b82c23cd9c2",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2605-17671",
+    "ArXiv": "2605.17671",
+    "DOI": "10.48550/arXiv.2605.17671",
+    "CorpusId": 288652039
+   },
+   "title": "PEIRA: Learning Predictive Encoders through Inter-View Regressor Alignment",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2603.05924": {
+   "paperId": "f523304baf98336c7315b056bba6a69a98861abe",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2603-05924",
+    "ArXiv": "2603.05924",
+    "DOI": "10.48550/arXiv.2603.05924",
+    "CorpusId": 286365771
+   },
+   "title": "Weak-SIGReg: Covariance Regularization for Stable Deep Learning",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 4
+  },
+  "2001.06001": {
+   "paperId": "028ccf71fba3cbd84a876c3f847addb890fae073",
+   "externalIds": {
+    "MAG": "3000046082",
+    "DBLP": "journals/corr/abs-2001-06001",
+    "ArXiv": "2001.06001",
+    "CorpusId": 210714078
+   },
+   "title": "Curriculum Labeling: Self-paced Pseudo-Labeling for Semi-Supervised Learning",
+   "venue": "arXiv.org",
+   "year": 2020,
+   "citationCount": 24
+  },
+  "2012.04718": {
+   "paperId": "31abc1a357969844a759ad0b78c842029bae2a69",
+   "externalIds": {
+    "MAG": "3111692021",
+    "DBLP": "journals/corr/abs-2012-04718",
+    "ArXiv": "2012.04718",
+    "CorpusId": 244708862
+   },
+   "title": "Canonical Capsules: Unsupervised Capsules in Canonical Pose",
+   "venue": "Neural Information Processing Systems",
+   "year": 2020,
+   "citationCount": 44
+  },
+  "2506.09895": {
+   "paperId": "3e815e0902cbbaa82bdb4db8eb5e029597bdf80b",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2506-09895",
+    "ArXiv": "2506.09895",
+    "DOI": "10.1109/ICCV51701.2025.00745",
+    "CorpusId": 279305841
+   },
+   "title": "Equicaps: Predictor-Free Pose-Aware Pre-Trained Capsule Networks",
+   "venue": "IEEE International Conference on Computer Vision",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2203.10974": {
+   "paperId": "9b2f53e980905e2107dd8a345340dc6e21ae8aac",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2203-10974",
+    "ArXiv": "2203.10974",
+    "DOI": "10.48550/arXiv.2203.10974",
+    "CorpusId": 247593984
+   },
+   "title": "Towards Self-Supervised Gaze Estimation",
+   "venue": "British Machine Vision Conference",
+   "year": 2022,
+   "citationCount": 13
+  },
+  "2411.06508": {
+   "paperId": "a0fb3a240efdfa62f34622eaefffd805cac69600",
+   "externalIds": {
+    "ArXiv": "2411.06508",
+    "DBLP": "journals/corr/abs-2411-06508",
+    "DOI": "10.48550/arXiv.2411.06508",
+    "CorpusId": 273963436
+   },
+   "title": "Understanding the Role of Equivariance in Self-supervised Learning",
+   "venue": "Neural Information Processing Systems",
+   "year": 2024,
+   "citationCount": 11
+  },
+  "2209.01725": {
+   "paperId": "d43ce171cd0617623f860bb9a490ac462248cfc5",
+   "externalIds": {
+    "DBLP": "journals/spm/ChenDESST23",
+    "ArXiv": "2209.01725",
+    "DOI": "10.1109/MSP.2022.3205430",
+    "CorpusId": 255418985
+   },
+   "title": "Imaging With Equivariant Deep Learning: From unrolled network design to fully unsupervised learning",
+   "venue": "IEEE Signal Processing Magazine",
+   "year": 2022,
+   "citationCount": 53
+  },
+  "2404.11737": {
+   "paperId": "569ea3d736accb213ea355a3e9485bf8c0647aa6",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2404-11737",
+    "ArXiv": "2404.11737",
+    "DOI": "10.48550/arXiv.2404.11737",
+    "CorpusId": 269214024
+   },
+   "title": "Equivariant Spatio-Temporal Self-Supervision for LiDAR Object Detection",
+   "venue": "European Conference on Computer Vision",
+   "year": 2024,
+   "citationCount": 3
+  },
+  "2106.05953": {
+   "paperId": "ebe72feaaa003d4778e1e1fdad7635b7af37758f",
+   "externalIds": {
+    "ArXiv": "2106.05953",
+    "CorpusId": 251280591
+   },
+   "title": "PeCLR: Self-Supervised 3D Hand Pose Estimation from monocular RGB via Equivariant Contrastive Learning",
+   "venue": "",
+   "year": 2021,
+   "citationCount": 2
+  },
+  "2007.08176": {
+   "paperId": "e1bb329621de73d08c47beae9b5439a1c244eb1a",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2007-08176",
+    "MAG": "3043138801",
+    "ArXiv": "2007.08176",
+    "CorpusId": 220546269
+   },
+   "title": "CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances",
+   "venue": "Neural Information Processing Systems",
+   "year": 2020,
+   "citationCount": 774
+  },
+  "2409.16868": {
+   "paperId": "c5b234d00f1536c54b5838da35550923d4901eb4",
+   "externalIds": {
+    "ArXiv": "2409.16868",
+    "CorpusId": 272880769
+   },
+   "title": "Asymptotically efficient estimators for tail probabilities of extremals of $\\beta$-Jacobi ensembles",
+   "venue": "",
+   "year": 2024,
+   "citationCount": 0
+  },
+  "2305.18026": {
+   "paperId": "0cd40131efb7bc4aab9c1f8f630c19fb45938e8d",
+   "externalIds": {
+    "DBLP": "conf/coling/ZouG0LCLAS24",
+    "ArXiv": "2305.18026",
+    "ACL": "2024.lrec-main.1275",
+    "DOI": "10.48550/arXiv.2305.18026",
+    "CorpusId": 258959155
+   },
+   "title": "Semantic Role Labeling Guided Out-of-distribution Detection",
+   "venue": "International Conference on Language Resources and Evaluation",
+   "year": 2023,
+   "citationCount": 1
+  },
+  "2312.15288": {
+   "paperId": "7b21f3e509c1f07ce374ffd282162f089698eaf4",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2312-15288",
+    "ArXiv": "2312.15288",
+    "DOI": "10.48550/arXiv.2312.15288",
+    "CorpusId": 266550859
+   },
+   "title": "Understanding normalization in contrastive representation learning and out-of-distribution detection",
+   "venue": "arXiv.org",
+   "year": 2023,
+   "citationCount": 4
+  },
+  "2607.00062": {
+   "paperId": "8eb2e7673c7a4041ca5ce11d1ccf092683160c54",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2607-00062",
+    "ArXiv": "2607.00062",
+    "DOI": "10.48550/arXiv.2607.00062",
+    "CorpusId": 289707207
+   },
+   "title": "AlgoBench: Benchmarking Algorithmic Adaptation in Code Generation",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2106.03899": {
+   "paperId": "4b6220a8f3b8dbdb1cb6b8eb75bb73e88d8e42de",
+   "externalIds": {
+    "ArXiv": "2106.03899",
+    "CorpusId": 238583803
+   },
+   "title": "Shifting Transformation Learning for Out-of-Distribution Detection",
+   "venue": "",
+   "year": 2021,
+   "citationCount": 10
+  },
+  "2409.14166": {
+   "paperId": "71251d50d4c471d89bf8dd34ff81be3248dcfdb6",
+   "externalIds": {
+    "ArXiv": "2409.14166",
+    "DOI": "10.1088/1751-8121/adbfe6",
+    "CorpusId": 272827850
+   },
+   "title": "Why gauge invariance applies to statistical mechanics",
+   "venue": "Journal of Physics A: Mathematical and Theoretical",
+   "year": 2024,
+   "citationCount": 13
+  },
+  "2009.01382": {
+   "paperId": "8b3d4eadcf0f4eca2aec7360658bb9c9d3a41cca",
+   "externalIds": {
+    "MAG": "3081927066",
+    "ArXiv": "2009.01382",
+    "DBLP": "journals/corr/abs-2009-01382",
+    "DOI": "10.1109/NAPS50074.2021.9449739",
+    "CorpusId": 221244279
+   },
+   "title": "Application of Transformer Impedance Correction Tables in Power Flow Studies",
+   "venue": "North American Power Symposium",
+   "year": 2020,
+   "citationCount": 2
+  },
+  "2407.20112": {
+   "paperId": "0c052c67b6f622b21ffc3857f2f0a1ed752c210e",
+   "externalIds": {
+    "ArXiv": "2407.20112",
+    "DOI": "10.1088/1751-8121/adb6de",
+    "CorpusId": 271533848
+   },
+   "title": "Integrable and superintegrable quantum mechanical systems with position dependent masses invariant with respect to one parametric Lie groups: 2. Systems with dilatation and shift symmetries",
+   "venue": "Journal of Physics A: Mathematical and Theoretical",
+   "year": 2024,
+   "citationCount": 4
+  },
+  "2308.08671": {
+   "paperId": "c7968e83bdf7ec85b1bc08071e1991b6e53a02e0",
+   "externalIds": {
+    "ArXiv": "2308.08671",
+    "DBLP": "journals/jcisd/ChenWWSSXG24",
+    "DOI": "10.1021/acs.jcim.3c01705",
+    "CorpusId": 261031005,
+    "PubMed": "38147877"
+   },
+   "title": "Performance and Analysis of the Alchemical Transfer Method for Binding-Free-Energy Predictions of Diverse Ligands",
+   "venue": "Journal of Chemical Information and Modeling",
+   "year": 2023,
+   "citationCount": 20
+  },
+  "2009.07029": {
+   "paperId": "c233ab318dc14af5a6871a0f2f6ec1c181522795",
+   "externalIds": {
+    "ArXiv": "2009.07029",
+    "CorpusId": 246411321
+   },
+   "title": "Equivalence of Polychromatic Arm Probabilities on the Square Lattice",
+   "venue": "",
+   "year": 2020,
+   "citationCount": 2
+  },
+  "2308.11046": {
+   "paperId": "896fecc765f286db8764adc022229799bec9b592",
+   "externalIds": {
+    "ArXiv": "2308.11046",
+    "DOI": "10.1016/j.chaos.2023.114231",
+    "CorpusId": 261065265
+   },
+   "title": "Kink in dual dilaton-axion theories with potential",
+   "venue": "Chaos, Solitons &amp; Fractals",
+   "year": 2023,
+   "citationCount": 0
+  },
+  "2505.10428": {
+   "paperId": "bf62a27670ead1a9dacef7147a612957f95660e0",
+   "externalIds": {
+    "ArXiv": "2505.10428",
+    "CorpusId": 278636008
+   },
+   "title": "A Study of Directional Entropy Arising from \\(\\mathbb{Z} \\times \\mathbb{Z}_+\\) Semigroup Actions",
+   "venue": "",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2208.11108": {
+   "paperId": "39b1b104ff08aaea959a9a58dc8b4d158b4e9ab4",
+   "externalIds": {
+    "ArXiv": "2208.11108",
+    "DBLP": "journals/corr/abs-2208-11108",
+    "DOI": "10.48550/arXiv.2208.11108",
+    "CorpusId": 251741529
+   },
+   "title": "Efficient Attention-free Video Shift Transformers",
+   "venue": "arXiv.org",
+   "year": 2022,
+   "citationCount": 1
+  },
+  "2608.29230": {
+   "paperId": "8dd4a1ad2dd060af0725987abe7485b3f4386df5",
+   "externalIds": {
+    "ArXiv": "2608.29230",
+    "CorpusId": 291531176
+   },
+   "title": "Compact Snapshot Spectral Imaging with Calibration-Free Aperture Diffraction",
+   "venue": "",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2104.07746": {
+   "paperId": "f3b3db9c55597af69e0d9ec1843be2b8fc945adf",
+   "externalIds": {
+    "ArXiv": "2104.07746",
+    "DBLP": "journals/corr/abs-2104-07746",
+    "DOI": "10.1109/energycon53164.2022.9830461",
+    "CorpusId": 233289477
+   },
+   "title": "A global DC branch model incorporating power system flexibility",
+   "venue": "IEEE International Energy Conference",
+   "year": 2021,
+   "citationCount": 0
+  },
+  "2511.06198": {
+   "paperId": "2b749c42349bfa2e5c2bd034cc629e06acd1a9a7",
+   "externalIds": {
+    "ArXiv": "2511.06198",
+    "CorpusId": 282911418
+   },
+   "title": "Chiral Anomaly of Kogut-Susskind Fermion in the (3+1)-dimensional Hamiltonian formalism",
+   "venue": "",
+   "year": 2025,
+   "citationCount": 5
+  },
+  "2009.11316": {
+   "paperId": "46100cf333d4f8fc0c7700a94970dc7c835509bc",
+   "externalIds": {
+    "ArXiv": "2009.11316",
+    "MAG": "3088746731",
+    "CorpusId": 221879151
+   },
+   "title": "Virasoro Algebra and Asymptotic Symmetries from Fractional Bosonic Strings",
+   "venue": "",
+   "year": 2020,
+   "citationCount": 1
+  },
+  "2102.01189": {
+   "paperId": "3323a47e69832301f8f434119b0346fc69708915",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2102-01189",
+    "ArXiv": "2102.01189",
+    "CorpusId": 231749761
+   },
+   "title": "GraphDF: A Discrete Flow Model for Molecular Graph Generation",
+   "venue": "International Conference on Machine Learning",
+   "year": 2021,
+   "citationCount": 315
+  },
+  "2404.04507": {
+   "paperId": "b3265e1fd11ab214436d6238a80e4f9364d95af9",
+   "externalIds": {
+    "ArXiv": "2404.04507",
+    "DBLP": "journals/siamnum/JiangLMZZZ25",
+    "DOI": "10.48550/arXiv.2404.04507",
+    "CorpusId": 269004683
+   },
+   "title": "Irrational-window-filter projection method and application to quasiperiodic Schr\\\"odinger eigenproblems",
+   "venue": "SIAM Journal on Numerical Analysis",
+   "year": 2024,
+   "citationCount": 7
+  },
+  "2210.01310": {
+   "paperId": "31ae6c158604029a83445948008cacad785a9a05",
+   "externalIds": {
+    "ArXiv": "2210.01310",
+    "DBLP": "journals/corr/abs-2210-01310",
+    "DOI": "10.23919/ACC55779.2023.10156226",
+    "CorpusId": 252693066
+   },
+   "title": "A Fixed-Point Algorithm for the AC Power Flow Problem",
+   "venue": "American Control Conference",
+   "year": 2022,
+   "citationCount": 6
+  },
+  "2211.00401": {
+   "paperId": "21e80ae38dcc08ed36632734c896e303044265aa",
+   "externalIds": {
+    "PubMedCentral": "11501735",
+    "ArXiv": "2211.00401",
+    "DOI": "10.1515/nanoph-2022-0451",
+    "CorpusId": 253239104,
+    "PubMed": "39634729"
+   },
+   "title": "Directional dependence of the plasmonic gain and nonreciprocity in drift-current biased graphene",
+   "venue": "Nanophotonics",
+   "year": 2022,
+   "citationCount": 14
+  },
+  "2112.14248": {
+   "paperId": "5ed182d6219ba7a31b69b6d7c2a5d20774adcdea",
+   "externalIds": {
+    "ArXiv": "2112.14248",
+    "DOI": "10.3934/dcds.2022135",
+    "CorpusId": 245537275
+   },
+   "title": "Maximal escape rate for shifts",
+   "venue": "Discrete and Continuous Dynamical Systems. Series A",
+   "year": 2021,
+   "citationCount": 4
+  },
+  "2606.17822": {
+   "paperId": "56739c72ce19468d1da18e7d62f46950803741a7",
+   "externalIds": {
+    "ArXiv": "2606.17822",
+    "CorpusId": 289625229
+   },
+   "title": "Congruences of shifted Jack Littlewood-Richardson coefficients",
+   "venue": "",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2504.04728": {
+   "paperId": "d48dc73c38c64957b75f71b407c2f788da27f65c",
+   "externalIds": {
+    "DBLP": "journals/tmm/ZhengZHPHYS25",
+    "ArXiv": "2504.04728",
+    "DOI": "10.1109/TMM.2025.3565979",
+    "CorpusId": 277621116
+   },
+   "title": "Exploring Kernel Transformations for Implicit Neural Representations",
+   "venue": "IEEE transactions on multimedia",
+   "year": 2025,
+   "citationCount": 4
+  },
+  "2012.06986": {
+   "paperId": "5c4598eb588d9960ab703e529de1f1c9da43d2a2",
+   "externalIds": {
+    "ArXiv": "2012.06986",
+    "MAG": "3112704168",
+    "DOI": "10.15407/ujpe66.9.771",
+    "CorpusId": 229157576
+   },
+   "title": "Two-Dimensional Pauli Equation in Noncommutative Phase-Space",
+   "venue": "Ukrainian Journal of Physics",
+   "year": 2020,
+   "citationCount": 12
+  },
+  "2110.01541": {
+   "paperId": "89b2fae044bd25235f438aea978e1bbbb40361e0",
+   "externalIds": {
+    "ArXiv": "2110.01541",
+    "CorpusId": 238259668
+   },
+   "title": "Dynamical entropy of probability measures on infinite product spaces",
+   "venue": "",
+   "year": 2021,
+   "citationCount": 0
+  },
+  "2506.12366": {
+   "paperId": "0ee20e44dac6ac8782abb9c8cda736f65b9ef1ff",
+   "externalIds": {
+    "ArXiv": "2506.12366",
+    "DBLP": "journals/corr/abs-2506-12366",
+    "DOI": "10.48550/arXiv.2506.12366",
+    "CorpusId": 279403368
+   },
+   "title": "Ghost Policies: A New Paradigm for Understanding and Learning from Failure in Deep Reinforcement Learning",
+   "venue": "arXiv.org",
+   "year": 2025,
+   "citationCount": 1
+  },
+  "2604.21474": {
+   "paperId": "8dc066cf58c9bc9d2f3d391d8c33efdc9bc3a317",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2604-21474",
+    "ArXiv": "2604.21474",
+    "DOI": "10.48550/arXiv.2604.21474",
+    "CorpusId": 287701884
+   },
+   "title": "A Thin Sheet Volume Integral Equation Solver for Simulation of Bianisotropic Metasurfaces",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2609.02379": {
+   "paperId": "a8541874569fd88ba09e2327a6a5bfb725599b3d",
+   "externalIds": {
+    "ArXiv": "2609.02379",
+    "CorpusId": 291615450
+   },
+   "title": "MultiGhostBench: A Multilingual Benchmark for Long-Form LLM-Generated Text Attribution under Distribution Shifts",
+   "venue": "",
+   "year": 2026,
+   "citationCount": 1
+  },
+  "2211.04625": {
+   "paperId": "1d10c9f97c183ffa9cf61285040451f4de4096d7",
+   "externalIds": {
+    "DBLP": "conf/cvpr/LiuYLHR23",
+    "ArXiv": "2211.04625",
+    "DOI": "10.1109/CVPR52729.2023.01558",
+    "CorpusId": 253420538
+   },
+   "title": "Soft Augmentation for Image Classification",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2022,
+   "citationCount": 23
+  },
+  "2507.16427": {
+   "paperId": "cfc5186e4b2cb495ae24f2764da17f01d0daa474",
+   "externalIds": {
+    "DBLP": "conf/dagm/SiedelGSVM25",
+    "ArXiv": "2507.16427",
+    "DOI": "10.48550/arXiv.2507.16427",
+    "CorpusId": 280167183
+   },
+   "title": "Combined Image Data Augmentations diminish the benefits of Adaptive Label Smoothing",
+   "venue": "DAGM GCPR",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2104.04909": {
+   "paperId": "182f055c40bfcff45d0ce6eb68e2d8684d0931dc",
+   "externalIds": {
+    "ACL": "2021.naacl-main.221",
+    "ArXiv": "2104.04909",
+    "MAG": "3171723960",
+    "DBLP": "journals/corr/abs-2104-04909",
+    "DOI": "10.18653/V1/2021.NAACL-MAIN.221",
+    "CorpusId": 233209661
+   },
+   "title": "Edge: Enriching Knowledge Graph Embeddings with External Text",
+   "venue": "North American Chapter of the Association for Computational Linguistics",
+   "year": 2021,
+   "citationCount": 39
+  },
+  "2212.10558": {
+   "paperId": "2fb1ab005db6c88cb31b9fe0ae04132909a5f7ce",
+   "externalIds": {
+    "ACL": "2024.findings-eacl.51",
+    "ArXiv": "2212.10558",
+    "DBLP": "conf/eacl/FangZLZSC24",
+    "DOI": "10.48550/arXiv.2212.10558",
+    "CorpusId": 254877061
+   },
+   "title": "On-the-fly Denoising for Data Augmentation in Natural Language Understanding",
+   "venue": "Findings",
+   "year": 2022,
+   "citationCount": 1
+  },
+  "1901.09335": {
+   "paperId": "39d0b5e6340717273cb1f169d4f16b8cf7fbff94",
+   "externalIds": {
+    "MAG": "2914611487",
+    "ArXiv": "1901.09335",
+    "DBLP": "journals/corr/abs-1901-09335",
+    "CorpusId": 53560741
+   },
+   "title": "Augment your batch: better training with larger batches",
+   "venue": "arXiv.org",
+   "year": 2019,
+   "citationCount": 79
+  },
+  "2505.06592": {
+   "paperId": "ef6cbbd73f0fd5a3213884b606142fa5caa7fc5d",
+   "externalIds": {
+    "ArXiv": "2505.06592",
+    "CorpusId": 292700374
+   },
+   "title": "Batch Augmentation with Unimodal Fine-tuning for Multimodal Fusion of Large Language Models",
+   "venue": "",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2405.01567": {
+   "paperId": "f550b02f618cb774d93cad3b9f501514156221ec",
+   "externalIds": {
+    "DBLP": "conf/emnlp/Zhang0Q0SLGRR0D24",
+    "ArXiv": "2405.01567",
+    "DOI": "10.48550/arXiv.2405.01567",
+    "CorpusId": 269303902
+   },
+   "title": "CodeFort: Robust Training for Code Generation Models",
+   "venue": "Conference on Empirical Methods in Natural Language Processing",
+   "year": 2024,
+   "citationCount": 11
+  },
+  "1910.10651": {
+   "paperId": "572bdf59c34df16c1ade08590001f1b106cdf6b3",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-1910-10651",
+    "MAG": "3011655081",
+    "ArXiv": "1910.10651",
+    "DOI": "10.1109/ICCVW.2019.00511",
+    "CorpusId": 204838008
+   },
+   "title": "Occlusions for Effective Data Augmentation in Image Classification",
+   "venue": "2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW)",
+   "year": 2019,
+   "citationCount": 23
+  },
+  "1810.08322": {
+   "paperId": "001b41a95b6a02486bcad6fb99d898ceb3629997",
+   "externalIds": {
+    "MAG": "2897126731",
+    "DBLP": "journals/corr/abs-1810-08322",
+    "ArXiv": "1810.08322",
+    "CorpusId": 53043612
+   },
+   "title": "Sequenced-Replacement Sampling for Deep Learning",
+   "venue": "arXiv.org",
+   "year": 2018,
+   "citationCount": 0
+  },
+  "2304.07545": {
+   "paperId": "8b7bd57e7d0fe3fbf2a0ab0b10940b2b18197924",
+   "externalIds": {
+    "ArXiv": "2304.07545",
+    "CorpusId": 258180185
+   },
+   "title": "The standard augmented multiplicative coalescent revisited",
+   "venue": "",
+   "year": 2023,
+   "citationCount": 2
+  },
+  "2110.11636": {
+   "paperId": "edd5f20cf934fc497d473e8dad0cb02ba727e0bc",
+   "externalIds": {
+    "DBLP": "conf/wacv/0009CK22",
+    "ArXiv": "2110.11636",
+    "DOI": "10.1109/WACV51458.2022.00228",
+    "CorpusId": 239616013
+   },
+   "title": "Occlusion-Robust Object Pose Estimation with Holistic Representation",
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "year": 2021,
+   "citationCount": 25
+  },
+  "2006.15284": {
+   "paperId": "42dd6c869f0081aeebd50209d7cee4573ef2439f",
+   "externalIds": {
+    "MAG": "3035154854",
+    "DBLP": "conf/ijcai/LiHQQMZ20",
+    "ArXiv": "2006.15284",
+    "DOI": "10.24963/ijcai.2020/324",
+    "CorpusId": 262477649
+   },
+   "title": "Stochastic Batch Augmentation with An Effective Distilled Dynamic Soft Label Regularizer",
+   "venue": "International Joint Conference on Artificial Intelligence",
+   "year": 2020,
+   "citationCount": 16
+  },
+  "2002.09103": {
+   "paperId": "8286fbad6d4712d950689930720134bc8828963f",
+   "externalIds": {
+    "DBLP": "conf/uai/LyzhovMAMV20",
+    "MAG": "3008960265",
+    "ArXiv": "2002.09103",
+    "CorpusId": 211252848
+   },
+   "title": "Greedy Policy Search: A Simple Baseline for Learnable Test-Time Augmentation",
+   "venue": "Conference on Uncertainty in Artificial Intelligence",
+   "year": 2020,
+   "citationCount": 116
+  },
+  "2305.04716": {
+   "paperId": "aca23bd3627e84c71c7b06864eeba4245b2360b1",
+   "externalIds": {
+    "ArXiv": "2305.04716",
+    "CorpusId": 258557200
+   },
+   "title": "A dynamical approach to spanning and surplus edges of random graphs",
+   "venue": "",
+   "year": 2023,
+   "citationCount": 3
+  },
+  "2405.04219": {
+   "paperId": "0d2f6339287f6a5d356e216d505b57b37d5367ed",
+   "externalIds": {
+    "ArXiv": "2405.04219",
+    "DBLP": "journals/corr/abs-2405-04219",
+    "DOI": "10.48550/arXiv.2405.04219",
+    "CorpusId": 269613978
+   },
+   "title": "Iterative Experience Refinement of Software-Developing Agents",
+   "venue": "arXiv.org",
+   "year": 2024,
+   "citationCount": 22
+  },
+  "2005.09624": {
+   "paperId": "a147c3d6143b6c5cf3d8675a17cebe720e214b6b",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2005-09624",
+    "ArXiv": "2005.09624",
+    "MAG": "3026618434",
+    "CorpusId": 218684737
+   },
+   "title": "Batch-Augmented Multi-Agent Reinforcement Learning for Efficient Traffic Signal Optimization",
+   "venue": "arXiv.org",
+   "year": 2020,
+   "citationCount": 1
+  },
+  "2609.39427": {
+   "paperId": "b99311e87a62e4305e84ceda2041fb204deebd29",
+   "externalIds": {
+    "ArXiv": "2609.39427",
+    "CorpusId": 292487484
+   },
+   "title": "PCB-MC: Missing Component Analysis in Printed Circuit Boards",
+   "venue": "",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2105.05639": {
+   "paperId": "e22c747f6f1b32235f3c13116a7a83e1aec58955",
+   "externalIds": {
+    "ArXiv": "2105.05639",
+    "DBLP": "conf/euvip/NiR21",
+    "DOI": "10.1109/EUVIP50544.2021.9484010",
+    "CorpusId": 234469728
+   },
+   "title": "FlipReID: Closing the Gap Between Training and Inference in Person Re-Identification",
+   "venue": "European Workshop on Visual Information Processing",
+   "year": 2021,
+   "citationCount": 36
+  },
+  "2004.08628": {
+   "paperId": "787c17aa8c3d4788e8144e0717d296754a02c244",
+   "externalIds": {
+    "DBLP": "conf/cvpr/SB20",
+    "ArXiv": "2004.08628",
+    "MAG": "3017195736",
+    "DOI": "10.1109/CVPR42600.2020.00103",
+    "CorpusId": 215828190
+   },
+   "title": "Single-Step Adversarial Training With Dropout Scheduling",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2020,
+   "citationCount": 83
+  },
+  "2103.01006": {
+   "paperId": "ab15846f1138af0f082d77ed62ebce5bfb6a19bb",
+   "externalIds": {
+    "PubMedCentral": "10956028",
+    "ArXiv": "2103.01006",
+    "DOI": "10.1038/s44172-023-00066-3",
+    "CorpusId": 232092154
+   },
+   "title": "GaNDLF: the generally nuanced deep learning framework for scalable end-to-end clinical workflows",
+   "venue": "Communications Engineer",
+   "year": 2021,
+   "citationCount": 65
+  },
+  "2308.04198": {
+   "paperId": "364b89c7d652b866227741cd31f540150c9238eb",
+   "externalIds": {
+    "ArXiv": "2308.04198",
+    "DBLP": "conf/globecom/YuLWPLZZ23",
+    "DOI": "10.1109/GLOBECOM54140.2023.10437274",
+    "CorpusId": 260704707
+   },
+   "title": "Communication-Efficient Cooperative Multi-Agent PPO via Regulated Segment Mixture in Internet of Vehicles",
+   "venue": "Global Communications Conference",
+   "year": 2023,
+   "citationCount": 2
+  },
+  "2011.09230": {
+   "paperId": "59de1799c8b4272be3e07b0bb44c934c0d846527",
+   "externalIds": {
+    "DBLP": "conf/cvpr/NaJCH21",
+    "MAG": "3102969932",
+    "ArXiv": "2011.09230",
+    "DOI": "10.1109/CVPR46437.2021.00115",
+    "CorpusId": 227012621
+   },
+   "title": "FixBi: Bridging Domain Spaces for Unsupervised Domain Adaptation",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2020,
+   "citationCount": 276
+  },
+  "2308.00053": {
+   "paperId": "15a6a0b97c890a59003651249b3663b2fb1e476c",
+   "externalIds": {
+    "ArXiv": "2308.00053",
+    "DBLP": "conf/cvip/GhoshC23",
+    "DOI": "10.48550/arXiv.2308.00053",
+    "CorpusId": 260351153
+   },
+   "title": "T-Fusion Net: A Novel Deep Neural Network Augmented with Multiple Localizations based Spatial Attention Mechanisms for Covid-19 Detection",
+   "venue": "International Conference on Computer Vision and Image Processing",
+   "year": 2023,
+   "citationCount": 8
+  },
+  "2607.23395": {
+   "paperId": "bce6a7298e186be3c57462ffb12e9055dcba4429",
+   "externalIds": {
+    "ArXiv": "2607.23395",
+    "DBLP": "journals/corr/abs-2607-23395",
+    "DOI": "10.48550/arXiv.2607.23395",
+    "CorpusId": 290622895
+   },
+   "title": "Music-Source-Separation-Training (MSST): A Unified Framework for Training and Evaluating Music Demixing Models",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2209.15589": {
+   "paperId": "13d78bde4dc7059ab941871048ffa91d556584c8",
+   "externalIds": {
+    "ArXiv": "2209.15589",
+    "DBLP": "journals/corr/abs-2209-15589",
+    "DOI": "10.48550/arXiv.2209.15589",
+    "CorpusId": 252668517
+   },
+   "title": "Where Should I Spend My FLOPS? Efficiency Evaluations of Visual Pre-training Methods",
+   "venue": "arXiv.org",
+   "year": 2022,
+   "citationCount": 11
+  },
+  "2406.17688": {
+   "paperId": "b6e3f6e3e64ceb7331f5a79044f434062dcdb969",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2406-17688",
+    "ArXiv": "2406.17688",
+    "DOI": "10.48550/arXiv.2406.17688",
+    "CorpusId": 270711127
+   },
+   "title": "Unified Auto-Encoding with Masked Diffusion",
+   "venue": "arXiv.org",
+   "year": 2024,
+   "citationCount": 2
+  },
+  "2212.00833": {
+   "paperId": "6d686c2232d05b92b1549a36df24720c5d4bedd1",
+   "externalIds": {
+    "DBLP": "conf/aaai/LiangZWWS023",
+    "ArXiv": "2212.00833",
+    "DOI": "10.48550/arXiv.2212.00833",
+    "CorpusId": 254220773
+   },
+   "title": "Generalizing Math Word Problem Solvers via Solution Diversification",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "year": 2022,
+   "citationCount": 12
+  },
+  "2303.15735": {
+   "paperId": "743a9d8ca32386d22f3c580cb99396c74ccb8a42",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2303-15735",
+    "ArXiv": "2303.15735",
+    "DOI": "10.1109/CVPR52729.2023.00790",
+    "CorpusId": 257771644
+   },
+   "title": "Improving the Transferability of Adversarial Samples by Path-Augmented Method",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2023,
+   "citationCount": 89
+  },
+  "2312.10123": {
+   "paperId": "bf090f780a69b5e17ae52b35fb258782dfffcae8",
+   "externalIds": {
+    "ArXiv": "2312.10123",
+    "DBLP": "journals/iotj/YuLLZ25",
+    "DOI": "10.1109/JIOT.2024.3481257",
+    "CorpusId": 266348260
+   },
+   "title": "Communication-Efficient Soft Actor–Critic Policy Collaboration via Regulated Segment Mixture",
+   "venue": "IEEE Internet of Things Journal",
+   "year": 2023,
+   "citationCount": 4
+  },
+  "2608.18035": {
+   "paperId": "17d043c9c49eff1c478d8bdfd785e3d23ac5dad3",
+   "externalIds": {
+    "ArXiv": "2608.18035",
+    "CorpusId": 291188371
+   },
+   "title": "Plug-and-Play Traffic Element Awareness for End-to-End Autonomous Driving",
+   "venue": "",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2006.04147": {
+   "paperId": "a7058717ce5d37094fed32147d3b98d0edc0df16",
+   "externalIds": {
+    "DBLP": "conf/aaai/WuG21b",
+    "ArXiv": "2006.04147",
+    "MAG": "3034169498",
+    "DOI": "10.1609/aaai.v35i12.17234",
+    "CorpusId": 219531897
+   },
+   "title": "Peer Collaborative Learning for Online Knowledge Distillation",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "year": 2020,
+   "citationCount": 166
+  },
+  "2609.32944": {
+   "paperId": "cf0e0ca2baf49b91bcf57858a6da140db3b58172",
+   "externalIds": {
+    "ArXiv": "2609.32944",
+    "CorpusId": 292434605
+   },
+   "title": "Synthetic Thermal Image Generation for Real-Time Animal Detection Under Low-Visibility Conditions",
+   "venue": "",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2402.05889": {
+   "paperId": "36bc8d03249a0ef288e8a33cb4cf103c390d5e5b",
+   "externalIds": {
+    "DBLP": "conf/iclr/YuYB25",
+    "ArXiv": "2402.05889",
+    "CorpusId": 267547756
+   },
+   "title": "CREMA: Generalizable and Efficient Video-Language Reasoning via Multimodal Modular Fusion",
+   "venue": "International Conference on Learning Representations",
+   "year": 2024,
+   "citationCount": 25
+  },
+  "2003.12022": {
+   "paperId": "6d2d39ff427f080ba52b976347f365b6a28b63c8",
+   "externalIds": {
+    "DBLP": "conf/visapp/FrenchOS22",
+    "ArXiv": "2003.12022",
+    "MAG": "3013561810",
+    "DOI": "10.5220/0010773700003124",
+    "CorpusId": 214667128
+   },
+   "title": "Milking CowMask for Semi-Supervised Image Classification",
+   "venue": "VISIGRAPP",
+   "year": 2020,
+   "citationCount": 61
+  },
+  "1910.12027": {
+   "paperId": "63470afe06145e08c3b851491450f68c83cc938f",
+   "externalIds": {
+    "ArXiv": "1910.12027",
+    "MAG": "2996690341",
+    "DBLP": "conf/iclr/ZhangZOL20",
+    "CorpusId": 204905143
+   },
+   "title": "Consistency Regularization for Generative Adversarial Networks",
+   "venue": "International Conference on Learning Representations",
+   "year": 2019,
+   "citationCount": 323
+  },
+  "2004.09388": {
+   "paperId": "52cd63af135a9c1bb874e8d399f30bd7f292ffa6",
+   "externalIds": {
+    "MAG": "3017346530",
+    "DBLP": "journals/corr/abs-2004-09388",
+    "ArXiv": "2004.09388",
+    "CorpusId": 215827880
+   },
+   "title": "MixPUL: Consistency-based Augmentation for Positive and Unlabeled Learning",
+   "venue": "arXiv.org",
+   "year": 2020,
+   "citationCount": 13
+  },
+  "1908.02983": {
+   "paperId": "35e8312d8bdcffb8e0c956d20d5a581cad1c1b8a",
+   "externalIds": {
+    "MAG": "2964677000",
+    "DBLP": "journals/corr/abs-1908-02983",
+    "ArXiv": "1908.02983",
+    "DOI": "10.1109/IJCNN48605.2020.9207304",
+    "CorpusId": 199501839
+   },
+   "title": "Pseudo-Labeling and Confirmation Bias in Deep Semi-Supervised Learning",
+   "venue": "IEEE International Joint Conference on Neural Network",
+   "year": 2019,
+   "citationCount": 1208
+  },
+  "2007.10538": {
+   "paperId": "92893716be3b7fed89e989dfd4ab4af5e5d8f214",
+   "externalIds": {
+    "MAG": "3045441084",
+    "DBLP": "journals/pami/WangHSPXW22",
+    "ArXiv": "2007.10538",
+    "DOI": "10.1109/TPAMI.2021.3052951",
+    "CorpusId": 220665675,
+    "PubMed": "33476265"
+   },
+   "title": "Regularizing Deep Networks With Semantic Data Augmentation",
+   "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+   "year": 2020,
+   "citationCount": 199
+  },
+  "2003.12824": {
+   "paperId": "f473a9428ec8c1714221cc3d271125c416b7db1e",
+   "externalIds": {
+    "ArXiv": "2003.12824",
+    "MAG": "3013212957",
+    "DBLP": "journals/corr/abs-2003-12824",
+    "CorpusId": 214714357
+   },
+   "title": "Gradient-based Data Augmentation for Semi-Supervised Learning",
+   "venue": "arXiv.org",
+   "year": 2020,
+   "citationCount": 2
+  },
+  "2007.08505": {
+   "paperId": "3b4fd630260685b500c50e40fd801b6689dca570",
+   "externalIds": {
+    "ArXiv": "2007.08505",
+    "DBLP": "journals/corr/abs-2007-08505",
+    "MAG": "3042473535",
+    "DOI": "10.1007/978-3-030-58523-5_28",
+    "CorpusId": 220546366
+   },
+   "title": "FeatMatch: Feature-Based Augmentation for Semi-Supervised Learning",
+   "venue": "European Conference on Computer Vision",
+   "year": 2020,
+   "citationCount": 132
+  },
+  "2001.07685": {
+   "paperId": "299847adf3ee558a760475ffa364facac3ebbb16",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2001-07685",
+    "MAG": "3099570996",
+    "ArXiv": "2001.07685",
+    "CorpusId": 210839228
+   },
+   "title": "FixMatch: Simplifying Semi-Supervised Learning with Consistency and Confidence",
+   "venue": "Neural Information Processing Systems",
+   "year": 2020,
+   "citationCount": 5287
+  },
+  "2309.03598": {
+   "paperId": "45829e4a82e71d3c704d5d26886e2e614c034eed",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2309-03598",
+    "ArXiv": "2309.03598",
+    "DOI": "10.1109/ICCV51070.2023.01455",
+    "CorpusId": 261582420
+   },
+   "title": "Enhancing Sample Utilization through Sample Adaptive Augmentation in Semi-Supervised Learning",
+   "venue": "IEEE International Conference on Computer Vision",
+   "year": 2023,
+   "citationCount": 14
+  },
+  "2207.12131": {
+   "paperId": "08e1eea7fc86098c2ba00446a0ba0e18eeb77f40",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2207-12131",
+    "ArXiv": "2207.12131",
+    "DOI": "10.48550/arXiv.2207.12131",
+    "CorpusId": 251040042
+   },
+   "title": "Complementing Semi-Supervised Learning with Uncertainty Quantification",
+   "venue": "arXiv.org",
+   "year": 2022,
+   "citationCount": 1
+  },
+  "2101.06329": {
+   "paperId": "a21792db1c8d80c1d1f8525dab4959cc60b8e0ea",
+   "externalIds": {
+    "ArXiv": "2101.06329",
+    "DBLP": "conf/iclr/RizveDRS21",
+    "CorpusId": 231632854
+   },
+   "title": "In Defense of Pseudo-Labeling: An Uncertainty-Aware Pseudo-label Selection Framework for Semi-Supervised Learning",
+   "venue": "International Conference on Learning Representations",
+   "year": 2021,
+   "citationCount": 693
+  },
+  "2202.11915": {
+   "paperId": "c5217f2687d78dbaef2efbbfb26cc856079a3492",
+   "externalIds": {
+    "DBLP": "journals/tnn/YangHZLZ24",
+    "ArXiv": "2202.11915",
+    "DOI": "10.1109/TNNLS.2022.3186512",
+    "CorpusId": 247084093,
+    "PubMed": "35797319"
+   },
+   "title": "Interpolation-Based Contrastive Learning for Few-Label Semi-Supervised Learning",
+   "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+   "year": 2022,
+   "citationCount": 66
+  },
+  "2103.11600": {
+   "paperId": "50120f7c9e36990c0d69ba99e51137a211e16373",
+   "externalIds": {
+    "ArXiv": "2103.11600",
+    "DBLP": "journals/corr/abs-2103-11600",
+    "CorpusId": 232307247
+   },
+   "title": "PriorityCut: Occlusion-guided Regularization for Warp-based Image Animation",
+   "venue": "arXiv.org",
+   "year": 2021,
+   "citationCount": 2
+  },
+  "2206.07692": {
+   "paperId": "5ed5dcb0763af9e6283dcdcf4af75248d9d19c95",
+   "externalIds": {
+    "ArXiv": "2206.07692",
+    "DBLP": "journals/corr/abs-2206-07692",
+    "DOI": "10.1109/CVPR52688.2022.01419",
+    "CorpusId": 249037240
+   },
+   "title": "A Simple Data Mixing Prior for Improving Self-Supervised Learning",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2022,
+   "citationCount": 46
+  },
+  "2404.16814": {
+   "paperId": "6d438c0194e69cb87be20d99ef22ecabfbe2ef30",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2404-16814",
+    "ArXiv": "2404.16814",
+    "DOI": "10.1109/JBHI.2025.3615479",
+    "CorpusId": 269362096,
+    "PubMed": "41021949"
+   },
+   "title": "Meta-Transfer Derm-Diagnosis: Exploring Few-Shot Learning and Transfer Learning for Skin Disease Classification in Long-Tail Distribution",
+   "venue": "IEEE journal of biomedical and health informatics",
+   "year": 2024,
+   "citationCount": 9
+  },
+  "2112.03906": {
+   "paperId": "0c980dec4f6ebbd43c0631c97b612981e629903e",
+   "externalIds": {
+    "DBLP": "conf/mva/DasR23",
+    "ArXiv": "2112.03906",
+    "DOI": "10.23919/MVA57639.2023.10216260",
+    "CorpusId": 260165115
+   },
+   "title": "Cross-modal Manifold Cutmix for Self-supervised Video Representation Learning",
+   "venue": "2023 18th International Conference on Machine Vision and Applications (MVA)",
+   "year": 2021,
+   "citationCount": 1
+  },
+  "2207.04574": {
+   "paperId": "8dfafd223029ff1465afc79ac0d8eea81bb6d3dc",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2207-04574",
+    "ArXiv": "2207.04574",
+    "PubMedCentral": "11056282",
+    "DOI": "10.48550/arXiv.2207.04574",
+    "CorpusId": 249525916,
+    "PubMed": "38680538"
+   },
+   "title": "Brain-Aware Replacements for Supervised Contrastive Learning in Detection of Alzheimer’s Disease",
+   "venue": "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+   "year": 2022,
+   "citationCount": 19
+  },
+  "2012.13493": {
+   "paperId": "a7fbdc30ea0b788c7b31780b42e2c38ca20bb4c0",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2012-13493",
+    "ArXiv": "2012.13493",
+    "CorpusId": 229678030
+   },
+   "title": "Self-supervised Pre-training with Hard Examples Improves Visual Representations",
+   "venue": "arXiv.org",
+   "year": 2020,
+   "citationCount": 24
+  },
+  "2206.00384": {
+   "paperId": "cb05e3c317499cde5cf53788c57ae2e3bddb47f4",
+   "externalIds": {
+    "ArXiv": "2206.00384",
+    "CorpusId": 258833736
+   },
+   "title": "Generalized Supervised Contrastive Learning",
+   "venue": "",
+   "year": 2022,
+   "citationCount": 4
+  },
+  "1901.08933": {
+   "paperId": "7e544175841810a8065c8bfa89e7a9454878a614",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-1901-08933",
+    "ArXiv": "1901.08933",
+    "MAG": "2906424389",
+    "CorpusId": 59291918
+   },
+   "title": "Self-Supervised Generalisation with Meta Auxiliary Learning",
+   "venue": "Neural Information Processing Systems",
+   "year": 2019,
+   "citationCount": 183
+  },
+  "2510.22940": {
+   "paperId": "a8c0509afccbac912eef1981ac990ae7c0fb457b",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2510-22940",
+    "ArXiv": "2510.22940",
+    "DOI": "10.48550/arXiv.2510.22940",
+    "CorpusId": 282388442
+   },
+   "title": "Generating Auxiliary Tasks with Reinforcement Learning",
+   "venue": "arXiv.org",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2610.26954": {
+   "paperId": "2febec697fa521e15b728ef71c7c12fdb6ececb1",
+   "externalIds": {
+    "ArXiv": "2610.26954",
+    "CorpusId": 293809080
+   },
+   "title": "Deep Auxiliary Learning via Bilevel Feature Optimization for Label-Efficient Medical Image Segmentation",
+   "venue": "",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "2405.05695": {
+   "paperId": "63d153292553b6739dbbae3fe287bbf166887689",
+   "externalIds": {
+    "DBLP": "conf/iclr/0015ZL0YX024",
+    "ArXiv": "2405.05695",
+    "DOI": "10.48550/arXiv.2405.05695",
+    "CorpusId": 268859365
+   },
+   "title": "Aux-NAS: Exploiting Auxiliary Labels with Negligibly Extra Inference Cost",
+   "venue": "International Conference on Learning Representations",
+   "year": 2024,
+   "citationCount": 2
+  },
+  "2207.02066": {
+   "paperId": "d60b1f4112c5b72babdeaacd56853ddcdc47feea",
+   "externalIds": {
+    "ArXiv": "2207.02066",
+    "DBLP": "journals/corr/abs-2207-02066",
+    "DOI": "10.48550/arXiv.2207.02066",
+    "CorpusId": 250279801
+   },
+   "title": "Test-time Adaptation for Real Image Denoising via Meta-transfer Learning",
+   "venue": "arXiv.org",
+   "year": 2022,
+   "citationCount": 4
+  },
+  "2105.06620": {
+   "paperId": "4ff33f9a5dffe54b9a339d41cd2a6edda5aa1b90",
+   "externalIds": {
+    "ArXiv": "2105.06620",
+    "DBLP": "journals/taffco/LiS23",
+    "DOI": "10.1109/TAFFC.2021.3135516",
+    "CorpusId": 234680323
+   },
+   "title": "Meta Auxiliary Learning for Facial Action Unit Detection",
+   "venue": "IEEE Transactions on Affective Computing",
+   "year": 2021,
+   "citationCount": 21
+  },
+  "2510.10365": {
+   "paperId": "2651f56adc9d1afe32478adfbfd159457ec8fe71",
+   "externalIds": {
+    "DBLP": "conf/nips/JiangMGWZW25",
+    "ArXiv": "2510.10365",
+    "DOI": "10.48550/arXiv.2510.10365",
+    "CorpusId": 282058704
+   },
+   "title": "PointMAC: Meta-Learned Adaptation for Robust Test-Time Point Cloud Completion",
+   "venue": "Neural Information Processing Systems",
+   "year": 2025,
+   "citationCount": 8
+  },
+  "2501.12898": {
+   "paperId": "c0e58860de1dd84802dda1dab5c8499d3d1a91c2",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2501-12898",
+    "ArXiv": "2501.12898",
+    "DOI": "10.1109/WACV61041.2025.00192",
+    "CorpusId": 275787939
+   },
+   "title": "DocTTT: Test-Time Training for Handwritten Document Recognition Using Meta-Auxiliary Learning",
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "year": 2025,
+   "citationCount": 10
+  },
+  "2007.08294": {
+   "paperId": "72cfb845df72f714da0f83598b007e5c041cdf41",
+   "externalIds": {
+    "MAG": "3042563449",
+    "ArXiv": "2007.08294",
+    "DBLP": "conf/nips/HwangPKKHK20",
+    "CorpusId": 220546566
+   },
+   "title": "Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs",
+   "venue": "Neural Information Processing Systems",
+   "year": 2020,
+   "citationCount": 85
+  },
+  "2510.02215": {
+   "paperId": "ad4dd55d9d34b8ed1efad4b3b52ca72628a47028",
+   "externalIds": {
+    "ArXiv": "2510.02215",
+    "CorpusId": 281725090
+   },
+   "title": "Improving Large-Scale Recommender Systems with Auxiliary Learning",
+   "venue": "",
+   "year": 2025,
+   "citationCount": 1
+  },
+  "2303.13009": {
+   "paperId": "805e1fa8250fd8aad356f6705f4957d412d2549a",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2303-13009",
+    "ArXiv": "2303.13009",
+    "DOI": "10.1109/CVPR52729.2023.01925",
+    "CorpusId": 257687521
+   },
+   "title": "MELTR: Meta Loss Transformer for Learning to Fine-tune Video Foundation Models",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2023,
+   "citationCount": 44
+  },
+  "2202.03091": {
+   "paperId": "96a1a24fb75635bd5a27b8e4034d0faef5f99ad5",
+   "externalIds": {
+    "DBLP": "journals/tmlr/LiuJDJ22",
+    "ArXiv": "2202.03091",
+    "CorpusId": 246634577
+   },
+   "title": "Auto-Lambda: Disentangling Dynamic Task Relationships",
+   "venue": "Trans. Mach. Learn. Res.",
+   "year": 2022,
+   "citationCount": 111
+  },
+  "2511.18120": {
+   "paperId": "bebcc772bb9430455b99318a46304d1c007147b0",
+   "externalIds": {
+    "ArXiv": "2511.18120",
+    "DBLP": "journals/corr/abs-2511-18120",
+    "DOI": "10.48550/arXiv.2511.18120",
+    "CorpusId": 283243859
+   },
+   "title": "MVS-TTA: Test-Time Adaptation for Multi-View Stereo via Meta-Auxiliary Learning",
+   "venue": "arXiv.org",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2206.12774": {
+   "paperId": "2e9fa2b5a0d87a87094e0b7199aac2a6eee0cc47",
+   "externalIds": {
+    "DBLP": "conf/interspeech/GaoFDZ22",
+    "ArXiv": "2206.12774",
+    "DOI": "10.48550/arXiv.2206.12774",
+    "CorpusId": 250073240
+   },
+   "title": "Meta Auxiliary Learning for Low-resource Spoken Language Understanding",
+   "venue": "Interspeech",
+   "year": 2022,
+   "citationCount": 3
+  },
+  "2308.16481": {
+   "paperId": "23720e9f103dc3272e673aeea58c812a67d9ffab",
+   "externalIds": {
+    "ArXiv": "2308.16481",
+    "DBLP": "conf/iccv/HatemQW23",
+    "DOI": "10.1109/ICCV51070.2023.01512",
+    "CorpusId": 261396056
+   },
+   "title": "Point-TTA: Test-Time Adaptation for Point Cloud Registration Using Multitask Meta-Auxiliary Learning",
+   "venue": "IEEE International Conference on Computer Vision",
+   "year": 2023,
+   "citationCount": 35
+  },
+  "2103.00771": {
+   "paperId": "7a20015e5fb7b7a9e237ee47bb9d82e1c20c2368",
+   "externalIds": {
+    "ArXiv": "2103.00771",
+    "DBLP": "journals/corr/abs-2103-00771",
+    "CorpusId": 232076192
+   },
+   "title": "Self-supervised Auxiliary Learning for Graph Neural Networks via Meta-Learning",
+   "venue": "arXiv.org",
+   "year": 2021,
+   "citationCount": 10
+  },
+  "2203.03982": {
+   "paperId": "2ea5264769cf6784481482dc95217fdbb736a856",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2203-03982",
+    "ArXiv": "2203.03982",
+    "DOI": "10.1109/TCSS.2022.3185714",
+    "CorpusId": 247315330
+   },
+   "title": "Predictive and Contrastive: Dual-Auxiliary Learning for Recommendation",
+   "venue": "IEEE Transactions on Computational Social Systems",
+   "year": 2022,
+   "citationCount": 10
+  },
+  "2304.06411": {
+   "paperId": "390a927e0c70bdc3e3a327dc8f18a0a90b9f82b9",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2304-06411",
+    "ArXiv": "2304.06411",
+    "DOI": "10.48550/arXiv.2304.06411",
+    "CorpusId": 258108038
+   },
+   "title": "Meta-Auxiliary Learning for Adaptive Human Pose Prediction",
+   "venue": "AAAI Conference on Artificial Intelligence",
+   "year": 2023,
+   "citationCount": 14
+  },
+  "2507.12880": {
+   "paperId": "b9ede07b30627ed7604e2baa42eb9856a0890cb6",
+   "externalIds": {
+    "ArXiv": "2507.12880",
+    "DBLP": "journals/corr/abs-2507-12880",
+    "DOI": "10.48550/arXiv.2507.12880",
+    "CorpusId": 280221305
+   },
+   "title": "T3MAL: Test-Time Fast Adaptation for Robust Multi-Scale Information Diffusion Prediction",
+   "venue": "IEEE Transactions on Knowledge and Data Engineering",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2309.13672": {
+   "paperId": "d538d638cac9cb2d90380bf336c111765a5cb4f9",
+   "externalIds": {
+    "ArXiv": "2309.13672",
+    "DBLP": "journals/nn/HuLFHZWLZLW26",
+    "DOI": "10.1016/j.neunet.2025.108264",
+    "CorpusId": 262465899,
+    "PubMed": "41218403"
+   },
+   "title": "RL-I2IT: Image-to-image translation with deep reinforcement learning",
+   "venue": "Neural Networks",
+   "year": 2023,
+   "citationCount": 1
+  },
+  "2304.02162": {
+   "paperId": "5af4abc558baec88145e8690b9ef9cd6e9eec8f0",
+   "externalIds": {
+    "DBLP": "journals/tip/HuoWQY24",
+    "ArXiv": "2304.02162",
+    "DOI": "10.1109/TIP.2024.3393390",
+    "CorpusId": 257952660,
+    "PubMed": "38687649"
+   },
+   "title": "Learning to Recover Spectral Reflectance From RGB Images",
+   "venue": "IEEE Transactions on Image Processing",
+   "year": 2023,
+   "citationCount": 5
+  },
+  "2404.12024": {
+   "paperId": "6742bd409081716e074a749b59607ae24a541c43",
+   "externalIds": {
+    "ArXiv": "2404.12024",
+    "DBLP": "journals/corr/abs-2404-12024",
+    "DOI": "10.48550/arXiv.2404.12024",
+    "CorpusId": 269214645
+   },
+   "title": "Meta-Auxiliary Learning for Micro-Expression Recognition",
+   "venue": "arXiv.org",
+   "year": 2024,
+   "citationCount": 17
+  },
+  "2209.04702": {
+   "paperId": "59a63b72ed0634cd08abdea66336b5e8b6bb0fa8",
+   "externalIds": {
+    "DBLP": "conf/coling/LeiHLP022",
+    "ACL": "2022.coling-1.431",
+    "ArXiv": "2209.04702",
+    "DOI": "10.48550/arXiv.2209.04702",
+    "CorpusId": 252199452
+   },
+   "title": "Adaptive Meta-learner via Gradient Similarity for Few-shot Text Classification",
+   "venue": "International Conference on Computational Linguistics",
+   "year": 2022,
+   "citationCount": 15
+  },
+  "2010.08244": {
+   "paperId": "e411c86943c38aa6f0c43638b6ca72d7661da9f9",
+   "externalIds": {
+    "ArXiv": "2010.08244",
+    "MAG": "3093414268",
+    "DBLP": "conf/nips/ShiHSDX20",
+    "CorpusId": 223956810
+   },
+   "title": "Auxiliary Task Reweighting for Minimum-data Learning",
+   "venue": "Neural Information Processing Systems",
+   "year": 2020,
+   "citationCount": 45
+  },
+  "2106.10711": {
+   "paperId": "07e87b03f3ad0bf9a313f085092d557ea6937757",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2106-10711",
+    "ArXiv": "2106.10711",
+    "DOI": "10.1109/mlsp52302.2021.9596239",
+    "CorpusId": 235490497
+   },
+   "title": "Transfer Bayesian Meta-Learning Via Weighted Free Energy Minimization",
+   "venue": "International Workshop on Machine Learning for Signal Processing",
+   "year": 2021,
+   "citationCount": 0
+  },
+  "2104.09375": {
+   "paperId": "0dd21ec7d288f36c0a76c0a248b3a4138269d0d5",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2104-09375",
+    "ArXiv": "2104.09375",
+    "DOI": "10.1109/IGARSS47720.2021.9554766",
+    "CorpusId": 233296303
+   },
+   "title": "A Multi-Task Deep Learning Framework for Building Footprint Segmentation",
+   "venue": "2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS",
+   "year": 2021,
+   "citationCount": 4
+  },
+  "1901.05808": {
+   "paperId": "58a3d1e4745d047429facc96685d31da86eaccd4",
+   "externalIds": {
+    "ArXiv": "1901.05808",
+    "DBLP": "conf/visapp/ChennupatiSYR19",
+    "MAG": "2909393256",
+    "DOI": "10.5220/0007684106450652",
+    "CorpusId": 58014148
+   },
+   "title": "AuxNet: Auxiliary tasks enhanced Semantic Segmentation for Automated Driving",
+   "venue": "VISIGRAPP",
+   "year": 2019,
+   "citationCount": 49
+  },
+  "2508.17878": {
+   "paperId": "ead7fdcc34ad3a48055f51b8212a996837089431",
+   "externalIds": {
+    "ArXiv": "2508.17878",
+    "DBLP": "journals/corr/abs-2508-17878",
+    "DOI": "10.48550/arXiv.2508.17878",
+    "CorpusId": 280710538
+   },
+   "title": "Enhancing Speech Emotion Recognition with Multi-Task Learning and Dynamic Feature Fusion",
+   "venue": "Interspeech",
+   "year": 2025,
+   "citationCount": 3
+  },
+  "1808.06541": {
+   "paperId": "2ea0c4666e6e08280f85d937542a6180c3302c87",
+   "externalIds": {
+    "MAG": "2886772611",
+    "DBLP": "journals/access/DitthapronBKCW19",
+    "ArXiv": "1808.06541",
+    "DOI": "10.1109/ACCESS.2019.2919143",
+    "CorpusId": 140222673
+   },
+   "title": "Universal Joint Feature Extraction for P300 EEG Classification Using Multi-Task Autoencoder",
+   "venue": "IEEE Access",
+   "year": 2018,
+   "citationCount": 85
+  },
+  "2108.11346": {
+   "paperId": "06da85d0191857d0e48a3565e84e017ff76aa8dc",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2108-11346",
+    "ArXiv": "2108.11346",
+    "CorpusId": 235613625
+   },
+   "title": "Auxiliary Task Update Decomposition: the Good, the Bad and the neutral",
+   "venue": "International Conference on Learning Representations",
+   "year": 2021,
+   "citationCount": 28
+  },
+  "2101.05469": {
+   "paperId": "bd0a7c8f4d5a7460a44883b8e9fc81e654eaa4b8",
+   "externalIds": {
+    "ACL": "2021.eacl-main.252",
+    "DBLP": "journals/corr/abs-2101-05469",
+    "ArXiv": "2101.05469",
+    "DOI": "10.18653/v1/2021.eacl-main.252",
+    "CorpusId": 231603138
+   },
+   "title": "Text Augmentation in a Multi-Task View",
+   "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+   "year": 2021,
+   "citationCount": 15
+  },
+  "2407.10188": {
+   "paperId": "f723474becb7989f8bf31ae879c6af919bc5825c",
+   "externalIds": {
+    "ArXiv": "2407.10188",
+    "DBLP": "journals/corr/abs-2407-10188",
+    "DOI": "10.48550/arXiv.2407.10188",
+    "CorpusId": 271213159
+   },
+   "title": "Unexpected Benefits of Self-Modeling in Neural Systems",
+   "venue": "arXiv.org",
+   "year": 2024,
+   "citationCount": 8
+  },
+  "1909.04588": {
+   "paperId": "52f75a7ca3111f008987d17e431af6dd3d13810a",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-1909-04588",
+    "MAG": "2988022611",
+    "ArXiv": "1909.04588",
+    "DOI": "10.1109/IGARSS.2019.8900082",
+    "CorpusId": 202542788
+   },
+   "title": "Road Mapping in Lidar Images Using a Joint-Task Dense Dilated Convolutions Merging Network",
+   "venue": "IEEE International Geoscience and Remote Sensing Symposium",
+   "year": 2019,
+   "citationCount": 6
+  },
+  "2606.30011": {
+   "paperId": "305002d027c77660f5cc484b0c47981bd7deee35",
+   "externalIds": {
+    "ArXiv": "2606.30011",
+    "DBLP": "journals/corr/abs-2606-30011",
+    "DOI": "10.48550/arXiv.2606.30011",
+    "CorpusId": 289684600
+   },
+   "title": "T3R: Deeper Test-Time Adaptation for Graph Neural Networks via Gradient Rotation",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 0
+  },
+  "1803.05859": {
+   "paperId": "85a839dd5a496253dd45f2f27aed6a7265575823",
+   "externalIds": {
+    "DBLP": "conf/isalalife/ChangL18",
+    "MAG": "2792712144",
+    "ArXiv": "1803.05859",
+    "DOI": "10.1162/ISAL_A_00049",
+    "CorpusId": 4533868
+   },
+   "title": "Neural Network Quine",
+   "venue": "IEEE Symposium on Artificial Life",
+   "year": 2018,
+   "citationCount": 28
+  },
+  "2312.16917": {
+   "paperId": "b81f8eaef331e2fab0470df7f67bba0887bd206e",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2312-16917",
+    "ArXiv": "2312.16917",
+    "DOI": "10.48550/arXiv.2312.16917",
+    "CorpusId": 266573061
+   },
+   "title": "Unified Lattice Graph Fusion for Chinese Named Entity Recognition",
+   "venue": "arXiv.org",
+   "year": 2023,
+   "citationCount": 2
+  },
+  "2502.04748": {
+   "paperId": "960270e7c01ff28233c088ca59c17f1eedbb1da4",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2502-04748",
+    "ArXiv": "2502.04748",
+    "DOI": "10.48550/arXiv.2502.04748",
+    "CorpusId": 276236149
+   },
+   "title": "Self-Supervised Learning for Pre-training Capsule Networks: Overcoming Medical Imaging Dataset Challenges",
+   "venue": "arXiv.org",
+   "year": 2025,
+   "citationCount": 2
+  },
+  "2501.12824": {
+   "paperId": "0f6e3338cd18b01c4622d90bedb52184b3cf0c84",
+   "externalIds": {
+    "ArXiv": "2501.12824",
+    "DBLP": "conf/wacv/QuerciaYCKMAS25",
+    "DOI": "10.1109/WACV61041.2025.00627",
+    "CorpusId": 275787919
+   },
+   "title": "Enhancing Monocular Depth Estimation with Multi-Source Auxiliary Tasks",
+   "venue": "IEEE Workshop/Winter Conference on Applications of Computer Vision",
+   "year": 2025,
+   "citationCount": 2
+  },
+  "2203.02634": {
+   "paperId": "8ca4bfb9c20133ab0da3c95845533dd7021b50c7",
+   "externalIds": {
+    "ArXiv": "2203.02634",
+    "DBLP": "journals/corr/abs-2203-02634",
+    "DOI": "10.48550/arXiv.2203.02634",
+    "CorpusId": 247292054
+   },
+   "title": "Important Object Identification with Semi-Supervised Learning for Autonomous Driving",
+   "venue": "IEEE International Conference on Robotics and Automation",
+   "year": 2022,
+   "citationCount": 20
+  },
+  "2508.01565": {
+   "paperId": "5b2f5385b7f67ed01c419bec07abaa9713d3bfc9",
+   "externalIds": {
+    "ArXiv": "2508.01565",
+    "CorpusId": 280421722
+   },
+   "title": "Deeply Supervised Multi-Task Autoencoder for Biological Brain Age estimation using three dimensional T$_1$-weighted magnetic resonance imaging",
+   "venue": "",
+   "year": 2025,
+   "citationCount": 0
+  },
+  "2408.16305": {
+   "paperId": "2e461828585aee08f30464a6301a2ca4b0e36613",
+   "externalIds": {
+    "ArXiv": "2408.16305",
+    "DBLP": "journals/corr/abs-2408-16305",
+    "DOI": "10.1109/TCSVT.2025.3572508",
+    "CorpusId": 272146335
+   },
+   "title": "Semantics-Oriented Multitask Learning for DeepFake Detection: A Joint Embedding Approach",
+   "venue": "IEEE transactions on circuits and systems for video technology (Print)",
+   "year": 2024,
+   "citationCount": 16
+  },
+  "2310.02396": {
+   "paperId": "1b99d5fea6f8c3793c143e7b23e5235336e5cec3",
+   "externalIds": {
+    "DBLP": "conf/nips/LipplL24",
+    "ArXiv": "2310.02396",
+    "DOI": "10.52202/079017-3771",
+    "CorpusId": 270212641
+   },
+   "title": "Inductive biases of multi-task learning and finetuning: multiple regimes of feature reuse",
+   "venue": "Neural Information Processing Systems",
+   "year": 2023,
+   "citationCount": 14
+  },
+  "2306.11837": {
+   "paperId": "9b8249ab689188e7cfad2ec620ac63e91b8e37aa",
+   "externalIds": {
+    "DBLP": "journals/pr/ZhangWWWSQPL25",
+    "PubMedCentral": "12021437",
+    "ArXiv": "2306.11837",
+    "DOI": "10.48550/arXiv.2306.11837",
+    "CorpusId": 259212212,
+    "PubMed": "40290575"
+   },
+   "title": "Brain Anatomy Prior Modeling to Forecast Clinical Progression of Cognitive Impairment with Structural MRI",
+   "venue": "Pattern Recognition",
+   "year": 2023,
+   "citationCount": 7
+  },
+  "2207.10023": {
+   "paperId": "9ce80440a79b6224aae557fab89239afedc74943",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2207-10023",
+    "ArXiv": "2207.10023",
+    "DOI": "10.48550/arXiv.2207.10023",
+    "CorpusId": 250699285
+   },
+   "title": "Tailoring Self-Supervision for Supervised Learning",
+   "venue": "European Conference on Computer Vision",
+   "year": 2022,
+   "citationCount": 13
+  },
+  "2212.12411": {
+   "paperId": "693322c7f5dc51eaa913a7f15c2480e05c9b7af6",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2212-12411",
+    "ArXiv": "2212.12411",
+    "DOI": "10.48550/arXiv.2212.12411",
+    "CorpusId": 255096392
+   },
+   "title": "Benchmark for Uncertainty & Robustness in Self-Supervised Learning",
+   "venue": "arXiv.org",
+   "year": 2022,
+   "citationCount": 1
+  },
+  "2308.05410": {
+   "paperId": "1c28702a9d0423b6defacd45514f7206f33d032b",
+   "externalIds": {
+    "ArXiv": "2308.05410",
+    "DBLP": "journals/corr/abs-2308-05410",
+    "DOI": "10.1109/ICCV51070.2023.02057",
+    "CorpusId": 260775452
+   },
+   "title": "SC3K: Self-supervised and Coherent 3D Keypoints Estimation from Rotated, Noisy, and Decimated Point Cloud Data",
+   "venue": "IEEE International Conference on Computer Vision",
+   "year": 2023,
+   "citationCount": 20
+  },
+  "2606.06878": {
+   "paperId": "df85f5b86f09727858e1106feea1c3a8da8237e8",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2606-06878",
+    "ArXiv": "2606.06878",
+    "DOI": "10.48550/arXiv.2606.06878",
+    "CorpusId": 288985007
+   },
+   "title": "A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation",
+   "venue": "arXiv.org",
+   "year": 2026,
+   "citationCount": 1
+  },
+  "2104.11244": {
+   "paperId": "c2cac5c00b23c3ed4a331dd45ca6b73e85400a66",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2104-11244",
+    "ArXiv": "2104.11244",
+    "DOI": "10.1109/TPAMI.2022.3165730",
+    "CorpusId": 233388118,
+    "PubMed": "35389861"
+   },
+   "title": "Equivariant Wavelets: Fast Rotation and Translation Invariant Wavelet Scattering Transforms",
+   "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+   "year": 2021,
+   "citationCount": 25
+  },
+  "2111.07832": {
+   "paperId": "9653c070724e44f023e8cc3ec79f0b9e6d59480d",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2111-07832",
+    "ArXiv": "2111.07832",
+    "CorpusId": 244117494
+   },
+   "title": "iBOT: Image BERT Pre-Training with Online Tokenizer",
+   "venue": "arXiv.org",
+   "year": 2021,
+   "citationCount": 1267
+  },
+  "2210.14797": {
+   "paperId": "f2339a7d4134a150053e0df7ae6b213cf235da47",
+   "externalIds": {
+    "ArXiv": "2210.14797",
+    "DBLP": "conf/icassp/WuTPK23",
+    "DOI": "10.1109/ICASSP49357.2023.10095984",
+    "CorpusId": 253117152
+   },
+   "title": "Is Multi-Task Learning an Upper Bound for Continual Learning?",
+   "venue": "IEEE International Conference on Acoustics, Speech, and Signal Processing",
+   "year": 2022,
+   "citationCount": 8
+  },
+  "2302.02907": {
+   "paperId": "6675f945ef4e20d51279fd6e88584e9126cf38c7",
+   "externalIds": {
+    "DBLP": "conf/icml/GhamiziZCPST23",
+    "ArXiv": "2302.02907",
+    "DOI": "10.48550/arXiv.2302.02907",
+    "CorpusId": 256615215
+   },
+   "title": "GAT: Guided Adversarial Training with Pareto-optimal Auxiliary Tasks",
+   "venue": "International Conference on Machine Learning",
+   "year": 2023,
+   "citationCount": 8
+  }
+ }
+}

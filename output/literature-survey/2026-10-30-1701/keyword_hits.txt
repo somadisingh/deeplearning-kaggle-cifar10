@@ -1,0 +1,901 @@
+# Round-3 keyword list: unique search records + citing papers whose title mentions any of: label augmentation, joint, self-supervis, rotation, auxiliary, distillation, consistency, contrastive, soft label, augmentation, CIFAR
+# Matching: case-insensitive, at a word start, hyphens read as spaces.
+# Fields: title | year | arXiv id | venue | provenance (query ids; cites <seed>)
+# Seeds: SLA=1910.05872, Hendrycks2019=1906.12340, HSAKD=2107.13715, CSI=2007.08176, GatedSSL=2301.05865, SoftAug=2211.04625, LabelAug2024=2408.01977
+== A. Search records (26 arXiv queries): 127 ==
+A Lightweight Library for Energy-Based Joint-Embedding Predictive Architectures | 2026 | 2602.03604 | arXiv | q13
+CLIMB: Centroid-Based Hierarchical Memory for Online Continual Self-Supervised Learning | 2026 | 2606.31275 | arXiv | q13
+Deep Auxiliary Learning via Bilevel Feature Optimization for Label-Efficient Medical Image Segmentation | 2026 | 2610.26954 | arXiv | q21
+Pseudo-Label Augmentation for Affect Sensing in Small Collaborative Groups | 2026 | 2609.16077 | Companion Publication of the 28th International Conference on Multimodal Interaction | q6
+T3R: Deeper Test-Time Adaptation for Graph Neural Networks via Gradient Rotation | 2026 | 2606.30011 | arXiv | q22
+Batch Augmentation with Unimodal Fine-tuning for Multimodal Fusion of Large Language Models | 2025 | 2505.06592 | arXiv | q17
+Combined Image Data Augmentations diminish the benefits of Adaptive Label Smoothing | 2025 | 2507.16427 | DAGM GCPR | q16; cites SoftAug
+DocTTT: Test-Time Training for Handwritten Document Recognition Using Meta-Auxiliary Learning | 2025 | 2501.12898 | IEEE Workshop/Winter Conference on Applications of Computer Vision | q21
+Enhancing Monocular Depth Estimation with Multi-Source Auxiliary Tasks | 2025 | 2501.12824 | IEEE Workshop/Winter Conference on Applications of Computer Vision | q22
+Generating Auxiliary Tasks with Reinforcement Learning | 2025 | 2510.22940 | arXiv | q21,q22
+Improving Large-Scale Recommender Systems with Auxiliary Learning | 2025 | 2510.02215 | arXiv | q21
+MatSSL: Robust Self-Supervised Representation Learning for Metallographic Image Segmentation | 2025 | 2507.18184 | 2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW) | q7
+MVS-TTA: Test-Time Adaptation for Multi-View Stereo via Meta-Auxiliary Learning | 2025 | 2511.18120 | arXiv | q21
+PromptMono: Cross Prompting Attention for Self-Supervised Monocular Depth Estimation in Challenging Environments | 2025 | 2501.13796 | arXiv | q7
+Self-Supervised Learning by Curvature Alignment | 2025 | 2511.17426 | arXiv | q13
+Self-Supervised Learning for Pre-training Capsule Networks: Overcoming Medical Imaging Dataset Challenges | 2025 | 2502.04748 | arXiv | q22
+T-REGS: Minimum Spanning Tree Regularization for Self-Supervised Learning | 2025 | 2510.23484 | Neural Information Processing Systems | q5
+Tackling Data Heterogeneity in Federated Learning through Knowledge Distillation with Inequitable Aggregation | 2025 | 2506.20431 | arXiv | q8
+When the Future Becomes the Past: Taming Temporal Correspondence for Self-supervised Video Representation Learning | 2025 | 2503.15096 | Computer Vision and Pattern Recognition | q9
+Aux-NAS: Exploiting Auxiliary Labels with Negligibly Extra Inference Cost | 2024 | 2405.05695 | International Conference on Learning Representations | q21
+Color-$S^{4}L$: Self-supervised Semi-supervised Learning with Image Colorization | 2024 | 2401.03753 | arXiv | q13
+Controllable and Efficient Multi-Class Pathology Nuclei Data Augmentation using Text-Conditioned Diffusion Models | 2024 | 2407.14426 | International Conference on Medical Image Computing and Computer-Assisted Intervention | q6
+Equivariant Spatio-Temporal Self-Supervision for LiDAR Object Detection | 2024 | 2404.11737 | European Conference on Computer Vision | q14
+Every Node is Different: Dynamically Fusing Self-Supervised Tasks for Attributed Graph Clustering | 2024 | 2401.06595 | AAAI Conference on Artificial Intelligence | q7
+For Better or For Worse? Learning Minimum Variance Features With Label Augmentation | 2024 | 2402.06855 | International Conference on Learning Representations | q6
+Label Augmentation for Neural Networks Robustness | 2024 | 2408.01977 | CoLLAs | q6
+Label-Augmented Dataset Distillation | 2024 | 2409.16239 | IEEE Workshop/Winter Conference on Applications of Computer Vision | q6
+Learning Natural Consistency Representation for Face Forgery Video Detection | 2024 | 2407.10550 | European Conference on Computer Vision | q4
+M3-JEPA: Multimodal Alignment via Multi-gate MoE based on the Joint-Embedding Predictive Architecture | 2024 | 2409.05929 | arXiv | q7
+Meta-Auxiliary Learning for Micro-Expression Recognition | 2024 | 2404.12024 | arXiv | q21
+Self-supervised Contrastive Learning for Implicit Collaborative Filtering | 2024 | 2403.07265 | arXiv | q1,q6
+Semantics-Oriented Multitask Learning for DeepFake Detection: A Joint Embedding Approach | 2024 | 2408.16305 | IEEE transactions on circuits and systems for video technology (Print) | q22
+Towards Effective Data-Free Knowledge Distillation via Diverse Diffusion Augmentation | 2024 | 2410.17606 | ACM Multimedia | q10
+Understanding the Role of Equivariance in Self-supervised Learning | 2024 | 2411.06508 | Neural Information Processing Systems | q14
+WaterMono: Teacher-Guided Anomaly Masking and Enhancement Boosting for Robust Underwater Self-Supervised Monocular Depth Estimation | 2024 | 2406.13344 | IEEE Transactions on Instrumentation and Measurement | q11
+Automatic Detection of Out-of-body Frames in Surgical Videos for Privacy Protection Using Self-supervised Learning and Minimal Labels | 2023 | 2303.18106 | J. Medical Robotics Res. | q4; cites SLA
+DIRA-SS:Dynamic Domain Incremental Regularised Adaptation -- Self-Supervised | 2023 | 2311.07461 | arXiv | q3
+Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation | 2023 | 2305.08344 | arXiv | q6
+Enhancing Sample Utilization through Sample Adaptive Augmentation in Semi-Supervised Learning | 2023 | 2309.03598 | IEEE International Conference on Computer Vision | q18
+From Knowledge Distillation to Self-Knowledge Distillation: A Unified Approach with Normalized Loss and Customized Soft Labels | 2023 | 2303.13005 | IEEE International Conference on Computer Vision | q8
+GAT: Guided Adversarial Training with Pareto-optimal Auxiliary Tasks | 2023 | 2302.02907 | International Conference on Machine Learning | q26; cites Hendrycks2019
+Gated Self-supervised Learning For Improving Supervised Learning | 2023 | 2301.05865 | Conference on Algebraic Informatics | q7; cites SLA
+GSQAS: Graph Self-supervised Quantum Architecture Search | 2023 | 2303.12381 | Physica A: Statistical Mechanics and its Applications | q7
+Meta-Auxiliary Learning for Adaptive Human Pose Prediction | 2023 | 2304.06411 | AAAI Conference on Artificial Intelligence | q21
+Mixture of Self-Supervised Learning | 2023 | 2307.14897 | arXiv | q7; cites SLA,Hendrycks2019
+Point-TTA: Test-Time Adaptation for Point Cloud Registration Using Multitask Meta-Auxiliary Learning | 2023 | 2308.16481 | IEEE International Conference on Computer Vision | q21
+SC3K: Self-supervised and Coherent 3D Keypoints Estimation from Rotated, Noisy, and Decimated Point Cloud Data | 2023 | 2308.05410 | IEEE International Conference on Computer Vision | q23
+Self-supervised adversarial masking for 3D point cloud representation learning | 2023 | 2307.05325 | Asian Conference on Intelligent Information and Database Systems | q9
+Self-Supervised Learning with Cluster-Aware-DINO for High-Performance Robust Speaker Verification | 2023 | 2304.05754 | IEEE/ACM Transactions on Audio Speech and Language Processing | q7
+Self2Self+: Single-Image Denoising with Self-Supervised Learning and Image Quality Assessment Loss | 2023 | 2307.10695 | arXiv | q7
+Shifting to Machine Supervision: Annotation-Efficient Semi and Self-Supervised Learning for Automatic Medical Image Segmentation and Classification | 2023 | 2311.10319 | Scientific Reports | q4
+Supervised Masked Knowledge Distillation for Few-Shot Transformers | 2023 | 2303.15466 | Computer Vision and Pattern Recognition | q9
+Temporal Contrastive Learning for Spiking Neural Networks | 2023 | 2305.13909 | International Conference on Artificial Neural Networks | q12
+Temporal Knowledge Distillation for Time-Sensitive Financial Services Applications | 2023 | 2312.16799 | arXiv | q6
+Understanding normalization in contrastive representation learning and out-of-distribution detection | 2023 | 2312.15288 | arXiv | q15; cites Hendrycks2019,CSI
+Unifying Synergies between Self-supervised Learning and Dynamic Computation | 2023 | 2301.09164 | British Machine Vision Conference | q7
+A Simple Data Mixing Prior for Improving Self-Supervised Learning | 2022 | 2206.07692 | Computer Vision and Pattern Recognition | q20
+Balanced Contrastive Learning for Long-Tailed Visual Recognition | 2022 | 2207.09052 | Computer Vision and Pattern Recognition | q12
+Benchmark for Uncertainty & Robustness in Self-Supervised Learning | 2022 | 2212.12411 | arXiv | q23; cites Hendrycks2019
+Brain-Aware Replacements for Supervised Contrastive Learning in Detection of Alzheimer's Disease | 2022 | 2207.04574 | International Conference on Medical Image Computing and Computer-Assisted Intervention | q20
+Cluster Head Detection for Hierarchical UAV Swarm With Graph Self-supervised Learning | 2022 | 2203.04311 | IEEE Transactions on Signal Processing | q7
+GATE: Graph CCA for Temporal SElf-supervised Learning for Label-efficient fMRI Analysis | 2022 | 2203.09034 | IEEE Transactions on Medical Imaging | q7
+Generalized Supervised Contrastive Learning | 2022 | 2206.00384 | arXiv | q20
+Improving Self-supervised Learning for Out-of-distribution Task via Auxiliary Classifier | 2022 | 2209.02881 | International Conference on Information Photonics | q3
+Interpolation-based Contrastive Learning for Few-Label Semi-Supervised Learning | 2022 | 2202.11915 | IEEE Transactions on Neural Networks and Learning Systems | q18
+Meta Auxiliary Learning for Low-resource Spoken Language Understanding | 2022 | 2206.12774 | Interspeech | q21
+On-the-fly Denoising for Data Augmentation in Natural Language Understanding | 2022 | 2212.10558 | Findings | q16
+Predictive and Contrastive: Dual-Auxiliary Learning for Recommendation | 2022 | 2203.03982 | IEEE Transactions on Computational Social Systems | q21
+Self-Supervised Anomaly Detection by Self-Distillation and Negative Sampling | 2022 | 2201.06378 | International Conference on Artificial Neural Networks | q9; cites Hendrycks2019,CSI
+Self-Supervised Speaker Verification Using Dynamic Loss-Gate and Label Correction | 2022 | 2208.01928 | Interspeech | q7
+Sequence Generation with Label Augmentation for Relation Extraction | 2022 | 2212.14266 | AAAI Conference on Artificial Intelligence | q6
+Soft Augmentation for Image Classification | 2022 | 2211.04625 | Computer Vision and Pattern Recognition | q16
+Tailoring Self-Supervision for Supervised Learning | 2022 | 2207.10023 | European Conference on Computer Vision | q23; cites SLA,Hendrycks2019,CSI
+Towards Efficient and Effective Self-Supervised Learning of Visual Representations | 2022 | 2210.09866 | European Conference on Computer Vision | q3
+Towards Self-Supervised Gaze Estimation | 2022 | 2203.10974 | British Machine Vision Conference | q14
+AASAE: Augmentation-Augmented Stochastic Autoencoders | 2021 | 2107.12329 | arXiv | q13
+Auxiliary Task Update Decomposition: The Good, The Bad and The Neutral | 2021 | 2108.11346 | International Conference on Learning Representations | q22
+Consistency Regularization Can Improve Robustness to Label Noise | 2021 | 2110.01242 | arXiv | q13
+Cross-modal Manifold Cutmix for Self-supervised Video Representation Learning | 2021 | 2112.03906 | 2023 18th International Conference on Machine Vision and Applications (MVA) | q20
+Data Augmentation Methods for End-to-end Speech Recognition on Distant-Talk Scenarios | 2021 | 2106.03419 | Interspeech | q6
+Distill on the Go: Online knowledge distillation in self-supervised learning | 2021 | 2104.09866 | 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) | q11; cites Hendrycks2019
+Equivariant Wavelets: Fast Rotation and Translation Invariant Wavelet Scattering Transforms | 2021 | 2104.11244 | IEEE Transactions on Pattern Analysis and Machine Intelligence | q24
+Hierarchical Self-supervised Augmented Knowledge Distillation | 2021 | 2107.13715 | International Joint Conference on Artificial Intelligence | q10; cites SLA
+Improving End-To-End Modeling for Mispronunciation Detection with Effective Augmentation Mechanisms | 2021 | 2110.08731 | Asia-Pacific Signal and Information Processing Association Annual Summit and Conference | q6
+Improving Semi-Supervised and Domain-Adaptive Semantic Segmentation with Self-Supervised Depth Estimation | 2021 | 2108.12545 | International Journal of Computer Vision | q4
+Knowledge Distillation Using Hierarchical Self-Supervision Augmented Distribution | 2021 | 2109.03075 | IEEE Transactions on Neural Networks and Learning Systems | q10; cites SLA,HSAKD
+Meta Auxiliary Learning for Facial Action Unit Detection | 2021 | 2105.06620 | IEEE Transactions on Affective Computing | q21
+PeCLR: Self-Supervised 3D Hand Pose Estimation from monocular RGB via Equivariant Contrastive Learning | 2021 | 2106.05953 | arXiv | q14
+Self-supervised Auxiliary Learning for Graph Neural Networks via Meta-Learning | 2021 | 2103.00771 | arXiv | q21
+Self-supervised Feature Enhancement: Applying Internal Pretext Task to Supervised Learning | 2021 | 2106.04921 | IEEE Access | q2; cites SLA
+Self-Supervised GANs with Label Augmentation | 2021 | 2106.08601 | Neural Information Processing Systems | q1,q6; cites SLA
+Self-supervised Speaker Recognition with Loss-gated Learning | 2021 | 2110.03869 | IEEE International Conference on Acoustics, Speech, and Signal Processing | q7
+Self-supervision of Feature Transformation for Further Improving Supervised Learning | 2021 | 2106.04922 | arXiv | q2; cites SLA
+SelfMatch: Combining Contrastive Self-Supervision and Consistency for Semi-Supervised Learning | 2021 | 2101.06480 | arXiv | q13,q18
+Student Helping Teacher: Teacher Evolution via Self-Knowledge Distillation | 2021 | 2110.00329 | arXiv | q8
+Text Augmentation in a Multi-Task View | 2021 | 2101.05469 | Conference of the European Chapter of the Association for Computational Linguistics | q22
+Action Segmentation with Joint Self-Supervised Temporal Domain Adaptation | 2020 | 2003.02824 | Computer Vision and Pattern Recognition | q4
+Auxiliary Task Reweighting for Minimum-data Learning | 2020 | 2010.08244 | Neural Information Processing Systems | q22
+Canonical Capsules: Self-Supervised Capsules in Canonical Pose | 2020 | 2012.04718 | Neural Information Processing Systems | q14
+CoMatch: Semi-supervised Learning with Contrastive Graph Regularization | 2020 | 2011.11183 | IEEE International Conference on Computer Vision | q13
+CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances | 2020 | 2007.08176 | Neural Information Processing Systems | q15; cites SLA,Hendrycks2019
+FeatMatch: Feature-Based Augmentation for Semi-Supervised Learning | 2020 | 2007.08505 | European Conference on Computer Vision | q18
+Federated Self-Supervised Learning of Multi-Sensor Representations for Embedded Intelligence | 2020 | 2007.13018 | IEEE Internet of Things Journal | q4
+FixMatch: Simplifying Semi-Supervised Learning with Consistency and Confidence | 2020 | 2001.07685 | Neural Information Processing Systems | q18
+Gradient-based Data Augmentation for Semi-Supervised Learning | 2020 | 2003.12824 | arXiv | q18
+Greedy Policy Search: A Simple Baseline for Learnable Test-Time Augmentation | 2020 | 2002.09103 | Conference on Uncertainty in Artificial Intelligence | q17
+Improving Few-Shot Learning using Composite Rotation based Auxiliary Task | 2020 | 2006.15919 | IEEE Workshop/Winter Conference on Applications of Computer Vision | q3
+MatchGAN: A Self-Supervised Semi-Supervised Conditional Generative Adversarial Network | 2020 | 2006.06614 | Asian Conference on Computer Vision | q3
+MixPUL: Consistency-based Augmentation for Positive and Unlabeled Learning | 2020 | 2004.09388 | arXiv | q18
+Peer Collaborative Learning for Online Knowledge Distillation | 2020 | 2006.04147 | AAAI Conference on Artificial Intelligence | q17
+Regularizing Deep Networks with Semantic Data Augmentation | 2020 | 2007.10538 | IEEE Transactions on Pattern Analysis and Machine Intelligence | q18
+S3VAE: Self-Supervised Sequential VAE for Representation Disentanglement and Data Generation | 2020 | 2005.11437 | Computer Vision and Pattern Recognition | q4
+Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs | 2020 | 2007.08294 | Neural Information Processing Systems | q21
+Self-supervised Learning of Point Clouds via Orientation Estimation | 2020 | 2008.00305 | International Conference on 3D Vision | q3
+Self-supervised Pre-training with Hard Examples Improves Visual Representations | 2020 | 2012.13493 | arXiv | q20
+Stochastic Batch Augmentation with An Effective Distilled Dynamic Soft Label Regularizer | 2020 | 2006.15284 | International Joint Conference on Artificial Intelligence | q17
+Towards Lifelong Self-Supervision For Unpaired Image-to-Image Translation | 2020 | 2004.00161 | arXiv | q3,q23
+AuxNet: Auxiliary tasks enhanced Semantic Segmentation for Automated Driving | 2019 | 1901.05808 | VISIGRAPP | q22
+Consistency Regularization for Generative Adversarial Networks | 2019 | 1910.12027 | International Conference on Learning Representations | q18
+Exploring Self-Supervised Regularization for Supervised and Semi-Supervised Learning | 2019 | 1906.10343 | arXiv | q13,q18
+Multi-task Self-Supervised Learning for Human Activity Detection | 2019 | 1907.11879 | Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies | q4
+Occlusions for Effective Data Augmentation in Image Classification | 2019 | 1910.10651 | 2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW) | q17
+Road Mapping In LiDAR Images Using A Joint-Task Dense Dilated Convolutions Merging Network | 2019 | 1909.04588 | IEEE International Geoscience and Remote Sensing Symposium | q22
+Self-supervised Domain Adaptation for Computer Vision Tasks | 2019 | 1907.10915 | IEEE Access | q3
+Self-Supervised Generalisation with Meta Auxiliary Learning | 2019 | 1901.08933 | Neural Information Processing Systems | q21
+Self-supervised Label Augmentation via Input Transformations | 2019 | 1910.05872 | International Conference on Machine Learning | q5; cites Hendrycks2019
+Universal Joint Feature Extraction for P300 EEG Classification using Multi-task Autoencoder | 2018 | 1808.06541 | IEEE Access | q22
+== B. Cite SLA (not in A): 192 ==
+A survey on design choices for self-supervised learning in computer vision | 2026 | - | Artificial Intelligence Review | cites SLA
+Can One-Shot Test-Time Data Augmentation Help with Generalization? | 2026 | 2602.00114 | arXiv | cites SLA
+Conditional Self-Supervised Learning for Few-Shot Learning | 2026 | - | IEEE transactions on circuits and systems for video technology (Print) | cites SLA
+Cross-Domain Incremental Modulation Recognition with Virtual-Class Contrastive Learning | 2026 | - | ICC 2026 - IEEE International Conference on Communications | cites SLA
+Dual-path collaborative distillation | 2026 | - | Pattern Analysis and Applications | cites SLA
+EADA: Efficient adaptive data augmentation | 2026 | - | Computer Vision and Image Understanding | cites SLA
+Hierarchical contrastive regularization with progressive self-distillation for few-shot learning | 2026 | - | Neurocomputing | cites SLA
+Hybrid Architecture Instance Segmentation Model for Tight Sandstone Microscopic Images Based on EfficientSAM and Knowledge Distillation | 2026 | - | Proceedings of the 2026 International Conference on Machine Learning and Neural Networks | cites SLA
+Multi-scale self-knowledge distillation network for image forgery detection and localization | 2026 | - | Applied Soft Computing | cites SLA
+Non-exemplar class-incremental learning: Dynamic adversarial sample synthesis and relational knowledge distillation | 2026 | - | Applied Soft Computing | cites SLA
+OFMFS: Optimizing feature diversity via multi-perspective self-supervised tasks for few-shot image classification | 2026 | - | Information Sciences | cites SLA
+Self-Knowledge Distillation and Its Application: A Survey | 2026 | - | IEEE Transactions on Knowledge and Data Engineering | cites SLA
+Shallow-to-Deep and Slack Matching for Self-Distillation | 2026 | - | IEEE transactions on circuits and systems for video technology (Print) | cites SLA
+Surpassing Oneself: Self-Distillation From Past Failures | 2026 | - | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites SLA
+Accumulated Self-ensemble Knowledge Distillation for Deep Knowledge Tracing | 2025 | - | 2025 International Conference on Distance Education and Learning (ICDEL) | cites SLA
+AdaCoRCE Loss for Knowledge Distillation: A Novel Approach With Network Fission and Co-Teaching Technique | 2025 | - | IEEE Transactions on Artificial Intelligence | cites SLA
+Adaptive lightweight network construction method for Self-Knowledge Distillation | 2025 | - | Neurocomputing | cites SLA,HSAKD
+Adversarial class-wise self-knowledge distillation for medical image segmentation | 2025 | - | Scientific Reports | cites SLA
+An Innovative Multisource Teacher Collaborative Framework for Self-Knowledge Distillation | 2025 | - | IEEE Transactions on Neural Networks and Learning Systems | cites SLA
+ATAS: Any-to-Any Self-Distillation for Enhanced Open-Vocabulary Dense Prediction | 2025 | 2506.08678 | IEEE International Conference on Computer Vision | cites SLA
+Class Discriminative Knowledge Distillation | 2025 | - | IEEE Transactions on Emerging Topics in Computational Intelligence | cites SLA
+Confusion-Driven Self-Supervised Progressively Weighted Ensemble Learning for Non-Exemplar Class Incremental Learning | 2025 | - | Neural Information Processing Systems | cites SLA,Hendrycks2019
+Correlation-Based Knowledge Distillation in Exemplar-Free Class-Incremental Learning | 2025 | - | IEEE Open Journal of the Computer Society | cites SLA
+Deep dive into clarity: Leveraging signal-to-noise ratio awareness and knowledge distillation for underwater image enhancement | 2025 | - | Expert Systems with Applications | cites SLA
+Enriching Knowledge Distillation with Intra-Class Contrastive Learning | 2025 | 2509.22053 | arXiv | cites SLA
+Federated Learning With Dual-End Gradient Correction and Proxy-Free Self-Distillation | 2025 | - | IEEE Access | cites SLA
+PROTOCOL: Partial Optimal Transport-enhanced Contrastive Learning for Imbalanced Multi-view Clustering | 2025 | 2506.12408 | International Conference on Machine Learning | cites SLA
+Relation-based self-distillation method for 2D object detection | 2025 | - | Scientific Reports | cites SLA
+Residual Learning for Self-Knowledge Distillation: Enhancing Neural Networks Through Consistency Across Layers | 2025 | - | IEEE Transactions on Big Data | cites SLA
+Right Time to Learn:Promoting Generalization via Bio-inspired Spacing Effect in Knowledge Distillation | 2025 | 2502.06192 | International Conference on Machine Learning | cites SLA
+Self-Knowledge Distillation-Empowered Directional Connectivity Transformer for Microbial Keratitis Biomarkers Segmentation on Slit-Lamp Photography | 2025 | - | Medical Image Analysis | cites SLA
+Unsupervised domain adaptation with multi-level distillation boost and adaptive mask for medical image segmentation | 2025 | - | Comput. Biol. Medicine | cites SLA
+A discrepancy-aware self-distillation method for multi-modal glioma grading | 2024 | - | Knowledge-Based Systems | cites SLA
+A Survey on Symbolic Knowledge Distillation of Large Language Models | 2024 | 2408.10210 | IEEE Transactions on Artificial Intelligence | cites SLA
+A Unified Asymmetric Knowledge Distillation Framework for Image Classification | 2024 | - | Neural Processing Letters | cites SLA,HSAKD
+Adaptive Network Construction Method for Self-Knowledge Distillation | 2024 | - | SSRN Electronic Journal | cites SLA,HSAKD
+AggSS: An Aggregated Self-Supervised Approach for Class-Incremental Learning | 2024 | 2408.04347 | British Machine Vision Conference | cites SLA
+Channel randomisation: Self-supervised representation learning for reliable visual anomaly detection in speciality crops | 2024 | - | Computers and Electronics in Agriculture | cites SLA,Hendrycks2019
+Channel Randomisation: Self-Supervised Representation Learning for Reliable Visual Anomaly Detection in Specialty Crops | 2024 | - | SSRN Electronic Journal | cites SLA
+Combined Knowledge Distillation Framework: Breaking Down Knowledge Barriers | 2024 | - | 電腦學刊 | cites SLA
+CutFreq: Cut-and-Swap Frequency Components for Low-Level Vision Augmentation | 2024 | - | AAAI Conference on Artificial Intelligence | cites SLA
+Dataset Distillation for Offline Reinforcement Learning | 2024 | 2407.20299 | arXiv | cites SLA
+Decoupled Self-Supervised Subspace Classifier for Few-Shot Class-Incremental SAR Target Recognition | 2024 | - | IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing | cites SLA
+DisRot: boosting the generalization capability of few-shot learning via knowledge distillation and self-supervised learning | 2024 | - | Machine Vision and Applications | cites SLA
+DLS-GAN: Generative Adversarial Nets for Defect Location Sensitive Data Augmentation | 2024 | - | IEEE Transactions on Automation Science and Engineering | cites SLA
+Dual-Consistency Model Inversion for Non-Exemplar Class Incremental Learning | 2024 | - | Computer Vision and Pattern Recognition | cites SLA
+Dual Knowledge Distillation on Multiview Pseudo Labels for Unsupervised Person Re-Identification | 2024 | - | IEEE transactions on multimedia | cites SLA
+Dynamic Prototype Adaptation with Distillation for Few-shot Point Cloud Segmentation | 2024 | 2401.16051 | International Conference on 3D Vision | cites SLA
+Efficient Ensemble via Rotation-Based Self- Supervised Learning Technique and Multi-Input Multi-Output Network | 2024 | - | IEEE Access | cites SLA,Hendrycks2019
+EPSD: Early Pruning with Self-Distillation for Efficient Model Compression | 2024 | 2402.00084 | AAAI Conference on Artificial Intelligence | cites SLA
+FADS: Fourier-Augmentation Based Data-Shunting for Few-Shot Classification | 2024 | - | IEEE transactions on circuits and systems for video technology (Print) | cites SLA
+Few-Shot Learning With Enhancements to Data Augmentation and Feature Extraction | 2024 | - | IEEE Transactions on Neural Networks and Learning Systems | cites SLA
+Full-Stage Augmentation for Exemplar-Free Class-Incremental Learning | 2024 | - | SSRN Electronic Journal | cites SLA
+Generalized Contrastive Partial Label Learning for Cross-Subject EEG-Based Emotion Recognition | 2024 | - | IEEE Transactions on Instrumentation and Measurement | cites SLA
+Hybrid rotation self-supervision and feature space normalization for class incremental learning | 2024 | - | Information Sciences | cites SLA
+Impact of Autotuned Fully Connected Layers on Performance of Self-supervised Models for Image Classification | 2024 | - | Machine Intelligence Research | cites SLA
+Learning to Augment Graphs: Machine-Learning-Based Social Network Intervention With Self-Supervision | 2024 | - | IEEE Transactions on Computational Social Systems | cites SLA
+M2SD: Multiple Mixing Self-Distillation for Few-Shot Class-Incremental Learning | 2024 | - | AAAI Conference on Artificial Intelligence | cites SLA
+Multi-view Classification Using Hybrid Fusion and Mutual Distillation | 2024 | - | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites SLA
+Multi‐View Self‐Supervised Auxiliary Task for Few‐Shot Remote Sensing Classification | 2024 | - | International Conference on Climate Informatics | cites SLA
+Multiview Subgraph Neural Networks: Self-Supervised Learning With Scarce Labeled Data | 2024 | 2404.12569 | IEEE Transactions on Neural Networks and Learning Systems | cites SLA
+Neural Collapse Inspired Knowledge Distillation | 2024 | 2412.11788 | AAAI Conference on Artificial Intelligence | cites SLA
+PSDSpell: Pre-Training with Self-Distillation Learning for Chinese Spelling Correction | 2024 | - | IEICE Transactions on Information and Systems | cites SLA
+Reinforced Self-Supervised Training for Few-Shot Learning | 2024 | - | IEEE Signal Processing Letters | cites SLA
+Self-Distillation With Augmentation in Feature Space | 2024 | - | IEEE transactions on circuits and systems for video technology (Print) | cites SLA
+Self-Knowledge Distillation for Knowledge Graph Embedding | 2024 | - | International Conference on Language Resources and Evaluation | cites SLA
+Self-Knowledge Distillation Method Using Adaptive Mixed Attention for Image Classification | 2024 | - | International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery | cites SLA
+Self Pseudo Entropy Knowledge Distillation for Semi-Supervised Semantic Segmentation | 2024 | - | IEEE transactions on circuits and systems for video technology (Print) | cites SLA
+Self-Supervised Feature Transmission for improving Supervised Representations | 2024 | - | Artificial Intelligence and Cloud Computing Conference | cites SLA,Hendrycks2019
+Self-supervised learning based on spatial scale learning and category prediction | 2024 | - | Other Conferences | cites SLA
+SFT: Few-Shot Learning via Self-Supervised Feature Fusion With Transformer | 2024 | - | IEEE Access | cites SLA
+SRCPT: Spatial Reconstruction Contrastive Pretext Task for Improving Few-Shot Image Classification | 2024 | - | International Conference on Machine Learning and Computing | cites SLA
+Stable Knowledge Transfer for Contrastive Distillation | 2024 | - | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites SLA
+Substation Abnormal Scene Recognition Based on Two-Stage Contrastive Learning | 2024 | - | Energies | cites SLA
+Tail-STEAK: Improve Friend Recommendation for Tail Users via Self-Training Enhanced Knowledge Distillation | 2024 | - | Proceedings of the AAAI Conference on Artificial Intelligence | cites SLA
+Training Networks in Null Space of Feature Covariance With Self-Supervision for Incremental Learning | 2024 | - | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites SLA,Hendrycks2019
+UniMiSS+: Universal Medical Self-Supervised Learning From Cross-Dimensional Unpaired Data | 2024 | - | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites SLA
+A Good Data Augmentation Policy is not All You Need: A Multi-Task Learning Perspective | 2023 | - | IEEE transactions on circuits and systems for video technology (Print) | cites SLA
+A non-negative feedback self-distillation method for salient object detection | 2023 | - | PeerJ Computer Science | cites SLA
+A Review of Predictive and Contrastive Self-supervised Learning for Medical Images | 2023 | 2302.05043 | Machine Intelligence Research | cites SLA
+A self-supervised classification model for endometrial diseases | 2023 | - | Journal of Cancer Research and Clinical Oncology | cites SLA
+A Survey of Self-supervised Learning from Multiple Perspectives: Algorithms, Applications and Future Trends | 2023 | - | - | cites SLA,Hendrycks2019
+A Survey of Self-Supervised Learning from Multiple Perspectives: Algorithms, Theory, Applications and Future Trends | 2023 | - | arXiv | cites SLA,Hendrycks2019
+A Survey on Self-Supervised Learning: Algorithms, Applications, and Future Trends | 2023 | 2301.05712 | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites SLA,Hendrycks2019
+A2-Aug: Adaptive Automated Data Augmentation | 2023 | - | 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) | cites SLA
+Ambiguity-aware robust teacher (ART): Enhanced self-knowledge distillation framework with pruned teacher network | 2023 | - | Pattern Recognition | cites SLA
+Blind Restoration of a Single Real Turbulence-Degraded Image Based on Self-Supervised Learning | 2023 | - | Remote Sensing | cites SLA
+CLSSL-ResNet: Predicting malignancy of solitary pulmonary nodules from CT images by chimeric label with self-supervised learning | 2023 | - | Journal of X-Ray Science and Technology | cites SLA
+ColdDTA: Utilizing data augmentation and attention-based feature fusion for drug-target binding affinity prediction | 2023 | - | Computers in Biology and Medicine | cites SLA
+Contrastive Learning with Diverse Samples | 2023 | - | Frontiers in artificial intelligence and applications | cites SLA
+Data Augmentation in Classification and Segmentation: A Survey and New Strategies | 2023 | - | Journal of Imaging | cites SLA
+Enhancing deep feature representation in self-knowledge distillation via pyramid feature refinement | 2023 | - | Pattern Recognition Letters | cites SLA
+Enhancing unsupervised domain adaptation by exploiting the conceptual consistency of multiple self-supervised tasks | 2023 | - | Science China Information Sciences | cites SLA
+ESPT: A Self-Supervised Episodic Spatial Pretext Task for Improving Few-Shot Learning | 2023 | 2304.13287 | AAAI Conference on Artificial Intelligence | cites SLA
+Frameless Graph Knowledge Distillation | 2023 | 2307.06631 | IEEE Transactions on Neural Networks and Learning Systems | cites SLA
+Learn More for Food Recognition via Progressive Self-Distillation | 2023 | 2303.05073 | AAAI Conference on Artificial Intelligence | cites SLA
+Learning From Biased Soft Labels | 2023 | 2302.08155 | Neural Information Processing Systems | cites SLA
+Learning with Fantasy: Semantic-Aware Virtual Contrastive Constraint for Few-Shot Class-Incremental Learning | 2023 | 2304.00426 | Computer Vision and Pattern Recognition | cites SLA
+MSVQ: Self-Supervised Learning with Multiple Sample Views and Queues | 2023 | 2305.05370 | Knowledge-Based Systems | cites SLA
+Multipretext-Task Prototypes Guided Dynamic Contrastive Learning Network for Few-Shot Remote Sensing Scene Classification | 2023 | - | IEEE Transactions on Geoscience and Remote Sensing | cites SLA
+Noise-Aware Target Extension with Self-Distillation for Robust Speech Recognition | 2023 | - | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites SLA
+Non-Exemplar Class-Incremental Learning by Random Auxiliary Classes Augmentation and Mixed Features | 2023 | 2304.07707 | IEEE transactions on circuits and systems for video technology (Print) | cites SLA
+Rotation Augmented Distillation for Exemplar-Free Class Incremental Learning with Detailed Analysis | 2023 | 2308.15236 | Chinese Conference on Pattern Recognition and Computer Vision | cites SLA
+S3C: Self-Supervised Stochastic Classifiers for Few-Shot Class-Incremental Learning | 2023 | 2307.02246 | European Conference on Computer Vision | cites SLA,Hendrycks2019
+S3M: Two-Stage-Based Semi-Self-Supervised Method for Intelligent Bearing Fault Diagnosis | 2023 | - | IEEE Transactions on Instrumentation and Measurement | cites SLA
+Scarcity-GAN: Scarce data augmentation for defect detection via generative adversarial nets | 2023 | - | Neurocomputing | cites SLA
+SCL: Self-supervised contrastive learning for few-shot image classification | 2023 | - | Neural Networks | cites SLA
+SCL-VI: Self-supervised Context Learning for Visual Inspection of Industrial Defects | 2023 | 2311.06504 | arXiv | cites SLA
+Self-distillation object segmentation via pyramid knowledge representation and transfer | 2023 | - | Multimedia Systems | cites SLA
+Self-knowledge distillation based on knowledge transfer from soft to hard examples | 2023 | - | Image and Vision Computing | cites SLA
+Self-Supervised Disentanglement by Leveraging Structure in Data Augmentations | 2023 | 2311.08815 | arXiv | cites SLA
+Self-supervised pairwise-sample resistance model for few-shot classification | 2023 | - | Applied intelligence (Boston) | cites SLA
+Semantic alignment with self-supervision for class incremental learning | 2023 | - | Knowledge-Based Systems | cites SLA
+Spatio-temporal fusion and contrastive learning for urban flow prediction | 2023 | - | Knowledge-Based Systems | cites SLA
+SSL-ProtoNet: Self-supervised Learning Prototypical Networks for few-shot learning | 2023 | - | Expert systems with applications | cites SLA
+Transferable Self-Supervised Instance Learning for Sleep Recognition | 2023 | - | IEEE transactions on multimedia | cites SLA
+Variational Data-Free Knowledge Distillation for Continual Learning | 2023 | - | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites SLA
+Weakly Supervised Referring Expression Grounding via Dynamic Self-Knowledge Distillation | 2023 | - | IEEE/RJS International Conference on Intelligent RObots and Systems | cites SLA
+Application of Model Compression Technology Based on Knowledge Distillation in Convolutional Neural Network Lightweight | 2022 | - | ACM Cloud and Autonomic Computing Conference | cites SLA
+Bi-directional Weakly Supervised Knowledge Distillation for Whole Slide Image Classification | 2022 | 2210.03664 | Neural Information Processing Systems | cites SLA
+Channel Self-Supervision for Online Knowledge Distillation | 2022 | 2203.11660 | arXiv | cites SLA
+Class-aware Information for Logit-based Knowledge Distillation | 2022 | 2211.14773 | arXiv | cites SLA
+Continuous Self-study: Scene Graph Generation with Self-knowledge Distillation and Spatial Augmentation | 2022 | - | Asian Conference on Computer Vision | cites SLA
+Data Augmentation techniques in time series domain: a survey and taxonomy | 2022 | 2206.13508 | Neural computing & applications (Print) | cites SLA
+Dynamic Rectification Knowledge Distillation | 2022 | 2201.11319 | arXiv | cites SLA
+Fast Yet Effective Speech Emotion Recognition with Self-Distillation | 2022 | 2210.14636 | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites SLA
+Fully adaptive recommendation paradigm: top-enhanced recommender distillation for intelligent education systems | 2022 | - | Complex & Intelligent Systems | cites SLA
+Improving image classification robustness using self‐supervision | 2022 | - | Stat | cites SLA,Hendrycks2019
+MtCLSS: Multi-Task Contrastive Learning for Semi-Supervised Pediatric Sleep Staging | 2022 | - | IEEE journal of biomedical and health informatics | cites SLA
+Rethinking the Augmentation Module in Contrastive Learning: Learning Hierarchical Augmentation Invariance with Expanded Views | 2022 | 2206.00227 | Computer Vision and Pattern Recognition | cites SLA
+Self-Distillation from the Last Mini-Batch for Consistency Regularization | 2022 | 2203.16172 | Computer Vision and Pattern Recognition | cites SLA
+Self-Distilled Supervised Contrastive Learning for diagnosis of breast cancers with histopathological images | 2022 | - | Comput. Biol. Medicine | cites SLA
+SELF-LLP: Self-supervised learning from label proportions with self-ensemble | 2022 | - | Pattern Recognition | cites SLA,HSAKD
+Self-Regulated Feature Learning via Teacher-free Feature Distillation | 2022 | - | European Conference on Computer Vision | cites SLA
+Self-supervised acoustic representation learning via acoustic-embedding memory unit modified space autoencoder for underwater target recognition | 2022 | - | The Journal of the Acoustical Society of America | cites SLA
+Self-Supervised Graph Neural Network for Multi-Source Domain Adaptation | 2022 | 2204.05104 | ACM Multimedia | cites SLA,Hendrycks2019
+Survey on Self-Supervised Learning: Auxiliary Pretext Tasks and Contrastive Learning Methods in Imaging | 2022 | - | Entropy | cites SLA
+Task-Driven Self-Supervised BI-Channel Networks Learning for Diagnosis of Breast Cancers with Mammography | 2022 | - | Proceedings - International Conference on Image Processing | cites SLA
+TC-Net: Detecting Noisy Labels Via Transform Consistency | 2022 | - | IEEE transactions on multimedia | cites SLA
+Teacher-free Distillation via Regularizing Intermediate Representation | 2022 | - | IEEE International Joint Conference on Neural Network | cites SLA
+Towards Generalizable DEEPFAKE Face Forgery Detection with Semi-Supervised Learning and Knowledge Distillation | 2022 | - | International Conference on Information Photonics | cites SLA
+Universal Adaptive Data Augmentation | 2022 | 2207.06658 | International Joint Conference on Artificial Intelligence | cites SLA
+VCL-PL:Semi-Supervised Learning from Noisy Web Data with Variational Contrastive Learning | 2022 | - | International Conference on Pattern Recognition | cites SLA
+Weak Augmentation Guided Relational Self-Supervised Learning | 2022 | 2203.08717 | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites SLA
+A 2 -Aug: Adaptive Automated Data Augmentation | 2021 | - | - | cites SLA
+A new self-supervised method for supervised learning | 2021 | - | Other Conferences | cites SLA
+A Novel Multi-Task Self-Supervised Representation Learning Paradigm | 2021 | - | 2021 IEEE International Conference on Artificial Intelligence and Industrial Design (AIID) | cites SLA
+Complementary Calibration: Boosting General Continual Learning With Collaborative Distillation and Self-Supervision | 2021 | 2109.02426 | IEEE Transactions on Image Processing | cites SLA
+Conditional Self-Supervised Learning for Few-Shot Classification | 2021 | - | International Joint Conference on Artificial Intelligence | cites SLA
+Consistency Regularization for Training Conﬁdence-Calibrated Classiﬁers | 2021 | - | - | cites SLA,Hendrycks2019,CSI
+Decoupled self-supervised label augmentation for fully-supervised image classification | 2021 | - | Knowledge-Based Systems | cites SLA
+Deep Self-Supervised Learning for Oracle Bone Inscriptions Features Representation | 2021 | - | IEEE International Conference on Information Systems and Computer Aided Education (ICISCAE) | cites SLA
+Detecting Insider Threat from Behavioral Logs Based on Ensemble and Self-Supervised Learning | 2021 | - | Security and Communication Networks | cites SLA
+Distilling a Powerful Student Model via Online Knowledge Distillation | 2021 | 2103.14473 | IEEE Transactions on Neural Networks and Learning Systems | cites SLA
+Drop, Swap, and Generate: A Self-Supervised Approach for Generating Neural Activity | 2021 | 2111.02338 | bioRxiv | cites SLA
+Explicit homography estimation improves contrastive self-supervised learning | 2021 | 2101.04713 | arXiv | cites SLA
+Generalization Self-distillation with Epoch-wise Regularization | 2021 | - | IEEE International Joint Conference on Neural Network | cites SLA
+Graph Contrastive Learning Automated | 2021 | 2106.07594 | International Conference on Machine Learning | cites SLA
+Joint-Label Learning by Dual Augmentation for Time Series Classification | 2021 | - | AAAI Conference on Artificial Intelligence | cites SLA
+Mine Your Own vieW: Self-Supervised Learning Through Across-Sample Prediction | 2021 | 2102.10106 | arXiv | cites SLA
+Multi-Domain Knowledge Distillation via Uncertainty-Matching for End-to-End ASR Models | 2021 | - | Interspeech | cites SLA
+Pareto Self-Supervised Training for Few-Shot Learning | 2021 | 2104.07841 | Computer Vision and Pattern Recognition | cites SLA
+Prototype Augmentation and Self-Supervision for Incremental Learning | 2021 | - | Computer Vision and Pattern Recognition | cites SLA,Hendrycks2019
+Refine Myself by Teaching Myself: Feature Refinement via Self-Knowledge Distillation | 2021 | 2103.08273 | Computer Vision and Pattern Recognition | cites SLA
+Remote Sensing Image Scene Classification via Label Augmentation and Intra-Class Constraint | 2021 | - | Remote Sensing | cites SLA
+ReSSL: Relational Self-Supervised Learning with Weak Augmentation | 2021 | 2107.09282 | Neural Information Processing Systems | cites SLA
+SAL-Net: Self-Supervised Attribute Learning for Object Recognition and Segmentation | 2021 | - | Wireless Communications and Mobile Computing | cites SLA
+Self-Supervised Exclusive-Inclusive Interactive Learning for Multi-Label Facial Expression Recognition in the Wild | 2021 | - | IEEE Transactions on Circuits and Systems for Video Technology | cites SLA
+Self-Supervised Joint Learning Fault Diagnosis Method Based on Three-Channel Vibration Images | 2021 | - | Italian National Conference on Sensors | cites SLA
+Self-supervised Learning for Small Shot COVID-19 Classification | 2021 | - | International Symposium on Information Technology: Coding and Computing | cites SLA
+Self-Supervised Multi-Modal Hybrid Fusion Network for Brain Tumor Segmentation | 2021 | - | IEEE journal of biomedical and health informatics | cites SLA
+Self-supervised Representation Learning for Reliable Robotic Monitoring of Fruit Anomalies | 2021 | 2109.10135 | IEEE International Conference on Robotics and Automation | cites SLA,Hendrycks2019
+Self-supervision Adversarial Learning Network for Liver Lesion Classification | 2021 | - | Lecture notes in computer science | cites SLA
+Semantic Segmentation of Remote Sensing Images With Self-Supervised Multitask Representation Learning | 2021 | - | IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing | cites SLA
+Task-driven Self-supervised Bi-channel Networks for Diagnosis of Breast Cancers with Mammography | 2021 | 2101.06228 | arXiv | cites SLA
+Transform consistency for learning with noisy labels | 2021 | 2103.13872 | arXiv | cites SLA
+Understanding the Role of Self-Supervised Learning in Out-of-Distribution Detection Task | 2021 | 2110.13435 | arXiv | cites SLA,Hendrycks2019,CSI
+UniMiSS: Universal Medical Self-supervised Learning via Breaking Dimensionality Barrier | 2021 | 2112.09356 | European Conference on Computer Vision | cites SLA
+A Multi-view Perspective of Self-supervised Learning | 2020 | 2003.00877 | arXiv | cites SLA,Hendrycks2019
+CERT: Contrastive Self-supervised Learning for Language Understanding | 2020 | 2005.12766 | arXiv | cites SLA
+Combination of Convolutional Neural Network Architecture and its Learning Method for Rotation‐Invariant Handwritten Digit Recognition | 2020 | - | IEEJ TRANSACTIONS ON ELECTRICAL AND ELECTRONIC ENGINEERING | cites SLA
+DTG-Net: Differentiated Teachers Guided Self-Supervised Video Action Recognition | 2020 | 2006.07609 | arXiv | cites SLA
+Feature Space Augmentation for Long-Tailed Data | 2020 | 2008.03673 | European Conference on Computer Vision | cites SLA
+Knowledge Distillation: A Survey | 2020 | 2006.05525 | International Journal of Computer Vision | cites SLA
+Knowledge Distillation and Student-Teacher Learning for Visual Intelligence: A Review and New Outlooks | 2020 | 2004.05937 | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites SLA
+PGL: Prior-Guided Local Self-supervised Learning for 3D Medical Image Segmentation | 2020 | 2011.12640 | arXiv | cites SLA
+Self-Supervised Learning Aided Class-Incremental Lifelong Learning | 2020 | 2006.05882 | arXiv | cites SLA,Hendrycks2019
+Self-Supervised Learning From Multi-Sensor Data for Sleep Recognition | 2020 | - | IEEE Access | cites SLA
+When Self-Supervised Learning Meets Scene Classification: Remote Sensing Scene Classification Based on a Multitask Learning Framework | 2020 | - | Remote Sensing | cites SLA,Hendrycks2019
+Image Enhanced Rotation Prediction for Self-Supervised Learning | 2019 | 1912.11603 | International Conference on Information Photonics | cites SLA
+Albumentations: fast and flexible image augmentations | 2018 | 1809.06839 | Inf. | cites SLA
+Out-of-distribution Detection Using Joint Probability between Class and Geometric Transformation | - | - | - | cites SLA,Hendrycks2019
+== C. Cite HSAKD, SoftAug, GatedSSL or LabelAug2024 (not in A-B): 106 ==
+A layered self-supervised knowledge distillation framework for efficient image representation learning | 2026 | - | Computing | cites HSAKD
+AGVBench: A Reliability-Oriented Benchmark of Data Augmentation for Vein Recognition | 2026 | 2607.02271 | arXiv | cites SoftAug
+BicKD: Bilateral Contrastive Knowledge Distillation | 2026 | 2602.01265 | IEEE International Joint Conference on Neural Network | cites HSAKD
+Comparative Analysis of Self-Supervised Learning Methods for Skin Lesion Segmentation | 2026 | - | European Future Technologies Conference and Exhibition | cites GatedSSL
+Cross-branch knowledge distillation via shallow layer guidance | 2026 | - | Multimedia Systems | cites HSAKD
+Difficulty-Aware Flow-based Augmentation for SAR Semi-Supervised Learning | 2026 | - | International Conference on Electronics, Information and Communications | cites SoftAug
+Dual-view collaborative distillation | 2026 | - | Multimedia Systems | cites HSAKD
+Enhancing robustness against adversarial attacks in biomedical image classification through squeezed quantized self-supervised contrastive learning | 2026 | - | Biomedical Signal Processing and Control | cites GatedSSL
+GaitKD: A Universal Decoupled Distillation Framework for Efficient Gait Recognition | 2026 | 2604.26255 | arXiv | cites HSAKD
+Hierarchical Neuron Energy Feature Decoupled Distillation for Low-Resolution Face Recognition | 2026 | - | Electronics | cites HSAKD
+Leakage-Aware Ablation of Data Augmentation for Sugarcane Leaf Disease Classification: Operator- and Severity-Specific Effects | 2026 | - | Journal of Information Systems and Informatics | cites SoftAug
+MultiScale Knowledge Distillation | 2026 | - | Machine-mediated learning | cites HSAKD
+Online knowledge distillation optimization based on Multi-Student model Multi-Task collaborative learning | 2026 | - | Knowledge-Based Systems | cites HSAKD
+Teacher-Guided Student Self-Knowledge Distillation Using Diffusion Model | 2026 | 2602.02107 | arXiv | cites HSAKD
+TMDKD: tutor-guided multi-dimensional difficulty-aware knowledge distillation | 2026 | - | Multimedia Systems | cites HSAKD
+A Layered Self-Supervised Knowledge Distillation Framework for Efficient Multimodal Learning on the Edge | 2025 | 2506.07055 | arXiv | cites HSAKD
+A Multi-Teacher Knowledge Distillation Framework with Aggregation Techniques for Lightweight Deep Models | 2025 | - | Applied System Innovation | cites HSAKD
+AESeg: Affinity-enhanced segmenter using feature class mapping knowledge distillation for efficient RGB-D semantic segmentation of indoor scenes | 2025 | - | Neural Networks | cites HSAKD
+Aligning to the teacher: multilevel feature-aligned knowledge distillation | 2025 | - | PeerJ Computer Science | cites HSAKD
+Bias-variance decomposition knowledge distillation for medical image segmentation | 2025 | - | Neurocomputing | cites HSAKD
+Diffusion-Noise-Based Augmentation for Long-Tailed Remote Sensing Image Classification | 2025 | - | IEEE Transactions on Geoscience and Remote Sensing | cites SoftAug
+Distill4Geo: Streamlined Knowledge Transfer from Contrastive Weight-Sharing Teachers to Independent, Lightweight View Experts | 2025 | - | Communications in computer and information science | cites HSAKD
+Eikd: method of extracting important information from feature map for knowledge distillation | 2025 | - | International Journal of Machine Learning and Cybernetics | cites HSAKD
+Frequency-Aligned Knowledge Distillation for Lightweight Spatiotemporal Forecasting | 2025 | 2507.02939 | IEEE International Conference on Computer Vision | cites HSAKD
+HRSGD: High-order recurrent medical image fusion via self-supervised generative distillation | 2025 | - | Neurocomputing | cites HSAKD
+Iterative Knowledge Distillation: Artificial Neural Network Models Knowledge Cumulation for Increasing End Device Model Performance | 2025 | - | International Conference on Recent Advances and Innovations in Engineering | cites HSAKD
+Knowledge distillation from relative distribution | 2025 | - | Expert Systems with Applications | cites HSAKD
+Label-enhanced contrastive knowledge distillation | 2025 | - | Knowledge and Information Systems | cites HSAKD
+Logitwise Distillation Network: Improving Knowledge Distillation via Introducing Sample Confidence | 2025 | - | Applied Sciences | cites HSAKD
+MedKit: Multi-level feature distillation with knowledge injection for radiology report generation | 2025 | - | Expert systems with applications | cites HSAKD
+MMT-ARD: Multimodal Multi-Teacher Adversarial Distillation for Robust Vision-Language Models | 2025 | 2511.17448 | arXiv | cites HSAKD
+MoKD: Multi-Task Optimization for Knowledge Distillation | 2025 | 2505.08170 | arXiv | cites HSAKD
+Multi-Teacher Knowledge Distillation with Reinforcement Learning for Visual Recognition | 2025 | 2502.18510 | AAAI Conference on Artificial Intelligence | cites HSAKD
+Multisite T1-weighted MRI classification of Alzheimer’s disease using 3D-CNN-HSCAM architecture with contrastive domain adaptation | 2025 | - | Biomedical Signal Processing and Control | cites GatedSSL
+On-the-Fly Data Augmentation via Gradient-Guided and Sample-Aware Influence Estimation | 2025 | 2510.00434 | arXiv | cites SoftAug
+Self-Supervised Learning for Fruit and Vegetable Spoilage Detection: Reducing Dependency on Labeled Data | 2025 | - | 2025 8th International Conference on Informatics and Computational Sciences (ICICoS) | cites GatedSSL
+SRKD: Towards Efficient 3D Point Cloud Segmentation via Structure- and Relation-aware Knowledge Distillation | 2025 | 2506.17290 | arXiv | cites HSAKD
+Teacher-Student Consistent Distillation for Source-Free Domain Adaptation Object Detection | 2025 | - | Communications in computer and information science | cites HSAKD
+VRM: Knowledge Distillation via Virtual Relation Matching | 2025 | 2502.20760 | IEEE International Conference on Computer Vision | cites HSAKD
+Why logit distillation works: A novel knowledge distillation technique by deriving target augmentation and logits distortion | 2025 | - | Information Processing & Management | cites HSAKD
+A coded knowledge distillation framework for image classification based on adaptive JPEG encoding | 2024 | - | Pattern Recognition | cites HSAKD
+A Comprehensive Review of Knowledge Distillation in Computer Vision | 2024 | 2404.00936 | arXiv | cites HSAKD
+A simple data augmentation method for automatic modulation recognition via mixing signals | 2024 | - | International Conference on Robotics, Intelligent Control and Artificial Intelligence | cites SoftAug
+Attention correction feature and boundary constraint knowledge distillation for efficient 3D medical image segmentation | 2024 | - | Expert Systems with Applications | cites HSAKD
+Bayes Conditional Distribution Estimation for Knowledge Distillation Based on Conditional Mutual Information | 2024 | 2401.08732 | International Conference on Learning Representations | cites HSAKD
+Big2Small: Learning from masked image modelling with heterogeneous self‐supervised knowledge distillation | 2024 | - | IET Cyber-Systems and Robotics | cites HSAKD
+Boosting Network Intrusion Detection with Two-Level Ensemble Learning and Knowledge Distillation Approaches | 2024 | - | Software and Compilers for Embedded Systems | cites HSAKD
+Category contrastive distillation with self-supervised classification | 2024 | - | Signal, Image and Video Processing | cites HSAKD
+Class-wise Image Mixture Guided Self-Knowledge Distillation for Image Classification | 2024 | - | International Conference on Computer Supported Cooperative Work in Design | cites HSAKD
+Cross-View Consistency Regularisation for Knowledge Distillation | 2024 | 2412.16493 | ACM Multimedia | cites HSAKD
+Distillation and prompt in Chinese CLIP model | 2024 | - | Proceedings of the 2024 2nd Asia Symposium on Image and Graphics | cites HSAKD
+EntAugment: Entropy-Driven Adaptive Data Augmentation Framework for Image Classification | 2024 | 2409.06290 | European Conference on Computer Vision | cites SoftAug
+eTag: Class-Incremental Learning via Embedding Distillation and Task-Oriented Generation | 2024 | - | AAAI Conference on Artificial Intelligence | cites HSAKD
+Federated Feature Augmentation and Alignment | 2024 | - | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites SoftAug
+FIMKD: Feature-Implicit Mapping Knowledge Distillation for RGB-D Indoor Scene Semantic Segmentation | 2024 | - | IEEE Transactions on Artificial Intelligence | cites HSAKD
+Fourier-Basis Functions to Bridge Augmentation Gap: Rethinking Frequency Augmentation in Image Classification | 2024 | 2403.01944 | Computer Vision and Pattern Recognition | cites SoftAug
+Homogeneous teacher based buffer knowledge distillation for tiny neural networks | 2024 | - | Journal of systems architecture | cites HSAKD
+How to Train the Teacher Model for Effective Knowledge Distillation | 2024 | 2407.18041 | European Conference on Computer Vision | cites HSAKD
+Hybrid mix-up contrastive knowledge distillation | 2024 | - | Information Sciences | cites HSAKD
+IMPROVING IMAGE CLASSIFICATION ACCURACY WITH OVERSAMPLING AND DATA AUGMENTATION USING DEEP LEARNING: A CASE STUDY ON THE SIMPSONS CHARACTERS DATASET | 2024 | - | Jurnal Riset Informatika | cites GatedSSL
+Knowledge distillation for object detection based on Inconsistency-based Feature Imitation and Global Relation Imitation | 2024 | - | Neurocomputing | cites HSAKD
+Knowledge Distillation in Video-Based Human Action Recognition: An Intuitive Approach to Efficient and Flexible Model Training | 2024 | - | Journal of Imaging | cites HSAKD
+Multi-perspective analysis on data augmentation in knowledge distillation | 2024 | - | Neurocomputing | cites HSAKD
+MuShAug: Boosting Sequence Signal Classification via Multishape Augmentation | 2024 | - | IEEE Internet of Things Journal | cites SoftAug
+Online Policy Distillation with Decision-Attention | 2024 | 2406.05488 | IEEE International Joint Conference on Neural Network | cites HSAKD
+Online Relational Knowledge Distillation for Image Classification | 2024 | - | International Conference on Computer Supported Cooperative Work in Design | cites HSAKD
+PDD: Pruning Neural Networks During Knowledge Distillation | 2024 | - | Cognitive Computation | cites HSAKD
+Preview-Based Category Contrastive Learning for Knowledge Distillation | 2024 | 2410.14143 | IEEE transactions on circuits and systems for video technology (Print) | cites HSAKD
+PURF: Improving teacher representations by imposing smoothness constraints for knowledge distillation | 2024 | - | Applied Soft Computing | cites HSAKD
+SAFLEX: Self-Adaptive Augmentation via Feature Label Extrapolation | 2024 | 2410.02512 | International Conference on Learning Representations | cites SoftAug
+Supervised Contrastive Knowledge Distillation | 2024 | - | International Journal of Intelligent Engineering and Systems | cites HSAKD
+Variational AdaBoost knowledge distillation for skin lesion classification in dermatology images | 2024 | - | Complex & Intelligent Systems | cites HSAKD
+Adversarial local distribution regularization for knowledge distillation | 2023 | - | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites HSAKD
+Catch-Up Distillation: You Only Need to Train Once for Accelerating Sampling | 2023 | 2305.10769 | arXiv | cites HSAKD
+Categories of Response-Based, Feature-Based, and Relation-Based Knowledge Distillation | 2023 | 2306.10687 | arXiv | cites HSAKD
+CLIP-KD: An Empirical Study of CLIP Model Distillation | 2023 | 2307.12732 | Computer Vision and Pattern Recognition | cites HSAKD
+Comparative Knowledge Distillation | 2023 | 2311.02253 | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites HSAKD
+DualAug: Exploiting Additional Heavy Augmentation with OOD Data Rejection | 2023 | 2310.08139 | Neurocomputing | cites SoftAug
+eTag: Class-Incremental Learning with Embedding Distillation and Task-Oriented Generation | 2023 | 2304.10103 | arXiv | cites HSAKD
+Heterogeneous Generative Knowledge Distillation with Masked Image Modeling | 2023 | 2309.09571 | arXiv | cites HSAKD
+Knowledge Distillation With Feature Self Attention | 2023 | - | IEEE Access | cites HSAKD
+SKDBERT: Compressing BERT via Stochastic Knowledge Distillation | 2023 | 2211.14466 | AAAI Conference on Artificial Intelligence | cites HSAKD
+Understanding the Role of the Projector in Knowledge Distillation | 2023 | 2303.11098 | AAAI Conference on Artificial Intelligence | cites HSAKD
+What Role Does Data Augmentation Play in Knowledge Distillation? | 2023 | - | Lecture notes in computer science | cites HSAKD
+When Object Detection Meets Knowledge Distillation: A Survey | 2023 | - | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites HSAKD
+A self-supervised temporal temperature prediction method based on dilated contrastive learning | 2022 | - | Journal of Process Control | cites HSAKD
+CoupleFace: Relation Matters for Face Recognition Distillation | 2022 | 2204.05502 | European Conference on Computer Vision | cites HSAKD
+Cross-Domain Correlation Distillation for Unsupervised Domain Adaptation in Nighttime Semantic Segmentation | 2022 | 2205.00858 | Computer Vision and Pattern Recognition | cites HSAKD
+Cross-Image Relational Knowledge Distillation for Semantic Segmentation | 2022 | 2204.06986 | Computer Vision and Pattern Recognition | cites HSAKD
+Data-Based Distillation: Teaching What You Should Teach | 2022 | - | - | cites HSAKD
+HEAD: HEtero-Assists Distillation for Heterogeneous Object Detectors | 2022 | 2207.05345 | European Conference on Computer Vision | cites HSAKD
+InDistill: Information flow-preserving knowledge distillation for model compression | 2022 | 2205.10003 | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites HSAKD
+Ladder Siamese Network: A Method and Insights for Multi-Level Self-Supervised Learning | 2022 | 2211.13844 | International Conference on Information Photonics | cites HSAKD
+MixSKD: Self-Knowledge Distillation from Mixup for Image Recognition | 2022 | 2208.05768 | European Conference on Computer Vision | cites HSAKD
+Multiple-Stage Knowledge Distillation | 2022 | - | Applied Sciences | cites HSAKD
+Online cross-layer knowledge distillation on graph neural networks with deep supervision | 2022 | 2210.13743 | Neural computing & applications (Print) | cites HSAKD
+Online Knowledge Distillation via Mutual Contrastive Learning for Visual Recognition | 2022 | 2207.11518 | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites HSAKD
+Pay Attention to Your Positive Pairs: Positive Pair Aware Contrastive Knowledge Distillation | 2022 | - | ACM Multimedia | cites HSAKD
+Reflective Learning for Online Knowledge Distillation | 2022 | - | 2022 IEEE 8th International Conference on Computer and Communications (ICCC) | cites HSAKD
+Teacher-student collaborative knowledge distillation for image classification | 2022 | - | Applied intelligence (Boston) | cites HSAKD
+Information Theoretic Representation Distillation | 2021 | 2112.00459 | British Machine Vision Conference | cites HSAKD
+Multi-View Correlation Distillation for Incremental Object Detection | 2021 | 2107.01787 | Pattern Recognition | cites HSAKD
+Mutual Contrastive Learning for Visual Representation Learning | 2021 | 2104.12565 | AAAI Conference on Artificial Intelligence | cites HSAKD
+Teacher's pet: understanding and mitigating biases in distillation | 2021 | 2106.10494 | Trans. Mach. Learn. Res. | cites HSAKD
+Category Contrastive Distillation with Self-Supervised Classi�cation | - | - | - | cites HSAKD
+Regulating EEG data augmentation with uncertainty-guided exploration and evidential calibration | - | - | Biomedical Signal Processing and Control | cites SoftAug
+== D. Cite CSI (not in A-C): 177 ==
+AngularDINO: Semi-Supervised Anomaly Detection via Self-Distillation with Hybrid Angular Margin | 2026 | - | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites CSI
+Contrastive Conformal Sets | 2026 | 2603.26261 | arXiv | cites CSI
+Epsilon-supervised contrastive learning with boundary-gradient sampling open-set fault diagnosis for industrial processes | 2026 | - | Chemical engineering research & design | cites CSI
+Joint Embedding Variational Bayes | 2026 | 2602.05639 | Trans. Mach. Learn. Res. | cites CSI
+Learning From Hard Negative Samples: Multi-Prototype Contrastive Learning for Out-of-Distribution Detection | 2026 | - | IEEE Access | cites CSI
+Multiview Fine-Grained Contrastive Learning for Radar Open-Set Recognition | 2026 | - | IEEE Transactions on Aerospace and Electronic Systems | cites CSI
+Out-of-distribution detection by feature-constrained contrastive learning | 2026 | - | Applied Soft Computing | cites Hendrycks2019,CSI
+Out-of-Distribution Detection in Drug-Drug Interactions via Supervised Contrastive Learning | 2026 | - | 2026 IEEE 39th International Symposium on Computer-Based Medical Systems (CBMS) | cites CSI
+Semi-supervised flow-augmented Gaussian mixture VAEs with weighted contrastive learning for out-of-distribution detection | 2026 | - | Knowledge-Based Systems | cites CSI
+A multi-view contrastive embedding framework for filtering fuzzy requirements of complex products | 2025 | - | Advanced Engineering Informatics | cites CSI
+A Novel MoCo-Based Self-Supervised Learning Framework for Solar Panel Defect Detection | 2025 | - | IEEE Access | cites CSI
+A Self-Supervised Contrastive Learning Anomaly Detection Method with Fuzzy Rough Sets | 2025 | - | International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery | cites CSI
+Accelerating surface defect detection using normal data with an attention-guided feature distillation reconstruction network | 2025 | - | Measurement | cites CSI
+AegisCloud: Adversarial Contrastive Transformerbased Framework for Secure Cloud Log Analysis | 2025 | - | International Conference Electronic Systems, Signal Processing and Computing Technologies [ICESC-] | cites CSI
+ARES: Auxiliary Range Expansion for Outlier Synthesis | 2025 | 2501.06442 | arXiv | cites CSI
+AutoSciDACT: Automated Scientific Discovery through Contrastive Embedding and Hypothesis Testing | 2025 | 2510.21935 | Neural Information Processing Systems | cites CSI
+Causality-Aware Contrastive Learning for Robust Multivariate Time-Series Anomaly Detection | 2025 | 2506.03964 | International Conference on Machine Learning | cites CSI
+Contrastive active adaptive partial label learning under class distribution mismatch | 2025 | - | Engineering applications of artificial intelligence | cites CSI
+Contrastive Representation Modeling for Anomaly Detection | 2025 | 2501.05130 | European Conference on Artificial Intelligence | cites Hendrycks2019,CSI
+EDAS: Effective Data Augmentation Strategies for test-time adaptation | 2025 | - | ICT express | cites CSI
+Enhancing Out-of-Distribution Detection Under Covariate Shifts: A Full-Spectrum Contrastive Denoising Framework | 2025 | - | Electronics | cites CSI
+Focusing on what humans see: Robustness enhancement through adversarial supervised contrastive learning | 2025 | - | Neurocomputing | cites CSI
+Improved Contrastive Predictive Coding for Time Series Out-Of-Distribution Detection Applied to Human Activity Data | 2025 | - | Pattern Recognition Letters | cites CSI
+One-class classification via generative adversarial and federated distillation | 2025 | - | Expert systems with applications | cites Hendrycks2019,CSI
+QHCL-AOC-IDS: An Uncertainty-aware Online Intrusion Detection System with Quadruplet-Hard Contrastive Learning | 2025 | - | 2025 IEEE 6th International Conference on Computer, Big Data, Artificial Intelligence (ICCBD+AI) | cites CSI
+SchizoNet: A Self-Supervised Learning Architecture for Unsupervised Anomaly Detection in Schizophrenia fMRI Scans | 2025 | - | 2025 International Conference on Smart & Sustainable Technology (INCSST) | cites CSI
+Self‐Supervised Anomaly Segmentation for Surface Defect Inspection in Display Panels | 2025 | - | - | cites CSI
+Self-supervised distributional and contrastive learning model for image anomaly detection | 2025 | - | Knowledge-Based Systems | cites Hendrycks2019,CSI
+Self-supervised Dual-view Framework with Tailored Negative Sampling for New Activity Detection | 2025 | - | International Conference on Information and Knowledge Management | cites CSI
+SNAP-UQ: Self-supervised Next-Activation Prediction for Single-Pass Uncertainty in TinyML | 2025 | 2508.12907 | arXiv | cites CSI
+Soft Cluster-Aware Equivariant Contrastive Learning for Unsupervised Out-of-Distribution Detection | 2025 | - | IEEE transactions on circuits and systems for video technology (Print) | cites CSI
+A comprehensive survey on contrastive learning | 2024 | - | Neurocomputing | cites CSI
+A Mixed Augmentations Method for Multivariate Time Series Contrastive Learning | 2024 | - | International Symposium on Image and Signal Processing and Analysis | cites CSI
+CLAN: A Contrastive Learning based Novelty Detection Framework for Human Activity Recognition | 2024 | - | arXiv | cites Hendrycks2019,CSI
+COFT-AD: COntrastive Fine-Tuning for Few-Shot Anomaly Detection | 2024 | 2402.18998 | IEEE Transactions on Image Processing | cites CSI
+Contrastive Class Anchor Learning for Open Set Object Recognition in Driving Scenes | 2024 | - | Trans. Mach. Learn. Res. | cites CSI
+Contrastive Time-Series Anomaly Detection | 2024 | - | IEEE Transactions on Knowledge and Data Engineering | cites CSI
+DACR: Distribution-Augmented Contrastive Reconstruction for Time-Series Anomaly Detection | 2024 | 2401.11271 | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites CSI
+DeepClean – Contrastive Learning Towards Quality Assessment in Large-Scale CXR Data Sets | 2024 | - | IEEE International Conference on Bioinformatics and Biomedicine | cites CSI
+Does DetectGPT Fully Utilize Perturbation? Bridge Selective Perturbation to Fine-tuned Contrastive Learning Detector would be Better | 2024 | 2402.00263 | Annual Meeting of the Association for Computational Linguistics | cites CSI
+End-To-End Self-tuning Self-supervised Time Series Anomaly Detection | 2024 | 2404.02865 | SDM | cites CSI
+Enhancing Anomaly Detection Generalization through Knowledge Exposure: The Dual Effects of Augmentation | 2024 | 2406.10617 | arXiv | cites CSI
+Enhancing Out-of-Distribution Detection Through Stochastic Embeddings in Self-supervised Learning | 2024 | - | International Conference on Conceptual Structures | cites Hendrycks2019,CSI
+Enhancing out-of-distribution detection via diversified multi-prototype contrastive learning | 2024 | - | Pattern Recognition | cites CSI
+JOSC: A Joint Model for Detecting Out-of-distribution Services based on Supervised Contrastive Learning | 2024 | - | 2024 IEEE International Conference on Web Services (ICWS) | cites CSI
+NorCLR: A Normality-Aggregated Contrastive Learning Framework for Mechanical Anomaly Detection | 2024 | - | International Instrumentation and Measurement Technology Conference | cites CSI
+Normality Aggregation and Abnormality Separation Contrastive Learning for Mechanical Anomaly Detection | 2024 | - | IEEE Transactions on Instrumentation and Measurement | cites CSI
+Out-of-Distribution Detection for Contrastive Models Using Angular Distance Measures | 2024 | - | International Conference on Machine Learning and Applications | cites CSI
+Progress and Thinking on Self-Supervised Learning Methods in Computer Vision: A Review | 2024 | - | IEEE Sensors Journal | cites CSI
+Pure anomaly detection via self-supervised deep metric learning with adaptive margin | 2024 | - | Neurocomputing | cites Hendrycks2019,CSI
+Rethinking Knee Osteoarthritis Severity Grading: A Few Shot Self-Supervised Contrastive Learning Approach | 2024 | 2407.09515 | arXiv | cites CSI
+Rotation Has Two Sides: Evaluating Data Augmentation for Deep One-class Classification | 2024 | - | International Conference on Learning Representations | cites Hendrycks2019,CSI
+Salvaging the Overlooked: Leveraging Class-Aware Contrastive Learning for Multi-Class Anomaly Detection | 2024 | 2412.04769 | IEEE International Conference on Computer Vision | cites CSI
+Self-Supervised Anomaly Detection With Neural Transformations | 2024 | - | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites CSI
+Self-Supervised Autoencoders for Visual Anomaly Detection | 2024 | - | Mathematics | cites CSI
+Self-Supervised Learning for Real-World Object Detection: a Survey | 2024 | 2410.07442 | Computer Vision and Image Understanding | cites CSI
+Self-supervised New Activity Detection in Sensor-based Smart Environments | 2024 | 2401.10288 | arXiv | cites Hendrycks2019,CSI
+SemanticMask: A Contrastive View Design for Anomaly Detection in Tabular Data | 2024 | - | International Joint Conference on Artificial Intelligence | cites CSI
+Typicality-based point OOD detection with contrastive learning | 2024 | - | NLDL | cites CSI
+Universal Novelty Detection Through Adaptive Contrastive Learning | 2024 | 2408.10798 | Computer Vision and Pattern Recognition | cites Hendrycks2019,CSI
+A Regularization Factor-Based Approach to Anomaly Detection Using Contrastive Learning | 2023 | - | The Arabian journal for science and engineering | cites CSI
+A Self-Supervised Anomaly Detector of Fruits Based on Hyperspectral Imaging | 2023 | - | Foods | cites CSI
+Abnormality Detection for Medical Images Using Self-Supervision and Negative Samples | 2023 | - | bioRxiv | cites CSI
+Adapting Contrastive Language-Image Pretrained (CLIP) Models for Out-of-Distribution Detection | 2023 | 2303.05828 | Trans. Mach. Learn. Res. | cites Hendrycks2019,CSI
+Anomalies, Representations, and Self-Supervision | 2023 | 2301.04660 | SciPost Physics Core | cites CSI
+Cluster-aware Contrastive Learning for Unsupervised Out-of-distribution Detection | 2023 | 2302.02598 | arXiv | cites Hendrycks2019,CSI
+Continual Contrastive Anomaly Detection under Natural Data Distribution Shifts | 2023 | - | International Conference on Automation, Control and Robotics Engineering | cites CSI
+Continuous image anomaly detection based on contrastive lifelong learning | 2023 | - | Applied intelligence (Boston) | cites Hendrycks2019,CSI
+Contrastive Knowledge Distillation for Anomaly Detection in Multi-Illumination/Focus Display Images | 2023 | 2609.05520 | 2023 18th International Conference on Machine Vision and Applications (MVA) | cites CSI
+Contrastive Language-Image Pretrained (CLIP) Models are Powerful Out-of-Distribution Detectors | 2023 | - | arXiv | cites Hendrycks2019,CSI
+Contrastive Learning with Prototype-Based Negative Mixing for Satellite Telemetry Anomaly Detection | 2023 | - | Italian National Conference on Sensors | cites CSI
+Contrastive Time Series Anomaly Detection by Temporal Transformations | 2023 | - | IEEE International Joint Conference on Neural Network | cites CSI
+Deep Active Learning with Contrastive Learning Under Realistic Data Pool Assumptions | 2023 | 2303.14433 | arXiv | cites CSI
+Distill-SODA: Distilling Self-Supervised Vision Transformer for Source-Free Open-Set Domain Adaptation in Computational Pathology | 2023 | 2307.04596 | IEEE Transactions on Medical Imaging | cites CSI
+Guiding Energy-based Models via Contrastive Latent Variables | 2023 | 2303.03023 | International Conference on Learning Representations | cites Hendrycks2019,CSI
+OOD Aware Supervised Contrastive Learning | 2023 | 2310.01942 | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites Hendrycks2019,CSI
+ProtoFL: Unsupervised Federated Learning via Prototypical Distillation | 2023 | 2307.12450 | IEEE International Conference on Computer Vision | cites Hendrycks2019,CSI
+Pull & Push: Leveraging Differential Knowledge Distillation for Efficient Unsupervised Anomaly Detection and Localization | 2023 | - | IEEE transactions on circuits and systems for video technology (Print) | cites CSI
+RSC-VAE: Recoding Semantic Consistency Based VAE for One-Class Novelty Detection | 2023 | 2305.04275 | arXiv | cites CSI
+Self-supervised anomaly detection, staging and segmentation for retinal images | 2023 | - | Medical Image Anal. | cites CSI
+Self-Supervised Multi-Scale Cropping and Simple Masked Attentive Predicting for Lung CT-Scan Anomaly Detection | 2023 | - | IEEE Transactions on Medical Imaging | cites CSI
+Self-Tuning Self-Supervised Image Anomaly Detection | 2023 | 2306.12033 | Knowledge Discovery and Data Mining | cites CSI
+SeMAnD: Self-Supervised Anomaly Detection in Multimodal Geospatial Datasets | 2023 | 2309.15245 | SIGSPATIAL/GIS | cites CSI
+Semi-Supervised Learning via Weight-aware Distillation under Class Distribution Mismatch | 2023 | 2308.11874 | IEEE International Conference on Computer Vision | cites CSI
+SSMSPC: self-supervised multivariate statistical in-process control in discrete manufacturing processes | 2023 | - | Journal of Intelligent Manufacturing | cites Hendrycks2019,CSI
+SupEuclid: Extremely Simple, High Quality OoD Detection with Supervised Contrastive Learning and Euclidean Distance | 2023 | 2308.10973 | arXiv | cites CSI
+Towards Trustworthy Dataset Distillation | 2023 | 2307.09165 | Pattern Recognition | cites Hendrycks2019,CSI
+Training Auxiliary Prototypical Classifiers for Explainable Anomaly Detection in Medical Image Segmentation | 2023 | - | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites CSI
+Transformer-based contrastive learning framework for image anomaly detection | 2023 | - | International Journal of Machine Learning and Cybernetics | cites Hendrycks2019,CSI
+Understanding the limitations of self-supervised learning for tabular anomaly detection | 2023 | 2309.08374 | Pattern Analysis and Applications | cites Hendrycks2019,CSI
+Unilaterally Aggregated Contrastive Learning with Hierarchical Augmentation for Anomaly Detection | 2023 | 2308.10155 | IEEE International Conference on Computer Vision | cites Hendrycks2019,CSI
+Unsupervised anomaly detection by densely contrastive learning for time series data | 2023 | - | Neural Networks | cites CSI
+Unveiling the Potential of Probabilistic Embeddings in Self-Supervised Learning | 2023 | 2310.18080 | arXiv | cites Hendrycks2019,CSI
+Wearable based monitoring and self-supervised contrastive learning detect clinical complications during treatment of Hematologic malignancies | 2023 | - | npj Digit. Medicine | cites CSI
+Anomaly Detection for Tabular Data with Internal Contrastive Learning | 2022 | - | International Conference on Learning Representations | cites CSI
+Anomaly Detection using Contrastive Normalizing Flows | 2022 | - | arXiv | cites Hendrycks2019,CSI
+Anomaly Detection with Test Time Augmentation and Consistency Evaluation | 2022 | 2206.02345 | arXiv | cites Hendrycks2019,CSI
+CADet: Fully Self-Supervised Out-Of-Distribution Detection With Contrastive Learning | 2022 | 2210.01742 | Neural Information Processing Systems | cites Hendrycks2019,CSI
+Contrastive Active Learning Under Class Distribution Mismatch | 2022 | - | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites CSI
+Contrastive Conditional Neural Processes | 2022 | 2203.03978 | Computer Vision and Pattern Recognition | cites CSI
+Contrastive Knowledge Graph Error Detection | 2022 | 2211.10030 | International Conference on Information and Knowledge Management | cites CSI
+Contrastive learning-based image retrieval for automatic recognition of in situ marine plankton images | 2022 | - | ICES Journal of Marine Science | cites CSI
+Contrastive Learning for Cross-Domain Open World Recognition | 2022 | 2203.09257 | IEEE/RJS International Conference on Intelligent RObots and Systems | cites CSI
+Contrastive Self-supervision Defines General-Purpose Similarity Functions | 2022 | - | - | cites CSI
+CTR: Contrastive Training Recognition Classifier for Few-Shot Open-World Recognition | 2022 | - | International Conference on Pattern Recognition | cites CSI
+Data Augmentation is a Hyperparameter: Cherry-picked Self-Supervision for Unsupervised Anomaly Detection is Creating the Illusion of Success | 2022 | 2208.07734 | Trans. Mach. Learn. Res. | cites CSI
+Detecting Anomaly in Chemical Sensors via Regularized Contrastive Learning | 2022 | - | IEEE International Conference on Acoustics Speech and Signal Processing | cites CSI
+E$^{3}$3Outlier: a Self-Supervised Framework for Unsupervised Deep Outlier Detection | 2022 | - | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites CSI
+Explicit Boundary Guided Semi-Push-Pull Contrastive Learning for Better Anomaly Detection | 2022 | - | arXiv | cites Hendrycks2019,CSI
+Explicit Boundary Guided Semi-Push-Pull Contrastive Learning for Supervised Anomaly Detection | 2022 | 2207.01463 | Computer Vision and Pattern Recognition | cites Hendrycks2019,CSI
+Hierarchical Semi-Supervised Contrastive Learning for Contamination-Resistant Anomaly Detection | 2022 | 2207.11789 | European Conference on Computer Vision | cites Hendrycks2019,CSI
+Hyperspherical Consistency Regularization | 2022 | 2206.00845 | Computer Vision and Pattern Recognition | cites CSI
+Improving the Diagnosis of Psychiatric Disorders with Self-Supervised Graph State Space Models | 2022 | 2206.03331 | arXiv | cites CSI
+Joint Embedding of 2D and 3D Networks for Medical Image Anomaly Detection | 2022 | 2212.10939 | arXiv | cites CSI
+Metropolis-Hastings Data Augmentation for Graph Neural Networks | 2022 | 2203.14082 | Neural Information Processing Systems | cites CSI
+No Shifted Augmentations (NSA): compact distributions for robust self-supervised Anomaly Detection | 2022 | 2203.10344 | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites Hendrycks2019,CSI
+OOD Augmentation May Be at Odds with Open-Set Recognition | 2022 | 2206.04242 | arXiv | cites CSI
+Open-world Contrastive Learning | 2022 | - | arXiv | cites CSI
+OpenCon: Open-world Contrastive Learning | 2022 | 2208.02764 | Trans. Mach. Learn. Res. | cites CSI
+Positive Difference Distribution for Image Outlier Detection using Normalizing Flows and Contrastive Data | 2022 | 2208.14024 | Trans. Mach. Learn. Res. | cites Hendrycks2019,CSI
+Rethinking Rotation in Self-Supervised Contrastive Learning: Adaptive Positive or Negative Data Augmentation | 2022 | 2210.12681 | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites CSI
+Role of Data Augmentation in Unsupervised Anomaly Detection | 2022 | - | - | cites Hendrycks2019,CSI
+SeeABLE: Soft Discrepancies and Bounded Contrastive Learning for Exposing Deepfakes | 2022 | 2211.11296 | IEEE International Conference on Computer Vision | cites Hendrycks2019,CSI
+Self-Supervised Acoustic Anomaly Detection Via Contrastive Learning | 2022 | - | IEEE International Conference on Acoustics Speech and Signal Processing | cites CSI
+Self-Supervised Anomaly Detection: A Survey and Outlook | 2022 | - | arXiv | cites Hendrycks2019,CSI
+Self-supervised anomaly detection in computer vision and beyond: A survey and outlook | 2022 | 2205.05173 | Neural Networks | cites Hendrycks2019,CSI
+Self-Supervised Losses for One-Class Textual Anomaly Detection | 2022 | 2204.05695 | arXiv | cites CSI
+Self-Supervised Training with Autoencoders for Visual Anomaly Detection | 2022 | 2206.11723 | arXiv | cites CSI
+Self-supervision is not magic: Understanding Data Augmentation in Image Anomaly Detection | 2022 | - | - | cites CSI
+Semi-Supervised Anomaly Detection with Contrastive Regularization | 2022 | - | International Conference on Pattern Recognition | cites Hendrycks2019,CSI
+Siamese U-Net for Image Anomaly Detection and Segmentation with Contrastive Learning | 2022 | - | British Machine Vision Conference | cites CSI
+Spatial Contrastive Learning for Anomaly Detection and Localization | 2022 | - | IEEE Access | cites CSI
+SPot-the-Difference Self-Supervised Pre-training for Anomaly Detection and Segmentation | 2022 | 2207.14315 | European Conference on Computer Vision | cites CSI
+Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification | 2022 | - | International Conference on the Software Process | cites CSI
+Understanding the Effect of Data Augmentation in Self-supervised Anomaly Detection | 2022 | - | arXiv | cites Hendrycks2019,CSI
+Understanding the properties and limitations of contrastive learning for Out-of-Distribution detection | 2022 | 2211.03183 | ICPR Workshops | cites CSI
+An Evaluation of Self-Supervised Pre-Training for Skin-Lesion Analysis | 2021 | 2106.09229 | ECCV Workshops | cites CSI
+Anomaly detection in IR images of PV modules using supervised contrastive learning | 2021 | 2112.02922 | Progress in Photovoltaics | cites Hendrycks2019,CSI
+AnoSeg: Anomaly Segmentation Network Using Self-Supervised Learning | 2021 | 2110.03396 | arXiv | cites CSI
+Attention Map-guided Two-stage Anomaly Detection using Hard Augmentation | 2021 | 2103.16851 | arXiv | cites CSI
+Consistency Regularization for Deep Face Anti-Spoofing | 2021 | 2111.12320 | IEEE Transactions on Information Forensics and Security | cites CSI
+Contrastive Coding for Active Learning under Class Distribution Mismatch | 2021 | - | IEEE International Conference on Computer Vision | cites CSI
+Contrastive Out-of-Distribution Detection for Pretrained Transformers | 2021 | 2104.08812 | Conference on Empirical Methods in Natural Language Processing | cites CSI
+Contrastive Predictive Coding for Anomaly Detection | 2021 | 2107.07820 | arXiv | cites CSI
+CutPaste: Self-Supervised Learning for Anomaly Detection and Localization | 2021 | 2104.04015 | Computer Vision and Pattern Recognition | cites Hendrycks2019,CSI
+Data augmentation and pre-trained networks for extremely low data regimes unsupervised visual inspection | 2021 | 2106.01277 | Optical Metrology | cites Hendrycks2019,CSI
+Efficient Anomaly Detection Using Self-Supervised Multi-Cue Tasks | 2021 | 2111.12379 | IEEE Transactions on Image Processing | cites Hendrycks2019,CSI
+Fine-grained anomaly detection via multi-task self-supervision | 2021 | 2104.09993 | Advanced Video and Signal Based Surveillance | cites Hendrycks2019,CSI
+Focus Your Distribution: Coarse-to-Fine Non-Contrastive Learning for Anomaly Detection and Localization | 2021 | 2110.04538 | IEEE International Conference on Multimedia and Expo | cites Hendrycks2019,CSI
+Fool Me Once: Robust Selective Segmentation via Out-of-Distribution Detection with Contrastive Learning | 2021 | 2103.00869 | IEEE International Conference on Robotics and Automation | cites CSI
+Improving Accuracy of Out-of-Distribution Detection and In-Distribution Classification by Incorporating JSD Consistency Loss | 2021 | - | International Journal of Computer & Software Engineering | cites Hendrycks2019,CSI
+Improving Robustness and Efficiency in Active Learning with Contrastive Loss | 2021 | - | arXiv | cites CSI
+Masked Contrastive Learning for Anomaly Detection | 2021 | 2105.08793 | International Joint Conference on Artificial Intelligence | cites Hendrycks2019,CSI
+Mean-Shifted Contrastive Loss for Anomaly Detection | 2021 | 2106.03844 | AAAI Conference on Artificial Intelligence | cites Hendrycks2019,CSI
+Multi-centred Strong Augmentation via Contrastive Learning for Unsupervised Lesion Detection and Segmentation | 2021 | - | arXiv | cites Hendrycks2019,CSI
+Novelty Detection via Contrastive Learning with Negative Data Augmentation | 2021 | 2106.09958 | International Joint Conference on Artificial Intelligence | cites Hendrycks2019,CSI
+Object-aware Contrastive Learning for Debiased Scene Representation | 2021 | 2108.00049 | Neural Information Processing Systems | cites CSI
+On the Importance of Regularisation & Auxiliary Information in OOD Detection | 2021 | 2107.07564 | International Conference on Neural Information Processing | cites CSI
+One-Class Classifier for Chest X-ray Anomaly Detection via Contrastive Patch-based Percentile | 2021 | - | IEEE Access | cites CSI
+Open-Set Hypothesis Transfer With Semantic Consistency | 2021 | 2010.00292 | IEEE Transactions on Image Processing | cites CSI
+OpenCoS: Contrastive Semi-supervised Learning for Handling Open-set Unlabeled Data | 2021 | 2107.08943 | ECCV Workshops | cites Hendrycks2019,CSI
+OpenMatch: Open-set Consistency Regularization for Semi-supervised Learning with Outliers | 2021 | 2105.14148 | Neural Information Processing Systems | cites Hendrycks2019,CSI
+Pediatric Otoscopy Video Screening With Shift Contrastive Anomaly Detection | 2021 | 2110.13254 | Frontiers in Digital Health | cites CSI
+Robust Contrastive Active Learning with Feature-guided Query Strategies | 2021 | 2109.06873 | arXiv | cites CSI
+Self-Supervised Anomaly Detection via Neural Autoregressive Flows with Active Learning | 2021 | - | - | cites Hendrycks2019,CSI
+Self-Supervised Learning for Anomaly Detection With Dynamic Local Augmentation | 2021 | - | IEEE Access | cites CSI
+Self-supervised pseudo multi-class pre-training for unsupervised anomaly detection and segmentation in medical images | 2021 | 2109.01303 | Medical Image Anal. | cites Hendrycks2019,CSI
+SLA2P: Self-supervised Anomaly Detection with Adversarial Perturbation | 2021 | 2111.12896 | arXiv | cites CSI
+SOoD: Self-Supervised Out-of-Distribution Detection Under Domain Shift for Multi-Class Colorectal Cancer Tissue Types | 2021 | - | 2021 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW) | cites CSI
+SSD: A Unified Framework for Self-Supervised Outlier Detection | 2021 | 2103.12051 | International Conference on Learning Representations | cites Hendrycks2019,CSI
+Supervised contrastive learning over prototype-label embeddings for network intrusion detection | 2021 | - | Information Fusion | cites CSI
+Unsupervised Outlier Detection Using Memory and Contrastive Learning | 2021 | 2107.12642 | IEEE Transactions on Image Processing | cites CSI
+Evaluation of Out-of-Distribution Detection Performance of Self-Supervised Learning in a Controllable Environment | 2020 | 2011.13120 | arXiv | cites Hendrycks2019,CSI
+Hybrid Discriminative-Generative Training via Contrastive Learning | 2020 | 2007.09070 | arXiv | cites CSI
+Does D ETECT GPT Fully Utilize Perturbation? Selective Perturbation on Model-Based Contrastive Learning Detector would be Better | - | - | - | cites CSI
+Supplementary Material for Unilaterally Aggregated Contrastive Learning with Hierarchical Augmentation for Anomaly Detection | - | - | - | cites Hendrycks2019,CSI
+TSA on AutoPilot: Self-tuning Self-supervised Time Series Anomaly Detection | - | - | - | cites CSI
+== E. Cite Hendrycks2019 only: 290 ==
+Advances in semi and self-supervised learning techniques for cross-domain visual inspection tools | 2026 | - | International Journal of Machine Learning and Cybernetics | cites Hendrycks2019
+Boosting Visual Instruction Tuning with Self-Supervised Guidance | 2026 | 2604.12966 | arXiv | cites Hendrycks2019
+Demographic-Aware Self-Supervised Anomaly Detection Pretraining for Equitable Rare Cardiac Diagnosis | 2026 | 2603.19695 | arXiv | cites Hendrycks2019
+FP-MAE: A Self-Supervised Model for Floorplan Generation with Incomplete Inputs | 2026 | - | Buildings | cites Hendrycks2019
+IID-DAKD: An Incremental Intrusion Detection Method for Encrypted Traffic Based on Dual Augmentation and Fusion Knowledge Distillation | 2026 | - | Symmetry | cites Hendrycks2019
+Manifold Capacity Regularization for State Representation Learning and Self-Supervised Learning | 2026 | - | Nordic Machine Intelligence | cites Hendrycks2019
+Mind the Way You Select Negative Texts: Pursuing the Distance Consistency in OOD Detection with VLMs | 2026 | 2603.02618 | arXiv | cites Hendrycks2019
+Modelling of geochemical survey data via graph self-supervised learning and distance-encoding Transformer | 2026 | - | Applied Geochemistry | cites Hendrycks2019
+Multi-Task Consistency-based Detection of Adversarial Attacks | 2026 | 2608.07750 | arXiv | cites Hendrycks2019
+Outlier-Aware Contrastive Learning | 2026 | - | IEEE Transactions on Pattern Analysis and Machine Intelligence | cites Hendrycks2019
+Quality controlling in capsule gastroduodenoscopy with less annotation via self-supervised learning. | 2026 | - | European Journal of Gastroenterology and Hepathology | cites Hendrycks2019
+RINO: Renormalization Group Distillation with No Labels | 2026 | 2610.15919 | arXiv | cites Hendrycks2019
+Self-supervised learning for crop yield prediction across diversified cropping systems | 2026 | - | Artificial Intelligence in Agriculture | cites Hendrycks2019
+A Tutorial-Cum-Survey on Self-Supervised Learning for Wi-Fi Sensing: Trends, Challenges, and Outlook | 2025 | 2506.12052 | IEEE Communications Surveys and Tutorials | cites Hendrycks2019
+Adversarial Robustness of Self-Supervised Learning Features | 2025 | - | IEEE Open Journal of Signal Processing | cites Hendrycks2019
+An Effective Approach to Class-Wise Unlearning in Pre-trained Encoders for Contrastive Learning | 2025 | - | IEEE International Joint Conference on Neural Network | cites Hendrycks2019
+An Efficient Lightning Classifier Using a Self‐Supervised Learning Neural Network | 2025 | - | Geophysical Research Letters | cites Hendrycks2019
+BootOOD: Self-Supervised Out-of-Distribution Detection via Synthetic Sample Exposure under Neural Collapse | 2025 | 2511.13539 | arXiv | cites Hendrycks2019
+Combating Noisy Labels in Knowledge Distillation for Efficient Edge Device Deployment | 2025 | - | IEEE transactions on consumer electronics | cites Hendrycks2019
+Covert and Potent: A Weather-Camouflaged Backdoor Attacks on Self-Supervised Learning | 2025 | - | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites Hendrycks2019
+Data-Driven Self-Supervised Learning for the Discovery of Solution Singularity for Partial Differential Equations | 2025 | 2506.23344 | Journal of Computational Physics | cites Hendrycks2019
+DBSSL: A Scheme to Detect Backdoor Attacks in Self-Supervised Learning Models | 2025 | - | IEEE Transactions on Dependable and Secure Computing | cites Hendrycks2019
+Deep anomaly detection with partition contrastive learning for tabular data | 2025 | - | Data mining and knowledge discovery | cites Hendrycks2019
+DiffPhys: Differential Physics Augmentations for Enhanced Representations | 2025 | - | International Conference on Computer Communications and Networks | cites Hendrycks2019
+Ensemble Distribution Distillation for Self-Supervised Human Activity Recognition | 2025 | 2509.08225 | arXiv | cites Hendrycks2019
+Heterogeneous information-based self-supervised graph learning for recommendation | 2025 | - | Journal of Supercomputing | cites Hendrycks2019
+Improving Coronary Artery Disease Diagnosis in Cardiac MRI with Self-Supervised Learning | 2025 | - | Diagnostics | cites Hendrycks2019
+Modelling temporal shift-invariance in self-supervised generative models improves accuracy and interpretability of species detection in soundscape recordings | 2025 | - | bioRxiv | cites Hendrycks2019
+Noise-Robust Target-Speaker Voice Activity Detection Through Self-Supervised Pretraining | 2025 | 2501.03184 | arXiv | cites Hendrycks2019
+Resolution-dependent self-supervised transfer in chest radiograph classification | 2025 | 2510.07191 | Communications Medicine | cites Hendrycks2019
+Self-Supervised Learning for Clinical Time Series via Robust Optimization and Adaptive Data Augmentation | 2025 | - | ACM Transactions on Intelligent Systems and Technology | cites Hendrycks2019
+Self-supervised learning in drug discovery | 2025 | - | Science China Information Sciences | cites Hendrycks2019
+Self-supervised learning outperforms supervised learning for crop classification by annotating only 5% of images | 2025 | - | Precision Agriculture | cites Hendrycks2019
+Self-Supervised Learning: The Core of Next-Gen Machine Learning and a Paradigm Shift in AI | 2025 | - | 2025 International Conference on Computational, Communication and Information Technology (ICCCIT) | cites Hendrycks2019
+Self-supervised representation learning with continuous training data improves the feel and performance of myoelectric control | 2025 | - | Comput. Biol. Medicine | cites Hendrycks2019
+Spatial-temporal self-supervised learning for audio classification | 2025 | - | Expert systems with applications | cites Hendrycks2019
+SSLDefender: Backdoor Defense in Self-Supervised Learning via Distillation-Guided Unlearning | 2025 | - | IEEE Transactions on Information Forensics and Security | cites Hendrycks2019
+Universal Graph Self-Contrastive Learning | 2025 | - | International Joint Conference on Artificial Intelligence | cites Hendrycks2019
+A Novel Transformer-Based Self-Supervised Learning Method to Enhance Photoplethysmogram Signal Artifact Detection | 2024 | 2401.01013 | IEEE Access | cites Hendrycks2019
+A review on discriminative self-supervised learning methods | 2024 | - | arXiv | cites Hendrycks2019
+A self-supervised leak detection method for natural gas gathering pipelines considering unlabeled multi-class non-leak data | 2024 | - | Computers in industry (Print) | cites Hendrycks2019
+Advancing Melanoma Diagnosis with Self-Supervised Neural Networks: Evaluating the Effectiveness of Different Techniques | 2024 | 2407.14628 | arXiv | cites Hendrycks2019
+An Experimental Comparison of Multi-View Self-Supervised Methods for Music Tagging | 2024 | 2404.09177 | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites Hendrycks2019
+Can Generative Models Improve Self-Supervised Representation Learning? | 2024 | 2403.05966 | AAAI Conference on Artificial Intelligence | cites Hendrycks2019
+Class-Incremental Novel Category Discovery in Remote Sensing Image Scene Classification via Contrastive Learning | 2024 | - | IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing | cites Hendrycks2019
+Collapse-Proof Non-Contrastive Self-Supervised Learning | 2024 | 2410.04959 | International Conference on Machine Learning | cites Hendrycks2019
+Confidence-Weighted Dual-Teacher Networks With Biased Contrastive Learning for Semi-Supervised Semantic Segmentation in Remote Sensing Images | 2024 | - | IEEE Transactions on Geoscience and Remote Sensing | cites Hendrycks2019
+Contrastive Self-Supervised Learning for Cocoa Disease Classification | 2024 | - | International Conference on Smart Computing and Communication | cites Hendrycks2019
+Cutout as augmentation in contrastive learning for detecting burn marks in plastic granules | 2024 | - | Journal of Sensors and Sensor Systems | cites Hendrycks2019
+Data Augmentation with Diffusion for Open-Set Semi-Supervised Learning | 2024 | - | Neural Information Processing Systems | cites Hendrycks2019
+Does Hard-Negative Contrastive Learning Improve Facial Emotion Recognition? | 2024 | - | International Conference on Machine Vision and Applications | cites Hendrycks2019
+Efficient Hierarchical Contrastive Self-supervising Learning for Time Series Classification via Importance-aware Resolution Selection | 2024 | 2502.10567 | BigData Congress [Services Society] | cites Hendrycks2019
+Enhanced Reverse Distillation Guided Segmentation Network for Anomaly Detection | 2024 | - | IEEE International Joint Conference on Neural Network | cites Hendrycks2019
+Enhancing hyperspectral image prediction with contrastive learning in low-label regimes | 2024 | 2410.07790 | Applied intelligence (Boston) | cites Hendrycks2019
+Exemplar-Based Continual Learning via Contrastive Learning | 2024 | - | IEEE Transactions on Artificial Intelligence | cites Hendrycks2019
+FACTUAL: A Novel Framework for Contrastive Learning Based Robust SAR Image Classification | 2024 | 2404.03225 | International Radar Conference | cites Hendrycks2019
+GUESS: Generative Uncertainty Ensemble for Self Supervision | 2024 | 2412.02896 | arXiv | cites Hendrycks2019
+Hybrid self-supervised learning-based architecture for construction progress monitoring | 2024 | - | Automation in Construction | cites Hendrycks2019
+Improving Graph Contrastive Learning via Adaptive Positive Sampling | 2024 | - | Computer Vision and Pattern Recognition | cites Hendrycks2019
+Less Forgetting for Better Generalization: Exploring Continual-learning Fine-tuning Methods for Speech Self-supervised Representations | 2024 | 2407.00756 | arXiv | cites Hendrycks2019
+MaskCAE: Masked Convolutional AutoEncoder via Sensor Data Reconstruction for Self-Supervised Human Activity Recognition | 2024 | - | IEEE journal of biomedical and health informatics | cites Hendrycks2019
+Multi-Modality Spatio-Temporal Forecasting via Self-Supervised Learning | 2024 | 2405.03255 | International Joint Conference on Artificial Intelligence | cites Hendrycks2019
+On the Fault Tolerance of Self-Supervised Training in Convolutional Neural Networks | 2024 | - | IEEE Workshop on Design and Diagnostics of Electronic Circuits and Systems | cites Hendrycks2019
+PhyMask: An Adaptive Masking Paradigm for Efficient Self-Supervised Learning in IoT | 2024 | - | ACM International Conference on Embedded Networked Sensor Systems | cites Hendrycks2019
+Revisiting Semi-supervised Adversarial Robustness via Noise-aware Online Robust Distillation | 2024 | 2409.12946 | arXiv | cites Hendrycks2019
+Robustness test-time augmentation via learnable aggregation and anomaly detection | 2024 | - | Journal of Intelligent & Fuzzy Systems | cites Hendrycks2019
+Self-supervised graph contrastive learning with diffusion augmentation for functional MRI analysis and brain disorder detection | 2024 | - | Medical Image Anal. | cites Hendrycks2019
+Self-Supervised Learning for Medical Image Data with Anatomy-Oriented Imaging Planes | 2024 | 2403.16499 | Medical Image Anal. | cites Hendrycks2019
+Self-Supervised Learning Improves Accuracy and Data Efficiency for IMU-Based Ground Reaction Force Estimation | 2024 | - | bioRxiv | cites Hendrycks2019
+Self-Supervised Representation Learning with Augmentations of Continuous Training Data Improves the Feel and Performance of Myoelectric Control | 2024 | 2409.16015 | arXiv | cites Hendrycks2019
+Self-supervised Spatial-Temporal Learner for Precipitation Nowcasting | 2024 | 2412.15917 | CISM Workshops | cites Hendrycks2019
+Semantic Graph Consistency: Going Beyond Patches for Regularizing Self-Supervised Vision Transformers | 2024 | 2406.12944 | arXiv | cites Hendrycks2019
+Solar Panel Segmentation: Self-Supervised Learning Solutions for Imperfect Datasets | 2024 | 2402.12843 | Tiny Papers @ ICLR | cites Hendrycks2019
+Structured Adversarial Self-Supervised Learning for Robust Object Detection in Remote Sensing Images | 2024 | - | IEEE Transactions on Geoscience and Remote Sensing | cites Hendrycks2019
+T-JEPA: Augmentation-Free Self-Supervised Learning for Tabular Data | 2024 | 2410.05016 | International Conference on Learning Representations | cites Hendrycks2019
+TODO-Net: Temporally Observed Domain Contrastive Network for 3-D Early Action Prediction | 2024 | - | IEEE Transactions on Neural Networks and Learning Systems | cites Hendrycks2019
+Vision-Language Interaction via Contrastive Learning for Surface Anomaly Detection in Consumer Electronics Manufacturing | 2024 | - | IEEE transactions on consumer electronics | cites Hendrycks2019
+A Cookbook of Self-Supervised Learning | 2023 | 2304.12210 | arXiv | cites Hendrycks2019
+A Survey of Harnessing Self-Supervision Against Adversarial Attacks | 2023 | - | 2023 9th International Conference on Computer and Communications (ICCC) | cites Hendrycks2019
+Adaptive Resolution Loss: An Efficient and Effective Loss for Time Series Self-Supervised Learning Framework | 2023 | - | - | cites Hendrycks2019
+Adaptive Self-Supervised SAR Image Registration With Modifications of Alignment Transformation | 2023 | - | IEEE Transactions on Geoscience and Remote Sensing | cites Hendrycks2019
+Affinity Uncertainty-Based Hard Negative Mining in Graph Contrastive Learning | 2023 | 2301.13340 | IEEE Transactions on Neural Networks and Learning Systems | cites Hendrycks2019
+An edge-device-compatible algorithm for valvular heart diseases screening using phonocardiogram signals with a lightweight convolutional neural network and self-supervised learning | 2023 | - | Comput. Methods Programs Biomed. | cites Hendrycks2019
+BiBE: A Self-supervised Contrastive Learning Architecture for Malware Detection | 2023 | - | International Conference on Computer Science and Network Technology | cites Hendrycks2019
+Class Incremental Learning with Self-Supervised Pre-Training and Prototype Learning | 2023 | 2308.02346 | Pattern Recognition | cites Hendrycks2019
+Combustion Instability Diagnosis of OH* Chemiluminescence Based on a Self-Supervised Learning Method | 2023 | - | International Conference on Automation and Computing | cites Hendrycks2019
+Confidence-Aware and Self-Supervised Image Anomaly Localisation | 2023 | 2303.13227 | UNSURE@MICCAI | cites Hendrycks2019
+Cross-Shaped Windows Transformer with Self-supervised Pretraining for Clinically Significant Prostate Cancer Detection in Bi-parametric MRI | 2023 | 2305.00385 | Medical Physics (Lancaster) | cites Hendrycks2019
+Disambiguation of Cognitive Impairment Diagnosis with EEG-Based Dual-Contrastive Learning | 2023 | - | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites Hendrycks2019
+Do SSL Models Have Déjà Vu? A Case of Unintended Memorization in Self-supervised Learning | 2023 | 2304.13850 | Neural Information Processing Systems | cites Hendrycks2019
+Dual Consistency Alignment Based Self-Supervised Learning for SAR Target Recognition With Speckle Noise Resistance | 2023 | - | IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing | cites Hendrycks2019
+Effective Open Intent Classification with K-center Contrastive Learning and Adjustable Decision Boundary | 2023 | 2304.10220 | AAAI Conference on Artificial Intelligence | cites Hendrycks2019
+Enhancing diagnostic deep learning via self-supervised pretraining on large-scale, unlabeled non-medical images | 2023 | 2308.07688 | European Radiology Experimental | cites Hendrycks2019
+Enhancing GAN-based Vocoders with Contrastive Learning | 2023 | - | - | cites Hendrycks2019
+Enhancing GAN-based Vocoders with Contrastive Learning Under Data-Limited Condition | 2023 | 2309.09088 | 2024 IEEE International Conference on Acoustics, Speech, and Signal Processing Workshops (ICASSPW) | cites Hendrycks2019
+Exploring Image Augmentations for Siamese Representation Learning with Chest X-Rays | 2023 | 2301.12636 | International Conference on Medical Imaging with Deep Learning | cites Hendrycks2019
+Eye Movement Detection Using Self-Supervised Deep Learning | 2023 | - | ACM Cloud and Autonomic Computing Conference | cites Hendrycks2019
+Full-Scene Defocus Blur Detection With DeFBD+ via Multi-Level Distillation Learning | 2023 | - | IEEE transactions on multimedia | cites Hendrycks2019
+Generative and self‐supervised ensemble modeling for multivariate tool wear monitoring | 2023 | - | Engineering Reports | cites Hendrycks2019
+GOPro: Generate and Optimize Prompts in CLIP using Self-Supervised Learning | 2023 | 2308.11605 | British Machine Vision Conference | cites Hendrycks2019
+Harnessing Contrastive Learning and Neural Transformation for Time Series Anomaly Detection | 2023 | 2304.07898 | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites Hendrycks2019
+Human Activity Recognition Using Self-Supervised Representations of Wearable Data | 2023 | 2304.14912 | arXiv | cites Hendrycks2019
+Improving Open-Set Semi-Supervised Learning with Self-Supervision | 2023 | 2301.10127 | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites Hendrycks2019
+Incorporating Domain Knowledge Graph into Multimodal Movie Genre Classification with Self-Supervised Attention and Contrastive Learning | 2023 | 2310.08032 | ACM Multimedia | cites Hendrycks2019
+Is Self-Supervised Pretraining Good for Extrapolation in Molecular Property Prediction? | 2023 | 2308.08129 | arXiv | cites Hendrycks2019
+KAMPNet: multi-source medical knowledge augmented medication prediction network with multi-level graph contrastive learning | 2023 | - | BMC Medical Informatics and Decision Making | cites Hendrycks2019
+Know Your Self-supervised Learning: A Survey on Image-based Generative and Discriminative Training | 2023 | 2305.13689 | Trans. Mach. Learn. Res. | cites Hendrycks2019
+Neural Transformation Network to Generate Diverse Views for Contrastive Learning | 2023 | - | 2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) | cites Hendrycks2019
+On the Adversarial Robustness of Graph Contrastive Learning Methods | 2023 | 2311.17853 | arXiv | cites Hendrycks2019
+On the Difficulty of Defending Contrastive Learning against Backdoor Attacks | 2023 | 2312.09057 | USENIX Security Symposium | cites Hendrycks2019
+On the Role of Contrastive Representation Learning in Adversarial Robustness: An Empirical Study | 2023 | - | arXiv | cites Hendrycks2019
+QCLR: Quantum-LSTM contrastive learning framework for continuous mental health monitoring | 2023 | - | Expert systems with applications | cites Hendrycks2019
+Real-time monitoring and quality assurance for laser-based directed energy deposition: integrating co-axial imaging and self-supervised deep learning framework | 2023 | - | Journal of Intelligent Manufacturing | cites Hendrycks2019
+Rethinking Robust Contrastive Learning from the Adversarial Perspective | 2023 | 2302.02502 | arXiv | cites Hendrycks2019
+SCAT: Robust Self-supervised Contrastive Learning via Adversarial Training for Text Classification | 2023 | 2307.01488 | arXiv | cites Hendrycks2019
+Self-supervised learning and uncertainty estimation for surgical margin detection | 2023 | - | Medical Imaging | cites Hendrycks2019
+Self-supervised learning based multi-modal intra-hour irradiance forecast | 2023 | - | Chinese Control and Decision Conference | cites Hendrycks2019
+Self-supervised Learning for Pre-Training 3D Point Clouds: A Survey | 2023 | 2305.04691 | arXiv | cites Hendrycks2019
+Self-supervised multimodal learning for group inferences from MRI data: Discovering disorder-relevant brain regions and multimodal links | 2023 | - | NeuroImage | cites Hendrycks2019
+Self-Supervision for Medical Image Classification: State-of-the-Art Performance with ~100 Labeled Training Samples per Class | 2023 | 2304.05163 | Bioengineering | cites Hendrycks2019
+SimFLE: Simple Facial Landmark Encoding for Self-Supervised Facial Expression Recognition in the Wild | 2023 | 2303.07648 | IEEE Transactions on Affective Computing | cites Hendrycks2019
+Simplifying Open-Set Video Domain Adaptation with Contrastive Learning | 2023 | 2301.03322 | Computer Vision and Image Understanding | cites Hendrycks2019
+Small Sample Building Energy Consumption Prediction Using Contrastive Transformer Networks | 2023 | - | Italian National Conference on Sensors | cites Hendrycks2019
+Soft-orthogonal constrained dual-stream encoder with self-supervised clustering network for brain functional connectivity data | 2023 | - | Expert systems with applications | cites Hendrycks2019
+SORTAD: Self-Supervised Optimized Random Transformations for Anomaly Detection in Tabular Data | 2023 | 2311.11018 | arXiv | cites Hendrycks2019
+Switchable-Encoder-Based Self-Supervised Learning Framework for Monocular Depth and Pose Estimation | 2023 | - | Remote Sensing | cites Hendrycks2019
+SWSSL: Sliding window-based self-supervised learning for anomaly detection in high-resolution images | 2023 | - | IEEE Transactions on Medical Imaging | cites Hendrycks2019
+Towards Improving Robustness Against Common Corruptions in Object Detectors Using Adversarial Contrastive Learning | 2023 | 2311.07928 | arXiv | cites Hendrycks2019
+Trust, but Verify: Using Self-supervised Probing to Improve Trustworthiness | 2023 | 2302.02628 | European Conference on Computer Vision | cites Hendrycks2019
+Unifying Self-Supervised Clustering and Energy-Based Models | 2023 | 2401.00873 | Trans. Mach. Learn. Res. | cites Hendrycks2019
+Wind turbine blade breakage detection based on environment-adapted contrastive learning | 2023 | - | Renewable Energy | cites Hendrycks2019
+A multi-scale keypoint estimation network with self-supervision for spinal curvature assessment of idiopathic scoliosis from the imperfect dataset | 2022 | - | Artif. Intell. Medicine | cites Hendrycks2019
+A self-supervised contrastive learning approach for whole slide image representation in digital pathology | 2022 | - | Journal of Pathology Informatics | cites Hendrycks2019
+A Self-supervised Joint Training Framework for Document Reranking | 2022 | - | NAACL-HLT | cites Hendrycks2019
+A Time-Series Self-Supervised Learning Approach to Detection of Cyber-physical Attacks in Water Distribution Systems | 2022 | - | Energies | cites Hendrycks2019
+Adversarial Contrastive Learning via Asymmetric InfoNCE | 2022 | 2207.08374 | European Conference on Computer Vision | cites Hendrycks2019
+Adversarial supervised contrastive learning | 2022 | - | Machine-mediated learning | cites Hendrycks2019
+An Embarrassingly Simple Backdoor Attack on Self-supervised Learning | 2022 | 2210.07346 | IEEE International Conference on Computer Vision | cites Hendrycks2019
+An improved self-supervised learning for EEG classification. | 2022 | - | Mathematical biosciences and engineering : MBE | cites Hendrycks2019
+Analyzing Data-Centric Properties for Contrastive Learning on Graphs | 2022 | - | arXiv | cites Hendrycks2019
+Analyzing Data-Centric Properties for Graph Contrastive Learning | 2022 | 2208.02810 | Neural Information Processing Systems | cites Hendrycks2019
+Audio self-supervised learning: A survey | 2022 | 2203.01205 | Patterns | cites Hendrycks2019
+AutoJoin: Efficient Adversarial Training against Gradient-Free Perturbations for Robust Maneuvering via Denoising Autoencoder and Joint Learning | 2022 | 2205.10933 | IEEE/RJS International Conference on Intelligent RObots and Systems | cites Hendrycks2019
+Be Your Own Neighborhood: Detecting Adversarial Example by the Neighborhood Relations Built on Self-Supervised Learning | 2022 | 2209.00005 | International Conference on Machine Learning | cites Hendrycks2019
+CASS: Cross Architectural Self-Supervision for Medical Image Analysis | 2022 | 2206.04170 | arXiv | cites Hendrycks2019
+Classification and Self-Supervised Regression of Arrhythmic ECG Signals Using Convolutional Neural Networks | 2022 | 2210.14253 | arXiv | cites Hendrycks2019
+conST: an interpretable multi-modal contrastive learning framework for spatial transcriptomics | 2022 | - | bioRxiv | cites Hendrycks2019
+Contrastive Multi-View Composite Graph Convolutional Networks Based on Contribution Learning for Autism Spectrum Disorder Classification | 2022 | - | IEEE Transactions on Biomedical Engineering | cites Hendrycks2019
+Contrastive Self-Supervised Learning Leads to Higher Adversarial Susceptibility | 2022 | 2207.10862 | AAAI Conference on Artificial Intelligence | cites Hendrycks2019
+Cyclical Self-Supervision for Semi-Supervised Ejection Fraction Prediction From Echocardiogram Videos | 2022 | 2210.11291 | IEEE Transactions on Medical Imaging | cites Hendrycks2019
+Demystifying Self-supervised Trojan Attacks | 2022 | - | arXiv | cites Hendrycks2019
+Does Decentralized Learning with Non-IID Unlabeled Data Benefit from Self Supervision? | 2022 | - | arXiv | cites Hendrycks2019
+Does Learning from Decentralized Non-IID Unlabeled Data Benefit from Self Supervision? | 2022 | 2210.10947 | International Conference on Learning Representations | cites Hendrycks2019
+Domain Adaptation With Self-Supervised Learning and Feature Clustering for Intelligent Fault Diagnosis | 2022 | - | IEEE Transactions on Neural Networks and Learning Systems | cites Hendrycks2019
+Estimating underlying articulatory targets of Thai vowels by using deep learning based on generating synthetic samples from a 3D vocal tract model and data augmentation | 2022 | - | IEEE Access | cites Hendrycks2019
+ExAgt: Expert-guided Augmentation for Representation Learning of Traffic Scenarios | 2022 | 2207.08609 | 2022 IEEE 25th International Conference on Intelligent Transportation Systems (ITSC) | cites Hendrycks2019
+Fair contrastive pre-training for geographic images | 2022 | - | arXiv | cites Hendrycks2019
+FUSSL: Fuzzy Uncertain Self Supervised Learning | 2022 | 2210.15818 | IEEE Workshop/Winter Conference on Applications of Computer Vision | cites Hendrycks2019
+GedankenNet: Self-supervised learning of hologram reconstruction using physics consistency | 2022 | - | arXiv | cites Hendrycks2019
+GEDI: GEnerative and DIscriminative Training for Self-Supervised Learning | 2022 | 2212.13425 | arXiv | cites Hendrycks2019
+Improving Fine-tuning of Self-supervised Models with Contrastive Initialization | 2022 | 2208.00238 | Neural Networks | cites Hendrycks2019
+Investigating Why Contrastive Learning Benefits Robustness Against Label Noise | 2022 | 2201.12498 | International Conference on Machine Learning | cites Hendrycks2019
+Is Self-Supervised Contrastive Learning More Robust Than Supervised Learning? | 2022 | - | - | cites Hendrycks2019
+Is Self-Supervised Learning More Robust Than Supervised Learning? | 2022 | 2206.05259 | arXiv | cites Hendrycks2019
+Joint Flying Relay Location and Routing Optimization for 6G UAV-IoT Networks: A Graph Neural Network-Based Approach | 2022 | - | Remote Sensing | cites Hendrycks2019
+KnowAugNet: Multi-Source Medical Knowledge Augmented Medication Prediction Network with Multi-Level Graph Contrastive Learning | 2022 | 2204.11736 | arXiv | cites Hendrycks2019
+Label-Efficient Self-Supervised Federated Learning for Tackling Data Heterogeneity in Medical Imaging | 2022 | 2205.08576 | IEEE Transactions on Medical Imaging | cites Hendrycks2019
+Label-free Monitoring of Self-Supervised Learning Progress | 2022 | 2409.06612 | Canadian Conference on Electrical and Computer Engineering | cites Hendrycks2019
+Leveraging Real Talking Faces via Self-Supervision for Robust Forgery Detection | 2022 | 2201.07131 | Computer Vision and Pattern Recognition | cites Hendrycks2019
+Link Prediction with Contextualized Self-Supervision | 2022 | 2201.10069 | IEEE Transactions on Knowledge and Data Engineering | cites Hendrycks2019
+Mitigating Urban-Rural Disparities in Contrastive Representation Learning with Satellite Imagery | 2022 | 2211.08672 | AAAI/ACM Conference on AI, Ethics, and Society | cites Hendrycks2019
+Mitigating viewpoint sensitivity of self-supervised one-class classifiers | 2022 | - | Information Sciences | cites Hendrycks2019
+Nonintrusive Load Monitoring Based on Self-Supervised Learning | 2022 | 2210.04176 | IEEE Transactions on Instrumentation and Measurement | cites Hendrycks2019
+On Higher Adversarial Susceptibility of Contrastive Self-Supervised Learning | 2022 | - | arXiv | cites Hendrycks2019
+Open-set Recognition via Augmentation-based Similarity Learning | 2022 | 2203.13238 | CoLLAs | cites Hendrycks2019
+Ranking Info Noise Contrastive Estimation: Boosting Contrastive Learning via Ranked Positives | 2022 | 2201.11736 | AAAI Conference on Artificial Intelligence | cites Hendrycks2019
+Robust Self-Supervised Learning with Lie Groups | 2022 | 2210.13356 | arXiv | cites Hendrycks2019
+RUSH: Robust Contrastive Learning via Randomized Smoothing | 2022 | 2207.05127 | arXiv | cites Hendrycks2019
+Self-supervised Learning for Sonar Image Classification | 2022 | 2204.09323 | 2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) | cites Hendrycks2019
+Self-supervised learning of hologram reconstruction using physics consistency | 2022 | 2209.08288 | Nature Machine Intelligence | cites Hendrycks2019
+Self-Supervised Learning With Limited Labeled Data for Prostate Cancer Detection in High-Frequency Ultrasound | 2022 | 2211.00527 | IEEE Transactions on Ultrasonics, Ferroelectrics and Frequency Control | cites Hendrycks2019
+Self-supervised multimodal neuroimaging yields predictive representations for a spectrum of Alzheimer's phenotypes | 2022 | 2209.02876 | arXiv | cites Hendrycks2019
+Self-Supervised Pretext Tasks in Model Robustness & Generalizability: A Revisit from Medical Imaging Perspective | 2022 | - | Annual International Conference of the IEEE Engineering in Medicine and Biology Society | cites Hendrycks2019
+Self-Supervised Representation Learning With MUlti-Segmental Informational Coding (MUSIC) | 2022 | 2206.06461 | arXiv | cites Hendrycks2019
+Self-Supervised Surface Defect Detection Methods for Industrial Products | 2022 | - | ACM Cloud and Autonomic Computing Conference | cites Hendrycks2019
+Self-Supervised Vision Transformers for Malware Detection | 2022 | 2208.07049 | IEEE Access | cites Hendrycks2019
+SETTI: A Self-supervised AdvErsarial Malware DeTection ArchiTecture in an IoT Environment | 2022 | 2204.07772 | ACM Trans. Multim. Comput. Commun. Appl. | cites Hendrycks2019
+Sketching the Expression: Flexible Rendering of Expressive Piano Performance with Self-Supervised Learning | 2022 | 2208.14867 | International Society for Music Information Retrieval Conference | cites Hendrycks2019
+Spatio-Temporal Self-Supervised Learning for Traffic Flow Prediction | 2022 | 2212.04475 | AAAI Conference on Artificial Intelligence | cites Hendrycks2019
+Symmetric Contrastive Loss for Out-of-Distribution Skin Lesion Detection | 2022 | - | IEEE International Symposium on Biomedical Imaging | cites Hendrycks2019
+Towards Galaxy Foundation Models with Hybrid Contrastive Learning | 2022 | 2206.11927 | arXiv | cites Hendrycks2019
+Training strategies with unlabeled and few labeled examples under 1-pixel attack by combining supervised and self-supervised learning | 2022 | - | - | cites Hendrycks2019
+Understanding Self-Supervised Graph Representation Learning from a Data-Centric Perspective | 2022 | - | - | cites Hendrycks2019
+Variational Energy-Based Models: A Probabilistic Framework for Contrastive Self-Supervised Learning | 2022 | - | - | cites Hendrycks2019
+When does visual self-supervision aid adversarial training in improving adversarial robustness? | 2022 | - | - | cites Hendrycks2019
+A Deep Learning Model with Self-Supervised Learning and Attention Mechanism for COVID-19 Diagnosis Using Chest X-ray Images | 2021 | - | Electronics | cites Hendrycks2019
+A self-supervised method for treatment recommendation in sepsis | 2021 | - | Frontiers of Information Technology & Electronic Engineering | cites Hendrycks2019
+Adversarial Self-Supervised Learning for Robust SAR Target Recognition | 2021 | - | Remote Sensing | cites Hendrycks2019
+Adversarially Robust 3D Point Cloud Recognition Using Self-Supervisions | 2021 | - | Neural Information Processing Systems | cites Hendrycks2019
+Anomaly detection of power line insulator from aerial imagery with attribute self-supervised learning | 2021 | - | International Journal of Remote Sensing | cites Hendrycks2019
+Augmentations in Graph Contrastive Learning: Current Methodological Flaws & Towards Better Practices | 2021 | 2111.03220 | The Web Conference | cites Hendrycks2019
+Classification-based self-supervised learning for anomaly detection | 2021 | - | International Conference on Digital Image Processing | cites Hendrycks2019
+Classification of Seeds using Domain Randomization on Self-Supervised Learning Frameworks | 2021 | 2103.15578 | IEEE Symposium Series on Computational Intelligence | cites Hendrycks2019
+Constrained Contrastive Distribution Learning for Unsupervised Anomaly Detection and Localisation in Medical Images | 2021 | 2103.03423 | International Conference on Medical Image Computing and Computer-Assisted Intervention | cites Hendrycks2019
+Contrastive Fine-tuning Improves Robustness for Neural Rankers | 2021 | 2105.12932 | Findings | cites Hendrycks2019
+Contrastive Learning Improves Model Robustness Under Label Noise | 2021 | 2104.08984 | 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) | cites Hendrycks2019
+DeepSMILE: Contrastive self-supervised pre-training benefits MSI and HRD classification directly from H&E whole-slide images in colorectal and breast cancer | 2021 | 2107.09405 | Medical Image Anal. | cites Hendrycks2019
+DeepSMILE: Self-supervised heterogeneity-aware multiple instance learning for DNA damage response defect classification directly from H&E whole-slide images | 2021 | - | arXiv | cites Hendrycks2019
+Domain-guided Self-supervision of EEG Data Improves Downstream Classification Performance and Generalizability | 2021 | - | ML4H@NeurIPS | cites Hendrycks2019
+Efficient Self-Supervised Metric Information Retrieval: A Bibliography Based Method Applied to COVID Literature | 2021 | - | Italian National Conference on Sensors | cites Hendrycks2019
+Evaluating the Robustness of Self-Supervised Learning in Medical Imaging | 2021 | 2105.06986 | arXiv | cites Hendrycks2019
+Explaining Self-Supervised Image Representations with Visual Probing | 2021 | - | International Joint Conference on Artificial Intelligence | cites Hendrycks2019
+Fast Self-Supervised Clustering With Anchor Graph | 2021 | - | IEEE Transactions on Neural Networks and Learning Systems | cites Hendrycks2019
+Hop-Count Based Self-Supervised Anomaly Detection on Attributed Networks | 2021 | 2104.07917 | ECML/PKDD | cites Hendrycks2019
+Human Activity Recognition on wrist-worn accelerometers using self-supervised neural networks | 2021 | 2112.12272 | arXiv | cites Hendrycks2019
+i-Mix: A Domain-Agnostic Strategy for Contrastive Representation Learning | 2021 | - | International Conference on Learning Representations | cites Hendrycks2019
+Improving Adversarial Robustness in 3D Point Cloud Classiﬁcation via Self-Supervisions | 2021 | - | - | cites Hendrycks2019
+Improving Ultrasound Tongue Image Reconstruction from Lip Images Using Self-supervised Learning and Attention Mechanism | 2021 | 2106.11769 | arXiv | cites Hendrycks2019
+Interpretable Self-supervised Multi-task Learning for COVID-19 Information Retrieval and Extraction | 2021 | 2106.08252 | arXiv | cites Hendrycks2019
+Making Video Recognition Models Robust to Common Corruptions With Supervised Contrastive Learning | 2021 | - | ACM Multimedia Asia | cites Hendrycks2019
+Momentum Contrast Self-Supervised based training for Adversarial Robustness | 2021 | - | - | cites Hendrycks2019
+Neural-Symbolic Solver for Math Word Problems with Auxiliary Tasks | 2021 | 2107.01431 | Annual Meeting of the Association for Computational Linguistics | cites Hendrycks2019
+On the Robustness of Pretraining and Self-Supervision for a Deep Learning-based Analysis of Diabetic Retinopathy | 2021 | 2106.13497 | arXiv | cites Hendrycks2019
+On the use of Cortical Magnification and Saccades as Biological Proxies for Data Augmentation | 2021 | 2112.07173 | arXiv | cites Hendrycks2019
+On visual self-supervision and its effect on model robustness | 2021 | 2112.04367 | arXiv | cites Hendrycks2019
+Online Adversarial Purification based on Self-supervised Learning | 2021 | 2101.09387 | International Conference on Learning Representations | cites Hendrycks2019
+Robustifying Out-of-Distribution Detection: A Self-Supervision and Energy Based Approach | 2021 | - | - | cites Hendrycks2019
+Self-supervised adversarial learning for cross-modal retrieval | 2021 | - | ACM Multimedia Asia | cites Hendrycks2019
+Self-supervised Adversarial Robustness for the Low-label, High-data Regime | 2021 | - | International Conference on Learning Representations | cites Hendrycks2019
+Self-supervised Learning for Reading Activity Classification | 2021 | - | Proceedings of the ACM on Interactive Mobile Wearable and Ubiquitous Technologies | cites Hendrycks2019
+Self-Supervised Learning with Kernel Dependence Maximization | 2021 | 2106.08320 | Neural Information Processing Systems | cites Hendrycks2019
+Self-Supervised Metric Learning With Graph Clustering For Speaker Diarization | 2021 | 2109.06824 | Automatic Speech Recognition & Understanding | cites Hendrycks2019
+Self-supervised Out-of-distribution Detection for Cardiac CMR Segmentation | 2021 | - | International Conference on Medical Imaging with Deep Learning | cites Hendrycks2019
+Self-Supervised Representation Learning: Introduction, advances, and challenges | 2021 | 2110.09327 | IEEE Signal Processing Magazine | cites Hendrycks2019
+Self-Supervised Representation Learning With Path Integral Clustering for Speaker Diarization | 2021 | 2104.09456 | IEEE/ACM Transactions on Audio Speech and Language Processing | cites Hendrycks2019
+Transferable Visual Words: Exploiting the Semantics of Anatomical Patterns for Self-supervised Learning | 2021 | 2102.10680 | IEEE Transactions on Medical Imaging | cites Hendrycks2019
+Unsupervised Perturbation based Self-Supervised Adversarial Training | 2021 | - | 2021 7th IEEE Intl Conference on Big Data Security on Cloud (BigDataSecurity), IEEE Intl Conference on High Performance and Smart Computing, (HPSC) and IEEE Intl Conference on Intelligent Data and Security (IDS) | cites Hendrycks2019
+Visual Probing: Cognitive Framework for Explaining Self-Supervised Image Representations | 2021 | 2106.11054 | IEEE Access | cites Hendrycks2019
+What Does Rotation Prediction Tell Us about Classifier Accuracy under Varying Testing Environments? | 2021 | 2106.05961 | International Conference on Machine Learning | cites Hendrycks2019
+When Does Contrastive Learning Preserve Adversarial Robustness from Pretraining to Finetuning? | 2021 | 2111.01124 | Neural Information Processing Systems | cites Hendrycks2019
+A Simple Framework for Uncertainty in Contrastive Learning | 2020 | 2010.02038 | arXiv | cites Hendrycks2019
+A Two-Stage Minimum Cost Multicut Approach to Self-supervised Multiple Person Tracking | 2020 | - | Asian Conference on Computer Vision | cites Hendrycks2019
+Adversarial Robustness: From Self-Supervised Pre-Training to Fine-Tuning | 2020 | 2003.12862 | Computer Vision and Pattern Recognition | cites Hendrycks2019
+Adversarial Self-Supervised Contrastive Learning | 2020 | 2006.07589 | Neural Information Processing Systems | cites Hendrycks2019
+Auxiliary Training: Towards Accurate and Robust Models | 2020 | - | Computer Vision and Pattern Recognition | cites Hendrycks2019
+Contrastive Code Representation Learning | 2020 | 2007.04973 | Conference on Empirical Methods in Natural Language Processing | cites Hendrycks2019
+Contrastive Training for Improved Out-of-Distribution Detection | 2020 | 2007.05566 | arXiv | cites Hendrycks2019
+Data Transformation Insights in Self-supervision with Clustering Tasks | 2020 | 2002.07384 | arXiv | cites Hendrycks2019
+For self-supervised learning, Rationality implies generalization, provably | 2020 | 2010.08508 | International Conference on Learning Representations | cites Hendrycks2019
+i-Mix: A Strategy for Regularizing Contrastive Representation Learning | 2020 | 2010.08887 | arXiv | cites Hendrycks2019
+Importance of Self-Consistency in Active Learning for Semantic Segmentation | 2020 | 2008.01860 | British Machine Vision Conference | cites Hendrycks2019
+Improved Noise and Attack Robustness for Semantic Segmentation by Using Multi-Task Training with Self-Supervised Depth Estimation | 2020 | 2004.11072 | 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) | cites Hendrycks2019
+Improving out-of-distribution generalization via multi-task self-supervised pretraining | 2020 | 2003.13525 | arXiv | cites Hendrycks2019
+In-N-Out: Pre-Training and Self-Training using Auxiliary Information for Out-of-Distribution Robustness | 2020 | 2012.04550 | International Conference on Learning Representations | cites Hendrycks2019
+On the Effectiveness of Image Rotation for Open Set Domain Adaptation | 2020 | 2007.12360 | European Conference on Computer Vision | cites Hendrycks2019
+On the surprising similarities between supervised and self-supervised models | 2020 | 2010.08377 | arXiv | cites Hendrycks2019
+Predicting What You Already Know Helps: Provable Self-Supervised Learning | 2020 | 2008.01064 | Neural Information Processing Systems | cites Hendrycks2019
+Recovering Petaflops in Contrastive Semi-Supervised Learning of Visual Representations | 2020 | 2006.10803 | arXiv | cites Hendrycks2019
+Robust Image Classification Using a Low-Pass Activation Function and DCT Augmentation | 2020 | 2007.09453 | IEEE Access | cites Hendrycks2019
+Robust Pre-Training by Adversarial Contrastive Learning | 2020 | 2010.13337 | Neural Information Processing Systems | cites Hendrycks2019
+Self-Supervised Classification for Detecting Anomalous Sounds | 2020 | - | Workshop on Detection and Classification of Acoustic Scenes and Events | cites Hendrycks2019
+Self-Supervised Dynamic Networks for Covariate Shift Robustness | 2020 | 2006.03952 | arXiv | cites Hendrycks2019
+Self-supervised edge features for improved Graph Neural Network training | 2020 | 2007.04777 | arXiv | cites Hendrycks2019
+Self-Supervised Feature Extraction for 3D Axon Segmentation | 2020 | 2004.09629 | 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) | cites Hendrycks2019
+Self-supervised Learning for Astronomical Image Classification | 2020 | 2004.11336 | International Conference on Pattern Recognition | cites Hendrycks2019
+Self-Supervised Learning for Generalizable Out-of-Distribution Detection | 2020 | - | AAAI Conference on Artificial Intelligence | cites Hendrycks2019
+Self‐supervised learning for outlier detection | 2020 | - | Stat | cites Hendrycks2019
+Self-Supervised Learning for Segmentation using Image Reconstruction | 2020 | - | - | cites Hendrycks2019
+Self-Supervised Learning: Generative or Contrastive | 2020 | 2006.08218 | IEEE Transactions on Knowledge and Data Engineering | cites Hendrycks2019
+Self-Supervised Out-of-Distribution Detection in Brain CT Scans | 2020 | 2011.05428 | arXiv | cites Hendrycks2019
+Self-Supervised Policy Adaptation during Deployment | 2020 | 2007.04309 | International Conference on Learning Representations | cites Hendrycks2019
+Self-Supervision Can Beneﬁt Fully-Supervised Classiﬁcation Tasks | 2020 | - | - | cites Hendrycks2019
+Self-Supervision vs. Transfer Learning: Robust Biomedical Image Analysis Against Adversarial Attacks | 2020 | - | IEEE International Symposium on Biomedical Imaging | cites Hendrycks2019
+Sense and Learn: Self-Supervision for Omnipresent Sensors | 2020 | 2009.13233 | Machine Learning with Applications | cites Hendrycks2019
+Supervision Accelerates Pre-training in Contrastive Semi-Supervised Learning of Visual Representations. | 2020 | - | - | cites Hendrycks2019
+Toward Robust Pedestrian Detection With Data Augmentation | 2020 | - | IEEE Access | cites Hendrycks2019
+UNSUPERVISED ANOMALOUS SOUND DETECTION USING SELF-SUPERVISED CLASSIFICATION AND GROUP MASKED AUTOENCODER FOR DENSITY ESTIMATION Technical | 2020 | - | - | cites Hendrycks2019
+When Does Self-Supervision Help Graph Convolutional Networks? | 2020 | 2006.09136 | International Conference on Machine Learning | cites Hendrycks2019
+A simple baseline for domain adaptation using rotation prediction | 2019 | 1912.11903 | arXiv | cites Hendrycks2019
+Improving Model Robustness via Automatically Incorporating Self-supervision Tasks | 2019 | - | - | cites Hendrycks2019
+Self-Supervised Adversarial Training | 2019 | 1911.06470 | IEEE International Conference on Acoustics, Speech, and Signal Processing | cites Hendrycks2019
+Test-Time Training with Self-Supervision for Generalization under Distribution Shifts | 2019 | - | International Conference on Machine Learning | cites Hendrycks2019
+Towards a Hypothesis on Visual Transformation based Self-Supervision | 2019 | 1911.10594 | British Machine Vision Conference | cites Hendrycks2019
+Unsupervised Deep Metric Learning via Auxiliary Rotation Loss | 2019 | 1911.07072 | arXiv | cites Hendrycks2019
+Unsupervised Domain Adaptation through Self-Supervision | 2019 | 1909.11825 | arXiv | cites Hendrycks2019
+A Content-First Benchmark for Self-Supervised Graph Representation Learning | - | - | - | cites Hendrycks2019
+A self-supervised deep learning model for enhanced generalization in soil moisture prediction | - | - | - | cites Hendrycks2019
+Evaluating Self-Supervised Learning in Medical Imaging: A Systematic Investigation of Robustness, Generalizability, and Multi-Domain Impact | - | - | - | cites Hendrycks2019
+Self-supervised Crack Detection in X-ray Computed Tomography Data of Additive Manufacturing Parts | - | - | - | cites Hendrycks2019
+The Benefits of Self-Supervised Learning for Training Physical Neural Networks | - | - | - | cites Hendrycks2019

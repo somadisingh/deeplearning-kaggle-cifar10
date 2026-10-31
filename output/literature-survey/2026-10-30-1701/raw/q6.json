@@ -1,0 +1,499 @@
+[
+  {
+    "title": "Label Augmentation for Neural Networks Robustness",
+    "authors": [
+      "Fatemeh Amerehi",
+      "Patrick Healy"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Out-of-distribution generalization can be categorized into two types: common perturbations arising from natural variations in the real world and adversarial perturbations that are intentionally crafted to deceive neural networks. While deep neural networks excel in accuracy under the assumption of identical distributions between training and test data, they often encounter out-of-distribution scenarios resulting in a significant decline in accuracy. Data augmentation methods can effectively enhance robustness against common corruptions, but they typically fall short in improving robustness against adversarial perturbations. In this study, we develop Label Augmentation (LA), which enhances robustness against both common and intentional perturbations and improves uncertainty estimation. Our findings indicate a Clean error rate improvement of up to 23.29% when employing LA in comparisons to the baseline. Additionally, it enhances robustness under common corruptions benchmark by up to 24.23%. When tested against FGSM and PGD attacks, improvements in adversarial robustness are noticeable, with enhancements of up to 53.18% for FGSM and 24.46% for PGD attacks.",
+    "url": "http://arxiv.org/abs/2408.01977v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Sequence Generation with Label Augmentation for Relation Extraction",
+    "authors": [
+      "Bo Li",
+      "Dingyao Yu",
+      "Wei Ye",
+      "Jinglei Zhang",
+      "Shikun Zhang"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Sequence generation demonstrates promising performance in recent information extraction efforts, by incorporating large-scale pre-trained Seq2Seq models. This paper investigates the merits of employing sequence generation in relation extraction, finding that with relation names or synonyms as generation targets, their textual semantics and the correlation (in terms of word sequence pattern) among them affect model performance. We then propose Relation Extraction with Label Augmentation (RELA), a Seq2Seq model with automatic label augmentation for RE. By saying label augmentation, we mean prod semantically synonyms for each relation name as the generation target. Besides, we present an in-depth analysis of the Seq2Seq model's behavior when dealing with RE. Experimental results show that RELA achieves competitive results compared with previous methods on four RE datasets.",
+    "url": "http://arxiv.org/abs/2212.14266v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Pseudo-Label Augmentation for Affect Sensing in Small Collaborative Groups",
+    "authors": [
+      "Meisam Jamshidi Seikavandi",
+      "Tanya Ignatenko",
+      "Fabricio Batista Narcizo",
+      "Paolo Burelli",
+      "Jesper Bünsow Boldt",
+      "Andrew Burke Dittberner"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Physiological affect sensing in naturalistic group interaction is often limited by sparse labels rather than sensor data: wearable devices produce many time windows, while self-reports are collected only a few times per session. Using GroupAffect-4, a four-person collaborative dataset with wearable physiology, eye tracking, Big Five personality, and post-task VAD labels, we study pseudo-label augmentation for affect sensing under sparse supervision. We compare no augmentation, Gaussian Process pseudo-labelling, personality-aware trust weighting, and joint personality-plus-confidence weighting within a shared target-construction pipeline. Results show that pseudo-label augmentation improves over the labelled-only baseline in the known-team setting. However, the narrow range of Big Five cosine similarities (0.91-0.99) makes fine-grained personality weighting ineffective; personality similarity functions mainly as a same-team filter rather than a calibrated trust signal. With smoothing, augmented SVM variants are effectively tied on Valence and Arousal, while the joint personality-plus-confidence variant gives the highest Dominance score. Cross-subject LOSO transfer remains encouraging, especially for Arousal, whereas strict session-isolated LOGO removes the augmentation benefit. Given only 10 groups, LOGO should be interpreted as a conservative lower bound on unseen-group transfer. Overall, the results suggest that pseudo-label augmentation can make better use of sparsely labelled collaborative affect data, while personality information is most useful as a within-team selection mechanism.",
+    "url": "http://arxiv.org/abs/2609.16077v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Uncertainty-guided Model Generalization to Unseen Domains",
+    "authors": [
+      "Fengchun Qiao",
+      "Xi Peng"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "We study a worst-case scenario in generalization: Out-of-domain generalization from a single source. The goal is to learn a robust model from a single source and expect it to generalize over many unknown distributions. This challenging problem has been seldom investigated while existing solutions suffer from various limitations. In this paper, we propose a new solution. The key idea is to augment the source capacity in both input and label spaces, while the augmentation is guided by uncertainty assessment. To the best of our knowledge, this is the first work to (1) access the generalization uncertainty from a single source and (2) leverage it to guide both input and label augmentation for robust generalization. The model training and deployment are effectively organized in a Bayesian meta-learning framework. We conduct extensive comparisons and ablation study to validate our approach. The results prove our superior performance in a wide scope of tasks including image classification, semantic segmentation, text classification, and speech recognition.",
+    "url": "http://arxiv.org/abs/2103.07531v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Data Augmentation Methods for End-to-end Speech Recognition on Distant-Talk Scenarios",
+    "authors": [
+      "Emiru Tsunoo",
+      "Kentaro Shibata",
+      "Chaitanya Narisetty",
+      "Yosuke Kashiwagi",
+      "Shinji Watanabe"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Although end-to-end automatic speech recognition (E2E ASR) has achieved great performance in tasks that have numerous paired data, it is still challenging to make E2E ASR robust against noisy and low-resource conditions. In this study, we investigated data augmentation methods for E2E ASR in distant-talk scenarios. E2E ASR models are trained on the series of CHiME challenge datasets, which are suitable tasks for studying robustness against noisy and spontaneous speech. We propose to use three augmentation methods and thier combinations: 1) data augmentation using text-to-speech (TTS) data, 2) cycle-consistent generative adversarial network (Cycle-GAN) augmentation trained to map two different audio characteristics, the one of clean speech and of noisy recordings, to match the testing condition, and 3) pseudo-label augmentation provided by the pretrained ASR module for smoothing label distributions. Experimental results using the CHiME-6/CHiME-4 datasets show that each augmentation method individually improves the accuracy on top of the conventional SpecAugment; further improvements are obtained by combining these approaches. We achieved 4.3\\% word error rate (WER) reduction, which was more significant than that of the SpecAugment, when we combine all three augmentations for the CHiME-6 task.",
+    "url": "http://arxiv.org/abs/2106.03419v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-supervised Contrastive Learning for Implicit Collaborative Filtering",
+    "authors": [
+      "Shipeng Song",
+      "Bin Liu",
+      "Fei Teng",
+      "Tianrui Li"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Contrastive learning-based recommendation algorithms have significantly advanced the field of self-supervised recommendation, particularly with BPR as a representative ranking prediction task that dominates implicit collaborative filtering. However, the presence of false-positive and false-negative examples in recommendation systems hampers accurate preference learning. In this study, we propose a simple self-supervised contrastive learning framework that leverages positive feature augmentation and negative label augmentation to improve the self-supervisory signal. Theoretical analysis demonstrates that our learning method is equivalent to maximizing the likelihood estimation with latent variables representing user interest centers. Additionally, we establish an efficient negative label augmentation technique that samples unlabeled examples with a probability linearly dependent on their relative ranking positions, enabling efficient augmentation in constant time complexity. Through validation on multiple datasets, we illustrate the significant improvements our method achieves over the widely used BPR optimization objective while maintaining comparable runtime.",
+    "url": "http://arxiv.org/abs/2403.07265v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Enhancing Label Sharing Efficiency in Complementary-Label Learning with Label Augmentation",
+    "authors": [
+      "Wei-I Lin",
+      "Gang Niu",
+      "Hsuan-Tien Lin",
+      "Masashi Sugiyama"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Complementary-label Learning (CLL) is a form of weakly supervised learning that trains an ordinary classifier using only complementary labels, which are the classes that certain instances do not belong to. While existing CLL studies typically use novel loss functions or training techniques to solve this problem, few studies focus on how complementary labels collectively provide information to train the ordinary classifier. In this paper, we fill the gap by analyzing the implicit sharing of complementary labels on nearby instances during training. Our analysis reveals that the efficiency of implicit label sharing is closely related to the performance of existing CLL models. Based on this analysis, we propose a novel technique that enhances the sharing efficiency via complementary-label augmentation, which explicitly propagates additional complementary labels to each instance. We carefully design the augmentation process to enrich the data with new and accurate complementary labels, which provide CLL models with fresh and valuable information to enhance the sharing efficiency. We then verify our proposed technique by conducting thorough experiments on both synthetic and real-world datasets. Our results confirm that complementary-label augmentation can systematically improve empirical performance over state-of-the-art CLL models.",
+    "url": "http://arxiv.org/abs/2305.08344v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "For Better or For Worse? Learning Minimum Variance Features With Label Augmentation",
+    "authors": [
+      "Muthu Chidambaram",
+      "Rong Ge"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Data augmentation has been pivotal in successfully training deep learning models on classification tasks over the past decade. An important subclass of data augmentation techniques - which includes both label smoothing and Mixup - involves modifying not only the input data but also the input label during model training. In this work, we analyze the role played by the label augmentation aspect of such methods. We first prove that linear models on binary classification data trained with label augmentation learn only the minimum variance features in the data, while standard training (which includes weight decay) can learn higher variance features. We then use our techniques to show that even for nonlinear models and general data distributions, the label smoothing and Mixup losses are lower bounded by a function of the model output variance. Lastly, we demonstrate empirically that this aspect of label smoothing and Mixup can be a positive and a negative. On the one hand, we show that the strong performance of label smoothing and Mixup on image classification benchmarks is correlated with learning low variance hidden representations. On the other hand, we show that Mixup and label smoothing can be more susceptible to low variance spurious correlations in the training data.",
+    "url": "http://arxiv.org/abs/2402.06855v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Label-Augmented Dataset Distillation",
+    "authors": [
+      "Seoungyoon Kang",
+      "Youngsun Lim",
+      "Hyunjung Shim"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Traditional dataset distillation primarily focuses on image representation while often overlooking the important role of labels. In this study, we introduce Label-Augmented Dataset Distillation (LADD), a new dataset distillation framework enhancing dataset distillation with label augmentations. LADD sub-samples each synthetic image, generating additional dense labels to capture rich semantics. These dense labels require only a 2.5% increase in storage (ImageNet subsets) with significant performance benefits, providing strong learning signals. Our label generation strategy can complement existing dataset distillation methods for significantly enhancing their training efficiency and performance. Experimental results demonstrate that LADD outperforms existing methods in terms of computational overhead and accuracy. With three high-performance dataset distillation algorithms, LADD achieves remarkable gains by an average of 14.9% in accuracy. Furthermore, the effectiveness of our method is proven across various datasets, distillation hyperparameters, and algorithms. Finally, our method improves the cross-architecture robustness of the distilled dataset, which is important in the application scenario.",
+    "url": "http://arxiv.org/abs/2409.16239v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Radar-APLANC: Unsupervised Radar-based Heartbeat Sensing via Augmented Pseudo-Label and Noise Contrast",
+    "authors": [
+      "Ying Wang",
+      "Zhaodong Sun",
+      "Xu Cheng",
+      "Zuxian He",
+      "Xiaobai Li"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Frequency Modulated Continuous Wave (FMCW) radars can measure subtle chest wall oscillations to enable non-contact heartbeat sensing. However, traditional radar-based heartbeat sensing methods face performance degradation due to noise. Learning-based radar methods achieve better noise robustness but require costly labeled signals for supervised training. To overcome these limitations, we propose the first unsupervised framework for radar-based heartbeat sensing via Augmented Pseudo-Label and Noise Contrast (Radar-APLANC). We propose to use both the heartbeat range and noise range within the radar range matrix to construct the positive and negative samples, respectively, for improved noise robustness. Our Noise-Contrastive Triplet (NCT) loss only utilizes positive samples, negative samples, and pseudo-label signals generated by the traditional radar method, thereby avoiding dependence on expensive ground-truth physiological signals. We further design a pseudo-label augmentation approach featuring adaptive noise-aware label selection to improve pseudo-label signal quality. Extensive experiments on the Equipleth dataset and our collected radar dataset demonstrate that our unsupervised method achieves performance comparable to state-of-the-art supervised methods. Our code, dataset, and supplementary materials can be accessed from https://github.com/RadarHRSensing/Radar-APLANC.",
+    "url": "http://arxiv.org/abs/2511.08071v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Endangered Alert: A Field-Validated Self-Training Scheme for Detecting and Protecting Threatened Wildlife on Roads and Roadsides",
+    "authors": [
+      "Kunming Li",
+      "Mao Shan",
+      "Stephany Berrio Perez",
+      "Katie Luo",
+      "Stewart Worrall"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Traffic accidents are a global safety concern, resulting in numerous fatalities each year. A considerable number of these deaths are caused by animal-vehicle collisions (AVCs), which not only endanger human lives but also present serious risks to animal populations. This paper presents an innovative self-training methodology aimed at detecting rare animals, such as the cassowary in Australia, whose survival is threatened by road accidents. The proposed method addresses critical real-world challenges, including acquiring and labelling sensor data for rare animal species in resource-limited environments. It achieves this by leveraging cloud and edge computing, and automatic data labelling to improve the detection performance of the field-deployed model iteratively. Our approach introduces Label-Augmentation Non-Maximum Suppression (LA-NMS), which incorporates a vision-language model (VLM) to enable automated data labelling. During a five-month deployment, we confirmed the method's robustness and effectiveness, resulting in improved object detection accuracy and increased prediction confidence. The source code is available: https://github.com/acfr/CassDetect",
+    "url": "http://arxiv.org/abs/2412.12222v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Making Large Vision Language Models to be Good Few-shot Learners",
+    "authors": [
+      "Fan Liu",
+      "Wenwen Cai",
+      "Jian Huo",
+      "Chuanyi Zhang",
+      "Delong Chen",
+      "Jun Zhou"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Few-shot classification (FSC) is a fundamental yet challenging task in computer vision that involves recognizing novel classes from limited data. While previous methods have focused on enhancing visual features or incorporating additional modalities, Large Vision Language Models (LVLMs) offer a promising alternative due to their rich knowledge and strong visual perception. However, LVLMs risk learning specific response formats rather than effectively extracting useful information from support data in FSC tasks. In this paper, we investigate LVLMs' performance in FSC and identify key issues such as insufficient learning and the presence of severe positional biases. To tackle the above challenges, we adopt the meta-learning strategy to teach models \"learn to learn\". By constructing a rich set of meta-tasks for instruction fine-tuning, LVLMs enhance the ability to extract information from few-shot support data for classification. Additionally, we further boost LVLM's few-shot learning capabilities through label augmentation and candidate selection in the fine-tuning and inference stage, respectively. Label augmentation is implemented via a character perturbation strategy to ensure the model focuses on support information. Candidate selection leverages attribute descriptions to filter out unreliable candidates and simplify the task. Extensive experiments demonstrate that our approach achieves superior performance on both general and fine-grained datasets. Furthermore, our candidate selection strategy has been proven beneficial for training-free LVLMs.",
+    "url": "http://arxiv.org/abs/2408.11297v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Pseudo-D: Informing Multi-View Uncertainty Estimation with Calibrated Neural Training Dynamics",
+    "authors": [
+      "Ang Nan Gu",
+      "Michael Tsang",
+      "Hooman Vaseli",
+      "Purang Abolmaesumi",
+      "Teresa Tsang"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Computer-aided diagnosis systems must make critical decisions from medical images that are often noisy, ambiguous, or conflicting, yet today's models are trained on overly simplistic labels that ignore diagnostic uncertainty. One-hot labels erase inter-rater variability and force models to make overconfident predictions, especially when faced with incomplete or artifact-laden inputs. We address this gap by introducing a novel framework that brings uncertainty back into the label space. Our method leverages neural network training dynamics (NNTD) to assess the inherent difficulty of each training sample. By aggregating and calibrating model predictions during training, we generate uncertainty-aware pseudo-labels that reflect the ambiguity encountered during learning. This label augmentation approach is architecture-agnostic and can be applied to any supervised learning pipeline to enhance uncertainty estimation and robustness. We validate our approach on a challenging echocardiography classification benchmark, demonstrating superior performance over specialized baselines in calibration, selective classification, and multi-view fusion.",
+    "url": "http://arxiv.org/abs/2509.11800v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "LAMP: Label Augmented Multimodal Pretraining",
+    "authors": [
+      "Jia Guo",
+      "Chen Zhu",
+      "Yilun Zhao",
+      "Heda Wang",
+      "Yao Hu",
+      "Xiaofei He",
+      "Deng Cai"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Multi-modal representation learning by pretraining has become an increasing interest due to its easy-to-use and potential benefit for various Visual-and-Language~(V-L) tasks. However its requirement of large volume and high-quality vision-language pairs highly hinders its values in practice. In this paper, we proposed a novel label-augmented V-L pretraining model, named LAMP, to address this problem. Specifically, we leveraged auto-generated labels of visual objects to enrich vision-language pairs with fine-grained alignment and correspondingly designed a novel pretraining task. Besides, we also found such label augmentation in second-stage pretraining would further universally benefit various downstream tasks. To evaluate LAMP, we compared it with some state-of-the-art models on four downstream tasks. The quantitative results and analysis have well proven the value of labels in V-L pretraining and the effectiveness of LAMP.",
+    "url": "http://arxiv.org/abs/2012.04446v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Unsupervised Multi-label Dataset Generation from Web Data",
+    "authors": [
+      "Carlos Roig",
+      "David Varas",
+      "Issey Masuda",
+      "Juan Carlos Riveiro",
+      "Elisenda Bou-Balust"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "This paper presents a system towards the generation of multi-label datasets from web data in an unsupervised manner. To achieve this objective, this work comprises two main contributions, namely: a) the generation of a low-noise unsupervised single-label dataset from web-data, and b) the augmentation of labels in such dataset (from single label to multi label). The generation of a single-label dataset uses an unsupervised noise reduction phase (clustering and selection of clusters using anchors) obtaining a 85% of correctly labeled images. An unsupervised label augmentation process is then performed to assign new labels to the images in the dataset using the class activation maps and the uncertainty associated with each class. This process is applied to the dataset generated in this paper and a public dataset (Places365) achieving a 9.5% and 27% of extra labels in each dataset respectively, therefore demonstrating that the presented system can robustly enrich the initial dataset.",
+    "url": "http://arxiv.org/abs/2005.05623v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "L3A: Label-Augmented Analytic Adaptation for Multi-Label Class Incremental Learning",
+    "authors": [
+      "Xiang Zhang",
+      "Run He",
+      "Jiao Chen",
+      "Di Fang",
+      "Ming Li",
+      "Ziqian Zeng",
+      "Cen Chen",
+      "Huiping Zhuang"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Class-incremental learning (CIL) enables models to learn new classes continually without forgetting previously acquired knowledge. Multi-label CIL (MLCIL) extends CIL to a real-world scenario where each sample may belong to multiple classes, introducing several challenges: label absence, which leads to incomplete historical information due to missing labels, and class imbalance, which results in the model bias toward majority classes. To address these challenges, we propose Label-Augmented Analytic Adaptation (L3A), an exemplar-free approach without storing past samples. L3A integrates two key modules. The pseudo-label (PL) module implements label augmentation by generating pseudo-labels for current phase samples, addressing the label absence problem. The weighted analytic classifier (WAC) derives a closed-form solution for neural networks. It introduces sample-specific weights to adaptively balance the class contribution and mitigate class imbalance. Experiments on MS-COCO and PASCAL VOC datasets demonstrate that L3A outperforms existing methods in MLCIL tasks. Our code is available at https://github.com/scut-zx/L3A.",
+    "url": "http://arxiv.org/abs/2506.00816v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "BAED: a New Paradigm for Few-shot Graph Learning with Explanation in the Loop",
+    "authors": [
+      "Chao Chen",
+      "Xujia Li",
+      "Dongsheng Hong",
+      "Shanshan Lin",
+      "Xiangwen Liao",
+      "Chuanyi Liu",
+      "Lei Chen"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "The challenges of training and inference in few-shot environments persist in the area of graph representation learning. The quality and quantity of labels are often insufficient due to the extensive expert knowledge required to annotate graph data. In this context, Few-Shot Graph Learning (FSGL) approaches have been developed over the years. Through sophisticated neural architectures and customized training pipelines, these approaches enhance model adaptability to new label distributions. However, compromises in \\textcolor{black}{the model's} robustness and interpretability can result in overfitting to noise in labeled data and degraded performance. This paper introduces the first explanation-in-the-loop framework for the FSGL problem, called BAED. We novelly employ the belief propagation algorithm to facilitate label augmentation on graphs. Then, leveraging an auxiliary graph neural network and the gradient backpropagation method, our framework effectively extracts explanatory subgraphs surrounding target nodes. The final predictions are based on these informative subgraphs while mitigating the influence of redundant information from neighboring nodes. Extensive experiments on seven benchmark datasets demonstrate superior prediction accuracy, training efficiency, and explanation quality of BAED. As a pioneer, this work highlights the potential of the explanation-based research paradigm in FSGL.",
+    "url": "http://arxiv.org/abs/2603.01941v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "On the Learning with Augmented Class via Forests",
+    "authors": [
+      "Fan Xu",
+      "Wuyang Chen",
+      "Wei Gao"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Decision trees and forests have achieved successes in various real applications, most working with all testing classes known in training data. In this work, we focus on learning with augmented class via forests, where an augmented class may appear in testing data yet not in training data. We incorporate information of augmented class into trees' splitting, that is, augmented Gini impurity, a new splitting criterion is introduced to exploit some unlabeled data from testing distribution. We then develop the Learning with Augmented Class via Forests (short for LACForest) approach, which constructs shallow forests according to the augmented Gini impurity and then splits forests with pseudo-labeled augmented instances for better performance. We also develop deep neural forests via an optimization objective based on our augmented Gini impurity, which essentially utilizes the representation power of neural networks for forests. Theoretically, we present the convergence analysis for our augmented Gini impurity, and we finally conduct experiments to evaluate our approaches. The code is available at https://github.com/nju-xuf/LACForest.",
+    "url": "http://arxiv.org/abs/2505.09294v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Controlled Descent Training",
+    "authors": [
+      "Viktor Andersson",
+      "Balázs Varga",
+      "Vincent Szolnoky",
+      "Andreas Syrén",
+      "Rebecka Jörnsten",
+      "Balázs Kulcsár"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In this work, a novel and model-based artificial neural network (ANN) training method is developed supported by optimal control theory. The method augments training labels in order to robustly guarantee training loss convergence and improve training convergence rate. Dynamic label augmentation is proposed within the framework of gradient descent training where the convergence of training loss is controlled. First, we capture the training behavior with the help of empirical Neural Tangent Kernels (NTK) and borrow tools from systems and control theory to analyze both the local and global training dynamics (e.g. stability, reachability). Second, we propose to dynamically alter the gradient descent training mechanism via fictitious labels as control inputs and an optimal state feedback policy. In this way, we enforce locally $\\mathcal{H}_2$ optimal and convergent training behavior. The novel algorithm, \\textit{Controlled Descent Training} (CDT), guarantees local convergence. CDT unleashes new potentials in the analysis, interpretation, and design of ANN architectures. The applicability of the method is demonstrated on standard regression and classification problems.",
+    "url": "http://arxiv.org/abs/2303.09216v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Pseudo strong labels for large scale weakly supervised audio tagging",
+    "authors": [
+      "Heinrich Dinkel",
+      "Zhiyong Yan",
+      "Yongqing Wang",
+      "Junbo Zhang",
+      "Yujun Wang"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Large-scale audio tagging datasets inevitably contain imperfect labels, such as clip-wise annotated (temporally weak) tags with no exact on- and offsets, due to a high manual labeling cost. This work proposes pseudo strong labels (PSL), a simple label augmentation framework that enhances the supervision quality for large-scale weakly supervised audio tagging. A machine annotator is first trained on a large weakly supervised dataset, which then provides finer supervision for a student model. Using PSL we achieve an mAP of 35.95 balanced train subset of Audioset using a MobileNetV2 back-end, significantly outperforming approaches without PSL. An analysis is provided which reveals that PSL mitigates missing labels. Lastly, we show that models trained with PSL are also superior at generalizing to the Freesound datasets (FSD) than their weakly trained counterparts.",
+    "url": "http://arxiv.org/abs/2204.13430v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Controllable and Efficient Multi-Class Pathology Nuclei Data Augmentation using Text-Conditioned Diffusion Models",
+    "authors": [
+      "Hyun-Jic Oh",
+      "Won-Ki Jeong"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "In the field of computational pathology, deep learning algorithms have made significant progress in tasks such as nuclei segmentation and classification. However, the potential of these advanced methods is limited by the lack of available labeled data. Although image synthesis via recent generative models has been actively explored to address this challenge, existing works have barely addressed label augmentation and are mostly limited to single-class and unconditional label generation. In this paper, we introduce a novel two-stage framework for multi-class nuclei data augmentation using text-conditional diffusion models. In the first stage, we innovate nuclei label synthesis by generating multi-class semantic labels and corresponding instance maps through a joint diffusion model conditioned by text prompts that specify the label structure information. In the second stage, we utilize a semantic and text-conditional latent diffusion model to efficiently generate high-quality pathology images that align with the generated nuclei label images. We demonstrate the effectiveness of our method on large and diverse pathology nuclei datasets, with evaluations including qualitative and quantitative analyses, as well as assessments of downstream tasks.",
+    "url": "http://arxiv.org/abs/2407.14426v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Unleashing the Power of Shared Label Structures for Human Activity Recognition",
+    "authors": [
+      "Xiyuan Zhang",
+      "Ranak Roy Chowdhury",
+      "Jiayun Zhang",
+      "Dezhi Hong",
+      "Rajesh K. Gupta",
+      "Jingbo Shang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Current human activity recognition (HAR) techniques regard activity labels as integer class IDs without explicitly modeling the semantics of class labels. We observe that different activity names often have shared structures. For example, \"open door\" and \"open fridge\" both have \"open\" as the action; \"kicking soccer ball\" and \"playing tennis ball\" both have \"ball\" as the object. Such shared structures in label names can be translated to the similarity in sensory data and modeling common structures would help uncover knowledge across different activities, especially for activities with limited samples. In this paper, we propose SHARE, a HAR framework that takes into account shared structures of label names for different activities. To exploit the shared structures, SHARE comprises an encoder for extracting features from input sensory time series and a decoder for generating label names as a token sequence. We also propose three label augmentation techniques to help the model more effectively capture semantic structures across activities, including a basic token-level augmentation, and two enhanced embedding-level and sequence-level augmentations utilizing the capabilities of pre-trained models. SHARE outperforms state-of-the-art HAR models in extensive experiments on seven HAR benchmark datasets. We also evaluate in few-shot learning and label imbalance settings and observe even more significant performance gap.",
+    "url": "http://arxiv.org/abs/2301.03462v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Uncertainty-aware Self-training for Low-resource Neural Sequence Labeling",
+    "authors": [
+      "Jianing Wang",
+      "Chengyu Wang",
+      "Jun Huang",
+      "Ming Gao",
+      "Aoying Zhou"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Neural sequence labeling (NSL) aims at assigning labels for input language tokens, which covers a broad range of applications, such as named entity recognition (NER) and slot filling, etc. However, the satisfying results achieved by traditional supervised-based approaches heavily depend on the large amounts of human annotation data, which may not be feasible in real-world scenarios due to data privacy and computation efficiency issues. This paper presents SeqUST, a novel uncertain-aware self-training framework for NSL to address the labeled data scarcity issue and to effectively utilize unlabeled data. Specifically, we incorporate Monte Carlo (MC) dropout in Bayesian neural network (BNN) to perform uncertainty estimation at the token level and then select reliable language tokens from unlabeled data based on the model confidence and certainty. A well-designed masked sequence labeling task with a noise-robust loss supports robust training, which aims to suppress the problem of noisy pseudo labels. In addition, we develop a Gaussian-based consistency regularization technique to further improve the model robustness on Gaussian-distributed perturbed representations. This effectively alleviates the over-fitting dilemma originating from pseudo-labeled augmented data. Extensive experiments over six benchmarks demonstrate that our SeqUST framework effectively improves the performance of self-training, and consistently outperforms strong baselines by a large margin in low-resource scenarios",
+    "url": "http://arxiv.org/abs/2302.08659v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-Supervised GANs with Label Augmentation",
+    "authors": [
+      "Liang Hou",
+      "Huawei Shen",
+      "Qi Cao",
+      "Xueqi Cheng"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Recently, transformation-based self-supervised learning has been applied to generative adversarial networks (GANs) to mitigate catastrophic forgetting in the discriminator by introducing a stationary learning environment. However, the separate self-supervised tasks in existing self-supervised GANs cause a goal inconsistent with generative modeling due to the fact that their self-supervised classifiers are agnostic to the generator distribution. To address this problem, we propose a novel self-supervised GAN that unifies the GAN task with the self-supervised task by augmenting the GAN labels (real or fake) via self-supervision of data transformation. Specifically, the original discriminator and self-supervised classifier are unified into a label-augmented discriminator that predicts the augmented labels to be aware of both the generator distribution and the data distribution under every transformation, and then provide the discrepancy between them to optimize the generator. Theoretically, we prove that the optimal generator could converge to replicate the real data distribution. Empirically, we show that the proposed method significantly outperforms previous self-supervised and data augmentation GANs on both generative modeling and representation learning across benchmark datasets.",
+    "url": "http://arxiv.org/abs/2106.08601v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Back to Supervision: Boosting Word Boundary Detection through Frame Classification",
+    "authors": [
+      "Simone Carnemolla",
+      "Salvatore Calcagno",
+      "Simone Palazzo",
+      "Daniela Giordano"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Speech segmentation at both word and phoneme levels is crucial for various speech processing tasks. It significantly aids in extracting meaningful units from an utterance, thus enabling the generation of discrete elements. In this work we propose a model-agnostic framework to perform word boundary detection in a supervised manner also employing a labels augmentation technique and an output-frame selection strategy. We trained and tested on the Buckeye dataset and only tested on TIMIT one, using state-of-the-art encoder models, including pre-trained solutions (Wav2Vec 2.0 and HuBERT), as well as convolutional and convolutional recurrent networks. Our method, with the HuBERT encoder, surpasses the performance of other state-of-the-art architectures, whether trained in supervised or self-supervised settings on the same datasets. Specifically, we achieved F-values of 0.8427 on the Buckeye dataset and 0.7436 on the TIMIT dataset, along with R-values of 0.8489 and 0.7807, respectively. These results establish a new state-of-the-art for both datasets. Beyond the immediate task, our approach offers a robust and efficient preprocessing method for future research in audio tokenization.",
+    "url": "http://arxiv.org/abs/2411.10423v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Improving End-To-End Modeling for Mispronunciation Detection with Effective Augmentation Mechanisms",
+    "authors": [
+      "Tien-Hong Lo",
+      "Yao-Ting Sung",
+      "Berlin Chen"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Recently, end-to-end (E2E) models, which allow to take spectral vector sequences of L2 (second-language) learners' utterances as input and produce the corresponding phone-level sequences as output, have attracted much research attention in developing mispronunciation detection (MD) systems. However, due to the lack of sufficient labeled speech data of L2 speakers for model estimation, E2E MD models are prone to overfitting in relation to conventional ones that are built on DNN-HMM acoustic models. To alleviate this critical issue, we in this paper propose two modeling strategies to enhance the discrimination capability of E2E MD models, each of which can implicitly leverage the phonetic and phonological traits encoded in a pretrained acoustic model and contained within reference transcripts of the training data, respectively. The first one is input augmentation, which aims to distill knowledge about phonetic discrimination from a DNN-HMM acoustic model. The second one is label augmentation, which manages to capture more phonological patterns from the transcripts of training data. A series of empirical experiments conducted on the L2-ARCTIC English dataset seem to confirm the efficacy of our E2E MD model when compared to some top-of-the-line E2E MD models and a classic pronunciation-scoring based method built on a DNN-HMM acoustic model.",
+    "url": "http://arxiv.org/abs/2110.08731v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Unleashing Potential of Evidence in Knowledge-Intensive Dialogue Generation",
+    "authors": [
+      "Xianjie Wu",
+      "Jian Yang",
+      "Tongliang Li",
+      "Di Liang",
+      "Shiwei Zhang",
+      "Yiyang Du",
+      "Zhoujun Li"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Incorporating external knowledge into dialogue generation (KIDG) is crucial for improving the correctness of response, where evidence fragments serve as knowledgeable snippets supporting the factual dialogue replies. However, introducing irrelevant content often adversely impacts reply quality and easily leads to hallucinated responses. Prior work on evidence retrieval and integration in dialogue systems falls short of fully leveraging existing evidence since the model fails to locate useful fragments accurately and overlooks hidden evidence labels within the KIDG dataset. To fully Unleash the potential of evidence, we propose a framework to effectively incorporate Evidence in knowledge-Intensive Dialogue Generation (u-EIDG). Specifically, we introduce an automatic evidence generation framework that harnesses the power of Large Language Models (LLMs) to mine reliable evidence veracity labels from unlabeled data. By utilizing these evidence labels, we train a reliable evidence indicator to effectively identify relevant evidence from retrieved passages. Furthermore, we propose an evidence-augmented generator with an evidence-focused attention mechanism, which allows the model to concentrate on evidenced segments. Experimental results on MultiDoc2Dial demonstrate the efficacy of evidential label augmentation and refined attention mechanisms in improving model performance. Further analysis confirms that the proposed method outperforms other baselines (+3~+5 points) regarding coherence and factual consistency.",
+    "url": "http://arxiv.org/abs/2309.08380v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Phoneme Based Neural Transducer for Large Vocabulary Speech Recognition",
+    "authors": [
+      "Wei Zhou",
+      "Simon Berger",
+      "Ralf Schlüter",
+      "Hermann Ney"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "To join the advantages of classical and end-to-end approaches for speech recognition, we present a simple, novel and competitive approach for phoneme-based neural transducer modeling. Different alignment label topologies are compared and word-end-based phoneme label augmentation is proposed to improve performance. Utilizing the local dependency of phonemes, we adopt a simplified neural network structure and a straightforward integration with the external word-level language model to preserve the consistency of seq-to-seq modeling. We also present a simple, stable and efficient training procedure using frame-wise cross-entropy loss. A phonetic context size of one is shown to be sufficient for the best performance. A simplified scheduled sampling approach is applied for further improvement and different decoding approaches are briefly compared. The overall performance of our best model is comparable to state-of-the-art (SOTA) results for the TED-LIUM Release 2 and Switchboard corpora.",
+    "url": "http://arxiv.org/abs/2010.16368v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Variational Graph Auto-Encoder Based Inductive Learning Method for Semi-Supervised Classification",
+    "authors": [
+      "Hanxuan Yang",
+      "Zhaoxin Yu",
+      "Qingchao Kong",
+      "Wei Liu",
+      "Wenji Mao"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Graph representation learning is a fundamental research issue in various domains of applications, of which the inductive learning problem is particularly challenging as it requires models to generalize to unseen graph structures during inference. In recent years, graph neural networks (GNNs) have emerged as powerful graph models for inductive learning tasks such as node classification, whereas they typically heavily rely on the annotated nodes under a fully supervised training setting. Compared with the GNN-based methods, variational graph auto-encoders (VGAEs) are known to be more generalizable to capture the internal structural information of graphs independent of node labels and have achieved prominent performance on multiple unsupervised learning tasks. However, so far there is still a lack of work focusing on leveraging the VGAE framework for inductive learning, due to the difficulties in training the model in a supervised manner and avoiding over-fitting the proximity information of graphs. To solve these problems and improve the model performance of VGAEs for inductive graph representation learning, in this work, we propose the Self-Label Augmented VGAE model. To leverage the label information for training, our model takes node labels as one-hot encoded inputs and then performs label reconstruction in model training. To overcome the scarcity problem of node labels for semi-supervised settings, we further propose the Self-Label Augmentation Method (SLAM), which uses pseudo labels generated by our model with a node-wise masking approach to enhance the label information. Experiments on benchmark inductive learning graph datasets verify that our proposed model archives promising results on node classification with particular superiority under semi-supervised learning settings.",
+    "url": "http://arxiv.org/abs/2403.17500v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Temporal Knowledge Distillation for Time-Sensitive Financial Services Applications",
+    "authors": [
+      "Hongda Shen",
+      "Eren Kurshan"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Detecting anomalies has become an increasingly critical function in the financial service industry. Anomaly detection is frequently used in key compliance and risk functions such as financial crime detection fraud and cybersecurity. The dynamic nature of the underlying data patterns especially in adversarial environments like fraud detection poses serious challenges to the machine learning models. Keeping up with the rapid changes by retraining the models with the latest data patterns introduces pressures in balancing the historical and current patterns while managing the training data size. Furthermore the model retraining times raise problems in time-sensitive and high-volume deployment systems where the retraining period directly impacts the models ability to respond to ongoing attacks in a timely manner. In this study we propose a temporal knowledge distillation-based label augmentation approach (TKD) which utilizes the learning from older models to rapidly boost the latest model and effectively reduces the model retraining times to achieve improved agility. Experimental results show that the proposed approach provides advantages in retraining times while improving the model performance.",
+    "url": "http://arxiv.org/abs/2312.16799v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

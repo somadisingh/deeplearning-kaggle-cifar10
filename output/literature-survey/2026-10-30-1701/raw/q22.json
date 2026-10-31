@@ -1,0 +1,356 @@
+[
+  {
+    "title": "Adaptive Meta-learner via Gradient Similarity for Few-shot Text Classification",
+    "authors": [
+      "Tianyi Lei",
+      "Honghui Hu",
+      "Qiaoyang Luo",
+      "Dezhong Peng",
+      "Xu Wang"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Few-shot text classification aims to classify the text under the few-shot scenario. Most of the previous methods adopt optimization-based meta learning to obtain task distribution. However, due to the neglect of matching between the few amount of samples and complicated models, as well as the distinction between useful and useless task features, these methods suffer from the overfitting issue. To address this issue, we propose a novel Adaptive Meta-learner via Gradient Similarity (AMGS) method to improve the model generalization ability to a new task. Specifically, the proposed AMGS alleviates the overfitting based on two aspects: (i) acquiring the potential semantic representation of samples and improving model generalization through the self-supervised auxiliary task in the inner loop, (ii) leveraging the adaptive meta-learner via gradient similarity to add constraints on the gradient obtained by base-learner in the outer loop. Moreover, we make a systematic analysis of the influence of regularization on the entire framework. Experimental results on several benchmarks demonstrate that the proposed AMGS consistently improves few-shot text classification performance compared with the state-of-the-art optimization-based meta-learning approaches.",
+    "url": "http://arxiv.org/abs/2209.04702v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Generating Auxiliary Tasks with Reinforcement Learning",
+    "authors": [
+      "Judah Goldfeder",
+      "Matthew So",
+      "Hod Lipson"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Auxiliary Learning (AL) is a form of multi-task learning in which a model trains on auxiliary tasks to boost performance on a primary objective. While AL has improved generalization across domains such as navigation, image classification, and NLP, it often depends on human-labeled auxiliary tasks that are costly to design and require domain expertise. Meta-learning approaches mitigate this by learning to generate auxiliary tasks, but typically rely on gradient based bi-level optimization, adding substantial computational and implementation overhead. We propose RL-AUX, a reinforcement-learning (RL) framework that dynamically creates auxiliary tasks by assigning auxiliary labels to each training example, rewarding the agent whenever its selections improve the performance on the primary task. We also explore learning per-example weights for the auxiliary loss. On CIFAR-100 grouped into 20 superclasses, our RL method outperforms human-labeled auxiliary tasks and matches the performance of a prominent bi-level optimization baseline. We present similarly strong results on other classification datasets. These results suggest RL is a viable path to generating effective auxiliary tasks.",
+    "url": "http://arxiv.org/abs/2510.22940v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Auxiliary Task Reweighting for Minimum-data Learning",
+    "authors": [
+      "Baifeng Shi",
+      "Judy Hoffman",
+      "Kate Saenko",
+      "Trevor Darrell",
+      "Huijuan Xu"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Supervised learning requires a large amount of training data, limiting its application where labeled data is scarce. To compensate for data scarcity, one possible method is to utilize auxiliary tasks to provide additional supervision for the main task. Assigning and optimizing the importance weights for different auxiliary tasks remains an crucial and largely understudied research question. In this work, we propose a method to automatically reweight auxiliary tasks in order to reduce the data requirement on the main task. Specifically, we formulate the weighted likelihood function of auxiliary tasks as a surrogate prior for the main task. By adjusting the auxiliary task weights to minimize the divergence between the surrogate prior and the true prior of the main task, we obtain a more accurate prior estimation, achieving the goal of minimizing the required amount of training data for the main task and avoiding a costly grid search. In multiple experimental settings (e.g. semi-supervised learning, multi-label classification), we demonstrate that our algorithm can effectively utilize limited labeled data of the main task with the benefit of auxiliary tasks compared with previous task reweighting methods. We also show that under extreme cases with only a few extra examples (e.g. few-shot domain adaptation), our algorithm results in significant improvement over the baseline.",
+    "url": "http://arxiv.org/abs/2010.08244v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Transfer Bayesian Meta-learning via Weighted Free Energy Minimization",
+    "authors": [
+      "Yunchuan Zhang",
+      "Sharu Theresa Jose",
+      "Osvaldo Simeone"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Meta-learning optimizes the hyperparameters of a training procedure, such as its initialization, kernel, or learning rate, based on data sampled from a number of auxiliary tasks. A key underlying assumption is that the auxiliary tasks, known as meta-training tasks, share the same generating distribution as the tasks to be encountered at deployment time, known as meta-test tasks. This may, however, not be the case when the test environment differ from the meta-training conditions. To address shifts in task generating distribution between meta-training and meta-testing phases, this paper introduces weighted free energy minimization (WFEM) for transfer meta-learning. We instantiate the proposed approach for non-parametric Bayesian regression and classification via Gaussian Processes (GPs). The method is validated on a toy sinusoidal regression problem, as well as on classification using miniImagenet and CUB data sets, through comparison with standard meta-learning of GP priors as implemented by PACOH.",
+    "url": "http://arxiv.org/abs/2106.10711v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Multi-Task Deep Learning Framework for Building Footprint Segmentation",
+    "authors": [
+      "Burak Ekim",
+      "Elif Sertel"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "The task of building footprint segmentation has been well-studied in the context of remote sensing (RS) as it provides valuable information in many aspects, however, difficulties brought by the nature of RS images such as variations in the spatial arrangements and in-consistent constructional patterns require studying further, since it often causes poorly classified segmentation maps. We address this need by designing a joint optimization scheme for the task of building footprint delineation and introducing two auxiliary tasks; image reconstruction and building footprint boundary segmentation with the intent to reveal the common underlying structure to advance the classification accuracy of a single task model under the favor of auxiliary tasks. In particular, we propose a deep multi-task learning (MTL) based unified fully convolutional framework which operates in an end-to-end manner by making use of joint loss function with learnable loss weights considering the homoscedastic uncertainty of each task loss. Experimental results conducted on the SpaceNet6 dataset demonstrate the potential of the proposed MTL framework as it improves the classification accuracy considerably compared to single-task and lesser compounded tasks.",
+    "url": "http://arxiv.org/abs/2104.09375v1",
+    "doi": "10.1109/IGARSS47720.2021.9554766",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "AuxNet: Auxiliary tasks enhanced Semantic Segmentation for Automated Driving",
+    "authors": [
+      "Sumanth Chennupati",
+      "Ganesh Sistu",
+      "Senthil Yogamani",
+      "Samir Rawashdeh"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Decision making in automated driving is highly specific to the environment and thus semantic segmentation plays a key role in recognizing the objects in the environment around the car. Pixel level classification once considered a challenging task which is now becoming mature to be productized in a car. However, semantic annotation is time consuming and quite expensive. Synthetic datasets with domain adaptation techniques have been used to alleviate the lack of large annotated datasets. In this work, we explore an alternate approach of leveraging the annotations of other tasks to improve semantic segmentation. Recently, multi-task learning became a popular paradigm in automated driving which demonstrates joint learning of multiple tasks improves overall performance of each tasks. Motivated by this, we use auxiliary tasks like depth estimation to improve the performance of semantic segmentation task. We propose adaptive task loss weighting techniques to address scale issues in multi-task loss functions which become more crucial in auxiliary tasks. We experimented on automotive datasets including SYNTHIA and KITTI and obtained 3% and 5% improvement in accuracy respectively.",
+    "url": "http://arxiv.org/abs/1901.05808v1",
+    "doi": "10.5220/0007684106450652",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Enhancing Speech Emotion Recognition with Multi-Task Learning and Dynamic Feature Fusion",
+    "authors": [
+      "Honghong Wang",
+      "Jing Deng",
+      "Fanqin Meng",
+      "Rong Zheng"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "This study investigates fine-tuning self-supervised learn ing (SSL) models using multi-task learning (MTL) to enhance\n  speech emotion recognition (SER). The framework simultane ously handles four related tasks: emotion recognition, gender\n  recognition, speaker verification, and automatic speech recog nition. An innovative co-attention module is introduced to dy namically capture the interactions between features from the\n  primary emotion classification task and auxiliary tasks, en abling context-aware fusion. Moreover, We introduce the Sam ple Weighted Focal Contrastive (SWFC) loss function to ad dress class imbalance and semantic confusion by adjusting sam ple weights for difficult and minority samples. The method is\n  validated on the Categorical Emotion Recognition task of the\n  Speech Emotion Recognition in Naturalistic Conditions Chal lenge, showing significant performance improvements.",
+    "url": "http://arxiv.org/abs/2508.17878v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Universal Joint Feature Extraction for P300 EEG Classification using Multi-task Autoencoder",
+    "authors": [
+      "Apiwat Ditthapron",
+      "Nannapas Banluesombatkul",
+      "Sombat Ketrat",
+      "Ekapol Chuangsuwanich",
+      "Theerawit Wilaiprasitporn"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "The process of recording Electroencephalography (EEG) signals is onerous and requires massive storage to store signals at an applicable frequency rate. In this work, we propose the EventRelated Potential Encoder Network (ERPENet); a multi-task autoencoder-based model, that can be applied to any ERP-related tasks. The strength of ERPENet lies in its capability to handle various kinds of ERP datasets and its robustness across multiple recording setups, enabling joint training across datasets. ERPENet incorporates Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM), in an autoencoder setup, which tries to simultaneously compress the input EEG signal and extract related P300 features into a latent vector. Here, we can infer the process for generating the latent vector as universal joint feature extraction. The network also includes a classification part for attended and unattended events classification as an auxiliary task. We experimented on six different P300 datasets. The results show that the latent vector exhibits better compression capability than the previous state-of-the-art semi-supervised autoencoder model. For attended and unattended events classification, pre-trained weights are adopted as initial weights and tested on unseen P300 datasets to evaluate the adaptability of the model, which shortens the training process as compared to using random Xavier weight initialization. At the compression rate of 6.84, the classification accuracy outperforms conventional P300 classification models: XdawnLDA, DeepConvNet, and EEGNet achieving 79.37% - 88.52% classification accuracy depending on the dataset.",
+    "url": "http://arxiv.org/abs/1808.06541v2",
+    "doi": "10.1109/ACCESS.2019.2919143",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Auxiliary Task Update Decomposition: The Good, The Bad and The Neutral",
+    "authors": [
+      "Lucio M. Dery",
+      "Yann Dauphin",
+      "David Grangier"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "While deep learning has been very beneficial in data-rich settings, tasks with smaller training set often resort to pre-training or multitask learning to leverage data from other tasks. In this case, careful consideration is needed to select tasks and model parameterizations such that updates from the auxiliary tasks actually help the primary task. We seek to alleviate this burden by formulating a model-agnostic framework that performs fine-grained manipulation of the auxiliary task gradients. We propose to decompose auxiliary updates into directions which help, damage or leave the primary task loss unchanged. This allows weighting the update directions differently depending on their impact on the problem of interest. We present a novel and efficient algorithm for that purpose and show its advantage in practice. Our method leverages efficient automatic differentiation procedures and randomized singular value decomposition for scalability. We show that our framework is generic and encompasses some prior work as particular cases. Our approach consistently outperforms strong and widely used baselines when leveraging out-of-distribution data for Text and Image classification tasks.",
+    "url": "http://arxiv.org/abs/2108.11346v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Text Augmentation in a Multi-Task View",
+    "authors": [
+      "Jason Wei",
+      "Chengyu Huang",
+      "Shiqi Xu",
+      "Soroush Vosoughi"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Traditional data augmentation aims to increase the coverage of the input distribution by generating augmented examples that strongly resemble original samples in an online fashion where augmented examples dominate training. In this paper, we propose an alternative perspective -- a multi-task view (MTV) of data augmentation -- in which the primary task trains on original examples and the auxiliary task trains on augmented examples. In MTV data augmentation, both original and augmented samples are weighted substantively during training, relaxing the constraint that augmented examples must resemble original data and thereby allowing us to apply stronger levels of augmentation. In empirical experiments using four common data augmentation techniques on three benchmark text classification datasets, we find that the MTV leads to higher and more robust performance improvements than traditional augmentation.",
+    "url": "http://arxiv.org/abs/2101.05469v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Unexpected Benefits of Self-Modeling in Neural Systems",
+    "authors": [
+      "Vickram N. Premakumar",
+      "Michael Vaiana",
+      "Florin Pop",
+      "Judd Rosenblatt",
+      "Diogo Schwerz de Lucena",
+      "Kirsten Ziman",
+      "Michael S. A. Graziano"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Self-models have been a topic of great interest for decades in studies of human cognition and more recently in machine learning. Yet what benefits do self-models confer? Here we show that when artificial networks learn to predict their internal states as an auxiliary task, they change in a fundamental way. To better perform the self-model task, the network learns to make itself simpler, more regularized, more parameter-efficient, and therefore more amenable to being predictively modeled. To test the hypothesis of self-regularizing through self-modeling, we used a range of network architectures performing three classification tasks across two modalities. In all cases, adding self-modeling caused a significant reduction in network complexity. The reduction was observed in two ways. First, the distribution of weights was narrower when self-modeling was present. Second, a measure of network complexity, the real log canonical threshold (RLCT), was smaller when self-modeling was present. Not only were measures of complexity reduced, but the reduction became more pronounced as greater training weight was placed on the auxiliary task of self-modeling. These results strongly support the hypothesis that self-modeling is more than simply a network learning to predict itself. The learning has a restructuring effect, reducing complexity and increasing parameter efficiency. This self-regularization may help explain some of the benefits of self-models reported in recent machine learning literature, as well as the adaptive value of self-models to biological systems. In particular, these findings may shed light on the possible interaction between the ability to model oneself and the ability to be more easily modeled by others in a social or cooperative context.",
+    "url": "http://arxiv.org/abs/2407.10188v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Road Mapping In LiDAR Images Using A Joint-Task Dense Dilated Convolutions Merging Network",
+    "authors": [
+      "Qinghui Liu",
+      "Michael Kampffmeyer",
+      "Robert Jenssen",
+      "Arnt-Børre Salberg"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "It is important, but challenging, for the forest industry to accurately map roads which are used for timber transport by trucks. In this work, we propose a Dense Dilated Convolutions Merging Network (DDCM-Net) to detect these roads in lidar images. The DDCM-Net can effectively recognize multi-scale and complex shaped roads with similar texture and colors, and also is shown to have superior performance over existing methods. To further improve its ability to accurately infer categories of roads, we propose the use of a joint-task learning strategy that utilizes two auxiliary output branches, i.e, multi-class classification and binary segmentation, joined with the main output of full-class segmentation. This pushes the network towards learning more robust representations that are expected to boost the ultimate performance of the main task. In addition, we introduce an iterative-random-weighting method to automatically weigh the joint losses for auxiliary tasks. This can avoid the difficult and expensive process of tuning the weights of each task's loss by hand. The experiments demonstrate that our proposed joint-task DDCM-Net can achieve better performance with fewer parameters and higher computational efficiency than previous state-of-the-art approaches.",
+    "url": "http://arxiv.org/abs/1909.04588v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "T3R: Deeper Test-Time Adaptation for Graph Neural Networks via Gradient Rotation",
+    "authors": [
+      "Huy Truong",
+      "Alexander Lazovik",
+      "Victoria Degeler"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Graph Neural Networks (GNNs) deployed in real-world systems typically have fixed weights, often leading to degraded performance under distribution shifts. This issue can be mitigated by conventional fine-tuning, but in many real-world cases, collecting labeled data is expensive or infeasible. A potential approach is Test-Time Training (TTT), which adapts models' weights using unlabeled test data, yet it is typically limited to shallow updates that affect only a subset of model parameters. We propose T3R, leveraging multiple Rotograd matrices to improve task affinity between the target and auxiliary tasks, essential for effective test-time training. T3R further introduces a rotation technique that reorients self-supervised signals using these matrices to create surrogate gradients for the target task, allowing deeper adaptation across nearly the entire architecture. Empirically, T3R reduces MAE by 0.172 points over standard inference in regression datasets and achieves at least 9.37% relative improvement on cross-domain OGB classification benchmarks compared to models without adaptation. These results highlight the potential to develop an adaptation pipeline for graph-based systems, particularly in settings where conventional fine-tuning or retraining is infeasible.",
+    "url": "http://arxiv.org/abs/2606.30011v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Neural Network Quine",
+    "authors": [
+      "Oscar Chang",
+      "Hod Lipson"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "Self-replication is a key aspect of biological life that has been largely overlooked in Artificial Intelligence systems. Here we describe how to build and train self-replicating neural networks. The network replicates itself by learning to output its own weights. The network is designed using a loss function that can be optimized with either gradient-based or non-gradient-based methods. We also describe a method we call regeneration to train the network without explicit optimization, by injecting the network with predictions of its own parameters. The best solution for a self-replicating network was found by alternating between regeneration and optimization steps. Finally, we describe a design for a self-replicating neural network that can solve an auxiliary task such as MNIST image classification. We observe that there is a trade-off between the network's ability to classify images and its ability to replicate, but training is biased towards increasing its specialization at image classification at the expense of replication. This is analogous to the trade-off between reproduction and other tasks observed in nature. We suggest that a self-replication mechanism for artificial intelligence is useful because it introduces the possibility of continual improvement through natural selection.",
+    "url": "http://arxiv.org/abs/1803.05859v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Unified Lattice Graph Fusion for Chinese Named Entity Recognition",
+    "authors": [
+      "Dixiang Zhang",
+      "Junyu Lu",
+      "Pingjian Zhang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Integrating lexicon into character-level sequence has been proven effective to leverage word boundary and semantic information in Chinese named entity recognition (NER). However, prior approaches usually utilize feature weighting and position coupling to integrate word information, but ignore the semantic and contextual correspondence between the fine-grained semantic units in the character-word space. To solve this issue, we propose a Unified Lattice Graph Fusion (ULGF) approach for Chinese NER. ULGF can explicitly capture various semantic and boundary relations across different semantic units with the adjacency matrix by converting the lattice structure into a unified graph. We stack multiple graph-based intra-source self-attention and inter-source cross-gating fusion layers that iteratively carry out semantic interactions to learn node representations. To alleviate the over-reliance on word information, we further propose to leverage lexicon entity classification as an auxiliary task. Experiments on four Chinese NER benchmark datasets demonstrate the superiority of our ULGF approach.",
+    "url": "http://arxiv.org/abs/2312.16917v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-Supervised Learning for Pre-training Capsule Networks: Overcoming Medical Imaging Dataset Challenges",
+    "authors": [
+      "Heba El-Shimy",
+      "Hind Zantout",
+      "Michael A. Lones",
+      "Neamat El Gayar"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Deep learning techniques are increasingly being adopted in diagnostic medical imaging. However, the limited availability of high-quality, large-scale medical datasets presents a significant challenge, often necessitating the use of transfer learning approaches. This study investigates self-supervised learning methods for pre-training capsule networks in polyp diagnostics for colon cancer. We used the PICCOLO dataset, comprising 3,433 samples, which exemplifies typical challenges in medical datasets: small size, class imbalance, and distribution shifts between data splits. Capsule networks offer inherent interpretability due to their architecture and inter-layer information routing mechanism. However, their limited native implementation in mainstream deep learning frameworks and the lack of pre-trained versions pose a significant challenge. This is particularly true if aiming to train them on small medical datasets, where leveraging pre-trained weights as initial parameters would be beneficial. We explored two auxiliary self-supervised learning tasks, colourisation and contrastive learning, for capsule network pre-training. We compared self-supervised pre-trained models against alternative initialisation strategies. Our findings suggest that contrastive learning and in-painting techniques are suitable auxiliary tasks for self-supervised learning in the medical domain. These techniques helped guide the model to capture important visual features that are beneficial for the downstream task of polyp classification, increasing its accuracy by 5.26% compared to other weight initialisation methods.",
+    "url": "http://arxiv.org/abs/2502.04748v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Enhancing Monocular Depth Estimation with Multi-Source Auxiliary Tasks",
+    "authors": [
+      "Alessio Quercia",
+      "Erenus Yildiz",
+      "Zhuo Cao",
+      "Kai Krajsek",
+      "Abigail Morrison",
+      "Ira Assent",
+      "Hanno Scharr"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Monocular depth estimation (MDE) is a challenging task in computer vision, often hindered by the cost and scarcity of high-quality labeled datasets. We tackle this challenge using auxiliary datasets from related vision tasks for an alternating training scheme with a shared decoder built on top of a pre-trained vision foundation model, while giving a higher weight to MDE. Through extensive experiments we demonstrate the benefits of incorporating various in-domain auxiliary datasets and tasks to improve MDE quality on average by ~11%. Our experimental analysis shows that auxiliary tasks have different impacts, confirming the importance of task selection, highlighting that quality gains are not achieved by merely adding data. Remarkably, our study reveals that using semantic segmentation datasets as Multi-Label Dense Classification (MLDC) often results in additional quality gains. Lastly, our method significantly improves the data efficiency for the considered MDE datasets, enhancing their quality while reducing their size by at least 80%. This paves the way for using auxiliary data from related tasks to improve MDE quality despite limited availability of high-quality labeled data. Code is available at https://jugit.fz-juelich.de/ias-8/mdeaux.",
+    "url": "http://arxiv.org/abs/2501.12824v1",
+    "doi": "10.1109/WACV61041.2025.00627",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Important Object Identification with Semi-Supervised Learning for Autonomous Driving",
+    "authors": [
+      "Jiachen Li",
+      "Haiming Gang",
+      "Hengbo Ma",
+      "Masayoshi Tomizuka",
+      "Chiho Choi"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Accurate identification of important objects in the scene is a prerequisite for safe and high-quality decision making and motion planning of intelligent agents (e.g., autonomous vehicles) that navigate in complex and dynamic environments. Most existing approaches attempt to employ attention mechanisms to learn importance weights associated with each object indirectly via various tasks (e.g., trajectory prediction), which do not enforce direct supervision on the importance estimation. In contrast, we tackle this task in an explicit way and formulate it as a binary classification (\"important\" or \"unimportant\") problem. We propose a novel approach for important object identification in egocentric driving scenarios with relational reasoning on the objects in the scene. Besides, since human annotations are limited and expensive to obtain, we present a semi-supervised learning pipeline to enable the model to learn from unlimited unlabeled data. Moreover, we propose to leverage the auxiliary tasks of ego vehicle behavior prediction to further improve the accuracy of importance estimation. The proposed approach is evaluated on a public egocentric driving dataset (H3D) collected in complex traffic scenarios. A detailed ablative study is conducted to demonstrate the effectiveness of each model component and the training strategy. Our approach also outperforms rule-based baselines by a large margin.",
+    "url": "http://arxiv.org/abs/2203.02634v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Deeply Supervised Multi-Task Autoencoder for Biological Brain Age estimation using three dimensional T$_1$-weighted magnetic resonance imaging",
+    "authors": [
+      "Mehreen Kanwal",
+      "Yunsik Son"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Accurate estimation of biological brain age from three dimensional (3D) T$_1$-weighted magnetic resonance imaging (MRI) is a critical imaging biomarker for identifying accelerated aging associated with neurodegenerative diseases. Effective brain age prediction necessitates training 3D models to leverage comprehensive insights from volumetric MRI scans, thereby fully capturing spatial anatomical context. However, optimizing deep 3D models remains challenging due to problems such as vanishing gradients. Furthermore, brain structural patterns differ significantly between sexes, which impacts aging trajectories and vulnerability to neurodegenerative diseases, thereby making sex classification crucial for enhancing the accuracy and generalizability of predictive models. To address these challenges, we propose a Deeply Supervised Multitask Autoencoder (DSMT-AE) framework for brain age estimation. DSMT-AE employs deep supervision, which involves applying supervisory signals at intermediate layers during training, to stabilize model optimization, and multitask learning to enhance feature representation. Specifically, our framework simultaneously optimizes brain age prediction alongside auxiliary tasks of sex classification and image reconstruction, thus effectively capturing anatomical and demographic variability to improve prediction accuracy. We extensively evaluate DSMT-AE on the Open Brain Health Benchmark (OpenBHB) dataset, the largest multisite neuroimaging cohort combining ten publicly available datasets. The results demonstrate that DSMT-AE achieves state-of-the-art performance and robustness across age and sex subgroups. Additionally, our ablation study confirms that each proposed component substantially contributes to the improved predictive accuracy and robustness of the overall architecture.",
+    "url": "http://arxiv.org/abs/2508.01565v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Semantics-Oriented Multitask Learning for DeepFake Detection: A Joint Embedding Approach",
+    "authors": [
+      "Mian Zou",
+      "Baosheng Yu",
+      "Yibing Zhan",
+      "Siwei Lyu",
+      "Kede Ma"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "In recent years, the multimedia forensics and security community has seen remarkable progress in multitask learning for DeepFake (i.e., face forgery) detection. The prevailing approach has been to frame DeepFake detection as a binary classification problem augmented by manipulation-oriented auxiliary tasks. This scheme focuses on learning features specific to face manipulations with limited generalizability. In this paper, we delve deeper into semantics-oriented multitask learning for DeepFake detection, capturing the relationships among face semantics via joint embedding. We first propose an automated dataset expansion technique that broadens current face forgery datasets to support semantics-oriented DeepFake detection tasks at both the global face attribute and local face region levels. Furthermore, we resort to the joint embedding of face images and labels (depicted by text descriptions) for prediction. This approach eliminates the need for manually setting task-agnostic and task-specific parameters, which is typically required when predicting multiple labels directly from images. In addition, we employ bi-level optimization to dynamically balance the fidelity loss weightings of various tasks, making the training process fully automated. Extensive experiments on six DeepFake datasets show that our method improves the generalizability of DeepFake detection and renders some degree of model interpretation by providing human-understandable explanations.",
+    "url": "http://arxiv.org/abs/2408.16305v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Inductive biases of multi-task learning and finetuning: multiple regimes of feature reuse",
+    "authors": [
+      "Samuel Lippl",
+      "Jack W. Lindsey"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Neural networks are often trained on multiple tasks, either simultaneously (multi-task learning, MTL) or sequentially (pretraining and subsequent finetuning, PT+FT). In particular, it is common practice to pretrain neural networks on a large auxiliary task before finetuning on a downstream task with fewer samples. Despite the prevalence of this approach, the inductive biases that arise from learning multiple tasks are poorly characterized. In this work, we address this gap. We describe novel implicit regularization penalties associated with MTL and PT+FT in diagonal linear networks and single-hidden-layer ReLU networks. These penalties indicate that MTL and PT+FT induce the network to reuse features in different ways. 1) Both MTL and PT+FT exhibit biases towards feature reuse between tasks, and towards sparsity in the set of learned features. We show a \"conservation law\" that implies a direct tradeoff between these two biases. 2) PT+FT exhibits a novel \"nested feature selection\" regime, not described by either the \"lazy\" or \"rich\" regimes identified in prior work, which biases it to rely on a sparse subset of the features learned during pretraining. This regime is much narrower for MTL. 3) PT+FT (but not MTL) in ReLU networks benefits from features that are correlated between the auxiliary and main task. We confirm these findings empirically with teacher-student models, and introduce a technique -- weight rescaling following pretraining -- that can elicit the nested feature selection regime. Finally, we validate our theory in deep neural networks trained on image classification. We find that weight rescaling improves performance when it causes models to display signatures of nested feature selection. Our results suggest that nested feature selection may be an important inductive bias for finetuning neural networks.",
+    "url": "http://arxiv.org/abs/2310.02396v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Brain Anatomy Prior Modeling to Forecast Clinical Progression of Cognitive Impairment with Structural MRI",
+    "authors": [
+      "Lintao Zhang",
+      "Jinjian Wu",
+      "Lihong Wang",
+      "Li Wang",
+      "David C. Steffens",
+      "Shijun Qiu",
+      "Guy G. Potter",
+      "Mingxia Liu"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Brain structural MRI has been widely used to assess the future progression of cognitive impairment (CI). Previous learning-based studies usually suffer from the issue of small-sized labeled training data, while there exist a huge amount of structural MRIs in large-scale public databases. Intuitively, brain anatomical structures derived from these public MRIs (even without task-specific label information) can be used to boost CI progression trajectory prediction. However, previous studies seldom take advantage of such brain anatomy prior. To this end, this paper proposes a brain anatomy prior modeling (BAPM) framework to forecast the clinical progression of cognitive impairment with small-sized target MRIs by exploring anatomical brain structures. Specifically, the BAPM consists of a pretext model and a downstream model, with a shared brain anatomy-guided encoder to model brain anatomy prior explicitly. Besides the encoder, the pretext model also contains two decoders for two auxiliary tasks (i.e., MRI reconstruction and brain tissue segmentation), while the downstream model relies on a predictor for classification. The brain anatomy-guided encoder is pre-trained with the pretext model on 9,344 auxiliary MRIs without diagnostic labels for anatomy prior modeling. With this encoder frozen, the downstream model is then fine-tuned on limited target MRIs for prediction. We validate the BAPM on two CI-related studies with T1-weighted MRIs from 448 subjects. Experimental results suggest the effectiveness of BAPM in (1) four CI progression prediction tasks, (2) MR image reconstruction, and (3) brain tissue segmentation, compared with several state-of-the-art methods.",
+    "url": "http://arxiv.org/abs/2306.11837v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

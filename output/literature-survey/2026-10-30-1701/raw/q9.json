@@ -1,0 +1,71 @@
+[
+  {
+    "title": "When the Future Becomes the Past: Taming Temporal Correspondence for Self-supervised Video Representation Learning",
+    "authors": [
+      "Yang Liu",
+      "Qianqian Xu",
+      "Peisong Wen",
+      "Siran Dai",
+      "Qingming Huang"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "The past decade has witnessed notable achievements in self-supervised learning for video tasks. Recent efforts typically adopt the Masked Video Modeling (MVM) paradigm, leading to significant progress on multiple video tasks. However, two critical challenges remain: 1) Without human annotations, the random temporal sampling introduces uncertainty, increasing the difficulty of model training. 2) Previous MVM methods primarily recover the masked patches in the pixel space, leading to insufficient information compression for downstream tasks. To address these challenges jointly, we propose a self-supervised framework that leverages Temporal Correspondence for video Representation learning (T-CoRe). For challenge 1), we propose a sandwich sampling strategy that selects two auxiliary frames to reduce reconstruction uncertainty in a two-side-squeezing manner. Addressing challenge 2), we introduce an auxiliary branch into a self-distillation architecture to restore representations in the latent space, generating high-level semantic representations enriched with temporal information. Experiments of T-CoRe consistently present superior performance across several downstream tasks, demonstrating its effectiveness for video representation learning. The code is available at https://github.com/yafeng19/T-CORE.",
+    "url": "http://arxiv.org/abs/2503.15096v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Supervised Masked Knowledge Distillation for Few-Shot Transformers",
+    "authors": [
+      "Han Lin",
+      "Guangxing Han",
+      "Jiawei Ma",
+      "Shiyuan Huang",
+      "Xudong Lin",
+      "Shih-Fu Chang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Vision Transformers (ViTs) emerge to achieve impressive performance on many data-abundant computer vision tasks by capturing long-range dependencies among local features. However, under few-shot learning (FSL) settings on small datasets with only a few labeled data, ViT tends to overfit and suffers from severe performance degradation due to its absence of CNN-alike inductive bias. Previous works in FSL avoid such problem either through the help of self-supervised auxiliary losses, or through the dextile uses of label information under supervised settings. But the gap between self-supervised and supervised few-shot Transformers is still unfilled. Inspired by recent advances in self-supervised knowledge distillation and masked image modeling (MIM), we propose a novel Supervised Masked Knowledge Distillation model (SMKD) for few-shot Transformers which incorporates label information into self-distillation frameworks. Compared with previous self-supervised methods, we allow intra-class knowledge distillation on both class and patch tokens, and introduce the challenging task of masked patch tokens reconstruction across intra-class images. Experimental results on four few-shot classification benchmark datasets show that our method with simple design outperforms previous methods by a large margin and achieves a new start-of-the-art. Detailed ablation studies confirm the effectiveness of each component of our model. Code for this paper is available here: https://github.com/HL-hanlin/SMKD.",
+    "url": "http://arxiv.org/abs/2303.15466v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-supervised adversarial masking for 3D point cloud representation learning",
+    "authors": [
+      "Michał Szachniewicz",
+      "Wojciech Kozłowski",
+      "Michał Stypułkowski",
+      "Maciej Zięba"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Self-supervised methods have been proven effective for learning deep representations of 3D point cloud data. Although recent methods in this domain often rely on random masking of inputs, the results of this approach can be improved. We introduce PointCAM, a novel adversarial method for learning a masking function for point clouds. Our model utilizes a self-distillation framework with an online tokenizer for 3D point clouds. Compared to previous techniques that optimize patch-level and object-level objectives, we postulate applying an auxiliary network that learns how to select masks instead of choosing them randomly. Our results show that the learned masking function achieves state-of-the-art or competitive performance on various downstream tasks. The source code is available at https://github.com/szacho/pointcam.",
+    "url": "http://arxiv.org/abs/2307.05325v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-Supervised Anomaly Detection by Self-Distillation and Negative Sampling",
+    "authors": [
+      "Nima Rafiee",
+      "Rahil Gholamipoorfard",
+      "Nikolas Adaloglou",
+      "Simon Jaxy",
+      "Julius Ramakers",
+      "Markus Kollmann"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Detecting whether examples belong to a given in-distribution or are Out-Of-Distribution (OOD) requires identifying features specific to the in-distribution. In the absence of labels, these features can be learned by self-supervised techniques under the generic assumption that the most abstract features are those which are statistically most over-represented in comparison to other distributions from the same domain. In this work, we show that self-distillation of the in-distribution training set together with contrasting against negative examples derived from shifting transformation of auxiliary data strongly improves OOD detection. We find that this improvement depends on how the negative samples are generated. In particular, we observe that by leveraging negative samples, which keep the statistics of low-level features while changing the high-level semantics, higher average detection performance is obtained. Furthermore, good negative sampling strategies can be identified from the sensitivity of the OOD detection score. The efficiency of our approach is demonstrated across a diverse range of OOD detection problems, setting new benchmarks for unsupervised OOD detection in the visual domain.",
+    "url": "http://arxiv.org/abs/2201.06378v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

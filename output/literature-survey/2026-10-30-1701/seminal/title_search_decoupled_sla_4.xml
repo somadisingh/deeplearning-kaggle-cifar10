@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/oxb4CzYuANjK90cAJtLvz3oxxuY</id>
+  <title>arXiv Query: search_query=abs:decoupled AND abs:"label augmentation"&amp;id_list=&amp;start=0&amp;max_results=5</title>
+  <updated>2026-10-30T21:10:35Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:decoupled+AND+abs:%22label+augmentation%22&amp;start=0&amp;max_results=5&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2501.10638v1</id>
+    <title>A Resource-Efficient Training Framework for Remote Sensing Text--Image Retrieval</title>
+    <updated>2025-01-18T02:51:43Z</updated>
+    <link href="https://arxiv.org/abs/2501.10638v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.10638v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Remote sensing text--image retrieval (RSTIR) aims to retrieve the matched remote sensing (RS) images from the database according to the descriptive text. Recently, the rapid development of large visual-language pre-training models provides new insights for RSTIR. Nevertheless, as the complexity of models grows in RSTIR, the previous studies suffer from suboptimal resource efficiency during transfer learning. To address this issue, we propose a computation and memory-efficient retrieval (CMER) framework for RSTIR. To reduce the training memory consumption, we propose the Focus-Adapter module, which adopts a side branch structure. Its focus layer suppresses the interference of background pixels for small targets. Simultaneously, to enhance data efficacy, we regard the RS scene category as the metadata and design a concise augmentation technique. The scene label augmentation leverages the prior knowledge from land cover categories and shrinks the search space. We propose the negative sample recycling strategy to make the negative sample pool decoupled from the mini-batch size. It improves the generalization performance without introducing additional encoders. We have conducted quantitative and qualitative experiments on public datasets and expanded the benchmark with some advanced approaches, which demonstrates the competitiveness of the proposed CMER. Compared with the recent advanced methods, the overall retrieval performance of CMER is 2%--5% higher on RSITMD. Moreover, our proposed method reduces memory consumption by 49% and has a 1.4x data throughput during training. The code of the CMER and the dataset will be released at https://github.com/ZhangWeihang99/CMER.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-18T02:51:43Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Weihang Zhang</name>
+    </author>
+    <author>
+      <name>Jihao Li</name>
+    </author>
+    <author>
+      <name>Shuoke Li</name>
+    </author>
+    <author>
+      <name>Ziqing Niu</name>
+    </author>
+    <author>
+      <name>Jialiang Chen</name>
+    </author>
+    <author>
+      <name>Wenkai Zhang</name>
+    </author>
+  </entry>
+</feed>

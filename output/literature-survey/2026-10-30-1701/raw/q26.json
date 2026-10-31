@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Is Multi-Task Learning an Upper Bound for Continual Learning?",
+    "authors": [
+      "Zihao Wu",
+      "Huy Tran",
+      "Hamed Pirsiavash",
+      "Soheil Kolouri"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Continual and multi-task learning are common machine learning approaches to learning from multiple tasks. The existing works in the literature often assume multi-task learning as a sensible performance upper bound for various continual learning algorithms. While this assumption is empirically verified for different continual learning benchmarks, it is not rigorously justified. Moreover, it is imaginable that when learning from multiple tasks, a small subset of these tasks could behave as adversarial tasks reducing the overall learning performance in a multi-task setting. In contrast, continual learning approaches can avoid the performance drop caused by such adversarial tasks to preserve their performance on the rest of the tasks, leading to better performance than a multi-task learner. This paper proposes a novel continual self-supervised learning setting, where each task corresponds to learning an invariant representation for a specific class of data augmentations. In this setting, we show that continual learning often beats multi-task learning on various benchmark datasets, including MNIST, CIFAR-10, and CIFAR-100.",
+    "url": "http://arxiv.org/abs/2210.14797v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GAT: Guided Adversarial Training with Pareto-optimal Auxiliary Tasks",
+    "authors": [
+      "Salah Ghamizi",
+      "Jingfeng Zhang",
+      "Maxime Cordy",
+      "Mike Papadakis",
+      "Masashi Sugiyama",
+      "Yves Le Traon"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "While leveraging additional training data is well established to improve adversarial robustness, it incurs the unavoidable cost of data collection and the heavy computation to train models. To mitigate the costs, we propose Guided Adversarial Training (GAT), a novel adversarial training technique that exploits auxiliary tasks under a limited set of training data. Our approach extends single-task models into multi-task models during the min-max optimization of adversarial training, and drives the loss optimization with a regularization of the gradient curvature across multiple tasks. GAT leverages two types of auxiliary tasks: self-supervised tasks, where the labels are generated automatically, and domain-knowledge tasks, where human experts provide additional labels. Experimentally, GAT increases the robust AUC of CheXpert medical imaging dataset from 50% to 83% and On CIFAR-10, GAT outperforms eight state-of-the-art adversarial training and achieves 56.21% robust accuracy with Resnet-50. Overall, we demonstrate that guided multi-task learning is an actionable and promising avenue to push further the boundaries of model robustness.",
+    "url": "http://arxiv.org/abs/2302.02907v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

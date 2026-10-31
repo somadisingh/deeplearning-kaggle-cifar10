@@ -1,0 +1,229 @@
+[
+  {
+    "title": "SelfMatch: Combining Contrastive Self-Supervision and Consistency for Semi-Supervised Learning",
+    "authors": [
+      "Byoungjip Kim",
+      "Jinho Choo",
+      "Yeong-Dae Kwon",
+      "Seongho Joe",
+      "Seungjai Min",
+      "Youngjune Gwon"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "This paper introduces SelfMatch, a semi-supervised learning method that combines the power of contrastive self-supervised learning and consistency regularization. SelfMatch consists of two stages: (1) self-supervised pre-training based on contrastive learning and (2) semi-supervised fine-tuning based on augmentation consistency regularization. We empirically demonstrate that SelfMatch achieves the state-of-the-art results on standard benchmark datasets such as CIFAR-10 and SVHN. For example, for CIFAR-10 with 40 labeled examples, SelfMatch achieves 93.19% accuracy that outperforms the strong previous methods such as MixMatch (52.46%), UDA (70.95%), ReMixMatch (80.9%), and FixMatch (86.19%). We note that SelfMatch can close the gap between supervised learning (95.87%) and semi-supervised learning (93.19%) by using only a few labels for each class.",
+    "url": "http://arxiv.org/abs/2101.06480v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Milking CowMask for Semi-Supervised Image Classification",
+    "authors": [
+      "Geoff French",
+      "Avital Oliver",
+      "Tim Salimans"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Consistency regularization is a technique for semi-supervised learning that underlies a number of strong results for classification with few labeled data. It works by encouraging a learned model to be robust to perturbations on unlabeled data. Here, we present a novel mask-based augmentation method called CowMask. Using it to provide perturbations for semi-supervised consistency regularization, we achieve a state-of-the-art result on ImageNet with 10% labeled data, with a top-5 error of 8.76% and top-1 error of 26.06%. Moreover, we do so with a method that is much simpler than many alternatives. We further investigate the behavior of CowMask for semi-supervised learning by running many smaller scale experiments on the SVHN, CIFAR-10 and CIFAR-100 data sets, where we achieve results competitive with the state of the art, indicating that CowMask is widely applicable. We open source our code at https://github.com/google-research/google-research/tree/master/milking_cowmask",
+    "url": "http://arxiv.org/abs/2003.12022v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Consistency Regularization for Generative Adversarial Networks",
+    "authors": [
+      "Han Zhang",
+      "Zizhao Zhang",
+      "Augustus Odena",
+      "Honglak Lee"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Generative Adversarial Networks (GANs) are known to be difficult to train, despite considerable research effort. Several regularization techniques for stabilizing training have been proposed, but they introduce non-trivial computational overheads and interact poorly with existing techniques like spectral normalization. In this work, we propose a simple, effective training stabilizer based on the notion of consistency regularization---a popular technique in the semi-supervised learning literature. In particular, we augment data passing into the GAN discriminator and penalize the sensitivity of the discriminator to these augmentations. We conduct a series of experiments to demonstrate that consistency regularization works effectively with spectral normalization and various GAN architectures, loss functions and optimizer settings. Our method achieves the best FID scores for unconditional image generation compared to other regularization methods on CIFAR-10 and CelebA. Moreover, Our consistency regularized GAN (CR-GAN) improves state-of-the-art FID scores for conditional generation from 14.73 to 11.48 on CIFAR-10 and from 8.73 to 6.66 on ImageNet-2012.",
+    "url": "http://arxiv.org/abs/1910.12027v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Exploring Self-Supervised Regularization for Supervised and Semi-Supervised Learning",
+    "authors": [
+      "Phi Vu Tran"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Recent advances in semi-supervised learning have shown tremendous potential in overcoming a major barrier to the success of modern machine learning algorithms: access to vast amounts of human-labeled training data. Previous algorithms based on consistency regularization can harness the abundance of unlabeled data to produce impressive results on a number of semi-supervised benchmarks, approaching the performance of strong supervised baselines using only a fraction of the available labeled data. In this work, we challenge the long-standing success of consistency regularization by introducing self-supervised regularization as the basis for combining semantic feature representations from unlabeled data. We perform extensive comparative experiments to demonstrate the effectiveness of self-supervised regularization for supervised and semi-supervised image classification on SVHN, CIFAR-10, and CIFAR-100 benchmark datasets. We present two main results: (1) models augmented with self-supervised regularization significantly improve upon traditional supervised classifiers without the need for unlabeled data; (2) together with unlabeled data, our models yield semi-supervised performance competitive with, and in many cases exceeding, prior state-of-the-art consistency baselines. Lastly, our models have the practical utility of being efficiently trained end-to-end and require no additional hyper-parameters to tune for optimal performance beyond the standard set for training neural networks. Reference code and data are available at https://github.com/vuptran/sesemi",
+    "url": "http://arxiv.org/abs/1906.10343v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "MixPUL: Consistency-based Augmentation for Positive and Unlabeled Learning",
+    "authors": [
+      "Tong Wei",
+      "Feng Shi",
+      "Hai Wang",
+      "Wei-Wei Tu. Yu-Feng Li"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Learning from positive and unlabeled data (PU learning) is prevalent in practical applications where only a couple of examples are positively labeled. Previous PU learning studies typically rely on existing samples such that the data distribution is not extensively explored. In this work, we propose a simple yet effective data augmentation method, coined~\\algo, based on \\emph{consistency regularization} which provides a new perspective of using PU data. In particular, the proposed~\\algo~incorporates supervised and unsupervised consistency training to generate augmented data. To facilitate supervised consistency, reliable negative examples are mined from unlabeled data due to the absence of negative samples. Unsupervised consistency is further encouraged between unlabeled datapoints. In addition,~\\algo~reduces margin loss between positive and unlabeled pairs, which explicitly optimizes AUC and yields faster convergence. Finally, we conduct a series of studies to demonstrate the effectiveness of consistency regularization. We examined three kinds of reliable negative mining methods. We show that~\\algo~achieves an averaged improvement of classification error from 16.49 to 13.09 on the CIFAR-10 dataset across different positive data amount.",
+    "url": "http://arxiv.org/abs/2004.09388v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Pseudo-Labeling and Confirmation Bias in Deep Semi-Supervised Learning",
+    "authors": [
+      "Eric Arazo",
+      "Diego Ortego",
+      "Paul Albert",
+      "Noel E. O'Connor",
+      "Kevin McGuinness"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Semi-supervised learning, i.e. jointly learning from labeled and unlabeled samples, is an active research topic due to its key role on relaxing human supervision. In the context of image classification, recent advances to learn from unlabeled samples are mainly focused on consistency regularization methods that encourage invariant predictions for different perturbations of unlabeled samples. We, conversely, propose to learn from unlabeled data by generating soft pseudo-labels using the network predictions. We show that a naive pseudo-labeling overfits to incorrect pseudo-labels due to the so-called confirmation bias and demonstrate that mixup augmentation and setting a minimum number of labeled samples per mini-batch are effective regularization techniques for reducing it. The proposed approach achieves state-of-the-art results in CIFAR-10/100, SVHN, and Mini-ImageNet despite being much simpler than other methods. These results demonstrate that pseudo-labeling alone can outperform consistency regularization methods, while the opposite was supposed in previous work. Source code is available at https://git.io/fjQsC.",
+    "url": "http://arxiv.org/abs/1908.02983v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Regularizing Deep Networks with Semantic Data Augmentation",
+    "authors": [
+      "Yulin Wang",
+      "Gao Huang",
+      "Shiji Song",
+      "Xuran Pan",
+      "Yitong Xia",
+      "Cheng Wu"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Data augmentation is widely known as a simple yet surprisingly effective technique for regularizing deep networks. Conventional data augmentation schemes, e.g., flipping, translation or rotation, are low-level, data-independent and class-agnostic operations, leading to limited diversity for augmented samples. To this end, we propose a novel semantic data augmentation algorithm to complement traditional approaches. The proposed method is inspired by the intriguing property that deep networks are effective in learning linearized features, i.e., certain directions in the deep feature space correspond to meaningful semantic transformations, e.g., changing the background or view angle of an object. Based on this observation, translating training samples along many such directions in the feature space can effectively augment the dataset for more diversity. To implement this idea, we first introduce a sampling based method to obtain semantically meaningful directions efficiently. Then, an upper bound of the expected cross-entropy (CE) loss on the augmented training set is derived by assuming the number of augmented samples goes to infinity, yielding a highly efficient algorithm. In fact, we show that the proposed implicit semantic data augmentation (ISDA) algorithm amounts to minimizing a novel robust CE loss, which adds minimal extra computational cost to a normal training procedure. In addition to supervised learning, ISDA can be applied to semi-supervised learning tasks under the consistency regularization framework, where ISDA amounts to minimizing the upper bound of the expected KL-divergence between the augmented features and the original features. Although being simple, ISDA consistently improves the generalization performance of popular deep models (e.g., ResNets and DenseNets) on a variety of datasets, i.e., CIFAR-10, CIFAR-100, SVHN, ImageNet, and Cityscapes.",
+    "url": "http://arxiv.org/abs/2007.10538v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Gradient-based Data Augmentation for Semi-Supervised Learning",
+    "authors": [
+      "Hiroshi Kaizuka"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "In semi-supervised learning (SSL), a technique called consistency regularization (CR) achieves high performance. It has been proved that the diversity of data used in CR is extremely important to obtain a model with high discrimination performance by CR. We propose a new data augmentation (Gradient-based Data Augmentation (GDA)) that is deterministically calculated from the image pixel value gradient of the posterior probability distribution that is the model output. We aim to secure effective data diversity for CR by utilizing three types of GDA. On the other hand, it has been demonstrated that the mixup method for labeled data and unlabeled data is also effective in SSL. We propose an SSL method named MixGDA by combining various mixup methods and GDA. The discrimination performance achieved by MixGDA is evaluated against the 13-layer CNN that is used as standard in SSL research. As a result, for CIFAR-10 (4000 labels), MixGDA achieves the same level of performance as the best performance ever achieved. For SVHN (250 labels, 500 labels and 1000 labels) and CIFAR-100 (10000 labels), MixGDA achieves state-of-the-art performance.",
+    "url": "http://arxiv.org/abs/2003.12824v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "FeatMatch: Feature-Based Augmentation for Semi-Supervised Learning",
+    "authors": [
+      "Chia-Wen Kuo",
+      "Chih-Yao Ma",
+      "Jia-Bin Huang",
+      "Zsolt Kira"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Recent state-of-the-art semi-supervised learning (SSL) methods use a combination of image-based transformations and consistency regularization as core components. Such methods, however, are limited to simple transformations such as traditional data augmentation or convex combinations of two images. In this paper, we propose a novel learned feature-based refinement and augmentation method that produces a varied set of complex transformations. Importantly, these transformations also use information from both within-class and across-class prototypical representations that we extract through clustering. We use features already computed across iterations by storing them in a memory bank, obviating the need for significant extra computation. These transformations, combined with traditional image-based augmentation, are then used as part of the consistency-based regularization loss. We demonstrate that our method is comparable to current state of art for smaller datasets (CIFAR-10 and SVHN) while being able to scale up to larger datasets such as CIFAR-100 and mini-Imagenet where we achieve significant gains over the state of art (\\textit{e.g.,} absolute 17.44\\% gain on mini-ImageNet). We further test our method on DomainNet, demonstrating better robustness to out-of-domain unlabeled data, and perform rigorous ablations and analysis to validate the method.",
+    "url": "http://arxiv.org/abs/2007.08505v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "FixMatch: Simplifying Semi-Supervised Learning with Consistency and Confidence",
+    "authors": [
+      "Kihyuk Sohn",
+      "David Berthelot",
+      "Chun-Liang Li",
+      "Zizhao Zhang",
+      "Nicholas Carlini",
+      "Ekin D. Cubuk",
+      "Alex Kurakin",
+      "Han Zhang",
+      "Colin Raffel"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Semi-supervised learning (SSL) provides an effective means of leveraging unlabeled data to improve a model's performance. In this paper, we demonstrate the power of a simple combination of two common SSL methods: consistency regularization and pseudo-labeling. Our algorithm, FixMatch, first generates pseudo-labels using the model's predictions on weakly-augmented unlabeled images. For a given image, the pseudo-label is only retained if the model produces a high-confidence prediction. The model is then trained to predict the pseudo-label when fed a strongly-augmented version of the same image. Despite its simplicity, we show that FixMatch achieves state-of-the-art performance across a variety of standard semi-supervised learning benchmarks, including 94.93% accuracy on CIFAR-10 with 250 labels and 88.61% accuracy with 40 -- just 4 labels per class. Since FixMatch bears many similarities to existing SSL methods that achieve worse performance, we carry out an extensive ablation study to tease apart the experimental factors that are most important to FixMatch's success. We make our code available at https://github.com/google-research/fixmatch.",
+    "url": "http://arxiv.org/abs/2001.07685v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Enhancing Sample Utilization through Sample Adaptive Augmentation in Semi-Supervised Learning",
+    "authors": [
+      "Guan Gui",
+      "Zhen Zhao",
+      "Lei Qi",
+      "Luping Zhou",
+      "Lei Wang",
+      "Yinghuan Shi"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In semi-supervised learning, unlabeled samples can be utilized through augmentation and consistency regularization. However, we observed certain samples, even undergoing strong augmentation, are still correctly classified with high confidence, resulting in a loss close to zero. It indicates that these samples have been already learned well and do not provide any additional optimization benefits to the model. We refer to these samples as ``naive samples\". Unfortunately, existing SSL models overlook the characteristics of naive samples, and they just apply the same learning strategy to all samples. To further optimize the SSL model, we emphasize the importance of giving attention to naive samples and augmenting them in a more diverse manner. Sample adaptive augmentation (SAA) is proposed for this stated purpose and consists of two modules: 1) sample selection module; 2) sample augmentation module. Specifically, the sample selection module picks out {naive samples} based on historical training information at each epoch, then the naive samples will be augmented in a more diverse manner in the sample augmentation module. Thanks to the extreme ease of implementation of the above modules, SAA is advantageous for being simple and lightweight. We add SAA on top of FixMatch and FlexMatch respectively, and experiments demonstrate SAA can significantly improve the models. For example, SAA helped improve the accuracy of FixMatch from 92.50% to 94.76% and that of FlexMatch from 95.01% to 95.31% on CIFAR-10 with 40 labels.",
+    "url": "http://arxiv.org/abs/2309.03598v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Complementing Semi-Supervised Learning with Uncertainty Quantification",
+    "authors": [
+      "Ehsan Kazemi"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "The problem of fully supervised classification is that it requires a tremendous amount of annotated data, however, in many datasets a large portion of data is unlabeled. To alleviate this problem semi-supervised learning (SSL) leverages the knowledge of the classifier on the labeled domain and extrapolates it to the unlabeled domain which has a supposedly similar distribution as annotated data. Recent success on SSL methods crucially hinges on thresholded pseudo labeling and thereby consistency regularization for the unlabeled domain. However, the existing methods do not incorporate the uncertainty of the pseudo labels or unlabeled samples in the training process which are due to the noisy labels or out of distribution samples owing to strong augmentations. Inspired by the recent developments in SSL, our goal in this paper is to propose a novel unsupervised uncertainty-aware objective that relies on aleatoric and epistemic uncertainty quantification. Complementing the recent techniques in SSL with the proposed uncertainty-aware loss function our approach outperforms or is on par with the state-of-the-art over standard SSL benchmarks while being computationally lightweight. Our results outperform the state-of-the-art results on complex datasets such as CIFAR-100 and Mini-ImageNet.",
+    "url": "http://arxiv.org/abs/2207.12131v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "In Defense of Pseudo-Labeling: An Uncertainty-Aware Pseudo-label Selection Framework for Semi-Supervised Learning",
+    "authors": [
+      "Mamshad Nayeem Rizve",
+      "Kevin Duarte",
+      "Yogesh S Rawat",
+      "Mubarak Shah"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "The recent research in semi-supervised learning (SSL) is mostly dominated by consistency regularization based methods which achieve strong performance. However, they heavily rely on domain-specific data augmentations, which are not easy to generate for all data modalities. Pseudo-labeling (PL) is a general SSL approach that does not have this constraint but performs relatively poorly in its original formulation. We argue that PL underperforms due to the erroneous high confidence predictions from poorly calibrated models; these predictions generate many incorrect pseudo-labels, leading to noisy training. We propose an uncertainty-aware pseudo-label selection (UPS) framework which improves pseudo labeling accuracy by drastically reducing the amount of noise encountered in the training process. Furthermore, UPS generalizes the pseudo-labeling process, allowing for the creation of negative pseudo-labels; these negative pseudo-labels can be used for multi-label classification as well as negative learning to improve the single-label classification. We achieve strong performance when compared to recent SSL methods on the CIFAR-10 and CIFAR-100 datasets. Also, we demonstrate the versatility of our method on the video dataset UCF-101 and the multi-label dataset Pascal VOC.",
+    "url": "http://arxiv.org/abs/2101.06329v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Interpolation-based Contrastive Learning for Few-Label Semi-Supervised Learning",
+    "authors": [
+      "Xihong Yang",
+      "Xiaochang Hu",
+      "Sihang Zhou",
+      "Xinwang Liu",
+      "En Zhu"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Semi-supervised learning (SSL) has long been proved to be an effective technique to construct powerful models with limited labels. In the existing literature, consistency regularization-based methods, which force the perturbed samples to have similar predictions with the original ones have attracted much attention for their promising accuracy. However, we observe that, the performance of such methods decreases drastically when the labels get extremely limited, e.g., 2 or 3 labels for each category. Our empirical study finds that the main problem lies with the drifting of semantic information in the procedure of data augmentation. The problem can be alleviated when enough supervision is provided. However, when little guidance is available, the incorrect regularization would mislead the network and undermine the performance of the algorithm. To tackle the problem, we (1) propose an interpolation-based method to construct more reliable positive sample pairs; (2) design a novel contrastive loss to guide the embedding of the learned network to change linearly between samples so as to improve the discriminative capability of the network by enlarging the margin decision boundaries. Since no destructive regularization is introduced, the performance of our proposed algorithm is largely improved. Specifically, the proposed algorithm outperforms the second best algorithm (Comatch) with 5.3% by achieving 88.73% classification accuracy when only two labels are available for each class on the CIFAR-10 dataset. Moreover, we further prove the generality of the proposed method by improving the performance of the existing state-of-the-art algorithms considerably with our proposed strategy.",
+    "url": "http://arxiv.org/abs/2202.11915v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

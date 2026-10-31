@@ -1,0 +1,384 @@
+[
+  {
+    "title": "Self-Supervised Generalisation with Meta Auxiliary Learning",
+    "authors": [
+      "Shikun Liu",
+      "Andrew J. Davison",
+      "Edward Johns"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Learning with auxiliary tasks can improve the ability of a primary task to generalise. However, this comes at the cost of manually labelling auxiliary data. We propose a new method which automatically learns appropriate labels for an auxiliary task, such that any supervised learning task can be improved without requiring access to any further data. The approach is to train two neural networks: a label-generation network to predict the auxiliary labels, and a multi-task network to train the primary task alongside the auxiliary task. The loss for the label-generation network incorporates the loss of the multi-task network, and so this interaction between the two networks can be seen as a form of meta learning with a double gradient. We show that our proposed method, Meta AuXiliary Learning (MAXL), outperforms single-task learning on 7 image datasets, without requiring any additional data. We also show that MAXL outperforms several other baselines for generating auxiliary labels, and is even competitive when compared with human-defined auxiliary labels. The self-supervised nature of our method leads to a promising new direction towards automated generalisation. Source code can be found at https://github.com/lorenmt/maxl.",
+    "url": "http://arxiv.org/abs/1901.08933v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Generating Auxiliary Tasks with Reinforcement Learning",
+    "authors": [
+      "Judah Goldfeder",
+      "Matthew So",
+      "Hod Lipson"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Auxiliary Learning (AL) is a form of multi-task learning in which a model trains on auxiliary tasks to boost performance on a primary objective. While AL has improved generalization across domains such as navigation, image classification, and NLP, it often depends on human-labeled auxiliary tasks that are costly to design and require domain expertise. Meta-learning approaches mitigate this by learning to generate auxiliary tasks, but typically rely on gradient based bi-level optimization, adding substantial computational and implementation overhead. We propose RL-AUX, a reinforcement-learning (RL) framework that dynamically creates auxiliary tasks by assigning auxiliary labels to each training example, rewarding the agent whenever its selections improve the performance on the primary task. We also explore learning per-example weights for the auxiliary loss. On CIFAR-100 grouped into 20 superclasses, our RL method outperforms human-labeled auxiliary tasks and matches the performance of a prominent bi-level optimization baseline. We present similarly strong results on other classification datasets. These results suggest RL is a viable path to generating effective auxiliary tasks.",
+    "url": "http://arxiv.org/abs/2510.22940v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Deep Auxiliary Learning via Bilevel Feature Optimization for Label-Efficient Medical Image Segmentation",
+    "authors": [
+      "Fuping Wu",
+      "Xi Jia",
+      "Le Zhang",
+      "Jiahua Li",
+      "Rima Mustafa",
+      "Thomas E. Nichols",
+      "Bartlomiej W. Papiez"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Auxiliary learning (AL), which can improve the performance of a primary task by leveraging related auxiliary tasks, is commonly regarded as a special case of multi-task learning. Existing AL approaches typically require manually annotated auxiliary labels, increasing annotation costs, particularly in medical imaging where expert labeling is expensive. In this work, we investigate whether segmentation performance can be improved using auxiliary tasks whose labels are automatically derived from existing segmentation annotations, requiring no additional manual labeling. To address this, we propose a novel auxiliary learning framework, formulated as a bilevel optimization problem. Our method enables effective knowledge transfer between tasks via a feature communication module, enhancing the primary segmentation task. We evaluate the method on three medical image segmentation benchmarks under limited-label settings. The results demonstrate consistent improvements over state-of-the-art methods, achieving superior label efficiency. The code is publicly available at https://github.com/FupingWu90/ALBO.",
+    "url": "http://arxiv.org/abs/2610.26954v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Aux-NAS: Exploiting Auxiliary Labels with Negligibly Extra Inference Cost",
+    "authors": [
+      "Yuan Gao",
+      "Weizhong Zhang",
+      "Wenhan Luo",
+      "Lin Ma",
+      "Jin-Gang Yu",
+      "Gui-Song Xia",
+      "Jiayi Ma"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "We aim at exploiting additional auxiliary labels from an independent (auxiliary) task to boost the primary task performance which we focus on, while preserving a single task inference cost of the primary task. While most existing auxiliary learning methods are optimization-based relying on loss weights/gradients manipulation, our method is architecture-based with a flexible asymmetric structure for the primary and auxiliary tasks, which produces different networks for training and inference. Specifically, starting from two single task networks/branches (each representing a task), we propose a novel method with evolving networks where only primary-to-auxiliary links exist as the cross-task connections after convergence. These connections can be removed during the primary task inference, resulting in a single-task inference cost. We achieve this by formulating a Neural Architecture Search (NAS) problem, where we initialize bi-directional connections in the search space and guide the NAS optimization converging to an architecture with only the single-side primary-to-auxiliary connections. Moreover, our method can be incorporated with optimization-based auxiliary learning approaches. Extensive experiments with six tasks on NYU v2, CityScapes, and Taskonomy datasets using VGG, ResNet, and ViT backbones validate the promising performance. The codes are available at https://github.com/ethanygao/Aux-NAS.",
+    "url": "http://arxiv.org/abs/2405.05695v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Test-time Adaptation for Real Image Denoising via Meta-transfer Learning",
+    "authors": [
+      "Agus Gunawan",
+      "Muhammad Adi Nugroho",
+      "Se Jin Park"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "In recent years, a ton of research has been conducted on real image denoising tasks. However, the efforts are more focused on improving real image denoising through creating a better network architecture. We explore a different direction where we propose to improve real image denoising performance through a better learning strategy that can enable test-time adaptation on the multi-task network. The learning strategy is two stages where the first stage pre-train the network using meta-auxiliary learning to get better meta-initialization. Meanwhile, we use meta-learning for fine-tuning (meta-transfer learning) the network as the second stage of our training to enable test-time adaptation on real noisy images. To exploit a better learning strategy, we also propose a network architecture with self-supervised masked reconstruction loss. Experiments on a real noisy dataset show the contribution of the proposed method and show that the proposed method can outperform other SOTA methods.",
+    "url": "http://arxiv.org/abs/2207.02066v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Meta Auxiliary Learning for Facial Action Unit Detection",
+    "authors": [
+      "Yong Li",
+      "Shiguang Shan"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Despite the success of deep neural networks on facial action unit (AU) detection, better performance depends on a large number of training images with accurate AU annotations. However, labeling AU is time-consuming, expensive, and error-prone. Considering AU detection and facial expression recognition (FER) are two highly correlated tasks, and facial expression (FE) is relatively easy to annotate, we consider learning AU detection and FER in a multi-task manner. However, the performance of the AU detection task cannot be always enhanced due to the negative transfer in the multi-task scenario. To alleviate this issue, we propose a Meta Auxiliary Learning method (MAL) that automatically selects highly related FE samples by learning adaptative weights for the training FE samples in a meta learning manner. The learned sample weights alleviate the negative transfer from two aspects: 1) balance the loss of each task automatically, and 2) suppress the weights of FE samples that have large uncertainties. Experimental results on several popular AU datasets demonstrate MAL consistently improves the AU detection performance compared with the state-of-the-art multi-task and auxiliary learning methods. MAL automatically estimates adaptive weights for the auxiliary FE samples according to their semantic relevance with the primary AU detection task.",
+    "url": "http://arxiv.org/abs/2105.06620v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "PointMAC: Meta-Learned Adaptation for Robust Test-Time Point Cloud Completion",
+    "authors": [
+      "Linlian Jiang",
+      "Rui Ma",
+      "Li Gu",
+      "Ziqiang Wang",
+      "Xinxin Zuo",
+      "Yang Wang"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Point cloud completion is essential for robust 3D perception in safety-critical applications such as robotics and augmented reality. However, existing models perform static inference and rely heavily on inductive biases learned during training, limiting their ability to adapt to novel structural patterns and sensor-induced distortions at test time. To address this limitation, we propose PointMAC, a meta-learned framework for robust test-time adaptation in point cloud completion. It enables sample-specific refinement without requiring additional supervision. Our method optimizes the completion model under two self-supervised auxiliary objectives that simulate structural and sensor-level incompleteness. A meta-auxiliary learning strategy based on Model-Agnostic Meta-Learning (MAML) ensures that adaptation driven by auxiliary objectives is consistently aligned with the primary completion task. During inference, we adapt the shared encoder on-the-fly by optimizing auxiliary losses, with the decoder kept fixed. To further stabilize adaptation, we introduce Adaptive $λ$-Calibration, a meta-learned mechanism for balancing gradients between primary and auxiliary objectives. Extensive experiments on synthetic, simulated, and real-world datasets demonstrate that PointMAC achieves state-of-the-art results by refining each sample individually to produce high-quality completions. To the best of our knowledge, this is the first work to apply meta-auxiliary test-time adaptation to point cloud completion.",
+    "url": "http://arxiv.org/abs/2510.10365v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "DocTTT: Test-Time Training for Handwritten Document Recognition Using Meta-Auxiliary Learning",
+    "authors": [
+      "Wenhao Gu",
+      "Li Gu",
+      "Ziqiang Wang",
+      "Ching Yee Suen",
+      "Yang Wang"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Despite recent significant advancements in Handwritten Document Recognition (HDR), the efficient and accurate recognition of text against complex backgrounds, diverse handwriting styles, and varying document layouts remains a practical challenge. Moreover, this issue is seldom addressed in academic research, particularly in scenarios with minimal annotated data available. In this paper, we introduce the DocTTT framework to address these challenges. The key innovation of our approach is that it uses test-time training to adapt the model to each specific input during testing. We propose a novel Meta-Auxiliary learning approach that combines Meta-learning and self-supervised Masked Autoencoder~(MAE). During testing, we adapt the visual representation parameters using a self-supervised MAE loss. During training, we learn the model parameters using a meta-learning framework, so that the model parameters are learned to adapt to a new input effectively. Experimental results show that our proposed method significantly outperforms existing state-of-the-art approaches on benchmark datasets.",
+    "url": "http://arxiv.org/abs/2501.12898v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-supervised Auxiliary Learning with Meta-paths for Heterogeneous Graphs",
+    "authors": [
+      "Dasol Hwang",
+      "Jinyoung Park",
+      "Sunyoung Kwon",
+      "Kyung-Min Kim",
+      "Jung-Woo Ha",
+      "Hyunwoo J. Kim"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Graph neural networks have shown superior performance in a wide range of applications providing a powerful representation of graph-structured data. Recent works show that the representation can be further improved by auxiliary tasks. However, the auxiliary tasks for heterogeneous graphs, which contain rich semantic information with various types of nodes and edges, have less explored in the literature. In this paper, to learn graph neural networks on heterogeneous graphs we propose a novel self-supervised auxiliary learning method using meta-paths, which are composite relations of multiple edge types. Our proposed method is learning to learn a primary task by predicting meta-paths as auxiliary tasks. This can be viewed as a type of meta-learning. The proposed method can identify an effective combination of auxiliary tasks and automatically balance them to improve the primary task. Our methods can be applied to any graph neural networks in a plug-in manner without manual labeling or additional data. The experiments demonstrate that the proposed method consistently improves the performance of link prediction and node classification on heterogeneous graphs.",
+    "url": "http://arxiv.org/abs/2007.08294v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Improving Large-Scale Recommender Systems with Auxiliary Learning",
+    "authors": [
+      "Mertcan Cokbas",
+      "Ziteng Liu",
+      "Zeyi Tao",
+      "Elder Veliz",
+      "Qin Huang",
+      "Ellie Wen",
+      "Huayu Li",
+      "Qiang Jin",
+      "Murat Duman",
+      "Benjamin Au",
+      "Guy Lebanon",
+      "Sagar Chordia",
+      "Chengkai Zhang"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Training large-scale recommendation models under a single global objective implicitly assumes homogeneity across user populations. However, real-world data are composites of heterogeneous cohorts with distinct conditional distributions. As models increase in scale and complexity and as more data is used for training, they become dominated by central distribution patterns, neglecting head and tail regions. This imbalance limits the model's learning ability and can result in inactive attention weights or dead neurons. In this paper, we reveal how the attention mechanism can play a key role in factorization machines for shared embedding selection, and propose to address this challenge by analyzing the substructures in the dataset and exposing those with strong distributional contrast through auxiliary learning. Unlike previous research, which heuristically applies weighted labels or multi-task heads to mitigate such biases, we leverage partially conflicting auxiliary labels to regularize the shared representation. This approach customizes the learning process of attention layers to preserve mutual information with minority cohorts while improving global performance. We evaluated proposed method on massive production datasets with billions of data points each for six SOTA models. Experiments show that the factorization machine is able to capture fine-grained user-ad interactions using the proposed method, achieving up to a 0.16% reduction in normalized entropy overall and delivering gains exceeding 0.30% on targeted minority cohorts.",
+    "url": "http://arxiv.org/abs/2510.02215v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "MELTR: Meta Loss Transformer for Learning to Fine-tune Video Foundation Models",
+    "authors": [
+      "Dohwan Ko",
+      "Joonmyung Choi",
+      "Hyeong Kyu Choi",
+      "Kyoung-Woon On",
+      "Byungseok Roh",
+      "Hyunwoo J. Kim"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Foundation models have shown outstanding performance and generalization capabilities across domains. Since most studies on foundation models mainly focus on the pretraining phase, a naive strategy to minimize a single task-specific loss is adopted for fine-tuning. However, such fine-tuning methods do not fully leverage other losses that are potentially beneficial for the target task. Therefore, we propose MEta Loss TRansformer (MELTR), a plug-in module that automatically and non-linearly combines various loss functions to aid learning the target task via auxiliary learning. We formulate the auxiliary learning as a bi-level optimization problem and present an efficient optimization algorithm based on Approximate Implicit Differentiation (AID). For evaluation, we apply our framework to various video foundation models (UniVL, Violet and All-in-one), and show significant performance gain on all four downstream tasks: text-to-video retrieval, video question answering, video captioning, and multi-modal sentiment analysis. Our qualitative analyses demonstrate that MELTR adequately `transforms' individual loss functions and `melts' them into an effective unified loss. Code is available at https://github.com/mlvlab/MELTR.",
+    "url": "http://arxiv.org/abs/2303.13009v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Auto-Lambda: Disentangling Dynamic Task Relationships",
+    "authors": [
+      "Shikun Liu",
+      "Stephen James",
+      "Andrew J. Davison",
+      "Edward Johns"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Understanding the structure of multiple related tasks allows for multi-task learning to improve the generalisation ability of one or all of them. However, it usually requires training each pairwise combination of tasks together in order to capture task relationships, at an extremely high computational cost. In this work, we learn task relationships via an automated weighting framework, named Auto-Lambda. Unlike previous methods where task relationships are assumed to be fixed, Auto-Lambda is a gradient-based meta learning framework which explores continuous, dynamic task relationships via task-specific weightings, and can optimise any choice of combination of tasks through the formulation of a meta-loss; where the validation loss automatically influences task weightings throughout training. We apply the proposed framework to both multi-task and auxiliary learning problems in computer vision and robotics, and show that Auto-Lambda achieves state-of-the-art performance, even when compared to optimisation strategies designed specifically for each problem and data domain. Finally, we observe that Auto-Lambda can discover interesting learning behaviors, leading to new insights in multi-task learning. Code is available at https://github.com/lorenmt/auto-lambda.",
+    "url": "http://arxiv.org/abs/2202.03091v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "MVS-TTA: Test-Time Adaptation for Multi-View Stereo via Meta-Auxiliary Learning",
+    "authors": [
+      "Hannuo Zhang",
+      "Zhixiang Chi",
+      "Yang Wang",
+      "Xinxin Zuo"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Recent learning-based multi-view stereo (MVS) methods are data-driven and have achieved remarkable progress due to large-scale training data and advanced architectures. However, their generalization remains sub-optimal due to fixed model parameters trained on limited training data distributions. In contrast, optimization-based methods enable scene-specific adaptation but lack scalability and require costly per-scene optimization. In this paper, we propose MVS-TTA, an efficient test-time adaptation (TTA) framework that enhances the adaptability of learning-based MVS methods by bridging these two paradigms. Specifically, MVS-TTA employs a self-supervised, cross-view consistency loss as an auxiliary task to guide inference-time adaptation. We introduce a meta-auxiliary learning strategy to train the model to benefit from auxiliary-task-based updates explicitly. Our framework is model-agnostic and can be applied to a wide range of MVS methods with minimal architectural changes. Extensive experiments on standard datasets (DTU, BlendedMVS) and a challenging cross-dataset generalization setting demonstrate that MVS-TTA consistently improves performance, even when applied to state-of-the-art MVS models. To our knowledge, this is the first attempt to integrate optimization-based test-time adaptation into learning-based MVS using meta-learning. The code will be available at https://github.com/mart87987-svg/MVS-TTA.",
+    "url": "http://arxiv.org/abs/2511.18120v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Meta Auxiliary Learning for Low-resource Spoken Language Understanding",
+    "authors": [
+      "Yingying Gao",
+      "Junlan Feng",
+      "Chao Deng",
+      "Shilei Zhang"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Spoken language understanding (SLU) treats automatic speech recognition (ASR) and natural language understanding (NLU) as a unified task and usually suffers from data scarcity. We exploit an ASR and NLU joint training method based on meta auxiliary learning to improve the performance of low-resource SLU task by only taking advantage of abundant manual transcriptions of speech data. One obvious advantage of such method is that it provides a flexible framework to implement a low-resource SLU training task without requiring access to any further semantic annotations. In particular, a NLU model is taken as label generation network to predict intent and slot tags from texts; a multi-task network trains ASR task and SLU task synchronously from speech; and the predictions of label generation network are delivered to the multi-task network as semantic targets. The efficiency of the proposed algorithm is demonstrated with experiments on the public CATSLU dataset, which produces more suitable ASR hypotheses for the downstream NLU task.",
+    "url": "http://arxiv.org/abs/2206.12774v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Point-TTA: Test-Time Adaptation for Point Cloud Registration Using Multitask Meta-Auxiliary Learning",
+    "authors": [
+      "Ahmed Hatem",
+      "Yiming Qian",
+      "Yang Wang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "We present Point-TTA, a novel test-time adaptation framework for point cloud registration (PCR) that improves the generalization and the performance of registration models. While learning-based approaches have achieved impressive progress, generalization to unknown testing environments remains a major challenge due to the variations in 3D scans. Existing methods typically train a generic model and the same trained model is applied on each instance during testing. This could be sub-optimal since it is difficult for the same model to handle all the variations during testing. In this paper, we propose a test-time adaptation approach for PCR. Our model can adapt to unseen distributions at test-time without requiring any prior knowledge of the test data. Concretely, we design three self-supervised auxiliary tasks that are optimized jointly with the primary PCR task. Given a test instance, we adapt our model using these auxiliary tasks and the updated model is used to perform the inference. During training, our model is trained using a meta-auxiliary learning approach, such that the adapted model via auxiliary tasks improves the accuracy of the primary task. Experimental results demonstrate the effectiveness of our approach in improving generalization of point cloud registration and outperforming other state-of-the-art approaches.",
+    "url": "http://arxiv.org/abs/2308.16481v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-supervised Auxiliary Learning for Graph Neural Networks via Meta-Learning",
+    "authors": [
+      "Dasol Hwang",
+      "Jinyoung Park",
+      "Sunyoung Kwon",
+      "Kyung-Min Kim",
+      "Jung-Woo Ha",
+      "Hyunwoo J. Kim"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "In recent years, graph neural networks (GNNs) have been widely adopted in the representation learning of graph-structured data and provided state-of-the-art performance in various applications such as link prediction, node classification, and recommendation. Motivated by recent advances of self-supervision for representation learning in natural language processing and computer vision, self-supervised learning has been recently studied to leverage unlabeled graph-structured data. However, employing self-supervision tasks as auxiliary tasks to assist a primary task has been less explored in the literature on graphs. In this paper, we propose a novel self-supervised auxiliary learning framework to effectively learn graph neural networks. Moreover, this work is the first study showing that a meta-path prediction is beneficial as a self-supervised auxiliary task for heterogeneous graphs. Our method is learning to learn a primary task with various auxiliary tasks to improve generalization performance. The proposed method identifies an effective combination of auxiliary tasks and automatically balances them to improve the primary task. Our methods can be applied to any graph neural network in a plug-in manner without manual labeling or additional data. Also, it can be extended to any other auxiliary tasks. Our experiments demonstrate that the proposed method consistently improves the performance of node classification and link prediction.",
+    "url": "http://arxiv.org/abs/2103.00771v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Predictive and Contrastive: Dual-Auxiliary Learning for Recommendation",
+    "authors": [
+      "Yinghui Tao",
+      "Min Gao",
+      "Junliang Yu",
+      "Zongwei Wang",
+      "Qingyu Xiong",
+      "Xu Wang"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Self-supervised learning (SSL) recently has achieved outstanding success on recommendation. By setting up an auxiliary task (either predictive or contrastive), SSL can discover supervisory signals from the raw data without human annotation, which greatly mitigates the problem of sparse user-item interactions. However, most SSL-based recommendation models rely on general-purpose auxiliary tasks, e.g., maximizing correspondence between node representations learned from the original and perturbed interaction graphs, which are explicitly irrelevant to the recommendation task. Accordingly, the rich semantics reflected by social relationships and item categories, which lie in the recommendation data-based heterogeneous graphs, are not fully exploited. To explore recommendation-specific auxiliary tasks, we first quantitatively analyze the heterogeneous interaction data and find a strong positive correlation between the interactions and the number of user-item paths induced by meta-paths. Based on the finding, we design two auxiliary tasks that are tightly coupled with the target task (one is predictive and the other one is contrastive) towards connecting recommendation with the self-supervision signals hiding in the positive correlation. Finally, a model-agnostic DUal-Auxiliary Learning (DUAL) framework which unifies the SSL and recommendation tasks is developed. The extensive experiments conducted on three real-world datasets demonstrate that DUAL can significantly improve recommendation, reaching the state-of-the-art performance.",
+    "url": "http://arxiv.org/abs/2203.03982v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Meta-Auxiliary Learning for Adaptive Human Pose Prediction",
+    "authors": [
+      "Qiongjie Cui",
+      "Huaijiang Sun",
+      "Jianfeng Lu",
+      "Bin Li",
+      "Weiqing Li"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Predicting high-fidelity future human poses, from a historically observed sequence, is decisive for intelligent robots to interact with humans. Deep end-to-end learning approaches, which typically train a generic pre-trained model on external datasets and then directly apply it to all test samples, emerge as the dominant solution to solve this issue. Despite encouraging progress, they remain non-optimal, as the unique properties (e.g., motion style, rhythm) of a specific sequence cannot be adapted. More generally, at test-time, once encountering unseen motion categories (out-of-distribution), the predicted poses tend to be unreliable. Motivated by this observation, we propose a novel test-time adaptation framework that leverages two self-supervised auxiliary tasks to help the primary forecasting network adapt to the test sequence. In the testing phase, our model can adjust the model parameters by several gradient updates to improve the generation quality. However, due to catastrophic forgetting, both auxiliary tasks typically tend to the low ability to automatically present the desired positive incentives for the final prediction performance. For this reason, we also propose a meta-auxiliary learning scheme for better adaptation. In terms of general setup, our approach obtains higher accuracy, and under two new experimental designs for out-of-distribution data (unseen subjects and categories), achieves significant improvements.",
+    "url": "http://arxiv.org/abs/2304.06411v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "T3MAL: Test-Time Fast Adaptation for Robust Multi-Scale Information Diffusion Prediction",
+    "authors": [
+      "Wenting Zhu",
+      "Chaozhuo Li",
+      "Qingpo Yang",
+      "Xi Zhang",
+      "Philip S. Yu"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Information diffusion prediction (IDP) is a pivotal task for understanding how information propagates among users. Most existing methods commonly adhere to a conventional training-test paradigm, where models are pretrained on training data and then directly applied to test samples. However, the success of this paradigm hinges on the assumption that the data are independently and identically distributed, which often fails in practical social networks due to the inherent uncertainty and variability of user behavior. In the paper, we address the novel challenge of distribution shifts within IDP tasks and propose a robust test-time training (TTT)-based framework for multi-scale diffusion prediction, named T3MAL. The core idea is to flexibly adapt a trained model to accommodate the distribution of each test instance before making predictions via a self-supervised auxiliary task. Specifically, T3MAL introduces a BYOL-inspired self-supervised auxiliary network that shares a common feature extraction backbone with the primary diffusion prediction network to guide instance-specific adaptation during testing. Furthermore, T3MAL enables fast and accurate test-time adaptation by incorporating a novel meta-auxiliary learning scheme and a lightweight adaptor, which together provide better weight initialization for TTT and mitigate catastrophic forgetting. Extensive experiments on three public datasets demonstrate that T3MAL outperforms various state-of-the-art methods.",
+    "url": "http://arxiv.org/abs/2507.12880v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "RL-I2IT: Image-to-Image Translation with Deep Reinforcement Learning",
+    "authors": [
+      "Jing Hu",
+      "Ziwei Luo",
+      "Chengming Feng",
+      "Shu Hu",
+      "Bin Zhu",
+      "Xi Wu",
+      "Xin Li",
+      "Hongtu Zhu",
+      "Siwei Lyu",
+      "Xin Wang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Most existing Image-to-Image Translation (I2IT) methods generate images in a single run of a deep learning (DL) model. However, designing such a single-step model is always challenging, requiring a huge number of parameters and easily falling into bad global minimums and overfitting. In this work, we reformulate I2IT as a step-wise decision-making problem via deep reinforcement learning (DRL) and propose a novel framework that performs RL-based I2IT (RL-I2IT). The key feature in the RL-I2IT framework is to decompose a monolithic learning process into small steps with a lightweight model to progressively transform a source image successively to a target image. Considering that it is challenging to handle high dimensional continuous state and action spaces in the conventional RL framework, we introduce meta policy with a new concept Plan to the standard Actor-Critic model, which is of a lower dimension than the original image and can facilitate the actor to generate a tractable high dimensional action. In the RL-I2IT framework, we also employ a task-specific auxiliary learning strategy to stabilize the training process and improve the performance of the corresponding task. Experiments on several I2IT tasks demonstrate the effectiveness and robustness of the proposed method when facing high-dimensional continuous action space problems. Our implementation of the RL-I2IT framework is available at https://github.com/Algolzw/SPAC-Deformable-Registration.",
+    "url": "http://arxiv.org/abs/2309.13672v9",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Learning to Recover Spectral Reflectance from RGB Images",
+    "authors": [
+      "Dong Huo",
+      "Jian Wang",
+      "Yiming Qian",
+      "Yee-Hong Yang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "This paper tackles spectral reflectance recovery (SRR) from RGB images. Since capturing ground-truth spectral reflectance and camera spectral sensitivity are challenging and costly, most existing approaches are trained on synthetic images and utilize the same parameters for all unseen testing images, which are suboptimal especially when the trained models are tested on real images because they never exploit the internal information of the testing images. To address this issue, we adopt a self-supervised meta-auxiliary learning (MAXL) strategy that fine-tunes the well-trained network parameters with each testing image to combine external with internal information. To the best of our knowledge, this is the first work that successfully adapts the MAXL strategy to this problem. Instead of relying on naive end-to-end training, we also propose a novel architecture that integrates the physical relationship between the spectral reflectance and the corresponding RGB images into the network based on our mathematical analysis. Besides, since the spectral reflectance of a scene is independent to its illumination while the corresponding RGB images are not, we recover the spectral reflectance of a scene from its RGB images captured under multiple illuminations to further reduce the unknown. Qualitative and quantitative evaluations demonstrate the effectiveness of our proposed network and of the MAXL. Our code and data are available at https://github.com/Dong-Huo/SRR-MAXL.",
+    "url": "http://arxiv.org/abs/2304.02162v2",
+    "doi": "10.1109/TIP.2024.3393390",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Meta-Auxiliary Learning for Micro-Expression Recognition",
+    "authors": [
+      "Jingyao Wang",
+      "Yunhan Tian",
+      "Yuxuan Yang",
+      "Xiaoxin Chen",
+      "Changwen Zheng",
+      "Wenwen Qiang"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Micro-expressions (MEs) are involuntary movements revealing people's hidden feelings, which has attracted numerous interests for its objectivity in emotion detection. However, despite its wide applications in various scenarios, micro-expression recognition (MER) remains a challenging problem in real life due to three reasons, including (i) data-level: lack of data and imbalanced classes, (ii) feature-level: subtle, rapid changing, and complex features of MEs, and (iii) decision-making-level: impact of individual differences. To address these issues, we propose a dual-branch meta-auxiliary learning method, called LightmanNet, for fast and robust micro-expression recognition. Specifically, LightmanNet learns general MER knowledge from limited data through a dual-branch bi-level optimization process: (i) In the first level, it obtains task-specific MER knowledge by learning in two branches, where the first branch is for learning MER features via primary MER tasks, while the other branch is for guiding the model obtain discriminative features via auxiliary tasks, i.e., image alignment between micro-expressions and macro-expressions since their resemblance in both spatial and temporal behavioral patterns. The two branches of learning jointly constrain the model of learning meaningful task-specific MER knowledge while avoiding learning noise or superficial connections between MEs and emotions that may damage its generalization ability. (ii) In the second level, LightmanNet further refines the learned task-specific knowledge, improving model generalization and efficiency. Extensive experiments on various benchmark datasets demonstrate the superior robustness and efficiency of LightmanNet.",
+    "url": "http://arxiv.org/abs/2404.12024v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Student Helping Teacher: Teacher Evolution via Self-Knowledge Distillation",
+    "authors": [
+      "Zheng Li",
+      "Xiang Li",
+      "Lingfeng Yang",
+      "Jian Yang",
+      "Zhigeng Pan"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Knowledge distillation usually transfers the knowledge from a pre-trained cumbersome teacher network to a compact student network, which follows the classical teacher-teaching-student paradigm. Based on this paradigm, previous methods mostly focus on how to efficiently train a better student network for deployment. Different from the existing practices, in this paper, we propose a novel student-helping-teacher formula, Teacher Evolution via Self-Knowledge Distillation (TESKD), where the target teacher (for deployment) is learned with the help of multiple hierarchical students by sharing the structural backbone. The diverse feedback from multiple students allows the teacher to improve itself through the shared feature representations. The effectiveness of our proposed framework is demonstrated by extensive experiments with various network settings on two standard benchmarks including CIFAR-100 and ImageNet. Notably, when trained together with our proposed method, ResNet-18 achieves 79.15% and 71.14% accuracy on CIFAR-100 and ImageNet, outperforming the baseline results by 4.74% and 1.43%, respectively. The code is available at: https://github.com/zhengli427/TESKD.",
+    "url": "http://arxiv.org/abs/2110.00329v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Tackling Data Heterogeneity in Federated Learning through Knowledge Distillation with Inequitable Aggregation",
+    "authors": [
+      "Xing Ma"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Federated learning aims to train a global model in a distributed environment that is close to the performance of centralized training. However, issues such as client label skew, data quantity skew, and other heterogeneity problems severely degrade the model's performance. Most existing methods overlook the scenario where only a small portion of clients participate in training within a large-scale client setting, whereas our experiments show that this scenario presents a more challenging federated learning task. Therefore, we propose a Knowledge Distillation with teacher-student Inequitable Aggregation (KDIA) strategy tailored to address the federated learning setting mentioned above, which can effectively leverage knowledge from all clients. In KDIA, the student model is the average aggregation of the participating clients, while the teacher model is formed by a weighted aggregation of all clients based on three frequencies: participation intervals, participation counts, and data volume proportions. During local training, self-knowledge distillation is performed. Additionally, we utilize a generator trained on the server to generate approximately independent and identically distributed (IID) data features locally for auxiliary training. We conduct extensive experiments on the CIFAR-10/100/CINIC-10 datasets and various heterogeneous settings to evaluate KDIA. The results show that KDIA can achieve better accuracy with fewer rounds of training, and the improvement is more significant under severe heterogeneity.",
+    "url": "http://arxiv.org/abs/2506.20431v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "From Knowledge Distillation to Self-Knowledge Distillation: A Unified Approach with Normalized Loss and Customized Soft Labels",
+    "authors": [
+      "Zhendong Yang",
+      "Ailing Zeng",
+      "Zhe Li",
+      "Tianke Zhang",
+      "Chun Yuan",
+      "Yu Li"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Knowledge Distillation (KD) uses the teacher's prediction logits as soft labels to guide the student, while self-KD does not need a real teacher to require the soft labels. This work unifies the formulations of the two tasks by decomposing and reorganizing the generic KD loss into a Normalized KD (NKD) loss and customized soft labels for both target class (image's category) and non-target classes named Universal Self-Knowledge Distillation (USKD). We decompose the KD loss and find the non-target loss from it forces the student's non-target logits to match the teacher's, but the sum of the two non-target logits is different, preventing them from being identical. NKD normalizes the non-target logits to equalize their sum. It can be generally used for KD and self-KD to better use the soft labels for distillation loss. USKD generates customized soft labels for both target and non-target classes without a teacher. It smooths the target logit of the student as the soft target label and uses the rank of the intermediate feature to generate the soft non-target labels with Zipf's law. For KD with teachers, our NKD achieves state-of-the-art performance on CIFAR-100 and ImageNet datasets, boosting the ImageNet Top-1 accuracy of ResNet18 from 69.90% to 71.96% with a ResNet-34 teacher. For self-KD without teachers, USKD is the first self-KD method that can be effectively applied to both CNN and ViT models with negligible additional time and memory cost, resulting in new state-of-the-art results, such as 1.17% and 0.55% accuracy gains on ImageNet for MobileNet and DeiT-Tiny, respectively. Our codes are available at https://github.com/yzd-v/cls_KD.",
+    "url": "http://arxiv.org/abs/2303.13005v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

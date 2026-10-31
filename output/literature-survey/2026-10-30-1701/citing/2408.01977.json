@@ -1,0 +1,106 @@
+{
+ "seed": "2408.01977",
+ "seed_title": "Label Augmentation for Neural Networks Robustness",
+ "retrieved_utc": "2026-10-30T21:09:02+00:00",
+ "checked_utc": "2026-10-30T21:11:27+00:00",
+ "source_used": "semantic_scholar",
+ "attempts": [
+  {
+   "source": "semantic_scholar",
+   "status": "ok",
+   "n": 2
+  }
+ ],
+ "completeness_check": {
+  "s2_record": {
+   "paperId": "af1188140b278b446bd2f6740395ad8960813d5e",
+   "externalIds": {
+    "DBLP": "journals/corr/abs-2408-01977",
+    "ArXiv": "2408.01977",
+    "DOI": "10.48550/arXiv.2408.01977",
+    "CorpusId": 271710093
+   },
+   "title": "Label Augmentation for Neural Networks Robustness",
+   "venue": "CoLLAs",
+   "year": 2024,
+   "citationCount": 2
+  },
+  "openalex_arxiv_doi_record": {
+   "id": "https://openalex.org/W4406489811",
+   "display_name": "Label Augmentation for Neural Networks Robustness",
+   "publication_year": 2024,
+   "doi": "https://doi.org/10.48550/arxiv.2408.01977",
+   "cited_by_count": 0
+  },
+  "openalex_exact_title_works": [
+   {
+    "id": "https://openalex.org/W4406489811",
+    "display_name": "Label Augmentation for Neural Networks Robustness",
+    "publication_year": 2024,
+    "doi": "https://doi.org/10.48550/arxiv.2408.01977",
+    "cited_by_count": 0
+   }
+  ],
+  "titles_checked": [
+   "Label Augmentation for Neural Networks Robustness"
+  ]
+ },
+ "n_citing": 2,
+ "citing": [
+  {
+   "title": "Learnable edge detectors can make deep convolutional neural networks more robust",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1371/journal.pone.0330299",
+   "venue": "PLoS ONE",
+   "citation_count": 3,
+   "s2_paper_id": "c35bc093238f406f89a6db90d815b98ad8ad62c0",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Narrowing Class-Wise Robustness Gaps in Adversarial Training",
+   "year": 2025,
+   "arxiv_id": "2503.16179",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 2,
+   "s2_paper_id": "ede4cb8ce0e715e967ffb8d95f6809831063847c",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  }
+ ],
+ "raw": {
+  "semantic_scholar": [
+   {
+    "paperId": "c35bc093238f406f89a6db90d815b98ad8ad62c0",
+    "externalIds": {
+     "PubMedCentral": "12425196",
+     "DOI": "10.1371/journal.pone.0330299",
+     "CorpusId": 281259298,
+     "PubMed": "40934232"
+    },
+    "title": "Learnable edge detectors can make deep convolutional neural networks more robust",
+    "venue": "PLoS ONE",
+    "year": 2025,
+    "citationCount": 3
+   },
+   {
+    "paperId": "ede4cb8ce0e715e967ffb8d95f6809831063847c",
+    "externalIds": {
+     "ArXiv": "2503.16179",
+     "DBLP": "journals/corr/abs-2503-16179",
+     "DOI": "10.48550/arXiv.2503.16179",
+     "CorpusId": 277150875
+    },
+    "title": "Narrowing Class-Wise Robustness Gaps in Adversarial Training",
+    "venue": "arXiv.org",
+    "year": 2025,
+    "citationCount": 2
+   }
+  ],
+  "openalex": null
+ }
+}

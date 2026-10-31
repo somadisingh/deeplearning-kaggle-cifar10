@@ -1,0 +1,221 @@
+[
+  {
+    "title": "SelfMatch: Combining Contrastive Self-Supervision and Consistency for Semi-Supervised Learning",
+    "authors": [
+      "Byoungjip Kim",
+      "Jinho Choo",
+      "Yeong-Dae Kwon",
+      "Seongho Joe",
+      "Seungjai Min",
+      "Youngjune Gwon"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "This paper introduces SelfMatch, a semi-supervised learning method that combines the power of contrastive self-supervised learning and consistency regularization. SelfMatch consists of two stages: (1) self-supervised pre-training based on contrastive learning and (2) semi-supervised fine-tuning based on augmentation consistency regularization. We empirically demonstrate that SelfMatch achieves the state-of-the-art results on standard benchmark datasets such as CIFAR-10 and SVHN. For example, for CIFAR-10 with 40 labeled examples, SelfMatch achieves 93.19% accuracy that outperforms the strong previous methods such as MixMatch (52.46%), UDA (70.95%), ReMixMatch (80.9%), and FixMatch (86.19%). We note that SelfMatch can close the gap between supervised learning (95.87%) and semi-supervised learning (93.19%) by using only a few labels for each class.",
+    "url": "http://arxiv.org/abs/2101.06480v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Color-$S^{4}L$: Self-supervised Semi-supervised Learning with Image Colorization",
+    "authors": [
+      "Hanxiao Chen"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "This work addresses the problem of semi-supervised image classification tasks with the integration of several effective self-supervised pretext tasks. Different from widely-used consistency regularization within semi-supervised learning, we explored a novel self-supervised semi-supervised learning framework (Color-$S^{4}L$) especially with image colorization proxy task and deeply evaluate performances of various network architectures in such special pipeline. Also, we demonstrated its effectiveness and optimal performance on CIFAR-10, SVHN and CIFAR-100 datasets in comparison to previous supervised and semi-supervised optimal methods.",
+    "url": "http://arxiv.org/abs/2401.03753v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "AASAE: Augmentation-Augmented Stochastic Autoencoders",
+    "authors": [
+      "William Falcon",
+      "Ananya Harsh Jha",
+      "Teddy Koker",
+      "Kyunghyun Cho"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Recent methods for self-supervised learning can be grouped into two paradigms: contrastive and non-contrastive approaches. Their success can largely be attributed to data augmentation pipelines which generate multiple views of a single input that preserve the underlying semantics. In this work, we introduce augmentation-augmented stochastic autoencoders (AASAE), yet another alternative to self-supervised learning, based on autoencoding. We derive AASAE starting from the conventional variational autoencoder (VAE), by replacing the KL divergence regularization, which is agnostic to the input domain, with data augmentations that explicitly encourage the internal representations to encode domain-specific invariances and equivariances. We empirically evaluate the proposed AASAE on image classification, similar to how recent contrastive and non-contrastive learning algorithms have been evaluated. Our experiments confirm the effectiveness of data augmentation as a replacement for KL divergence regularization. The AASAE outperforms the VAE by 30% on CIFAR-10, 40% on STL-10 and 45% on Imagenet. On CIFAR-10 and STL-10, the results for AASAE are largely comparable to the state-of-the-art algorithms for self-supervised learning.",
+    "url": "http://arxiv.org/abs/2107.12329v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Exploring Self-Supervised Regularization for Supervised and Semi-Supervised Learning",
+    "authors": [
+      "Phi Vu Tran"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Recent advances in semi-supervised learning have shown tremendous potential in overcoming a major barrier to the success of modern machine learning algorithms: access to vast amounts of human-labeled training data. Previous algorithms based on consistency regularization can harness the abundance of unlabeled data to produce impressive results on a number of semi-supervised benchmarks, approaching the performance of strong supervised baselines using only a fraction of the available labeled data. In this work, we challenge the long-standing success of consistency regularization by introducing self-supervised regularization as the basis for combining semantic feature representations from unlabeled data. We perform extensive comparative experiments to demonstrate the effectiveness of self-supervised regularization for supervised and semi-supervised image classification on SVHN, CIFAR-10, and CIFAR-100 benchmark datasets. We present two main results: (1) models augmented with self-supervised regularization significantly improve upon traditional supervised classifiers without the need for unlabeled data; (2) together with unlabeled data, our models yield semi-supervised performance competitive with, and in many cases exceeding, prior state-of-the-art consistency baselines. Lastly, our models have the practical utility of being efficiently trained end-to-end and require no additional hyper-parameters to tune for optimal performance beyond the standard set for training neural networks. Reference code and data are available at https://github.com/vuptran/sesemi",
+    "url": "http://arxiv.org/abs/1906.10343v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-Supervised Learning by Curvature Alignment",
+    "authors": [
+      "Benyamin Ghojogh",
+      "M. Hadi Sepanj",
+      "Paul Fieguth"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Self-supervised learning (SSL) has recently advanced through non-contrastive methods that couple an invariance term with variance, covariance, or redundancy-reduction penalties. While such objectives shape first- and second-order statistics of the representation, they largely ignore the local geometry of the underlying data manifold. In this paper, we introduce CurvSSL, a curvature-regularized self-supervised learning framework, and its RKHS extension, kernel CurvSSL. Our approach retains a standard two-view encoder-projector architecture with a Barlow Twins-style redundancy-reduction loss on projected features, but augments it with a curvature-based regularizer. Each embedding is treated as a vertex whose $k$ nearest neighbors define a discrete curvature score via cosine interactions on the unit hypersphere; in the kernel variant, curvature is computed from a normalized local Gram matrix in an RKHS. These scores are aligned and decorrelated across augmentations by a Barlow-style loss on a curvature-derived matrix, encouraging both view invariance and consistency of local manifold bending. Experiments on MNIST and CIFAR-10 datasets with a ResNet-18 backbone show that curvature-regularized SSL yields competitive or improved linear evaluation performance compared to Barlow Twins and VICReg. Our results indicate that explicitly shaping local geometry is a simple and effective complement to purely statistical SSL regularizers.",
+    "url": "http://arxiv.org/abs/2511.17426v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CoMatch: Semi-supervised Learning with Contrastive Graph Regularization",
+    "authors": [
+      "Junnan Li",
+      "Caiming Xiong",
+      "Steven Hoi"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Semi-supervised learning has been an effective paradigm for leveraging unlabeled data to reduce the reliance on labeled data. We propose CoMatch, a new semi-supervised learning method that unifies dominant approaches and addresses their limitations. CoMatch jointly learns two representations of the training data, their class probabilities and low-dimensional embeddings. The two representations interact with each other to jointly evolve. The embeddings impose a smoothness constraint on the class probabilities to improve the pseudo-labels, whereas the pseudo-labels regularize the structure of the embeddings through graph-based contrastive learning. CoMatch achieves state-of-the-art performance on multiple datasets. It achieves substantial accuracy improvements on the label-scarce CIFAR-10 and STL-10. On ImageNet with 1% labels, CoMatch achieves a top-1 accuracy of 66.0%, outperforming FixMatch by 12.6%. Furthermore, CoMatch achieves better representation learning performance on downstream tasks, outperforming both supervised learning and self-supervised learning. Code and pre-trained models are available at https://github.com/salesforce/CoMatch.",
+    "url": "http://arxiv.org/abs/2011.11183v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Charting the Right Manifold: Manifold Mixup for Few-shot Learning",
+    "authors": [
+      "Puneet Mangla",
+      "Mayank Singh",
+      "Abhishek Sinha",
+      "Nupur Kumari",
+      "Vineeth N Balasubramanian",
+      "Balaji Krishnamurthy"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Few-shot learning algorithms aim to learn model parameters capable of adapting to unseen classes with the help of only a few labeled examples. A recent regularization technique - Manifold Mixup focuses on learning a general-purpose representation, robust to small changes in the data distribution. Since the goal of few-shot learning is closely linked to robust representation learning, we study Manifold Mixup in this problem setting. Self-supervised learning is another technique that learns semantically meaningful features, using only the inherent structure of the data. This work investigates the role of learning relevant feature manifold for few-shot tasks using self-supervision and regularization techniques. We observe that regularizing the feature manifold, enriched via self-supervised techniques, with Manifold Mixup significantly improves few-shot learning performance. We show that our proposed method S2M2 beats the current state-of-the-art accuracy on standard few-shot learning datasets like CIFAR-FS, CUB, mini-ImageNet and tiered-ImageNet by 3-8 %. Through extensive experimentation, we show that the features learned using our approach generalize to complex few-shot evaluation tasks, cross-domain scenarios and are robust against slight changes to data distribution.",
+    "url": "http://arxiv.org/abs/1907.12087v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Consistency Regularization Can Improve Robustness to Label Noise",
+    "authors": [
+      "Erik Englesson",
+      "Hossein Azizpour"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Consistency regularization is a commonly-used technique for semi-supervised and self-supervised learning. It is an auxiliary objective function that encourages the prediction of the network to be similar in the vicinity of the observed training samples. Hendrycks et al. (2020) have recently shown such regularization naturally brings test-time robustness to corrupted data and helps with calibration. This paper empirically studies the relevance of consistency regularization for training-time robustness to noisy labels. First, we make two interesting and useful observations regarding the consistency of networks trained with the standard cross entropy loss on noisy datasets which are: (i) networks trained on noisy data have lower consistency than those trained on clean data, and(ii) the consistency reduces more significantly around noisy-labelled training data points than correctly-labelled ones. Then, we show that a simple loss function that encourages consistency improves the robustness of the models to label noise on both synthetic (CIFAR-10, CIFAR-100) and real-world (WebVision) noise as well as different noise rates and types and achieves state-of-the-art results.",
+    "url": "http://arxiv.org/abs/2110.01242v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Lightweight Library for Energy-Based Joint-Embedding Predictive Architectures",
+    "authors": [
+      "Basile Terver",
+      "Randall Balestriero",
+      "Megi Dervishi",
+      "David Fan",
+      "Quentin Garrido",
+      "Tushar Nagarajan",
+      "Koustuv Sinha",
+      "Wancong Zhang",
+      "Mike Rabbat",
+      "Yann LeCun",
+      "Amir Bar"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "We present EB-JEPA, an open-source library for learning representations and world models using Joint-Embedding Predictive Architectures (JEPAs). JEPAs learn to predict in representation space rather than pixel space, avoiding the pitfalls of generative modeling while capturing semantically meaningful features suitable for downstream tasks. Our library provides modular, self-contained implementations that illustrate how representation learning techniques developed for image-level self-supervised learning can transfer to video, where temporal dynamics add complexity, and ultimately to action-conditioned world models, where the model must additionally learn to predict the effects of control inputs. Each example is designed for single-GPU training within a few hours, making energy-based self-supervised learning accessible for research and education. We provide ablations of JEA components on CIFAR-10. Probing these representations yields 91% accuracy, indicating that the model learns useful features. Extending to video, we include a multi-step prediction example on Moving MNIST that demonstrates how the same principles scale to temporal modeling. Finally, we show how these representations can drive action-conditioned world models, achieving a 97% planning success rate on the Two Rooms navigation task. Comprehensive ablations reveal the critical importance of each regularization component for preventing representation collapse. Code is available at https://github.com/facebookresearch/eb_jepa.",
+    "url": "http://arxiv.org/abs/2602.03604v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CLIMB: Centroid-Based Hierarchical Memory for Online Continual Self-Supervised Learning",
+    "authors": [
+      "Julien Lefebvre",
+      "Stefan Duffner",
+      "Mathieu Lefort"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Online Continual Self-Supervised Learning (OCSSL) aims to learn representations from a continuous stream of unlabeled data, without knowledge of task boundaries and under memory constraints. Existing methods rely either on replay buffers that exploit latent space structure, or on regularization alone. We present CLIMB (Continual Learning with Intelligent Memory Bank), which combines both simultaneously. Our method introduces a hierarchical centroid-based memory, bounded in total number of stored images, combined with knowledge distillation on replayed examples to limit representation drift. The memory groups similar images into centroids, providing hard-to-discriminate examples for contrastive learning while covering the diversity of observed distributions. Experiments on Split CIFAR-100 and Split ImageNet-100, on standard benchmarks from the state-of-the-art as well as a new protocol with irregular task distributions show that CLIMB outperforms state-of-the-art OCSSL methods.",
+    "url": "http://arxiv.org/abs/2606.31275v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Guarding Barlow Twins Against Overfitting with Mixed Samples",
+    "authors": [
+      "Wele Gedara Chaminda Bandara",
+      "Celso M. De Melo",
+      "Vishal M. Patel"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Self-supervised Learning (SSL) aims to learn transferable feature representations for downstream applications without relying on labeled data. The Barlow Twins algorithm, renowned for its widespread adoption and straightforward implementation compared to its counterparts like contrastive learning methods, minimizes feature redundancy while maximizing invariance to common corruptions. Optimizing for the above objective forces the network to learn useful representations, while avoiding noisy or constant features, resulting in improved downstream task performance with limited adaptation. Despite Barlow Twins' proven effectiveness in pre-training, the underlying SSL objective can inadvertently cause feature overfitting due to the lack of strong interaction between the samples unlike the contrastive learning approaches. From our experiments, we observe that optimizing for the Barlow Twins objective doesn't necessarily guarantee sustained improvements in representation quality beyond a certain pre-training phase, and can potentially degrade downstream performance on some datasets. To address this challenge, we introduce Mixed Barlow Twins, which aims to improve sample interaction during Barlow Twins training via linearly interpolated samples. This results in an additional regularization term to the original Barlow Twins objective, assuming linear interpolation in the input space translates to linearly interpolated features in the feature space. Pre-training with this regularization effectively mitigates feature overfitting and further enhances the downstream performance on CIFAR-10, CIFAR-100, TinyImageNet, STL-10, and ImageNet datasets. The code and checkpoints are available at: https://github.com/wgcban/mix-bt.git",
+    "url": "http://arxiv.org/abs/2312.02151v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "PEIRA: Learning Predictive Encoders through Inter-View Regressor Alignment",
+    "authors": [
+      "Michael Arbel",
+      "Basile Terver",
+      "Jean Ponce"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Non-contrastive self-supervised learning (SSL) is an effective framework for predictive representation learning, but popular (and in practice effective) methods such as SimSiam, BYOL, I-JEPA or DINO, which rely on a form of self-distillation to train a teacher-student network, remain poorly understood as they typically do not minimize a well-defined objective. We analyze the dynamics of a variant of the Joint Embedding Predictive Architecture (JEPA) using a regularized linear regressor to predict the learned representations of two views of the data from one another, and fully characterize its stability: non-collapsed stable equilibria align with leading nonlinear canonical correlation subspaces, while collapsed equilibria may also be stable attractors. Motivated by this result, we introduce PEIRA, a non-contrastive SSL method with an explicit objective defined through the trace of the optimal linear regressor. We show that its only stable equilibria are nontrivial global minimizers and recover the same canonical correlation subspaces, with regularization selecting the effective dimension. Experiments on ImageNet-1K and CIFAR-10 show PEIRA is competitive with VICReg and LeJEPA baselines, and qualitative empirical results support the theory.",
+    "url": "http://arxiv.org/abs/2605.17671v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Weak-SIGReg: Covariance Regularization for Stable Deep Learning",
+    "authors": [
+      "Habibullah Akbar"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Modern neural network optimization relies heavily on architectural priorssuch as Batch Normalization and Residual connectionsto stabilize training dynamics. Without these, or in low-data regimes with aggressive augmentation, low-bias architectures like Vision Transformers (ViTs) often suffer from optimization collapse. This work adopts Sketched Isotropic Gaussian Regularization (SIGReg), recently introduced in the LeJEPA self-supervised framework, and repurposes it as a general optimization stabilizer for supervised learning. While the original formulation targets the full characteristic function, a computationally efficient variant is derived, Weak-SIGReg, which targets the covariance matrix via random sketching. Inspired by interacting particle systems, representation collapse is viewed as stochastic drift; SIGReg constrains the representation density towards an isotropic Gaussian, mitigating this drift. Empirically, SIGReg recovers the training of a ViT on CIFAR-100 from a collapsed 20.73\\% to 72.02\\% accuracy without architectural hacks and significantly improves the convergence of deep vanilla MLPs trained with pure SGD. Code is available at \\href{https://github.com/kreasof-ai/sigreg}{github.com/kreasof-ai/sigreg}.",
+    "url": "http://arxiv.org/abs/2603.05924v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Curriculum Labeling: Revisiting Pseudo-Labeling for Semi-Supervised Learning",
+    "authors": [
+      "Paola Cascante-Bonilla",
+      "Fuwen Tan",
+      "Yanjun Qi",
+      "Vicente Ordonez"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "In this paper we revisit the idea of pseudo-labeling in the context of semi-supervised learning where a learning algorithm has access to a small set of labeled samples and a large set of unlabeled samples. Pseudo-labeling works by applying pseudo-labels to samples in the unlabeled set by using a model trained on the combination of the labeled samples and any previously pseudo-labeled samples, and iteratively repeating this process in a self-training cycle. Current methods seem to have abandoned this approach in favor of consistency regularization methods that train models under a combination of different styles of self-supervised losses on the unlabeled samples and standard supervised losses on the labeled samples. We empirically demonstrate that pseudo-labeling can in fact be competitive with the state-of-the-art, while being more resilient to out-of-distribution samples in the unlabeled set. We identify two key factors that allow pseudo-labeling to achieve such remarkable results (1) applying curriculum learning principles and (2) avoiding concept drift by restarting model parameters before each self-training cycle. We obtain 94.91% accuracy on CIFAR-10 using only 4,000 labeled samples, and 68.87% top-1 accuracy on Imagenet-ILSVRC using only 10% of the labeled samples. The code is available at https://github.com/uvavision/Curriculum-Labeling",
+    "url": "http://arxiv.org/abs/2001.06001v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

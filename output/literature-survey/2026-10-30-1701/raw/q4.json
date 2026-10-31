@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Shifting to Machine Supervision: Annotation-Efficient Semi and Self-Supervised Learning for Automatic Medical Image Segmentation and Classification",
+    "authors": [
+      "Pranav Singh",
+      "Raviteja Chukkapalli",
+      "Shravan Chaudhari",
+      "Luoyao Chen",
+      "Mei Chen",
+      "Jinqian Pan",
+      "Craig Smuda",
+      "Jacopo Cirrone"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Advancements in clinical treatment are increasingly constrained by the limitations of supervised learning techniques, which depend heavily on large volumes of annotated data. The annotation process is not only costly but also demands substantial time from clinical specialists. Addressing this issue, we introduce the S4MI (Self-Supervision and Semi-Supervision for Medical Imaging) pipeline, a novel approach that leverages advancements in self-supervised and semi-supervised learning. These techniques engage in auxiliary tasks that do not require labeling, thus simplifying the scaling of machine supervision compared to fully-supervised methods. Our study benchmarks these techniques on three distinct medical imaging datasets to evaluate their effectiveness in classification and segmentation tasks. Notably, we observed that self supervised learning significantly surpassed the performance of supervised methods in the classification of all evaluated datasets. Remarkably, the semi-supervised approach demonstrated superior outcomes in segmentation, outperforming fully-supervised methods while using 50% fewer labels across all datasets. In line with our commitment to contributing to the scientific community, we have made the S4MI code openly accessible, allowing for broader application and further development of these methods.",
+    "url": "http://arxiv.org/abs/2311.10319v6",
+    "doi": "10.1038/s41598-024-61822-9",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "S3VAE: Self-Supervised Sequential VAE for Representation Disentanglement and Data Generation",
+    "authors": [
+      "Yizhe Zhu",
+      "Martin Renqiang Min",
+      "Asim Kadav",
+      "Hans Peter Graf"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "We propose a sequential variational autoencoder to learn disentangled representations of sequential data (e.g., videos and audios) under self-supervision. Specifically, we exploit the benefits of some readily accessible supervisory signals from input data itself or some off-the-shelf functional models and accordingly design auxiliary tasks for our model to utilize these signals. With the supervision of the signals, our model can easily disentangle the representation of an input sequence into static factors and dynamic factors (i.e., time-invariant and time-varying parts). Comprehensive experiments across videos and audios verify the effectiveness of our model on representation disentanglement and generation of sequential data, and demonstrate that, our model with self-supervision performs comparable to, if not better than, the fully-supervised model with ground truth labels, and outperforms state-of-the-art unsupervised models by a large margin.",
+    "url": "http://arxiv.org/abs/2005.11437v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Automatic Detection of Out-of-body Frames in Surgical Videos for Privacy Protection Using Self-supervised Learning and Minimal Labels",
+    "authors": [
+      "Ziheng Wang",
+      "Conor Perreault",
+      "Xi Liu",
+      "Anthony Jarc"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Endoscopic video recordings are widely used in minimally invasive robot-assisted surgery, but when the endoscope is outside the patient's body, it can capture irrelevant segments that may contain sensitive information. To address this, we propose a framework that accurately detects out-of-body frames in surgical videos by leveraging self-supervision with minimal data labels. We use a massive amount of unlabeled endoscopic images to learn meaningful representations in a self-supervised manner. Our approach, which involves pre-training on an auxiliary task and fine-tuning with limited supervision, outperforms previous methods for detecting out-of-body frames in surgical videos captured from da Vinci X and Xi surgical systems. The average F1 scores range from 96.00 to 98.02. Remarkably, using only 5% of the training labels, our approach still maintains an average F1 score performance above 97, outperforming fully-supervised methods with 95% fewer labels. These results demonstrate the potential of our framework to facilitate the safe handling of surgical video recordings and enhance data privacy protection in minimally invasive surgery.",
+    "url": "http://arxiv.org/abs/2303.18106v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Action Segmentation with Joint Self-Supervised Temporal Domain Adaptation",
+    "authors": [
+      "Min-Hung Chen",
+      "Baopu Li",
+      "Yingze Bao",
+      "Ghassan AlRegib",
+      "Zsolt Kira"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Despite the recent progress of fully-supervised action segmentation techniques, the performance is still not fully satisfactory. One main challenge is the problem of spatiotemporal variations (e.g. different people may perform the same activity in various ways). Therefore, we exploit unlabeled videos to address this problem by reformulating the action segmentation task as a cross-domain problem with domain discrepancy caused by spatio-temporal variations. To reduce the discrepancy, we propose Self-Supervised Temporal Domain Adaptation (SSTDA), which contains two self-supervised auxiliary tasks (binary and sequential domain prediction) to jointly align cross-domain feature spaces embedded with local and global temporal dynamics, achieving better performance than other Domain Adaptation (DA) approaches. On three challenging benchmark datasets (GTEA, 50Salads, and Breakfast), SSTDA outperforms the current state-of-the-art method by large margins (e.g. for the F1@25 score, from 59.6% to 69.1% on Breakfast, from 73.4% to 81.5% on 50Salads, and from 83.6% to 89.1% on GTEA), and requires only 65% of the labeled training data for comparable performance, demonstrating the usefulness of adapting to unlabeled target videos across variations. The source code is available at https://github.com/cmhungsteve/SSTDA.",
+    "url": "http://arxiv.org/abs/2003.02824v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Federated Self-Supervised Learning of Multi-Sensor Representations for Embedded Intelligence",
+    "authors": [
+      "Aaqib Saeed",
+      "Flora D. Salim",
+      "Tanir Ozcelebi",
+      "Johan Lukkien"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Smartphones, wearables, and Internet of Things (IoT) devices produce a wealth of data that cannot be accumulated in a centralized repository for learning supervised models due to privacy, bandwidth limitations, and the prohibitive cost of annotations. Federated learning provides a compelling framework for learning models from decentralized data, but conventionally, it assumes the availability of labeled samples, whereas on-device data are generally either unlabeled or cannot be annotated readily through user interaction. To address these issues, we propose a self-supervised approach termed \\textit{scalogram-signal correspondence learning} based on wavelet transform to learn useful representations from unlabeled sensor inputs, such as electroencephalography, blood volume pulse, accelerometer, and WiFi channel state information. Our auxiliary task requires a deep temporal neural network to determine if a given pair of a signal and its complementary viewpoint (i.e., a scalogram generated with a wavelet transform) align with each other or not through optimizing a contrastive objective. We extensively assess the quality of learned features with our multi-view strategy on diverse public datasets, achieving strong performance in all domains. We demonstrate the effectiveness of representations learned from an unlabeled input collection on downstream tasks with training a linear classifier over pretrained network, usefulness in low-data regime, transfer learning, and cross-validation. Our methodology achieves competitive performance with fully-supervised networks, and it outperforms pre-training with autoencoders in both central and federated contexts. Notably, it improves the generalization in a semi-supervised setting as it reduces the volume of labeled data required through leveraging self-supervised learning.",
+    "url": "http://arxiv.org/abs/2007.13018v1",
+    "doi": "10.1109/JIOT.2020.3009358",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Learning Natural Consistency Representation for Face Forgery Video Detection",
+    "authors": [
+      "Daichi Zhang",
+      "Zihao Xiao",
+      "Shikun Li",
+      "Fanzhao Lin",
+      "Jianmin Li",
+      "Shiming Ge"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Face Forgery videos have elicited critical social public concerns and various detectors have been proposed. However, fully-supervised detectors may lead to easily overfitting to specific forgery methods or videos, and existing self-supervised detectors are strict on auxiliary tasks, such as requiring audio or multi-modalities, leading to limited generalization and robustness. In this paper, we examine whether we can address this issue by leveraging visual-only real face videos. To this end, we propose to learn the Natural Consistency representation (NACO) of real face videos in a self-supervised manner, which is inspired by the observation that fake videos struggle to maintain the natural spatiotemporal consistency even under unknown forgery methods and different perturbations. Our NACO first extracts spatial features of each frame by CNNs then integrates them into Transformer to learn the long-range spatiotemporal representation, leveraging the advantages of CNNs and Transformer on local spatial receptive field and long-term memory respectively. Furthermore, a Spatial Predictive Module~(SPM) and a Temporal Contrastive Module~(TCM) are introduced to enhance the natural consistency representation learning. The SPM aims to predict random masked spatial features from spatiotemporal representation, and the TCM regularizes the latent distance of spatiotemporal representation by shuffling the natural order to disturb the consistency, which could both force our NACO more sensitive to the natural spatiotemporal consistency. After the representation learning stage, a MLP head is fine-tuned to perform the usual forgery video classification task. Extensive experiments show that our method outperforms other state-of-the-art competitors with impressive generalization and robustness.",
+    "url": "http://arxiv.org/abs/2407.10550v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Multi-task Self-Supervised Learning for Human Activity Detection",
+    "authors": [
+      "Aaqib Saeed",
+      "Tanir Ozcelebi",
+      "Johan Lukkien"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Deep learning methods are successfully used in applications pertaining to ubiquitous computing, health, and well-being. Specifically, the area of human activity recognition (HAR) is primarily transformed by the convolutional and recurrent neural networks, thanks to their ability to learn semantic representations from raw input. However, to extract generalizable features, massive amounts of well-curated data are required, which is a notoriously challenging task; hindered by privacy issues, and annotation costs. Therefore, unsupervised representation learning is of prime importance to leverage the vast amount of unlabeled data produced by smart devices. In this work, we propose a novel self-supervised technique for feature learning from sensory data that does not require access to any form of semantic labels. We learn a multi-task temporal convolutional network to recognize transformations applied on an input signal. By exploiting these transformations, we demonstrate that simple auxiliary tasks of the binary classification result in a strong supervisory signal for extracting useful features for the downstream task. We extensively evaluate the proposed approach on several publicly available datasets for smartphone-based HAR in unsupervised, semi-supervised, and transfer learning settings. Our method achieves performance levels superior to or comparable with fully-supervised networks, and it performs significantly better than autoencoders. Notably, for the semi-supervised case, the self-supervised features substantially boost the detection rate by attaining a kappa score between 0.7-0.8 with only 10 labeled examples per class. We get similar impressive performance even if the features are transferred from a different data source. While this paper focuses on HAR as the application domain, the proposed technique is general and could be applied to a wide variety of problems in other areas.",
+    "url": "http://arxiv.org/abs/1907.11879v1",
+    "doi": "10.1145/3328932",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Improving Semi-Supervised and Domain-Adaptive Semantic Segmentation with Self-Supervised Depth Estimation",
+    "authors": [
+      "Lukas Hoyer",
+      "Dengxin Dai",
+      "Qin Wang",
+      "Yuhua Chen",
+      "Luc Van Gool"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Training deep networks for semantic segmentation requires large amounts of labeled training data, which presents a major challenge in practice, as labeling segmentation masks is a highly labor-intensive process. To address this issue, we present a framework for semi-supervised and domain-adaptive semantic segmentation, which is enhanced by self-supervised monocular depth estimation (SDE) trained only on unlabeled image sequences.\n  In particular, we utilize SDE as an auxiliary task comprehensively across the entire learning framework: First, we automatically select the most useful samples to be annotated for semantic segmentation based on the correlation of sample diversity and difficulty between SDE and semantic segmentation. Second, we implement a strong data augmentation by mixing images and labels using the geometry of the scene. Third, we transfer knowledge from features learned during SDE to semantic segmentation by means of transfer and multi-task learning. And fourth, we exploit additional labeled synthetic data with Cross-Domain DepthMix and Matching Geometry Sampling to align synthetic and real data.\n  We validate the proposed model on the Cityscapes dataset, where all four contributions demonstrate significant performance gains, and achieve state-of-the-art results for semi-supervised semantic segmentation as well as for semi-supervised domain adaptation. In particular, with only 1/30 of the Cityscapes labels, our method achieves 92% of the fully-supervised baseline performance and even 97% when exploiting additional data from GTA. The source code is available at https://github.com/lhoyer/improving_segmentation_with_selfsupervised_depth.",
+    "url": "http://arxiv.org/abs/2108.12545v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

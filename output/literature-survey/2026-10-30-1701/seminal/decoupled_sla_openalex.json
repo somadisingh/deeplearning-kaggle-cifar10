@@ -1,0 +1,105 @@
+{
+ "title": "Decoupled self-supervised label augmentation for fully-supervised image classification",
+ "request": "https://api.openalex.org/works?search=decoupled+self+supervised+label+augmentation+for+fully+supervised+image+classification&per-page=5",
+ "http": 200,
+ "note": "not found on arXiv (4 searches, see title_search.json); OpenAlex title search for venue/DOI",
+ "candidates": [
+  {
+   "openalex_id": "https://openalex.org/W3208417938",
+   "title": "Decoupled self-supervised label augmentation for fully-supervised image classification",
+   "year": 2021,
+   "doi": "https://doi.org/10.1016/j.knosys.2021.107605",
+   "venue": "Knowledge-Based Systems",
+   "authors": [
+    "Wanshun Gao",
+    "Meiqing Wu",
+    "Siew-Kei Lam",
+    "Qihui Xia",
+    "Jianhua Zou"
+   ],
+   "cited_by_count": 14,
+   "similarity": 1.0
+  },
+  {
+   "openalex_id": "https://openalex.org/W4310493840",
+   "title": "Semi-supervised learning with pseudo-negative labels for image classification",
+   "year": 2022,
+   "doi": "https://doi.org/10.1016/j.knosys.2022.110166",
+   "venue": "Knowledge-Based Systems",
+   "authors": [
+    "Hao Xu",
+    "Hui Xiao",
+    "Huazheng Hao",
+    "Li Dong",
+    "Xiaojie Qiu",
+    "Chengbin Peng"
+   ],
+   "cited_by_count": 44,
+   "similarity": 0.5399
+  },
+  {
+   "openalex_id": "https://openalex.org/W4386076428",
+   "title": "Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture",
+   "year": 2023,
+   "doi": "https://doi.org/10.1109/cvpr52729.2023.01499",
+   "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+   "authors": [
+    "Mahmoud Assran",
+    "Quentin Duval",
+    "Ishan Misra",
+    "Piotr Bojanowski",
+    "Pascal Vincent",
+    "Michael Rabbat"
+   ],
+   "cited_by_count": 456,
+   "similarity": 0.4142
+  },
+  {
+   "openalex_id": "https://openalex.org/W4322832366",
+   "title": "TimeMAE: Self-Supervised Representations of Time Series with Decoupled Masked Autoencoders",
+   "year": 2026,
+   "doi": "https://doi.org/10.1145/3773966.3778007",
+   "venue": "ACM International Conference on Web Search and Data Mining (WSDM)",
+   "authors": [
+    "Mingyue Cheng",
+    "Xiaoyu Tao",
+    "Zhiding Liu",
+    "Qi Liu",
+    "Hao Zhang",
+    "Rujiao Zhang"
+   ],
+   "cited_by_count": 47,
+   "similarity": 0.5029
+  },
+  {
+   "openalex_id": "https://openalex.org/W3197261948",
+   "title": "GANSER: A Self-Supervised Data Augmentation Framework for EEG-Based Emotion Recognition",
+   "year": 2022,
+   "doi": "https://doi.org/10.1109/taffc.2022.3170369",
+   "venue": "IEEE Transactions on Affective Computing",
+   "authors": [
+    "Zhi Zhang",
+    "Yan Liu",
+    "Sheng-hua Zhong"
+   ],
+   "cited_by_count": 154,
+   "similarity": 0.5465
+  }
+ ],
+ "match": {
+  "openalex_id": "https://openalex.org/W3208417938",
+  "title": "Decoupled self-supervised label augmentation for fully-supervised image classification",
+  "year": 2021,
+  "doi": "https://doi.org/10.1016/j.knosys.2021.107605",
+  "venue": "Knowledge-Based Systems",
+  "authors": [
+   "Wanshun Gao",
+   "Meiqing Wu",
+   "Siew-Kei Lam",
+   "Qihui Xia",
+   "Jianhua Zou"
+  ],
+  "cited_by_count": 14,
+  "similarity": 1.0
+ }
+}

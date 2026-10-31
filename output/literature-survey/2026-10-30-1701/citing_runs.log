@@ -1,0 +1,102 @@
+2026-10-30 17:06:17 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:1910.05872/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:06:17 S2 429, backing off 5 s
+2026-10-30 17:06:22 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:1910.05872/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 200
+2026-10-30 17:06:22 1910.05872: S2 ok, 68 citing papers
+2026-10-30 17:06:25 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:1906.12340/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:06:25 S2 429, backing off 5 s
+2026-10-30 17:06:30 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:1906.12340/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:06:30 S2 429, backing off 10 s
+2026-10-30 17:06:40 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:1906.12340/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:06:40 S2 429, backing off 20 s
+2026-10-30 17:07:02 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:1906.12340/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 200
+2026-10-30 17:07:04 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:1906.12340/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=1000 -> HTTP 200
+2026-10-30 17:07:04 1906.12340: S2 ok, 1119 citing papers
+2026-10-30 17:07:06 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2107.13715/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:07:06 S2 429, backing off 5 s
+2026-10-30 17:07:11 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2107.13715/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:07:11 S2 429, backing off 10 s
+2026-10-30 17:07:22 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2107.13715/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:07:22 S2 429, backing off 20 s
+2026-10-30 17:07:42 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2107.13715/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:07:42 2107.13715: S2 failed (HTTP 429 after 5/10/20 s back-off); trying OpenAlex
+2026-10-30 17:07:42 OA GET https://api.openalex.org/works?filter=title.search%3Ahierarchical+self+supervised+augmented+knowledge+distillation&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:07:43 OA GET https://api.openalex.org/works?filter=cites%3AW3183222077&per-page=200&cursor=%2A&select=id%2Cdoi%2Cdisplay_name%2Cpublication_year%2Cids%2Cprimary_location%2Clocations%2Ccited_by_count -> HTTP 200
+2026-10-30 17:07:43 2107.13715: OpenAlex ok, 84 citing works from 1 seed records
+2026-10-30 17:07:45 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2007.08176/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:07:45 S2 429, backing off 5 s
+2026-10-30 17:07:50 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2007.08176/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:07:50 S2 429, backing off 10 s
+2026-10-30 17:08:00 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2007.08176/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:08:00 S2 429, backing off 20 s
+2026-10-30 17:08:20 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2007.08176/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:08:20 2007.08176: S2 failed (HTTP 429 after 5/10/20 s back-off); trying OpenAlex
+2026-10-30 17:08:21 OA GET https://api.openalex.org/works?filter=title.search%3Acsi+novelty+detection+via+contrastive+learning+on+distributionally+shifted+instances&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:08:22 OA GET https://api.openalex.org/works?filter=cites%3AW3043138801&per-page=200&cursor=%2A&select=id%2Cdoi%2Cdisplay_name%2Cpublication_year%2Cids%2Cprimary_location%2Clocations%2Ccited_by_count -> HTTP 200
+2026-10-30 17:08:23 OA GET https://api.openalex.org/works?filter=cites%3AW3043138801&per-page=200&cursor=Ils5Ni4wLCA2LCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzQyODMwODA3NTMnXSI%3D&select=id%2Cdoi%2Cdisplay_name%2Cpublication_year%2Cids%2Cprimary_location%2Clocations%2Ccited_by_count -> HTTP 401
+2026-10-30 17:08:23 2007.08176: OpenAlex failed (cites:W3043138801 failed: HTTP 401: {"error":"API key required for cursor paging","message":"Paging past the first page with cursor= needs a free API key. Get one in a minute at https://openalex.org/settings/api"})
+2026-10-30 17:08:23 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2301.05865/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 200
+2026-10-30 17:08:23 2301.05865: S2 ok, 5 citing papers
+2026-10-30 17:08:26 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2211.04625/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:08:26 S2 429, backing off 5 s
+2026-10-30 17:08:32 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2211.04625/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:08:32 S2 429, backing off 10 s
+2026-10-30 17:08:42 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2211.04625/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:08:42 S2 429, backing off 20 s
+2026-10-30 17:09:02 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2211.04625/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 200
+2026-10-30 17:09:02 2211.04625: S2 ok, 23 citing papers
+2026-10-30 17:09:05 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2408.01977/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 200
+2026-10-30 17:09:05 2408.01977: S2 ok, 2 citing papers
+2026-10-30 17:09:05 DONE
+2026-10-30 17:10:46 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:1910.05872?fields=title%2Cyear%2Cvenue%2CcitationCount%2CexternalIds -> HTTP 200
+2026-10-30 17:10:46 OA GET https://api.openalex.org/works/doi:10.48550/arxiv.1910.05872?select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:47 OA GET https://api.openalex.org/works?filter=title.search%3Aself+supervised+label+augmentation+via+input+transformations&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:48 OA GET https://api.openalex.org/works?filter=title.search%3Arethinking+data+augmentation+self+supervision+and+self+distillation&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:49 OA GET https://api.openalex.org/works?filter=cites%3AW3034337759&per-page=200&page=1&select=id%2Cdoi%2Cdisplay_name%2Cpublication_year%2Cids%2Cprimary_location%2Clocations%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:50 OA GET https://api.openalex.org/works?filter=cites%3AW2979927723&per-page=200&page=1&select=id%2Cdoi%2Cdisplay_name%2Cpublication_year%2Cids%2Cprimary_location%2Clocations%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:50 1910.05872: final semantic_scholar+openalex, 211 citing
+2026-10-30 17:10:50 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:1906.12340?fields=title%2Cyear%2Cvenue%2CcitationCount%2CexternalIds -> HTTP 200
+2026-10-30 17:10:51 OA GET https://api.openalex.org/works/doi:10.48550/arxiv.1906.12340?select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:52 OA GET https://api.openalex.org/works?filter=title.search%3Ausing+self+supervised+learning+can+improve+model+robustness+and+uncertainty&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:52 1906.12340: final semantic_scholar, 1103 citing
+2026-10-30 17:10:53 OA GET https://api.openalex.org/works/doi:10.48550/arxiv.2107.13715?select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:55 OA GET https://api.openalex.org/works?filter=title.search%3Ahierarchical+self+supervised+augmented+knowledge+distillation&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:55 2107.13715: final openalex, 84 citing
+2026-10-30 17:10:56 OA GET https://api.openalex.org/works/doi:10.48550/arxiv.2007.08176?select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:57 OA GET https://api.openalex.org/works?filter=title.search%3Acsi+novelty+detection+via+contrastive+learning+on+distributionally+shifted+instances&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:58 OA GET https://api.openalex.org/works?filter=cites%3AW3043138801&per-page=200&page=1&select=id%2Cdoi%2Cdisplay_name%2Cpublication_year%2Cids%2Cprimary_location%2Clocations%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:59 OA GET https://api.openalex.org/works?filter=cites%3AW3043138801&per-page=200&page=2&select=id%2Cdoi%2Cdisplay_name%2Cpublication_year%2Cids%2Cprimary_location%2Clocations%2Ccited_by_count -> HTTP 200
+2026-10-30 17:10:59 2007.08176: final openalex, 320 citing
+2026-10-30 17:10:59 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2301.05865?fields=title%2Cyear%2Cvenue%2CcitationCount%2CexternalIds -> HTTP 429
+2026-10-30 17:10:59 S2 429, backing off 5 s
+2026-10-30 17:11:05 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2301.05865?fields=title%2Cyear%2Cvenue%2CcitationCount%2CexternalIds -> HTTP 200
+2026-10-30 17:11:05 OA GET https://api.openalex.org/works/doi:10.48550/arxiv.2301.05865?select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:11:06 OA GET https://api.openalex.org/works?filter=title.search%3Agated+self+supervised+learning+for+improving+supervised+learning&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:11:07 OA GET https://api.openalex.org/works?filter=cites%3AW4401110415&per-page=200&page=1&select=id%2Cdoi%2Cdisplay_name%2Cpublication_year%2Cids%2Cprimary_location%2Clocations%2Ccited_by_count -> HTTP 200
+2026-10-30 17:11:07 2301.05865: final semantic_scholar+openalex, 10 citing
+2026-10-30 17:11:08 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2211.04625?fields=title%2Cyear%2Cvenue%2CcitationCount%2CexternalIds -> HTTP 200
+2026-10-30 17:11:08 OA GET https://api.openalex.org/works/doi:10.48550/arxiv.2211.04625?select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:11:09 OA GET https://api.openalex.org/works?filter=title.search%3Asoft+augmentation+for+image+classification&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:11:09 2211.04625: final semantic_scholar, 23 citing
+2026-10-30 17:11:11 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2408.01977?fields=title%2Cyear%2Cvenue%2CcitationCount%2CexternalIds -> HTTP 429
+2026-10-30 17:11:11 S2 429, backing off 5 s
+2026-10-30 17:11:16 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2408.01977?fields=title%2Cyear%2Cvenue%2CcitationCount%2CexternalIds -> HTTP 429
+2026-10-30 17:11:16 S2 429, backing off 10 s
+2026-10-30 17:11:26 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2408.01977?fields=title%2Cyear%2Cvenue%2CcitationCount%2CexternalIds -> HTTP 200
+2026-10-30 17:11:26 OA GET https://api.openalex.org/works/doi:10.48550/arxiv.2408.01977?select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:11:27 OA GET https://api.openalex.org/works?filter=title.search%3Alabel+augmentation+for+neural+networks+robustness&per-page=50&select=id%2Cdisplay_name%2Cpublication_year%2Cdoi%2Ccited_by_count -> HTTP 200
+2026-10-30 17:11:27 2408.01977: final semantic_scholar, 2 citing
+2026-10-30 17:11:27 CHECK DONE
+2026-10-30 17:13:02 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2107.13715/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:13:02 S2 429, backing off 5 s
+2026-10-30 17:13:07 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2107.13715/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:13:07 S2 429, backing off 10 s
+2026-10-30 17:13:18 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2107.13715/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 200
+2026-10-30 17:13:18 2107.13715: final semantic_scholar+openalex, 117 citing
+2026-10-30 17:13:22 S2 GET https://api.semanticscholar.org/graph/v1/paper/arXiv:2007.08176/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 200
+2026-10-30 17:13:22 2007.08176: final semantic_scholar+openalex, 801 citing
+2026-10-30 17:13:24 S2 GET https://api.semanticscholar.org/graph/v1/paper/search/match?query=Self-supervised+Label+Augmentation+via+Input+Transformations&fields=title%2Cyear%2Cvenue%2CcitationCount%2CexternalIds -> HTTP 200
+2026-10-30 17:13:27 S2 GET https://api.semanticscholar.org/graph/v1/paper/6bfa8f8b09ec21fe06d4eee28c3fb6cce879be1d/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 429
+2026-10-30 17:13:27 S2 429, backing off 5 s
+2026-10-30 17:13:32 S2 GET https://api.semanticscholar.org/graph/v1/paper/6bfa8f8b09ec21fe06d4eee28c3fb6cce879be1d/citations?fields=title%2Cyear%2Cvenue%2CexternalIds%2CcitationCount&limit=1000&offset=0 -> HTTP 200
+2026-10-30 17:13:32 1910.05872: final semantic_scholar+openalex, 310 citing
+2026-10-30 17:13:32 RETRY DONE

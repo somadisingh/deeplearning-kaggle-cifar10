@@ -1,0 +1,523 @@
+[
+  {
+    "title": "Augment your batch: better training with larger batches",
+    "authors": [
+      "Elad Hoffer",
+      "Tal Ben-Nun",
+      "Itay Hubara",
+      "Niv Giladi",
+      "Torsten Hoefler",
+      "Daniel Soudry"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Large-batch SGD is important for scaling training of deep neural networks. However, without fine-tuning hyperparameter schedules, the generalization of the model may be hampered. We propose to use batch augmentation: replicating instances of samples within the same batch with different data augmentations. Batch augmentation acts as a regularizer and an accelerator, increasing both generalization and performance scaling. We analyze the effect of batch augmentation on gradient variance and show that it empirically improves convergence for a wide variety of deep neural networks and datasets. Our results show that batch augmentation reduces the number of necessary SGD updates to achieve the same accuracy as the state-of-the-art. Overall, this simple yet effective method enables faster training and better generalization by allowing more computational resources to be used concurrently.",
+    "url": "http://arxiv.org/abs/1901.09335v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Batch Augmentation with Unimodal Fine-tuning for Multimodal Fusion of Large Language Models",
+    "authors": [
+      "H M Dipu Kabir",
+      "Subrota Kumar Mondal",
+      "Mohammad Ali Moni"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "In this paper, we propose batch augmentation with unimodal fine-tuning for multimodal learning. We start with pre-trained unimodal models. We fine-tune the unimodal models with the application data. After that, we form a Multi-Layer Perceptron (MLP) head that takes information from unimodal models and provides output. Finally, we train the MLP layer and unimodal parts with batch augmentation. Depending on the data, some unimodal models can be replaced by hard-coded scripts or AI agents. The unimodal training can also follow batch augmentation when the data is augmentable. We write a multimodal batch augmentation dataloader script that implements the batch augmentation for the multimodal data. We investigate the proposed method on the FPU23 ultrasound and UPMC Food-101 multimodal datasets. The multimodal large language model (LLM) with the proposed training achieves the best average result among the investigated methods across both datasets. According to our literature search, the proposed method achieves state-of-the-art (SOTA) accuracy of 93.29% on the UPMC Food-101 dataset, while we apply the ViT-L/16 model for vision and the GPT-2 model for text. We share the scripts of the proposed method with traditional counterparts at the following repository: github.com/dipuk0506/multimodal",
+    "url": "http://arxiv.org/abs/2505.06592v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CodeFort: Robust Training for Code Generation Models",
+    "authors": [
+      "Yuhao Zhang",
+      "Shiqi Wang",
+      "Haifeng Qian",
+      "Zijian Wang",
+      "Mingyue Shang",
+      "Linbo Liu",
+      "Sanjay Krishna Gouda",
+      "Baishakhi Ray",
+      "Murali Krishna Ramanathan",
+      "Xiaofei Ma",
+      "Anoop Deoras"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Code generation models are not robust to small perturbations, which often lead to incorrect generations and significantly degrade the performance of these models. Although improving the robustness of code generation models is crucial to enhancing user experience in real-world applications, existing research efforts do not address this issue. To fill this gap, we propose CodeFort, a framework to improve the robustness of code generation models, generalizing a large variety of code perturbations to enrich the training data and enabling various robust training strategies, mixing data augmentation, batch augmentation, adversarial logits pairing, and contrastive learning, all carefully designed to support high-throughput training. Extensive evaluations show that we increase the average robust pass rates of baseline CodeGen models from 14.79 to 21.74. We notably decrease the robustness drop rate from 95.02% to 54.95% against code-syntax perturbations.",
+    "url": "http://arxiv.org/abs/2405.01567v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Occlusions for Effective Data Augmentation in Image Classification",
+    "authors": [
+      "Ruth Fong",
+      "Andrea Vedaldi"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Deep networks for visual recognition are known to leverage \"easy to recognise\" portions of objects such as faces and distinctive texture patterns. The lack of a holistic understanding of objects may increase fragility and overfitting. In recent years, several papers have proposed to address this issue by means of occlusions as a form of data augmentation. However, successes have been limited to tasks such as weak localization and model interpretation, but no benefit was demonstrated on image classification on large-scale datasets. In this paper, we show that, by using a simple technique based on batch augmentation, occlusions as data augmentation can result in better performance on ImageNet for high-capacity models (e.g., ResNet50). We also show that varying amounts of occlusions used during training can be used to study the robustness of different neural network architectures.",
+    "url": "http://arxiv.org/abs/1910.10651v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Sequenced-Replacement Sampling for Deep Learning",
+    "authors": [
+      "Chiu Man Ho",
+      "Dae Hoon Park",
+      "Wei Yang",
+      "Yi Chang"
+    ],
+    "year": 2018,
+    "venue": "arXiv",
+    "abstract": "We propose sequenced-replacement sampling (SRS) for training deep neural networks. The basic idea is to assign a fixed sequence index to each sample in the dataset. Once a mini-batch is randomly drawn in each training iteration, we refill the original dataset by successively adding samples according to their sequence index. Thus we carry out replacement sampling but in a batched and sequenced way. In a sense, SRS could be viewed as a way of performing \"mini-batch augmentation\". It is particularly useful for a task where we have a relatively small images-per-class such as CIFAR-100. Together with a longer period of initial large learning rate, it significantly improves the classification accuracy in CIFAR-100 over the current state-of-the-art results. Our experiments indicate that training deeper networks with SRS is less prone to over-fitting. In the best case, we achieve an error rate as low as 10.10%.",
+    "url": "http://arxiv.org/abs/1810.08322v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "The standard augmented multiplicative coalescent revisited",
+    "authors": [
+      "Josué Corujo",
+      "Vlada Limic"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "The Erdős-Rényi random graph is the fundamental random graph model. In this paper we consider its continuous-time version, where multi-edges and self-loops are also allowed. It is well-known that the sizes of its connected components evolve according to the multiplicative coalescent dynamics. Moreover, with the additional information on the number of surplus edges, the resulting process follows the augmented multiplicative coalescent dynamic, constructed by Bhamidi, Budhiraja and Wang in 2014. The same authors exhibit the scaling limit, which can be specified in terms of the infinite vector of excursions (in particular their lengths, and the areas enclosed by the excursion curves) above past infima of a reflected Brownian motion with linear infinitesimal drift. We use some recent results, using a graph exploration process called the simultaneous breadth-first walk, to study the same scaling limit, called the standard augmented multiplicative coalescent (SAMC). We present a self-contained, simpler and more direct approach than that of any previous construction of the SAMC. Furthermore, we believe that the method described here is convenient for generalizations, one of which would be the study of general non-standard eternal augmented multiplicative coalescents.",
+    "url": "http://arxiv.org/abs/2304.07545v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Occlusion-Robust Object Pose Estimation with Holistic Representation",
+    "authors": [
+      "Bo Chen",
+      "Tat-Jun Chin",
+      "Marius Klimavicius"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Practical object pose estimation demands robustness against occlusions to the target object. State-of-the-art (SOTA) object pose estimators take a two-stage approach, where the first stage predicts 2D landmarks using a deep network and the second stage solves for 6DOF pose from 2D-3D correspondences. Albeit widely adopted, such two-stage approaches could suffer from novel occlusions when generalising and weak landmark coherence due to disrupted features. To address these issues, we develop a novel occlude-and-blackout batch augmentation technique to learn occlusion-robust deep features, and a multi-precision supervision architecture to encourage holistic pose representation learning for accurate and coherent landmark predictions. We perform careful ablation tests to verify the impact of our innovations and compare our method to SOTA pose estimators. Without the need of any post-processing or refinement, our method exhibits superior performance on the LINEMOD dataset. On the YCB-Video dataset our method outperforms all non-refinement methods in terms of the ADD(-S) metric. We also demonstrate the high data-efficiency of our method. Our code is available at http://github.com/BoChenYS/ROPE",
+    "url": "http://arxiv.org/abs/2110.11636v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Stochastic Batch Augmentation with An Effective Distilled Dynamic Soft Label Regularizer",
+    "authors": [
+      "Qian Li",
+      "Qingyuan Hu",
+      "Yong Qi",
+      "Saiyu Qi",
+      "Jie Ma",
+      "Jian Zhang"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Data augmentation have been intensively used in training deep neural network to improve the generalization, whether in original space (e.g., image space) or representation space. Although being successful, the connection between the synthesized data and the original data is largely ignored in training, without considering the distribution information that the synthesized samples are surrounding the original sample in training. Hence, the behavior of the network is not optimized for this. However, that behavior is crucially important for generalization, even in the adversarial setting, for the safety of the deep learning system. In this work, we propose a framework called Stochastic Batch Augmentation (SBA) to address these problems. SBA stochastically decides whether to augment at iterations controlled by the batch scheduler and in which a ''distilled'' dynamic soft label regularization is introduced by incorporating the similarity in the vicinity distribution respect to raw samples. The proposed regularization provides direct supervision by the KL-Divergence between the output soft-max distributions of original and virtual data. Our experiments on CIFAR-10, CIFAR-100, and ImageNet show that SBA can improve the generalization of the neural networks and speed up the convergence of network training.",
+    "url": "http://arxiv.org/abs/2006.15284v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Greedy Policy Search: A Simple Baseline for Learnable Test-Time Augmentation",
+    "authors": [
+      "Dmitry Molchanov",
+      "Alexander Lyzhov",
+      "Yuliya Molchanova",
+      "Arsenii Ashukha",
+      "Dmitry Vetrov"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Test-time data augmentation$-$averaging the predictions of a machine learning model across multiple augmented samples of data$-$is a widely used technique that improves the predictive performance. While many advanced learnable data augmentation techniques have emerged in recent years, they are focused on the training phase. Such techniques are not necessarily optimal for test-time augmentation and can be outperformed by a policy consisting of simple crops and flips. The primary goal of this paper is to demonstrate that test-time augmentation policies can be successfully learned too. We introduce greedy policy search (GPS), a simple but high-performing method for learning a policy of test-time augmentation. We demonstrate that augmentation policies learned with GPS achieve superior predictive performance on image classification problems, provide better in-domain uncertainty estimation, and improve the robustness to domain shift.",
+    "url": "http://arxiv.org/abs/2002.09103v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A dynamical approach to spanning and surplus edges of random graphs",
+    "authors": [
+      "Josué Corujo",
+      "Vlada Limic"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Consider a finite inhomogeneous random graph evolving in continuous time, where each vertex is assigned a mass, and an edge between any pair of vertices appears at a rate proportional to the product of their masses. The process tracking the evolution of component sizes evolves according to the multiplicative coalescent dynamic and can be encoded using the simultaneous breadth-first walk introduced by Limic (2019). We extend this encoding to incorporate surplus edge data within each connected component. Two distinct graph-based representations of the multiplicative coalescent, each with its own advantages and limitations, are analyzed in detail. In particular, a canonical multigraph introduced by Bhamidi, Budhiraja and Wang (2014), which is naturally connected to the augmented multiplicative coalescent, emerges from our framework. We demonstrate that a transformation of the simultaneous breadth-first walk, supplemented with an additional and independent source of randomness, encodes the full dynamics of the augmented multiplicative coalescent.",
+    "url": "http://arxiv.org/abs/2305.04716v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Iterative Experience Refinement of Software-Developing Agents",
+    "authors": [
+      "Chen Qian",
+      "Jiahao Li",
+      "Yufan Dang",
+      "Wei Liu",
+      "YiFei Wang",
+      "Zihao Xie",
+      "Weize Chen",
+      "Cheng Yang",
+      "Yingli Zhang",
+      "Zhiyuan Liu",
+      "Maosong Sun"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Autonomous agents powered by large language models (LLMs) show significant potential for achieving high autonomy in various scenarios such as software development. Recent research has shown that LLM agents can leverage past experiences to reduce errors and enhance efficiency. However, the static experience paradigm, reliant on a fixed collection of past experiences acquired heuristically, lacks iterative refinement and thus hampers agents' adaptability. In this paper, we introduce the Iterative Experience Refinement framework, enabling LLM agents to refine experiences iteratively during task execution. We propose two fundamental patterns: the successive pattern, refining based on nearest experiences within a task batch, and the cumulative pattern, acquiring experiences across all previous task batches. Augmented with our heuristic experience elimination, the method prioritizes high-quality and frequently-used experiences, effectively managing the experience space and enhancing efficiency. Extensive experiments show that while the successive pattern may yield superior results, the cumulative pattern provides more stable performance. Moreover, experience elimination facilitates achieving better performance using just 11.54% of a high-quality subset.",
+    "url": "http://arxiv.org/abs/2405.04219v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Batch-Augmented Multi-Agent Reinforcement Learning for Efficient Traffic Signal Optimization",
+    "authors": [
+      "Yueh-Hua Wu",
+      "I-Hau Yeh",
+      "David Hu",
+      "Hong-Yuan Mark Liao"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "The goal of this work is to provide a viable solution based on reinforcement learning for traffic signal control problems. Although the state-of-the-art reinforcement learning approaches have yielded great success in a variety of domains, directly applying it to alleviate traffic congestion can be challenging, considering the requirement of high sample efficiency and how training data is gathered. In this work, we address several challenges that we encountered when we attempted to mitigate serious traffic congestion occurring in a metropolitan area. Specifically, we are required to provide a solution that is able to (1) handle the traffic signal control when certain surveillance cameras that retrieve information for reinforcement learning are down, (2) learn from batch data without a traffic simulator, and (3) make control decisions without shared information across intersections. We present a two-stage framework to deal with the above-mentioned situations. The framework can be decomposed into an Evolution Strategies approach that gives a fixed-time traffic signal control schedule and a multi-agent off-policy reinforcement learning that is capable of learning from batch data with the aid of three proposed components, bounded action, batch augmentation, and surrogate reward clipping. Our experiments show that the proposed framework reduces traffic congestion by 36% in terms of waiting time compared with the currently used fixed-time traffic signal plan. Furthermore, the framework requires only 600 queries to a simulator to achieve the result.",
+    "url": "http://arxiv.org/abs/2005.09624v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "PCB-MC: Missing Component Analysis in Printed Circuit Boards",
+    "authors": [
+      "Betsy Villa Brochero",
+      "Ian Gibson",
+      "Estefania Talavera"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Detecting missing components on printed circuit boards (PCBs) differs fundamentally from conventional object detection, as the model must localize components that are not present. We introduce PCB-MC, a curated dataset for missing component detection with footprint level annotations built on top of the RF100 dataset. The dataset contains 197 distinct board types, each corresponding to a unique PCB design, with multiple augmented samples per type. We also provide benchmark results on PCB-MC by evaluating a diverse set of supervised and unsupervised methods. To ensure fair evaluation, we propose board type aware cross validation splits that prevent layout leakage between training and test sets. Supervised models showcase high false negative rates on unseen board designs, and unsupervised anomaly detection methods fail entirely due to the lack of spatial alignment with a board specific reference. These results confirm that missing component detection on diverse PCB layouts remains an open challenge. We release PCB-MC and all training protocols to support reproducible research on structural absence detection in industrial inspection.",
+    "url": "http://arxiv.org/abs/2609.39427v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "FlipReID: Closing the Gap between Training and Inference in Person Re-Identification",
+    "authors": [
+      "Xingyang Ni",
+      "Esa Rahtu"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Since neural networks are data-hungry, incorporating data augmentation in training is a widely adopted technique that enlarges datasets and improves generalization. On the other hand, aggregating predictions of multiple augmented samples (i.e., test-time augmentation) could boost performance even further. In the context of person re-identification models, it is common practice to extract embeddings for both the original images and their horizontally flipped variants. The final representation is the mean of the aforementioned feature vectors. However, such scheme results in a gap between training and inference, i.e., the mean feature vectors calculated in inference are not part of the training pipeline. In this study, we devise the FlipReID structure with the flipping loss to address this issue. More specifically, models using the FlipReID structure are trained on the original images and the flipped images simultaneously, and incorporating the flipping loss minimizes the mean squared error between feature vectors of corresponding image pairs. Extensive experiments show that our method brings consistent improvements. In particular, we set a new record for MSMT17 which is the largest person re-identification dataset. The source code is available at https://github.com/nixingyang/FlipReID.",
+    "url": "http://arxiv.org/abs/2105.05639v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Single-step Adversarial training with Dropout Scheduling",
+    "authors": [
+      "Vivek B. S.",
+      "R. Venkatesh Babu"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Deep learning models have shown impressive performance across a spectrum of computer vision applications including medical diagnosis and autonomous driving. One of the major concerns that these models face is their susceptibility to adversarial attacks. Realizing the importance of this issue, more researchers are working towards developing robust models that are less affected by adversarial attacks. Adversarial training method shows promising results in this direction. In adversarial training regime, models are trained with mini-batches augmented with adversarial samples. Fast and simple methods (e.g., single-step gradient ascent) are used for generating adversarial samples, in order to reduce computational complexity. It is shown that models trained using single-step adversarial training method (adversarial samples are generated using non-iterative method) are pseudo robust. Further, this pseudo robustness of models is attributed to the gradient masking effect. However, existing works fail to explain when and why gradient masking effect occurs during single-step adversarial training. In this work, (i) we show that models trained using single-step adversarial training method learn to prevent the generation of single-step adversaries, and this is due to over-fitting of the model during the initial stages of training, and (ii) to mitigate this effect, we propose a single-step adversarial training method with dropout scheduling. Unlike models trained using existing single-step adversarial training methods, models trained using the proposed single-step adversarial training method are robust against both single-step and multi-step adversarial attacks, and the performance is on par with models trained using computationally expensive multi-step adversarial training methods, in white-box and black-box settings.",
+    "url": "http://arxiv.org/abs/2004.08628v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GaNDLF: A Generally Nuanced Deep Learning Framework for Scalable End-to-End Clinical Workflows in Medical Imaging",
+    "authors": [
+      "Sarthak Pati",
+      "Siddhesh P. Thakur",
+      "İbrahim Ethem Hamamcı",
+      "Ujjwal Baid",
+      "Bhakti Baheti",
+      "Megh Bhalerao",
+      "Orhun Güley",
+      "Sofia Mouchtaris",
+      "David Lang",
+      "Spyridon Thermos",
+      "Karol Gotkowski",
+      "Camila González",
+      "Caleb Grenko",
+      "Alexander Getka",
+      "Brandon Edwards",
+      "Micah Sheller",
+      "Junwen Wu",
+      "Deepthi Karkada",
+      "Ravi Panchumarthy",
+      "Vinayak Ahluwalia",
+      "Chunrui Zou",
+      "Vishnu Bashyam",
+      "Yuemeng Li",
+      "Babak Haghighi",
+      "Rhea Chitalia",
+      "Shahira Abousamra",
+      "Tahsin M. Kurc",
+      "Aimilia Gastounioti",
+      "Sezgin Er",
+      "Mark Bergman",
+      "Joel H. Saltz",
+      "Yong Fan",
+      "Prashant Shah",
+      "Anirban Mukhopadhyay",
+      "Sotirios A. Tsaftaris",
+      "Bjoern Menze",
+      "Christos Davatzikos",
+      "Despina Kontos",
+      "Alexandros Karargyris",
+      "Renato Umeton",
+      "Peter Mattson",
+      "Spyridon Bakas"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Deep Learning (DL) has the potential to optimize machine learning in both the scientific and clinical communities. However, greater expertise is required to develop DL algorithms, and the variability of implementations hinders their reproducibility, translation, and deployment. Here we present the community-driven Generally Nuanced Deep Learning Framework (GaNDLF), with the goal of lowering these barriers. GaNDLF makes the mechanism of DL development, training, and inference more stable, reproducible, interpretable, and scalable, without requiring an extensive technical background. GaNDLF aims to provide an end-to-end solution for all DL-related tasks in computational precision medicine. We demonstrate the ability of GaNDLF to analyze both radiology and histology images, with built-in support for k-fold cross-validation, data augmentation, multiple modalities and output classes. Our quantitative performance evaluation on numerous use cases, anatomies, and computational tasks supports GaNDLF as a robust application framework for deployment in clinical workflows.",
+    "url": "http://arxiv.org/abs/2103.01006v4",
+    "doi": "10.1038/s44172-023-00066-3",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Communication-Efficient Cooperative Multi-Agent PPO via Regulated Segment Mixture in Internet of Vehicles",
+    "authors": [
+      "Xiaoxue Yu",
+      "Rongpeng Li",
+      "Fei Wang",
+      "Chenghui Peng",
+      "Chengchao Liang",
+      "Zhifeng Zhao",
+      "Honggang Zhang"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Multi-Agent Reinforcement Learning (MARL) has become a classic paradigm to solve diverse, intelligent control tasks like autonomous driving in Internet of Vehicles (IoV). However, the widely assumed existence of a central node to implement centralized federated learning-assisted MARL might be impractical in highly dynamic scenarios, and the excessive communication overheads possibly overwhelm the IoV system. Therefore, in this paper, we design a communication efficient cooperative MARL algorithm, named RSM-MAPPO, to reduce the communication overheads in a fully distributed architecture. In particular, RSM-MAPPO enhances the multi-agent Proximal Policy Optimization (PPO) by incorporating the idea of segment mixture and augmenting multiple model replicas from received neighboring policy segments. Afterwards, RSM-MAPPO adopts a theory-guided metric to regulate the selection of contributive replicas to guarantee the policy improvement. Finally, extensive simulations in a mixed-autonomy traffic control scenario verify the effectiveness of the RSM-MAPPO algorithm.",
+    "url": "http://arxiv.org/abs/2308.04198v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "FixBi: Bridging Domain Spaces for Unsupervised Domain Adaptation",
+    "authors": [
+      "Jaemin Na",
+      "Heechul Jung",
+      "Hyung Jin Chang",
+      "Wonjun Hwang"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Unsupervised domain adaptation (UDA) methods for learning domain invariant representations have achieved remarkable progress. However, most of the studies were based on direct adaptation from the source domain to the target domain and have suffered from large domain discrepancies. In this paper, we propose a UDA method that effectively handles such large domain discrepancies. We introduce a fixed ratio-based mixup to augment multiple intermediate domains between the source and target domain. From the augmented-domains, we train the source-dominant model and the target-dominant model that have complementary characteristics. Using our confidence-based learning methodologies, e.g., bidirectional matching with high-confidence predictions and self-penalization using low-confidence predictions, the models can learn from each other or from its own results. Through our proposed methods, the models gradually transfer domain knowledge from the source to the target domain. Extensive experiments demonstrate the superiority of our proposed method on three public benchmarks: Office-31, Office-Home, and VisDA-2017.",
+    "url": "http://arxiv.org/abs/2011.09230v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "T-Fusion Net: A Novel Deep Neural Network Augmented with Multiple Localizations based Spatial Attention Mechanisms for Covid-19 Detection",
+    "authors": [
+      "Susmita Ghosh",
+      "Abhiroop Chatterjee"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In recent years, deep neural networks are yielding better performance in image classification tasks. However, the increasing complexity of datasets and the demand for improved performance necessitate the exploration of innovative techniques. The present work proposes a new deep neural network (called as, T-Fusion Net) that augments multiple localizations based spatial attention. This attention mechanism allows the network to focus on relevant image regions, improving its discriminative power. A homogeneous ensemble of the said network is further used to enhance image classification accuracy. For ensembling, the proposed approach considers multiple instances of individual T-Fusion Net. The model incorporates fuzzy max fusion to merge the outputs of individual nets. The fusion process is optimized through a carefully chosen parameter to strike a balance on the contributions of the individual models. Experimental evaluations on benchmark Covid-19 (SARS-CoV-2 CT scan) dataset demonstrate the effectiveness of the proposed T-Fusion Net as well as its ensemble. The proposed T-Fusion Net and the homogeneous ensemble model exhibit better performance, as compared to other state-of-the-art methods, achieving accuracy of 97.59% and 98.4%, respectively.",
+    "url": "http://arxiv.org/abs/2308.00053v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Music-Source-Separation-Training (MSST): A Unified Framework for Training and Evaluating Music Demixing Models",
+    "authors": [
+      "Roman Solovyev",
+      "Ilya Kiselev",
+      "Alexander Stempkovskiy",
+      "Tatiana Gabruseva"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Music Source Separation (MSS), the task of recovering individual sound components (stems) from a polyphonic mixture, is central to applications ranging from karaoke and remixing to audio restoration and content production. The separation quality depends on engineering decisions across the entire pipeline: model choice, training data preparation and augmentation, loss function and metrics choice, training configuration, validation, and post-processing. This paper presents MSST (Music-Source-Separation-Training) - a universal open-source framework for MSS tasks, which unifies training, validation, and inference for a broad range of modern demixing model families under a single, configuration-driven interface. The framework supports various model architectures, data preprocessing and augmentations, multiple loss functions and evaluation metrics, which helps with fast iterations and ablation studies. Additionally, the framework supports a range of practical techniques that improve separation quality, such as sliding-window inference with cross-fading, test-time augmentation, model ensembling, and fine-tuning via Low-Rank Adaptation (LORA). Our ablation studies demonstrate improvements of MSS using the above techniques. By consolidating these components into a reproducible, YAML-configurable framework, MSST lowers the barrier to systematic experimentation and enables rapid iteration from idea to verifiable result.",
+    "url": "http://arxiv.org/abs/2607.23395v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Where Should I Spend My FLOPS? Efficiency Evaluations of Visual Pre-training Methods",
+    "authors": [
+      "Skanda Koppula",
+      "Yazhe Li",
+      "Evan Shelhamer",
+      "Andrew Jaegle",
+      "Nikhil Parthasarathy",
+      "Relja Arandjelovic",
+      "João Carreira",
+      "Olivier Hénaff"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Self-supervised methods have achieved remarkable success in transfer learning, often achieving the same or better accuracy than supervised pre-training. Most prior work has done so by increasing pre-training computation by adding complex data augmentation, multiple views, or lengthy training schedules. In this work, we investigate a related, but orthogonal question: given a fixed FLOP budget, what are the best datasets, models, and (self-)supervised training methods for obtaining high accuracy on representative visual tasks? Given the availability of large datasets, this setting is often more relevant for both academic and industry labs alike. We examine five large-scale datasets (JFT-300M, ALIGN, ImageNet-1K, ImageNet-21K, and COCO) and six pre-training methods (CLIP, DINO, SimCLR, BYOL, Masked Autoencoding, and supervised). In a like-for-like fashion, we characterize their FLOP and CO$_2$ footprints, relative to their accuracy when transferred to a canonical image segmentation task. Our analysis reveals strong disparities in the computational efficiency of pre-training methods and their dependence on dataset quality. In particular, our results call into question the commonly-held assumption that self-supervised methods inherently scale to large, uncurated data. We therefore advocate for (1) paying closer attention to dataset curation and (2) reporting of accuracies in context of the total computational cost.",
+    "url": "http://arxiv.org/abs/2209.15589v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Unified Auto-Encoding with Masked Diffusion",
+    "authors": [
+      "Philippe Hansen-Estruch",
+      "Sriram Vishwanath",
+      "Amy Zhang",
+      "Manan Tomar"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "At the core of both successful generative and self-supervised representation learning models there is a reconstruction objective that incorporates some form of image corruption. Diffusion models implement this approach through a scheduled Gaussian corruption process, while masked auto-encoder models do so by masking patches of the image. Despite their different approaches, the underlying similarity in their methodologies suggests a promising avenue for an auto-encoder capable of both de-noising tasks. We propose a unified self-supervised objective, dubbed Unified Masked Diffusion (UMD), that combines patch-based and noise-based corruption techniques within a single auto-encoding framework. Specifically, UMD modifies the diffusion transformer (DiT) training process by introducing an additional noise-free, high masking representation step in the diffusion noising schedule, and utilizes a mixed masked and noised image for subsequent timesteps. By integrating features useful for diffusion modeling and for predicting masked patch tokens, UMD achieves strong performance in downstream generative and representation learning tasks, including linear probing and class-conditional generation. This is achieved without the need for heavy data augmentations, multiple views, or additional encoders. Furthermore, UMD improves over the computational efficiency of prior diffusion based methods in total training time. We release our code at https://github.com/philippe-eecs/small-vision.",
+    "url": "http://arxiv.org/abs/2406.17688v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Generalizing Math Word Problem Solvers via Solution Diversification",
+    "authors": [
+      "Zhenwen Liang",
+      "Jipeng Zhang",
+      "Lei Wang",
+      "Yan Wang",
+      "Jie Shao",
+      "Xiangliang Zhang"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Current math word problem (MWP) solvers are usually Seq2Seq models trained by the (one-problem; one-solution) pairs, each of which is made of a problem description and a solution showing reasoning flow to get the correct answer. However, one MWP problem naturally has multiple solution equations. The training of an MWP solver with (one-problem; one-solution) pairs excludes other correct solutions, and thus limits the generalizability of the MWP solver. One feasible solution to this limitation is to augment multiple solutions to a given problem. However, it is difficult to collect diverse and accurate augment solutions through human efforts. In this paper, we design a new training framework for an MWP solver by introducing a solution buffer and a solution discriminator. The buffer includes solutions generated by an MWP solver to encourage the training data diversity. The discriminator controls the quality of buffered solutions to participate in training. Our framework is flexibly applicable to a wide setting of fully, semi-weakly and weakly supervised training for all Seq2Seq MWP solvers. We conduct extensive experiments on a benchmark dataset Math23k and a new dataset named Weak12k, and show that our framework improves the performance of various MWP solvers under different settings by generating correct and diverse solutions.",
+    "url": "http://arxiv.org/abs/2212.00833v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Improving the Transferability of Adversarial Samples by Path-Augmented Method",
+    "authors": [
+      "Jianping Zhang",
+      "Jen-tse Huang",
+      "Wenxuan Wang",
+      "Yichen Li",
+      "Weibin Wu",
+      "Xiaosen Wang",
+      "Yuxin Su",
+      "Michael R. Lyu"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Deep neural networks have achieved unprecedented success on diverse vision tasks. However, they are vulnerable to adversarial noise that is imperceptible to humans. This phenomenon negatively affects their deployment in real-world scenarios, especially security-related ones. To evaluate the robustness of a target model in practice, transfer-based attacks craft adversarial samples with a local model and have attracted increasing attention from researchers due to their high efficiency. The state-of-the-art transfer-based attacks are generally based on data augmentation, which typically augments multiple training images from a linear path when learning adversarial samples. However, such methods selected the image augmentation path heuristically and may augment images that are semantics-inconsistent with the target images, which harms the transferability of the generated adversarial samples. To overcome the pitfall, we propose the Path-Augmented Method (PAM). Specifically, PAM first constructs a candidate augmentation path pool. It then settles the employed augmentation paths during adversarial sample generation with greedy search. Furthermore, to avoid augmenting semantics-inconsistent images, we train a Semantics Predictor (SP) to constrain the length of the augmentation path. Extensive experiments confirm that PAM can achieve an improvement of over 4.8% on average compared with the state-of-the-art baselines in terms of the attack success rates.",
+    "url": "http://arxiv.org/abs/2303.15735v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Communication-Efficient Soft Actor-Critic Policy Collaboration via Regulated Segment Mixture",
+    "authors": [
+      "Xiaoxue Yu",
+      "Rongpeng Li",
+      "Chengchao Liang",
+      "Zhifeng Zhao"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Multi-Agent Reinforcement Learning (MARL) has emerged as a foundational approach for addressing diverse, intelligent control tasks in various scenarios like the Internet of Vehicles, Internet of Things, and Unmanned Aerial Vehicles. However, the widely assumed existence of a central node for centralized, federated learning-assisted MARL might be impractical in highly dynamic environments. This can lead to excessive communication overhead, potentially overwhelming the system. To address these challenges, we design a novel communication-efficient, fully distributed algorithm for collaborative MARL under the frameworks of Soft Actor-Critic (SAC) and Decentralized Federated Learning (DFL), named RSM-MASAC. In particular, RSM-MASAC enhances multi-agent collaboration and prioritizes higher communication efficiency in dynamic systems by incorporating the concept of segmented aggregation in DFL and augmenting multiple model replicas from received neighboring policy segments, which are subsequently employed as reconstructed referential policies for mixing. Distinctively diverging from traditional RL approaches, RSM-MASAC introduces new bounds under the framework of Maximum Entropy Reinforcement Learning (MERL). Correspondingly, it adopts a theory-guided mixture metric to regulate the selection of contributive referential policies, thus guaranteeing soft policy improvement during the communication-assisted mixing phase. Finally, the extensive simulations in mixed-autonomy traffic control scenarios verify the effectiveness and superiority of our algorithm.",
+    "url": "http://arxiv.org/abs/2312.10123v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Plug-and-Play Traffic Element Awareness for End-to-End Autonomous Driving",
+    "authors": [
+      "Zongzheng Zhang",
+      "Jijun Wang",
+      "Saining Zhang",
+      "Shuo Wang",
+      "Yiru Wang",
+      "Hai Yang",
+      "Yang Chen",
+      "Yuwen Heng",
+      "Hao Sun",
+      "Anqing Jiang",
+      "Hao Zhao"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Traffic elements such as traffic lights and road signs play a fundamental role in human driving decisions and should naturally influence end-to-end driving performance. However, existing end-to-end driving research predominantly focuses on dynamic road participants (e.g., vehicles and pedestrians), while the role of traffic elements remains largely unexplored. The community still lacks a systematic study quantifying their impact, largely because public datasets rarely provide structured traffic-element annotations and modern driving systems vary widely in architecture and training paradigm. In this work, we present the first systematic investigation of traffic element awareness for end-to-end autonomous driving. We construct a unified research infrastructure by augmenting multiple public driving datasets with comprehensive traffic-element annotations. To support diverse model families, we adopt a minimal and universal integration design that incorporates traffic-element signals into existing pipelines in a plug-and-play manner with negligible architectural modification. We evaluate this design across modern paradigms, including perception-prediction-planning pipelines, vision-language-action models (VLA), regression-based planners, diffusion-based policies, and trajectory-scoring frameworks, on nuScenes, NAVSIM-v1, NAVSIM-v2, and Bench2Drive. Across all paradigms and datasets, this simple integration consistently improves driving performance, demonstrating that traffic element awareness provides a robust and generalizable signal for end-to-end driving systems. Notably, on the challenging NAVSIM-v2 benchmark, our approach significantly improves state-of-the-art architectures and data pipelines, establishing a new state of the art.",
+    "url": "http://arxiv.org/abs/2608.18035v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Peer Collaborative Learning for Online Knowledge Distillation",
+    "authors": [
+      "Guile Wu",
+      "Shaogang Gong"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Traditional knowledge distillation uses a two-stage training strategy to transfer knowledge from a high-capacity teacher model to a compact student model, which relies heavily on the pre-trained teacher. Recent online knowledge distillation alleviates this limitation by collaborative learning, mutual learning and online ensembling, following a one-stage end-to-end training fashion. However, collaborative learning and mutual learning fail to construct an online high-capacity teacher, whilst online ensembling ignores the collaboration among branches and its logit summation impedes the further optimisation of the ensemble teacher. In this work, we propose a novel Peer Collaborative Learning method for online knowledge distillation, which integrates online ensembling and network collaboration into a unified framework. Specifically, given a target network, we construct a multi-branch network for training, in which each branch is called a peer. We perform random augmentation multiple times on the inputs to peers and assemble feature representations outputted from peers with an additional classifier as the peer ensemble teacher. This helps to transfer knowledge from a high-capacity teacher to peers, and in turn further optimises the ensemble teacher. Meanwhile, we employ the temporal mean model of each peer as the peer mean teacher to collaboratively transfer knowledge among peers, which helps each peer to learn richer knowledge and facilitates to optimise a more stable model with better generalisation. Extensive experiments on CIFAR-10, CIFAR-100 and ImageNet show that the proposed method significantly improves the generalisation of various backbone networks and outperforms the state-of-the-art methods.",
+    "url": "http://arxiv.org/abs/2006.04147v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Synthetic Thermal Image Generation for Real-Time Animal Detection Under Low-Visibility Conditions",
+    "authors": [
+      "James Momoh",
+      "Khandaker Mamun Ahmed"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Wildlife-vehicle collisions remain a significant road safety concern, particularly during nighttime and low-visibility conditions when RGB-based perception systems are often unreliable. Thermal imaging offers a promising alternative for detecting animals under poor illumination. However, the limited availability of annotated infrared animal datasets restricts the development of robust deep learning-based detection models. This paper investigates synthetic thermal image generation as a scalable approach for real-time animal detection under low-visibility conditions. A subset of 514 annotated visible-spectrum animal images from the NTLNP dataset is translated into synthetic thermal representations using CycleGAN-Turbo, while a limited real thermal dataset of 60 images is expanded through thermal-focused augmentation. Multiple object detection architectures, including YOLOv8, YOLOv9, YOLOv10, and RT-DETR, are trained independently on synthetic and real thermal datasets and evaluated using precision, recall, mAP@0.5, mAP@0.5:0.95, model size, and inference latency. Experimental results show that synthetic thermal images provide competitive detection performance, with RT-DETR achieving the highest synthetic-data mAP@0.5 of 0.9613. Models trained on augmented real thermal data achieve the strongest overall performance, with YOLOv10s obtaining 0.9879 mAP@0.5 and 0.9571 mAP@0.5:0.95. Computational analysis further indicates that lightweight YOLO variants provide favorable inference latency, supporting their potential for real-time deployment. These findings demonstrate that synthetic thermal imagery can reduce dependence on scarce infrared datasets and support the development of efficient animal detection systems for future vehicle-mounted wildlife collision mitigation applications.",
+    "url": "http://arxiv.org/abs/2609.32944v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "CREMA: Generalizable and Efficient Video-Language Reasoning via Multimodal Modular Fusion",
+    "authors": [
+      "Shoubin Yu",
+      "Jaehong Yoon",
+      "Mohit Bansal"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Despite impressive advancements in recent multimodal reasoning approaches, they are still limited in flexibility and efficiency, as these models typically process only a few fixed modality inputs and require updates to numerous parameters. This paper tackles these critical challenges and proposes CREMA, a generalizable, highly efficient, and modular modality-fusion framework that can incorporate any new modality to enhance video reasoning. We first augment multiple informative modalities (such as optical flow, 3D point cloud, audio, thermal heatmap, and touch map) from given videos without extra human annotation by leveraging sensors or existing pre-trained models. Next, we introduce a query transformer with multiple parameter-efficient modules associated with each accessible modality. It projects diverse modality features to the LLM token embedding space, allowing the model to integrate different data types for response generation. Furthermore, we propose a novel progressive multimodal fusion design supported by a lightweight fusion module and modality-sequential training strategy. It helps compress information across various assisting modalities, maintaining computational efficiency in the LLM while improving performance. We validate our method on 7 video-language reasoning tasks assisted by diverse modalities, including conventional VideoQA and Video-Audio/3D/Touch/Thermal QA, and achieve better/equivalent performance against strong multimodal LLMs, including OneLLM, BLIP-2, and SeViLA while reducing over 90% trainable parameters. We provide extensive analyses of CREMA, including the impact of each modality on reasoning domains, the design of the fusion module, and example visualizations.",
+    "url": "http://arxiv.org/abs/2402.05889v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

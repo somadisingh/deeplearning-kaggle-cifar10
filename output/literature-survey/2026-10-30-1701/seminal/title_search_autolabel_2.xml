@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/G/rvw0Lph1SNuI3xVG5waw6PQPU</id>
+  <title>arXiv Query: search_query=ti:effective AND ti:labels AND ti:augmented AND ti:data AND ti:robustness AND ti:autolabel&amp;id_list=&amp;start=0&amp;max_results=5</title>
+  <updated>2026-10-30T21:08:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:effective+AND+(ti:labels+AND+(ti:augmented+AND+(ti:data+AND+(ti:robustness+AND+ti:autolabel))))&amp;start=0&amp;max_results=5&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2302.11188v1</id>
+    <title>What Are Effective Labels for Augmented Data? Improving Calibration and Robustness with AutoLabel</title>
+    <updated>2023-02-22T07:44:17Z</updated>
+    <link href="https://arxiv.org/abs/2302.11188v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.11188v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A wide breadth of research has devised data augmentation approaches that can improve both accuracy and generalization performance for neural networks. However, augmented data can end up being far from the clean training data and what is the appropriate label is less clear. Despite this, most existing work simply uses one-hot labels for augmented data. In this paper, we show re-using one-hot labels for highly distorted data might run the risk of adding noise and degrading accuracy and calibration. To mitigate this, we propose a generic method AutoLabel to automatically learn the confidence in the labels for augmented data, based on the transformation distance between the clean distribution and augmented distribution. AutoLabel is built on label smoothing and is guided by the calibration-performance over a hold-out validation set. We successfully apply AutoLabel to three different data augmentation techniques: the state-of-the-art RandAug, AugMix, and adversarial training. Experiments on CIFAR-10, CIFAR-100 and ImageNet show that AutoLabel significantly improves existing data augmentation techniques over models' calibration and accuracy, especially under distributional shift.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-22T07:44:17Z</published>
+    <arxiv:comment>Accepted to SaTML-2023</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yao Qin</name>
+    </author>
+    <author>
+      <name>Xuezhi Wang</name>
+    </author>
+    <author>
+      <name>Balaji Lakshminarayanan</name>
+    </author>
+    <author>
+      <name>Ed H. Chi</name>
+    </author>
+    <author>
+      <name>Alex Beutel</name>
+    </author>
+  </entry>
+</feed>

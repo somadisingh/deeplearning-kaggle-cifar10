@@ -1,0 +1,127 @@
+[
+  {
+    "title": "Improving Self-supervised Learning for Out-of-distribution Task via Auxiliary Classifier",
+    "authors": [
+      "Harshita Boonlia",
+      "Tanmoy Dam",
+      "Md Meftahul Ferdaus",
+      "Sreenatha G. Anavatti",
+      "Ankan Mullick"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "In real world scenarios, out-of-distribution (OOD) datasets may have a large distributional shift from training datasets. This phenomena generally occurs when a trained classifier is deployed on varying dynamic environments, which causes a significant drop in performance. To tackle this issue, we are proposing an end-to-end deep multi-task network in this work. Observing a strong relationship between rotation prediction (self-supervised) accuracy and semantic classification accuracy on OOD tasks, we introduce an additional auxiliary classification head in our multi-task network along with semantic classification and rotation prediction head. To observe the influence of this addition classifier in improving the rotation prediction head, our proposed learning method is framed into bi-level optimisation problem where the upper-level is trained to update the parameters for semantic classification and rotation prediction head. In the lower-level optimisation, only the auxiliary classification head is updated through semantic classification head by fixing the parameters of the semantic classification head. The proposed method has been validated through three unseen OOD datasets where it exhibits a clear improvement in semantic classification accuracy than other two baseline methods. Our code is available on GitHub \\url{https://github.com/harshita-555/OSSL}",
+    "url": "http://arxiv.org/abs/2209.02881v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-supervised Learning of Point Clouds via Orientation Estimation",
+    "authors": [
+      "Omid Poursaeed",
+      "Tianxing Jiang",
+      "Han Qiao",
+      "Nayun Xu",
+      "Vladimir G. Kim"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Point clouds provide a compact and efficient representation of 3D shapes. While deep neural networks have achieved impressive results on point cloud learning tasks, they require massive amounts of manually labeled data, which can be costly and time-consuming to collect. In this paper, we leverage 3D self-supervision for learning downstream tasks on point clouds with fewer labels. A point cloud can be rotated in infinitely many ways, which provides a rich label-free source for self-supervision. We consider the auxiliary task of predicting rotations that in turn leads to useful features for other tasks such as shape classification and 3D keypoint prediction. Using experiments on ShapeNet and ModelNet, we demonstrate that our approach outperforms the state-of-the-art. Moreover, features learned by our model are complementary to other self-supervised methods and combining them leads to further performance improvement.",
+    "url": "http://arxiv.org/abs/2008.00305v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-supervised Domain Adaptation for Computer Vision Tasks",
+    "authors": [
+      "Jiaolong Xu",
+      "Liang Xiao",
+      "Antonio M. Lopez"
+    ],
+    "year": 2019,
+    "venue": "arXiv",
+    "abstract": "Recent progress of self-supervised visual representation learning has achieved remarkable success on many challenging computer vision benchmarks. However, whether these techniques can be used for domain adaptation has not been explored. In this work, we propose a generic method for self-supervised domain adaptation, using object recognition and semantic segmentation of urban scenes as use cases. Focusing on simple pretext/auxiliary tasks (e.g. image rotation prediction), we assess different learning strategies to improve domain adaptation effectiveness by self-supervision. Additionally, we propose two complementary strategies to further boost the domain adaptation accuracy on semantic segmentation within our method, consisting of prediction layer alignment and batch normalization calibration. The experimental results show adaptation levels comparable to most studied domain adaptation methods, thus, bringing self-supervision as a new alternative for reaching domain adaptation. The code is available at https://github.com/Jiaolong/self-supervised-da.",
+    "url": "http://arxiv.org/abs/1907.10915v3",
+    "doi": "10.1109/ACCESS.2019.2949697",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards Lifelong Self-Supervision For Unpaired Image-to-Image Translation",
+    "authors": [
+      "Victor Schmidt",
+      "Makesh Narsimhan Sreedhar",
+      "Mostafa ElAraby",
+      "Irina Rish"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Unpaired Image-to-Image Translation (I2IT) tasks often suffer from lack of data, a problem which self-supervised learning (SSL) has recently been very popular and successful at tackling. Leveraging auxiliary tasks such as rotation prediction or generative colorization, SSL can produce better and more robust representations in a low data regime. Training such tasks along an I2IT task is however computationally intractable as model size and the number of task grow. On the other hand, learning sequentially could incur catastrophic forgetting of previously learned tasks. To alleviate this, we introduce Lifelong Self-Supervision (LiSS) as a way to pre-train an I2IT model (e.g., CycleGAN) on a set of self-supervised auxiliary tasks. By keeping an exponential moving average of past encoders and distilling the accumulated knowledge, we are able to maintain the network's validation performance on a number of tasks without any form of replay, parameter isolation or retraining techniques typically used in continual learning. We show that models trained with LiSS perform better on past tasks, while also being more robust than the CycleGAN baseline to color bias and entity entanglement (when two entities are very close).",
+    "url": "http://arxiv.org/abs/2004.00161v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards Efficient and Effective Self-Supervised Learning of Visual Representations",
+    "authors": [
+      "Sravanti Addepalli",
+      "Kaushal Bhogale",
+      "Priyam Dey",
+      "R. Venkatesh Babu"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Self-supervision has emerged as a propitious method for visual representation learning after the recent paradigm shift from handcrafted pretext tasks to instance-similarity based approaches. Most state-of-the-art methods enforce similarity between various augmentations of a given image, while some methods additionally use contrastive approaches to explicitly ensure diverse representations. While these approaches have indeed shown promising direction, they require a significantly larger number of training iterations when compared to the supervised counterparts. In this work, we explore reasons for the slow convergence of these methods, and further propose to strengthen them using well-posed auxiliary tasks that converge significantly faster, and are also useful for representation learning. The proposed method utilizes the task of rotation prediction to improve the efficiency of existing state-of-the-art methods. We demonstrate significant gains in performance using the proposed method on multiple datasets, specifically for lower training epochs.",
+    "url": "http://arxiv.org/abs/2210.09866v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Improving Few-Shot Learning using Composite Rotation based Auxiliary Task",
+    "authors": [
+      "Pratik Mazumder",
+      "Pravendra Singh",
+      "Vinay P. Namboodiri"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "In this paper, we propose an approach to improve few-shot classification performance using a composite rotation based auxiliary task. Few-shot classification methods aim to produce neural networks that perform well for classes with a large number of training samples and classes with less number of training samples. They employ techniques to enable the network to produce highly discriminative features that are also very generic. Generally, the better the quality and generic-nature of the features produced by the network, the better is the performance of the network on few-shot learning. Our approach aims to train networks to produce such features by using a self-supervised auxiliary task. Our proposed composite rotation based auxiliary task performs rotation at two levels, i.e., rotation of patches inside the image (inner rotation) and rotation of the whole image (outer rotation) and assigns one out of 16 rotation classes to the modified image. We then simultaneously train for the composite rotation prediction task along with the original classification task, which forces the network to learn high-quality generic features that help improve the few-shot classification performance. We experimentally show that our approach performs better than existing few-shot learning methods on multiple benchmark datasets.",
+    "url": "http://arxiv.org/abs/2006.15919v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "DIRA-SS:Dynamic Domain Incremental Regularised Adaptation -- Self-Supervised",
+    "authors": [
+      "Abanoub Ghobrial",
+      "Kerstin Eder"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Autonomous systems (AS) often rely on Deep Neural Network (DNN) classifiers to operate in complex and dynamically changing environments. However, during operation, these classifiers may encounter domains that differ from those seen during development, causing performance degradation under distribution shift. Removing systems from operation for labelled data collection and retraining is often impractical, particularly when adaptation must occur quickly and at scale. This paper introduces DIRA-SS, a self-supervised extension of Dynamic Incremental Regularised Adaptation (DIRA) that enables online domain adaptation using only a small number of unlabelled target-domain samples. DIRA-SS augments an existing classifier with an auxiliary retraining branch and adapts the shared feature representation through a rotation-prediction task, while elastic weight consolidation regularises important source-domain parameters to reduce destructive updates. This allows the model to benefit from transfer learning without requiring classification labels during operation. We evaluate DIRA-SS on CIFAR-10C, CIFAR-100C, and ImageNet-C using ResNet architectures under severe common corruptions. The results show that DIRA-SS substantially improves performance over the non-adapted source model, achieves accuracy close to the supervised DIRA method, and outperforms existing unsupervised test-time adaptation baselines on ImageNet-C when using only 100 target-domain samples.",
+    "url": "http://arxiv.org/abs/2311.07461v4",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "MatchGAN: A Self-Supervised Semi-Supervised Conditional Generative Adversarial Network",
+    "authors": [
+      "Jiaze Sun",
+      "Binod Bhattarai",
+      "Tae-Kyun Kim"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "We present a novel self-supervised learning approach for conditional generative adversarial networks (GANs) under a semi-supervised setting. Unlike prior self-supervised approaches which often involve geometric augmentations on the image space such as predicting rotation angles, our pretext task leverages the label space. We perform augmentation by randomly sampling sensible labels from the label space of the few labelled examples available and assigning them as target labels to the abundant unlabelled examples from the same distribution as that of the labelled ones. The images are then translated and grouped into positive and negative pairs by their target labels, acting as training examples for our pretext task which involves optimising an auxiliary match loss on the discriminator's side. We tested our method on two challenging benchmarks, CelebA and RaFD, and evaluated the results using standard metrics including Fréchet Inception Distance, Inception Score, and Attribute Classification Rate. Extensive empirical evaluation demonstrates the effectiveness of our proposed method over competitive baselines and existing arts. In particular, our method surpasses the baseline with only 20% of the labelled examples used to train the baseline.",
+    "url": "http://arxiv.org/abs/2006.06614v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

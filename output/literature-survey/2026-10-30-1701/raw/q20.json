@@ -1,0 +1,117 @@
+[
+  {
+    "title": "PriorityCut: Occlusion-guided Regularization for Warp-based Image Animation",
+    "authors": [
+      "Wai Ting Cheung",
+      "Gyeongsu Chae"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Image animation generates a video of a source image following the motion of a driving video. State-of-the-art self-supervised image animation approaches warp the source image according to the motion of the driving video and recover the warping artifacts by inpainting. These approaches mostly use vanilla convolution for inpainting, and vanilla convolution does not distinguish between valid and invalid pixels. As a result, visual artifacts are still noticeable after inpainting. CutMix is a state-of-the-art regularization strategy that cuts and mixes patches of images and is widely studied in different computer vision tasks. Among the remaining computer vision tasks, warp-based image animation is one of the fields that the effects of CutMix have yet to be studied. This paper first presents a preliminary study on the effects of CutMix on warp-based image animation. We observed in our study that CutMix helps improve only pixel values, but disturbs the spatial relationships between pixels. Based on such observation, we propose PriorityCut, a novel augmentation approach that uses the top-k percent occluded pixels of the foreground to regularize warp-based image animation. By leveraging the domain knowledge in warp-based image animation, PriorityCut significantly reduces the warping artifacts in state-of-the-art warp-based image animation models on diverse datasets.",
+    "url": "http://arxiv.org/abs/2103.11600v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Simple Data Mixing Prior for Improving Self-Supervised Learning",
+    "authors": [
+      "Sucheng Ren",
+      "Huiyu Wang",
+      "Zhengqi Gao",
+      "Shengfeng He",
+      "Alan Yuille",
+      "Yuyin Zhou",
+      "Cihang Xie"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Data mixing (e.g., Mixup, Cutmix, ResizeMix) is an essential component for advancing recognition models. In this paper, we focus on studying its effectiveness in the self-supervised setting. By noticing the mixed images that share the same source images are intrinsically related to each other, we hereby propose SDMP, short for $\\textbf{S}$imple $\\textbf{D}$ata $\\textbf{M}$ixing $\\textbf{P}$rior, to capture this straightforward yet essential prior, and position such mixed images as additional $\\textbf{positive pairs}$ to facilitate self-supervised representation learning. Our experiments verify that the proposed SDMP enables data mixing to help a set of self-supervised learning frameworks (e.g., MoCo) achieve better accuracy and out-of-distribution robustness. More notably, our SDMP is the first method that successfully leverages data mixing to improve (rather than hurt) the performance of Vision Transformers in the self-supervised setting. Code is publicly available at https://github.com/OliverRensu/SDMP",
+    "url": "http://arxiv.org/abs/2206.07692v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Meta-Transfer Derm-Diagnosis: Exploring Few-Shot Learning and Transfer Learning for Skin Disease Classification in Long-Tail Distribution",
+    "authors": [
+      "Zeynep Özdemir",
+      "Hacer Yalim Keles",
+      "Ömer Özgür Tanrıöver"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Building accurate models for rare skin diseases remains challenging due to the lack of sufficient labeled data and the inherently long-tailed distribution of available samples. These issues are further complicated by inconsistencies in how datasets are collected and their varying objectives. To address these challenges, we compare three learning strategies: episodic learning, supervised transfer learning, and contrastive self-supervised pretraining, within a few-shot learning framework. We evaluate five training setups on three benchmark datasets: ISIC2018, Derm7pt, and SD-198. Our findings show that traditional transfer learning approaches, particularly those based on MobileNetV2 and Vision Transformer (ViT) architectures, consistently outperform episodic and self-supervised methods as the number of training examples increases. When combined with batch-level data augmentation techniques such as MixUp, CutMix, and ResizeMix, these models achieve state-of-the-art performance on the SD-198 and Derm7pt datasets, and deliver highly competitive results on ISIC2018. All the source codes related to this work will be made publicly available soon at the provided URL.",
+    "url": "http://arxiv.org/abs/2404.16814v2",
+    "doi": "10.1109/JBHI.2025.3615479",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Cross-modal Manifold Cutmix for Self-supervised Video Representation Learning",
+    "authors": [
+      "Srijan Das",
+      "Michael S. Ryoo"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Contrastive representation learning of videos highly relies on the availability of millions of unlabelled videos. This is practical for videos available on web but acquiring such large scale of videos for real-world applications is very expensive and laborious.\n  Therefore, in this paper we focus on designing video augmentation for self-supervised learning, we first analyze the best strategy to mix videos to create a new augmented video sample. Then, the question remains, can we make use of the other modalities in videos for data mixing? To this end, we propose Cross-Modal Manifold Cutmix (CMMC) that inserts a video tesseract into another video tesseract in the feature space across two different modalities. We find that our video mixing strategy STC-mix, i.e. preliminary mixing of videos followed by CMMC across different modalities in a video, improves the quality of learned video representations. We conduct thorough experiments for two downstream tasks: action recognition and video retrieval on two small scale video datasets UCF101, and HMDB51. We also demonstrate the effectiveness of our STC-mix on NTU dataset where domain knowledge is limited.\n  We show that the performance of our STC-mix on both the downstream tasks is on par with the other self-supervised approaches while requiring less training data.",
+    "url": "http://arxiv.org/abs/2112.03906v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Brain-Aware Replacements for Supervised Contrastive Learning in Detection of Alzheimer's Disease",
+    "authors": [
+      "Mehmet Saygın Seyfioğlu",
+      "Zixuan Liu",
+      "Pranav Kamath",
+      "Sadjyot Gangolli",
+      "Sheng Wang",
+      "Thomas Grabowski",
+      "Linda Shapiro"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "We propose a novel framework for Alzheimer's disease (AD) detection using brain MRIs. The framework starts with a data augmentation method called Brain-Aware Replacements (BAR), which leverages a standard brain parcellation to replace medically-relevant 3D brain regions in an anchor MRI from a randomly picked MRI to create synthetic samples. Ground truth \"hard\" labels are also linearly mixed depending on the replacement ratio in order to create \"soft\" labels. BAR produces a great variety of realistic-looking synthetic MRIs with higher local variability compared to other mix-based methods, such as CutMix. On top of BAR, we propose using a soft-label-capable supervised contrastive loss, aiming to learn the relative similarity of representations that reflect how mixed are the synthetic MRIs using our soft labels. This way, we do not fully exhaust the entropic capacity of our hard labels, since we only use them to create soft labels and synthetic MRIs through BAR. We show that a model pre-trained using our framework can be further fine-tuned with a cross-entropy loss using the hard labels that were used to create the synthetic samples. We validated the performance of our framework in a binary AD detection task against both from-scratch supervised training and state-of-the-art self-supervised training plus fine-tuning approaches. Then we evaluated BAR's individual performance compared to another mix-based method CutMix by integrating it within our framework. We show that our framework yields superior results in both precision and recall for the AD detection task.",
+    "url": "http://arxiv.org/abs/2207.04574v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-supervised Pre-training with Hard Examples Improves Visual Representations",
+    "authors": [
+      "Chunyuan Li",
+      "Xiujun Li",
+      "Lei Zhang",
+      "Baolin Peng",
+      "Mingyuan Zhou",
+      "Jianfeng Gao"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Self-supervised pre-training (SSP) employs random image transformations to generate training data for visual representation learning. In this paper, we first present a modeling framework that unifies existing SSP methods as learning to predict pseudo-labels. Then, we propose new data augmentation methods of generating training examples whose pseudo-labels are harder to predict than those generated via random image transformations. Specifically, we use adversarial training and CutMix to create hard examples (HEXA) to be used as augmented views for MoCo-v2 and DeepCluster-v2, leading to two variants HEXA_{MoCo} and HEXA_{DCluster}, respectively. In our experiments, we pre-train models on ImageNet and evaluate them on multiple public benchmarks. Our evaluation shows that the two new algorithm variants outperform their original counterparts, and achieve new state-of-the-art on a wide range of tasks where limited task supervision is available for fine-tuning. These results verify that hard examples are instrumental in improving the generalization of the pre-trained models.",
+    "url": "http://arxiv.org/abs/2012.13493v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Generalized Supervised Contrastive Learning",
+    "authors": [
+      "Jaewon Kim",
+      "Hyukjong Lee",
+      "Jooyoung Chang",
+      "Sang Min Park"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "With the recent promising results of contrastive learning in the self-supervised learning paradigm, supervised contrastive learning has successfully extended these contrastive approaches to supervised contexts, outperforming cross-entropy on various datasets. However, supervised contrastive learning inherently employs label information in a binary form--either positive or negative--using a one-hot target vector. This structure struggles to adapt to methods that exploit label information as a probability distribution, such as CutMix and knowledge distillation. In this paper, we introduce a generalized supervised contrastive loss, which measures cross-entropy between label similarity and latent similarity. This concept enhances the capabilities of supervised contrastive loss by fully utilizing the label distribution and enabling the adaptation of various existing techniques for training modern neural networks. Leveraging this generalized supervised contrastive loss, we construct a tailored framework: the Generalized Supervised Contrastive Learning (GenSCL). Compared to existing contrastive learning frameworks, GenSCL incorporates additional enhancements, including advanced image-based regularization techniques and an arbitrary teacher classifier. When applied to ResNet50 with the Momentum Contrast technique, GenSCL achieves a top-1 accuracy of 77.3% on ImageNet, a 4.1% relative improvement over traditional supervised contrastive learning. Moreover, our method establishes new state-of-the-art accuracies of 98.2% and 87.0% on CIFAR10 and CIFAR100 respectively when applied to ResNet50, marking the highest reported figures for this architecture.",
+    "url": "http://arxiv.org/abs/2206.00384v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

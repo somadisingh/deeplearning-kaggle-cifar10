@@ -1,0 +1,397 @@
+[
+ {
+  "id": "1910.05872",
+  "expected_title": "Self-supervised Label Augmentation via Input Transformations",
+  "arxiv_title": "Self-supervised Label Augmentation via Input Transformations",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2019",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Hankook Lee",
+   "Sung Ju Hwang",
+   "Jinwoo Shin"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "1906.12340",
+  "expected_title": "Using Self-Supervised Learning Can Improve Model Robustness and Uncertainty",
+  "arxiv_title": "Using Self-Supervised Learning Can Improve Model Robustness and Uncertainty",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2019",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Dan Hendrycks",
+   "Mantas Mazeika",
+   "Saurav Kadavath",
+   "Dawn Song"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2107.13715",
+  "expected_title": "Hierarchical Self-supervised Augmented Knowledge Distillation",
+  "arxiv_title": "Hierarchical Self-supervised Augmented Knowledge Distillation",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2021",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Chuanguang Yang",
+   "Zhulin An",
+   "Linhang Cai",
+   "Yongjun Xu"
+  ],
+  "journal_ref": null,
+  "doi": "10.24963/ijcai.2021/168"
+ },
+ {
+  "id": "2211.04625",
+  "expected_title": "Soft Augmentation for Image Classification",
+  "arxiv_title": "Soft Augmentation for Image Classification",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2022",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Yang Liu",
+   "Shen Yan",
+   "Laura Leal-Taixé",
+   "James Hays",
+   "Deva Ramanan"
+  ],
+  "journal_ref": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2023 (pp. 16241-16250)",
+  "doi": null
+ },
+ {
+  "id": "2408.01977",
+  "expected_title": "Label Augmentation for Neural Networks Robustness",
+  "arxiv_title": "Label Augmentation for Neural Networks Robustness",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2024",
+  "ok": true,
+  "latest_version": "v1",
+  "authors": [
+   "Fatemeh Amerehi",
+   "Patrick Healy"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2301.05865",
+  "expected_title": "Gated Self-supervised Learning For Improving Supervised Learning",
+  "arxiv_title": "Gated Self-supervised Learning For Improving Supervised Learning",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2023",
+  "ok": true,
+  "latest_version": "v1",
+  "authors": [
+   "Erland Hilman Fuadi",
+   "Aristo Renaldo Ruslim",
+   "Putu Wahyu Kusuma Wardhana",
+   "Novanto Yudistira"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2007.08176",
+  "expected_title": "CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances",
+  "arxiv_title": "CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2020",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Jihoon Tack",
+   "Sangwoo Mo",
+   "Jongheon Jeong",
+   "Jinwoo Shin"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2006.07114",
+  "expected_title": "Knowledge Distillation Meets Self-Supervision",
+  "arxiv_title": "Knowledge Distillation Meets Self-Supervision",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2020",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Guodong Xu",
+   "Ziwei Liu",
+   "Xiaoxiao Li",
+   "Chen Change Loy"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2004.11362",
+  "expected_title": "Supervised Contrastive Learning",
+  "arxiv_title": "Supervised Contrastive Learning",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2020",
+  "ok": true,
+  "latest_version": "v5",
+  "authors": [
+   "Prannay Khosla",
+   "Piotr Teterwak",
+   "Chen Wang",
+   "Aaron Sarna",
+   "Yonglong Tian",
+   "Phillip Isola",
+   "Aaron Maschinot",
+   "Ce Liu",
+   "Dilip Krishnan"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "1901.09335",
+  "expected_title": "Augment your batch: better training with larger batches",
+  "arxiv_title": "Augment your batch: better training with larger batches",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2019",
+  "ok": true,
+  "latest_version": "v1",
+  "authors": [
+   "Elad Hoffer",
+   "Tal Ben-Nun",
+   "Itay Hubara",
+   "Niv Giladi",
+   "Torsten Hoefler",
+   "Daniel Soudry"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2105.13343",
+  "expected_title": "Drawing Multiple Augmentation Samples Per Image During Training Efficiently Decreases Test Error",
+  "arxiv_title": "Drawing Multiple Augmentation Samples Per Image During Training Efficiently Decreases Test Error",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2021",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Stanislav Fort",
+   "Andrew Brock",
+   "Razvan Pascanu",
+   "Soham De",
+   "Samuel L. Smith"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "1909.12220",
+  "expected_title": "Implicit Semantic Data Augmentation for Deep Networks",
+  "arxiv_title": "Implicit Semantic Data Augmentation for Deep Networks",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2019",
+  "ok": true,
+  "latest_version": "v5",
+  "authors": [
+   "Yulin Wang",
+   "Xuran Pan",
+   "Shiji Song",
+   "Hong Zhang",
+   "Cheng Wu",
+   "Gao Huang"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2006.12000",
+  "expected_title": "Self-Knowledge Distillation with Progressive Refinement of Targets",
+  "arxiv_title": "Self-Knowledge Distillation with Progressive Refinement of Targets",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2020",
+  "ok": true,
+  "latest_version": "v3",
+  "authors": [
+   "Kyungyul Kim",
+   "ByeongMoon Ji",
+   "Doyoung Yoon",
+   "Sangheum Hwang"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2203.16172",
+  "expected_title": "Self-Distillation from the Last Mini-Batch for Consistency Regularization",
+  "arxiv_title": "Self-Distillation from the Last Mini-Batch for Consistency Regularization",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2022",
+  "ok": true,
+  "latest_version": "v1",
+  "authors": [
+   "Yiqing Shen",
+   "Liwu Xu",
+   "Yuzhe Yang",
+   "Yaqian Li",
+   "Yandong Guo"
+  ],
+  "journal_ref": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022, pp. 11943-11952",
+  "doi": null
+ },
+ {
+  "id": "1905.04899",
+  "expected_title": "CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features",
+  "arxiv_title": "CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2019",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Sangdoo Yun",
+   "Dongyoon Han",
+   "Seong Joon Oh",
+   "Sanghyuk Chun",
+   "Junsuk Choe",
+   "Youngjoon Yoo"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "1901.08933",
+  "expected_title": "Self-Supervised Generalisation with Meta Auxiliary Learning",
+  "arxiv_title": "Self-Supervised Generalisation with Meta Auxiliary Learning",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2019",
+  "ok": true,
+  "latest_version": "v3",
+  "authors": [
+   "Shikun Liu",
+   "Andrew J. Davison",
+   "Edward Johns"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2111.09613",
+  "expected_title": "Improving Transferability of Representations via Augmentation-Aware Self-Supervision",
+  "arxiv_title": "Improving Transferability of Representations via Augmentation-Aware Self-Supervision",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2021",
+  "ok": true,
+  "latest_version": "v1",
+  "authors": [
+   "Hankook Lee",
+   "Kibok Lee",
+   "Kimin Lee",
+   "Honglak Lee",
+   "Jinwoo Shin"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "1912.02781",
+  "expected_title": "AugMix",
+  "arxiv_title": "AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty",
+  "similarity": 0.1463,
+  "similarity_main_title": 1.0,
+  "match_basis": "main title before the colon (expected title is a short form)",
+  "year": "2019",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Dan Hendrycks",
+   "Norman Mu",
+   "Ekin D. Cubuk",
+   "Barret Zoph",
+   "Justin Gilmer",
+   "Balaji Lakshminarayanan"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "2003.13964",
+  "expected_title": "Regularizing Class-wise Predictions via Self-knowledge Distillation",
+  "arxiv_title": "Regularizing Class-wise Predictions via Self-knowledge Distillation",
+  "similarity": 1.0,
+  "similarity_main_title": null,
+  "match_basis": "full title",
+  "year": "2020",
+  "ok": true,
+  "latest_version": "v2",
+  "authors": [
+   "Sukmin Yun",
+   "Jongjin Park",
+   "Kimin Lee",
+   "Jinwoo Shin"
+  ],
+  "journal_ref": null,
+  "doi": null
+ },
+ {
+  "id": "1905.08094",
+  "expected_title": "Be Your Own Teacher",
+  "arxiv_title": "Be Your Own Teacher: Improve the Performance of Convolutional Neural Networks via Self Distillation",
+  "similarity": 0.3248,
+  "similarity_main_title": 1.0,
+  "match_basis": "main title before the colon (expected title is a short form)",
+  "year": "2019",
+  "ok": true,
+  "latest_version": "v1",
+  "authors": [
+   "Linfeng Zhang",
+   "Jiebo Song",
+   "Anni Gao",
+   "Jingwei Chen",
+   "Chenglong Bao",
+   "Kaisheng Ma"
+  ],
+  "journal_ref": null,
+  "doi": null
+ }
+]

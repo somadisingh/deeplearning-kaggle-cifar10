@@ -1,0 +1,101 @@
+[
+ {
+  "key": "decoupled_sla",
+  "title": "Decoupled self-supervised label augmentation for fully-supervised image classification",
+  "attempts": [
+   {
+    "kind": "phrase",
+    "search_query": "ti:\"decoupled self supervised label augmentation for fully supervised image classification\"",
+    "n_results": 0,
+    "candidates": []
+   },
+   {
+    "kind": "words",
+    "search_query": "ti:decoupled AND ti:self AND ti:supervised AND ti:label AND ti:augmentation AND ti:fully AND ti:supervised AND ti:image",
+    "n_results": 0,
+    "candidates": []
+   },
+   {
+    "kind": "loose",
+    "search_query": "ti:decoupled AND ti:\"label augmentation\"",
+    "n_results": 0,
+    "candidates": []
+   },
+   {
+    "kind": "loose",
+    "search_query": "abs:decoupled AND abs:\"label augmentation\"",
+    "n_results": 1,
+    "candidates": [
+     {
+      "id": "2501.10638",
+      "version": "v1",
+      "title": "A Resource-Efficient Training Framework for Remote Sensing Text--Image Retrieval",
+      "year": "2025",
+      "authors": [
+       "Weihang Zhang",
+       "Jihao Li",
+       "Shuoke Li",
+       "Ziqing Niu",
+       "Jialiang Chen",
+       "Wenkai Zhang"
+      ],
+      "journal_ref": null,
+      "doi": null,
+      "similarity": 0.3879
+     }
+    ]
+   }
+  ],
+  "match": null
+ },
+ {
+  "key": "autolabel",
+  "title": "What are effective labels for augmented data? Improving robustness with AutoLabel",
+  "attempts": [
+   {
+    "kind": "phrase",
+    "search_query": "ti:\"what are effective labels for augmented data improving robustness with autolabel\"",
+    "n_results": 0,
+    "candidates": []
+   },
+   {
+    "kind": "words",
+    "search_query": "ti:effective AND ti:labels AND ti:augmented AND ti:data AND ti:robustness AND ti:autolabel",
+    "n_results": 1,
+    "candidates": [
+     {
+      "id": "2302.11188",
+      "version": "v1",
+      "title": "What Are Effective Labels for Augmented Data? Improving Calibration and Robustness with AutoLabel",
+      "year": "2023",
+      "authors": [
+       "Yao Qin",
+       "Xuezhi Wang",
+       "Balaji Lakshminarayanan",
+       "Ed H. Chi",
+       "Alex Beutel"
+      ],
+      "journal_ref": null,
+      "doi": null,
+      "similarity": 0.9091
+     }
+    ]
+   }
+  ],
+  "match": {
+   "id": "2302.11188",
+   "title": "What Are Effective Labels for Augmented Data? Improving Calibration and Robustness with AutoLabel",
+   "year": "2023",
+   "similarity": 0.9091,
+   "authors": [
+    "Yao Qin",
+    "Xuezhi Wang",
+    "Balaji Lakshminarayanan",
+    "Ed H. Chi",
+    "Alex Beutel"
+   ],
+   "journal_ref": null,
+   "doi": null
+  }
+ }
+]

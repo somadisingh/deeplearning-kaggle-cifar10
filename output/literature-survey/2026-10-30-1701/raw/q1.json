@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Self-Supervised GANs with Label Augmentation",
+    "authors": [
+      "Liang Hou",
+      "Huawei Shen",
+      "Qi Cao",
+      "Xueqi Cheng"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Recently, transformation-based self-supervised learning has been applied to generative adversarial networks (GANs) to mitigate catastrophic forgetting in the discriminator by introducing a stationary learning environment. However, the separate self-supervised tasks in existing self-supervised GANs cause a goal inconsistent with generative modeling due to the fact that their self-supervised classifiers are agnostic to the generator distribution. To address this problem, we propose a novel self-supervised GAN that unifies the GAN task with the self-supervised task by augmenting the GAN labels (real or fake) via self-supervision of data transformation. Specifically, the original discriminator and self-supervised classifier are unified into a label-augmented discriminator that predicts the augmented labels to be aware of both the generator distribution and the data distribution under every transformation, and then provide the discrepancy between them to optimize the generator. Theoretically, we prove that the optimal generator could converge to replicate the real data distribution. Empirically, we show that the proposed method significantly outperforms previous self-supervised and data augmentation GANs on both generative modeling and representation learning across benchmark datasets.",
+    "url": "http://arxiv.org/abs/2106.08601v5",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-supervised Contrastive Learning for Implicit Collaborative Filtering",
+    "authors": [
+      "Shipeng Song",
+      "Bin Liu",
+      "Fei Teng",
+      "Tianrui Li"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Contrastive learning-based recommendation algorithms have significantly advanced the field of self-supervised recommendation, particularly with BPR as a representative ranking prediction task that dominates implicit collaborative filtering. However, the presence of false-positive and false-negative examples in recommendation systems hampers accurate preference learning. In this study, we propose a simple self-supervised contrastive learning framework that leverages positive feature augmentation and negative label augmentation to improve the self-supervisory signal. Theoretical analysis demonstrates that our learning method is equivalent to maximizing the likelihood estimation with latent variables representing user interest centers. Additionally, we establish an efficient negative label augmentation technique that samples unlabeled examples with a probability linearly dependent on their relative ranking positions, enabling efficient augmentation in constant time complexity. Through validation on multiple datasets, we illustrate the significant improvements our method achieves over the widely used BPR optimization objective while maintaining comparable runtime.",
+    "url": "http://arxiv.org/abs/2403.07265v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Back to Supervision: Boosting Word Boundary Detection through Frame Classification",
+    "authors": [
+      "Simone Carnemolla",
+      "Salvatore Calcagno",
+      "Simone Palazzo",
+      "Daniela Giordano"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Speech segmentation at both word and phoneme levels is crucial for various speech processing tasks. It significantly aids in extracting meaningful units from an utterance, thus enabling the generation of discrete elements. In this work we propose a model-agnostic framework to perform word boundary detection in a supervised manner also employing a labels augmentation technique and an output-frame selection strategy. We trained and tested on the Buckeye dataset and only tested on TIMIT one, using state-of-the-art encoder models, including pre-trained solutions (Wav2Vec 2.0 and HuBERT), as well as convolutional and convolutional recurrent networks. Our method, with the HuBERT encoder, surpasses the performance of other state-of-the-art architectures, whether trained in supervised or self-supervised settings on the same datasets. Specifically, we achieved F-values of 0.8427 on the Buckeye dataset and 0.7436 on the TIMIT dataset, along with R-values of 0.8489 and 0.7807, respectively. These results establish a new state-of-the-art for both datasets. Beyond the immediate task, our approach offers a robust and efficient preprocessing method for future research in audio tokenization.",
+    "url": "http://arxiv.org/abs/2411.10423v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/v6UE4A8jSqM6dxXrwDXwm74klCc</id>
+  <title>arXiv Query: search_query=ti:decoupled AND ti:self AND ti:supervised AND ti:label AND ti:augmentation AND ti:fully AND ti:supervised AND ti:image&amp;id_list=&amp;start=0&amp;max_results=5</title>
+  <updated>2026-10-30T21:08:04Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:decoupled+AND+(ti:self+AND+(ti:supervised+AND+(ti:label+AND+(ti:augmentation+AND+(ti:fully+AND+(ti:supervised+AND+ti:image))))))&amp;start=0&amp;max_results=5&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>
+  <opensearch:totalResults>0</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+</feed>

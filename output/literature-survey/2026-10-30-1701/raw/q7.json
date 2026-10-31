@@ -1,0 +1,517 @@
+[
+  {
+    "title": "Gated Self-supervised Learning For Improving Supervised Learning",
+    "authors": [
+      "Erland Hilman Fuadi",
+      "Aristo Renaldo Ruslim",
+      "Putu Wahyu Kusuma Wardhana",
+      "Novanto Yudistira"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "In past research on self-supervised learning for image classification, the use of rotation as an augmentation has been common. However, relying solely on rotation as a self-supervised transformation can limit the ability of the model to learn rich features from the data. In this paper, we propose a novel approach to self-supervised learning for image classification using several localizable augmentations with the combination of the gating method. Our approach uses flip and shuffle channel augmentations in addition to the rotation, allowing the model to learn rich features from the data. Furthermore, the gated mixture network is used to weigh the effects of each self-supervised learning on the loss function, allowing the model to focus on the most relevant transformations for classification.",
+    "url": "http://arxiv.org/abs/2301.05865v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Mixture of Self-Supervised Learning",
+    "authors": [
+      "Aristo Renaldo Ruslim",
+      "Novanto Yudistira",
+      "Budi Darma Setiawan"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Self-supervised learning is popular method because of its ability to learn features in images without using its labels and is able to overcome limited labeled datasets used in supervised learning. Self-supervised learning works by using a pretext task which will be trained on the model before being applied to a specific task. There are some examples of pretext tasks used in self-supervised learning in the field of image recognition, namely rotation prediction, solving jigsaw puzzles, and predicting relative positions on image. Previous studies have only used one type of transformation as a pretext task. This raises the question of how it affects if more than one pretext task is used and to use a gating network to combine all pretext tasks. Therefore, we propose the Gated Self-Supervised Learning method to improve image classification which use more than one transformation as pretext task and uses the Mixture of Expert architecture as a gating network in combining each pretext task so that the model automatically can study and focus more on the most useful augmentations for classification. We test performance of the proposed method in several scenarios, namely CIFAR imbalance dataset classification, adversarial perturbations, Tiny-Imagenet dataset classification, and semi-supervised learning. Moreover, there are Grad-CAM and T-SNE analysis that are used to see the proposed method for identifying important features that influence image classification and representing data for each class and separating different classes properly. Our code is in https://github.com/aristorenaldo/G-SSL",
+    "url": "http://arxiv.org/abs/2307.14897v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "PointGame: Geometrically and Adaptively Masked Auto-Encoder on Point Clouds",
+    "authors": [
+      "Yun Liu",
+      "Xuefeng Yan",
+      "Zhilei Chen",
+      "Zhiqi Li",
+      "Zeyong Wei",
+      "Mingqiang Wei"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Self-supervised learning is attracting large attention in point cloud understanding. However, exploring discriminative and transferable features still remains challenging due to their nature of irregularity and sparsity. We propose a geometrically and adaptively masked auto-encoder for self-supervised learning on point clouds, termed \\textit{PointGame}. PointGame contains two core components: GATE and EAT. GATE stands for the geometrical and adaptive token embedding module; it not only absorbs the conventional wisdom of geometric descriptors that captures the surface shape effectively, but also exploits adaptive saliency to focus on the salient part of a point cloud. EAT stands for the external attention-based Transformer encoder with linear computational complexity, which increases the efficiency of the whole pipeline. Unlike cutting-edge unsupervised learning models, PointGame leverages geometric descriptors to perceive surface shapes and adaptively mines discriminative features from training data. PointGame showcases clear advantages over its competitors on various downstream tasks under both global and local fine-tuning strategies. The code and pre-trained models will be publicly available.",
+    "url": "http://arxiv.org/abs/2303.13100v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Every Node is Different: Dynamically Fusing Self-Supervised Tasks for Attributed Graph Clustering",
+    "authors": [
+      "Pengfei Zhu",
+      "Qian Wang",
+      "Yu Wang",
+      "Jialu Li",
+      "Qinghua Hu"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Attributed graph clustering is an unsupervised task that partitions nodes into different groups. Self-supervised learning (SSL) shows great potential in handling this task, and some recent studies simultaneously learn multiple SSL tasks to further boost performance. Currently, different SSL tasks are assigned the same set of weights for all graph nodes. However, we observe that some graph nodes whose neighbors are in different groups require significantly different emphases on SSL tasks. In this paper, we propose to dynamically learn the weights of SSL tasks for different nodes and fuse the embeddings learned from different SSL tasks to boost performance. We design an innovative graph clustering approach, namely Dynamically Fusing Self-Supervised Learning (DyFSS). Specifically, DyFSS fuses features extracted from diverse SSL tasks using distinct weights derived from a gating network. To effectively learn the gating network, we design a dual-level self-supervised strategy that incorporates pseudo labels and the graph structure. Extensive experiments on five datasets show that DyFSS outperforms the state-of-the-art multi-task SSL methods by up to 8.66% on the accuracy metric. The code of DyFSS is available at: https://github.com/q086/DyFSS.",
+    "url": "http://arxiv.org/abs/2401.06595v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Task-customized Masked AutoEncoder via Mixture of Cluster-conditional Experts",
+    "authors": [
+      "Zhili Liu",
+      "Kai Chen",
+      "Jianhua Han",
+      "Lanqing Hong",
+      "Hang Xu",
+      "Zhenguo Li",
+      "James T. Kwok"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Masked Autoencoder~(MAE) is a prevailing self-supervised learning method that achieves promising results in model pre-training. However, when the various downstream tasks have data distributions different from the pre-training data, the semantically irrelevant pre-training information might result in negative transfer, impeding MAE's scalability. To address this issue, we propose a novel MAE-based pre-training paradigm, Mixture of Cluster-conditional Experts (MoCE), which can be trained once but provides customized pre-training models for diverse downstream tasks. Different from the mixture of experts (MoE), our MoCE trains each expert only with semantically relevant images by using cluster-conditional gates. Thus, each downstream task can be allocated to its customized model pre-trained with data most similar to the downstream data. Experiments on a collection of 11 downstream tasks show that MoCE outperforms the vanilla MAE by 2.45\\% on average. It also obtains new state-of-the-art self-supervised learning results on detection and segmentation.",
+    "url": "http://arxiv.org/abs/2402.05382v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-supervised Speaker Recognition with Loss-gated Learning",
+    "authors": [
+      "Ruijie Tao",
+      "Kong Aik Lee",
+      "Rohan Kumar Das",
+      "Ville Hautamäki",
+      "Haizhou Li"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "In self-supervised learning for speaker recognition, pseudo labels are useful as the supervision signals. It is a known fact that a speaker recognition model doesn't always benefit from pseudo labels due to their unreliability. In this work, we observe that a speaker recognition network tends to model the data with reliable labels faster than those with unreliable labels. This motivates us to study a loss-gated learning (LGL) strategy, which extracts the reliable labels through the fitting ability of the neural network during training. With the proposed LGL, our speaker recognition model obtains a $46.3\\%$ performance gain over the system without it. Further, the proposed self-supervised speaker recognition with LGL trained on the VoxCeleb2 dataset without any labels achieves an equal error rate of $1.66\\%$ on the VoxCeleb1 original test set. Code has been made available at: https://github.com/TaoRuijie/Loss-Gated-Learning.",
+    "url": "http://arxiv.org/abs/2110.03869v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Unifying Synergies between Self-supervised Learning and Dynamic Computation",
+    "authors": [
+      "Tarun Krishna",
+      "Ayush K Rai",
+      "Alexandru Drimbarean",
+      "Eric Arazo",
+      "Paul Albert",
+      "Alan F Smeaton",
+      "Kevin McGuinness",
+      "Noel E O'Connor"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Computationally expensive training strategies make self-supervised learning (SSL) impractical for resource constrained industrial settings. Techniques like knowledge distillation (KD), dynamic computation (DC), and pruning are often used to obtain a lightweightmodel, which usually involves multiple epochs of fine-tuning (or distilling steps) of a large pre-trained model, making it more computationally challenging. In this work we present a novel perspective on the interplay between SSL and DC paradigms. In particular, we show that it is feasible to simultaneously learn a dense and gated sub-network from scratch in a SSL setting without any additional fine-tuning or pruning steps. The co-evolution during pre-training of both dense and gated encoder offers a good accuracy-efficiency trade-off and therefore yields a generic and multi-purpose architecture for application specific industrial settings. Extensive experiments on several image classification benchmarks including CIFAR-10/100, STL-10 and ImageNet-100, demonstrate that the proposed training strategy provides a dense and corresponding gated sub-network that achieves on-par performance compared with the vanilla self-supervised setting, but at a significant reduction in computation in terms of FLOPs, under a range of target budgets (td ).",
+    "url": "http://arxiv.org/abs/2301.09164v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Wav2DF-TSL: Two-stage Learning with Efficient Pre-training and Hierarchical Experts Fusion for Robust Audio Deepfake Detection",
+    "authors": [
+      "Yunqi Hao",
+      "Yihao Chen",
+      "Minqiang Xu",
+      "Jianbo Zhan",
+      "Liang He",
+      "Lei Fang",
+      "Sian Fang",
+      "Lin Liu"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "In recent years, self-supervised learning (SSL) models have made significant progress in audio deepfake detection (ADD) tasks. However, existing SSL models mainly rely on large-scale real speech for pre-training and lack the learning of spoofed samples, which leads to susceptibility to domain bias during the fine-tuning process of the ADD task. To this end, we propose a two-stage learning strategy (Wav2DF-TSL) based on pre-training and hierarchical expert fusion for robust audio deepfake detection. In the pre-training stage, we use adapters to efficiently learn artifacts from 3000 hours of unlabelled spoofed speech, improving the adaptability of front-end features while mitigating catastrophic forgetting. In the fine-tuning stage, we propose the hierarchical adaptive mixture of experts (HA-MoE) method to dynamically fuse multi-level spoofing cues through multi-expert collaboration with gated routing. Experimental results show that the proposed method significantly outperforms the baseline system on all four benchmark datasets, especially on the cross-domain In-the-wild dataset, achieving a 27.5% relative improvement in equal error rate (EER), outperforming the existing state-of-the-art systems. Index Terms: audio deepfake detection, self-supervised learning, parameter-efficient fine-tuning, mixture of experts",
+    "url": "http://arxiv.org/abs/2509.04161v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-Supervised Speaker Verification Using Dynamic Loss-Gate and Label Correction",
+    "authors": [
+      "Bing Han",
+      "Zhengyang Chen",
+      "Yanmin Qian"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "For self-supervised speaker verification, the quality of pseudo labels decides the upper bound of the system due to the massive unreliable labels. In this work, we propose dynamic loss-gate and label correction (DLG-LC) to alleviate the performance degradation caused by unreliable estimated labels. In DLG, we adopt Gaussian Mixture Model (GMM) to dynamically model the loss distribution and use the estimated GMM to distinguish the reliable and unreliable labels automatically. Besides, to better utilize the unreliable data instead of dropping them directly, we correct the unreliable label with model predictions. Moreover, we apply the negative-pairs-free DINO framework in our experiments for further improvement. Compared to the best-known speaker verification system with self-supervised learning, our proposed DLG-LC converges faster and achieves 11.45%, 18.35% and 15.16% relative improvement on Vox-O, Vox-E and Vox-H trials of Voxceleb1 evaluation dataset.",
+    "url": "http://arxiv.org/abs/2208.01928v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Domain-Adaptive Dual-Gating Mixture of Experts for Generalizable Speech Deepfake Detection",
+    "authors": [
+      "Siqing Qin",
+      "Zhe Li",
+      "Kong Aik Lee",
+      "Man-Wai Mak"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Recent advances in speech deepfake detection (SDD) have leveraged the Mixture of Experts (MoE) to enhance generalization capacity. However, existing gating networks often overlook the acoustic and temporal cues of deepfakes. In this work, we propose a novel domain-adaptive dual-gating MoE (DADGMoE) framework for SDD under unseen attack types and acoustic conditions. Our innovative dual-gating mechanism leverages Sinc-layer-based filters to process both low-level acoustic signals (raw waveforms) and high-level speech representations from a large self-supervised learning (SSL) model. It further incorporates domain prototypes to guide expert routing based on implicit deepfake patterns. The lightweight affine experts process the routed inputs. Experiments show that our DADGMoE significantly outperforms the baseline, achieving up to a 40.8% relative EER reduction on challenging out-of-dataset benchmarks. This framework demonstrates superior generalization capabilities and efficient design.",
+    "url": "http://arxiv.org/abs/2609.33709v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GATE: Graph CCA for Temporal SElf-supervised Learning for Label-efficient fMRI Analysis",
+    "authors": [
+      "Liang Peng",
+      "Nan Wang",
+      "Jie Xu",
+      "Xiaofeng Zhu",
+      "Xiaoxiao Li"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "In this work, we focus on the challenging task, neuro-disease classification, using functional magnetic resonance imaging (fMRI). In population graph-based disease analysis, graph convolutional neural networks (GCNs) have achieved remarkable success. However, these achievements are inseparable from abundant labeled data and sensitive to spurious signals. To improve fMRI representation learning and classification under a label-efficient setting, we propose a novel and theory-driven self-supervised learning (SSL) framework on GCNs, namely Graph CCA for Temporal self-supervised learning on fMRI analysis GATE. Concretely, it is demanding to design a suitable and effective SSL strategy to extract formation and robust features for fMRI. To this end, we investigate several new graph augmentation strategies from fMRI dynamic functional connectives (FC) for SSL training. Further, we leverage canonical-correlation analysis (CCA) on different temporal embeddings and present the theoretical implications. Consequently, this yields a novel two-step GCN learning procedure comprised of (i) SSL on an unlabeled fMRI population graph and (ii) fine-tuning on a small labeled fMRI dataset for a classification task. Our method is tested on two independent fMRI datasets, demonstrating superior performance on autism and dementia diagnosis.",
+    "url": "http://arxiv.org/abs/2203.09034v3",
+    "doi": "10.1109/TMI.2022.3201974",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Cluster Head Detection for Hierarchical UAV Swarm With Graph Self-supervised Learning",
+    "authors": [
+      "Zhiyu Mou",
+      "Jun Liu",
+      "Xiang Yun",
+      "Feifei Gao",
+      "Qihui Wu"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "In this paper, we study the cluster head detection problem of a two-level unmanned aerial vehicle (UAV) swarm network (USNET) with multiple UAV clusters, where the inherent follow strategy (IFS) of low-level follower UAVs (FUAVs) with respect to high-level cluster head UAVs (HUAVs) is unknown. We first propose a graph attention self-supervised learning algorithm (GASSL) to detect the HUAVs of a single UAV cluster, where the GASSL can fit the IFS at the same time. Then, to detect the HUAVs in the USNET with multiple UAV clusters, we develop a multi-cluster graph attention self-supervised learning algorithm (MC-GASSL) based on the GASSL. The MC-GASSL clusters the USNET with a gated recurrent unit (GRU)-based metric learning scheme and finds the HUAVs in each cluster with GASSL. Numerical results show that the GASSL can detect the HUAVs in single UAV clusters obeying various kinds of IFSs with over 98% average accuracy. The simulation results also show that the clustering purity of the USNET with MC-GASSL exceeds that with traditional clustering algorithms by at least 10% average. Furthermore, the MC-GASSL can efficiently detect all the HUAVs in USNETs with various IFSs and cluster numbers with low detection redundancies.",
+    "url": "http://arxiv.org/abs/2203.04311v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "PromptMono: Cross Prompting Attention for Self-Supervised Monocular Depth Estimation in Challenging Environments",
+    "authors": [
+      "Changhao Wang",
+      "Guanwen Zhang",
+      "Zhengyun Cheng",
+      "Wei Zhou"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Considerable efforts have been made to improve monocular depth estimation under ideal conditions. However, in challenging environments, monocular depth estimation still faces difficulties. In this paper, we introduce visual prompt learning for predicting depth across different environments within a unified model, and present a self-supervised learning framework called PromptMono. It employs a set of learnable parameters as visual prompts to capture domain-specific knowledge. To integrate prompting information into image representations, a novel gated cross prompting attention (GCPA) module is proposed, which enhances the depth estimation in diverse conditions. We evaluate the proposed PromptMono on the Oxford Robotcar dataset and the nuScenes dataset. Experimental results demonstrate the superior performance of the proposed method.",
+    "url": "http://arxiv.org/abs/2501.13796v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "SJTU-AISPEECH System for VoxCeleb Speaker Recognition Challenge 2022",
+    "authors": [
+      "Zhengyang Chen",
+      "Bing Han",
+      "Xu Xiang",
+      "Houjun Huang",
+      "Bei Liu",
+      "Yanmin Qian"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "This report describes the SJTU-AISPEECH system for the Voxceleb Speaker Recognition Challenge 2022. For track1, we implemented two kinds of systems, the online system and the offline system. Different ResNet-based backbones and loss functions are explored. Our final fusion system achieved 3rd place in track1. For track3, we implemented statistic adaptation and jointly training based domain adaptation. In the jointly training based domain adaptation, we jointly trained the source and target domain dataset with different training objectives to do the domain adaptation. We explored two different training objectives for target domain data, self-supervised learning based angular proto-typical loss and semi-supervised learning based classification loss with estimated pseudo labels. Besides, we used the dynamic loss-gate and label correction (DLG-LC) strategy to improve the quality of pseudo labels when the target domain objective is a classification loss. Our final fusion system achieved 4th place (very close to 3rd place, relatively less than 1%) in track3.",
+    "url": "http://arxiv.org/abs/2209.09076v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Optimizing Speech Multi-View Feature Fusion through Conditional Computation",
+    "authors": [
+      "Weiqiao Shan",
+      "Yuhao Zhang",
+      "Yuchen Han",
+      "Bei Li",
+      "Xiaofeng Zhao",
+      "Yuang Li",
+      "Min Zhang",
+      "Hao Yang",
+      "Tong Xiao",
+      "Jingbo Zhu"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "Recent advancements have highlighted the efficacy of self-supervised learning (SSL) features in various speech-related tasks, providing lightweight and versatile multi-view speech representations. However, our study reveals that while SSL features expedite model convergence, they conflict with traditional spectral features like FBanks in terms of update directions. In response, we propose a novel generalized feature fusion framework grounded in conditional computation, featuring a gradient-sensitive gating network and a multi-stage dropout strategy. This framework mitigates feature conflicts and bolsters model robustness to multi-view input features. By integrating SSL and spectral features, our approach accelerates convergence and maintains performance on par with spectral models across multiple speech translation tasks on the MUSTC dataset.",
+    "url": "http://arxiv.org/abs/2501.08057v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Do Compact SSL Backbones Matter for Audio Deepfake Detection? A Controlled Study with RAPTOR",
+    "authors": [
+      "Ajinkya Kulkarni",
+      "Sandipana Dowerah",
+      "Atharva Kulkarni",
+      "Tanel Alumäe",
+      "Mathew Magimai Doss"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Self-supervised learning (SSL) underpins modern audio deepfake detection, yet most prior work centers on a single large wav2vec2-XLSR backbone, leaving compact under studied. We present RAPTOR, Representation Aware Pairwise-gated Transformer for Out-of-domain Recognition a controlled study of compact SSL backbones from the HuBERT and WavLM within a unified pairwise-gated fusion detector, evaluated across 14 cross-domain benchmarks. We show that multilingual HuBERT pre-training is the primary driver of cross-domain robustness, enabling 100M models to match larger and commercial systems. Beyond EER, we introduce a test-time augmentation protocol with perturbation-based aleatoric uncertainty to expose calibration differences invisible to standard metrics: WavLM variants exhibit overconfident miscalibration under perturbation, whereas iterative mHuBERT remains stable. These findings indicate that SSL pre-training trajectory, not model scale, drives reliable audio deepfake detection.",
+    "url": "http://arxiv.org/abs/2603.06164v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards Adaptive Fusion of Multimodal Deep Networks for Human Action Recognition",
+    "authors": [
+      "Novanto Yudistira"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "This study introduces a pioneering methodology for human action recognition by harnessing deep neural network techniques and adaptive fusion strategies across multiple modalities, including RGB, optical flows, audio, and depth information. Employing gating mechanisms for multimodal fusion, we aim to surpass limitations inherent in traditional unimodal recognition methods while exploring novel possibilities for diverse applications. Through an exhaustive investigation of gating mechanisms and adaptive weighting-based fusion architectures, our methodology enables the selective integration of relevant information from various modalities, thereby bolstering both accuracy and robustness in action recognition tasks. We meticulously examine various gated fusion strategies to pinpoint the most effective approach for multimodal action recognition, showcasing its superiority over conventional unimodal methods. Gating mechanisms facilitate the extraction of pivotal features, resulting in a more holistic representation of actions and substantial enhancements in recognition performance. Our evaluations across human action recognition, violence action detection, and multiple self-supervised learning tasks on benchmark datasets demonstrate promising advancements in accuracy. The significance of this research lies in its potential to revolutionize action recognition systems across diverse fields. The fusion of multimodal information promises sophisticated applications in surveillance and human-computer interaction, especially in contexts related to active assisted living.",
+    "url": "http://arxiv.org/abs/2512.04943v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self2Self+: Single-Image Denoising with Self-Supervised Learning and Image Quality Assessment Loss",
+    "authors": [
+      "Jaekyun Ko",
+      "Sanghwan Lee"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Recently, denoising methods based on supervised learning have exhibited promising performance. However, their reliance on external datasets containing noisy-clean image pairs restricts their applicability. To address this limitation, researchers have focused on training denoising networks using solely a set of noisy inputs. To improve the feasibility of denoising procedures, in this study, we proposed a single-image self-supervised learning method in which only the noisy input image is used for network training. Gated convolution was used for feature extraction and no-reference image quality assessment was used for guiding the training process. Moreover, the proposed method sampled instances from the input image dataset using Bernoulli sampling with a certain dropout rate for training. The corresponding result was produced by averaging the generated predictions from various instances of the trained network with dropouts. The experimental results indicated that the proposed method achieved state-of-the-art denoising performance on both synthetic and real-world datasets. This highlights the effectiveness and practicality of our method as a potential solution for various noise removal tasks.",
+    "url": "http://arxiv.org/abs/2307.10695v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "BAT: Better Audio Transformer Guided by Convex Gated Probing",
+    "authors": [
+      "Houtan Ghaffari",
+      "Lukas Rauch",
+      "Christoph Scholz",
+      "Paul Devos"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Probing is widely adopted in computer vision to faithfully evaluate self-supervised learning (SSL) embeddings, as finetuning may misrepresent their inherent quality. In contrast, audio SSL models still rely on finetuning because simple probing fails to unlock their full potential and alters their rankings when competing on AudioSet. Hence, a robust and efficient probing mechanism is required to guide the trajectory of audio SSL towards reliable and reproducible methods. We introduce Convex Gated Probing (CGP), a prototype-based method that significantly closes the gap between finetuning and probing in audio. CGP efficiently utilizes all frozen layers via a gating mechanism and exposes the location of latent task-relevant information. Guided by CGP as a reliable post-hoc evaluation probe, we rework the entire SSL pipeline of current best performing audio models that use legacy implementations of prior SSL methods. By refining data preprocessing, model architecture, and pretraining recipe, we introduce Better Audio Transformer (BAT), and establish new SOTA on audio benchmarks.",
+    "url": "http://arxiv.org/abs/2602.16305v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "MatSSL: Robust Self-Supervised Representation Learning for Metallographic Image Segmentation",
+    "authors": [
+      "Hoang Hai Nam Nguyen",
+      "Phan Nguyen Duc Hieu",
+      "Ho Won Lee"
+    ],
+    "year": 2025,
+    "venue": "arXiv",
+    "abstract": "MatSSL is a streamlined self-supervised learning (SSL) architecture that employs Gated Feature Fusion at each stage of the backbone to integrate multi-level representations effectively. Current micrograph analysis of metallic materials relies on supervised methods, which require retraining for each new dataset and often perform inconsistently with only a few labeled samples. While SSL offers a promising alternative by leveraging unlabeled data, most existing methods still depend on large-scale datasets to be effective. MatSSL is designed to overcome this limitation. We first perform self-supervised pretraining on a small-scale, unlabeled dataset and then fine-tune the model on multiple benchmark datasets. The resulting segmentation models achieve 69.13% mIoU on MetalDAM, outperforming the 66.73% achieved by an ImageNet-pretrained encoder, and delivers consistently up to nearly 40% improvement in average mIoU on the Environmental Barrier Coating benchmark dataset (EBC) compared to models pretrained with MicroNet. This suggests that MatSSL enables effective adaptation to the metallographic domain using only a small amount of unlabeled data, while preserving the rich and transferable features learned from large-scale pretraining on natural images.",
+    "url": "http://arxiv.org/abs/2507.18184v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "M3-JEPA: Multimodal Alignment via Multi-gate MoE based on the Joint-Embedding Predictive Architecture",
+    "authors": [
+      "Hongyang Lei",
+      "Xiaolong Cheng",
+      "Qi Qin",
+      "Dan Wang",
+      "Kun Fan",
+      "Huazhen Huang",
+      "Qingqing Gu",
+      "Yetao Wu",
+      "Zhonglin Jiang",
+      "Yong Chen",
+      "Luo Ji"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "Current multimodal learning strategies primarily optimize in the original token space. Such a framework is easy to incorporate with the backbone of pretrained language model, but might result in modality collapse. To alleviate such issues, we leverage the Joint-Embedding Predictive Architecture (JEPA) on the multimodal tasks, which converts the input embedding into the output embedding space by a predictor and then conducts the cross-modal alignment on the latent space. We implement this predictor by a Multi-Gate Mixture of Experts (MMoE) and name the framework as M3-JEPA, accordingly. The gating function disentangles the modality-specific and shared information and derives information-theoretic optimality. The framework is implemented with both contrastive and regularization loss, and solved by alternative gradient descent (AGD) between different multimodal tasks. By thoroughly designed experiments, we show that M3-JEPA can obtain state-of-the-art performance on different modalities and tasks, generalize to unseen datasets and domains, and is computationally efficient in both training and inference. Our observation suggests that M3-JEPA might become a new basis to self-supervised learning in the open world.",
+    "url": "http://arxiv.org/abs/2409.05929v6",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Transformer Meets Gated Residual Networks To Enhance Photoplethysmogram Artifact Detection Informed by Mutual Information Neural Estimation",
+    "authors": [
+      "Thanh-Dung Le",
+      "Clara Macabiau",
+      "Kévin Albert",
+      "Symeon Chatzinotas",
+      "Philippe Jouvet",
+      "Rita Noumeir"
+    ],
+    "year": 2024,
+    "venue": "arXiv",
+    "abstract": "This study delves into the effectiveness of various learning methods in improving Transformer models, focusing particularly on the Gated Residual Network Transformer (GRN-Transformer) in the context of pediatric intensive care units (PICU) with limited data availability. Our findings indicate that Transformers trained via supervised learning are less effective compared to MLP, CNN, and LSTM networks in such environments. Yet, leveraging unsupervised and self-supervised learning on unannotated data, with subsequent fine-tuning on annotated data, notably enhances Transformer performance, although not to the level of the GRN-Transformer. Central to our research is the analysis of different activation functions for the Gated Linear Unit (GLU), a crucial element of the GRN structure. We also employ Mutual Information Neural Estimation (MINE) to evaluate the GRN's contribution. Additionally, the study examines the effects of integrating GRN within the Transformer's Attention mechanism versus using it as a separate intermediary layer. Our results highlight that GLU with sigmoid activation stands out, achieving 0.98 accuracy, 0.91 precision, 0.96 recall, and 0.94 F1 score. The MINE analysis supports the hypothesis that GRN enhances the mutual information between the hidden representations and the output. Moreover, the use of GRN as an intermediate filter layer proves more beneficial than incorporating it within the Attention mechanism. In summary, this research clarifies how GRN bolsters GRN-Transformer's performance, surpassing other learning techniques. These findings offer a promising avenue for adopting sophisticated models like Transformers in data-constrained environments, such as PPG artifact detection in PICU settings.",
+    "url": "http://arxiv.org/abs/2405.16177v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "An Effective Transformer-based Contextual Model and Temporal Gate Pooling for Speaker Identification",
+    "authors": [
+      "Harunori Kawano",
+      "Sota Shimizu"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Wav2vec2 has achieved success in applying Transformer architecture and self-supervised learning to speech recognition. Recently, these have come to be used not only for speech recognition but also for the entire speech processing. This paper introduces an effective end-to-end speaker identification model applied Transformer-based contextual model. We explored the relationship between the hyper-parameters and the performance in order to discern the structure of an effective model. Furthermore, we propose a pooling method, Temporal Gate Pooling, with powerful learning ability for speaker identification. We applied Conformer as encoder and BEST-RQ for pre-training and conducted an evaluation utilizing the speaker identification of VoxCeleb1. The proposed method has achieved an accuracy of 87.1% with 28.5M parameters, demonstrating comparable precision to wav2vec2 with 317.7M parameters. Code is available at https://github.com/HarunoriKawano/speaker-identification-with-tgp.",
+    "url": "http://arxiv.org/abs/2308.11241v2",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GSQAS: Graph Self-supervised Quantum Architecture Search",
+    "authors": [
+      "Zhimin He",
+      "Maijie Deng",
+      "Shenggen Zheng",
+      "Lvzhou Li",
+      "Haozhen Situ"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Quantum Architecture Search (QAS) is a promising approach to designing quantum circuits for variational quantum algorithms (VQAs). However, existing QAS algorithms require to evaluate a large number of quantum circuits during the search process, which makes them computationally demanding and limits their applications to large-scale quantum circuits. Recently, predictor-based QAS has been proposed to alleviate this problem by directly estimating the performances of circuits according to their structures with a predictor trained on a set of labeled quantum circuits. However, the predictor is trained by purely supervised learning, which suffers from poor generalization ability when labeled training circuits are scarce. It is very time-consuming to obtain a large number of labeled quantum circuits because the gate parameters of quantum circuits need to be optimized until convergence to obtain their ground-truth performances. To overcome these limitations, we propose GSQAS, a graph self-supervised QAS, which trains a predictor based on self-supervised learning. Specifically, we first pre-train a graph encoder on a large number of unlabeled quantum circuits using a well-designed pretext task in order to generate meaningful representations of circuits. Then the downstream predictor is trained on a small number of quantum circuits' representations and their labels. Once the encoder is trained, it can apply to different downstream tasks. In order to better encode the spatial topology information and avoid the huge dimension of feature vectors for large-scale quantum circuits, we design a scheme to encode quantum circuits as graphs. Simulation results on searching circuit structures for variational quantum eigensolver and quantum state classification show that GSQAS outperforms the state-of-the-art predictor-based QAS, achieving better performance with fewer labeled circuits.",
+    "url": "http://arxiv.org/abs/2303.12381v1",
+    "doi": "10.1016/j.physa.2023.129286",
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Semi-Supervised Crowd Counting from Unlabeled Data",
+    "authors": [
+      "Haoran Duan",
+      "Fan Wan",
+      "Rui Sun",
+      "Zeyu Wang",
+      "Varun Ojha",
+      "Yu Guan",
+      "Hubert P. H. Shum",
+      "Bingzhang Hu",
+      "Yang Long"
+    ],
+    "year": 2021,
+    "venue": "arXiv",
+    "abstract": "Automatic Crowd behavior analysis can be applied to effectively help the daily transportation statistics and planning, which helps the smart city construction. As one of the most important keys, crowd counting has drawn increasing attention. Recent works achieved promising performance but relied on the supervised paradigm with expensive crowd annotations. To alleviate the annotation cost in real-world transportation scenarios, in this work we proposed a semi-supervised learning framework $S^{4}\\textit{Crowd}$, which can leverage both unlabeled/labeled data for robust crowd counting. In the unsupervised pathway, two \\textit{self-supervised losses} were proposed to simulate the crowd variations such as scale, illumination, based on which supervised information pseudo labels were generated and gradually refined. We also proposed a crowd-driven recurrent unit \\textit{Gated-Crowd-Recurrent-Unit (GCRU)}, which can preserve discriminant crowd information by extracting second-order statistics, yielding pseudo labels with improved quality. A joint loss including both unsupervised/supervised information was proposed, and a dynamic weighting strategy was employed to balance the importance of the unsupervised loss and supervised loss at different training stages. We conducted extensive experiments on four popular crowd counting datasets in semi-supervised settings. Experimental results supported the effectiveness of each proposed component in our $S^{4}$Crowd framework. Our method achieved competitive performance in semi-supervised learning approaches on these crowd counting datasets.",
+    "url": "http://arxiv.org/abs/2108.13969v3",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Self-Supervised Learning with Cluster-Aware-DINO for High-Performance Robust Speaker Verification",
+    "authors": [
+      "Bing Han",
+      "Zhengyang Chen",
+      "Yanmin Qian"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "Automatic speaker verification task has made great achievements using deep learning approaches with the large-scale manually annotated dataset. However, it's very difficult and expensive to collect a large amount of well-labeled data for system building. In this paper, we propose a novel and advanced self-supervised learning framework which can construct a high performance speaker verification system without using any labeled data. To avoid the impact of false negative pairs, we adopt the self-distillation with no labels (DINO) framework as the initial model, which can be trained without exploiting negative pairs. Then, we introduce a cluster-aware training strategy for DINO to improve the diversity of data. In the iteration learning stage, due to a mass of unreliable labels from clustering, the quality of pseudo labels is important for the system training. This motivates us to propose dynamic loss-gate and label correction (DLG-LC) methods to alleviate the performance degradation caused by unreliable labels. More specifically, we model the loss distribution with GMM and obtain the loss-gate threshold dynamically to distinguish the reliable and unreliable labels. Besides, we adopt the model predictions to correct the unreliable label, for better utilizing the unreliable data rather than dropping them directly. Moreover, we extend the DLG-LC to multi-modality to further improve the performance. The experiments are performed on the commonly used Voxceleb dataset. Compared to the best-known self-supervised speaker verification system, our proposed method obtain 22.17%, 27.94% and 25.56% relative EER improvement on Vox-O, Vox-E and Vox-H test sets, even with fewer iterations, smaller models, and simpler clustering methods. More importantly, the newly proposed system even achieves comparable results with the fully supervised system, but without using any human labeled data.",
+    "url": "http://arxiv.org/abs/2304.05754v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Latent Factor Modeling with Expert Network for Multi-Behavior Recommendation",
+    "authors": [
+      "Mingshi Yan",
+      "Zhiyong Cheng",
+      "Yahong Han",
+      "Meng Wang"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Traditional recommendation methods, which typically focus on modeling a single user behavior (e.g., purchase), often face severe data sparsity issues. Multi-behavior recommendation methods offer a promising solution by leveraging user data from diverse behaviors. However, most existing approaches entangle multiple behavioral factors, learning holistic but imprecise representations that fail to capture specific user intents. To address this issue, we propose a multi-behavior method by modeling latent factors with an expert network (MBLFE). In our approach, we design a gating expert network, where the expert network models all latent factors within the entire recommendation scenario, with each expert specializing in a specific latent factor. The gating network dynamically selects the optimal combination of experts for each user, enabling a more accurate representation of user preferences. To ensure independence among experts and factor consistency of a particular expert, we incorporate self-supervised learning during the training process. Furthermore, we enrich embeddings with multi-behavior data to provide the expert network with more comprehensive collaborative information for factor extraction. Extensive experiments on three real-world datasets demonstrate that our method significantly outperforms state-of-the-art baselines, validating its effectiveness.",
+    "url": "http://arxiv.org/abs/2603.18556v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "GLINT: Sparsely Gated Vision-Language Alignment for Fine-Grained Radiology Representations",
+    "authors": [
+      "Jonggwon Park",
+      "Seongeun Lee",
+      "Junhyun Park",
+      "Hannah Yun",
+      "Hyunwoong Kim",
+      "Sohyun Jeong",
+      "Hyewon Kang",
+      "Byungmu Yoon",
+      "Kyoyun Choi"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Vision-language models (VLMs) for radiology have emerged as a scalable paradigm by leveraging image-report pairs naturally produced in clinical workflows. However, this pairing reveals a mismatch in scale: each finding occupies only a small region of the image, yet supervision is provided only at the global image-report level. This poses a central challenge: prior approaches spread weight densely across all patches rather than concentrating on the sparse subset relevant to a given query. To address this, we present GLINT (Gated Language-Image alignmeNT), a framework that explicitly models this sparse correspondence. On the alignment side, we introduce Sparsely Gated Alignment, a novel architecture in which a sigmoid gate over a separate gate embedding space activates only the patches relevant to each textual query, enforcing explicit sparsity. On the representation side, we add Dense Feature Regularization, which anchors the trainable encoder's intermediate features to a frozen self-supervised learning (SSL) teacher, preserving the fine-grained patch features that the gate relies on. The same recipe applies to both 2D chest X-ray (CXR) and 3D chest computed tomography (CT), built with DINOv3 and V-JEPA 2.1, respectively. GLINT enables zero-shot classification, grounding, and segmentation from free-text queries, and to our knowledge is the first to demonstrate zero-shot segmentation on 3D CT volumes without mask supervision. Notably, the most pronounced gains arise on zero-shot grounding and segmentation, where sparse, query-specific localization is required, consistent with our design intent. In downstream evaluation, GLINT outperforms both SSL encoders and medical VLMs on classification, report generation, and segmentation.",
+    "url": "http://arxiv.org/abs/2606.03180v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Dynamic Semantic Compression for Efficient Latent-Space Inference in Large Language Models",
+    "authors": [
+      "Peipei Li",
+      "Dongsen Zhang",
+      "Yuchen Liu",
+      "Wenjun Xu"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Large Language Models (LLMs) primarily perform inference at the token level, resulting in substantial memory overhead and compromised computational efficiency. In this paper, we propose a Dynamic Semantic Extraction and Inference (DSEI) framework, which achieves segment-level inference within the latent space through a two-stage training strategy. First, we construct a Dynamic Semantic Autoencoder (DSAE) via self-supervised learning. DSAE dynamically extracts segment-level semantics and compresses them into compact latent representations via adaptive semantic weighting and gated fusion. Subsequently, we integrate the DSAE into the LLM architecture and train the model to infer over dense latent space. DSEI substantially reduces both input and generation sequences and significantly enhances inference efficiency. Extensive experiments conducted on the Wanjuan dataset demonstrate that DSEI reduces perplexity by 48% compared to static sentence-level latent inference baseline. Furthermore, compared to standard LLMs using token-level inference, DSEI accelerates inference speed by 2.5$\\times$ and reduces memory overhead by 90%.",
+    "url": "http://arxiv.org/abs/2609.15338v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Modular Foundation Models for Time-Series Perception in Digital Twins",
+    "authors": [
+      "Quang Hung Pham",
+      "Ryad Zemouri",
+      "Martin Gagnon",
+      "Luc Vouligny"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "Engineering Digital Twins and Prognostics and Health Management (PHM) systems rely on robust perception modules to extract actionable information from heterogeneous and non-stationary time-series data. However, most existing approaches remain task-specific, data-hungry, and difficult to integrate into scalable monitoring and decision-making pipelines. Moreover, purely data-driven models often lack robustness and transferability across varying operating conditions. To address these challenges, this paper proposes a modular foundation model for time-series perception based on a collection of pretrained representation encoders. The framework leverages self-supervised learning on heterogeneous datasets to learn transferable and task-agnostic representations, which can be reused across multiple PHM tasks. A gating mechanism is introduced to dynamically select relevant encoders for a given target dataset, enabling conditional computation and adaptive model composition. The selected representations are projected into a shared latent space and aggregated using a Transformer-based self-attention module that explicitly models cross-encoder interactions. The resulting architecture supports multiple downstream tasks, including imputation, long-term forecasting, and few-shot learning, through lightweight task-specific heads, while keeping pretrained encoders frozen during adaptation. Extensive ablation studies demonstrate the complementary roles of self-supervised pretraining, encoder selection, representation alignment, and adaptive aggregation. Experimental results on the ETT benchmark show competitive performance across tasks, while a real-world industrial case study on virtual sensing for hydro-generator rotor temperature highlights the practical relevance of the approach.",
+    "url": "http://arxiv.org/abs/2607.03585v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]

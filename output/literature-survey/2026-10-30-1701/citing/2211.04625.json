@@ -1,0 +1,617 @@
+{
+ "seed": "2211.04625",
+ "seed_title": "Soft Augmentation for Image Classification",
+ "retrieved_utc": "2026-10-30T21:08:23+00:00",
+ "checked_utc": "2026-10-30T21:11:09+00:00",
+ "source_used": "semantic_scholar",
+ "attempts": [
+  {
+   "source": "semantic_scholar",
+   "status": "ok",
+   "n": 23
+  }
+ ],
+ "completeness_check": {
+  "s2_record": {
+   "paperId": "1d10c9f97c183ffa9cf61285040451f4de4096d7",
+   "externalIds": {
+    "DBLP": "conf/cvpr/LiuYLHR23",
+    "ArXiv": "2211.04625",
+    "DOI": "10.1109/CVPR52729.2023.01558",
+    "CorpusId": 253420538
+   },
+   "title": "Soft Augmentation for Image Classification",
+   "venue": "Computer Vision and Pattern Recognition",
+   "year": 2022,
+   "citationCount": 23
+  },
+  "openalex_arxiv_doi_record": {
+   "id": "https://openalex.org/W4386083053",
+   "display_name": "Soft Augmentation for Image Classification",
+   "publication_year": 2023,
+   "doi": "https://doi.org/10.1109/cvpr52729.2023.01558",
+   "cited_by_count": 25
+  },
+  "openalex_exact_title_works": [
+   {
+    "id": "https://openalex.org/W4386083053",
+    "display_name": "Soft Augmentation for Image Classification",
+    "publication_year": 2023,
+    "doi": "https://doi.org/10.1109/cvpr52729.2023.01558",
+    "cited_by_count": 25
+   }
+  ],
+  "titles_checked": [
+   "Soft Augmentation for Image Classification"
+  ]
+ },
+ "n_citing": 23,
+ "citing": [
+  {
+   "title": "Leakage-Aware Ablation of Data Augmentation for Sugarcane Leaf Disease Classification: Operator- and Severity-Specific Effects",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.63158/journalisi.v8i5.1896",
+   "venue": "Journal of Information Systems and Informatics",
+   "citation_count": 0,
+   "s2_paper_id": "90c16fb8f60019a6a686646ace6e1bdfa0d7a0c8",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "AGVBench: A Reliability-Oriented Benchmark of Data Augmentation for Vein Recognition",
+   "year": 2026,
+   "arxiv_id": "2607.02271",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 0,
+   "s2_paper_id": "1f98f5e13a9ce1ef52d9824a8a5112e222fe716e",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Difficulty-Aware Flow-based Augmentation for SAR Semi-Supervised Learning",
+   "year": 2026,
+   "arxiv_id": null,
+   "doi": "10.1109/iceic69189.2026.11385968",
+   "venue": "International Conference on Electronics, Information and Communications",
+   "citation_count": 0,
+   "s2_paper_id": "1c68b93faa4ff3c455112a05fe321a53406f025e",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "A Lightweight and Data-Centric Framework for Real-Time Object Detection in Fisheye Camera",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1109/iccvw69036.2025.00576",
+   "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+   "citation_count": 1,
+   "s2_paper_id": "bfa8cc63d989cb51c727ab38b925c479009dab66",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Multi-Objective Optimization for Deep Neural Network Calibration",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1109/iccvw69036.2025.00653",
+   "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+   "citation_count": 0,
+   "s2_paper_id": "d748d9a2a0135e16fe5317c2265bf35de108e942",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "On-the-Fly Data Augmentation via Gradient-Guided and Sample-Aware Influence Estimation",
+   "year": 2025,
+   "arxiv_id": "2510.00434",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 1,
+   "s2_paper_id": "1b44db850c283c959e00d1ae89f713c600492d2b",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Analysis of hyperparameter optimization effects on lightweight deep models for real-time image classification",
+   "year": 2025,
+   "arxiv_id": "2507.23315",
+   "doi": "10.1038/s41598-026-42748-w",
+   "venue": "Scientific Reports",
+   "citation_count": 2,
+   "s2_paper_id": "c69b415052a2f842719335baf1b4230ac1719dfd",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Combined Image Data Augmentations diminish the benefits of Adaptive Label Smoothing",
+   "year": 2025,
+   "arxiv_id": "2507.16427",
+   "doi": null,
+   "venue": "DAGM GCPR",
+   "citation_count": 0,
+   "s2_paper_id": "cfc5186e4b2cb495ae24f2764da17f01d0daa474",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Classification of Tents in Street Bazaars Using CNN",
+   "year": 2025,
+   "arxiv_id": "2506.17946",
+   "doi": "10.1109/compsystech65493.2025.11137220",
+   "venue": "International Conference on Computer Systems and Technologies",
+   "citation_count": 0,
+   "s2_paper_id": "ffba8aa6820299afc2ba3ba8840cba39d9650403",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "AdvMixUp: Adversarial MixUp Regularization for Deep Learning",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1109/tnnls.2025.3562363",
+   "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+   "citation_count": 3,
+   "s2_paper_id": "022ac16d80c901a3585d9a4c86024db15e83de6c",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "A simple data augmentation method for automatic modulation recognition via mixing signals",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1109/ricai64321.2024.10910984",
+   "venue": "International Conference on Robotics, Intelligent Control and Artificial Intelligence",
+   "citation_count": 3,
+   "s2_paper_id": "b2c10206793c8cfaaedf32eb8050af33c3cb638b",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Federated Feature Augmentation and Alignment",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1109/tpami.2024.3457751",
+   "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+   "citation_count": 19,
+   "s2_paper_id": "f389dc247a965cf8e02b444b1bf26ceff98f1e5d",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "MuShAug: Boosting Sequence Signal Classification via Multishape Augmentation",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1109/jiot.2024.3418019",
+   "venue": "IEEE Internet of Things Journal",
+   "citation_count": 4,
+   "s2_paper_id": "04713fb405ad65d2b42190ce20edd76d0076ae08",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Accurate and Robust Object Detection via Selective Adversarial Learning With Constraints",
+   "year": 2024,
+   "arxiv_id": null,
+   "doi": "10.1109/tip.2024.3470529",
+   "venue": "IEEE Transactions on Image Processing",
+   "citation_count": 3,
+   "s2_paper_id": "4caf80f5b3039b99a9109f90698ff8a32c590b2f",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "SAFLEX: Self-Adaptive Augmentation via Feature Label Extrapolation",
+   "year": 2024,
+   "arxiv_id": "2410.02512",
+   "doi": null,
+   "venue": "International Conference on Learning Representations",
+   "citation_count": 1,
+   "s2_paper_id": "a31e133a07a0ad72783db0dc3b9b946d55138af0",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "EntAugment: Entropy-Driven Adaptive Data Augmentation Framework for Image Classification",
+   "year": 2024,
+   "arxiv_id": "2409.06290",
+   "doi": null,
+   "venue": "European Conference on Computer Vision",
+   "citation_count": 23,
+   "s2_paper_id": "ca7a32d22e2656856b310f4aab18b7280d140832",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Fourier-Basis Functions to Bridge Augmentation Gap: Rethinking Frequency Augmentation in Image Classification",
+   "year": 2024,
+   "arxiv_id": "2403.01944",
+   "doi": "10.1109/cvpr52733.2024.01682",
+   "venue": "Computer Vision and Pattern Recognition",
+   "citation_count": 38,
+   "s2_paper_id": "d90e49746c21c1096bfa7bc146e240e41b1f939c",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Latent Enhancing AutoEncoder for Occluded Image Classification",
+   "year": 2024,
+   "arxiv_id": "2402.06936",
+   "doi": null,
+   "venue": "International Conference on Information Photonics",
+   "citation_count": 4,
+   "s2_paper_id": "9b17484e5cce854d224e660b17b37e666589c67b",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "NOAH: Learning Pairwise Object Category Attentions for Image Classification",
+   "year": 2024,
+   "arxiv_id": "2402.02377",
+   "doi": null,
+   "venue": "arXiv.org",
+   "citation_count": 3,
+   "s2_paper_id": "436d48f6851d9330c553efc36880c0d1ffd3c20b",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "DualAug: Exploiting Additional Heavy Augmentation with OOD Data Rejection",
+   "year": 2023,
+   "arxiv_id": "2310.08139",
+   "doi": null,
+   "venue": "Neurocomputing",
+   "citation_count": 3,
+   "s2_paper_id": "8e8e84dcf5b2af3fecfeb85b5f8c2725365a6b9a",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Comparative Analysis of Convolutional Neural Networks and Vision Transformer on Classification of Images Containing Homogenous Microstructures",
+   "year": 2023,
+   "arxiv_id": null,
+   "doi": "10.1109/weconf57201.2023.10148032",
+   "venue": "2023 Wave Electronics and its Application in Information and Telecommunication Systems (WECONF)",
+   "citation_count": 2,
+   "s2_paper_id": "9afceaeba0a74cf495ca1ee1dfd242c9ae5b1f5e",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Diffusion-Noise-Based Augmentation for Long-Tailed Remote Sensing Image Classification",
+   "year": 2025,
+   "arxiv_id": null,
+   "doi": "10.1109/tgrs.2025.3568812",
+   "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+   "citation_count": 4,
+   "s2_paper_id": "16f2175b63138e31cabfa92126e4d73e0d22a9da",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  },
+  {
+   "title": "Regulating EEG data augmentation with uncertainty-guided exploration and evidential calibration",
+   "year": null,
+   "arxiv_id": null,
+   "doi": "10.1016/j.bspc.2026.111398",
+   "venue": "Biomedical Signal Processing and Control",
+   "citation_count": 0,
+   "s2_paper_id": "9e7e4e581de01fbc73a029fa0576b992eed915bd",
+   "found_in": [
+    "semantic_scholar"
+   ]
+  }
+ ],
+ "raw": {
+  "semantic_scholar": [
+   {
+    "paperId": "90c16fb8f60019a6a686646ace6e1bdfa0d7a0c8",
+    "externalIds": {
+     "DOI": "10.63158/journalisi.v8i5.1896",
+     "CorpusId": 294337772
+    },
+    "title": "Leakage-Aware Ablation of Data Augmentation for Sugarcane Leaf Disease Classification: Operator- and Severity-Specific Effects",
+    "venue": "Journal of Information Systems and Informatics",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "1f98f5e13a9ce1ef52d9824a8a5112e222fe716e",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2607-02271",
+     "ArXiv": "2607.02271",
+     "DOI": "10.48550/arXiv.2607.02271",
+     "CorpusId": 289749472
+    },
+    "title": "AGVBench: A Reliability-Oriented Benchmark of Data Augmentation for Vein Recognition",
+    "venue": "arXiv.org",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "1c68b93faa4ff3c455112a05fe321a53406f025e",
+    "externalIds": {
+     "DOI": "10.1109/ICEIC69189.2026.11385968",
+     "CorpusId": 285735998
+    },
+    "title": "Difficulty-Aware Flow-based Augmentation for SAR Semi-Supervised Learning",
+    "venue": "International Conference on Electronics, Information and Communications",
+    "year": 2026,
+    "citationCount": 0
+   },
+   {
+    "paperId": "bfa8cc63d989cb51c727ab38b925c479009dab66",
+    "externalIds": {
+     "DBLP": "conf/iccv/VinhVSQKHDNLS25",
+     "DOI": "10.1109/ICCVW69036.2025.00576",
+     "CorpusId": 286018806
+    },
+    "title": "A Lightweight and Data-Centric Framework for Real-Time Object Detection in Fisheye Camera",
+    "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+    "year": 2025,
+    "citationCount": 1
+   },
+   {
+    "paperId": "d748d9a2a0135e16fe5317c2265bf35de108e942",
+    "externalIds": {
+     "DBLP": "conf/iccv/NeoC25",
+     "DOI": "10.1109/ICCVW69036.2025.00653",
+     "CorpusId": 286004338
+    },
+    "title": "Multi-Objective Optimization for Deep Neural Network Calibration",
+    "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+    "year": 2025,
+    "citationCount": 0
+   },
+   {
+    "paperId": "1b44db850c283c959e00d1ae89f713c600492d2b",
+    "externalIds": {
+     "ArXiv": "2510.00434",
+     "DBLP": "journals/corr/abs-2510-00434",
+     "DOI": "10.48550/arXiv.2510.00434",
+     "CorpusId": 281705642
+    },
+    "title": "On-the-Fly Data Augmentation via Gradient-Guided and Sample-Aware Influence Estimation",
+    "venue": "arXiv.org",
+    "year": 2025,
+    "citationCount": 1
+   },
+   {
+    "paperId": "c69b415052a2f842719335baf1b4230ac1719dfd",
+    "externalIds": {
+     "ArXiv": "2507.23315",
+     "PubMedCentral": "13230992",
+     "DOI": "10.1038/s41598-026-42748-w",
+     "CorpusId": 280401348,
+     "PubMed": "41974758"
+    },
+    "title": "Analysis of hyperparameter optimization effects on lightweight deep models for real-time image classification",
+    "venue": "Scientific Reports",
+    "year": 2025,
+    "citationCount": 2
+   },
+   {
+    "paperId": "cfc5186e4b2cb495ae24f2764da17f01d0daa474",
+    "externalIds": {
+     "DBLP": "conf/dagm/SiedelGSVM25",
+     "ArXiv": "2507.16427",
+     "DOI": "10.48550/arXiv.2507.16427",
+     "CorpusId": 280167183
+    },
+    "title": "Combined Image Data Augmentations diminish the benefits of Adaptive Label Smoothing",
+    "venue": "DAGM GCPR",
+    "year": 2025,
+    "citationCount": 0
+   },
+   {
+    "paperId": "ffba8aa6820299afc2ba3ba8840cba39d9650403",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2506-17946",
+     "ArXiv": "2506.17946",
+     "DOI": "10.1109/CompSysTech65493.2025.11137220",
+     "CorpusId": 279999999
+    },
+    "title": "Classification of Tents in Street Bazaars Using CNN",
+    "venue": "International Conference on Computer Systems and Technologies",
+    "year": 2025,
+    "citationCount": 0
+   },
+   {
+    "paperId": "022ac16d80c901a3585d9a4c86024db15e83de6c",
+    "externalIds": {
+     "DBLP": "journals/tnn/FuJCHLF25",
+     "DOI": "10.1109/TNNLS.2025.3562363",
+     "CorpusId": 278363876,
+     "PubMed": "40327482"
+    },
+    "title": "AdvMixUp: Adversarial MixUp Regularization for Deep Learning",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "year": 2025,
+    "citationCount": 3
+   },
+   {
+    "paperId": "b2c10206793c8cfaaedf32eb8050af33c3cb638b",
+    "externalIds": {
+     "DOI": "10.1109/RICAI64321.2024.10910984",
+     "CorpusId": 276992481
+    },
+    "title": "A simple data augmentation method for automatic modulation recognition via mixing signals",
+    "venue": "International Conference on Robotics, Intelligent Control and Artificial Intelligence",
+    "year": 2024,
+    "citationCount": 3
+   },
+   {
+    "paperId": "f389dc247a965cf8e02b444b1bf26ceff98f1e5d",
+    "externalIds": {
+     "DBLP": "journals/pami/ZhouYWK24",
+     "DOI": "10.1109/TPAMI.2024.3457751",
+     "CorpusId": 273852345
+    },
+    "title": "Federated Feature Augmentation and Alignment",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "year": 2024,
+    "citationCount": 19
+   },
+   {
+    "paperId": "04713fb405ad65d2b42190ce20edd76d0076ae08",
+    "externalIds": {
+     "DBLP": "journals/iotj/KimJ24",
+     "DOI": "10.1109/JIOT.2024.3418019",
+     "CorpusId": 270723024
+    },
+    "title": "MuShAug: Boosting Sequence Signal Classification via Multishape Augmentation",
+    "venue": "IEEE Internet of Things Journal",
+    "year": 2024,
+    "citationCount": 4
+   },
+   {
+    "paperId": "4caf80f5b3039b99a9109f90698ff8a32c590b2f",
+    "externalIds": {
+     "DBLP": "journals/tip/ChenLGLZYC24",
+     "DOI": "10.1109/TIP.2024.3470529",
+     "CorpusId": 273125742,
+     "PubMed": "39365720"
+    },
+    "title": "Accurate and Robust Object Detection via Selective Adversarial Learning With Constraints",
+    "venue": "IEEE Transactions on Image Processing",
+    "year": 2024,
+    "citationCount": 3
+   },
+   {
+    "paperId": "a31e133a07a0ad72783db0dc3b9b946d55138af0",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2410-02512",
+     "ArXiv": "2410.02512",
+     "DOI": "10.48550/arXiv.2410.02512",
+     "CorpusId": 271745638
+    },
+    "title": "SAFLEX: Self-Adaptive Augmentation via Feature Label Extrapolation",
+    "venue": "International Conference on Learning Representations",
+    "year": 2024,
+    "citationCount": 1
+   },
+   {
+    "paperId": "ca7a32d22e2656856b310f4aab18b7280d140832",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2409-06290",
+     "ArXiv": "2409.06290",
+     "DOI": "10.48550/arXiv.2409.06290",
+     "CorpusId": 272550840
+    },
+    "title": "EntAugment: Entropy-Driven Adaptive Data Augmentation Framework for Image Classification",
+    "venue": "European Conference on Computer Vision",
+    "year": 2024,
+    "citationCount": 23
+   },
+   {
+    "paperId": "d90e49746c21c1096bfa7bc146e240e41b1f939c",
+    "externalIds": {
+     "DBLP": "conf/cvpr/VaishWS24",
+     "ArXiv": "2403.01944",
+     "DOI": "10.1109/CVPR52733.2024.01682",
+     "CorpusId": 268248249
+    },
+    "title": "Fourier-Basis Functions to Bridge Augmentation Gap: Rethinking Frequency Augmentation in Image Classification",
+    "venue": "Computer Vision and Pattern Recognition",
+    "year": 2024,
+    "citationCount": 38
+   },
+   {
+    "paperId": "9b17484e5cce854d224e660b17b37e666589c67b",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2402-06936",
+     "ArXiv": "2402.06936",
+     "DOI": "10.48550/arXiv.2402.06936",
+     "CorpusId": 267627674
+    },
+    "title": "Latent Enhancing AutoEncoder for Occluded Image Classification",
+    "venue": "International Conference on Information Photonics",
+    "year": 2024,
+    "citationCount": 4
+   },
+   {
+    "paperId": "436d48f6851d9330c553efc36880c0d1ffd3c20b",
+    "externalIds": {
+     "ArXiv": "2402.02377",
+     "DBLP": "journals/corr/abs-2402-02377",
+     "DOI": "10.48550/arXiv.2402.02377",
+     "CorpusId": 267412828
+    },
+    "title": "NOAH: Learning Pairwise Object Category Attentions for Image Classification",
+    "venue": "arXiv.org",
+    "year": 2024,
+    "citationCount": 3
+   },
+   {
+    "paperId": "8e8e84dcf5b2af3fecfeb85b5f8c2725365a6b9a",
+    "externalIds": {
+     "DBLP": "journals/ijon/WangGLYZ25",
+     "ArXiv": "2310.08139",
+     "DOI": "10.48550/arXiv.2310.08139",
+     "CorpusId": 263908910
+    },
+    "title": "DualAug: Exploiting Additional Heavy Augmentation with OOD Data Rejection",
+    "venue": "Neurocomputing",
+    "year": 2023,
+    "citationCount": 3
+   },
+   {
+    "paperId": "9afceaeba0a74cf495ca1ee1dfd242c9ae5b1f5e",
+    "externalIds": {
+     "DOI": "10.1109/WECONF57201.2023.10148032",
+     "CorpusId": 259158119
+    },
+    "title": "Comparative Analysis of Convolutional Neural Networks and Vision Transformer on Classification of Images Containing Homogenous Microstructures",
+    "venue": "2023 Wave Electronics and its Application in Information and Telecommunication Systems (WECONF)",
+    "year": 2023,
+    "citationCount": 2
+   },
+   {
+    "paperId": "16f2175b63138e31cabfa92126e4d73e0d22a9da",
+    "externalIds": {
+     "DBLP": "journals/tgrs/WangYLH25",
+     "DOI": "10.1109/TGRS.2025.3568812",
+     "CorpusId": 278545062
+    },
+    "title": "Diffusion-Noise-Based Augmentation for Long-Tailed Remote Sensing Image Classification",
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "year": 2025,
+    "citationCount": 4
+   },
+   {
+    "paperId": "9e7e4e581de01fbc73a029fa0576b992eed915bd",
+    "externalIds": {
+     "DOI": "10.1016/j.bspc.2026.111398",
+     "CorpusId": 291883926
+    },
+    "title": "Regulating EEG data augmentation with uncertainty-guided exploration and evidential calibration",
+    "venue": "Biomedical Signal Processing and Control",
+    "year": null,
+    "citationCount": 0
+   }
+  ],
+  "openalex": null
+ }
+}

@@ -1,0 +1,556 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/YE44NsPrgQewoLvqePeybcIzyAY</id>
+  <title>arXiv Query: search_query=&amp;id_list=1910.05872,1906.12340,2107.13715,2211.04625,2408.01977,2301.05865,2007.08176,2006.07114,2004.11362,1901.09335,2105.13343,1909.12220,2006.12000,2203.16172,1905.04899,1901.08933,2111.09613,1912.02781,2003.13964,1905.08094&amp;start=0&amp;max_results=50</title>
+  <updated>2026-10-30T21:07:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=50&amp;id_list=1910.05872,1906.12340,2107.13715,2211.04625,2408.01977,2301.05865,2007.08176,2006.07114,2004.11362,1901.09335,2105.13343,1909.12220,2006.12000,2203.16172,1905.04899,1901.08933,2111.09613,1912.02781,2003.13964,1905.08094" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>50</opensearch:itemsPerPage>
+  <opensearch:totalResults>20</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1901.08933v3</id>
+    <title>Self-Supervised Generalisation with Meta Auxiliary Learning</title>
+    <updated>2019-11-26T20:37:33Z</updated>
+    <link href="https://arxiv.org/abs/1901.08933v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1901.08933v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Learning with auxiliary tasks can improve the ability of a primary task to generalise. However, this comes at the cost of manually labelling auxiliary data. We propose a new method which automatically learns appropriate labels for an auxiliary task, such that any supervised learning task can be improved without requiring access to any further data. The approach is to train two neural networks: a label-generation network to predict the auxiliary labels, and a multi-task network to train the primary task alongside the auxiliary task. The loss for the label-generation network incorporates the loss of the multi-task network, and so this interaction between the two networks can be seen as a form of meta learning with a double gradient. We show that our proposed method, Meta AuXiliary Learning (MAXL), outperforms single-task learning on 7 image datasets, without requiring any additional data. We also show that MAXL outperforms several other baselines for generating auxiliary labels, and is even competitive when compared with human-defined auxiliary labels. The self-supervised nature of our method leads to a promising new direction towards automated generalisation. Source code can be found at https://github.com/lorenmt/maxl.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-01-25T15:46:59Z</published>
+    <arxiv:comment>Published at Conference on Neural Information Processing Systems 2019</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Shikun Liu</name>
+    </author>
+    <author>
+      <name>Andrew J. Davison</name>
+    </author>
+    <author>
+      <name>Edward Johns</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2003.13964v2</id>
+    <title>Regularizing Class-wise Predictions via Self-knowledge Distillation</title>
+    <updated>2020-04-07T05:28:07Z</updated>
+    <link href="https://arxiv.org/abs/2003.13964v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2003.13964v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deep neural networks with millions of parameters may suffer from poor generalization due to overfitting. To mitigate the issue, we propose a new regularization method that penalizes the predictive distribution between similar samples. In particular, we distill the predictive distribution between different samples of the same label during training. This results in regularizing the dark knowledge (i.e., the knowledge on wrong predictions) of a single network (i.e., a self-knowledge distillation) by forcing it to produce more meaningful and consistent predictions in a class-wise manner. Consequently, it mitigates overconfident predictions and reduces intra-class variations. Our experimental results on various image classification tasks demonstrate that the simple yet powerful method can significantly improve not only the generalization ability but also the calibration performance of modern convolutional neural networks.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-03-31T06:03:51Z</published>
+    <arxiv:comment>Accepted to CVPR 2020. Code is available at https://github.com/alinlab/cs-kd</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sukmin Yun</name>
+    </author>
+    <author>
+      <name>Jongjin Park</name>
+    </author>
+    <author>
+      <name>Kimin Lee</name>
+    </author>
+    <author>
+      <name>Jinwoo Shin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2111.09613v1</id>
+    <title>Improving Transferability of Representations via Augmentation-Aware Self-Supervision</title>
+    <updated>2021-11-18T10:43:50Z</updated>
+    <link href="https://arxiv.org/abs/2111.09613v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.09613v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent unsupervised representation learning methods have shown to be effective in a range of vision tasks by learning representations invariant to data augmentations such as random cropping and color jittering. However, such invariance could be harmful to downstream tasks if they rely on the characteristics of the data augmentations, e.g., location- or color-sensitive. This is not an issue just for unsupervised learning; we found that this occurs even in supervised learning because it also learns to predict the same label for all augmented samples of an instance. To avoid such failures and obtain more generalizable representations, we suggest to optimize an auxiliary self-supervised loss, coined AugSelf, that learns the difference of augmentation parameters (e.g., cropping positions, color adjustment intensities) between two randomly augmented samples. Our intuition is that AugSelf encourages to preserve augmentation-aware information in learned representations, which could be beneficial for their transferability. Furthermore, AugSelf can easily be incorporated into recent state-of-the-art representation learning methods with a negligible additional training cost. Extensive experiments demonstrate that our simple idea consistently improves the transferability of representations learned by supervised and unsupervised methods in various transfer learning scenarios. The code is available at https://github.com/hankook/AugSelf.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-18T10:43:50Z</published>
+    <arxiv:comment>Accepted to NeurIPS 2021</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hankook Lee</name>
+    </author>
+    <author>
+      <name>Kibok Lee</name>
+    </author>
+    <author>
+      <name>Kimin Lee</name>
+    </author>
+    <author>
+      <name>Honglak Lee</name>
+    </author>
+    <author>
+      <name>Jinwoo Shin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.12000v3</id>
+    <title>Self-Knowledge Distillation with Progressive Refinement of Targets</title>
+    <updated>2021-10-07T13:09:26Z</updated>
+    <link href="https://arxiv.org/abs/2006.12000v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.12000v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The generalization capability of deep neural networks has been substantially improved by applying a wide spectrum of regularization methods, e.g., restricting function space, injecting randomness during training, augmenting data, etc. In this work, we propose a simple yet effective regularization method named progressive self-knowledge distillation (PS-KD), which progressively distills a model's own knowledge to soften hard targets (i.e., one-hot vectors) during training. Hence, it can be interpreted within a framework of knowledge distillation as a student becomes a teacher itself. Specifically, targets are adjusted adaptively by combining the ground-truth and past predictions from the model itself. We show that PS-KD provides an effect of hard example mining by rescaling gradients according to difficulty in classifying examples. The proposed method is applicable to any supervised learning tasks with hard targets and can be easily combined with existing regularization methods to further enhance the generalization performance. Furthermore, it is confirmed that PS-KD achieves not only better accuracy, but also provides high quality of confidence estimates in terms of calibration as well as ordinal ranking. Extensive experimental results on three different tasks, image classification, object detection, and machine translation, demonstrate that our method consistently improves the performance of the state-of-the-art baselines. The code is available at https://github.com/lgcnsai/PS-KD-Pytorch.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-22T04:06:36Z</published>
+    <arxiv:comment>Accepted at ICCV 2021 (oral presentation)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Kyungyul Kim</name>
+    </author>
+    <author>
+      <name>ByeongMoon Ji</name>
+    </author>
+    <author>
+      <name>Doyoung Yoon</name>
+    </author>
+    <author>
+      <name>Sangheum Hwang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1910.05872v2</id>
+    <title>Self-supervised Label Augmentation via Input Transformations</title>
+    <updated>2020-06-29T12:10:28Z</updated>
+    <link href="https://arxiv.org/abs/1910.05872v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1910.05872v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Self-supervised learning, which learns by constructing artificial labels given only the input signals, has recently gained considerable attention for learning representations with unlabeled datasets, i.e., learning without any human-annotated supervision. In this paper, we show that such a technique can be used to significantly improve the model accuracy even under fully-labeled datasets. Our scheme trains the model to learn both original and self-supervised tasks, but is different from conventional multi-task learning frameworks that optimize the summation of their corresponding losses. Our main idea is to learn a single unified task with respect to the joint distribution of the original and self-supervised labels, i.e., we augment original labels via self-supervision of input transformation. This simple, yet effective approach allows to train models easier by relaxing a certain invariant constraint during learning the original and self-supervised tasks simultaneously. It also enables an aggregated inference which combines the predictions from different augmentations to improve the prediction accuracy. Furthermore, we propose a novel knowledge transfer technique, which we refer to as self-distillation, that has the effect of the aggregated inference in a single (faster) inference. We demonstrate the large accuracy improvement and wide applicability of our framework on various fully-supervised settings, e.g., the few-shot and imbalanced classification scenarios.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-10-14T00:37:33Z</published>
+    <arxiv:comment>Accepted to ICML 2020. Code available at https://github.com/hankook/SLA</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hankook Lee</name>
+    </author>
+    <author>
+      <name>Sung Ju Hwang</name>
+    </author>
+    <author>
+      <name>Jinwoo Shin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1905.04899v2</id>
+    <title>CutMix: Regularization Strategy to Train Strong Classifiers with Localizable Features</title>
+    <updated>2019-08-07T07:15:29Z</updated>
+    <link href="https://arxiv.org/abs/1905.04899v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1905.04899v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Regional dropout strategies have been proposed to enhance the performance of convolutional neural network classifiers. They have proved to be effective for guiding the model to attend on less discriminative parts of objects (e.g. leg as opposed to head of a person), thereby letting the network generalize better and have better object localization capabilities. On the other hand, current methods for regional dropout remove informative pixels on training images by overlaying a patch of either black pixels or random noise. Such removal is not desirable because it leads to information loss and inefficiency during training. We therefore propose the CutMix augmentation strategy: patches are cut and pasted among training images where the ground truth labels are also mixed proportionally to the area of the patches. By making efficient use of training pixels and retaining the regularization effect of regional dropout, CutMix consistently outperforms the state-of-the-art augmentation strategies on CIFAR and ImageNet classification tasks, as well as on the ImageNet weakly-supervised localization task. Moreover, unlike previous augmentation methods, our CutMix-trained ImageNet classifier, when used as a pretrained model, results in consistent performance gains in Pascal detection and MS-COCO image captioning benchmarks. We also show that CutMix improves the model robustness against input corruptions and its out-of-distribution detection performances. Source code and pretrained models are available at https://github.com/clovaai/CutMix-PyTorch .</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-05-13T08:10:22Z</published>
+    <arxiv:comment>Accepted at ICCV 2019 (oral talk). 14 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Sangdoo Yun</name>
+    </author>
+    <author>
+      <name>Dongyoon Han</name>
+    </author>
+    <author>
+      <name>Seong Joon Oh</name>
+    </author>
+    <author>
+      <name>Sanghyuk Chun</name>
+    </author>
+    <author>
+      <name>Junsuk Choe</name>
+    </author>
+    <author>
+      <name>Youngjoon Yoo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2301.05865v1</id>
+    <title>Gated Self-supervised Learning For Improving Supervised Learning</title>
+    <updated>2023-01-14T09:32:12Z</updated>
+    <link href="https://arxiv.org/abs/2301.05865v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2301.05865v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In past research on self-supervised learning for image classification, the use of rotation as an augmentation has been common. However, relying solely on rotation as a self-supervised transformation can limit the ability of the model to learn rich features from the data. In this paper, we propose a novel approach to self-supervised learning for image classification using several localizable augmentations with the combination of the gating method. Our approach uses flip and shuffle channel augmentations in addition to the rotation, allowing the model to learn rich features from the data. Furthermore, the gated mixture network is used to weigh the effects of each self-supervised learning on the loss function, allowing the model to focus on the most relevant transformations for classification.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-14T09:32:12Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Erland Hilman Fuadi</name>
+    </author>
+    <author>
+      <name>Aristo Renaldo Ruslim</name>
+    </author>
+    <author>
+      <name>Putu Wahyu Kusuma Wardhana</name>
+    </author>
+    <author>
+      <name>Novanto Yudistira</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.04625v2</id>
+    <title>Soft Augmentation for Image Classification</title>
+    <updated>2024-01-23T21:24:53Z</updated>
+    <link href="https://arxiv.org/abs/2211.04625v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.04625v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern neural networks are over-parameterized and thus rely on strong regularization such as data augmentation and weight decay to reduce overfitting and improve generalization. The dominant form of data augmentation applies invariant transforms, where the learning target of a sample is invariant to the transform applied to that sample. We draw inspiration from human visual classification studies and propose generalizing augmentation with invariant transforms to soft augmentation where the learning target softens non-linearly as a function of the degree of the transform applied to the sample: e.g., more aggressive image crop augmentations produce less confident learning targets. We demonstrate that soft targets allow for more aggressive data augmentation, offer more robust performance boosts, work with other augmentation policies, and interestingly, produce better calibrated models (since they are trained to be less confident on aggressively cropped/occluded examples). Combined with existing aggressive augmentation strategies, soft target 1) doubles the top-1 accuracy boost across Cifar-10, Cifar-100, ImageNet-1K, and ImageNet-V2, 2) improves model occlusion performance by up to $4\times$, and 3) halves the expected calibration error (ECE). Finally, we show that soft augmentation generalizes to self-supervised classification tasks. Code available at https://github.com/youngleox/soft_augmentation</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-09T01:04:06Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:journal_ref>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition 2023 (pp. 16241-16250)</arxiv:journal_ref>
+    <author>
+      <name>Yang Liu</name>
+    </author>
+    <author>
+      <name>Shen Yan</name>
+    </author>
+    <author>
+      <name>Laura Leal-Taixé</name>
+    </author>
+    <author>
+      <name>James Hays</name>
+    </author>
+    <author>
+      <name>Deva Ramanan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.01977v1</id>
+    <title>Label Augmentation for Neural Networks Robustness</title>
+    <updated>2024-08-04T09:51:14Z</updated>
+    <link href="https://arxiv.org/abs/2408.01977v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.01977v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Out-of-distribution generalization can be categorized into two types: common perturbations arising from natural variations in the real world and adversarial perturbations that are intentionally crafted to deceive neural networks. While deep neural networks excel in accuracy under the assumption of identical distributions between training and test data, they often encounter out-of-distribution scenarios resulting in a significant decline in accuracy. Data augmentation methods can effectively enhance robustness against common corruptions, but they typically fall short in improving robustness against adversarial perturbations. In this study, we develop Label Augmentation (LA), which enhances robustness against both common and intentional perturbations and improves uncertainty estimation. Our findings indicate a Clean error rate improvement of up to 23.29% when employing LA in comparisons to the baseline. Additionally, it enhances robustness under common corruptions benchmark by up to 24.23%. When tested against FGSM and PGD attacks, improvements in adversarial robustness are noticeable, with enhancements of up to 53.18% for FGSM and 24.46% for PGD attacks.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-04T09:51:14Z</published>
+    <arxiv:comment>21 pages, 4 figures, Published at 3rd Conference on Lifelong Learning Agents (CoLLAs), 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Fatemeh Amerehi</name>
+    </author>
+    <author>
+      <name>Patrick Healy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1906.12340v2</id>
+    <title>Using Self-Supervised Learning Can Improve Model Robustness and Uncertainty</title>
+    <updated>2019-10-29T17:57:27Z</updated>
+    <link href="https://arxiv.org/abs/1906.12340v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1906.12340v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Self-supervision provides effective representations for downstream tasks without requiring labels. However, existing approaches lag behind fully supervised training and are often not thought beneficial beyond obviating or reducing the need for annotations. We find that self-supervision can benefit robustness in a variety of ways, including robustness to adversarial examples, label corruption, and common input corruptions. Additionally, self-supervision greatly benefits out-of-distribution detection on difficult, near-distribution outliers, so much so that it exceeds the performance of fully supervised methods. These results demonstrate the promise of self-supervision for improving robustness and uncertainty estimation and establish these tasks as new axes of evaluation for future self-supervised learning research.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-06-28T17:44:00Z</published>
+    <arxiv:comment>NeurIPS 2019; code and data available at https://github.com/hendrycks/ss-ood</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Dan Hendrycks</name>
+    </author>
+    <author>
+      <name>Mantas Mazeika</name>
+    </author>
+    <author>
+      <name>Saurav Kadavath</name>
+    </author>
+    <author>
+      <name>Dawn Song</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2007.08176v2</id>
+    <title>CSI: Novelty Detection via Contrastive Learning on Distributionally Shifted Instances</title>
+    <updated>2020-10-21T08:09:43Z</updated>
+    <link href="https://arxiv.org/abs/2007.08176v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2007.08176v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Novelty detection, i.e., identifying whether a given sample is drawn from outside the training distribution, is essential for reliable machine learning. To this end, there have been many attempts at learning a representation well-suited for novelty detection and designing a score based on such representation. In this paper, we propose a simple, yet effective method named contrasting shifted instances (CSI), inspired by the recent success on contrastive learning of visual representations. Specifically, in addition to contrasting a given sample with other instances as in conventional contrastive learning methods, our training scheme contrasts the sample with distributionally-shifted augmentations of itself. Based on this, we propose a new detection score that is specific to the proposed training scheme. Our experiments demonstrate the superiority of our method under various novelty detection scenarios, including unlabeled one-class, unlabeled multi-class and labeled multi-class settings, with various image benchmark datasets. Code and pre-trained models are available at https://github.com/alinlab/CSI.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-07-16T08:32:56Z</published>
+    <arxiv:comment>NeurIPS 2020. First two authors contributed equally</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jihoon Tack</name>
+    </author>
+    <author>
+      <name>Sangwoo Mo</name>
+    </author>
+    <author>
+      <name>Jongheon Jeong</name>
+    </author>
+    <author>
+      <name>Jinwoo Shin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2105.13343v2</id>
+    <title>Drawing Multiple Augmentation Samples Per Image During Training Efficiently Decreases Test Error</title>
+    <updated>2022-02-24T17:49:35Z</updated>
+    <link href="https://arxiv.org/abs/2105.13343v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.13343v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In computer vision, it is standard practice to draw a single sample from the data augmentation procedure for each unique image in the mini-batch. However recent work has suggested drawing multiple samples can achieve higher test accuracies. In this work, we provide a detailed empirical evaluation of how the number of augmentation samples per unique image influences model performance on held out data when training deep ResNets. We demonstrate drawing multiple samples per image consistently enhances the test accuracy achieved for both small and large batch training. Crucially, this benefit arises even if different numbers of augmentations per image perform the same number of parameter updates and gradient evaluations (requiring the same total compute). Although prior work has found variance in the gradient estimate arising from subsampling the dataset has an implicit regularization benefit, our experiments suggest variance which arises from the data augmentation process harms generalization. We apply these insights to the highly performant NFNet-F5, achieving 86.8$\%$ top-1 w/o extra data on ImageNet.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-27T17:51:09Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Stanislav Fort</name>
+    </author>
+    <author>
+      <name>Andrew Brock</name>
+    </author>
+    <author>
+      <name>Razvan Pascanu</name>
+    </author>
+    <author>
+      <name>Soham De</name>
+    </author>
+    <author>
+      <name>Samuel L. Smith</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1901.09335v1</id>
+    <title>Augment your batch: better training with larger batches</title>
+    <updated>2019-01-27T08:02:26Z</updated>
+    <link href="https://arxiv.org/abs/1901.09335v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1901.09335v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large-batch SGD is important for scaling training of deep neural networks. However, without fine-tuning hyperparameter schedules, the generalization of the model may be hampered. We propose to use batch augmentation: replicating instances of samples within the same batch with different data augmentations. Batch augmentation acts as a regularizer and an accelerator, increasing both generalization and performance scaling. We analyze the effect of batch augmentation on gradient variance and show that it empirically improves convergence for a wide variety of deep neural networks and datasets. Our results show that batch augmentation reduces the number of necessary SGD updates to achieve the same accuracy as the state-of-the-art. Overall, this simple yet effective method enables faster training and better generalization by allowing more computational resources to be used concurrently.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-01-27T08:02:26Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Elad Hoffer</name>
+    </author>
+    <author>
+      <name>Tal Ben-Nun</name>
+    </author>
+    <author>
+      <name>Itay Hubara</name>
+    </author>
+    <author>
+      <name>Niv Giladi</name>
+    </author>
+    <author>
+      <name>Torsten Hoefler</name>
+    </author>
+    <author>
+      <name>Daniel Soudry</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1912.02781v2</id>
+    <title>AugMix: A Simple Data Processing Method to Improve Robustness and Uncertainty</title>
+    <updated>2020-02-17T06:16:13Z</updated>
+    <link href="https://arxiv.org/abs/1912.02781v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1912.02781v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern deep neural networks can achieve high accuracy when the training distribution and test distribution are identically distributed, but this assumption is frequently violated in practice. When the train and test distributions are mismatched, accuracy can plummet. Currently there are few techniques that improve robustness to unforeseen data shifts encountered during deployment. In this work, we propose a technique to improve the robustness and uncertainty estimates of image classifiers. We propose AugMix, a data processing technique that is simple to implement, adds limited computational overhead, and helps models withstand unforeseen corruptions. AugMix significantly improves robustness and uncertainty measures on challenging image classification benchmarks, closing the gap between previous methods and the best possible performance in some cases by more than half.</summary>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-12-05T18:18:10Z</published>
+    <arxiv:comment>Code available at https://github.com/google-research/augmix</arxiv:comment>
+    <arxiv:primary_category term="stat.ML"/>
+    <author>
+      <name>Dan Hendrycks</name>
+    </author>
+    <author>
+      <name>Norman Mu</name>
+    </author>
+    <author>
+      <name>Ekin D. Cubuk</name>
+    </author>
+    <author>
+      <name>Barret Zoph</name>
+    </author>
+    <author>
+      <name>Justin Gilmer</name>
+    </author>
+    <author>
+      <name>Balaji Lakshminarayanan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1909.12220v5</id>
+    <title>Implicit Semantic Data Augmentation for Deep Networks</title>
+    <updated>2020-04-25T03:13:03Z</updated>
+    <link href="https://arxiv.org/abs/1909.12220v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1909.12220v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we propose a novel implicit semantic data augmentation (ISDA) approach to complement traditional augmentation techniques like flipping, translation or rotation. Our work is motivated by the intriguing property that deep networks are surprisingly good at linearizing features, such that certain directions in the deep feature space correspond to meaningful semantic transformations, e.g., adding sunglasses or changing backgrounds. As a consequence, translating training samples along many semantic directions in the feature space can effectively augment the dataset to improve generalization. To implement this idea effectively and efficiently, we first perform an online estimate of the covariance matrix of deep features for each class, which captures the intra-class semantic variations. Then random vectors are drawn from a zero-mean normal distribution with the estimated covariance to augment the training data in that class. Importantly, instead of augmenting the samples explicitly, we can directly minimize an upper bound of the expected cross-entropy (CE) loss on the augmented training set, leading to a highly efficient algorithm. In fact, we show that the proposed ISDA amounts to minimizing a novel robust CE loss, which adds negligible extra computational cost to a normal training procedure. Although being simple, ISDA consistently improves the generalization performance of popular deep models (ResNets and DenseNets) on a variety of datasets, e.g., CIFAR-10, CIFAR-100 and ImageNet. Code for reproducing our results is available at https://github.com/blackfeather-wang/ISDA-for-Deep-Networks.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-09-26T16:17:45Z</published>
+    <arxiv:comment>Accepted by NeurIPS 2019</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Yulin Wang</name>
+    </author>
+    <author>
+      <name>Xuran Pan</name>
+    </author>
+    <author>
+      <name>Shiji Song</name>
+    </author>
+    <author>
+      <name>Hong Zhang</name>
+    </author>
+    <author>
+      <name>Cheng Wu</name>
+    </author>
+    <author>
+      <name>Gao Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2107.13715v2</id>
+    <title>Hierarchical Self-supervised Augmented Knowledge Distillation</title>
+    <updated>2022-07-23T10:19:12Z</updated>
+    <link href="https://arxiv.org/abs/2107.13715v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2107.13715v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge distillation often involves how to define and transfer knowledge from teacher to student effectively. Although recent self-supervised contrastive knowledge achieves the best performance, forcing the network to learn such knowledge may damage the representation learning of the original class recognition task. We therefore adopt an alternative self-supervised augmented task to guide the network to learn the joint distribution of the original recognition task and self-supervised auxiliary task. It is demonstrated as a richer knowledge to improve the representation power without losing the normal classification capability. Moreover, it is incomplete that previous methods only transfer the probabilistic knowledge between the final layers. We propose to append several auxiliary classifiers to hierarchical intermediate feature maps to generate diverse self-supervised knowledge and perform the one-to-one transfer to teach the student network thoroughly. Our method significantly surpasses the previous SOTA SSKD with an average improvement of 2.56\% on CIFAR-100 and an improvement of 0.77\% on ImageNet across widely used network pairs. Codes are available at https://github.com/winycg/HSAKD.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-07-29T02:57:21Z</published>
+    <arxiv:comment>13 pages, IJCAI-2021</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Chuanguang Yang</name>
+    </author>
+    <author>
+      <name>Zhulin An</name>
+    </author>
+    <author>
+      <name>Linhang Cai</name>
+    </author>
+    <author>
+      <name>Yongjun Xu</name>
+    </author>
+    <arxiv:doi>10.24963/ijcai.2021/168</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.24963/ijcai.2021/168" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2203.16172v1</id>
+    <title>Self-Distillation from the Last Mini-Batch for Consistency Regularization</title>
+    <updated>2022-03-30T09:50:24Z</updated>
+    <link href="https://arxiv.org/abs/2203.16172v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2203.16172v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge distillation (KD) shows a bright promise as a powerful regularization strategy to boost generalization ability by leveraging learned sample-level soft targets. Yet, employing a complex pre-trained teacher network or an ensemble of peer students in existing KD is both time-consuming and computationally costly. Various self KD methods have been proposed to achieve higher distillation efficiency. However, they either require extra network architecture modification or are difficult to parallelize. To cope with these challenges, we propose an efficient and reliable self-distillation framework, named Self-Distillation from Last Mini-Batch (DLB). Specifically, we rearrange the sequential sampling by constraining half of each mini-batch coinciding with the previous iteration. Meanwhile, the rest half will coincide with the upcoming iteration. Afterwards, the former half mini-batch distills on-the-fly soft targets generated in the previous iteration. Our proposed mechanism guides the training stability and consistency, resulting in robustness to label noise. Moreover, our method is easy to implement, without taking up extra run-time memory or requiring model structure modification. Experimental results on three classification benchmarks illustrate that our approach can consistently outperform state-of-the-art self-distillation approaches with different network architectures. Additionally, our method shows strong compatibility with augmentation strategies by gaining additional performance improvement. The code is available at https://github.com/Meta-knowledge-Lab/DLB.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-03-30T09:50:24Z</published>
+    <arxiv:comment>10 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <arxiv:journal_ref>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022, pp. 11943-11952</arxiv:journal_ref>
+    <author>
+      <name>Yiqing Shen</name>
+    </author>
+    <author>
+      <name>Liwu Xu</name>
+    </author>
+    <author>
+      <name>Yuzhe Yang</name>
+    </author>
+    <author>
+      <name>Yaqian Li</name>
+    </author>
+    <author>
+      <name>Yandong Guo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2006.07114v2</id>
+    <title>Knowledge Distillation Meets Self-Supervision</title>
+    <updated>2020-07-13T09:14:27Z</updated>
+    <link href="https://arxiv.org/abs/2006.07114v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2006.07114v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge distillation, which involves extracting the "dark knowledge" from a teacher network to guide the learning of a student network, has emerged as an important technique for model compression and transfer learning. Unlike previous works that exploit architecture-specific cues such as activation and attention for distillation, here we wish to explore a more general and model-agnostic approach for extracting "richer dark knowledge" from the pre-trained teacher model. We show that the seemingly different self-supervision task can serve as a simple yet powerful solution. For example, when performing contrastive learning between transformed entities, the noisy predictions of the teacher network reflect its intrinsic composition of semantic and pose information. By exploiting the similarity between those self-supervision signals as an auxiliary task, one can effectively transfer the hidden information from the teacher to the student. In this paper, we discuss practical ways to exploit those noisy self-supervision signals with selective transfer for distillation. We further show that self-supervision signals improve conventional distillation with substantial gains under few-shot and noisy-label scenarios. Given the richer knowledge mined from self-supervision, our knowledge distillation approach achieves state-of-the-art performance on standard benchmarks, i.e., CIFAR100 and ImageNet, under both similar-architecture and cross-architecture settings. The advantage is even more pronounced under the cross-architecture setting, where our method outperforms the state of the art CRD by an average of 2.3% in accuracy rate on CIFAR100 across six different teacher-student pairs.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-06-12T12:18:52Z</published>
+    <arxiv:comment>To appear in ECCV 2020. Code is available at: https://github.com/xuguodong03/SSKD</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Guodong Xu</name>
+    </author>
+    <author>
+      <name>Ziwei Liu</name>
+    </author>
+    <author>
+      <name>Xiaoxiao Li</name>
+    </author>
+    <author>
+      <name>Chen Change Loy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1905.08094v1</id>
+    <title>Be Your Own Teacher: Improve the Performance of Convolutional Neural Networks via Self Distillation</title>
+    <updated>2019-05-17T08:46:50Z</updated>
+    <link href="https://arxiv.org/abs/1905.08094v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1905.08094v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Convolutional neural networks have been widely deployed in various application scenarios. In order to extend the applications' boundaries to some accuracy-crucial domains, researchers have been investigating approaches to boost accuracy through either deeper or wider network structures, which brings with them the exponential increment of the computational and storage cost, delaying the responding time. In this paper, we propose a general training framework named self distillation, which notably enhances the performance (accuracy) of convolutional neural networks through shrinking the size of the network rather than aggrandizing it. Different from traditional knowledge distillation - a knowledge transformation methodology among networks, which forces student neural networks to approximate the softmax layer outputs of pre-trained teacher neural networks, the proposed self distillation framework distills knowledge within network itself. The networks are firstly divided into several sections. Then the knowledge in the deeper portion of the networks is squeezed into the shallow ones. Experiments further prove the generalization of the proposed self distillation framework: enhancement of accuracy at average level is 2.65%, varying from 0.61% in ResNeXt as minimum to 4.07% in VGG19 as maximum. In addition, it can also provide flexibility of depth-wise scalable inference on resource-limited edge devices.Our codes will be released on github soon.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-05-17T08:46:50Z</published>
+    <arxiv:comment>10pages</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Linfeng Zhang</name>
+    </author>
+    <author>
+      <name>Jiebo Song</name>
+    </author>
+    <author>
+      <name>Anni Gao</name>
+    </author>
+    <author>
+      <name>Jingwei Chen</name>
+    </author>
+    <author>
+      <name>Chenglong Bao</name>
+    </author>
+    <author>
+      <name>Kaisheng Ma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2004.11362v5</id>
+    <title>Supervised Contrastive Learning</title>
+    <updated>2021-03-10T19:11:45Z</updated>
+    <link href="https://arxiv.org/abs/2004.11362v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2004.11362v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Contrastive learning applied to self-supervised representation learning has seen a resurgence in recent years, leading to state of the art performance in the unsupervised training of deep image models. Modern batch contrastive approaches subsume or significantly outperform traditional contrastive losses such as triplet, max-margin and the N-pairs loss. In this work, we extend the self-supervised batch contrastive approach to the fully-supervised setting, allowing us to effectively leverage label information. Clusters of points belonging to the same class are pulled together in embedding space, while simultaneously pushing apart clusters of samples from different classes. We analyze two possible versions of the supervised contrastive (SupCon) loss, identifying the best-performing formulation of the loss. On ResNet-200, we achieve top-1 accuracy of 81.4% on the ImageNet dataset, which is 0.8% above the best number reported for this architecture. We show consistent outperformance over cross-entropy on other datasets and two ResNet variants. The loss shows benefits for robustness to natural corruptions and is more stable to hyperparameter settings such as optimizers and data augmentations. Our loss function is simple to implement, and reference TensorFlow code is released at https://t.ly/supcon.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-04-23T17:58:56Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Prannay Khosla</name>
+    </author>
+    <author>
+      <name>Piotr Teterwak</name>
+    </author>
+    <author>
+      <name>Chen Wang</name>
+    </author>
+    <author>
+      <name>Aaron Sarna</name>
+    </author>
+    <author>
+      <name>Yonglong Tian</name>
+    </author>
+    <author>
+      <name>Phillip Isola</name>
+    </author>
+    <author>
+      <name>Aaron Maschinot</name>
+    </author>
+    <author>
+      <name>Ce Liu</name>
+    </author>
+    <author>
+      <name>Dilip Krishnan</name>
+    </author>
+  </entry>
+</feed>

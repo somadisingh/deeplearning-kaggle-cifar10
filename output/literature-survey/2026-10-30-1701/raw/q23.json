@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Tailoring Self-Supervision for Supervised Learning",
+    "authors": [
+      "WonJun Moon",
+      "Ji-Hwan Kim",
+      "Jae-Pil Heo"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Recently, it is shown that deploying a proper self-supervision is a prospective way to enhance the performance of supervised learning. Yet, the benefits of self-supervision are not fully exploited as previous pretext tasks are specialized for unsupervised representation learning. To this end, we begin by presenting three desirable properties for such auxiliary tasks to assist the supervised objective. First, the tasks need to guide the model to learn rich features. Second, the transformations involved in the self-supervision should not significantly alter the training distribution. Third, the tasks are preferred to be light and generic for high applicability to prior arts. Subsequently, to show how existing pretext tasks can fulfill these and be tailored for supervised learning, we propose a simple auxiliary self-supervision task, predicting localizable rotation (LoRot). Our exhaustive experiments validate the merits of LoRot as a pretext task tailored for supervised learning in terms of robustness and generalization capability. Our code is available at https://github.com/wjun0830/Localizable-Rotation.",
+    "url": "http://arxiv.org/abs/2207.10023v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards Lifelong Self-Supervision For Unpaired Image-to-Image Translation",
+    "authors": [
+      "Victor Schmidt",
+      "Makesh Narsimhan Sreedhar",
+      "Mostafa ElAraby",
+      "Irina Rish"
+    ],
+    "year": 2020,
+    "venue": "arXiv",
+    "abstract": "Unpaired Image-to-Image Translation (I2IT) tasks often suffer from lack of data, a problem which self-supervised learning (SSL) has recently been very popular and successful at tackling. Leveraging auxiliary tasks such as rotation prediction or generative colorization, SSL can produce better and more robust representations in a low data regime. Training such tasks along an I2IT task is however computationally intractable as model size and the number of task grow. On the other hand, learning sequentially could incur catastrophic forgetting of previously learned tasks. To alleviate this, we introduce Lifelong Self-Supervision (LiSS) as a way to pre-train an I2IT model (e.g., CycleGAN) on a set of self-supervised auxiliary tasks. By keeping an exponential moving average of past encoders and distilling the accumulated knowledge, we are able to maintain the network's validation performance on a number of tasks without any form of replay, parameter isolation or retraining techniques typically used in continual learning. We show that models trained with LiSS perform better on past tasks, while also being more robust than the CycleGAN baseline to color bias and entity entanglement (when two entities are very close).",
+    "url": "http://arxiv.org/abs/2004.00161v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "Benchmark for Uncertainty & Robustness in Self-Supervised Learning",
+    "authors": [
+      "Ha Manh Bui",
+      "Iliana Maifeld-Carucci"
+    ],
+    "year": 2022,
+    "venue": "arXiv",
+    "abstract": "Self-Supervised Learning (SSL) is crucial for real-world applications, especially in data-hungry domains such as healthcare and self-driving cars. In addition to a lack of labeled data, these applications also suffer from distributional shifts. Therefore, an SSL method should provide robust generalization and uncertainty estimation in the test dataset to be considered a reliable model in such high-stakes domains. However, existing approaches often focus on generalization, without evaluating the model's uncertainty. The ability to compare SSL techniques for improving these estimates is therefore critical for research on the reliability of self-supervision models. In this paper, we explore variants of SSL methods, including Jigsaw Puzzles, Context, Rotation, Geometric Transformations Prediction for vision, as well as BERT and GPT for language tasks. We train SSL in auxiliary learning for vision and pre-training for language model, then evaluate the generalization (in-out classification accuracy) and uncertainty (expected calibration error) across different distribution covariate shift datasets, including MNIST-C, CIFAR-10-C, CIFAR-10.1, and MNLI. Our goal is to create a benchmark with outputs from experiments, providing a starting point for new SSL methods in Reliable Machine Learning. All source code to reproduce results is available at https://github.com/hamanhbui/reliable_ssl_baselines.",
+    "url": "http://arxiv.org/abs/2212.12411v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "SC3K: Self-supervised and Coherent 3D Keypoints Estimation from Rotated, Noisy, and Decimated Point Cloud Data",
+    "authors": [
+      "Mohammad Zohaib",
+      "Alessio Del Bue"
+    ],
+    "year": 2023,
+    "venue": "arXiv",
+    "abstract": "This paper proposes a new method to infer keypoints from arbitrary object categories in practical scenarios where point cloud data (PCD) are noisy, down-sampled and arbitrarily rotated. Our proposed model adheres to the following principles: i) keypoints inference is fully unsupervised (no annotation given), ii) keypoints position error should be low and resilient to PCD perturbations (robustness), iii) keypoints should not change their indexes for the intra-class objects (semantic coherence), iv) keypoints should be close to or proximal to PCD surface (compactness). We achieve these desiderata by proposing a new self-supervised training strategy for keypoints estimation that does not assume any a priori knowledge of the object class, and a model architecture with coupled auxiliary losses that promotes the desired keypoints properties. We compare the keypoints estimated by the proposed approach with those of the state-of-the-art unsupervised approaches. The experiments show that our approach outperforms by estimating keypoints with improved coverage (+9.41%) while being semantically consistent (+4.66%) that best characterizes the object's 3D shape for downstream tasks. Code and data are available at: https://github.com/IITPAVIS/SC3K",
+    "url": "http://arxiv.org/abs/2308.05410v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  },
+  {
+    "title": "A Cross-view Fusion Framework for Robust 6-DoF Grasp Pose Estimation",
+    "authors": [
+      "Kangjian Zhu",
+      "Haobo Jiang",
+      "Jianjun Qian",
+      "Jin Xie"
+    ],
+    "year": 2026,
+    "venue": "arXiv",
+    "abstract": "In this paper, we propose a cross-view fusion framework that enhances the robustness of 6-DoF grasp pose estimation in corner views. Our framework alleviates occlusion by incorporating an auxiliary view and avoids the time-consuming, task-agnostic multi-view reconstruction through a post-fusion strategy. To enhance cross-view fusion, we propose a self-supervised contrastive learning strategy that leverages cross-view associations to regularize point cloud features. In brief, a cross-view point pair is considered a match if the two points correspond to the same 3D location, and a non-match if they represent distinct grasp directions. The learning strategy significantly enhances the spatial consistency and direction distinctiveness of point features, thereby facilitating cross-view fusion and improving estimation robustness. Furthermore, we propose a cross-view-aligned cylinder integration module to fuse grasp-relevant geometry into a comprehensive representation. Specifically, the module first aligns the cross-view points and features according to their similarity to enhance the robustness against noise. Subsequently, these points are registered into the cylindrical coordinate frame, emphasizing the rotation-symmetric geometry which is important for grasping. Finally, local self-attention and seed cross-attention layers are alternately employed, respectively enabling interactions within single views and across views, which supports fine-grained representation of grasp-relevant geometry. Our framework achieves strong performance on the GraspNet-1Billion benchmark and in real-world applications. Code is available at https://github.com/KJZhuAutomatic/Cross-view-Grasp.",
+    "url": "http://arxiv.org/abs/2606.06878v1",
+    "doi": null,
+    "citation_count": 0,
+    "source": "arxiv"
+  }
+]
