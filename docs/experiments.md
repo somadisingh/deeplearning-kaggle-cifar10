@@ -274,3 +274,10 @@ Correction: baseline head + vote is 97.54%, so on the submitted predictor the ga
 head + vote (`scripts/export_preds.py`), not `src/make_submission.py` (head only).
 CSVs (head + vote, 45k models): `submissions/submission_preact_sla_percopy_e200.csv`,
 `submissions/submission_preact_sla_ta_e300.csv` (agree with the final 50k submission on 95.85% / 96.50% of test images).
+
+## 50k retrain of SLA 300 epochs (2026-10-31, A100)
+
+`preact_sla_ta_e300_full`: final recipe, 300 epochs, all 50k (`--val 0`), seed 0, 139 min. No holdout.
+CSV built with `scripts/export_preds.py` (head + vote) + `src/import_preds.py`:
+`submissions/submission_preact_sla_ta_e300_full.csv` (SHA prefix 6eb7ce80). It agrees with the 0.909 submission
+(`preact_sla_ta_e200_full`) on 95.85% of test images. Kaggle public: pending.

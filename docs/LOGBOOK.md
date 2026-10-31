@@ -254,6 +254,7 @@ But it is 0.38 points less than the teachers' recipe (PreActResNet + SLA, 97.56%
 | 8 | PreActResNet + SLA + CutMix, 300 epochs, 45k | 97.66% | 0.902 |
 | 9 | PreActResNet + SLA, 300 epochs, 45k | 97.68% | 0.904 |
 | 10 | PreActResNet + SLA, 200 epochs, 45k (control for 7 to 9) | 97.56% | 0.903 |
+| 11 | PreActResNet + SLA, 300 epochs, all 50k (`preact_sla_ta_e300_full`) | – (no holdout) | pending |
 
 Submissions 7 to 10 trained on 45,000 images. On the same 45k data, the changes are in the range −0.007 to +0.001 public points. The final model trained on all 50,000 images and still has the best public score. We did not use these public scores to select a model.
 
