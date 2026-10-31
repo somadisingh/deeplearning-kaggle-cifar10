@@ -235,3 +235,15 @@ The winner is retrained on all 50k with `--ema-epoch <best weight-average epoch 
 `preact_sla_cutmix_e200`: final recipe + CutMix (p 0.5, Beta(1,1), box before the rotations), EMA 0.999 logged,
 84 min. Holdout (TTA): head 97.42%, rotation vote 97.52% (baseline 97.56% / 97.42%). Weight average: 96.98% / 97.08%,
 best at the last epoch, below the live network. No gain; no CSV. Queued next: `preact_sla_cutmix_e300` (~2.1 h).
+
+## Re-ranked priorities after the CutMix run (2026-10-31)
+
+| # | Run | A100 time (45k) | Why here |
+|---|---|---|---|
+| 1 | `preact_sla_cutmix_e300` | ~2.1 h | requested; CutMix tied at 200 epochs and usually gains more from long schedules |
+| 2 | `preact_sla_ta_e300` | ~2.1 h | control for #1; longer training is our only change with own evidence (+0.30) |
+| 3 | `preact_sla_percopy_e200` | ~85 min | cheap, untested |
+| 4 | `preact_sla2v_ta_e200` | ~2.8 h | only if #3 reaches 97.76% |
+
+Removed: baseline + weight average (it trailed the live network by 0.4). #1 and #2 together fit in one 5-hour job
+(~4.2 h + download). A winner (+0.3 over 97.56% / 97.78%) is retrained on all 50k (~3.1 h for 300 epochs).
