@@ -200,6 +200,17 @@ The box goes in before the four rotations, and the losses are mixed by area. The
 
 CutMix did not add accuracy. The weight average was 0.4 points worse than the live network at the end of the cosine schedule. We queued a 300-epoch CutMix run for the next session.
 
+`preact_sla_cutmix_e300`: the same CutMix run for 300 epochs (seed 0), without the weight average. Training time was 124 minutes on the A100.
+
+| Prediction | CutMix, 300 epochs | Final recipe (seed 0, 200 epochs) |
+|---|---|---|
+| Normal head | 97.66% | 97.56% |
+| 4-rotation vote | 97.64% | 97.42% |
+| Head + vote | 97.70% | – |
+
+The gain is +0.10 points. This is less than our limit of +0.3 points (the seed spread is approximately 0.2 points). Thus, we did not change the final model.
+We saved the predictions in `submissions/submission_preact_sla_cutmix_e300.csv`. We did not do the 300-epoch run without CutMix, because there was not sufficient HPC time.
+
 ## 7. Distillation result
 
 The student is a PreActResNet without SLA. The teachers are `preact_sla_ta_e200` and `preact_sla_ta_e200_sam05`.

@@ -247,3 +247,12 @@ best at the last epoch, below the live network. No gain; no CSV. Queued next: `p
 
 Removed: baseline + weight average (it trailed the live network by 0.4). #1 and #2 together fit in one 5-hour job
 (~4.2 h + download). A winner (+0.3 over 97.56% / 97.78%) is retrained on all 50k (~3.1 h for 300 epochs).
+
+## CutMix inside SLA, 300 epochs (2026-10-31, A100)
+
+`preact_sla_cutmix_e300`: same as `preact_sla_cutmix_e200` but 300 epochs (seed 0), no EMA, 124 min.
+Holdout (TTA): head 97.66%, rotation vote 97.64%, head + vote 97.70% (baseline 200 epochs: 97.56% / 97.42%).
++0.10 on the head, below the +0.3 rule (seed spread ~0.2), so this is a tie, not a keep.
+CSV exported as `submissions/submission_preact_sla_cutmix_e300.csv` (head + vote softmax sum, 45k model);
+it agrees with the final 50k submission on 96.35% of test images. The final submission does not change.
+`preact_sla_ta_e300` (the control) was not run: it did not fit in the job.
