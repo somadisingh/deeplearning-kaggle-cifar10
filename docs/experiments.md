@@ -201,3 +201,18 @@ From a second pass over the lecture 8 slides (self-supervised learning). Run wit
 Keep a run only if it beats the final recipe (97.56% / 97.78% over two seeds) by about 0.3 points; then retrain it on
 all 50k images (~2.3 h for SLA-300, ~3.1 h for two-view). Code for rotation x colour-permutation labels
 (`--ssl sla_cp`) also exists but is not queued.
+
+## Re-prioritised queue (2026-10-31)
+
+Added from the SLA follow-up research (three cheapest methods), with the two queued runs:
+
+| Order | Run | Change | A100 time (45k) | Expected holdout gain |
+|---|---|---|---|---|
+| 1 | `preact_sla_cutmix_e200` | CutMix (p 0.5, Beta(1,1)) pasted before the rotations | ~85 min | +0.1 to +0.4 |
+| 2 | `preact_sla_percopy_e200` | own crop / flip / cutout for each rotated copy | ~85 min | 0 to +0.3 |
+| 3 | `preact_sla_ta_e300` | 300 epochs | ~2.1 h | 0 to +0.3 |
+| 4 | `preact_sla2v_ta_e200` | two views + JS consistency (only if run 2 reaches 97.76%) | ~2.8 h | 0 to +0.3 |
+| all | – | weight average (EMA 0.999), BN recomputed on augmented train images, logged every 10 epochs | free | 0 to +0.15 |
+
+Then: repeat at seed 1 any run that beats 97.56% by 0.2 or more; combine confirmed winners in one 45k run; retrain on
+all 50k; submit by Nov 5.

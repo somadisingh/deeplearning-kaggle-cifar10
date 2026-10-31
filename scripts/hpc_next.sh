@@ -1,10 +1,13 @@
 #!/bin/bash
-# Next HPC session queue (run from /scratch/$USER/cifar10 with: nohup bash scripts/hpc_next.sh > logs/hpc_next.log 2>&1 &).
+# HPC queue (run from /scratch/$USER/cifar10 with: nohup bash scripts/hpc_next.sh > logs/hpc_next.log 2>&1 &).
 # Every run checkpoints every 10 epochs and resumes from runs/<name>/ckpt.pt, so re-running this script in a new
 # session continues where the previous job stopped and skips runs that already finished.
+# Earlier queues (SAM, PAPA, Shake-Shake, anti-aliasing, 400 epochs, distillation) are done; see docs/LOGBOOK.md.
 cd /scratch/$USER/cifar10/src
 P=../.venv/bin/python
-PA="--arch preact --widths 64 128 256 --depth 4 4 3 --batch-size 512 --label-smoothing 0.1 --trivialaugment --eval-every 10 --ckpt-every 10 --resume"
+# Final recipe (PreActResNet + SLA+SD + TrivialAugment) with a weight average (EMA 0.999) evaluated beside it.
+SLA="--arch preact --widths 64 128 256 --depth 4 4 3 --ssl sla --batch-size 512 --label-smoothing 0.1 \
+  --trivialaugment --eval-every 10 --ckpt-every 10 --resume --ema 0.999"
 
 run() {  # run <name> <args...>; skips finished runs
   name=$1; shift
@@ -12,36 +15,22 @@ run() {  # run <name> <args...>; skips finished runs
   $P -u train.py --name $name "$@" >> ../logs/$name.log 2>&1
 }
 
-# 1. SAM + SLA+SD on the PreActResNet, 45k/5k holdout, compared with preact_sla_ta_e200 (97.56%). ~2.8 h.
-run preact_sla_ta_e200_sam05 --ssl sla --sam-rho 0.05 --epochs 200 $PA
+# Baseline to beat: preact_sla_ta_e200 = 97.56% (seed 0), preact_sla_ta_e200_s1 = 97.78% (seed 1).
 
-# 2. PAPA: 4 PreActResNets pulled toward their mean, averaged into one network; compared with preact_ta_e200
-#    (96.82%) and at about equal compute with preact_sla_ta_e200 (97.56%). ~95 min.
-if [ ! -f ../runs/papa4_preact_ta_e200/config.json ]; then
-  $P -u train_papa.py --name papa4_preact_ta_e200 --population 4 --epochs 200 --batch-size 512 --trivialaugment \
-    --eval-every 10 --ckpt-every 10 --resume >> ../logs/papa4_preact_ta_e200.log 2>&1
+# 1. CutMix inside SLA: box pasted before the rotations, losses mixed by area, p = 0.5 per batch. ~85 min.
+run preact_sla_cutmix_e200 --cutmix 0.5 --epochs 200 $SLA
+
+# 2. Own crop, flip and cutout for each rotated copy (four views, same cost). ~85 min.
+run preact_sla_percopy_e200 --sla-percopy --epochs 200 $SLA
+
+# 3. Final recipe for 300 epochs. ~2.1 h.
+run preact_sla_ta_e300 --epochs 300 $SLA
+
+# 4. Two views + Jensen-Shannon consistency (2x cost, batch 256). ~2.8 h. Only if per-copy augmentation helped
+#    (holdout >= 97.76%, i.e. +0.2 over seed 0), because both test the same idea.
+if $P -c "import json,sys; sys.exit(0 if json.load(open('../runs/preact_sla_percopy_e200/config.json'))['val_acc_tta'] >= 0.9776 else 1)" 2>/dev/null; then
+  run preact_sla2v_ta_e200 --two-view --cons-weight 12 --epochs 200 --arch preact --widths 64 128 256 --depth 4 4 3 \
+    --ssl sla --batch-size 256 --label-smoothing 0.1 --trivialaugment --eval-every 10 --ckpt-every 10 --resume --ema 0.999
+else
+  echo "skip preact_sla2v_ta_e200 (per-copy augmentation did not reach 97.76%, or has not finished)"
 fi
-
-# 3. Shake-Shake-26 2x40d (4.56M), 600 epochs, resumable across sessions (Gastaldi: lr 0.2 per 128, wd 1e-4).
-run shake2x40d_ta_e600 --arch shake --widths 40 80 160 --depth 4 4 4 --batch-size 256 --sgd-lr 0.2 --sgd-wd 1e-4 \
-  --label-smoothing 0.1 --trivialaugment --epochs 600 --eval-every 20 --ckpt-every 10 --resume
-
-# 4. Anti-aliased PreActResNet (BlurPool downsampling, 0 extra params), 200 epochs; compare with preact_ta_e200 (96.82%).
-run preact_blur_ta_e200 --blur --epochs 200 $PA
-
-# 5. PreActResNet for 400 epochs; compare with preact_ta_e200 (96.82%, 200 epochs).
-run preact_ta_e400 --epochs 400 $PA
-
-# 6. Distillation: PreActResNet student taught by the two best SLA teachers (both trained on the same 45k split,
-#    so the holdout stays clean), same augmented view for teacher and student; compare with 97.56%.
-run preact_kd_sla2_ta_e200 --epochs 200 --teachers ../runs/preact_sla_ta_e200 ../runs/preact_sla_ta_e200_sam05 \
-  --kd-alpha 0.5 --kd-temp 4 $PA
-
-# 7. Final recipe (PreActResNet + SLA) for 300 epochs instead of 200; compare with 97.56% (seed 0) / 97.78% (seed 1).
-#    ~2.1 h on the 45k split.
-run preact_sla_ta_e300 --ssl sla --epochs 300 $PA
-
-# 8. Two augmented views per image + Jensen-Shannon consistency on top of SLA (supervised form of SimCLR's
-#    positive pairs; JS loss as in AugMix). 2x the work per epoch, so batch 256 to fit memory. ~2.8 h.
-run preact_sla2v_ta_e200 --ssl sla --two-view --cons-weight 12 --epochs 200 --arch preact --widths 64 128 256 \
-  --depth 4 4 3 --batch-size 256 --label-smoothing 0.1 --trivialaugment --eval-every 10 --ckpt-every 10 --resume
