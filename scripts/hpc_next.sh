@@ -20,17 +20,7 @@ run() {  # run <name> <args...>; skips finished runs
 # 1. CutMix inside SLA: box pasted before the rotations, losses mixed by area, p = 0.5 per batch. ~85 min.
 run preact_sla_cutmix_e200 --cutmix 0.5 --epochs 200 $SLA
 
-# 2. Own crop, flip and cutout for each rotated copy (four views, same cost). ~85 min.
-run preact_sla_percopy_e200 --sla-percopy --epochs 200 $SLA
-
-# 3. Final recipe for 300 epochs. ~2.1 h.
-run preact_sla_ta_e300 --epochs 300 $SLA
-
-# 4. Two views + Jensen-Shannon consistency (2x cost, batch 256). ~2.8 h. Only if per-copy augmentation helped
-#    (holdout >= 97.76%, i.e. +0.2 over seed 0), because both test the same idea.
-if $P -c "import json,sys; sys.exit(0 if json.load(open('../runs/preact_sla_percopy_e200/config.json'))['val_acc_tta'] >= 0.9776 else 1)" 2>/dev/null; then
-  run preact_sla2v_ta_e200 --two-view --cons-weight 12 --epochs 200 --arch preact --widths 64 128 256 --depth 4 4 3 \
-    --ssl sla --batch-size 256 --label-smoothing 0.1 --trivialaugment --eval-every 10 --ckpt-every 10 --resume --ema 0.999
-else
-  echo "skip preact_sla2v_ta_e200 (per-copy augmentation did not reach 97.76%, or has not finished)"
-fi
+# Paused by request (2026-10-31): only the CutMix run is queued for now. The other prepared runs:
+# run preact_sla_percopy_e200 --sla-percopy --epochs 200 $SLA                      # per-copy augmentation, ~85 min
+# run preact_sla_ta_e300 --epochs 300 $SLA                                          # SLA-300, ~2.1 h
+# two-view consistency: --two-view --cons-weight 12 --batch-size 256 (see docs/experiments.md), ~2.8 h
