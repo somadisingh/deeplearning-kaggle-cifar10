@@ -280,4 +280,4 @@ CSVs (head + vote, 45k models): `submissions/submission_preact_sla_percopy_e200.
 `preact_sla_ta_e300_full`: final recipe, 300 epochs, all 50k (`--val 0`), seed 0, 139 min. No holdout.
 CSV built with `scripts/export_preds.py` (head + vote) + `src/import_preds.py`:
 `submissions/submission_preact_sla_ta_e300_full.csv` (SHA prefix 6eb7ce80). It agrees with the 0.909 submission
-(`preact_sla_ta_e200_full`) on 95.85% of test images. Kaggle public: pending.
+(`preact_sla_ta_e200_full`) on 95.85% of test images. Kaggle public: 0.906 (vs 0.909 for the 200-epoch 50k model; 6 images on the 2,000-image public split, within noise).
