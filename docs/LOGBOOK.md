@@ -413,3 +413,24 @@ Code changes:
 
 We tested the changes with a small network on the Mac: SLA + CutMix + EMA + TrivialAugment, a stop and a resume, and SAM.
 These changes are in the code on the branch `wide-sla-pilot` (commit `e0fb7c6`). The Phase 9 runs used this code.
+
+## 12. RegMixup inside SLA (2026-11-02)
+
+Run `preact_sla_regmix_e200`: the final recipe (PreActResNet 64/128/256, 4/4/3, SLA+SD, TrivialAugment, 200 epochs)
+with RegMixup (Pinto et al. 2022): loss = clean SLA+SD loss + 1.0 x loss on a mixed batch (lambda ~ Beta(20, 20),
+both labels on the joint and plain heads; self-distillation on the clean half only). 45k images, `--val 5000
+--split-seed 0 --seed 0`, the same holdout as every baseline. Batch 256 clean + 256 mixed (2,048 rotated images per
+step, as in the baseline), lr 0.2 (0.1 per 128). A100: 50 s/epoch, 2.8 h. Before the run: `scripts/check_losses.py`
+(7 checks) and `scripts/hpc_preflight.sh` passed on the HPC node (commit `e43f030`).
+
+Holdout, head + vote, paired on the same 5,000 images (`scripts/compare_runs.py`):
+
+| Baseline | Baseline | RegMixup | Fixes | Breaks | Net | McNemar p |
+|---|---|---|---|---|---|---|
+| `preact_sla_ta_e200` | 97.54% | 97.86% | 47 | 31 | +16 (+0.32) | 0.089 |
+| `preact_sla_ta_e300` (best 45k) | 97.74% | 97.86% | 38 | 32 | +6 (+0.12) | 0.550 |
+
+It passes the keep rule (+0.3 vs its baseline) and beats the best 45k run, but neither gain is significant at 0.05.
+Confound: the baseline used batch 512 (lr 0.4); batch 512 clean + 512 mixed does not fit in 40 GB. A control run
+(SLA-200 at batch 256 without RegMixup) would separate the two effects. Not submitted (45k model). Files: HPC
+`~/regmixup`, test predictions SHA `2506e57102e8d1f2a3b0b5a0cb4b459922ba011d`.
