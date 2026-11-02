@@ -231,6 +231,34 @@ The 300-epoch gain is the largest result in this phase. It is less than +0.3 poi
 All gains are less than our limit of +0.3 points. We did not change the final model.
 We saved the predictions of the two runs in `submissions/`.
 
+### Phase 9: wider and shallower network (2026-11-01)
+
+`preact_wide_sla_ta_e200`: a PreActResNet with widths 80/160/320 and 3/3/2 blocks per stage. It has 4,926,210 parameters (with the 40-class head).
+The recipe is the final recipe: SLA+SD, TrivialAugment, cutout, 200 epochs, batch 512, seed 0.
+The split seed is 0. Thus, the 5,000 holdout images are the same as in Phase 8.
+The run also kept a weight average (EMA, decay 0.999). EMA calculates BN statistics on the 4 rotated copies (the audit fix in Section 11.4).
+Training time was 26.5 s for each epoch on the A100 (89 minutes).
+
+| Prediction | Wide net, 200 epochs | Final recipe, 200 epochs | Final recipe, 300 epochs |
+|---|---|---|---|
+| Normal head | 97.74% | 97.56% | 97.68% |
+| 4-rotation vote | 97.54% | 97.42% | 97.68% |
+| Head + vote | 97.76% | 97.54% | 97.74% |
+| EMA, head + vote | 97.70% | – | – |
+
+Paired counts on head + vote:
+
+| Comparison | Images fixed | Images broken | McNemar exact p |
+|---|---|---|---|
+| Wide net vs SLA, 200 epochs | 38 | 27 | 0.21 |
+| Wide net vs SLA, 300 epochs | 31 | 30 | 1.0 |
+
+The gain over SLA-200 is +0.22 points on head + vote, but the paired test does not show a difference. The holdout result is equal to SLA-300.
+EMA with the BN fix did not help: it is 0.06 points less than the live network.
+We retrained the wide net on all 50,000 images (`preact_wide_sla_ta_e200_full`, 98 minutes).
+On Kaggle, both wide-net submissions are lower than the narrow nets (Section 8). Thus, we did not keep the wide net.
+We saved the predictions in `submissions/submission_preact_wide_sla_ta_e200_45k.csv` and `submissions/submission_preact_wide_sla_ta_e200_50k.csv`.
+
 ## 7. Distillation result
 
 The student is a PreActResNet without SLA. The teachers are `preact_sla_ta_e200` and `preact_sla_ta_e200_sam05`.
@@ -255,8 +283,11 @@ But it is 0.38 points less than the teachers' recipe (PreActResNet + SLA, 97.56%
 | 9 | PreActResNet + SLA, 300 epochs, 45k | 97.68% | 0.904 |
 | 10 | PreActResNet + SLA, 200 epochs, 45k (control for 7 to 9) | 97.56% | 0.903 |
 | 11 | PreActResNet + SLA, 300 epochs, all 50k (`preact_sla_ta_e300_full`) | – (no holdout) | 0.906 |
+| 12 | Wide PreActResNet (80/160/320) + SLA, 200 epochs, 45k | 97.76% (head + vote) | 0.898 |
+| 13 | Wide PreActResNet (80/160/320) + SLA, 200 epochs, all 50k (`preact_wide_sla_ta_e200_full`) | – (no holdout) | 0.901 |
 
 Submissions 7 to 10 trained on 45,000 images. On the same 45k data, the changes are in the range −0.007 to +0.001 public points. The final model trained on all 50,000 images and still has the best public score. We did not use these public scores to select a model.
+On the same 45k data, the wide net is 0.005 to 0.006 public points below the narrow nets (one public image is approximately 0.001). This is in the noise, but it agrees with lesson 2.
 
 ## 9. Final model
 
@@ -280,6 +311,7 @@ Submissions 7 to 10 trained on 45,000 images. On the same 45k data, the changes 
 4. SAM, PAPA, distillation, longer schedules and anti-aliasing each gave +0.2 to +0.4 points on the plain ResNet. None of them beat SLA.
 5. Calculate BN statistics on data that is similar to the training data. Clean-image statistics decreased the PAPA model by 1 point.
 6. Make long runs resumable. HPC jobs stop after 3 to 5 hours.
+7. A wider and shallower network with equal holdout accuracy did not do better on the shifted test images.
 
 ## 11. Pipeline audit (2026-10-31)
 
@@ -380,3 +412,4 @@ Code changes:
 | `--cutmix` with `--two-view` stops with an error. | `src/train.py` |
 
 We tested the changes with a small network on the Mac: SLA + CutMix + EMA + TrivialAugment, a stop and a resume, and SAM.
+These changes are in the code on the branch `wide-sla-pilot` (commit `e0fb7c6`). The Phase 9 runs used this code.
