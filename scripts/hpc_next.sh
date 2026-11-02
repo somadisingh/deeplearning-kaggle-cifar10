@@ -20,7 +20,9 @@ run() {  # run <name> <args...>; skips finished runs
 # Baselines on the 45k holdout (seed-0 split), head + vote: SLA-200 97.54%, SLA-300 97.74%.
 # Before the first run of this queue: bash scripts/hpc_preflight.sh (loss checks + 2-step smoke runs).
 # Compare each finished run with: python scripts/compare_runs.py <baseline> <run> (paired fixes/breaks, McNemar).
-# Keep a change only if it beats its baseline by >= 0.3 points (head + vote) on the same holdout.
+# All runs: --val 5000 --split-seed 0 --seed 0 (defaults), the same split and seed as every baseline and teacher.
+# Compare each run with its same-epoch baseline and with the best 45k run, preact_sla_ta_e300 (97.74%). Keep a change
+# only if it beats its baseline by >= 0.3 points (head + vote); it goes to the 50k retrain only if it also beats 97.74%.
 
 # 1. RegMixup inside SLA (alpha 20, eta 1), 200 epochs. Batch 256 clean + 256 mixed, so each step has 2,048 rotated
 #    images as in the baseline; lr scales with the clean batch (0.2). ~2.8 h. Baseline: preact_sla_ta_e200.
