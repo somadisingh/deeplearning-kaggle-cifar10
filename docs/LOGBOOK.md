@@ -285,6 +285,7 @@ But it is 0.38 points less than the teachers' recipe (PreActResNet + SLA, 97.56%
 | 11 | PreActResNet + SLA, 300 epochs, all 50k (`preact_sla_ta_e300_full`) | – (no holdout) | 0.906 |
 | 12 | Wide PreActResNet (80/160/320) + SLA, 200 epochs, 45k | 97.76% (head + vote) | 0.898 |
 | 13 | Wide PreActResNet (80/160/320) + SLA, 200 epochs, all 50k (`preact_wide_sla_ta_e200_full`) | – (no holdout) | 0.901 |
+| 14 | PreActResNet + SLA + RegMixup, 200 epochs, 45k (`preact_sla_regmix_e200`) | 97.86% (head + vote) | 0.907 |
 
 Submissions 7 to 10 trained on 45,000 images. On the same 45k data, the changes are in the range −0.007 to +0.001 public points. The final model trained on all 50,000 images and still has the best public score. We did not use these public scores to select a model.
 On the same 45k data, the wide net is 0.005 to 0.006 public points below the narrow nets (one public image is approximately 0.001). This is in the noise, but it agrees with lesson 2.
@@ -432,5 +433,5 @@ Holdout, head + vote, paired on the same 5,000 images (`scripts/compare_runs.py`
 
 It passes the keep rule (+0.3 vs its baseline) and beats the best 45k run, but neither gain is significant at 0.05.
 Confound: the baseline used batch 512 (lr 0.4); batch 512 clean + 512 mixed does not fit in 40 GB. A control run
-(SLA-200 at batch 256 without RegMixup) would separate the two effects. Not submitted (45k model). Files: HPC
+(SLA-200 at batch 256 without RegMixup) would separate the two effects. Kaggle public 0.907 (45k), the best 45k score (SLA-300 45k 0.904, SLA-200 45k 0.903). Files: HPC
 `~/regmixup`, test predictions SHA `2506e57102e8d1f2a3b0b5a0cb4b459922ba011d`.
