@@ -66,6 +66,10 @@ def parse_args():
     p.add_argument("--cutmix", type=float, default=0.0,
                    help="SLA only: probability per batch of CutMix (box from a shuffled partner, area ~ Beta(1,1)), "
                         "pasted before the rotations")
+    p.add_argument("--regmixup", type=float, default=0.0,
+                   help="SLA only: RegMixup (Pinto et al., 2022) Beta(a, a) parameter (0 = off; the paper uses 20 for "
+                        "CIFAR-10). Each batch also carries a mixed copy of itself, mixed before the rotations")
+    p.add_argument("--regmixup-eta", type=float, default=1.0, help="weight of the RegMixup mixed-image loss")
     p.add_argument("--sla-percopy", action="store_true",
                    help="SLA only: each rotated copy gets its own crop, flip and cutout (copy 0 stays upright)")
     p.add_argument("--ema", type=float, default=0.0,
@@ -81,7 +85,8 @@ def parse_args():
     p.add_argument("--seed", type=int, default=0, help="training randomness (init, augmentation, CutMix)")
     p.add_argument("--split-seed", type=int, default=0,
                    help="holdout split; kept apart from --seed so runs with different seeds share one holdout")
-    p.add_argument("--teachers", nargs="*", default=[], help="run dirs of teacher models for distillation")
+    p.add_argument("--teachers", nargs="*", default=[],
+                   help="run dirs of teacher models for distillation; with --ssl sla, SLA teachers distil both heads")
     p.add_argument("--kd-alpha", type=float, default=0.5, help="weight of the distillation loss")
     p.add_argument("--kd-temp", type=float, default=4.0)
     p.add_argument("--allow-big", action="store_true", help="allow >5M params (teachers only)")
@@ -278,6 +283,30 @@ def cutmix_box(x, lam, rng):
     return x, partner, 1 - (y2 - y1) * (x2 - x1) / (h * w)
 
 
+def mix_pair_loss(loss_fn, logits, y, y_b, lam):
+    """Loss of images mixed with a partner: lam * loss(own label) + (1 - lam) * loss(partner label), per row."""
+    return lam * loss_fn(logits, y) + (1 - lam) * loss_fn(logits, y_b)
+
+
+@torch.no_grad()
+def sla_teacher_targets(teachers, xr, T):
+    """Distillation targets from SLA teachers on the student's own rotated batch `xr` (row 4*i + k = image i
+    rotated by k): the mean of the teachers' probabilities at temperature T, for the joint head (every copy) and
+    for the plain head (upright copies). Teachers run in eval mode, so their BN statistics do not change."""
+    p_joint = p_plain = 0
+    for t in teachers:
+        t.eval()
+        z = t.features(xr)
+        p_joint = p_joint + F.softmax(t.joint_head(z) * t.scale / T, 1)
+        p_plain = p_plain + F.softmax(t.head(z[::4]) * t.scale / T, 1)
+    return p_joint / len(teachers), p_plain / len(teachers)
+
+
+def kd_loss(logits, p_teacher, T):
+    """KL(teacher || student) per row at temperature T, scaled by T^2 (Hinton et al., 2015)."""
+    return F.kl_div(F.log_softmax(logits / T, 1), p_teacher, reduction="none").sum(1) * T * T
+
+
 @torch.no_grad()
 def recompute_bn(net, images, bs=500, forward=None):
     """Recompute BN statistics on `images`. `forward(net, x)` replaces the plain forward pass, so the
@@ -351,6 +380,81 @@ def load_run(run_dir, device):
     return net.eval()
 
 
+def sla_loss(net, x, y, args, ce, y_b=None, lam=1.0, x_mix=None, partner_m=None, lam_m=1.0, kd_targets=None):
+    """Summed SLA+SD loss of one batch (the caller divides by the batch size). x, y: the batch (two views stacked
+    for --two-view); y_b, lam: CutMix partner labels and kept area; x_mix, partner_m, lam_m: the RegMixup copy;
+    kd_targets: (joint, plain) teacher probabilities from sla_teacher_targets."""
+    # SLA+SD (Lee et al., 2020, eqs. 3 and 5; hankook/SLA create_sla_sd_trainer):
+    # joint (class, transformation) cross-entropy averaged over the 4 rotated copies, plus
+    # self-distillation of the aggregated joint prediction (held constant) into the
+    # plain head on the unrotated image, plus beta * its usual cross-entropy.
+    # sla_cp: the transformation is rotation x RGB permutation (24); each image gets one
+    # random permutation, shared by its 4 rotated copies, so the cost stays at 4x.
+    xs, ys = x, y
+    if args.two_view:
+        ys = torch.cat([y, y])
+    if x_mix is not None:
+        xs, ys = torch.cat([x, x_mix]), torch.cat([y, y])
+    n = len(xs)
+    rots = torch.arange(4, device=y.device).repeat(n, 1)  # (n, 4)
+    if args.sla_percopy:
+        xr = torch.stack([torch.rot90(xs[:, k], k, (2, 3)) for k in range(4)], 1).flatten(0, 1)
+    else:
+        xr = rotate4(xs)
+    m = 4
+    t = rots
+    if args.ssl == "sla_cp":
+        m = 24
+        perm = torch.randint(0, 6, (n,), device=y.device)
+        xr = colour_permute(xr, perm.repeat_interleave(4))
+        t = rots * 6 + perm.view(-1, 1)
+    z = net.features(xr)
+    joint = net.joint_head(z) * net.scale
+    joint_y = (ys.view(-1, 1) * m + t).flatten()
+    joint_loss = F.cross_entropy(joint, joint_y, reduction="none").view(n, 4).mean(1)
+    single = net.head(z[::4]) * net.scale
+    plain = ce(single, ys)
+    if y_b is not None:
+        # CutMix: mix the joint and plain-head losses by area; the aggregate teacher sees the
+        # same mixed image, so the self-distillation term is unchanged.
+        joint_b = (y_b.view(-1, 1) * m + t).flatten()
+        joint_loss = lam * joint_loss + (1 - lam) * F.cross_entropy(
+            joint, joint_b, reduction="none").view(n, 4).mean(1)
+        plain = lam * plain + (1 - lam) * ce(single, y_b)
+    B = len(y)
+    if x_mix is not None:
+        # RegMixup (Pinto et al., 2022, eq. 3): the mixed half (rows B..2B-1) also takes the
+        # partner's label with weight 1 - lam; the clean half keeps the plain SLA+SD loss.
+        y_p = y[partner_m]
+        joint_p = (y_p.view(-1, 1) * m + t[B:]).flatten()
+        joint_partner = F.cross_entropy(joint[4 * B:], joint_p, reduction="none").view(B, 4).mean(1)
+        joint_loss = torch.cat([joint_loss[:B], lam_m * joint_loss[B:] + (1 - lam_m) * joint_partner])
+        plain = torch.cat([plain[:B], mix_pair_loss(ce, single[B:], y, y_p, lam_m)])
+    j = joint.view(n, 4, 10, m)
+    agg = torch.gather(j, 3, t.view(n, 4, 1, 1).expand(n, 4, 10, 1)).squeeze(3).mean(1).detach()
+    sd = F.kl_div(F.log_softmax(single, 1), F.softmax(agg, 1), reduction="none").sum(1)
+    hard = joint_loss + args.sla_beta * plain
+    if kd_targets is not None:
+        p_joint_t, p_plain_t = kd_targets
+        # Ensemble distillation into both heads: (1 - alpha) * labels + alpha * teachers.
+        kd = (kd_loss(joint, p_joint_t, args.kd_temp).view(n, 4).mean(1)
+              + kd_loss(single, p_plain_t, args.kd_temp))
+        hard = (1 - args.kd_alpha) * hard + args.kd_alpha * kd
+    if x_mix is not None:
+        # Self-distillation stays on the clean images; the mixed loss is weighted by eta.
+        per_img = torch.cat([hard[:B] + sd[:B], args.regmixup_eta * hard[B:]])
+    else:
+        per_img = hard + sd
+    if args.two_view:
+        # Jensen-Shannon consistency between the two views (Hendrycks et al., 2020, AugMix).
+        h = n // 2
+        p1, p2 = F.softmax(single[:h], 1), F.softmax(single[h:], 1)
+        mix = ((p1 + p2) / 2).clamp_min(1e-7).log()
+        js = 0.5 * (F.kl_div(mix, p1, reduction="none").sum(1) + F.kl_div(mix, p2, reduction="none").sum(1))
+        return (0.5 * (per_img[:h] + per_img[h:]) + args.cons_weight * js).sum()
+    return per_img.sum()
+
+
 # ---------------------------------------------------------------- training
 
 
@@ -374,7 +478,21 @@ def main():
         va_t = torch.from_numpy(va_idx).to(device)
         x_va, y_va = x_all[va_t], y_all[va_t]
 
-    assert not (args.ssl != "none" and args.teachers), "SSL heads and teacher distillation are not combined"
+    sla_kd = bool(args.teachers) and args.ssl != "none"
+    assert not sla_kd or args.ssl == "sla", "distillation with an SSL student is implemented for --ssl sla only"
+    assert not (sla_kd and (args.cutmix or args.sla_percopy or args.two_view or args.sam_rho)), \
+        "SLA distillation is tested alone or with --regmixup only"
+    assert not args.regmixup or args.ssl == "sla", "--regmixup is implemented on top of --ssl sla"
+    assert not (args.regmixup and (args.cutmix or args.sla_percopy or args.two_view)), \
+        "--regmixup is not combined with --cutmix, --sla-percopy or --two-view"
+    for t in args.teachers:
+        # A teacher must not have trained on the student's holdout: same holdout size and split (runs before the
+        # --split-seed option used --seed for the split). For a 50k student (--val 0), teachers must be 50k runs.
+        tc = json.load(open(os.path.join(t, "config.json")))
+        t_split = (tc["val"], tc.get("split_seed", tc["seed"]) if tc["val"] else 0)
+        s_split = (args.val, args.split_seed if args.val else 0)
+        assert t_split == s_split, f"teacher {t} has holdout split {t_split}, the student has {s_split}"
+        assert not sla_kd or tc.get("ssl") == "sla", f"teacher {t} is not an SLA run"
     net = build_net(args.arch, args.widths, args.depth, args.ssl, args.blur).to(device)
     n_params = count_params(net)
     n_total = count_params(net, trainable_only=False)
@@ -451,6 +569,9 @@ def main():
         def forward(m, x):
             if args.cutmix and bn_rng.random() < args.cutmix:
                 x, _, _ = cutmix_box(x, bn_rng.beta(1.0, 1.0), bn_rng)
+            if args.regmixup:
+                lam = float(bn_rng.beta(args.regmixup, args.regmixup))
+                x = torch.cat([x, lam * x + (1 - lam) * x[torch.randperm(len(x), device=x.device)]])
             return m.features(rotate4(x)) if args.ssl in ("sla", "sla_cp") else m(x)
 
         recompute_bn(e, imgs, bs=args.batch_size, forward=forward)
@@ -486,7 +607,7 @@ def main():
         net.train()
         for x, y in loader:
             t_logits = None
-            if teachers:
+            if teachers and not sla_kd:
                 with torch.no_grad():
                     for t in teachers:
                         t.eval()
@@ -497,56 +618,23 @@ def main():
             if args.cutmix and np_rng.random() < args.cutmix:
                 x, partner, lam = cutmix_box(x, np_rng.beta(1.0, 1.0), np_rng)
                 y_b = y[partner]
+            x_mix = None
+            if args.regmixup:
+                # RegMixup: a mixed copy of the batch (one lam per batch, as in the paper), rotated with it.
+                lam_m = float(np_rng.beta(args.regmixup, args.regmixup))
+                partner_m = torch.randperm(len(x), device=x.device)
+                x_mix = lam_m * x + (1 - lam_m) * x[partner_m]
+            p_joint_t = p_plain_t = None
+            if sla_kd:
+                # The teachers see exactly the student's images: same augmentation, mixing and rotations.
+                xin = x if x_mix is None else torch.cat([x, x_mix])
+                p_joint_t, p_plain_t = sla_teacher_targets(teachers, rotate4(xin), args.kd_temp)
 
             def compute_loss():
                 if args.ssl in ("sla", "sla_cp"):
-                    # SLA+SD (Lee et al., 2020, eqs. 3 and 5; hankook/SLA create_sla_sd_trainer):
-                    # joint (class, transformation) cross-entropy averaged over the 4 rotated copies, plus
-                    # self-distillation of the aggregated joint prediction (held constant) into the
-                    # plain head on the unrotated image, plus beta * its usual cross-entropy.
-                    # sla_cp: the transformation is rotation x RGB permutation (24); each image gets one
-                    # random permutation, shared by its 4 rotated copies, so the cost stays at 4x.
-                    xs, ys = x, y
-                    if args.two_view:
-                        ys = torch.cat([y, y])
-                    n = len(xs)
-                    rots = torch.arange(4, device=y.device).repeat(n, 1)  # (n, 4)
-                    if args.sla_percopy:
-                        xr = torch.stack([torch.rot90(xs[:, k], k, (2, 3)) for k in range(4)], 1).flatten(0, 1)
-                    else:
-                        xr = rotate4(xs)
-                    m = 4
-                    t = rots
-                    if args.ssl == "sla_cp":
-                        m = 24
-                        perm = torch.randint(0, 6, (n,), device=y.device)
-                        xr = colour_permute(xr, perm.repeat_interleave(4))
-                        t = rots * 6 + perm.view(-1, 1)
-                    z = net.features(xr)
-                    joint = net.joint_head(z) * net.scale
-                    joint_y = (ys.view(-1, 1) * m + t).flatten()
-                    joint_loss = F.cross_entropy(joint, joint_y, reduction="none").view(n, 4).mean(1)
-                    single = net.head(z[::4]) * net.scale
-                    plain = ce(single, ys)
-                    if y_b is not None:
-                        # CutMix: mix the joint and plain-head losses by area; the aggregate teacher sees the
-                        # same mixed image, so the self-distillation term is unchanged.
-                        joint_b = (y_b.view(-1, 1) * m + t).flatten()
-                        joint_loss = lam * joint_loss + (1 - lam) * F.cross_entropy(
-                            joint, joint_b, reduction="none").view(n, 4).mean(1)
-                        plain = lam * plain + (1 - lam) * ce(single, y_b)
-                    j = joint.view(n, 4, 10, m)
-                    agg = torch.gather(j, 3, t.view(n, 4, 1, 1).expand(n, 4, 10, 1)).squeeze(3).mean(1).detach()
-                    sd = F.kl_div(F.log_softmax(single, 1), F.softmax(agg, 1), reduction="none").sum(1)
-                    per_img = joint_loss + sd + args.sla_beta * plain
-                    if args.two_view:
-                        # Jensen-Shannon consistency between the two views (Hendrycks et al., 2020, AugMix).
-                        h = n // 2
-                        p1, p2 = F.softmax(single[:h], 1), F.softmax(single[h:], 1)
-                        mix = ((p1 + p2) / 2).clamp_min(1e-7).log()
-                        js = 0.5 * (F.kl_div(mix, p1, reduction="none").sum(1) + F.kl_div(mix, p2, reduction="none").sum(1))
-                        return (0.5 * (per_img[:h] + per_img[h:]) + args.cons_weight * js).sum() / norm_by
-                    return per_img.sum() / norm_by
+                    return sla_loss(net, x, y, args, ce, y_b, lam, x_mix, partner_m if x_mix is not None else None,
+                                    lam_m if x_mix is not None else 1.0,
+                                    (p_joint_t, p_plain_t) if sla_kd else None) / norm_by
                 if args.ssl == "rot":
                     # Auxiliary rotation prediction (Hendrycks et al., 2019; hendrycks/ss-ood):
                     # classification loss on the unrotated images only, plus lambda times the

@@ -16,21 +16,23 @@ run() {  # run <name> <args...>; skips finished runs
   $P -u train.py --name $name "$@" >> ../logs/$name.log 2>&1
 }
 
-# Baseline to beat: preact_sla_ta_e200 = 97.56% (seed 0), preact_sla_ta_e200_s1 = 97.78% (seed 1).
-# Done: preact_sla_cutmix_e200 (CutMix, 200 epochs) = 97.42% head / 97.52% vote, a tie.
-# Ranked on the latest results (2026-10-31): longer training is the only change with our own evidence (+0.30 for 400
-# epochs without SLA), and CutMix usually gains more from long schedules, so the two 300-epoch runs come first.
+# Earlier queues (CutMix-300, SLA-300, per-copy, two-view, wide 80/160/320) are done; see docs/LOGBOOK.md.
+# Baselines on the 45k holdout (seed-0 split), head + vote: SLA-200 97.54%, SLA-300 97.74%.
+# Before the first run of this queue: bash scripts/hpc_preflight.sh (loss checks + 2-step smoke runs).
+# Compare each finished run with: python scripts/compare_runs.py <baseline> <run> (paired fixes/breaks, McNemar).
+# Keep a change only if it beats its baseline by >= 0.3 points (head + vote) on the same holdout.
 
-# 1. CutMix inside SLA, 300 epochs (fresh cosine schedule). ~2.1 h.
-run preact_sla_cutmix_e300 --cutmix 0.5 --epochs 300 $SLA
+# 1. RegMixup inside SLA (alpha 20, eta 1), 200 epochs. Batch 256 clean + 256 mixed, so each step has 2,048 rotated
+#    images as in the baseline; lr scales with the clean batch (0.2). ~2.8 h. Baseline: preact_sla_ta_e200.
+run preact_sla_regmix_e200 --regmixup 20 --regmixup-eta 1 --epochs 200 $SLA --batch-size 256
 
-# 2. Final recipe, 300 epochs (control for #1, and the SLA-300 test). ~2.1 h.
-run preact_sla_ta_e300 --epochs 300 $SLA
+# 2. Distillation of 3 SLA teachers (SLA-200, SLA-300, wide SLA-200; all seed-0 split, all have 50k versions) into an
+#    SLA student, both heads, alpha 0.5, T 4, 200 epochs. ~2.8 h. Baseline: preact_sla_ta_e200.
+run preact_sla_kd3_e200 --teachers ../runs/preact_sla_ta_e200 ../runs/preact_sla_ta_e300 ../runs/preact_wide_sla_ta_e200 \
+  --kd-alpha 0.5 --kd-temp 4 --epochs 200 $SLA
 
-# 3. Per-copy augmentation, 200 epochs (~85 min). Enable when approved:
-# run preact_sla_percopy_e200 --sla-percopy --epochs 200 $SLA
-# 4. Two views + JS consistency (~2.8 h), only if #3 reaches 97.76%:
-# run preact_sla2v_ta_e200 --two-view --cons-weight 12 --epochs 200 --arch preact --widths 64 128 256 --depth 4 4 3 \
-#   --ssl sla --batch-size 256 --label-smoothing 0.1 --trivialaugment --eval-every 10 --ckpt-every 10 --resume
-# Removed: baseline + weight average (the average trailed the live network by 0.4 in the CutMix run).
-# Final: retrain the winner on all 50k with --val 0 and export its CSV with scripts/export_preds.py <run>.
+# 3. Final recipe, 600 epochs (resumes across sessions). ~4.2 h. Baseline: preact_sla_ta_e300.
+run preact_sla_ta_e600 --epochs 600 $SLA
+
+# Final: retrain the winner on all 50k with --val 0 (KD: teachers ../runs/preact_sla_ta_e200_full
+# ../runs/preact_sla_ta_e300_full ../runs/preact_wide_sla_ta_e200_full) and export it with scripts/export_preds.py <run>.
