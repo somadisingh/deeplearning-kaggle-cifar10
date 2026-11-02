@@ -24,6 +24,10 @@ run() {  # run <name> <args...>; skips finished runs
 # Compare each run with its same-epoch baseline and with the best 45k run, preact_sla_ta_e300 (97.74%). Keep a change
 # only if it beats its baseline by >= 0.3 points (head + vote); it goes to the 50k retrain only if it also beats 97.74%.
 
+# 0. RegMixup inside SLA, all 50k (--val 0): the 45k run scored 97.86% head + vote (vs 97.54% SLA-200) and 0.907
+#    public. Same settings as below. ~3.1 h. Export with: python scripts/export_preds.py preact_sla_regmix_e200_full
+run preact_sla_regmix_e200_full --val 0 --regmixup 20 --regmixup-eta 1 --epochs 200 $SLA --batch-size 256
+
 # 1. RegMixup inside SLA (alpha 20, eta 1), 200 epochs. Batch 256 clean + 256 mixed, so each step has 2,048 rotated
 #    images as in the baseline; lr scales with the clean batch (0.2). ~2.8 h. Baseline: preact_sla_ta_e200.
 run preact_sla_regmix_e200 --regmixup 20 --regmixup-eta 1 --epochs 200 $SLA --batch-size 256
