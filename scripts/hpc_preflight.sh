@@ -3,7 +3,7 @@
 # checks, then each new configuration for 2 steps with a tiny network, then deletes the smoke runs. Stops on any error.
 set -euo pipefail
 cd /scratch/$USER/cifar10
-P=.venv/bin/python
+P=$PWD/.venv/bin/python
 for r in preact_sla_ta_e200 preact_sla_ta_e300 preact_wide_sla_ta_e200 preact_sla_ta_e200_full preact_sla_ta_e300_full \
   preact_wide_sla_ta_e200_full; do
   test -f runs/$r/model.pt -a -f runs/$r/config.json || { echo "missing teacher runs/$r"; exit 1; }
