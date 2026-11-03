@@ -455,3 +455,7 @@ Not separable from RegMixup-200. As a teacher it does not raise the 4-teacher en
 RegMixup-200, 97.92% with RegMixup-200, 97.92% with both). Test predictions SHA `d2d419e2576c2963880df0eb6db6d2cc1c333415`
 (`submissions/submission_preact_sla_regmix_e300_45k.csv`, 95.5% agreement with the RegMixup-200 45k file). A 50k
 retrain (`preact_sla_regmix_e300_full`) is queued as 1c in `scripts/hpc_next.sh`.
+
+The 50k retrain (`preact_sla_regmix_e300_full`, `--val 0`, 300 epochs, 4.6 h, final loss 4.44) ran on request. Test
+predictions SHA `93e4f90d3f1e26004142427ca3ba7cfcee7cd11d` (`submissions/submission_preact_sla_regmix_e300_50k.csv`).
+Agreement: 95.9% with RegMixup-200 50k, 96.0% with RegMixup-300 45k, 95.3% with the 0.909 `submission.csv`.
