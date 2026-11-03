@@ -32,6 +32,10 @@ run preact_sla_regmix_e200_full --val 0 --regmixup 20 --regmixup-eta 1 --epochs 
 #    images as in the baseline; lr scales with the clean batch (0.2). ~2.8 h. Baseline: preact_sla_ta_e200.
 run preact_sla_regmix_e200 --regmixup 20 --regmixup-eta 1 --epochs 200 $SLA --batch-size 256
 
+# 1b. RegMixup inside SLA, 300 epochs (the paper used 350), 45k. ~4.2 h. Compare with preact_sla_regmix_e200 (97.86%)
+#     and preact_sla_ta_e300 (97.74%). If it wins, retrain on 50k with --val 0 (~4.6 h).
+run preact_sla_regmix_e300 --regmixup 20 --regmixup-eta 1 --epochs 300 $SLA --batch-size 256
+
 # 2. Distillation of 4 SLA teachers (SLA-200, SLA-300, wide SLA-200, RegMixup SLA-200; all seed-0 split, all have 50k
 #    versions) into an SLA student (no RegMixup in the student), both heads, alpha 0.5, T 4, 200 epochs. ~3 h.
 #    Compare with preact_sla_ta_e200 (97.54%) and preact_sla_regmix_e200 (97.86%).
