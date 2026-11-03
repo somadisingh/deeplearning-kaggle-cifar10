@@ -1,7 +1,7 @@
 """Checks of the RegMixup and SLA distillation losses in src/train.py, with no training.
 
 Usage (from the repo root or /scratch/$USER/cifar10): python scripts/check_losses.py [runs dir]
-The runs dir (default runs) must hold the teachers preact_sla_ta_e200, preact_sla_ta_e300 and preact_wide_sla_ta_e200.
+The runs dir (default runs) must hold the teachers preact_sla_ta_e200, preact_sla_ta_e300, preact_wide_sla_ta_e200 and preact_sla_regmix_e200.
 Runs on the CPU in about a minute. Every check prints PASS or stops with an error.
 """
 import copy, os, sys
@@ -17,7 +17,7 @@ import train
 from models import PreActResNet
 
 RUNS = sys.argv[1] if len(sys.argv) > 1 else "runs"
-TEACHERS = ["preact_sla_ta_e200", "preact_sla_ta_e300", "preact_wide_sla_ta_e200"]
+TEACHERS = ["preact_sla_ta_e200", "preact_sla_ta_e300", "preact_wide_sla_ta_e200", "preact_sla_regmix_e200"]
 torch.manual_seed(0)
 args = SimpleNamespace(ssl="sla", two_view=False, sla_percopy=False, sla_beta=1.0, kd_alpha=0.5, kd_temp=4.0,
                        regmixup_eta=1.0)

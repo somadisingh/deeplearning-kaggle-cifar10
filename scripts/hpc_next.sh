@@ -32,13 +32,13 @@ run preact_sla_regmix_e200_full --val 0 --regmixup 20 --regmixup-eta 1 --epochs 
 #    images as in the baseline; lr scales with the clean batch (0.2). ~2.8 h. Baseline: preact_sla_ta_e200.
 run preact_sla_regmix_e200 --regmixup 20 --regmixup-eta 1 --epochs 200 $SLA --batch-size 256
 
-# 2. Distillation of 3 SLA teachers (SLA-200, SLA-300, wide SLA-200; all seed-0 split, all have 50k versions) into an
-#    SLA student, both heads, alpha 0.5, T 4, 200 epochs. ~2.8 h. Baseline: preact_sla_ta_e200.
-run preact_sla_kd3_e200 --teachers ../runs/preact_sla_ta_e200 ../runs/preact_sla_ta_e300 ../runs/preact_wide_sla_ta_e200 \
-  --kd-alpha 0.5 --kd-temp 4 --epochs 200 $SLA
+# 2. Distillation of 4 SLA teachers (SLA-200, SLA-300, wide SLA-200, RegMixup SLA-200; all seed-0 split, all have 50k
+#    versions) into an SLA student (no RegMixup in the student), both heads, alpha 0.5, T 4, 200 epochs. ~3 h.
+#    Compare with preact_sla_ta_e200 (97.54%) and preact_sla_regmix_e200 (97.86%).
+run preact_sla_kd4_e200 --teachers ../runs/preact_sla_ta_e200 ../runs/preact_sla_ta_e300 ../runs/preact_wide_sla_ta_e200 \
+  ../runs/preact_sla_regmix_e200 --kd-alpha 0.5 --kd-temp 4 --epochs 200 $SLA
 
-# 3. Final recipe, 600 epochs (resumes across sessions). ~4.2 h. Baseline: preact_sla_ta_e300.
-run preact_sla_ta_e600 --epochs 600 $SLA
-
-# Final: retrain the winner on all 50k with --val 0 (KD: teachers ../runs/preact_sla_ta_e200_full
-# ../runs/preact_sla_ta_e300_full ../runs/preact_wide_sla_ta_e200_full) and export it with scripts/export_preds.py <run>.
+# Dropped: SLA-600 (no time before the deadline).
+# Final: if KD4 wins, retrain on all 50k with --val 0 and teachers ../runs/preact_sla_ta_e200_full
+# ../runs/preact_sla_ta_e300_full ../runs/preact_wide_sla_ta_e200_full ../runs/preact_sla_regmix_e200_full, then export
+# it with scripts/export_preds.py <run>.
