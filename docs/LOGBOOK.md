@@ -287,6 +287,7 @@ But it is 0.38 points less than the teachers' recipe (PreActResNet + SLA, 97.56%
 | 13 | Wide PreActResNet (80/160/320) + SLA, 200 epochs, all 50k (`preact_wide_sla_ta_e200_full`) | – (no holdout) | 0.901 |
 | 14 | PreActResNet + SLA + RegMixup, 200 epochs, 45k (`preact_sla_regmix_e200`) | 97.86% (head + vote) | 0.907 |
 | 15 | PreActResNet + SLA + RegMixup, 200 epochs, all 50k (`preact_sla_regmix_e200_full`) | – (no holdout) | 0.904 |
+| 16 | PreActResNet + SLA + RegMixup, 300 epochs, all 50k (`preact_sla_regmix_e300_full`) | – (45k version 97.94%) | **0.912** |
 
 Submissions 7 to 10 trained on 45,000 images. On the same 45k data, the changes are in the range −0.007 to +0.001 public points. The final model trained on all 50,000 images and still has the best public score. We did not use these public scores to select a model.
 On the same 45k data, the wide net is 0.005 to 0.006 public points below the narrow nets (one public image is approximately 0.001). This is in the noise, but it agrees with lesson 2.
@@ -459,3 +460,5 @@ retrain (`preact_sla_regmix_e300_full`) is queued as 1c in `scripts/hpc_next.sh`
 The 50k retrain (`preact_sla_regmix_e300_full`, `--val 0`, 300 epochs, 4.6 h, final loss 4.44) ran on request. Test
 predictions SHA `93e4f90d3f1e26004142427ca3ba7cfcee7cd11d` (`submissions/submission_preact_sla_regmix_e300_50k.csv`).
 Agreement: 95.9% with RegMixup-200 50k, 96.0% with RegMixup-300 45k, 95.3% with the 0.909 `submission.csv`.
+Kaggle public 0.912, the best public score so far (0.909 for SLA-200 50k). The gap is about 3 public images, well
+inside one standard error, so it does not show the 300-epoch run is better; it is chosen on the holdout (97.94%, best 45k run).
