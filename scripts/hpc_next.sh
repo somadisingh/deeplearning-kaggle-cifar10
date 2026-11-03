@@ -36,6 +36,12 @@ run preact_sla_regmix_e200 --regmixup 20 --regmixup-eta 1 --epochs 200 $SLA --ba
 #     and preact_sla_ta_e300 (97.74%). If it wins, retrain on 50k with --val 0 (~4.6 h).
 run preact_sla_regmix_e300 --regmixup 20 --regmixup-eta 1 --epochs 300 $SLA --batch-size 256
 
+# 1c. RegMixup inside SLA, 300 epochs, all 50k (--val 0). The 45k run scored 97.94% head + vote (vs 97.86% for
+#     RegMixup-200, net +4 images, p 0.68: not significant). Run on request to test the longer schedule on 50k; it also
+#     gives a 50k RegMixup-300 teacher. ~4.7 h, so it may need a second session (it resumes from ckpt.pt).
+#     Export with: python scripts/export_preds.py preact_sla_regmix_e300_full
+run preact_sla_regmix_e300_full --val 0 --regmixup 20 --regmixup-eta 1 --epochs 300 $SLA --batch-size 256
+
 # 2. Distillation of 4 SLA teachers (SLA-200, SLA-300, wide SLA-200, RegMixup SLA-200; all seed-0 split, all have 50k
 #    versions) into an SLA student (no RegMixup in the student), both heads, alpha 0.5, T 4, 200 epochs. ~3 h.
 #    Compare with preact_sla_ta_e200 (97.54%) and preact_sla_regmix_e200 (97.86%).

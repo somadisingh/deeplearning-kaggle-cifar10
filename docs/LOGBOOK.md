@@ -441,3 +441,17 @@ The 50k retrain (`preact_sla_regmix_e200_full`, 200 epochs, 3.1 h, predictions S
 public, below the 45k run (0.907) and the SLA-200 50k run (0.909). It agrees with the 0.909 submission on 95.0% of the
 test images. All of 0.903 to 0.909 is within about one public standard error (about 9 images), so the public split cannot
 rank these runs.
+
+RegMixup at 300 epochs (`preact_sla_regmix_e300`, 45k, same settings, 4.2 h): 97.94% head + vote (single view
+97.60%, TTA 98.00%). Paired on the same holdout:
+
+| Baseline | Baseline | RegMixup-300 | Fixes | Breaks | Net | McNemar p |
+|---|---|---|---|---|---|---|
+| `preact_sla_regmix_e200` | 97.86% | 97.94% | 28 | 24 | +4 (+0.08) | 0.678 |
+| `preact_sla_ta_e300` | 97.74% | 97.94% | 43 | 33 | +10 (+0.20) | 0.302 |
+| `preact_sla_ta_e200` | 97.54% | 97.94% | 53 | 33 | +20 (+0.40) | 0.040 |
+
+Not separable from RegMixup-200. As a teacher it does not raise the 4-teacher ensemble (97.88% with it in place of
+RegMixup-200, 97.92% with RegMixup-200, 97.92% with both). Test predictions SHA `d2d419e2576c2963880df0eb6db6d2cc1c333415`
+(`submissions/submission_preact_sla_regmix_e300_45k.csv`, 95.5% agreement with the RegMixup-200 45k file). A 50k
+retrain (`preact_sla_regmix_e300_full`) is queued as 1c in `scripts/hpc_next.sh`.
