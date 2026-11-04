@@ -312,7 +312,31 @@ There is one confound: the baseline used batch 512. Batch 512 clean + 512 mixed 
 
 We also calculated an ensemble of 4 teachers (SLA-200, SLA-300, the wide net, RegMixup-200) on the holdout: 97.92%.
 The best single model is equal to this ensemble. Thus, distillation into one network can give only a small gain.
-We did not do a distillation run.
+Phase 11 gives the result of a distillation run.
+
+### Phase 11: distillation from four SLA teachers (2026-11-04)
+
+`preact_sla_kd4_e200`: an SLA student (PreActResNet 64/128/256, 4/4/3 blocks, TrivialAugment, cutout, 200 epochs,
+batch 512, 45,000 images) learns from 4 teachers: `preact_sla_ta_e200`, `preact_sla_ta_e300`,
+`preact_wide_sla_ta_e200` and `preact_sla_regmix_e200`. All teachers trained on the same 45,000 images.
+Thus, the holdout stays clean. The teachers and the student see the same augmented image.
+The loss is 0.5 × the SLA loss on the true labels + 0.5 × KL divergence to the teachers at temperature 4.
+Time: 2.9 h on the A100.
+
+| Prediction | Distillation, 4 teachers | SLA, 200 epochs | RegMixup-300 |
+|---|---|---|---|
+| Head | 97.56% | 97.56% | 98.00% |
+| Vote | 97.30% | 97.42% | 97.58% |
+| Head + vote | 97.54% | 97.54% | **97.94%** |
+
+| Comparison (head + vote) | Images fixed | Images broken | Net | McNemar p |
+|---|---|---|---|---|
+| SLA-200 → distillation | 25 | 25 | 0 | 1.000 |
+| RegMixup-200 → distillation | 26 | 42 | −16 (−0.32) | 0.068 |
+| RegMixup-300 → distillation | 25 | 45 | −20 (−0.40) | 0.022 |
+
+The student is equal to SLA-200 without distillation. It is 0.40 points below RegMixup-300.
+Thus, distillation did not give a gain. We did not train it on 50,000 images and we did not submit it.
 
 The 50k RegMixup-300 model agrees with the 0.909 model on 95.3% of the test images.
 Its Kaggle public score is 0.912. This is the best public score.
@@ -377,6 +401,7 @@ submitted CSV. The two files are equal, byte for byte. The notebook can also tra
    model by 1 point and the EMA model by 0.4 points.
 7. Make long runs resumable. HPC jobs stop after 3 to 5 hours.
 8. A wider and shallower network with equal holdout accuracy did not do better on the shifted test images.
+9. Distillation from an ensemble of four SLA teachers (97.92%) gave a student equal to one SLA run (97.54%).
 
 ## 10. Pipeline audit (2026-10-31)
 
