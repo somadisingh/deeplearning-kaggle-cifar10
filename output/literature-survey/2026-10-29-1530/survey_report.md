@@ -2,13 +2,9 @@
 
 **Date:** 2026-10-29 | **Records retrieved:** 168 unique (arXiv) | **Screened in:** 25 | **Read in full text:** 6 | **Date range:** 2015–2026 | **Search queries:** 8 topic + 22 seminal-title lookups
 
-## How this survey was run (three skills in tandem)
+## How this survey was run
 
-| Skill | What it contributed here |
-|---|---|
-| **academic-research-plugin / literature-survey** | Workflow skeleton (query decomposition → parallel search → seminal papers → themes → gaps → cross-domain → proposals → BibTeX) and its `paper_search.py` for all retrieval. Output layout follows its spec. |
-| **academic-research-skills / deep-research** (`three-way-scan` mode) | Per-paper WHY / HOW / WHAT extraction with *method weaknesses* labelled author-acknowledged vs reader-inferred; the "gray zone = FAIL" rule for references (nothing cited that wasn't verified on arXiv); a devil's-advocate checkpoint on the conclusions (end of report). |
-| **scientific-agent-skills / literature-review** | Reproducibility discipline: every query, date and result count is logged in `search_log.json`; title → abstract → full-text screening; citation verification (all 25 references re-fetched from arXiv's BibTeX endpoint into `references.bib`); explicit limitations section. |
+All searches used the arXiv API. Every query, date and result count is in `search_log.json`. Screening went from title to abstract to full text. Each paper read in full got WHY / HOW / WHAT notes, with method weaknesses marked author-acknowledged or reader-inferred. All 25 references were fetched again from arXiv's BibTeX endpoint into `references.bib`. A reference that we could not verify on arXiv is not cited.
 
 Screening criteria. *Include:* image classification on CIFAR-10 or natural distribution shift; techniques usable with ≤5M params, from scratch, CIFAR-10 train data only. *Exclude:* methods that need pretrained weights, external/unlabeled extra data, or test-time access to labels; off-topic hits (≈140 records — the arXiv relevance ranking returned astronomy, power-grid and SDE papers for generic terms; recorded in `papers_raw.json`).
 
@@ -140,7 +136,7 @@ Citation counts are not shown: Semantic Scholar was rate-limited for the whole s
 
 ---
 
-## Devil's-advocate checkpoint (deep-research skill)
+## Devil's-advocate checkpoint
 
 - **"Our 85% is 4 pt below the line, so something is wrong with the model."** Not established. The line predicts 1.62×95.6 − 65.5 ≈ **89.3%**, with an intercept uncertainty of ±3.2 pt. The public score uses ~1,000 images (±2.2 pt at 95%). Our 95.6% is measured on a train-split holdout and includes TTA, so the true CIFAR-10-test-equivalent may be a few tenths lower. The hidden set could also be CIFAR-10.2's 2,000-image test split rather than CIFAR-10.1. Its line differs, and nothing in the competition text says which one it is. Together these cover most of the gap. A genuine below-line effect for fast-training nets (Gap 1) is possible but unproven.
 - **Cherry-picking check.** Counter-evidence is reported: #2 (most interventions don't help natural shift) and #21 (KD gains are small).
@@ -157,4 +153,4 @@ Citation counts are not shown: Semantic Scholar was rate-limited for the whole s
 See `references.bib` (25 entries, fetched from arxiv.org/bibtex). Search log: `search_log.json`. Raw records: `papers_raw.json`.
 
 ---
-**Generated:** 2026-10-29 | **Tool:** literature-survey skill v1.0 + ARS deep-research (three-way-scan) + K-Dense literature-review
+**Date:** 2026-10-29

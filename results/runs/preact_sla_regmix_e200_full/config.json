@@ -1,5 +1,5 @@
 {
- "name": "preact_sla_ta_e200",
+ "name": "preact_sla_regmix_e200_full",
  "widths": [
   64,
   128,
@@ -11,7 +11,7 @@
   3
  ],
  "epochs": 200.0,
- "batch_size": 512,
+ "batch_size": 256,
  "lr": 9.0,
  "momentum": 0.85,
  "wd": 0.012,
@@ -24,14 +24,26 @@
  "trivialaugment": true,
  "sam_rho": 0.0,
  "arch": "preact",
+ "blur": false,
  "sgd_lr": 0.1,
  "sgd_wd": 0.0005,
  "sgd_warmup_epochs": 5,
  "ssl": "sla",
+ "two_view": false,
+ "cons_weight": 12.0,
+ "cutmix": 0.0,
+ "regmixup": 20.0,
+ "regmixup_eta": 1.0,
+ "sla_percopy": false,
+ "ema": 0.0,
+ "ema_epoch": 0,
  "sla_beta": 1.0,
+ "ckpt_every": 10,
+ "resume": true,
  "rot_weight": 0.5,
- "val": 5000,
+ "val": 0,
  "seed": 0,
+ "split_seed": 0,
  "teachers": [],
  "kd_alpha": 0.5,
  "kd_temp": 4.0,
@@ -39,7 +51,5 @@
  "eval_every": 10,
  "params": 4706674,
  "params_total": 4706674,
- "train_time": 4966.846071004868,
- "val_acc_tta": 0.975600004196167,
- "val_acc_tta_sla_agg": 0.9741999506950378
+ "train_time": 11145.077432394028
 }

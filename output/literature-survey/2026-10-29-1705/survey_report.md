@@ -7,17 +7,13 @@ Round 1 (augmentation, SAM, SWA/EMA, distillation, the Recht line) is in `../202
 this round skips those queries and targets what round 1 left open: effective robustness, architecture and
 aliasing, ensembles inside a parameter budget, weight averaging from scratch, and test-time methods.
 
-## How the three skills were used
+## How this survey was run
 
-| Skill | Use in this round |
-|---|---|
-| **academic-research-plugin / literature-survey** | Workflow and output layout (decompose → search → seminal papers → themes → gaps → cross-domain → proposals → BibTeX). All 22 searches ran through its `paper_search.py`, using arXiv field syntax (`abs:"..." AND ...`) because plain-word queries returned mostly off-topic hits. |
-| **academic-research-skills / deep-research** | `three-way-scan` mode: WHY / HOW / WHAT per key paper, method weaknesses on the empirical-paper checklist (`academic-paper-reviewer/references/review_criteria_framework.md` §2.1) with each item marked author-acknowledged or reader-inferred. ARS arXiv protocol for verification (one `id_list` request, title similarity ≥ 0.70, ≥3 s between requests). "Gray zone = FAIL": the CIFAR-10.2 paper (Lu et al. 2020) could not be found on arXiv or OpenAlex, so it is cited only through Miller et al. Devil's-advocate checkpoints 2 and 3 (end of report). |
-| **scientific-agent-skills / literature-review** | Reproducibility: every query, start date and count in `search_log.json`; raw results in `raw/`, merged records in `papers_raw.json`; title → abstract → full-text screening; citation check (`seminal/arxiv_id_check.json`, BibTeX from arxiv.org/bibtex); limitations section. |
+All 22 searches used the arXiv API with field syntax (`abs:"..." AND ...`), because plain-word queries returned mostly off-topic hits. Every query, start date and count is in `search_log.json`; raw results are in `raw/` and merged records in `papers_raw.json`. Screening went from title to abstract to full text. Each key paper got WHY / HOW / WHAT notes, with method weaknesses marked author-acknowledged or reader-inferred. References were verified with one arXiv `id_list` request (title similarity 0.70 or more, `seminal/arxiv_id_check.json`) and BibTeX from arxiv.org/bibtex. The CIFAR-10.2 paper (Lu et al. 2020) could not be found on arXiv or OpenAlex, so it is cited only through Miller et al. Devil's-advocate checks are at the end of the report.
 
 Inclusion: image classification under natural distribution shift or CIFAR-scale accuracy per parameter; usable from scratch, CIFAR-10 train only, ≤5M parameters in the final model. Exclusion: methods that need pretrained weights, external or generated data, or any use of the evaluation images for training, fine-tuning or selection (competition rule); off-topic arXiv matches (astronomy, chemistry, NLP, vision-language test-time tuning).
 
-## Project facts this survey builds on (from `docs/experiments.md`)
+## Project facts this survey builds on (from `docs/LOGBOOK.md`)
 
 | Model | Holdout (5k, TTA) | Kaggle public | Recht fit | Gap |
 |---|---|---|---|---|
@@ -341,4 +337,4 @@ See `references.bib` (BibTeX from arxiv.org/bibtex). Search log: `search_log.jso
 
 ---
 
-**Generated**: 2026-10-29 | **Tool**: literature-survey skill v1.0 + ARS deep-research (three-way-scan, devil's advocate) + K-Dense literature-review
+**Date**: 2026-10-29

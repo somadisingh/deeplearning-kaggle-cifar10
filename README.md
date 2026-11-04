@@ -8,69 +8,68 @@ most 5,000,000 trainable parameters, and predict 2,000 held-out evaluation image
 | Item | Value |
 |---|---|
 | Model | Pre-activation ResNet, 3 stages of 4 / 4 / 3 basic blocks, widths 64 / 128 / 256, global average pooling |
-| Training method | SLA+SD rotation self-supervision (Lee et al., 2020), TrivialAugment, Cutout, Nesterov SGD, cosine schedule, 200 epochs |
-| Trainable parameters | **4,696,394** (torchsummary); 4,706,674 including the 40-way SLA head used in training and in the rotation vote |
-| Holdout accuracy (same recipe, 45k train / 5k holdout) | **97.56%** (normal head), 97.54% (head + rotation vote) |
-| Kaggle public accuracy (trained on all 50k) | **0.909** |
-| Final submission | `submission.csv` (also `submissions/submission_preact_sla_ta_e200_full.csv`) |
-
-The notebook [`notebooks/final_model.ipynb`](notebooks/final_model.ipynb) loads the final weights, prints the parameter
-count with torchsummary, recomputes the holdout accuracy, rebuilds the submission, and plots the training curves and
-the results of every experiment. Its saved outputs show the run.
-
-## Documents
-
-- [`docs/LOGBOOK.md`](docs/LOGBOOK.md): every approach we tried, in time order, with results and lessons (ASD-STE100 Simplified Technical English).
-- [`docs/RESEARCH_REPORT.md`](docs/RESEARCH_REPORT.md): the literature research and the ranked plan, with the result of each step (ASD-STE100).
-- [`docs/experiments.md`](docs/experiments.md): the raw experiment log.
-- [`results/runs/`](results/runs/): `config.json` (all hyperparameters and final accuracies) and `history.json` (per-epoch loss and holdout accuracy) for every run.
-- [`output/literature-survey/`](output/literature-survey/): survey reports, search logs and BibTeX.
-
-## Rules we follow
-
-- Training is from scratch. No pre-trained weights. Only the CIFAR-10 training images are used.
-- Test images are never used for training, adaptation or model selection, and never labelled by hand.
-- Model selection uses a fixed, stratified 5,000-image holdout from the training set, not the public leaderboard.
-- Every training run asserts the 5M parameter limit before training.
-- Distillation teachers were also trained here, from scratch, on the same training images.
+| Training method | SLA+SD rotation labels (Lee et al., 2020), RegMixup (Pinto et al., 2022), TrivialAugment, Cutout, Nesterov SGD, cosine schedule, 300 epochs |
+| Trainable parameters | **4,696,394** (torchsummary); 4,706,674 with the 40-way SLA head used in training and in the rotation vote |
+| Holdout accuracy (same recipe, 45k train / 5k holdout) | **97.94%** (head + rotation vote) |
+| Kaggle public accuracy (trained on all 50k) | **0.912** |
+| Submission | [`submissions/submission_preact_sla_regmix_e300_50k.csv`](submissions/submission_preact_sla_regmix_e300_50k.csv) |
+| Weights | `models/regmix_e300_50k.pt` (submission), `models/regmix_e300_45k.pt` (holdout) |
 
 ## Reproduce
 
 ```bash
-pip install -r requirements.txt torchsummary matplotlib jupyter
-# put the Kaggle files in data/ (train_labels.csv, train_images/, test.csv, test_images/, sample_submission.csv)
-python src/prepare_data.py
-
-# final recipe on the 45k/5k split (holdout accuracy), then on all 50k images (submission)
-cd src
-python train.py --name preact_sla_ta_e200 --arch preact --widths 64 128 256 --depth 4 4 3 \
-  --ssl sla --batch-size 512 --label-smoothing 0.1 --trivialaugment --epochs 200
-python train.py --name preact_sla_ta_e200_full --val 0 --arch preact --widths 64 128 256 --depth 4 4 3 \
-  --ssl sla --batch-size 512 --label-smoothing 0.1 --trivialaugment --epochs 200
-cd .. && jupyter notebook notebooks/final_model.ipynb
+pip install -r requirements.txt
+# put the Kaggle files in data/: train_labels.csv, train_images/, test.csv, test_images/, sample_submission.csv
+jupyter notebook notebooks/final_model.ipynb   # then Run All
 ```
 
-Training uses CUDA when available, else Apple MPS. On one A100 the 200-epoch SLA run takes about 85 minutes
-(45k images) or 92 minutes (50k images). Runs save a checkpoint every 10 epochs and continue with `--resume`.
-`scripts/hpc_next.sh` is the resumable queue we used on the NYU HPC A100.
+The notebook [`notebooks/final_model.ipynb`](notebooks/final_model.ipynb) decodes the images, counts the parameters,
+loads the saved weights, recomputes the holdout accuracy, writes `runs/submission.csv` and checks that it is
+byte-identical to the submitted CSV. It also plots the training curves and lists every experiment. Set `TRAIN = True`
+in its first cell to train both models from scratch instead (about 4.2 h + 4.6 h on one A100; GPU training is not
+bit-exact, so a retrained model gives a slightly different CSV).
+
+The same steps from the command line:
+
+```bash
+python src/prepare_data.py                                   # data/cifar10_cache.npz
+python src/predict.py models/regmix_e300_50k.pt submission.csv
+python src/train.py --name regmix_e300_45k                   # 45k train / 5k holdout, writes runs/<name>/
+python src/train.py --name regmix_e300_50k --val 0           # all 50k images
+```
+
+Training uses CUDA when available, else Apple MPS, else the CPU. It saves a checkpoint every 10 epochs and continues
+with `--resume`.
 
 ## Code
 
 | File | Purpose |
 |---|---|
 | `src/prepare_data.py` | Decodes the PNG files once into `data/cifar10_cache.npz` |
-| `src/models.py` | `PreActResNet` (final), `AirResNet`, `ShakeResNet`, BlurPool blocks, SLA / rotation heads |
-| `src/train.py` | Training: GPU-side augmentation, TrivialAugment workers, SLA+SD, SAM, distillation, TTA, checkpoints |
-| `src/train_papa.py` | PAPA population training averaged into one network |
-| `src/make_submission.py`, `src/import_preds.py`, `src/shift_check.py` | Submission writing and diagnostics |
-| `models/` | Final weights (`final_preact_sla_50k.pt`) and the 45k holdout model |
+| `src/model.py` | `PreActResNet` with the 10-class head and the 40-class SLA joint head |
+| `src/data.py` | Data loading, the stratified holdout split, TrivialAugment workers, GPU flip / translate / cutout |
+| `src/train.py` | Training: SLA+SD + RegMixup loss, SGD with warmup and cosine schedule, checkpoints |
+| `src/predict.py` | Test-time augmentation, the 4-rotation vote, head + vote prediction, the submission CSV |
+
+## Documents
+
+- [`docs/LOGBOOK.md`](docs/LOGBOOK.md): every experiment, in time order, with results and lessons (ASD-STE100 Simplified Technical English).
+- [`docs/RESEARCH_REPORT.md`](docs/RESEARCH_REPORT.md): the literature research and the ranked plan (ASD-STE100).
+- [`results/runs/`](results/runs/): `config.json` (hyperparameters and final accuracies) and `history.json` (per-epoch loss and holdout accuracy) for every run.
+- [`output/literature-survey/`](output/literature-survey/): survey reports, search logs and BibTeX.
+
+## Rules we follow
+
+- Training is from scratch. No pre-trained weights. Only the CIFAR-10 training images are used.
+- Test images are never used for training or model selection, and never labelled by hand.
+- Model selection uses a fixed, stratified 5,000-image holdout from the training set, not the public leaderboard.
+- Training asserts the 5M parameter limit before it starts.
 
 ## Credits
 
-Parts of `src/models.py` and `src/train.py` are adapted from
+`src/data.py` (crop and cutout) and `src/predict.py` (flip / translate TTA) adapt code from
 [cifar10-airbench](https://github.com/KellerJordan/cifar10-airbench) by Keller Jordan (MIT License); see
 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). SLA follows Lee et al. (2020) and was checked against
-[hankook/SLA](https://github.com/hankook/SLA). Other methods: pre-activation ResNet (He et al., 2016), TrivialAugment
-(Müller and Hutter, 2021), Cutout (DeVries and Taylor, 2017), SAM (Foret et al., 2021), PAPA (Jolicoeur-Martineau
-et al., 2024), Shake-Shake (Gastaldi, 2017), BlurPool (Zhang, 2019), knowledge distillation (Hinton et al., 2015).
+[hankook/SLA](https://github.com/hankook/SLA). Other methods: pre-activation ResNet (He et al., 2016), RegMixup
+(Pinto et al., 2022), TrivialAugment (Müller and Hutter, 2021), Cutout (DeVries and Taylor, 2017).
 Full references are in `docs/RESEARCH_REPORT.md`.

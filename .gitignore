@@ -7,8 +7,4 @@ checkpoints/
 /runs/
 *.pt
 *.pth
-.claude/
-logs/
-hpc_upload/
-hpc_runs/
 !models/*.pt

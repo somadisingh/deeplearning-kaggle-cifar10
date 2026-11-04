@@ -6,13 +6,9 @@ Round 1 is in `../2026-10-29-1530/survey_report.md` and round 2 in `../2026-10-2
 This round does not repeat their topics (augmentation policies, SAM, SWA, Shake-Shake, anti-aliasing, PAPA, the Recht line),
 except where a method must be checked against SLA.
 
-## How the three skills were used
+## Method
 
-| Skill | Use in this round |
-|---|---|
-| **academic-research-plugin / literature-survey** | Workflow and output layout. All 26 searches ran through its `scripts/paper_search.py` (`--sources arxiv --max-results 30`) with arXiv field syntax, on the Mac, because the arXiv and Semantic Scholar APIs are blocked from the cloud container. Forward citations of 7 seed papers (SLA, Hendrycks et al. 2019, HSAKD, CSI, Gated SSL, Soft Augmentation, Label Augmentation): Semantic Scholar first, OpenAlex as the fallback, saved in `citing/`. |
-| **academic-research-skills / deep-research** | `three-way-scan` mode: WHY / HOW / WHAT for each paper read in full, with weaknesses marked (A) author-acknowledged or (R) reader-inferred. ARS arXiv protocol: one `id_list` request for 20 ids, title similarity ≥ 0.70 (20 passed, 0 failed, `seminal/arxiv_id_check.json`); BibTeX from arxiv.org/bibtex (`references.bib`, 21 entries). "Gray zone = FAIL": the 7 papers that could not be read (Decoupled SLA among them) are listed but carry no weight in the ranking. Devil's-advocate check on the ranking and on the report. |
-| **scientific-agent-skills / literature-review** | Reproducibility: every query with its start date and count in `search_log.json`; raw results in `raw/`, merged records in `papers_raw.json`; keyword screen in `keyword_hits.txt`; title → abstract → full-text screening (counts in "How the survey was run"); 16 PDFs in `fulltext/`; limitations section. |
+All 26 searches used the arXiv API (`--max-results 30`) with field syntax. Forward citations of 7 seed papers (SLA, Hendrycks et al. 2019, HSAKD, CSI, Gated SSL, Soft Augmentation, Label Augmentation) came from Semantic Scholar, with OpenAlex as the fallback (`citing/`). Each paper read in full got WHY / HOW / WHAT notes, with weaknesses marked (A) author-acknowledged or (R) reader-inferred. One arXiv `id_list` request checked 20 ids (title similarity 0.70 or more, 20 passed, `seminal/arxiv_id_check.json`); `references.bib` has 21 entries from arxiv.org/bibtex. The 7 papers that could not be read (Decoupled SLA among them) are listed but carry no weight in the ranking. Every query with its start date and count is in `search_log.json`; raw results are in `raw/`, merged records in `papers_raw.json`, and the keyword screen in `keyword_hits.txt`.
 
 Inclusion: supervised image-classification methods that add auxiliary or joint labels, extra augmented views, self-distillation,
 label softening, feature-space augmentation or weight averaging to a standard training recipe, and that can be used from scratch
@@ -254,11 +250,11 @@ Each paper read in full got a WHY / HOW / WHAT scan. Numbers are copied from the
 
 ## How the survey was run
 
-The same three research skills as rounds 1 and 2 were used. No training ran and no HPC job was started.
+No training ran and no HPC job was started.
 
-1. **Literature survey** (academic-research-plugin). 26 arXiv field-syntax queries through `paper_search.py`, run on your Mac because the arXiv and Semantic Scholar APIs are blocked from the cloud container. One request every 4 s or more, no errors. 261 records, 254 unique (by arXiv id, then by normalized title). Forward citations of 7 seed papers through Semantic Scholar, with OpenAlex as the fallback: SLA 310 citing papers, Hendrycks et al. 2019 1,103, HSAKD 117, CSI 801, Gated SSL 10, Soft Augmentation 23, Label Augmentation 2.
-2. **ARS deep-research.** The arXiv protocol (one connection, 3 s or more between requests). 20 of 20 arXiv ids passed the id check (title similarity 0.70 or more); `references.bib` has 21 entries from arxiv.org/bibtex. Every paper read in full got a WHY / HOW / WHAT scan with weaknesses marked as author-acknowledged or reader-inferred. Gray-zone rule: a reference that was not verified by an id check or a direct fetch is left out. Devil's-advocate checks ran on the ranking and on this report.
-3. **K-Dense literature review.** Every query is logged with its date and count, and the screening counts are below.
+1. **Search.** 26 arXiv field-syntax queries. One request every 4 s or more, no errors. 261 records, 254 unique (by arXiv id, then by normalized title). Forward citations of 7 seed papers through Semantic Scholar, with OpenAlex as the fallback: SLA 310 citing papers, Hendrycks et al. 2019 1,103, HSAKD 117, CSI 801, Gated SSL 10, Soft Augmentation 23, Label Augmentation 2.
+2. **Verification and reading.** The arXiv protocol (one connection, 3 s or more between requests). 20 of 20 arXiv ids passed the id check (title similarity 0.70 or more); `references.bib` has 21 entries from arxiv.org/bibtex. Every paper read in full got a WHY / HOW / WHAT scan with weaknesses marked as author-acknowledged or reader-inferred. Gray-zone rule: a reference that was not verified by an id check or a direct fetch is left out. Devil's-advocate checks ran on the ranking and on this report.
+3. **Screening log.** Every query is logged with its date and count, and the screening counts are below.
 
 | Screening stage | Papers |
 |---|---|
@@ -269,7 +265,7 @@ The same three research skills as rounds 1 and 2 were used. No training ran and 
 | Could not be read (closed or the fetch failed) | 7 |
 | Read in full, plus 2 code-repository benchmarks | 24 |
 
-The raw files are on your Mac in `output/literature-survey/2026-10-30-1701/`: the 26 query results, `papers_raw.json`, `search_log.json`, the 7 citation lists, `keyword_hits.txt`, `references.bib` and 16 PDFs. They are not committed.
+The raw files are in `output/literature-survey/2026-10-30-1701/`: the 26 query results, `papers_raw.json`, `search_log.json`, the 7 citation lists, `keyword_hits.txt`, `references.bib`. The 16 full-text PDFs are not kept.
 
 ### Limitations
 

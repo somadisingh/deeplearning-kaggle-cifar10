@@ -22,13 +22,12 @@ Each method must obey the competition rules:
 
 ## 2. Method of the survey
 
-We used three research skill packages together:
+For each survey, we did these steps:
 
-| Package | What it did |
-|---|---|
-| `academic-research-plugin` (literature-survey) | Search on arXiv, theme clusters, gaps, proposals, BibTeX |
-| `academic-research-skills` (deep-research) | WHY / HOW / WHAT notes for each paper, method weaknesses, devil's-advocate check |
-| `scientific-agent-skills` (literature-review) | Search log, screening, citation check |
+1. We searched arXiv. We logged each query, its date and its result count.
+2. We screened the records by title, then by abstract, then by full text.
+3. For each paper that we read in full, we wrote WHY / HOW / WHAT notes and the weaknesses of the method.
+4. We checked our conclusions against the strongest counter-arguments.
 
 Survey 1 used 8 topic searches and 22 title searches (168 records). We read 6 papers in full.
 Survey 2 used 22 searches (192 records). We included 45 papers and read 24 papers in full.

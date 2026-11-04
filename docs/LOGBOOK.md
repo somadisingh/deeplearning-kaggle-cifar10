@@ -1,7 +1,10 @@
 # Logbook: Efficient ResNet for CIFAR-10 (5M parameter limit)
 
-This logbook records all the approaches that we tried and all the results that we got.
-The language follows ASD-STE100 Simplified Technical English. Sentences are short. Each sentence gives one idea.
+This logbook records all the experiments that we did and all the results that we got, in time order.
+The language follows ASD-STE100 Simplified Technical English. Each sentence gives one idea.
+
+The repository contains only the code for the final model (Section 8). The code for the other experiments is not
+in the repository. The configuration and the training history of each run are in `results/runs/<run>/`.
 
 ## 1. Task and rules
 
@@ -12,10 +15,10 @@ The task is a Kaggle competition for a course. The rules are:
 3. Train from zero. Do not use pre-trained weights.
 4. Use only the CIFAR-10 training data. Do not use other datasets.
 5. Do not label the test images by hand. Do not train on the test images.
-6. Optimizers, augmentation, regularization, schedules and distillation are permitted.
+6. You can use optimizers, augmentation, regularization, schedules and distillation.
 7. The competition closes on 2026-11-06 at 23:59. The report is due on 2026-11-09.
 
-The metric is classification accuracy. Kaggle shows a public score on half of the hidden images.
+The metric is classification accuracy. Kaggle shows a public score on approximately half of the hidden images.
 The private score on the other half sets the final rank.
 
 ## 2. Data
@@ -30,61 +33,61 @@ The `data/` folder contains these files:
 | `test_images/` | 2,000 RGB PNG images, 32 × 32 pixels |
 | `sample_submission.csv` | 2,000 rows: `id`, `label` |
 
-Each class has exactly 5,000 training images. The test IDs are 0 to 1999. They match the sample submission.
+Each class has exactly 5,000 training images. The test IDs are 0 to 1999. They are in the same order as the sample
+submission.
 
 `src/prepare_data.py` decodes all PNG files one time. It writes `data/cifar10_cache.npz`.
 The channel means of the training images are 0.4914, 0.4822 and 0.4465. These are the standard CIFAR-10 values.
 
 The test set has 2,000 images. This is the same size as CIFAR-10.1 (Recht et al., 2018).
-CIFAR-10.1 is a new test set that has a small distribution shift from CIFAR-10.
+CIFAR-10.1 is a new test set with a small distribution shift from CIFAR-10.
 Models usually get 4 to 10 points less accuracy on CIFAR-10.1 than on CIFAR-10.
 Our Kaggle scores agree with this. Thus, we think that the hidden set is similar to CIFAR-10.1.
 
 ## 3. Method for evaluation
 
-We did not select models with the public Kaggle score. The public split has only about 1,000 images.
-One score has a standard error of about 1.1 points. Selection on that split can overfit.
+We did not select models with the public Kaggle score. The public split has only approximately 1,000 images.
+One score has a standard error of approximately 0.9 points. Selection on that split can overfit.
 
 We use a holdout set from the training data. The holdout has 5,000 images: 500 from each class.
-`src/train.py` makes the split with a fixed seed (`--val 5000 --seed 0`).
-The model trains on the other 45,000 images.
+A fixed seed makes the split. The model trains on the other 45,000 images.
+All runs in this logbook use the same holdout, except the seed-1 runs in Phase 3 and Phase 5.
 
-All holdout accuracies in this logbook use test-time augmentation (TTA), unless the text says otherwise.
-TTA averages the outputs for the image, its mirror, and two 1-pixel shifts.
+All holdout accuracies use test-time augmentation (TTA), unless the text gives a different method.
+TTA averages the outputs for the image, its mirror, and two 1-pixel shifts with their mirrors.
+For SLA models, "head" is the 10-class head, "vote" is the 4-rotation vote, and "head + vote" is the mean of the
+two softmax outputs. We submit head + vote.
 
-For the final submission, we train the selected recipe again on all 50,000 images (`--val 0`).
+For a submission, we train the selected recipe again on all 50,000 images. That model has no holdout.
 
 Rule for a change: we keep a change only if it adds at least 0.3 points on the holdout.
+From Phase 9, we also give the number of holdout images that a change fixes and breaks, with a paired McNemar test.
 
 ## 4. Hardware
 
 | Hardware | Use | Speed |
 |---|---|---|
-| Apple M4 Pro, MPS backend | Phase 1 and 2 | About 23 s per epoch for a 4.8M AirResNet |
-| NVIDIA A100 40 GB, NYU HPC | Phase 3 to 6 | About 6.6 s per epoch for the 4.7M PreActResNet |
+| Apple M4 Pro, MPS backend | Phase 1 and Phase 2, prediction | Approximately 23 s per epoch for the 4.8M AirResNet |
+| NVIDIA A100 40 GB, NYU HPC | Phase 3 to Phase 10 | Approximately 6.6 s per epoch for the 4.7M PreActResNet |
 
 All data stays on the GPU. The GPU does the crop, flip and cutout operations.
 TrivialAugment runs on CPU worker processes. The workers prepare the next epoch during training.
+HPC jobs stop after 3 to 5 hours. Thus, all long runs save a checkpoint every 10 epochs and can continue after a stop.
 
 ## 5. Literature research
 
-We did two literature surveys. We used three research skill packages together:
-
-- `academic-research-plugin` (literature-survey): search on arXiv, themes, gaps, proposals, BibTeX.
-- `academic-research-skills` (deep-research): WHY / HOW / WHAT notes, method weaknesses, a devil's-advocate check.
-- `scientific-agent-skills` (literature-review): search log, screening, citation check.
-
-The full reports are in `output/literature-survey/` and in `docs/RESEARCH_REPORT.md`.
+We did three literature surveys. The reports, search logs and BibTeX files are in `output/literature-survey/`.
+`docs/RESEARCH_REPORT.md` gives the ranked plan.
 
 Main results from the research:
 
 1. Accuracy on a shifted test set follows accuracy on the original test set on a straight line.
    For CIFAR-10.1: new accuracy = 1.62 × CIFAR-10 accuracy − 65.51 (Recht et al., 2018).
-   Thus, each +1 point on the holdout gives about +1.6 points on the hidden set.
+   Thus, each +1 point on the holdout gives approximately +1.6 points on the hidden set.
 2. Almost no method moves a model above this line without more training data (Taori et al., 2020).
 3. Cutout and wider networks help more on CIFAR-10.1 than on CIFAR-10.
-4. Test-time adaptation (BN adaptation, TENT) uses the test images. The rules do not permit it.
-   It also makes CIFAR-10.1 accuracy worse (Zhao et al., 2023).
+4. Models that train only on CIFAR-10 are 0.1 to 1.7 points below the line (Shi et al., 2023).
+5. RegMixup (Pinto et al., 2022) gives a good result on CIFAR-10.1 for a WideResNet: 97.46% clean, 92.79% on CIFAR-10.1.
 
 ## 6. Experiments in time order
 
@@ -92,51 +95,75 @@ Main results from the research:
 
 The first model is "AirResNet". It comes from airbench96 (Jordan, 2024).
 It has a frozen 2×2 whitening layer, three stages of conv → max-pool → BN → GELU, and residual pairs of 3×3 convs.
-The recipe uses Nesterov SGD, label smoothing 0.2, flip, 4-pixel translate, 12-pixel cutout, and a Lookahead EMA.
+The recipe uses Nesterov SGD, batch 1024, label smoothing 0.2, flip, 4-pixel translation, 12-pixel cutout and a
+Lookahead weight average.
 
 We tested three width and depth settings for 40 epochs:
 
-| Run | Widths | Residual pairs | Params | Holdout |
-|---|---|---|---|---|
-| `w128-256-352_d111_e40` | 128/256/352 | 1/1/1 | 4.84M | **95.58%** |
-| `w96-256-352_d211_e40` | 96/256/352 | 2/1/1 | 4.80M | 95.36% |
-| `w96-192-384_d111_e40` | 96/192/384 | 1/1/1 | 4.34M | 95.10% |
+| Run | Widths | Residual pairs | Params | Holdout, one view | Holdout, TTA | Time |
+|---|---|---|---|---|---|---|
+| `w128-256-352_d111_e40` | 128/256/352 | 1/1/1 | 4.84M | 94.90% | **95.58%** | 13.6 min |
+| `w96-256-352_d211_e40` | 96/256/352 | 2/1/1 | 4.80M | 95.06% | 95.36% | 13.2 min |
+| `w96-192-384_d111_e40` | 96/192/384 | 1/1/1 | 4.34M | 94.60% | 95.10% | 9.1 min |
 
-The widest model was best. Its Kaggle public score was **0.850**.
+The widest model was the best. Its Kaggle public score was **0.850**.
 
 ### Phase 2: longer training and TrivialAugment (2026-10-29)
 
-| Run | Epochs | TrivialAugment | Holdout | Kaggle |
-|---|---|---|---|---|
-| `w128-256-352_d111_e40` | 40 | no | 95.58% | 0.850 |
-| `w128-256-352_ta_e40` | 40 | yes | 94.98% | |
-| `w128-256-352_e120` | 120 | no | 96.02% | |
-| `w128-256-352_ta_e120` | 120 | yes | **96.20%** | 0.860 |
+TrivialAugment (Müller and Hutter, 2021) applies one random image operation to each image before flip, translation
+and cutout. It does not increase the epoch time.
 
-Longer training added 0.4 to 0.6 points. TrivialAugment decreased accuracy at 40 epochs. It added 0.2 points at 120 epochs.
+| Run | Epochs | TrivialAugment | Holdout | Time | Kaggle |
+|---|---|---|---|---|---|
+| `w128-256-352_d111_e40` | 40 | no | 95.58% | 13.6 min | 0.850 |
+| `w128-256-352_ta_e40` | 40 | yes | 94.98% | 13.6 min | |
+| `w128-256-352_e120` | 120 | no | 96.02% | 40.6 min | |
+| `w128-256-352_ta_e120` | 120 | yes | **96.20%** | 40.9 min | 0.860 |
 
-Diagnostic: we made the holdout images brighter and with more contrast. This matched the pixel statistics of the test images.
-The accuracy decreased by a maximum of 0.4 points (`src/shift_check.py`). Thus, brightness and contrast do not cause the Kaggle gap.
+Longer training added 0.4 to 0.6 points. TrivialAugment decreased the accuracy at 40 epochs.
+It added 0.2 points at 120 epochs. Thus, TrivialAugment needs a long schedule.
+
+Diagnostic: we changed the holdout images to the brightness and contrast of the test images.
+We used only the pixel statistics of the test images. We did not classify the test images.
+
+| Model | Clean | Test statistics × 1 | Test statistics × 2 | Brightness spread +0.07 | Contrast × 1.15 |
+|---|---|---|---|---|---|
+| `w128-256-352_d111_e40` | 95.58 | 95.46 | 95.16 | 95.42 | 95.36 |
+| `w96-256-352_d211_e40` | 95.36 | 95.14 | 95.08 | 95.06 | 95.04 |
+| `w128-256-352_e120` | 96.02 | 95.94 | 95.68 | 95.78 | 95.78 |
+| `w128-256-352_ta_e120` | 96.20 | 96.16 | 96.16 | 95.96 | 96.00 |
+
+The accuracy decreased by a maximum of 0.4 points. Thus, brightness and contrast do not cause the Kaggle gap.
+
+Two short tests on the Mac (2 epochs each):
+
+- SAM (Foret et al., 2021) took 46 s per epoch. Plain SGD took 23 s per epoch.
+- SLA at batch 1024 did not fit in the 24 GB memory of the M4 Pro. At batch 512, it took 95 s per epoch.
+
+Thus, we moved the next phases to the A100.
 
 ### Phase 3: rotation self-supervision (SLA) on the A100 (2026-10-29)
 
-SLA (Lee et al., 2020) trains the network on the 4 rotations of each image. The labels are joint labels (class × rotation), 40 classes.
-A second head learns from the averaged rotation prediction (self-distillation).
-At test time, we use the normal head, the 4-rotation vote, or the mean of the two.
-We checked our code against the paper and the official code (hankook/SLA).
+SLA (Lee et al., 2020) trains the network on the 4 rotations of each image.
+A joint head has 40 outputs (class × rotation). The label of an image that turned by k × 90 degrees is class × 4 + k.
+A 10-class head learns from the averaged rotation prediction (self-distillation, "SLA+SD").
+At test time, we use the 10-class head, the 4-rotation vote, or the mean of the two.
+We compared our code with the paper and with the official code (hankook/SLA).
 
-| Run | Seed | Holdout (head / vote / both) | Control without SLA | Kaggle |
-|---|---|---|---|---|
-| `sla_ta_e120_b1024` | 0 | 96.30% / 96.32% / **96.40%** | 95.90% (`ta_e120_b1024_a100`) | 0.863 |
-| `sla_ta_e120_b1024_s1` | 1 | **96.68%** / 96.30% / – | 96.28% (`ta_e120_b1024_s1`) | 0.857 (control) |
+AirResNet 128/256/352, TrivialAugment, 120 epochs, batch 1024. The control is the same recipe without SLA on the same GPU.
+
+| Run | Seed | Holdout (head / vote / head + vote) | Time | Control without SLA | Kaggle |
+|---|---|---|---|---|---|
+| `sla_ta_e120_b1024` | 0 | 96.30% / 96.32% / **96.40%** | 12.4 min | 95.90% (`ta_e120_b1024_a100`, 4.0 min) | 0.863 |
+| `sla_ta_e120_b1024_s1` | 1 | **96.68%** / 96.30% / – | | 96.28% (`ta_e120_b1024_s1`) | 0.857 (control) |
 
 SLA added 0.4 to 0.5 points on two seeds. But all AirResNet models stayed near 0.86 on Kaggle.
 
 ### Phase 4: standard pre-activation ResNet (2026-10-29)
 
-All AirResNet models were about 4 points below the CIFAR-10.1 line. Thus, we changed the architecture family.
+All AirResNet models were approximately 4 points below the CIFAR-10.1 line. Thus, we changed the architecture family.
 
-The new model is a standard pre-activation ResNet (He et al., 2016b):
+The new model is a standard pre-activation ResNet (He et al., 2016):
 
 - A 3×3 stem conv with 64 channels.
 - Three stages with 4, 4 and 3 basic blocks. The widths are 64, 128 and 256.
@@ -144,184 +171,218 @@ The new model is a standard pre-activation ResNet (He et al., 2016b):
 - The skip is the identity, or a 1×1 conv when the shape changes.
 - Global average pooling and one linear layer.
 
-The recipe: Nesterov SGD, lr 0.4 at batch 512, weight decay 5e-4, 5 warmup epochs, cosine schedule, label smoothing 0.1,
-TrivialAugment, flip, 4-pixel translate, 12-pixel cutout, 200 epochs.
+The recipe: Nesterov SGD, lr 0.4 at batch 512, weight decay 5e-4, 5 warmup epochs, cosine schedule,
+label smoothing 0.1, TrivialAugment, flip, 4-pixel translation, 12-pixel cutout, 200 epochs.
 
-| Run | Params | Holdout | Kaggle |
-|---|---|---|---|
-| `preact_ta_e200` | 4,696,394 | 96.82% | **0.884** |
+| Run | Params | Holdout | Time | Kaggle | Recht line |
+|---|---|---|---|---|---|
+| `preact_ta_e200` | 4,696,394 | 96.82% | 22 min | **0.884** | 91.3% |
 
-The holdout gain was 0.4 points. The Kaggle gain was 2.1 points. The architecture family has an effect on the shift.
+The holdout gain was 0.4 points. The Kaggle gain was 2.1 points.
+The AirResNet models were approximately 4 points below the line. The PreActResNet was approximately 3 points below.
+Thus, the architecture family has an effect on the shift.
 
-### Phase 5: PreActResNet + SLA and the final model (2026-10-29 and 2026-10-30)
+### Phase 5: PreActResNet + SLA (2026-10-29 and 2026-10-30)
 
-| Run | Data | Holdout (head / vote / both) | Kaggle |
-|---|---|---|---|
-| `preact_sla_ta_e200` | 45,000 | **97.56%** / 97.42% / 97.54% | |
-| `preact_sla_ta_e200_full` | 50,000 | – | **0.909** |
+| Run | Data | Holdout (head / vote / head + vote) | Time | Kaggle |
+|---|---|---|---|---|
+| `preact_sla_ta_e200` | 45,000 | **97.56%** / 97.42% / 97.54% | 85 min | 0.903 |
+| `preact_sla_ta_e200_full` | 50,000 | – | 92 min | **0.909** |
+| `preact_sla_ta_e200_s1` | 45,000 (seed 1, own split) | 97.78% / 97.54% / – | 83 min | |
 
-SLA added 0.74 points on the PreActResNet. This is our best recipe.
-A second seed (`preact_sla_ta_e200_s1`, seed 1, its own holdout split) got **97.78%** (head) and 97.54% (vote).
-Thus, the recipe gives 97.56% to 97.78% on the holdout. The difference between seeds is about 0.2 points.
-We trained it again on all 50,000 images (92 minutes on the A100). This is the final `submission.csv`.
-The prediction is the mean of the softmax of the normal head and the softmax of the 4-rotation vote.
+SLA added 0.74 points on the PreActResNet. The difference between the two seeds is approximately 0.2 points.
+The 50k model agrees with the 45k model on 96.2% of the test images.
+This recipe stayed our submission until Phase 10.
 
 ### Phase 6: other methods from the research report (2026-10-30)
 
-We tested each method against the correct baseline. No method beat the final recipe.
+We tested each method against the correct baseline. No method was better than PreActResNet + SLA.
 
-| Run | Method | Holdout | Baseline | Result |
-|---|---|---|---|---|
-| `preact_ta_e200_sam05` | SAM, ρ = 0.05 (Foret et al., 2021) | 97.18% | 96.82% | +0.36 |
-| `preact_sla_ta_e200_sam05` | SAM + SLA | 97.58% (both) | 97.54% (both) | +0.04, not kept (2× cost) |
-| `papa4_preact_ta_e200` | PAPA, 4 copies (Jolicoeur-Martineau et al., 2024) | 97.18–97.20% per copy | 96.82% | below 97.56% |
-| `shake2x40d_ta_e600` | Shake-Shake-26 2x40d, 600 epochs (Gastaldi, 2017) | 97.16% | 97.56% | below |
-| `preact_blur_ta_e200` | Anti-aliased downsampling (Zhang, 2019) | 97.00% | 96.82% | +0.18, not kept |
-| `preact_ta_e400` | 400 epochs | 97.12% | 96.82% | +0.30, below 97.56% |
-| `preact_kd_sla2_ta_e200` | Distillation from 2 SLA teachers (Hinton et al., 2015) | 97.18% | 97.56% | below |
+| Run | Method | Holdout | Baseline | Time | Result |
+|---|---|---|---|---|---|
+| `preact_ta_e200_sam05` | SAM, ρ = 0.05 (Foret et al., 2021) | 97.18% | 96.82% | 44 min | +0.36 |
+| `preact_sla_ta_e200_sam05` | SAM + SLA | 97.58% (head + vote) | 97.54% | 2.8 h | +0.04, not kept (2× cost) |
+| `papa4_preact_ta_e200` | PAPA, 4 copies (Jolicoeur-Martineau et al., 2024) | 97.18–97.20% per copy | 96.82% | 103 min | below 97.56% |
+| `shake2x40d_ta_e600` | Shake-Shake-26 2x40d, 600 epochs (Gastaldi, 2017) | 97.16% | 97.56% | 1.8 h | below |
+| `preact_blur_ta_e200` | Anti-aliased downsampling (Zhang, 2019) | 97.00% | 96.82% | 25 min | +0.18, not kept |
+| `preact_ta_e400` | 400 epochs | 97.12% | 96.82% | 44 min | +0.30, below 97.56% |
+| `preact_kd_sla2_ta_e200` | Distillation from 2 SLA teachers (Hinton et al., 2015) | 97.18% | 97.56% | 33 min | below |
 
 Notes:
 
 - SAM helps the plain ResNet. SAM does not help on top of SLA.
-- In the PAPA run, the averaged model got only 96.20%. The cause was a bug: the code calculated the BN statistics again on clean images.
-  With BN statistics from augmented images, the averaged model got 96.94%. We changed the code. The averaged model now uses the mean of the BN statistics of the copies.
-- Shake-Shake needs a long schedule. We trained it for 600 epochs over two HPC sessions with checkpoints (`--resume`).
+- In the PAPA run, the averaged model got only 96.20%. The cause was a bug: the code calculated the BN statistics
+  again on clean images. With BN statistics from augmented images, the averaged model got 96.94%.
+- Shake-Shake needs a long schedule. We trained it for 600 epochs over two HPC sessions.
+- Distillation: the student is a PreActResNet without SLA. The teachers are `preact_sla_ta_e200` and
+  `preact_sla_ta_e200_sam05`. They trained on the same 45,000 images. Thus, the holdout stays clean.
+  The teachers and the student see the same augmented image. The loss is 0.5 × cross-entropy + 0.5 × KL divergence
+  at temperature 4. The student got +0.36 points over the same ResNet without distillation.
+  But it is 0.38 points below the teachers' recipe.
 
 ### Phase 7: CutMix inside SLA (2026-10-31)
 
-`preact_sla_cutmix_e200`: the final recipe with CutMix (Yun et al., 2019). With probability 0.5, each batch gets one box from a shuffled partner image.
-The box goes in before the four rotations, and the losses are mixed by area. The run also kept a weight average (EMA, decay 0.999).
+`preact_sla_cutmix_e200`: PreActResNet + SLA with CutMix (Yun et al., 2019).
+With probability 0.5, each batch gets one box from a shuffled partner image.
+The box goes in before the four rotations. The losses are mixed by area.
+The run also kept a weight average (EMA, decay 0.999). Time: 84 min.
 
-| Prediction | CutMix run | Final recipe (seed 0) |
+| Prediction | CutMix, 200 epochs | PreActResNet + SLA (seed 0) |
 |---|---|---|
-| Normal head | 97.42% | 97.56% |
-| 4-rotation vote | 97.52% | 97.42% |
-| Weight average, normal head | 96.98% | – |
+| Head | 97.42% | 97.56% |
+| Vote | 97.52% | 97.42% |
+| EMA, head | 96.98% | – |
 
-CutMix did not add accuracy. The weight average was 0.4 points worse than the live network at the end of the cosine schedule. We queued a 300-epoch CutMix run for the next session.
+CutMix did not add accuracy. The EMA was 0.4 points below the live network. Section 10 gives the cause.
 
-`preact_sla_cutmix_e300`: the same CutMix run for 300 epochs (seed 0), without the weight average. Training time was 124 minutes on the A100.
+### Phase 8: CutMix for 300 epochs, per-copy augmentation and 300 epochs (2026-10-31)
 
-| Prediction | CutMix, 300 epochs | Final recipe (seed 0, 200 epochs) |
-|---|---|---|
-| Normal head | 97.66% | 97.56% |
-| 4-rotation vote | 97.64% | 97.42% |
-| Head + vote | 97.70% | 97.54% |
+All runs use seed 0 and 45,000 images.
 
-The gain is +0.10 points. This is less than our limit of +0.3 points (the seed spread is approximately 0.2 points). Thus, we did not change the final model.
-We saved the predictions in `submissions/submission_preact_sla_cutmix_e300.csv`. We did the 300-epoch run without CutMix in the next HPC session (see below).
+- `preact_sla_cutmix_e300`: the CutMix run for 300 epochs, without the EMA.
+- `preact_sla_percopy_e200`: each of the four rotated copies of an image gets its own random crop, flip and cutout.
+- `preact_sla_ta_e300`: PreActResNet + SLA for 300 epochs, without CutMix. This run is the control for the CutMix run.
 
-### Phase 8: Per-copy augmentation and 300 epochs (2026-10-31)
-
-We did two more runs on the A100 with seed 0:
-
-- `preact_sla_percopy_e200`: each of the four rotated copies of an image gets its own random augmentation.
-- `preact_sla_ta_e300`: the final recipe for 300 epochs, without CutMix. This run is the control for the CutMix run.
-
-| Prediction | Per-copy, 200 epochs | 300 epochs | CutMix, 300 epochs | Final recipe, 200 epochs |
+| Prediction | Per-copy, 200 epochs | 300 epochs | CutMix, 300 epochs | SLA, 200 epochs |
 |---|---|---|---|---|
-| Normal head | 97.58% | 97.68% | 97.66% | 97.56% |
-| 4-rotation vote | 97.52% | 97.68% | 97.64% | 97.42% |
+| Head | 97.58% | 97.68% | 97.66% | 97.56% |
+| Vote | 97.52% | 97.68% | 97.64% | 97.42% |
 | Head + vote | 97.66% | 97.74% | 97.70% | 97.54% |
+| Time | 83 min | 125 min | 124 min | 85 min |
 
-Per-copy augmentation did not change the accuracy. Thus, we did not do the two-view run.
-The 300-epoch runs got approximately +0.1 points, with or without CutMix. Thus, CutMix does not add accuracy.
-On the head + vote prediction, which we use for the submission, the gains are larger: +0.20 points for 300 epochs, +0.16 points for CutMix with 300 epochs, and +0.12 points for per-copy augmentation.
-The 300-epoch gain is the largest result in this phase. It is less than +0.3 points, but it is the best candidate for a retrain on all 50,000 images (`preact_sla_ta_e300_full`).
-All gains are less than our limit of +0.3 points. We did not change the final model.
-We saved the predictions of the two runs in `submissions/`.
+Per-copy augmentation did not change the accuracy. Thus, we did not do a two-view consistency run.
+CutMix did not add accuracy at 200 or at 300 epochs.
+On head + vote, 300 epochs added +0.20 points. This is less than +0.3 points, but it is the largest gain.
+Thus, we trained it again on all 50,000 images: `preact_sla_ta_e300_full` (139 min, Kaggle 0.906).
 
 ### Phase 9: wider and shallower network (2026-11-01)
 
-`preact_wide_sla_ta_e200`: a PreActResNet with widths 80/160/320 and 3/3/2 blocks per stage. It has 4,926,210 parameters (with the 40-class head).
-The recipe is the final recipe: SLA+SD, TrivialAugment, cutout, 200 epochs, batch 512, seed 0.
-The split seed is 0. Thus, the 5,000 holdout images are the same as in Phase 8.
-The run also kept a weight average (EMA, decay 0.999). EMA calculates BN statistics on the 4 rotated copies (the audit fix in Section 11.4).
-Training time was 26.5 s for each epoch on the A100 (89 minutes).
+`preact_wide_sla_ta_e200`: a PreActResNet with widths 80/160/320 and 3/3/2 blocks per stage.
+It has 4,926,210 parameters with the 40-class head. The recipe is SLA, TrivialAugment, cutout, 200 epochs, batch 512.
+The run also kept an EMA (decay 0.999), with the BN fix of Section 10. Time: 89 min.
 
-| Prediction | Wide net, 200 epochs | Final recipe, 200 epochs | Final recipe, 300 epochs |
+| Prediction | Wide net, 200 epochs | SLA, 200 epochs | SLA, 300 epochs |
 |---|---|---|---|
-| Normal head | 97.74% | 97.56% | 97.68% |
-| 4-rotation vote | 97.54% | 97.42% | 97.68% |
+| Head | 97.74% | 97.56% | 97.68% |
+| Vote | 97.54% | 97.42% | 97.68% |
 | Head + vote | 97.76% | 97.54% | 97.74% |
 | EMA, head + vote | 97.70% | – | – |
 
-Paired counts on head + vote:
-
-| Comparison | Images fixed | Images broken | McNemar exact p |
+| Comparison (head + vote) | Images fixed | Images broken | McNemar p |
 |---|---|---|---|
 | Wide net vs SLA, 200 epochs | 38 | 27 | 0.21 |
 | Wide net vs SLA, 300 epochs | 31 | 30 | 1.0 |
 
-The gain over SLA-200 is +0.22 points on head + vote, but the paired test does not show a difference. The holdout result is equal to SLA-300.
-EMA with the BN fix did not help: it is 0.06 points less than the live network.
-We retrained the wide net on all 50,000 images (`preact_wide_sla_ta_e200_full`, 98 minutes).
-On Kaggle, both wide-net submissions are lower than the narrow nets (Section 8). Thus, we did not keep the wide net.
-We saved the predictions in `submissions/submission_preact_wide_sla_ta_e200_45k.csv` and `submissions/submission_preact_wide_sla_ta_e200_50k.csv`.
+The wide net is equal to SLA-300 on the holdout. The EMA did not help.
+We trained the wide net again on all 50,000 images (`preact_wide_sla_ta_e200_full`, 98 min).
+On Kaggle, both wide-net models are below the narrow models (Section 7). Thus, we did not keep the wide net.
 
-## 7. Distillation result
+### Phase 10: RegMixup inside SLA (2026-11-02 and 2026-11-03)
 
-The student is a PreActResNet without SLA. The teachers are `preact_sla_ta_e200` and `preact_sla_ta_e200_sam05`.
-Both teachers trained on the same 45,000 images. Thus, the holdout stays clean.
-The teacher and the student see the same augmented image (Beyer et al., 2022). The loss is 0.5 × cross-entropy + 0.5 × KL divergence at temperature 4.
+RegMixup (Pinto et al., 2022) adds a mixed copy of each batch to the clean batch.
+One λ from Beta(20, 20) mixes each image with a shuffled partner image.
+The mixed copy takes both labels with the weights λ and 1 − λ, on the joint head and on the 10-class head.
+Self-distillation stays on the clean images. The mixed loss has the weight 1.
+The mixed copy goes in before the four rotations.
+The batch is 256 clean images + 256 mixed images (2,048 rotated images per step, as in the baseline). The lr is 0.2.
+On the A100, one epoch takes approximately 50 s.
 
-Result: the student got **97.18%** on the holdout. This is +0.36 points more than the same ResNet without distillation (96.82%).
-But it is 0.38 points less than the teachers' recipe (PreActResNet + SLA, 97.56%). Thus, we did not keep it.
+Before the first run, we tested the loss with 7 checks and with two short runs on the HPC node.
 
-## 8. Kaggle public scores
+| Run | Data | Epochs | Holdout (head / vote / head + vote) | Time | Kaggle |
+|---|---|---|---|---|---|
+| `preact_sla_regmix_e200` | 45,000 | 200 | 97.92% / – / 97.86% | 2.8 h | 0.907 |
+| `preact_sla_regmix_e200_full` | 50,000 | 200 | – | 3.1 h | 0.904 |
+| `preact_sla_regmix_e300` | 45,000 | 300 | 98.00% / 97.58% / **97.94%** | 4.2 h | |
+| `preact_sla_regmix_e300_full` | 50,000 | 300 | – | 4.6 h | **0.912** |
 
-| Submission | Model | Holdout | Kaggle public |
-|---|---|---|---|
-| 1 | AirResNet, 40 epochs | 95.58% | 0.850 |
-| 2 | AirResNet + TrivialAugment, 120 epochs | 96.20% | 0.860 |
-| 3 | AirResNet + SLA, 120 epochs | 96.40% | 0.863 |
-| 4 | AirResNet, seed 1, 120 epochs | 96.28% | 0.857 |
-| 5 | PreActResNet, 200 epochs | 96.82% | 0.884 |
-| 6 | PreActResNet + SLA, all 50k (final) | 97.56% (45k version) | **0.909** |
-| 7 | PreActResNet + SLA + per-copy augmentation, 45k | 97.58% | 0.896 |
-| 8 | PreActResNet + SLA + CutMix, 300 epochs, 45k | 97.66% | 0.902 |
-| 9 | PreActResNet + SLA, 300 epochs, 45k | 97.68% | 0.904 |
-| 10 | PreActResNet + SLA, 200 epochs, 45k (control for 7 to 9) | 97.56% | 0.903 |
-| 11 | PreActResNet + SLA, 300 epochs, all 50k (`preact_sla_ta_e300_full`) | – (no holdout) | 0.906 |
-| 12 | Wide PreActResNet (80/160/320) + SLA, 200 epochs, 45k | 97.76% (head + vote) | 0.898 |
-| 13 | Wide PreActResNet (80/160/320) + SLA, 200 epochs, all 50k (`preact_wide_sla_ta_e200_full`) | – (no holdout) | 0.901 |
-| 14 | PreActResNet + SLA + RegMixup, 200 epochs, 45k (`preact_sla_regmix_e200`) | 97.86% (head + vote) | 0.907 |
-| 15 | PreActResNet + SLA + RegMixup, 200 epochs, all 50k (`preact_sla_regmix_e200_full`) | – (no holdout) | 0.904 |
-| 16 | PreActResNet + SLA + RegMixup, 300 epochs, all 50k (`preact_sla_regmix_e300_full`) | – (45k version 97.94%) | **0.912** |
+Paired comparisons on the holdout (head + vote):
 
-Submissions 7 to 10 trained on 45,000 images. On the same 45k data, the changes are in the range −0.007 to +0.001 public points. The final model trained on all 50,000 images and still has the best public score. We did not use these public scores to select a model.
-On the same 45k data, the wide net is 0.005 to 0.006 public points below the narrow nets (one public image is approximately 0.001). This is in the noise, but it agrees with lesson 2.
+| Baseline | Baseline | New run | New run | Fixed | Broken | Net | McNemar p |
+|---|---|---|---|---|---|---|---|
+| `preact_sla_ta_e200` | 97.54% | RegMixup-200 | 97.86% | 47 | 31 | +16 (+0.32) | 0.089 |
+| `preact_sla_ta_e300` | 97.74% | RegMixup-200 | 97.86% | 38 | 32 | +6 (+0.12) | 0.550 |
+| `preact_sla_regmix_e200` | 97.86% | RegMixup-300 | 97.94% | 28 | 24 | +4 (+0.08) | 0.678 |
+| `preact_sla_ta_e300` | 97.74% | RegMixup-300 | 97.94% | 43 | 33 | +10 (+0.20) | 0.302 |
+| `preact_sla_ta_e200` | 97.54% | RegMixup-300 | 97.94% | 53 | 33 | +20 (+0.40) | 0.040 |
 
-## 9. Final model
+RegMixup-200 passes the 0.3-point rule against its baseline. RegMixup-300 has the best holdout accuracy of all runs.
+Only the comparison with SLA-200 is significant at 0.05.
+There is one confound: the baseline used batch 512. Batch 512 clean + 512 mixed does not fit in 40 GB.
+
+We also calculated an ensemble of 4 teachers (SLA-200, SLA-300, the wide net, RegMixup-200) on the holdout: 97.92%.
+The best single model is equal to this ensemble. Thus, distillation into one network can give only a small gain.
+We did not do a distillation run.
+
+The 50k RegMixup-300 model agrees with the 0.909 model on 95.3% of the test images.
+Its Kaggle public score is 0.912. This is the best public score.
+The difference to 0.909 is approximately 3 public images. This is in the noise.
+We selected RegMixup-300 on the holdout (97.94%), not on the public score.
+
+## 7. Kaggle public scores
+
+| # | Run | Model | Holdout | Kaggle public |
+|---|---|---|---|---|
+| 1 | `w128-256-352_d111_e40` | AirResNet, 40 epochs | 95.58% | 0.850 |
+| 2 | `w128-256-352_ta_e120` | AirResNet + TrivialAugment, 120 epochs | 96.20% | 0.860 |
+| 3 | `sla_ta_e120_b1024` | AirResNet + SLA, 120 epochs | 96.40% | 0.863 |
+| 4 | `ta_e120_b1024_s1` | AirResNet, seed 1, 120 epochs | 96.28% | 0.857 |
+| 5 | `preact_ta_e200` | PreActResNet, 200 epochs | 96.82% | 0.884 |
+| 6 | `preact_sla_ta_e200_full` | PreActResNet + SLA, all 50k | (45k: 97.54%) | 0.909 |
+| 7 | `preact_sla_percopy_e200` | PreActResNet + SLA + per-copy augmentation, 45k | 97.66% | 0.896 |
+| 8 | `preact_sla_cutmix_e300` | PreActResNet + SLA + CutMix, 300 epochs, 45k | 97.70% | 0.902 |
+| 9 | `preact_sla_ta_e300` | PreActResNet + SLA, 300 epochs, 45k | 97.74% | 0.904 |
+| 10 | `preact_sla_ta_e200` | PreActResNet + SLA, 200 epochs, 45k | 97.54% | 0.903 |
+| 11 | `preact_sla_ta_e300_full` | PreActResNet + SLA, 300 epochs, all 50k | (45k: 97.74%) | 0.906 |
+| 12 | `preact_wide_sla_ta_e200` | Wide PreActResNet + SLA, 200 epochs, 45k | 97.76% | 0.898 |
+| 13 | `preact_wide_sla_ta_e200_full` | Wide PreActResNet + SLA, 200 epochs, all 50k | (45k: 97.76%) | 0.901 |
+| 14 | `preact_sla_regmix_e200` | PreActResNet + SLA + RegMixup, 200 epochs, 45k | 97.86% | 0.907 |
+| 15 | `preact_sla_regmix_e200_full` | PreActResNet + SLA + RegMixup, 200 epochs, all 50k | (45k: 97.86%) | 0.904 |
+| 16 | `preact_sla_regmix_e300_full` | PreActResNet + SLA + RegMixup, 300 epochs, all 50k (final) | (45k: 97.94%) | **0.912** |
+
+The holdout values of the SLA models are head + vote. One public image is approximately 0.001.
+All scores from 0.903 to 0.912 are in approximately one standard error. Thus, the public split cannot rank these models.
+
+## 8. Final model
 
 | Item | Value |
 |---|---|
-| Architecture | Pre-activation ResNet, stages 4/4/3 blocks, widths 64/128/256, average pooling |
+| Architecture | Pre-activation ResNet, 3 stages of 4/4/3 basic blocks, widths 64/128/256, average pooling |
 | Heads | 10-class head + 40-class joint head (class × rotation) |
 | Trainable parameters (torchsummary, forward pass) | 4,696,394 |
 | Trainable parameters (all, with the 40-class head) | 4,706,674 |
 | Training data | All 50,000 CIFAR-10 training images |
-| Training | 200 epochs, batch 512, Nesterov SGD, cosine schedule, SLA+SD, TrivialAugment, cutout |
-| Test-time augmentation | Mirror and 1-pixel shifts; normal head + 4-rotation vote |
-| Holdout accuracy (same recipe on 45,000 images) | 97.56% |
-| Kaggle public accuracy | 0.909 |
+| Augmentation | TrivialAugmentWide, flip, 4-pixel translation, 12-pixel cutout |
+| Loss | SLA+SD + RegMixup (Beta(20, 20), weight 1), label smoothing 0.1 on the 10-class head |
+| Optimizer | Nesterov SGD, momentum 0.9, lr 0.2 at batch 256 + 256, weight decay 5e-4, 5 warmup epochs, cosine, 300 epochs |
+| Prediction | Mean of softmax(head) and softmax(4-rotation vote), each with mirror + 1-pixel shift TTA |
+| Holdout accuracy (same recipe on 45,000 images) | 97.94% |
+| Kaggle public accuracy | 0.912 |
+| Weights | `models/regmix_e300_50k.pt` (submission), `models/regmix_e300_45k.pt` (holdout) |
+| Submission | `submissions/submission_preact_sla_regmix_e300_50k.csv` |
 
-## 10. Lessons
+`notebooks/final_model.ipynb` loads the two weight files. It makes the submission again and compares it with the
+submitted CSV. The two files are equal, byte for byte. The notebook can also train the two models from zero.
+
+## 9. Lessons
 
 1. Do not select models with the public leaderboard. Use a holdout from the training data.
-2. The architecture family has an effect on accuracy under shift. A fast-training airbench net was 1.4 points worse on Kaggle than a standard ResNet with the same holdout accuracy.
+2. The architecture family has an effect on accuracy under shift. A fast airbench net was 1.4 points worse on Kaggle
+   than a standard ResNet with the same holdout accuracy.
 3. SLA (rotation labels) gave the largest gain for its cost: +0.4 to +0.7 points.
-4. SAM, PAPA, distillation, longer schedules and anti-aliasing each gave +0.2 to +0.4 points on the plain ResNet. None of them beat SLA.
-5. Calculate BN statistics on data that is similar to the training data. Clean-image statistics decreased the PAPA model by 1 point.
-6. Make long runs resumable. HPC jobs stop after 3 to 5 hours.
-7. A wider and shallower network with equal holdout accuracy did not do better on the shifted test images.
+4. SAM, PAPA, distillation, longer schedules and anti-aliasing each gave +0.2 to +0.4 points on the plain ResNet.
+   None of them was better than SLA.
+5. RegMixup was the only method that added accuracy on top of SLA.
+6. Calculate BN statistics on data that is similar to the training data. Clean-image statistics decreased the PAPA
+   model by 1 point and the EMA model by 0.4 points.
+7. Make long runs resumable. HPC jobs stop after 3 to 5 hours.
+8. A wider and shallower network with equal holdout accuracy did not do better on the shifted test images.
 
-## 11. Pipeline audit (2026-10-31)
+## 10. Pipeline audit (2026-10-31)
 
-We did a full review of the code, the data and our method. We also read more papers about the shift to CIFAR-10.1.
-The review did not start a training run. It did not change the data or the final submission.
+We did a full review of the code, the data and our method. The review did not start a training run.
 
-### 11.1 Result
+### 10.1 Result
 
 We did not find an error that causes the gap between the holdout (97.6%) and Kaggle (0.90).
 These items are correct:
@@ -329,11 +390,10 @@ These items are correct:
 - All 50,000 training images and all 2,000 test images are 32 × 32 RGB PNG files. The cache is equal to the files.
 - The labels and the IDs are equal to the CSV files. No test image is an exact copy of a training image.
 - The training images and the test images get the same normalization.
-- The SLA joint label is `class × 4 + rotation` during training and during prediction. The rotation order agrees.
+- The SLA joint label is `class × 4 + rotation` in training and in prediction. The rotation order agrees.
 - Augmentation occurs before the rotation. BN and bias parameters get no weight decay.
-- The final model has 4,706,674 parameters and all 200 epochs completed.
-- All 15 submission files have 2,000 rows, the correct ID order and labels 0 to 9.
-- No code trains on the test images, labels them or adapts to them.
+- All submission files have 2,000 rows, the correct ID order and labels 0 to 9.
+- No code trains on the test images or labels them.
 
 The test images are a little brighter and have more contrast than the training images:
 
@@ -343,46 +403,24 @@ The test images are a little brighter and have more contrast than the training i
 | Channel std (R, G, B) | 0.247, 0.243, 0.262 | 0.265, 0.262, 0.275 |
 | Spread of image brightness | 0.125 | 0.144 |
 
-`src/shift_check.py` shows that this difference costs a maximum of 0.4 points. Thus, it does not cause a 7-point gap.
-The line of Recht et al. (2018) gives approximately 92.8% at 97.7% holdout accuracy. Miller et al. (2021) show the same line for 1,060 models.
-Our 0.909 is approximately 1.6 points below the line. The public split has approximately 1,000 images. One standard error is approximately 0.9 points.
+Phase 2 shows that this difference costs a maximum of 0.4 points. Thus, it does not cause a 7-point gap.
+The line of Recht et al. (2018) gives approximately 92.8% at 97.7% holdout accuracy.
+Miller et al. (2021) show the same line for 1,060 models.
+Our 0.909 was approximately 1.6 points below the line. One standard error is approximately 0.9 points.
 Thus, we think that the gap comes from the shift in the hidden images, and not from an error.
 
-### 11.2 Problems that we found
+### 10.2 Problems that we found and the changes
 
-| Problem | Location | Effect |
+| Problem | Effect | Change |
 |---|---|---|
-| We compared runs with the normal head. But we submit the normal head + the 4-rotation vote. | `docs/LOGBOOK.md`, Phase 8 | SLA-300 gets +0.20 points on head + vote (97.54% → 97.74%), not +0.12. |
-| The seed also selects the holdout split. Seed 0 and seed 1 have only 527 holdout images in common. | `src/train.py:105` | The seed spread of 0.2 points is not a correct measurement. We cannot test a seed-0 + seed-1 ensemble on either holdout. |
-| The weight average (EMA) calculates BN statistics on upright images only. Training used 4 rotations and CutMix. | `src/train.py:272`, `src/train.py:428` | The EMA result (−0.4 points) can be too low. |
-| SAM does the second forward pass in training mode. Thus, the BN statistics change two times in each step. | `src/train.py:539`–`552` | The SAM result can be too low. |
-| `make_submission.py` uses the normal head only. `export_preds.py` uses head + vote. | `src/make_submission.py:20` | The final CSV is correct (it came from `export_preds.py`). Use `export_preds.py` for all SLA submissions. |
-| A resumed run does not keep the TrivialAugment epoch or the random state. | `src/train.py:161`, `src/train.py:450` | Small. A resumed run is not equal to a run without a stop. |
-| CutMix uses the NumPy random generator without a seed. | `src/train.py:262` | No effect on accuracy. Runs are not reproducible. |
+| We compared runs with the head only. But we submit head + vote. | SLA-300 gets +0.20 points on head + vote, not +0.12. | All comparisons from Phase 9 use head + vote. |
+| The seed also selected the holdout split. Seed 0 and seed 1 have only 527 holdout images in common. | The seed spread of 0.2 points is not a correct measurement. | A separate split seed. All later runs use the seed-0 split. |
+| The EMA calculated BN statistics on upright images only. Training used 4 rotations. | The EMA result (−0.4 points) was too low. | BN statistics on the 4 rotated copies. |
+| SAM did the second forward pass in training mode. | The BN statistics changed two times in each step. | The second pass does not change BN. |
+| One submission script used the head only. | The submitted CSVs were correct. | One shared predictor (head + vote, weight 0.5). |
+| A resumed run did not keep the TrivialAugment epoch or the random state. | A resumed run was not equal to a run without a stop. | The checkpoint keeps both. |
 
-The weight of the normal head and the vote is 0.5 each. We calculated other weights from the saved holdout outputs:
-
-| Run | Vote only | 0.25 head | 0.5 head (submitted) | 0.75 head | Head only |
-|---|---|---|---|---|---|
-| SLA, 200 epochs | 97.42% | 97.50% | 97.54% | 97.64% | 97.56% |
-| SLA, 300 epochs | 97.68% | 97.84% | 97.74% | 97.70% | 97.68% |
-| SLA + CutMix, 300 epochs | 97.64% | 97.70% | 97.70% | 97.66% | 97.66% |
-
-The best weight is different for each run. Thus, a part of this gain is noise.
-
-### 11.3 Decisions
-
-1. The 50k SLA-300 retrain is the best next submission. We export it with `scripts/export_preds.py`.
-2. We do not use an ensemble of different networks. Two networks have 9.4M parameters. This is more than the 5M limit.
-3. We do not adapt BN to the test images. The rules do not permit it. It also increased the CIFAR-10.1 error from 12.8% to 19.0% (Zhao et al., 2023).
-4. Other tests from the audit are optional: one fixed head/vote weight, a BN fix for EMA, symmetric 1-pixel TTA, and a wider ResNet with 80/160/320 channels.
-
-The 0.3-point rule is a limit for cost. It is not a statistical test. On 5,000 images, it finds a true +0.3-point gain only 30% to 55% of the time.
-For the next comparisons, we will also give the number of images that each change fixes and breaks (paired McNemar test).
-
-### 11.4 Checks on the Mac and code changes (2026-10-31)
-
-We did two checks on the Mac with saved models. We did not train a new model.
+### 10.3 Checks with saved models (2026-10-31)
 
 | Check (45k holdout, head + vote) | SLA, 200 epochs | SLA, 300 epochs | SLA + CutMix, 200 epochs |
 |---|---|---|---|
@@ -390,75 +428,35 @@ We did two checks on the Mac with saved models. We did not train a new model.
 | TTA with 4 axis 1-pixel shifts + mirror | 97.54% | 97.86% | — |
 | TTA with 8 neighbour 1-pixel shifts + mirror | 97.56% | 97.76% | — |
 | Live network | — | — | 97.52% |
-| EMA, BN calculated on upright images (old method) | — | — | 97.44% (head 96.98%) |
-| EMA, BN calculated on the 4 rotated copies | — | — | 97.64% (head 97.42%) |
-| EMA, BN calculated on the 4 rotated copies + CutMix | — | — | 97.58% |
-| Live network, BN calculated again on upright images | — | — | 97.48% (head 97.00%) |
+| EMA, BN on upright images (old method) | — | — | 97.44% |
+| EMA, BN on the 4 rotated copies | — | — | 97.64% |
 
-Results:
+The weight of the head and the vote in head + vote:
 
-1. The symmetric TTA does not give a gain on both runs. We keep the current TTA.
-2. The BN statistics caused the EMA loss. When we calculate BN on upright images only, the live network also loses 0.4 points on the head.
-3. With the correct BN statistics, EMA is 0.12 points better than the live network. This is one run (approximately 6 images). It is less than the 0.2-point limit. Thus, we do not train a new EMA model. EMA does not increase the training time, so we can use it in the next runs.
-4. The best head/vote weight is different for each run. The mean of the three runs is 97.68% (0.25), 97.66% (0.5) and 97.67% (0.75). We keep 0.5.
+| Run | Vote only | 0.25 head | 0.5 head (submitted) | 0.75 head | Head only |
+|---|---|---|---|---|---|
+| SLA, 200 epochs | 97.42% | 97.50% | 97.54% | 97.64% | 97.56% |
+| SLA, 300 epochs | 97.68% | 97.84% | 97.74% | 97.70% | 97.68% |
+| SLA + CutMix, 300 epochs | 97.64% | 97.70% | 97.70% | 97.66% | 97.66% |
 
-Code changes:
+Decisions:
 
-| Change | Location |
-|---|---|
-| New option `--split-seed` (default 0) selects the holdout split. `--seed` now sets only the training random state. Runs with seed 0 do not change. | `src/train.py` |
-| New file `src/predictor.py` gives one predictor (head + vote, weight 0.5). `make_submission.py`, `export_preds.py` and the validation use it. `make_submission.py` now gives the same CSV as the final submission. | `src/predictor.py` |
-| EMA calculates BN statistics on the 4 rotated copies (SLA) and with CutMix (when CutMix is on), as in training. | `src/train.py` (`recompute_bn`, `ema_eval_copy`) |
-| The checkpoint keeps the TrivialAugment epoch and the torch, CUDA and NumPy random states. A resumed run uses them. | `src/train.py` |
-| CutMix uses a NumPy generator with the seed. | `src/train.py` |
-| The second SAM pass does not change the BN statistics. | `src/train.py` |
-| `--cutmix` with `--two-view` stops with an error. | `src/train.py` |
+1. The other TTA versions do not give a gain on both runs. We keep the current TTA.
+2. With the correct BN statistics, the EMA is 0.12 points better than the live network. This is less than our limit.
+   Thus, we did not train a new EMA model.
+3. The best weight is different for each run. The mean of the three runs is 97.68% (0.25), 97.66% (0.5) and
+   97.67% (0.75). We keep 0.5.
+4. We do not use an ensemble of different networks. Two networks have 9.4M parameters. This is more than the 5M limit.
 
-We tested the changes with a small network on the Mac: SLA + CutMix + EMA + TrivialAugment, a stop and a resume, and SAM.
-These changes are in the code on the branch `wide-sla-pilot` (commit `e0fb7c6`). The Phase 9 runs used this code.
+## 11. Repository cleanup (2026-11-04)
 
-## 12. RegMixup inside SLA (2026-11-02)
+We removed the code of all experiments that are not part of the final model.
+The new code has five files: `src/prepare_data.py`, `src/model.py`, `src/data.py`, `src/train.py` and
+`src/predict.py`. The configuration and the training history of all runs stay in `results/runs/`.
 
-Run `preact_sla_regmix_e200`: the final recipe (PreActResNet 64/128/256, 4/4/3, SLA+SD, TrivialAugment, 200 epochs)
-with RegMixup (Pinto et al. 2022): loss = clean SLA+SD loss + 1.0 x loss on a mixed batch (lambda ~ Beta(20, 20),
-both labels on the joint and plain heads; self-distillation on the clean half only). 45k images, `--val 5000
---split-seed 0 --seed 0`, the same holdout as every baseline. Batch 256 clean + 256 mixed (2,048 rotated images per
-step, as in the baseline), lr 0.2 (0.1 per 128). A100: 50 s/epoch, 2.8 h. Before the run: `scripts/check_losses.py`
-(7 checks) and `scripts/hpc_preflight.sh` passed on the HPC node (commit `e43f030`).
+Checks of the new code:
 
-Holdout, head + vote, paired on the same 5,000 images (`scripts/compare_runs.py`):
-
-| Baseline | Baseline | RegMixup | Fixes | Breaks | Net | McNemar p |
-|---|---|---|---|---|---|---|
-| `preact_sla_ta_e200` | 97.54% | 97.86% | 47 | 31 | +16 (+0.32) | 0.089 |
-| `preact_sla_ta_e300` (best 45k) | 97.74% | 97.86% | 38 | 32 | +6 (+0.12) | 0.550 |
-
-It passes the keep rule (+0.3 vs its baseline) and beats the best 45k run, but neither gain is significant at 0.05.
-Confound: the baseline used batch 512 (lr 0.4); batch 512 clean + 512 mixed does not fit in 40 GB. A control run
-(SLA-200 at batch 256 without RegMixup) would separate the two effects. Kaggle public 0.907 (45k), the best 45k score (SLA-300 45k 0.904, SLA-200 45k 0.903). Files: HPC
-`~/regmixup`, test predictions SHA `2506e57102e8d1f2a3b0b5a0cb4b459922ba011d`.
-
-The 50k retrain (`preact_sla_regmix_e200_full`, 200 epochs, 3.1 h, predictions SHA `844142865db6...`) scored 0.904
-public, below the 45k run (0.907) and the SLA-200 50k run (0.909). It agrees with the 0.909 submission on 95.0% of the
-test images. All of 0.903 to 0.909 is within about one public standard error (about 9 images), so the public split cannot
-rank these runs.
-
-RegMixup at 300 epochs (`preact_sla_regmix_e300`, 45k, same settings, 4.2 h): 97.94% head + vote (single view
-97.60%, TTA 98.00%). Paired on the same holdout:
-
-| Baseline | Baseline | RegMixup-300 | Fixes | Breaks | Net | McNemar p |
-|---|---|---|---|---|---|---|
-| `preact_sla_regmix_e200` | 97.86% | 97.94% | 28 | 24 | +4 (+0.08) | 0.678 |
-| `preact_sla_ta_e300` | 97.74% | 97.94% | 43 | 33 | +10 (+0.20) | 0.302 |
-| `preact_sla_ta_e200` | 97.54% | 97.94% | 53 | 33 | +20 (+0.40) | 0.040 |
-
-Not separable from RegMixup-200. As a teacher it does not raise the 4-teacher ensemble (97.88% with it in place of
-RegMixup-200, 97.92% with RegMixup-200, 97.92% with both). Test predictions SHA `d2d419e2576c2963880df0eb6db6d2cc1c333415`
-(`submissions/submission_preact_sla_regmix_e300_45k.csv`, 95.5% agreement with the RegMixup-200 45k file). A 50k
-retrain (`preact_sla_regmix_e300_full`) is queued as 1c in `scripts/hpc_next.sh`.
-
-The 50k retrain (`preact_sla_regmix_e300_full`, `--val 0`, 300 epochs, 4.6 h, final loss 4.44) ran on request. Test
-predictions SHA `93e4f90d3f1e26004142427ca3ba7cfcee7cd11d` (`submissions/submission_preact_sla_regmix_e300_50k.csv`).
-Agreement: 95.9% with RegMixup-200 50k, 96.0% with RegMixup-300 45k, 95.3% with the 0.909 `submission.csv`.
-Kaggle public 0.912, the best public score so far (0.909 for SLA-200 50k). The gap is about 3 public images, well
-inside one standard error, so it does not show the 300-epoch run is better; it is chosen on the holdout (97.94%, best 45k run).
+1. We trained the old code and the new code for 2 epochs on 800 images, on the CPU, with the same seed.
+   The losses and the final weights are equal, bit for bit.
+2. The new prediction code with `models/regmix_e300_50k.pt` gives a CSV that is equal to the submitted CSV,
+   byte for byte. `models/regmix_e300_45k.pt` gives 97.94% on the holdout.
