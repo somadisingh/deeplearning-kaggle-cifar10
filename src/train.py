@@ -42,6 +42,7 @@ def parse_args():
     p.add_argument("--label-smoothing", type=float, default=0.1)
     p.add_argument("--regmixup-alpha", type=float, default=20.0)
     p.add_argument("--regmixup-eta", type=float, default=1.0, help="weight of the mixed-image loss")
+    p.add_argument("--se-reduction", type=int, default=0, help="squeeze-and-excitation in each block; 0 = off")
     p.add_argument("--val", type=int, default=5000, help="holdout images from the training set; 0 = train on all 50k")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument("--eval-every", type=int, default=10)
@@ -96,7 +97,7 @@ def main():
     x_va, y_va = x_all[torch.from_numpy(va_idx).to(dev)], y_all[torch.from_numpy(va_idx).to(dev)]
     y_tr = y_all[torch.from_numpy(tr_idx).to(dev)]
 
-    net = PreActResNet().to(dev)
+    net = PreActResNet(se_reduction=args.se_reduction).to(dev)
     n_params = count_params(net)
     print(f"trainable parameters: {n_params:,}", flush=True)
     assert n_params <= PARAM_LIMIT

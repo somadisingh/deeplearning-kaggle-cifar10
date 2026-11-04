@@ -13,33 +13,41 @@ PARAM_LIMIT = 5_000_000
 class PreActBlock(nn.Module):
     """BN-ReLU-conv3x3-BN-ReLU-conv3x3, plus an identity skip or a 1x1 projection when the shape changes."""
 
-    def __init__(self, cin, cout, stride):
+    def __init__(self, cin, cout, stride, se_reduction=0):
         super().__init__()
         self.bn1, self.conv1 = nn.BatchNorm2d(cin), nn.Conv2d(cin, cout, 3, stride, 1, bias=False)
         self.bn2, self.conv2 = nn.BatchNorm2d(cout), nn.Conv2d(cout, cout, 3, 1, 1, bias=False)
         self.skip = None
         if stride != 1 or cin != cout:
             self.skip = nn.Conv2d(cin, cout, 1, stride, bias=False)
+        self.se = None
+        if se_reduction:
+            self.se = nn.Sequential(nn.Linear(cout, cout // se_reduction), nn.ReLU(),
+                                    nn.Linear(cout // se_reduction, cout), nn.Sigmoid())
 
     def forward(self, x):
         out = F.relu(self.bn1(x))
         skip = self.skip(out) if self.skip is not None else x
         out = self.conv1(out)
         out = self.conv2(F.relu(self.bn2(out)))
+        if self.se is not None:
+            out = out * self.se(out.mean((2, 3)))[:, :, None, None]
         return out + skip
 
 
 class PreActResNet(nn.Module):
     """Widths 64/128/256 and 4/4/3 blocks: 4,696,394 parameters with the 10-class head, 4,706,674 with the SLA
-    head. forward() gives the 10-class logits; joint_head is used in training and in the rotation vote."""
+    head. forward() gives the 10-class logits; joint_head is used in training and in the rotation vote.
+    se_reduction > 0 adds squeeze-and-excitation (Hu et al., 2018) to each block, on the residual branch before
+    the skip is added: 36,448 more parameters (4,743,122 in total) at reduction 16."""
 
-    def __init__(self, widths=(64, 128, 256), depth=(4, 4, 3), num_classes=10):
+    def __init__(self, widths=(64, 128, 256), depth=(4, 4, 3), num_classes=10, se_reduction=0):
         super().__init__()
         self.stem = nn.Conv2d(3, widths[0], 3, 1, 1, bias=False)
         blocks, cin = [], widths[0]
         for i, (w, d) in enumerate(zip(widths, depth)):
             for j in range(d):
-                blocks.append(PreActBlock(cin, w, 2 if (i > 0 and j == 0) else 1))
+                blocks.append(PreActBlock(cin, w, 2 if (i > 0 and j == 0) else 1, se_reduction))
                 cin = w
         self.blocks = nn.Sequential(*blocks)
         self.bn = nn.BatchNorm2d(cin)

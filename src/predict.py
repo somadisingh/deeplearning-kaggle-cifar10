@@ -4,7 +4,7 @@ The prediction for an image is 0.5 x softmax(head) + 0.5 x softmax(rotation vote
 the image and its mirror, plus the two diagonal 1-pixel shifts and their mirrors. The TTA is adapted from
 cifar10-airbench by Keller Jordan (MIT License); see THIRD_PARTY_NOTICES.md.
 
-Usage: python src/predict.py <model.pt> <out.csv>   (writes the submission for the 2,000 test images)
+Usage: python src/predict.py <model.pt> <out.csv> [se_reduction]   (writes the submission for the 2,000 test images)
 """
 import os
 import sys
@@ -23,8 +23,8 @@ def device():
     return torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 
 
-def load_model(path, dev):
-    net = PreActResNet().to(dev)
+def load_model(path, dev, se_reduction=0):
+    net = PreActResNet(se_reduction=se_reduction).to(dev)
     net.load_state_dict(torch.load(path, map_location=dev))
     return net.eval()
 
@@ -73,7 +73,7 @@ def write_submission(labels, path):
 
 if __name__ == "__main__":
     dev = device()
-    net = load_model(sys.argv[1], dev)
+    net = load_model(sys.argv[1], dev, int(sys.argv[3]) if len(sys.argv) > 3 else 0)
     _, _, x_test, _ = load_data(dev)
     write_submission(predict_probs(net, x_test).argmax(1).numpy(), sys.argv[2])
     print("wrote", sys.argv[2])
