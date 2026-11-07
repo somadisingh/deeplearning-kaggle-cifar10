@@ -97,11 +97,9 @@ On CIFAR-10 with augmentation, the change was between −0.3 and +0.6 points (Zh
 
 | Method | Reason |
 |---|---|
-| BN adaptation, TENT, SAR, CoTTA, MEMO on the test images | The rules do not permit training or adaptation on test images. Also, most of these methods increase the CIFAR-10.1 error (from 12.8% to 17–19%) (Zhao et al., 2023). |
 | Model selection with test-image confidence or agreement | "Unauthorized model selection" |
 | CIFAR-10.1, CIFAR-10.2, CINIC-10, PixMix fractals, generated images | External data |
 | Large frozen layers | Against the purpose of the parameter limit |
-| Balancing the class counts of the test predictions | Uses the label distribution of the hidden set |
 
 ## 4. Ranked plan and the results of our tests
 
@@ -166,5 +164,4 @@ All references are on arXiv. The BibTeX file is in the git history (commit 438c4
 - Thakur, A. et al. (2023). Efficient ResNets: Residual network design. arXiv:2306.12100
 - Vasconcelos, C. et al. (2021). Impact of aliasing on generalization in deep convolutional networks. ICCV. arXiv:2108.03489
 - Zhang, R. (2019). Making convolutional networks shift-invariant again. ICML. arXiv:1904.11486
-- Zhao, H. et al. (2023). On pitfalls of test-time adaptation. ICML. arXiv:2306.03536
 
