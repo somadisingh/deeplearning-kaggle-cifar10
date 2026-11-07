@@ -1,0 +1,25 @@
+Test-time augmentation study on the baseline 45k model (preact_sla_regmix_e300), 5,000-image holdout.
+Current policy: logit mean over 6 views (upright and mirror 0.25 each, 4 shifted views 0.125 each),
+0.5 x softmax(head) + 0.5 x softmax(4-rotation vote). It gives 4897 / 5000 (97.94%).
+Fixed / broken and the exact McNemar p are against the current policy.
+
+policy                                             correct         diff  fixed  broken  p
+probability mean over the views                    4895 (97.90%)   -2    0      2       0.50
+probability mean over the views and rotations      4898 (97.96%)   +1    2      1       1.00
+scale 30 only                                      4871 (97.42%)   -26   15     41      0.0007
+scale 34 only                                      4853 (97.06%)   -44   19     63      <0.0001
+scales 32/30/34 with weights 0.75/0.125/0.125      4892 (97.84%)   -5    4      9       0.27
+probability pooling + scales 0.75/0.125/0.125      4891 (97.82%)   -6    4      10      0.18
+logit pooling + scales 0.90/0.05/0.05              4892 (97.84%)   -5    1      6       0.13
+geometric mean (mean log-softmax)                  4897 (97.94%)   0     0      0       1.00
+mirror only (2 views)                              4893 (97.86%)   -4    5      9       0.42
+head only (6 views)                                4900 (98.00%)   +3    14     11      0.69
+vote only (6 views)                                4879 (97.58%)   -18   3      21      0.0003
+
+Grid over the logit/probability mix, the head weight and the softmax temperature:
+best value on the full holdout 4902 (+5). With 5-fold cross-validation (the parameter is selected on 4 folds and
+tested on the fifth fold): 4899 (+2), fixed 9, broken 7, McNemar p 0.80. Thus, the gain is selection noise.
+
+Robustness probes (current policy; the transform is applied to the raw RGB image before normalization):
+grayscale 4743 (94.86%), blur sigma 0.5 4875 (97.50%), blur sigma 1.0 4551 (91.02%),
+outer 2 pixels white 4878 (97.56%), outer 2 pixels set to the training mean 4870 (97.40%).

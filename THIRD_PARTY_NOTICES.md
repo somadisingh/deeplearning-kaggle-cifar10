@@ -35,3 +35,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 - RegMixup: Pinto et al. (2022), arXiv:2206.14502.
 - TrivialAugment: Müller and Hutter (2021), arXiv:2103.10158 (torchvision `TrivialAugmentWide`).
 - Cutout: DeVries and Taylor (2017), arXiv:1708.04552.
+- RandConv (random convolution augmentation, `--randconv-prob`): Xu et al. (2021), ICLR, arXiv:2007.13003.
+- Squeeze-and-excitation (`--se-reduction`, ablation only): Hu et al. (2018), arXiv:1709.01507.
+
+Ablations that are not in the final code (docs/LOGBOOK.md, Phase 15) used ideas from these papers:
+
+- Progressive RandConv (stacked small kernels): Choi et al. (2023), CVPR, arXiv:2304.00424.
+- Fourier amplitude mixing: Xu et al. (2021), FACT, CVPR, arXiv:2105.11120; Chen et al. (2021), APR, ICCV, arXiv:2108.08487.

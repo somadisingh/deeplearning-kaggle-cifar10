@@ -1,0 +1,15 @@
+SE-16 (regmix_se16_e300_45k) against the baseline (preact_sla_regmix_e300, 45k), 5,000-image holdout.
+Fixed = correct for SE-16 and wrong for the baseline. Broken = the opposite. Exact two-sided McNemar test.
+
+policy             baseline        SE-16           diff  fixed  broken  McNemar p
+head + vote        4897 (97.94%)   4888 (97.76%)   -9    25     34      0.30
+head only          4900            4888            -12   30     42      0.19
+prob pool TTA+rot  4898 (97.96%)   4889 (97.78%)   -9    25     34      0.30
+scale mix          4892 (97.84%)   4886 (97.72%)   -6    31     37      0.54
+
+probe                baseline        SE-16           diff  fixed  broken  McNemar p
+grayscale            4743 (94.86%)   4732 (94.64%)   -11   67     78      0.41
+blur sigma 0.5       4875 (97.50%)   4883 (97.66%)   +8    38     30      0.40
+blur sigma 1.0       4551 (91.02%)   4543 (90.86%)   -8    155    163     0.69
+2-pixel white border 4878 (97.56%)   4864 (97.28%)   -14   32     46      0.14
+2-pixel mean border  4870 (97.40%)   4877 (97.54%)   +7    39     32      0.48

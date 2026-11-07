@@ -5,6 +5,11 @@ __pycache__/
 *.pyc
 checkpoints/
 /runs/
+logs/
+*.log
+*.npz
+*.zip
+*.bundle
 *.pt
 *.pth
 !models/*.pt

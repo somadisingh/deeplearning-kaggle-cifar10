@@ -1,0 +1,21 @@
+{
+ "name": "regmix_se16_e300_45k",
+ "epochs": 300,
+ "batch_size": 256,
+ "lr": 0.1,
+ "wd": 0.0005,
+ "warmup_epochs": 5,
+ "label_smoothing": 0.1,
+ "regmixup_alpha": 20.0,
+ "regmixup_eta": 1.0,
+ "se_reduction": 16,
+ "val": 5000,
+ "seed": 0,
+ "eval_every": 10,
+ "ckpt_every": 10,
+ "resume": true,
+ "subset": 0,
+ "params": 4743122,
+ "train_time": 16952.1,
+ "val_acc_head_vote": 0.9776
+}
