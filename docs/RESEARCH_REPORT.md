@@ -143,7 +143,7 @@ Also, our holdout can read 0.1 to 0.8 points high (Recht et al., 2018, Table 2).
 
 ## 7. References
 
-All references are on arXiv. The BibTeX is in `output/literature-survey/2026-10-29-1705/references.bib`.
+All references are on arXiv. The BibTeX file is in the git history (commit 438c45b, `output/literature-survey/2026-10-29-1705/references.bib`).
 
 - Beyer, L. et al. (2022). Knowledge distillation: A good teacher is patient and consistent. CVPR. arXiv:2106.05237
 - Cubuk, E. D. et al. (2019). AutoAugment: Learning augmentation policies from data. CVPR. arXiv:1805.09501

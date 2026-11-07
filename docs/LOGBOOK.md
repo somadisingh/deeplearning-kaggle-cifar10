@@ -76,8 +76,8 @@ HPC jobs stop after 3 to 5 hours. Thus, all long runs save a checkpoint every 10
 
 ## 5. Literature research
 
-We did three literature surveys. The reports, search logs and BibTeX files are in `output/literature-survey/`.
-`docs/RESEARCH_REPORT.md` gives the ranked plan.
+We did three literature surveys. `docs/RESEARCH_REPORT.md` gives the results, the ranked plan and the references.
+The raw search logs and BibTeX files were removed from the repository on 2026-11-06 (commit 438c45b keeps them).
 
 Main results from the research:
 
@@ -343,6 +343,83 @@ Its Kaggle public score is 0.912. This is the best public score.
 The difference to 0.909 is approximately 3 public images. This is in the noise.
 We selected RegMixup-300 on the holdout (97.94%), not on the public score.
 
+### Phase 12: squeeze-and-excitation (2026-11-05)
+
+`preact_sla_regmix_se16_e300`: the RegMixup-300 recipe on 45,000 images, with a squeeze-and-excitation block
+(Hu et al., 2018) in each residual block. The block is on the residual branch, before the skip is added.
+The reduction is 16. The model has 4,743,122 parameters (36,448 more). One epoch takes 56.5 s (baseline: 50 s).
+
+| Holdout, 5,000 images | Baseline | SE-16 | Net | Fixed | Broken | McNemar p |
+|---|---|---|---|---|---|---|
+| Head + vote | 97.94% | 97.76% | −9 | 25 | 34 | 0.30 |
+| Head only | 98.00% | 97.76% | −12 | 30 | 42 | 0.19 |
+
+The robustness probes (Phase 13) did not change in a constant direction (−14 to +8 images, all p > 0.14).
+SE-16 did not pass the rule (+10 images). We did not train it on 50,000 images.
+The code stays in `src/model.py` (`--se-reduction`, default 0). The full table is in
+`results/analysis/se16_vs_baseline.txt`.
+
+### Phase 13: test-time augmentation study (2026-11-05)
+
+We kept the per-view head logits and joint logits of the 45k RegMixup-300 model on the holdout.
+We then compared other prediction rules with the current rule (97.94%) on the same images.
+
+| Prediction rule | Holdout | Net | McNemar p |
+|---|---|---|---|
+| Mean of probabilities over the 6 views | 97.90% | −2 | 0.50 |
+| Mean of probabilities over the views and the 4 rotations | 97.96% | +1 | 1.00 |
+| Geometric mean (mean log-softmax) | 97.94% | 0 | 1.00 |
+| Scales 32 / 30 / 34 with weights 0.75 / 0.125 / 0.125 | 97.84% | −5 | 0.27 |
+| Mirror only (2 views) | 97.86% | −4 | 0.42 |
+| Head only | 98.00% | +3 | 0.69 |
+| Vote only | 97.58% | −18 | 0.0003 |
+
+A grid over the probability / logit mix, the head weight and the temperature gave +5 on the full holdout.
+With 5-fold cross-validation, the gain was +2 (p = 0.80). Thus, the gain was selection noise.
+No rule passed the 10-image limit. We kept the current rule.
+
+We also added robustness probes. Each probe changes the raw RGB image before normalization:
+grayscale, Gaussian blur (σ = 0.5 and 1.0), and the outer 2 pixels set to white or to the training mean.
+The baseline gets 94.86%, 97.50%, 91.02%, 97.56% and 97.40%.
+The full tables are in `results/analysis/tta_study_baseline.txt`.
+
+### Phase 14: mild RandConv (2026-11-05)
+
+`preact_sla_regmix_randconv_e300`: the RegMixup-300 recipe on 45,000 images, with mild RandConv
+(Xu et al., 2021). For each batch, one new random 3-to-3 convolution (kernel 1 × 1 or 3 × 3, weights N(0, 1 / (3k²)),
+no bias, reflect padding) changes a random 25% of the images. The image becomes (1 − a) · x + a · conv(x),
+with a ~ U(0, 0.3) for each image. The step works on the raw [0, 1] pixels and clamps the result.
+It comes after flip and translation and before cutout, RegMixup and the rotations.
+The parameter count does not change. One epoch takes 51 s.
+
+| Holdout, 5,000 images | Baseline | RandConv | Net | Fixed | Broken | McNemar p |
+|---|---|---|---|---|---|---|
+| Head + vote | 97.94% | 97.82% | −6 | 20 | 26 | 0.46 |
+| Grayscale probe | 94.86% | 95.52% | +33 | 74 | 41 | 0.0027 |
+| Blur σ = 1.0 probe | 91.02% | 92.46% | +72 | 170 | 98 | < 0.0001 |
+| Blur σ = 0.5 probe | 97.50% | 97.70% | +10 | 35 | 25 | 0.25 |
+| White border probe | 97.56% | 97.42% | −7 | 29 | 36 | 0.46 |
+
+The clean accuracy did not change. The model is much more robust to grayscale and to blur.
+It did not pass the 10-image rule on the clean holdout. But the hidden set has a distribution shift (Section 2).
+Thus, we trained it on all 50,000 images: `regmix_randconv_e300_50k`, 4.67 h.
+It agrees with the RegMixup-300 50k CSV on 96.4% of the test images. Its Kaggle public score is **0.913**.
+The full table is in `results/analysis/randconv_vs_baseline.txt`.
+
+### Phase 15: stronger texture augmentation (2026-11-06)
+
+We added two more methods to the mild RandConv recipe. We trained each one on all 50,000 images only.
+Thus, the public score is the only result.
+
+| Run | Change | Kaggle public |
+|---|---|---|
+| `preact_sla_regmix_randconv_v2_e300_full` | Progressive RandConv (Choi et al., 2023): one Gaussian-smoothed 3 × 3 kernel, applied 1, 2 or 3 times. A consistency loss KL(clean ‖ RandConv) on the 10-class head, weight 1. | 0.908 |
+| `preact_sla_regmix_randconv_ampmix_e300_full` | Fourier amplitude mixing (Xu et al., 2021, FACT; Chen et al., 2021, APR) on 25% of each batch: amplitude (1 − l) · A + l · A_donor, l ~ U(0, 0.2), the phase stays. | 0.904 |
+
+Both scores are lower than 0.913, but the difference is about one standard error.
+More texture augmentation on top of mild RandConv did not help. We did not keep these methods.
+Their code is not in the repository. The run configurations are in `results/runs/`.
+
 ## 7. Kaggle public scores
 
 | # | Run | Model | Holdout | Kaggle public |
@@ -362,31 +439,38 @@ We selected RegMixup-300 on the holdout (97.94%), not on the public score.
 | 13 | `preact_wide_sla_ta_e200_full` | Wide PreActResNet + SLA, 200 epochs, all 50k | (45k: 97.76%) | 0.901 |
 | 14 | `preact_sla_regmix_e200` | PreActResNet + SLA + RegMixup, 200 epochs, 45k | 97.86% | 0.907 |
 | 15 | `preact_sla_regmix_e200_full` | PreActResNet + SLA + RegMixup, 200 epochs, all 50k | (45k: 97.86%) | 0.904 |
-| 16 | `preact_sla_regmix_e300_full` | PreActResNet + SLA + RegMixup, 300 epochs, all 50k (final) | (45k: 97.94%) | **0.912** |
+| 16 | `preact_sla_regmix_e300_full` | PreActResNet + SLA + RegMixup, 300 epochs, all 50k (final 1) | (45k: 97.94%) | 0.912 |
+| 17 | `preact_sla_regmix_randconv_e300_full` | + mild RandConv, all 50k (final 2) | (45k: 97.82%) | **0.913** |
+| 18 | `preact_sla_regmix_randconv_v2_e300_full` | + progressive RandConv + consistency loss, all 50k | – | 0.908 |
+| 19 | `preact_sla_regmix_randconv_ampmix_e300_full` | + mild RandConv + Fourier amplitude mixing, all 50k | – | 0.904 |
 
 The holdout values of the SLA models are head + vote. One public image is approximately 0.001.
-All scores from 0.903 to 0.912 are in approximately one standard error. Thus, the public split cannot rank these models.
+All scores from 0.903 to 0.913 are in approximately one standard error. Thus, the public split cannot rank these models.
 
-## 8. Final model
+## 8. Final models
 
-| Item | Value |
-|---|---|
-| Architecture | Pre-activation ResNet, 3 stages of 4/4/3 basic blocks, widths 64/128/256, average pooling |
-| Heads | 10-class head + 40-class joint head (class × rotation) |
-| Trainable parameters (torchsummary, forward pass) | 4,696,394 |
-| Trainable parameters (all, with the 40-class head) | 4,706,674 |
-| Training data | All 50,000 CIFAR-10 training images |
-| Augmentation | TrivialAugmentWide, flip, 4-pixel translation, 12-pixel cutout |
-| Loss | SLA+SD + RegMixup (Beta(20, 20), weight 1), label smoothing 0.1 on the 10-class head |
-| Optimizer | Nesterov SGD, momentum 0.9, lr 0.2 at batch 256 + 256, weight decay 5e-4, 5 warmup epochs, cosine, 300 epochs |
-| Prediction | Mean of softmax(head) and softmax(4-rotation vote), each with mirror + 1-pixel shift TTA |
-| Holdout accuracy (same recipe on 45,000 images) | 97.94% |
-| Kaggle public accuracy | 0.912 |
-| Weights | `models/regmix_e300_50k.pt` (submission), `models/regmix_e300_45k.pt` (holdout) |
-| Submission | `submissions/submission_preact_sla_regmix_e300_50k.csv` |
+We selected two submissions for the private score. They use the same network, loss and prediction.
+The second model also uses mild RandConv (Phase 14).
 
-`notebooks/final_model.ipynb` loads the two weight files. It makes the submission again and compares it with the
-submitted CSV. The two files are equal, byte for byte. The notebook can also train the two models from zero.
+| Item | Final 1: RegMixup-300 | Final 2: RegMixup-300 + mild RandConv |
+|---|---|---|
+| Architecture | Pre-activation ResNet, 3 stages of 4/4/3 basic blocks, widths 64/128/256, average pooling | same |
+| Heads | 10-class head + 40-class joint head (class × rotation) | same |
+| Trainable parameters (torchsummary, forward pass) | 4,696,394 | same |
+| Trainable parameters (all, with the 40-class head) | 4,706,674 | same |
+| Training data | All 50,000 CIFAR-10 training images | same |
+| Augmentation | TrivialAugmentWide, flip, 4-pixel translation, 12-pixel cutout | same, plus RandConv on 25% of each batch (kernel 1 or 3, blend a ~ U(0, 0.3)) |
+| Loss | SLA+SD + RegMixup (Beta(20, 20), weight 1), label smoothing 0.1 on the 10-class head | same |
+| Optimizer | Nesterov SGD, momentum 0.9, lr 0.2 at batch 256 + 256, weight decay 5e-4, 5 warmup epochs, cosine, 300 epochs | same |
+| Prediction | Mean of softmax(head) and softmax(4-rotation vote), each with mirror + 1-pixel shift TTA | same |
+| Holdout accuracy (same recipe on 45,000 images) | 97.94% | 97.82% |
+| Kaggle public accuracy | 0.912 | 0.913 |
+| Weights | `models/regmix_e300_50k.pt`, `models/regmix_e300_45k.pt` | `models/regmix_randconv_e300_50k.pt`, `models/regmix_randconv_e300_45k.pt` |
+| Submission | `submissions/submission_preact_sla_regmix_e300_50k.csv` | `submissions/submission_preact_sla_regmix_randconv_e300_50k.csv` |
+
+`notebooks/final_model.ipynb` loads the four weight files. It recomputes the holdout accuracy of the two 45k models.
+It makes the two submissions again and compares them with the submitted CSVs, byte for byte.
+The notebook can also train the four models from zero.
 
 ## 9. Lessons
 
@@ -402,6 +486,10 @@ submitted CSV. The two files are equal, byte for byte. The notebook can also tra
 7. Make long runs resumable. HPC jobs stop after 3 to 5 hours.
 8. A wider and shallower network with equal holdout accuracy did not do better on the shifted test images.
 9. Distillation from an ensemble of four SLA teachers (97.92%) gave a student equal to one SLA run (97.54%).
+10. Squeeze-and-excitation and changes to the test-time augmentation did not change the holdout accuracy.
+11. Mild RandConv kept the clean accuracy and made the model much more robust to grayscale and blur.
+    Stronger texture augmentation on top of it decreased the public score.
+12. Use paired tests (fixed / broken images, McNemar) on the same holdout. A difference of less than 10 images is noise.
 
 ## 10. Pipeline audit (2026-10-31)
 
@@ -485,3 +573,20 @@ Checks of the new code:
    The losses and the final weights are equal, bit for bit.
 2. The new prediction code with `models/regmix_e300_50k.pt` gives a CSV that is equal to the submitted CSV,
    byte for byte. `models/regmix_e300_45k.pt` gives 97.94% on the holdout.
+
+## 12. Final repository (2026-11-06)
+
+We added the second final model and removed files that are not necessary to grade or reproduce the work.
+
+1. `src/train.py` has the RandConv option (`--randconv-prob`, default 0) and the squeeze-and-excitation option of
+   `src/model.py` (`--se-reduction`, default 0). With the default values, the training is the same as before.
+2. `src/predict.py` writes the CSV with the test ids of the cache when `data/sample_submission.csv` is not available.
+   The ids and their order are the same.
+3. `models/` has the four final weight files. `submissions/` has the two final CSVs.
+4. `results/runs/` has the configurations of Phases 12 to 15. `results/analysis/` has the paired comparisons and
+   the test-time augmentation study.
+5. We removed `output/literature-survey/` (raw search logs and BibTeX) and the PDF copies of the documents.
+   Commit 438c45b keeps them.
+
+Check: `notebooks/final_model.ipynb` ran with `TRAIN = False` on the A100. Both CSVs are equal to the submitted CSVs,
+byte for byte. The 45k models give 97.94% and 97.82% on the holdout.
