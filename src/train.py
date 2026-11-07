@@ -9,11 +9,14 @@ Recipe (docs/LOGBOOK.md, Section 8):
   The mixed copy takes both labels on both heads, weight 1; self-distillation stays on the clean images.
 - Nesterov SGD, momentum 0.9, lr 0.1 per 128 images, weight decay 5e-4 on conv and linear weights,
   5 warmup epochs then cosine to zero, label smoothing 0.1 on the 10-class head.
+- Optional mild RandConv (Xu et al., 2021; docs/LOGBOOK.md, Phase 14): one random 3x3 or 1x1 convolution per batch
+  on 25% of the images, blended with weight a ~ U(0, 0.3), before cutout. Off by default.
 
 Only the training images are used for training and for the holdout. The test images only go through the
 finished network. Usage (from the repository root):
   python src/train.py --name regmix_e300_45k            # 45,000 train / 5,000 holdout images
-  python src/train.py --name regmix_e300_50k --val 0    # all 50,000 images (the submission model)
+  python src/train.py --name regmix_e300_50k --val 0    # all 50,000 images (submission 1)
+  python src/train.py --name regmix_randconv_e300_50k --val 0 --randconv-prob 0.25   # submission 2
 """
 import argparse
 import json
@@ -26,7 +29,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 
-from data import CACHE, ROOT, Loader, TrivialAugment, load_data, split
+from data import CACHE, MEAN, ROOT, STD, Loader, TrivialAugment, batch_cutout, load_data, split
 from model import PARAM_LIMIT, PreActResNet, count_params
 from predict import device, predict_probs, rotate4, write_submission
 
@@ -42,6 +45,9 @@ def parse_args():
     p.add_argument("--label-smoothing", type=float, default=0.1)
     p.add_argument("--regmixup-alpha", type=float, default=20.0)
     p.add_argument("--regmixup-eta", type=float, default=1.0, help="weight of the mixed-image loss")
+    p.add_argument("--randconv-prob", type=float, default=0.0, help="fraction of each batch that gets RandConv; 0 = off")
+    p.add_argument("--randconv-max-strength", type=float, default=0.3, help="blend weight a ~ U(0, max)")
+    p.add_argument("--randconv-kernels", type=int, nargs="+", default=[1, 3])
     p.add_argument("--se-reduction", type=int, default=0, help="squeeze-and-excitation in each block; 0 = off")
     p.add_argument("--val", type=int, default=5000, help="holdout images from the training set; 0 = train on all 50k")
     p.add_argument("--seed", type=int, default=0)
@@ -50,6 +56,24 @@ def parse_args():
     p.add_argument("--resume", action="store_true", help="continue from runs/<name>/ckpt.pt")
     p.add_argument("--subset", type=int, default=0, help="smoke test only: train on the first N training images")
     return p.parse_args()
+
+
+def randconv(x, prob, max_strength, kernels):
+    """Mild RandConv (Xu et al., 2021): one fresh random 3->3 conv per batch (kernel size from kernels, weights
+    N(0, 1 / (3 k^2)), no bias, reflect padding) on a random prob fraction of the images. It works on the raw [0, 1]
+    pixels: out = (1 - a) * x + a * conv(x), a ~ U(0, max_strength) per image, clamped to [0, 1], normalized again."""
+    m = torch.rand(len(x), device=x.device) < prob
+    if not m.any():
+        return x
+    k = kernels[int(torch.randint(len(kernels), (1,)))]
+    w = torch.randn(3, 3, k, k, device=x.device) / math.sqrt(3 * k * k)
+    mean, std = MEAN.to(x.device), STD.to(x.device)
+    raw = x[m] * std + mean
+    out = F.conv2d(F.pad(raw, (k // 2,) * 4, mode="reflect") if k > 1 else raw, w)
+    a = torch.rand(len(raw), 1, 1, 1, device=x.device) * max_strength
+    x = x.clone()
+    x[m] = (((1 - a) * raw + a * out).clamp(0, 1) - mean) / std
+    return x
 
 
 def sla_regmixup_loss(net, x, y, x_mix, y_mix, lam, ce, eta):
@@ -104,7 +128,8 @@ def main():
 
     raw = np.load(CACHE)["x_train"][tr_idx]
     source = TrivialAugment(torch.from_numpy(raw).permute(0, 3, 1, 2).contiguous(), dev, args.seed)
-    loader = Loader(source, y_tr, args.batch_size)
+    rc = args.randconv_prob > 0
+    loader = Loader(source, y_tr, args.batch_size, cutout_in_loader=not rc)
     total_steps = len(loader) * args.epochs
     warm = int(len(loader) * args.warmup_epochs)
 
@@ -140,6 +165,9 @@ def main():
     for epoch in range(start_epoch, args.epochs):
         net.train()
         for x, y in loader:
+            if rc:  # after flip / translate, before cutout, RegMixup and the rotations
+                x = randconv(x, args.randconv_prob, args.randconv_max_strength, args.randconv_kernels)
+                x = batch_cutout(x, loader.cutout)
             lam = float(np_rng.beta(args.regmixup_alpha, args.regmixup_alpha))
             partner = torch.randperm(len(x), device=x.device)
             x_mix = lam * x + (1 - lam) * x[partner]

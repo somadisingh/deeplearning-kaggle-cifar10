@@ -9,11 +9,12 @@ Usage: python src/predict.py <model.pt> <out.csv> [se_reduction]   (writes the s
 import os
 import sys
 
+import numpy as np
 import pandas as pd
 import torch
 import torch.nn.functional as F
 
-from data import ROOT, load_data
+from data import CACHE, ROOT, load_data
 from model import PreActResNet
 
 
@@ -66,7 +67,9 @@ def predict_probs(net, images):
 
 
 def write_submission(labels, path):
-    ids = pd.read_csv(os.path.join(ROOT, "data", "sample_submission.csv"))["id"]
+    """Write id,label in the order of sample_submission.csv (or of the cache test ids, which are the same)."""
+    sample = os.path.join(ROOT, "data", "sample_submission.csv")
+    ids = pd.read_csv(sample)["id"] if os.path.exists(sample) else np.load(CACHE)["test_ids"]
     assert len(labels) == len(ids)
     pd.DataFrame({"id": ids, "label": labels}).to_csv(path, index=False)
 

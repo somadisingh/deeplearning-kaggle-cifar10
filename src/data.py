@@ -123,9 +123,9 @@ class Loader:
     """One augmented epoch per iteration: TrivialAugment, random flip, 4-pixel reflect-pad translation, cutout,
     then shuffled batches (the last incomplete batch is dropped)."""
 
-    def __init__(self, source, labels, batch_size, translate=4, cutout=12):
+    def __init__(self, source, labels, batch_size, translate=4, cutout=12, cutout_in_loader=True):
         self.source, self.labels, self.bs = source, labels, batch_size
-        self.translate, self.cutout = translate, cutout
+        self.translate, self.cutout, self.cutout_in_loader = translate, cutout, cutout_in_loader
         # Not used. This draw keeps the random stream equal to the runs in docs/LOGBOOK.md.
         torch.rand(len(labels), device=labels.device)
 
@@ -137,7 +137,8 @@ class Loader:
         flip = (torch.rand(len(x), device=x.device) < 0.5).view(-1, 1, 1, 1)
         x = torch.where(flip, x.flip(-1), x)
         x = batch_crop(F.pad(x, (self.translate,) * 4, mode="reflect"), x.shape[-1])
-        x = batch_cutout(x, self.cutout)
+        if self.cutout_in_loader:  # False: the training loop applies cutout per batch
+            x = batch_cutout(x, self.cutout)
         idx = torch.randperm(len(x), device=x.device)
         for i in range(len(self)):
             j = idx[i * self.bs : (i + 1) * self.bs]
