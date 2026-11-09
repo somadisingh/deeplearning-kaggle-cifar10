@@ -339,7 +339,7 @@ The student is equal to SLA-200 without distillation. It is 0.40 points below Re
 Thus, distillation did not give a gain. We did not train it on 50,000 images and we did not submit it.
 
 The 50k RegMixup-300 model agrees with the 0.909 model on 95.3% of the test images.
-Its Kaggle public score is 0.912. This is the best public score.
+Its Kaggle public score is 0.912. This was the best public score at that time (Phase 14 later gave 0.913).
 The difference to 0.909 is approximately 3 public images. This is in the noise.
 We selected RegMixup-300 on the holdout (97.94%), not on the public score.
 
@@ -396,9 +396,12 @@ The parameter count does not change. One epoch takes 51 s.
 |---|---|---|---|---|---|---|
 | Head + vote | 97.94% | 97.82% | −6 | 20 | 26 | 0.46 |
 | Grayscale probe | 94.86% | 95.52% | +33 | 74 | 41 | 0.0027 |
-| Blur σ = 1.0 probe | 91.02% | 92.46% | +72 | 170 | 98 | < 0.0001 |
+| Blur σ = 1.0 probe | 91.02% (note) | 92.46% | +72 | 170 | 98 | < 0.0001 |
 | Blur σ = 0.5 probe | 97.50% | 97.70% | +10 | 35 | 25 | 0.25 |
 | White border probe | 97.56% | 97.42% | −7 | 29 | 36 | 0.46 |
+
+Note: the notebook shows 91.04% for the baseline blur probe. This is 1 image of 5,000. The notebook does not clamp
+the pixels after the float conversion. The other probe values are equal.
 
 The clean accuracy did not change. The model is much more robust to grayscale and to blur.
 It did not pass the 10-image rule on the clean holdout. But the hidden set has a distribution shift (Section 2).

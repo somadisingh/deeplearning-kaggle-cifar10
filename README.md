@@ -13,10 +13,13 @@ We selected two final submissions on Kaggle. Both use the same network and the s
 | Training method | SLA+SD rotation labels (Lee et al., 2020), RegMixup (Pinto et al., 2022), TrivialAugment, Cutout, Nesterov SGD, cosine schedule, 300 epochs | same, plus mild RandConv (Xu et al., 2021) on 25% of each batch |
 | Trainable parameters | **4,696,394** (torchsummary); 4,706,674 with the 40-way SLA head | same |
 | Holdout accuracy (45k train / 5k holdout, head + vote) | **97.94%** | 97.82% (equal, McNemar p = 0.46) |
-| Robustness probes on the holdout | grayscale 94.86%, blur σ = 1 91.02% | grayscale **95.52%**, blur σ = 1 **92.46%** (both p < 0.01) |
+| Robustness probes on the holdout | grayscale 94.86%, blur σ = 1 91.02% (¹) | grayscale **95.52%**, blur σ = 1 **92.46%** (both p < 0.01) |
 | Kaggle public accuracy (trained on all 50k) | 0.912 | **0.913** |
 | Submission | [`submission_preact_sla_regmix_e300_50k.csv`](submissions/submission_preact_sla_regmix_e300_50k.csv) | [`submission_preact_sla_regmix_randconv_e300_50k.csv`](submissions/submission_preact_sla_regmix_randconv_e300_50k.csv) |
 | Weights | `models/regmix_e300_50k.pt` (submission), `models/regmix_e300_45k.pt` (holdout) | `models/regmix_randconv_e300_50k.pt` (submission), `models/regmix_randconv_e300_45k.pt` (holdout) |
+
+(¹) The notebook shows 91.04% for this probe. This is 1 image of 5,000. The notebook does not clamp the pixels
+after the float conversion.
 
 ## Reproduce
 
@@ -70,6 +73,11 @@ with `--resume`. `--se-reduction 16` gives the squeeze-and-excitation ablation o
 - Test images are never used for training or model selection, and never labelled by hand.
 - Model selection uses a fixed, stratified 5,000-image holdout from the training set, not the public leaderboard.
 - Training asserts the 5M parameter limit before it starts.
+
+## License
+
+The code in this repository has the MIT License (see [`LICENSE`](LICENSE)). The adapted airbench code keeps its own
+MIT License (see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)).
 
 ## Credits
 
